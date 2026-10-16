@@ -1,89 +1,37 @@
 name: Native file QA (manual, verified CI package)
-
+run-name: READ ONLY exact winit Windows license link probe
 on:
   workflow_dispatch:
-    inputs:
-      run_id:
-        description: Successful native build run ID in this repository
-        type: string
-        required: true
-      app:
-        description: Full native Craft CLI to test
-        type: choice
-        options: [photo, vector, film, light, pdf, effect, design, ui, word, sound, deck, cad, grid]
-        required: true
-        default: photo
-      platform:
-        description: Actual operating system and architecture of the package
-        type: choice
-        options: [macos-arm64, windows-x64]
-        required: true
-        default: windows-x64
-
 permissions:
   contents: read
   actions: read
-
+concurrency:
+  group: winit-license-probe-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  native-file-qa:
-    if: github.repository == 'qptywoei777-rgb/kio-native-apps' && github.ref == 'refs/heads/main'
-    runs-on: ${{ fromJSON('{"macos-arm64":"macos-15","windows-x64":"windows-2022"}')[inputs.platform] }}
-    timeout-minutes: 45
-    env:
-      KIO_QA_RUN: ${{ inputs.run_id }}
-      KIO_QA_APP: ${{ inputs.app }}
-      KIO_QA_PLATFORM: ${{ inputs.platform }}
-      KIO_QA_PYTHON: ${{ fromJSON('{"macos-arm64":"python3","windows-x64":"python"}')[inputs.platform] }}
-      PYTHONUTF8: '1'
+  winit-license-probe:
+    if: github.repository == 'qptywoei777-rgb/kio-native-apps' && github.ref == 'refs/heads/codex/design-winit-license-probe-20261016' && github.event_name == 'workflow_dispatch'
+    runs-on: windows-2022
+    timeout-minutes: 20
     defaults:
       run:
         shell: bash
     steps:
-      - name: Checkout reviewed current main; never execute code from the artifact run
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Checkout this immutable diagnostic branch commit only
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: qptywoei777-rgb/kio-native-apps
-          ref: main
+          ref: ${{ github.sha }}
           persist-credentials: false
-      - name: Choose an isolated output folder on the actual native runner
-        run: |
-          "$KIO_QA_PYTHON" - <<'PY'
-          import os
-          from pathlib import Path
-          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as output:
-              output.write('KIO_QA_ROOT=' + str(Path(os.environ['RUNNER_TEMP']) / 'kio-native-file-qa') + '\n')
-          PY
-      - name: Verify runner utility guards without running a native application
-        run: |
-          "$KIO_QA_PYTHON" -m unittest discover -s tests -p 'test_native_file_qa.py' -v
-      - name: Collect exactly one successful native artifact through fixed repository GETs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          "$KIO_QA_PYTHON" - <<'PY'
-          import os, subprocess, sys
-          subprocess.run([sys.executable, 'scripts/native_file_qa.py', 'collect', '--run', os.environ['KIO_QA_RUN'], '--app', os.environ['KIO_QA_APP'], '--platform', os.environ['KIO_QA_PLATFORM'], '--output', os.environ['KIO_QA_ROOT']], check=True)
-          PY
-      - name: Extract the whole verified portable bundle and run real file QA without a token
-        run: |
-          "$KIO_QA_PYTHON" - <<'PY'
-          import os, subprocess, sys
-          assert not os.environ.get('GH_TOKEN') and not os.environ.get('GITHUB_TOKEN'), 'Artifact token must be scoped only to the previous GET step'
-          subprocess.run([sys.executable, 'scripts/native_file_qa.py', 'smoke', '--run', os.environ['KIO_QA_RUN'], '--app', os.environ['KIO_QA_APP'], '--platform', os.environ['KIO_QA_PLATFORM'], '--output', os.environ['KIO_QA_ROOT']], check=True)
-          PY
-      - name: Retain QA reports, synthetic files and command logs on success or failure
+      - name: Install same fixed Rust compiler for metadata only
+        run: rustup toolchain install 1.95.0 --profile minimal --target x86_64-pc-windows-msvc
+      - name: Authenticate original Git blobs and record exact Windows link and unchanged production guard
+        run: python scripts/probe_winit_windows_license.py
+      - name: Retain bounded exact public legal fixture and Windows diagnostic on success or failure
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
-          name: file-qa-${{ inputs.app }}-${{ inputs.platform }}-${{ inputs.run_id }}
-          path: |
-            ${{ runner.temp }}/kio-native-file-qa/report.json
-            ${{ runner.temp }}/kio-native-file-qa/bundle-manifest.json
-            ${{ runner.temp }}/kio-native-file-qa/collection/collection.json
-            ${{ runner.temp }}/kio-native-file-qa/collection/selected-lock.json
-            ${{ runner.temp }}/kio-native-file-qa/*.stdout.txt
-            ${{ runner.temp }}/kio-native-file-qa/*.stderr.txt
-            ${{ runner.temp }}/kio-native-file-qa/smoke/**
-          if-no-files-found: warn
+          name: winit-windows-license-probe-${{ github.run_id }}
+          path: winit-license-probe-evidence/
+          if-no-files-found: error
           retention-days: 14
-          include-hidden-files: false
