@@ -12,6 +12,20 @@ spec.loader.exec_module(audit)
 
 
 class LocalizationFailures(unittest.TestCase):
+    def test_direct_dropdown_links_and_formatted_captions_fail_the_gate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='combo.selected_text("Light"); ui.link("Help"); ui.button(format!("Delete {} files", count));')
+            result=audit.audit_app('fixture',root)
+            self.assertFalse(result['complete'])
+            self.assertEqual({r['text'] for r in result['directUiReview']},{'Light','Help','Delete {} files'})
+
+    def test_formatted_user_data_and_unit_symbols_are_not_prose(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='ui.label(format!("{}", title)); ui.button(format!("{width} pt")); ui.label(i18n::msg(&format!("Delete {} files", count)));')
+            self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
+
     def test_empty_catalog_tree_cannot_pass_a_complete_release_gate(self):
         with tempfile.TemporaryDirectory() as tmp:
             result=audit.audit_app('fixture',Path(tmp))

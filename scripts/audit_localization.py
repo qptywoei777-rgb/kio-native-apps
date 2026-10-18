@@ -20,7 +20,8 @@ APPS = ('photo', 'vector', 'film', 'light', 'pdf', 'effect', 'design', 'ui', 'wo
 ALIASES = {'zh': 'zh-CN', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW'}
 RSTRING = r'"(?:[^"\\]|\\.)*"'
 PLACEHOLDER = re.compile(r'(?<!\{)\{([A-Za-z_][\w]*(?::[^{}]*)?)\}(?!\})')
-DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|menu_button|on_hover_text|hint_text|selectable_label|checkbox)\s*\(\s*(?:[^,\n]+,\s*)?(' + RSTRING + ')')
+DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|menu_button|link|radio|on_hover_text|hint_text|selected_text|selectable_label|checkbox)\s*\(\s*(?:[^,\n]+,\s*)?(' + RSTRING + ')')
+DIRECT_FORMAT_UI = re.compile(r'\.(?:label|button|small_button|heading|on_hover_text|hint_text|selected_text)\s*\(\s*(?:(?:egui::)?RichText::new\s*\(\s*)?format!\s*\(\s*(' + RSTRING + ')')
 LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn|msg)\s*\()\s*(?:&\s*)?\(*\s*(' + RSTRING + ')')
 OFFICIAL_NAMES = {'launcher': {('', value) for value in ('Launcher', 'KIO App Suite', 'Discord', 'GitHub', 'KIO Launcher {version}', 'KIO Launcher', 'ArtCraft', '{name} {version}')}}
 
@@ -145,6 +146,13 @@ def source_literals(source):
             value = literal(m[1])
             if re.search('[A-Za-z]{2}', value):
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
+        for m in DIRECT_FORMAT_UI.finditer(text):
+            value = literal(m[1])
+            fixed = re.sub(r'\{[^{}]*\}', '', value).strip()
+            # Standard unit symbols remain literal; variable names themselves
+            # are not UI text. Actual prose around arguments needs localization.
+            if re.search('[A-Za-z]{2}', fixed) and fixed not in {'pt', 'px', 'mm', 'cm', 'in', 'ms', 'Hz', 'kHz', 'KB', 'MB', 'GB', 'TB'}:
+                review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value, 'kind': 'untranslatedFormatTemplate'})
     return keys, review
 
 
