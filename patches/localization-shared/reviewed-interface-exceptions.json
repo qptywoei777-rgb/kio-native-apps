@@ -2,14 +2,2242 @@
   "schemaVersion": 1,
   "policy": "Exact app/language/context/source exceptions reviewed against actual code. Never a blanket allowance for English interface text.",
   "entries": [
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Backspace","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Enter","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Escape","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Return","reason":"Physical key identifier; preserve shortcut notation."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Space","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Tab","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"RRGGBB","reason":"Hexadecimal RGB input notation in widgets.rs; letters describe the required data format."},
-    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors","reason":"Preserve upstream SPDX license expression and copyright attribution in About dialog."},
-    {"app":"deck","languages":["vi"],"context":"","source":"Video","reason":"Standard Vietnamese loanword for video; this exception does not apply to Japanese, Korean or Chinese."}
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Backspace",
+      "reason": "Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Enter",
+      "reason": "Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Escape",
+      "reason": "Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Return",
+      "reason": "Physical key identifier; preserve shortcut notation."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Space",
+      "reason": "Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Tab",
+      "reason": "Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "RRGGBB",
+      "reason": "Hexadecimal RGB input notation in widgets.rs; letters describe the required data format."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors",
+      "reason": "Preserve upstream SPDX license expression and copyright attribution in About dialog."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi"
+      ],
+      "context": "",
+      "source": "Video",
+      "reason": "Standard Vietnamese loanword for video; this exception does not apply to Japanese, Korean or Chinese."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt+'",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt+6",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt+7",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt+=",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt+I",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Alt+J",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+1",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+3",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+4",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+5",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+9",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+=",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Alt+0-5",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Alt+J",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Alt+M",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Alt+[ / ]",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Ctrl+1-5",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Ctrl+=",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Ctrl+S",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Ctrl+W",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+N",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Shift+N",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+Shift+X",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cmd+W",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ctrl",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ctrl+",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ctrl+Down",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ctrl+Shift+Down",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ctrl+Shift+Up",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ctrl+Up",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Enter",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Shift",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Shift+K",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Space",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Tab",
+      "reason": "Physical key/shortcut notation; preserve the platform key identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "1",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "2",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "3",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5.0",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5.0.2",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5.0.4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5.1",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5.1.2",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "5.1.4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "6.0",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "6.1",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.0",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.0.2",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.0.4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.0.6",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.1",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.1.2",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.1.4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.1.6",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "9.0.4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "9.0.6",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "9.1.4",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "9.1.6",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.0 SDDS",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "7.1 SDDS",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "LCR",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "LCRS",
+      "reason": "Numeric channel layout notation; changing the numbers would change the format."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ableton Link",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Audio Units",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "AudioSuite",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "BF-76",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "CLAP",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "D-Verb",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Dyn3 Compressor/Limiter",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Dyn3 De-Esser",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Dyn3 Expander/Gate",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ1",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ7",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ 1-Band",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ 7-Band",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ3 1-Band",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "EQ3 7-Band",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Eleven Lite",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "HEAT",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Lo-Fi",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "LoFi",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Maxim",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Melodyne",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Mod Delay",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Mod Delay III",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "ModDly",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "QuickPunch",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "DestructivePunch",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "TrackPunch",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Recti-Fi",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "SansAmp PSA-1",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Sci-Fi",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Sibelius",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "SoundFlow",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Soundbase",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "SubSynth",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "TShift",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Vari-Fi",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "VST3",
+      "reason": "Canonical upstream plugin/product/protocol identifier shown by the plugin selector; preserve the name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": " dB",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": " s",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "I/O",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "I / O",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "I A-E",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "I F-J",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "S A-E",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "S F-J",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{:+.1} dB",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{:.2} s",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{db:+.1}",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{hi:.0}",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{lo:.0}",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{r} Hz",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{sample_rate} Hz",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{sr} Hz{note}",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{} Hz",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{} @ {} Hz",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "{}{arrow}",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "ΔLOC",
+      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "bpm",
+      "reason": "Canonical beats-per-minute unit symbol."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "@msg",
+      "source": "AudioSuite · {title}",
+      "reason": "Official product name followed solely by a verbatim title argument."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Sibelius...",
+      "reason": "Official product name and menu ellipsis."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi"
+      ],
+      "context": "",
+      "source": "Video",
+      "reason": "Standard Vietnamese loanword; other languages use independently translated captions."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "KIO Sound",
+      "reason": "Official application name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "MIDI",
+      "reason": "Standard protocol name."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "MIDI...",
+      "reason": "Standard protocol name and menu ellipsis."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "AudioSuite > EQ > EQ3 1-Band",
+      "reason": "Hierarchy containing only canonical plugin/product identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "AudioSuite > EQ > EQ3 7-Band",
+      "reason": "Hierarchy containing only canonical plugin/product identifiers."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi"
+      ],
+      "context": "",
+      "source": "Video...",
+      "reason": "Vietnamese video loanword followed by menu ellipsis; other languages translated independently."
+    },
+    {
+      "app": "photo",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "RGB",
+      "reason": "Canonical color-space or font-format identifier, also explicitly recognized by the translation reuse policy."
+    },
+    {
+      "app": "vector",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "RGB",
+      "reason": "Canonical color-space or font-format identifier, also explicitly recognized by the translation reuse policy."
+    },
+    {
+      "app": "vector",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "OpenType",
+      "reason": "Canonical color-space or font-format identifier, also explicitly recognized by the translation reuse policy."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "C",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Cs",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "L",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "LFE",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Lc",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Lrs",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ls",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Lss",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ltf",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ltm",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Ltr",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Lw",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Q",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "R",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rc",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rrs",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rs",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rss",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rtf",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rtm",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rtr",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "Rw",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "s",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "6 dB/oct",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "12 dB/oct",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "18 dB/oct",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "24 dB/oct",
+      "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    }
   ]
 }

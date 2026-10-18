@@ -23,7 +23,8 @@ class AuthoredCatalogs(unittest.TestCase):
     def test_deck_exceptions_cannot_hide_other_languages_or_apps(self):
         self.assertIn(('', 'Video'), audit.reviewed_exceptions('deck', 'vi'))
         self.assertNotIn(('', 'Video'), audit.reviewed_exceptions('deck', 'ja'))
-        self.assertNotIn(('', 'Video'), audit.reviewed_exceptions('sound', 'vi'))
+        self.assertNotIn(('', 'Video'), audit.reviewed_exceptions('sound', 'ja'))
+        self.assertNotIn(('', 'RRGGBB'), audit.reviewed_exceptions('sound', 'vi'))
         self.assertNotIn(('', 'Save'), audit.reviewed_exceptions('deck', 'vi'))
 
     def test_filename_is_not_a_translation_key(self):
@@ -39,6 +40,8 @@ class AuthoredCatalogs(unittest.TestCase):
         self.assertEqual(deck['Bounce']['ja'], 'バウンド')
         self.assertEqual(deck['Delete Rows']['zh-TW'], '刪除列')
         self.assertEqual(deck['Delete Rows']['zh-CN'], '删除行')
+        sound = seed.authored_rows(data / 'sound-interface.tsv')
+        self.assertNotEqual(deck['Bounce']['ja'], sound['Bounce']['ja'])
 
 
 if __name__ == '__main__':

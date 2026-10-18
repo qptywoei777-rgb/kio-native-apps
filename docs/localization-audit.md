@@ -65,3 +65,28 @@ remains mandatory for Launcher, whose six required catalogs are complete. The
 other editors must not be labelled fully localized until their existing findings
 are resolved and their native screens are tested. Do not refresh the baseline to
 hide new findings; proposed exceptions require source/context review.
+
+## Development candidates (2026-10-18)
+
+The additive candidates are reproducible, hash-pinned patches in
+`patches/localization-candidates`. They do not modify the published source locks.
+Deck has 1,047 keys and Sound has 1,508 keys in all six required languages. Both
+pass `--require-complete` for the current static inventory; the other eleven
+editors still have unresolved findings. A runtime metadata test in Sound also
+checks built-in plugin parameters, choice labels, automation modes and note
+values, because catalogs alone previously missed those dynamic labels.
+
+The auditor recognizes source-keyed format contexts without inventing a duplicate
+plain key. It ignores punctuation-only icons and does not confuse a parameter
+after a zero-argument `.label()` call with interface text. Actual formatted prose,
+dropdown selected values and links remain blocking findings.
+
+Keyed compound Sound messages preserve user names and braces verbatim. Recovery
+durations use language-specific complete phrases rather than English plural
+suffixes. The automatic language choice can be restored from the same globe menu.
+Built-in plugin captions are translated at their presentation boundary; hosted
+plugin names, bus names and session data remain verbatim.
+
+These candidates are development source, not new production installers. Static
+coverage, native compilation, interactive screen review, audio hardware, signed
+installation and real account authentication are distinct verification scopes.

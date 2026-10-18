@@ -20,7 +20,7 @@ APPS = ('photo', 'vector', 'film', 'light', 'pdf', 'effect', 'design', 'ui', 'wo
 ALIASES = {'zh': 'zh-CN', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW'}
 RSTRING = r'"(?:[^"\\]|\\.)*"'
 PLACEHOLDER = re.compile(r'(?<!\{)\{([A-Za-z_][\w]*(?::[^{}]*)?)\}(?!\})')
-DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|menu_button|link|radio|on_hover_text|hint_text|selected_text|selectable_label|checkbox)\s*\(\s*(?:[^,\n]+,\s*)?(' + RSTRING + ')')
+DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|menu_button|link|radio|on_hover_text|hint_text|selected_text|selectable_label|checkbox)\s*\(\s*(?!\))(?:[^,\n]+,\s*)?(' + RSTRING + ')')
 DIRECT_FORMAT_UI = re.compile(r'\.(?:label|button|small_button|heading|on_hover_text|hint_text|selected_text)\s*\(\s*(?:(?:egui::)?RichText::new\s*\(\s*)?format!\s*\(\s*(' + RSTRING + ')')
 LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn|msg)\s*\()\s*(?:&\s*)?\(*\s*(' + RSTRING + ')')
 OFFICIAL_NAMES = {'launcher': {('', value) for value in ('Launcher', 'KIO App Suite', 'Discord', 'GitHub', 'KIO Launcher {version}', 'KIO Launcher', 'ArtCraft', '{name} {version}')}}
@@ -141,7 +141,10 @@ def source_literals(source):
             continue
         text = f.read_text(encoding='utf-8').split('#[cfg(test)]')[0]
         for m in LOOKUP.finditer(text):
-            keys.add(('', literal(m[1])))
+            value = literal(m[1])
+            # Empty text and punctuation-only icons have no linguistic content.
+            if any(c.isalpha() for c in value):
+                keys.add(('', value))
         for m in DIRECT_UI.finditer(text):
             value = literal(m[1])
             if re.search('[A-Za-z]{2}', value):
@@ -183,7 +186,12 @@ def audit_app(app, source):
         return {'id': app, 'sourceAvailable': False, 'complete': False}
     catalogs, inputs, parse_errors = collect_catalogs(source)
     literal_keys, direct = source_literals(source)
-    keys = set().union(*[set(c) for c in catalogs.values()], literal_keys)
+    catalog_keys = set().union(*[set(c) for c in catalogs.values()])
+    # Source-keyed format messages have a dedicated catalog context. A literal
+    # call without that storage detail must not create a second phantom key.
+    literal_keys = {('@msg', text) if (context, text) not in catalog_keys and ('@msg', text) in catalog_keys else (context, text)
+                    for context, text in literal_keys}
+    keys = catalog_keys | literal_keys
     rows = {}
     for lang in LANGUAGES:
         exceptions = OFFICIAL_NAMES.get(app, set()) | reviewed_exceptions(app, lang)

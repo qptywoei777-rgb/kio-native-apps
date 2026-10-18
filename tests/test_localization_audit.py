@@ -26,6 +26,22 @@ class LocalizationFailures(unittest.TestCase):
             self.fixture(root,ui='ui.label(format!("{}", title)); ui.button(format!("{width} pt")); ui.label(i18n::msg(&format!("Delete {} files", count)));')
             self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
 
+    def test_parameter_key_after_zero_argument_label_is_not_a_ui_caption(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='let params = json!({"shape": fade.shape.label(), "curvature": 0.5});')
+            self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
+
+    def test_format_message_storage_context_does_not_create_a_duplicate_key(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='msg("Remove {name}"); t(""); t("🔒");')
+            for path in (root/'crates/ui-egui/src/i18n').glob('*.tsv'):
+                path.write_text('@msg\tRemove {name}\tXóa {name}\n',encoding='utf-8')
+            result=audit.audit_app('fixture',root)
+            self.assertEqual(result['catalogKeyUnion'],1)
+            self.assertEqual(result['languages']['vi']['missing'],0)
+
     def test_empty_catalog_tree_cannot_pass_a_complete_release_gate(self):
         with tempfile.TemporaryDirectory() as tmp:
             result=audit.audit_app('fixture',Path(tmp))

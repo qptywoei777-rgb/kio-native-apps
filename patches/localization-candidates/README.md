@@ -10,7 +10,10 @@ Deck and Sound receive six-language UI plumbing, device-local preferences,
 OS detection, native font fallback and stable window identity. Deck now has 1,047
 catalog keys in all six languages, including presentation-specific editorial
 translations and repaired dynamic menus, accessible labels and font notices.
-Sound catalogs remain incomplete. **Neither candidate is release-approved.**
+Sound now has 1,508 keys in each of the six languages, including the actual
+model/DSP presentation metadata, recovery and device-failure messages. Keyed
+compound messages preserve filenames and nested arguments; language changes
+retain the session. **Neither candidate is release-approved.**
 
 To inspect a candidate in a fresh checkout:
 
@@ -20,20 +23,24 @@ python scripts/check_localization_candidate.py --app deck
 python scripts/audit_localization.py --app deck --require-complete --output dist/deck-localization.json
 ```
 
-The final command passes Deck's current static inventory and fails Sound's
-outstanding translation gaps. It does not certify every rendered screen.
+The final command passes the current static inventory for Deck and Sound. It
+does not certify every rendered screen or the remaining eleven editors.
 The candidate checker validates input/output hashes and the exact allowed file
 set. It does not update prepared.json, so ordinary release packaging continues to
 reject the candidate tree. The separate native verification workflow has read-only
 repository permission and never packages or publishes a release.
 
-Local checks on macOS arm64: both GUI crates compile; updated Deck UI tests 52/52
-pass; Sound UI tests 110 pass, one catalog-completeness failure. The preceding
-candidate passed Deck 50/50 on Windows and macOS; updated Windows CI is separate.
-Sound screenshots still show English text, and its horizontally scrollable toolbar
-needs further inspection. Deck native screen capture exposed an overlapping
-Vietnamese status counter, now laid out from actual glyph widths. Screenshots
-remain review evidence rather than a blanket full-GUI pass.
+Local checks on macOS arm64: both GUI crates compile; Deck UI tests 53/53 and
+Sound UI tests 118/118 pass. Deck's current candidate passed 53/53 and the strict
+catalog gate on both macOS and Windows in run 39142452059. Sound's revised
+candidate requires its own Windows run. The earlier Sound run failed correctly
+for its then-missing catalog entries; it is not evidence against or for this
+new source. Actual Sound window inspection found untranslated docking tabs,
+model modes, note units and status fragments; these were subsequently repaired.
+Deck's Vietnamese status counter and translated gallery captions were repaired
+using actual glyph widths. Native screenshots remain review evidence rather
+than a blanket full-GUI pass, and audio hardware/installation/real-login tests
+remain separately recorded.
 
 Translation data and scripts are in patches/localization-shared and scripts/.
 The authored TSV has English, Vietnamese, Korean, Japanese, Traditional Chinese,

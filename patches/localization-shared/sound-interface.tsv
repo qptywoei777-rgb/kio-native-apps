@@ -1,0 +1,1513 @@
+# Sound-specific translations: source, vi, ko, ja, zh-TW, zh-CN.
+# Audio meanings are deliberately isolated from Deck animation terminology.
+Audio	Âm thanh	오디오	オーディオ	音訊	音频
+Audio Device	Thiết bị âm thanh	오디오 장치	オーディオデバイス	音訊裝置	音频设备
+Audio Track	Rãnh âm thanh	오디오 트랙	オーディオトラック	音訊軌	音轨
+Audio files	Tệp âm thanh	오디오 파일	オーディオファイル	音訊檔案	音频文件
+Audio system	Hệ thống âm thanh	오디오 시스템	オーディオシステム	音訊系統	音频系统
+Audio...	Âm thanh...	오디오...	オーディオ...	音訊...	音频...
+Audio: {}	Âm thanh: {}	오디오: {}	オーディオ: {}	音訊：{}	音频：{}
+Audio as MIDI	Âm thanh thành MIDI	오디오를 MIDI로	オーディオを MIDI に変換	將音訊轉為 MIDI	将音频转换为 MIDI
+Automation	Tự động hóa	오토메이션	オートメーション	自動化	自动化
+Automation Follows Edit	Tự động hóa theo chỉnh sửa	편집 시 오토메이션 함께 이동	編集にオートメーションを追従	自動化隨編輯移動	自动化随编辑移动
+Bit Depth	Độ sâu bit	비트 깊이	ビット深度	位元深度	位深度
+Bit depth	Độ sâu bit	비트 깊이	ビット深度	位元深度	位深度
+Bounce	Kết xuất âm thanh	오디오 바운스	バウンス	音訊混縮	音频混缩
+Bounce Mix	Kết xuất bản phối	믹스 바운스	ミックスをバウンス	混縮混音	混缩混音
+Bounce Mix...	Kết xuất bản phối...	믹스 바운스...	ミックスをバウンス...	混縮混音...	混缩混音...
+Bounce Mix…	Kết xuất bản phối…	믹스 바운스…	ミックスをバウンス…	混縮混音…	混缩混音…
+Bounce...	Kết xuất âm thanh...	오디오 바운스...	バウンス...	音訊混縮...	音频混缩...
+Bounce cancelled	Đã hủy kết xuất	바운스 취소됨	バウンスをキャンセルしました	已取消混縮	已取消混缩
+A bounce is already running	Đang có một tác vụ kết xuất âm thanh	이미 바운스를 진행 중입니다	すでにバウンスを実行中です	已有音訊混縮作業正在執行	已有音频混缩任务正在运行
+Bouncing {name}	Đang kết xuất {name}	{name} 바운스 중	{name} をバウンス中	正在混縮 {name}	正在混缩 {name}
+Bouncing {} ({:.0}%)	Đang kết xuất {} ({:.0}%)	{} 바운스 중 ({:.0}%)	{} をバウンス中（{:.0}%）	正在混縮 {}（{:.0}%）	正在混缩 {}（{:.0}%）
+Bounces the edit selection, or the whole session when nothing is selected.	Kết xuất vùng chỉnh sửa đã chọn, hoặc toàn bộ phiên nếu chưa chọn vùng nào.	편집 선택 영역을 바운스합니다. 선택 영역이 없으면 전체 세션을 바운스합니다.	編集選択範囲をバウンスします。選択範囲がない場合はセッション全体をバウンスします。	混縮編輯選取範圍；若未選取任何範圍，則混縮整個工作階段。	混缩编辑选区；未选择任何范围时混缩整个会话。
+Finish or cancel the bounce first	Hãy hoàn tất hoặc hủy kết xuất trước	먼저 바운스를 완료하거나 취소하세요	先にバウンスを完了するか、キャンセルしてください	請先完成或取消混縮	请先完成或取消混缩
+Buffer size	Kích thước bộ đệm	버퍼 크기	バッファーサイズ	緩衝區大小	缓冲区大小
+Bus	Bus âm thanh	버스	バス	匯流排	总线
+Bus {n}	Bus âm thanh {n}	버스 {n}	バス {n}	匯流排 {n}	总线 {n}
+Busses	Các bus âm thanh	버스	バス	匯流排	总线
+Bypass	Bỏ qua xử lý	바이패스	バイパス	旁通	旁通
+BYPASSED	ĐÃ BỎ QUA XỬ LÝ	바이패스됨	バイパス中	已旁通	已旁通
+Bypass Inserts	Bỏ qua hiệu ứng chèn	인서트 바이패스	インサートをバイパス	旁通插入效果	旁通插入效果
+Channel Name	Tên kênh	채널 이름	チャンネル名	聲道名稱	声道名称
+Channel Strip	Dải kênh	채널 스트립	チャンネルストリップ	通道條	通道条
+Chorus	Hợp xướng	코러스	コーラス	合聲	合唱
+Clip	Đoạn âm thanh	클립	クリップ	片段	片段
+Clips	Các đoạn âm thanh	클립	クリップ	片段	片段
+Clip Effects	Hiệu ứng đoạn	클립 효과	クリップエフェクト	片段效果	片段效果
+Clip Effects Status	Trạng thái hiệu ứng đoạn	클립 효과 상태	クリップエフェクトの状態	片段效果狀態	片段效果状态
+Clip Gain	Độ khuếch đại đoạn	클립 게인	クリップゲイン	片段增益	片段增益
+Clip Gain Info	Thông tin khuếch đại đoạn	클립 게인 정보	クリップゲイン情報	片段增益資訊	片段增益信息
+Clip Gain Line	Đường khuếch đại đoạn	클립 게인 선	クリップゲインライン	片段增益線	片段增益线
+Clip List	Danh sách đoạn	클립 목록	クリップリスト	片段清單	片段列表
+Clip effects gain (dB)	Độ khuếch đại hiệu ứng đoạn (dB)	클립 효과 게인(dB)	クリップエフェクトのゲイン（dB）	片段效果增益（dB）	片段效果增益（dB）
+Clip end pad ms	Khoảng đệm cuối đoạn (ms)	클립 끝 여유(ms)	クリップ末尾の余白（ms）	片段結尾留白（ms）	片段结尾留白（ms）
+Clip start pad ms	Khoảng đệm đầu đoạn (ms)	클립 시작 여유(ms)	クリップ先頭の余白（ms）	片段開頭留白（ms）	片段开头留白（ms）
+Close Session	Đóng phiên	세션 닫기	セッションを閉じる	關閉工作階段	关闭会话
+Compressor/Limiter	Bộ nén/giới hạn	컴프레서/리미터	コンプレッサー／リミッター	壓縮器／限制器	压缩器／限制器
+Count Off	Đếm trước	카운트인	カウントオフ	預備拍	预备拍
+Create Click Track	Tạo rãnh máy đếm nhịp	클릭 트랙 만들기	クリックトラックを作成	建立節拍器軌	创建节拍器轨
+Delay	Độ trễ	딜레이	ディレイ	延遲	延迟
+Delay (ticks)	Độ trễ (tick)	딜레이(틱)	ディレイ（ティック）	延遲（刻度）	延迟（刻度）
+Delay Compensation	Bù độ trễ	지연 보정	遅延補正	延遲補償	延迟补偿
+Delay compensation	Bù độ trễ	지연 보정	遅延補正	延遲補償	延迟补偿
+Device default	Mặc định của thiết bị	장치 기본값	デバイスの既定値	裝置預設值	设备默认值
+Disk Usage	Mức sử dụng ổ đĩa	디스크 사용량	ディスク使用状況	磁碟使用量	磁盘使用量
+Drum Synth	Bộ tổng hợp tiếng trống	드럼 신시사이저	ドラムシンセ	鼓聲合成器	鼓声合成器
+Drums	Trống	드럼	ドラム	鼓組	鼓组
+Duration %	Thời lượng %	길이 %	長さ %	持續時間 %	持续时间 %
+Dynamic Transport	Điều khiển phát linh hoạt	다이내믹 트랜스포트	ダイナミックトランスポート	動態播放控制	动态播放控制
+Dynamics	Động học âm thanh	다이내믹스	ダイナミクス	動態處理	动态处理
+Elastic Audio	Âm thanh co giãn	엘라스틱 오디오	エラスティックオーディオ	彈性音訊	弹性音频
+Elastic Properties	Thuộc tính co giãn	엘라스틱 속성	エラスティックプロパティ	彈性屬性	弹性属性
+Elevation (height speakers)	Độ cao (loa trên cao)	고도(높이 스피커)	仰角（ハイトスピーカー）	仰角（高置喇叭）	仰角（顶部扬声器）
+Expander/Gate	Bộ mở rộng/cổng nhiễu	익스팬더/게이트	エキスパンダー／ゲート	擴展器／雜訊閘	扩展器／噪声门
+Fades	Chuyển âm	페이드	フェード	淡化	淡化
+Fast Forward	Tua tới	빨리 감기	早送り	快轉	快进
+Flanger	Hiệu ứng lướt âm	플랜저	フランジャー	鑲邊效果	镶边效果
+Gain	Độ khuếch đại	게인	ゲイン	增益	增益
+Gate	Cổng nhiễu	게이트	ゲート	雜訊閘	噪声门
+Harmonic	Hài âm	하모닉	ハーモニック	諧波	谐波
+Import Audio	Nhập âm thanh	오디오 가져오기	オーディオを読み込む	匯入音訊	导入音频
+Import MIDI	Nhập MIDI	MIDI 가져오기	MIDI を読み込む	匯入 MIDI	导入 MIDI
+Input device	Thiết bị đầu vào	입력 장치	入力デバイス	輸入裝置	输入设备
+Input monitoring	Giám sát đầu vào	입력 모니터링	入力モニタリング	輸入監聽	输入监听
+Insert Silence	Chèn khoảng lặng	무음 삽입	無音を挿入	插入靜音	插入静音
+Inserts A-E	Hiệu ứng chèn A-E	인서트 A-E	インサート A-E	插入效果 A-E	插入效果 A-E
+Inserts F-J	Hiệu ứng chèn F-J	인서트 F-J	インサート F-J	插入效果 F-J	插入效果 F-J
+INSERTS A-E	HIỆU ỨNG CHÈN A-E	인서트 A-E	インサート A-E	插入效果 A-E	插入效果 A-E
+INSERTS F-J	HIỆU ỨNG CHÈN F-J	인서트 F-J	インサート F-J	插入效果 F-J	插入效果 F-J
+Instrument	Nhạc cụ	악기	インストゥルメント	樂器	乐器
+Instruments	Nhạc cụ	악기	インストゥルメント	樂器	乐器
+INSTRUMENT	NHẠC CỤ	악기	インストゥルメント	樂器	乐器
+Key Signature	Hóa biểu	조표	調号	調號	调号
+Key Signature Staff	Khuông hóa biểu	조표 오선	調号譜表	調號譜表	调号谱表
+Legato	Liền tiếng	레가토	レガート	圓滑奏	连奏
+Length ratio	Tỷ lệ độ dài	길이 비율	長さの比率	長度比例	长度比例
+Loop Playback	Phát lặp	반복 재생	ループ再生	循環播放	循环播放
+Loop Playback (Cmd+Shift+L)	Phát lặp (Cmd+Shift+L)	반복 재생(Cmd+Shift+L)	ループ再生（Cmd+Shift+L）	循環播放（Cmd+Shift+L）	循环播放（Cmd+Shift+L）
+Loop Rec	Thu lặp	루프 녹음	ループ録音	循環錄音	循环录音
+Loop Record	Thu lặp	루프 녹음	ループ録音	循環錄音	循环录音
+Low Latency Monitoring	Giám sát độ trễ thấp	저지연 모니터링	低遅延モニタリング	低延遲監聽	低延迟监听
+MIDI Controls	Điều khiển MIDI	MIDI 컨트롤	MIDI コントロール	MIDI 控制	MIDI 控制
+MIDI EDITOR	TRÌNH BIÊN TẬP MIDI	MIDI 편집기	MIDI エディター	MIDI 編輯器	MIDI 编辑器
+MIDI Editor	Trình biên tập MIDI	MIDI 편집기	MIDI エディター	MIDI 編輯器	MIDI 编辑器
+MIDI Editors	Các trình biên tập MIDI	MIDI 편집기	MIDI エディター	MIDI 編輯器	MIDI 编辑器
+MIDI Event List	Danh sách sự kiện MIDI	MIDI 이벤트 목록	MIDI イベントリスト	MIDI 事件清單	MIDI 事件列表
+MIDI Input Display	Hiển thị đầu vào MIDI	MIDI 입력 표시	MIDI 入力表示	MIDI 輸入顯示	MIDI 输入显示
+MIDI Keyboard	Bàn phím MIDI	MIDI 키보드	MIDI キーボード	MIDI 鍵盤	MIDI 键盘
+MIDI Live Mode	Chế độ MIDI trực tiếp	MIDI 라이브 모드	MIDI ライブモード	MIDI 即時模式	MIDI 实时模式
+MIDI Merge	Gộp MIDI	MIDI 병합	MIDI マージ	合併 MIDI	合并 MIDI
+MIDI Operations	Thao tác MIDI	MIDI 작업	MIDI 操作	MIDI 操作	MIDI 操作
+MIDI Operations Window	Cửa sổ thao tác MIDI	MIDI 작업 창	MIDI 操作ウィンドウ	MIDI 操作視窗	MIDI 操作窗口
+MIDI Real-Time Properties	Thuộc tính MIDI thời gian thực	MIDI 실시간 속성	MIDI リアルタイムプロパティ	MIDI 即時屬性	MIDI 实时属性
+MIDI Thru	Chuyển tiếp MIDI	MIDI 스루	MIDI スルー	MIDI 直通	MIDI 直通
+MIDI Track Offsets	Độ lệch rãnh MIDI	MIDI 트랙 오프셋	MIDI トラックオフセット	MIDI 軌偏移	MIDI 轨偏移
+MIDI in: all	MIDI vào: tất cả	MIDI 입력: 전체	MIDI 入力：すべて	MIDI 輸入：全部	MIDI 输入：全部
+Main Counter	Bộ đếm chính	메인 카운터	メインカウンター	主要計數器	主计数器
+Main output	Đầu ra chính	메인 출력	メイン出力	主要輸出	主输出
+Main output: {}	Đầu ra chính: {}	메인 출력: {}	メイン出力：{}	主要輸出：{}	主输出：{}
+Marker Controls	Điều khiển dấu mốc	마커 컨트롤	マーカーコントロール	標記控制	标记控制
+Marker Displays	Hiển thị dấu mốc	마커 표시	マーカー表示	標記顯示	标记显示
+Markers	Dấu mốc	마커	マーカー	標記	标记
+Memory Locations	Vị trí đã ghi nhớ	메모리 위치	メモリーロケーション	記憶位置	记忆位置
+MEMORY LOCATIONS	VỊ TRÍ ĐÃ GHI NHỚ	메모리 위치	メモリーロケーション	記憶位置	记忆位置
+Merge MIDI	Gộp MIDI	MIDI 병합	MIDI をマージ	合併 MIDI	合并 MIDI
+Merge Markers	Gộp dấu mốc	마커 병합	マーカーを統合	合併標記	合并标记
+Meter	Nhịp	박자	拍子	拍號	拍号
+Meters and Faders	Đồng hồ mức và cần gạt	미터 및 페이더	メーターとフェーダー	電平表與推桿	电平表与推子
+Mic Preamps	Tiền khuếch đại micrô	마이크 프리앰프	マイクプリアンプ	麥克風前級	麦克风前置放大器
+Min strip duration ms	Độ dài cắt tối thiểu (ms)	최소 스트립 길이(ms)	最小ストリップ長（ms）	最短分割長度（ms）	最短分割长度（ms）
+Mix	Bản phối	믹스	ミックス	混音	混音
+Mix Window View	Chế độ xem cửa sổ phối âm	믹스 창 보기	ミックスウィンドウ表示	混音視窗檢視	混音窗口视图
+Mix Window Views	Các chế độ xem cửa sổ phối âm	믹스 창 보기	ミックスウィンドウ表示	混音視窗檢視	混音窗口视图
+Mix group	Nhóm phối âm	믹스 그룹	ミックスグループ	混音群組	混音编组
+Mix in Separate Window	Phối âm trong cửa sổ riêng	별도 창에서 믹스	ミックスを別ウィンドウに表示	在獨立視窗中混音	在独立窗口中混音
+Modulation	Điều biến	모듈레이션	モジュレーション	調變	调制
+Mono	Đơn âm	모노	モノラル	單聲道	单声道
+Mute	Tắt tiếng	음소거	ミュート	靜音	静音
+Mute Sends	Tắt tiếng các đường gửi	센드 음소거	センドをミュート	將傳送靜音	将发送静音
+Mute send	Tắt tiếng đường gửi	센드 음소거	センドをミュート	將傳送靜音	将发送静音
+Mute/Unmute	Tắt/Bật tiếng	음소거/해제	ミュート／解除	靜音／取消靜音	静音／取消静音
+New Bus	Bus âm thanh mới	새 버스	新規バス	新增匯流排	新建总线
+New Playlist	Danh sách phát mới	새 재생 목록	新規プレイリスト	新增播放清單	新建播放列表
+New Session	Phiên mới	새 세션	新規セッション	新增工作階段	新建会话
+New Tracks	Rãnh mới	새 트랙	新規トラック	新增軌道	新建轨道
+New Tracks…	Rãnh mới…	새 트랙…	新規トラック…	新增軌道…	新建轨道…
+New Tracks… ({})	Rãnh mới… ({})	새 트랙… ({})	新規トラック…（{}）	新增軌道…（{}）	新建轨道…（{}）
+Normalize	Chuẩn hóa	노멀라이즈	ノーマライズ	正規化	标准化
+Normalize to -0.1 dBFS	Chuẩn hóa về -0.1 dBFS	-0.1 dBFS로 노멀라이즈	-0.1 dBFS にノーマライズ	正規化至 -0.1 dBFS	标准化为 -0.1 dBFS
+Note	Nốt nhạc	음표	ノート	音符	音符
+Nudge	Dịch từng bước	너지	ナッジ	微移	微移
+Object	Đối tượng	오브젝트	オブジェクト	物件	对象
+OBJECT	ĐỐI TƯỢNG	오브젝트	オブジェクト	物件	对象
+Open Session	Mở phiên	세션 열기	セッションを開く	開啟工作階段	打开会话
+Output device	Thiết bị đầu ra	출력 장치	出力デバイス	輸出裝置	输出设备
+Outputs	Các đầu ra	출력	出力	輸出	输出
+Output Meters	Đồng hồ mức đầu ra	출력 미터	出力メーター	輸出電平表	输出电平表
+Pan	Vị trí trái/phải	팬	パン	聲像	声像
+Pan Automation	Tự động hóa vị trí trái/phải	팬 오토메이션	パンオートメーション	聲像自動化	声像自动化
+Peak	Đỉnh	피크	ピーク	峰值	峰值
+Peak dB	Đỉnh (dB)	피크 dB	ピーク dB	峰值 dB	峰值 dB
+Phaser	Hiệu ứng pha	페이저	フェイザー	相位效果	移相效果
+Pitch	Cao độ	피치	ピッチ	音高	音高
+Pitch Shift	Dịch cao độ	피치 시프트	ピッチシフト	音高偏移	音高偏移
+Pitch Shifter	Bộ dịch cao độ	피치 시프터	ピッチシフター	音高偏移器	移调器
+Playlists	Danh sách phát	재생 목록	プレイリスト	播放清單	播放列表
+Plugin Automation	Tự động hóa trình cắm	플러그인 오토메이션	プラグインオートメーション	外掛自動化	插件自动化
+Playback Engine	Bộ máy phát âm thanh	재생 엔진	プレイバックエンジン	播放引擎	播放引擎
+Playback Engine...	Bộ máy phát âm thanh...	재생 엔진...	プレイバックエンジン...	播放引擎...	播放引擎...
+Pre-Fader Metering	Đo mức trước cần gạt	프리 페이더 미터링	プリフェーダーメータリング	推桿前電平測量	推子前电平测量
+Pre-fader	Trước cần gạt	프리 페이더	プリフェーダー	推桿前	推子前
+Pre-roll	Phát trước	프리롤	プリロール	預先播放	预先播放
+Post-roll	Phát sau	포스트롤	ポストロール	後續播放	后续播放
+Quantize	Lượng tử hóa	퀀타이즈	クオンタイズ	量化	量化
+Quantize strength	Cường độ lượng tử hóa	퀀타이즈 강도	クオンタイズ強度	量化強度	量化强度
+Quantize to Grid	Lượng tử hóa theo lưới	그리드에 퀀타이즈	グリッドにクオンタイズ	量化至格線	量化到网格
+Quantize to the grid	Lượng tử hóa theo lưới	그리드에 퀀타이즈	グリッドにクオンタイズ	量化至格線	量化到网格
+Record enable	Bật thu âm	녹음 활성화	録音を有効にする	啟用錄音	启用录音
+Reconnect audio device	Kết nối lại thiết bị âm thanh	오디오 장치 다시 연결	オーディオデバイスを再接続	重新連接音訊裝置	重新连接音频设备
+Refresh devices	Làm mới thiết bị	장치 새로 고침	デバイスを更新	重新整理裝置	刷新设备
+Remove send	Xóa đường gửi	센드 제거	センドを削除	移除傳送	移除发送
+Reverb	Âm vang	리버브	リバーブ	殘響	混响
+Rewind	Tua lùi	되감기	巻き戻し	倒轉	快退
+Room Reverb	Âm vang phòng	룸 리버브	ルームリバーブ	房間殘響	房间混响
+Sample Rate	Tần số lấy mẫu	샘플 레이트	サンプルレート	取樣率	采样率
+Sample rate	Tần số lấy mẫu	샘플 레이트	サンプルレート	取樣率	采样率
+Sample	Mẫu âm thanh	샘플	サンプル	樣本	样本
+Sampler	Bộ phát mẫu âm thanh	샘플러	サンプラー	取樣器	采样器
+Samples	Mẫu	샘플	サンプル	樣本	样本
+Saturator	Bộ tạo bão hòa	새추레이터	サチュレーター	飽和器	饱和器
+Save Session	Lưu phiên	세션 저장	セッションを保存	儲存工作階段	保存会话
+Save Session As	Lưu phiên thành	다른 이름으로 세션 저장	名前を付けてセッションを保存	另存工作階段	会话另存为
+Save Session As...	Lưu phiên thành...	다른 이름으로 세션 저장...	名前を付けてセッションを保存...	另存工作階段...	会话另存为...
+Score Editor	Trình biên tập bản nhạc	악보 편집기	スコアエディター	樂譜編輯器	乐谱编辑器
+Score Setup	Thiết lập bản nhạc	악보 설정	スコア設定	樂譜設定	乐谱设置
+Send level	Mức đường gửi	센드 레벨	センドレベル	傳送電平	发送电平
+Sends A-E	Đường gửi A-E	센드 A-E	センド A-E	傳送 A-E	发送 A-E
+Sends F-J	Đường gửi F-J	센드 F-J	センド F-J	傳送 F-J	发送 F-J
+SENDS A-E	ĐƯỜNG GỬI A-E	센드 A-E	センド A-E	傳送 A-E	发送 A-E
+SENDS F-J	ĐƯỜNG GỬI F-J	센드 F-J	センド F-J	傳送 F-J	发送 F-J
+Session	Phiên	세션	セッション	工作階段	会话
+Session Audio Health	Tình trạng âm thanh của phiên	세션 오디오 상태	セッションのオーディオ状態	工作階段音訊狀態	会话音频状态
+Session Info	Thông tin phiên	세션 정보	セッション情報	工作階段資訊	会话信息
+Session Setup	Thiết lập phiên	세션 설정	セッション設定	工作階段設定	会话设置
+Session comments	Ghi chú phiên	세션 주석	セッションコメント	工作階段註解	会话注释
+Session rate	Tần số lấy mẫu của phiên	세션 샘플 레이트	セッションのサンプルレート	工作階段取樣率	会话采样率
+Solo	Nghe riêng	솔로	ソロ	獨奏	独奏
+Solo Mode	Chế độ nghe riêng	솔로 모드	ソロモード	獨奏模式	独奏模式
+Stereo	Âm thanh nổi	스테레오	ステレオ	立體聲	立体声
+Strip Silence	Loại bỏ khoảng lặng	무음 제거	ストリップサイレンス	移除靜音	移除静音
+Subtractive Synth	Bộ tổng hợp trừ	감산형 신시사이저	減算式シンセ	減法合成器	减法合成器
+Tempo	Nhịp độ	템포	テンポ	速度	速度
+Tempo Change (BPM)	Thay đổi nhịp độ (BPM)	템포 변경(BPM)	テンポ変更（BPM）	速度變更（BPM）	速度变化（BPM）
+Tempo Editor	Trình biên tập nhịp độ	템포 편집기	テンポエディター	速度編輯器	速度编辑器
+Tempo Operations	Thao tác nhịp độ	템포 작업	テンポ操作	速度操作	速度操作
+Tempo Operations Window	Cửa sổ thao tác nhịp độ	템포 작업 창	テンポ操作ウィンドウ	速度操作視窗	速度操作窗口
+Ticks	Tick	틱	ティック	刻度	刻度
+Timebase: samples	Cơ sở thời gian: mẫu	시간 기준: 샘플	タイムベース：サンプル	時間基準：樣本	时间基准：样本
+Timebase: ticks	Cơ sở thời gian: tick	시간 기준: 틱	タイムベース：ティック	時間基準：刻度	时间基准：刻度
+Timecode	Mã thời gian	타임코드	タイムコード	時間碼	时间码
+Timecode Rate	Tốc độ mã thời gian	타임코드 레이트	タイムコードレート	時間碼速率	时间码速率
+Timecode rate	Tốc độ mã thời gian	타임코드 레이트	タイムコードレート	時間碼速率	时间码速率
+Timecode burn-in	Ghi mã thời gian lên hình	타임코드 번인	タイムコード焼き込み	嵌入時間碼	嵌入时间码
+Track	Rãnh	트랙	トラック	軌道	轨道
+Tracks	Các rãnh	트랙	トラック	軌道	轨道
+TRACKS	CÁC RÃNH	트랙	トラック	軌道	轨道
+Track List	Danh sách rãnh	트랙 목록	トラックリスト	軌道清單	轨道列表
+Track Number	Số rãnh	트랙 번호	トラック番号	軌道編號	轨道编号
+Track Presets	Thiết lập rãnh có sẵn	트랙 프리셋	トラックプリセット	軌道預設集	轨道预设
+Track options	Tùy chọn rãnh	트랙 옵션	トラックのオプション	軌道選項	轨道选项
+Tracks and Groups	Rãnh và nhóm	트랙 및 그룹	トラックとグループ	軌道與群組	轨道与编组
+Transport	Điều khiển phát và thu	트랜스포트	トランスポート	播放與錄音控制	播放与录音控制
+Transport Online	Đồng bộ điều khiển phát	트랜스포트 온라인	トランスポートをオンラインにする	播放控制連線同步	播放控制联机同步
+Transpose	Chuyển giọng	조옮김	トランスポーズ	移調	移调
+Velocity	Lực nhấn	벨로시티	ベロシティ	力度	力度
+Waveforms	Dạng sóng	파형	波形	波形	波形
+Half Wave	Nửa sóng	반파	半波	半波	半波
+Full Wave	Toàn sóng	전파	全波	全波	全波
+On	Bật	켜기	オン	開啟	开启
+Nothing to record on yet: add a track with Track › New…, then click its R button.	Chưa có rãnh để thu: thêm rãnh bằng Rãnh › Mới…, rồi nhấp nút R trên rãnh.	녹음할 트랙이 없습니다. 트랙 › 새로 만들기…에서 트랙을 추가한 뒤 R 버튼을 누르세요.	録音先がありません。「トラック › 新規…」でトラックを追加し、その R ボタンをクリックしてください。	尚無可錄音的軌道：請從「軌道 › 新增…」加入軌道，再按一下該軌道的 R 按鈕。	尚无可录音的轨道：请从“轨道 › 新建…”添加轨道，再单击该轨道的 R 按钮。
+No track is record-enabled: click the R button on the track to record.	Chưa có rãnh được bật thu: nhấp nút R trên rãnh cần thu.	녹음 대기 중인 트랙이 없습니다. 녹음할 트랙의 R 버튼을 누르세요.	録音待機中のトラックがありません。録音するトラックの R ボタンをクリックしてください。	沒有軌道處於錄音待命：請按一下要錄音軌道上的 R 按鈕。	没有轨道处于录音待命：请单击要录音轨道上的 R 按钮。
+Cannot record: {err}	Không thể thu âm: {err}	녹음할 수 없습니다: {err}	録音できません：{err}	無法錄音：{err}	无法录音：{err}
+Autosave failed: {e}	Tự động lưu thất bại: {e}	자동 저장 실패: {e}	自動保存に失敗しました：{e}	自動儲存失敗：{e}	自动保存失败：{e}
+KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound gặp lỗi nội bộ (xem nhật ký). Thay đổi đã được tự động lưu: hãy lưu lại rồi khởi động lại KIO Sound.	KIO Sound에 내부 오류가 발생했습니다(로그 참조). 변경 사항은 자동 저장되었습니다. 직접 저장한 뒤 KIO Sound를 다시 시작하세요.	KIO Sound で内部エラーが発生しました（ログを参照）。変更内容は自動保存されています。保存してから KIO Sound を再起動してください。	KIO Sound 發生內部錯誤（請查看記錄）。變更已自動儲存：請儲存檔案，再重新啟動 KIO Sound。	KIO Sound 发生内部错误（请查看日志）。更改已自动保存：请保存文件，然后重新启动 KIO Sound。
+KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound gặp lỗi nội bộ (xem nhật ký). Hãy khởi động lại KIO Sound để đảm bảo an toàn.	KIO Sound에 내부 오류가 발생했습니다(로그 참조). 안전을 위해 KIO Sound를 다시 시작하세요.	KIO Sound で内部エラーが発生しました（ログを参照）。安全のため KIO Sound を再起動してください。	KIO Sound 發生內部錯誤（請查看記錄）。為確保安全，請重新啟動 KIO Sound。	KIO Sound 发生内部错误（请查看日志）。为确保安全，请重新启动 KIO Sound。
+Stop recording before recovering other work.	Dừng thu âm trước khi khôi phục công việc khác.	다른 작업을 복구하기 전에 녹음을 중지하세요.	別の作業を復旧する前に録音を停止してください。	復原其他工作前，請先停止錄音。	恢复其他工作前，请先停止录音。
+Recovered “{}”. Save it to keep the changes.	Đã khôi phục “{}”. Hãy lưu để giữ các thay đổi.	“{}”을(를) 복구했습니다. 변경 사항을 유지하려면 저장하세요.	「{}」を復旧しました。変更を残すには保存してください。	已復原「{}」。請儲存以保留變更。	已恢复“{}”。请保存以保留更改。
+Recovered “{}”, but {n} audio file(s) are missing. Save it to keep the changes.	Đã khôi phục “{}”, nhưng thiếu {n} tệp âm thanh. Hãy lưu để giữ các thay đổi.	“{}”을(를) 복구했으나 오디오 파일 {n}개가 누락되었습니다. 변경 사항을 유지하려면 저장하세요.	「{}」を復旧しましたが、{n} 個のオーディオファイルが見つかりません。変更を残すには保存してください。	已復原「{}」，但遺失 {n} 個音訊檔案。請儲存以保留變更。	已恢复“{}”，但缺少 {n} 个音频文件。请保存以保留更改。
+Couldn't recover “{}”: {e}	Không thể khôi phục “{}”: {e}	“{}”을(를) 복구할 수 없습니다: {e}	「{}」を復旧できませんでした：{e}	無法復原「{}」：{e}	无法恢复“{}”：{e}
+No audio input: {e}	Không có đầu vào âm thanh: {e}	오디오 입력 없음: {e}	オーディオ入力がありません：{e}	沒有音訊輸入：{e}	没有音频输入：{e}
+the audio engine hit an internal error (see the log)	bộ máy âm thanh gặp lỗi nội bộ (xem nhật ký)	오디오 엔진에 내부 오류가 발생했습니다(로그 참조)	オーディオエンジンで内部エラーが発生しました（ログを参照）	音訊引擎發生內部錯誤（請查看記錄）	音频引擎发生内部错误（请查看日志）
+Use Reconnect audio device in Setup ▸ Playback Engine, or restart KIO Sound.	Dùng Kết nối lại thiết bị âm thanh trong Thiết lập ▸ Bộ máy phát âm thanh, hoặc khởi động lại KIO Sound.	설정 ▸ 재생 엔진에서 오디오 장치 다시 연결을 사용하거나 KIO Sound를 다시 시작하세요.	「設定 ▸ プレイバックエンジン」の「オーディオデバイスを再接続」を使うか、KIO Sound を再起動してください。	請使用「設定 ▸ 播放引擎」中的「重新連接音訊裝置」，或重新啟動 KIO Sound。	请使用“设置 ▸ 播放引擎”中的“重新连接音频设备”，或重新启动 KIO Sound。
+Plug it back in, then use Reconnect audio device in Setup ▸ Playback Engine.	Cắm lại thiết bị, rồi dùng Kết nối lại thiết bị âm thanh trong Thiết lập ▸ Bộ máy phát âm thanh.	장치를 다시 연결한 뒤 설정 ▸ 재생 엔진에서 오디오 장치 다시 연결을 사용하세요.	接続し直してから、「設定 ▸ プレイバックエンジン」の「オーディオデバイスを再接続」を使ってください。	請重新插入裝置，再使用「設定 ▸ 播放引擎」中的「重新連接音訊裝置」。	请重新插入设备，再使用“设置 ▸ 播放引擎”中的“重新连接音频设备”。
+Use Reconnect audio device in Setup ▸ Playback Engine.	Dùng Kết nối lại thiết bị âm thanh trong Thiết lập ▸ Bộ máy phát âm thanh.	설정 ▸ 재생 엔진에서 오디오 장치 다시 연결을 사용하세요.	「設定 ▸ プレイバックエンジン」の「オーディオデバイスを再接続」を使ってください。	請使用「設定 ▸ 播放引擎」中的「重新連接音訊裝置」。	请使用“设置 ▸ 播放引擎”中的“重新连接音频设备”。
+“{name}” was disconnected	“{name}” đã bị ngắt kết nối	“{name}”의 연결이 끊겼습니다	「{name}」が切断されました	「{name}」已中斷連線	“{name}”已断开连接
+“{name}” stopped asking for audio	“{name}” đã dừng yêu cầu âm thanh	“{name}”에서 오디오 요청이 중단되었습니다	「{name}」からのオーディオ要求が停止しました	「{name}」已停止要求音訊	“{name}”已停止请求音频
+Recording stopped: {cause}. The take is kept up to there. {then}	Đã dừng thu: {cause}. Bản thu được giữ đến thời điểm đó. {then}	녹음 중지: {cause}. 해당 시점까지의 테이크는 보존됩니다. {then}	録音を停止しました：{cause}。その時点までのテイクは保持されています。{then}	錄音已停止：{cause}。截至該時間點的錄音會保留。{then}	录音已停止：{cause}。截至该时间点的录音将保留。{then}
+Playback stopped: {cause}. {then}	Đã dừng phát: {cause}. {then}	재생 중지: {cause}. {then}	再生を停止しました：{cause}。{then}	播放已停止：{cause}。{then}	播放已停止：{cause}。{then}
+Audio output: {cause}. {then}	Đầu ra âm thanh: {cause}. {then}	오디오 출력: {cause}. {then}	オーディオ出力：{cause}。{then}	音訊輸出：{cause}。{then}	音频输出：{cause}。{then}
+The disk is too slow: this take has lost {lost} ms of input so far.	Ổ đĩa quá chậm: bản thu này đã mất {lost} ms đầu vào.	디스크가 너무 느립니다. 현재 테이크에서 입력 {lost} ms가 손실되었습니다.	ディスクが遅すぎます。このテイクではこれまでに {lost} ms の入力が失われました。	磁碟速度太慢：本次錄音目前已遺失 {lost} ms 的輸入。	磁盘速度太慢：本次录音目前已丢失 {lost} ms 的输入。
+Reconnect it, then use Reconnect audio device in Setup ▸ Playback Engine.	Kết nối lại thiết bị, rồi dùng Kết nối lại thiết bị âm thanh trong Thiết lập ▸ Bộ máy phát âm thanh.	장치를 다시 연결한 뒤 설정 ▸ 재생 엔진에서 오디오 장치 다시 연결을 사용하세요.	接続し直してから、「設定 ▸ プレイバックエンジン」の「オーディオデバイスを再接続」を使ってください。	請重新連接裝置，再使用「設定 ▸ 播放引擎」中的「重新連接音訊裝置」。	请重新连接设备，再使用“设置 ▸ 播放引擎”中的“重新连接音频设备”。
+Check the disk, then record again.	Kiểm tra ổ đĩa rồi thu lại.	디스크를 확인한 뒤 다시 녹음하세요.	ディスクを確認してから録音し直してください。	請檢查磁碟，再重新錄音。	请检查磁盘，然后重新录音。
+Recording stopped: {what}. The take is kept up to there. {then}	Đã dừng thu: {what}. Bản thu được giữ đến thời điểm đó. {then}	녹음 중지: {what}. 해당 시점까지의 테이크는 보존됩니다. {then}	録音を停止しました：{what}。その時点までのテイクは保持されています。{then}	錄音已停止：{what}。截至該時間點的錄音會保留。{then}	录音已停止：{what}。截至该时间点的录音将保留。{then}
+Audio input: {what}. {then}	Đầu vào âm thanh: {what}. {then}	오디오 입력: {what}. {then}	オーディオ入力：{what}。{then}	音訊輸入：{what}。{then}	音频输入：{what}。{then}
+Loop-recorded {} take(s)	Đã thu lặp {} lần	루프 테이크 {}개 녹음됨	ループで {} テイクを録音しました	已循環錄製 {} 個版本	已循环录制 {} 个版本
+Recorded {} clip(s)	Đã thu {} đoạn	클립 {}개 녹음됨	{} 個のクリップを録音しました	已錄製 {} 個片段	已录制 {} 个片段
+{name}: click to open · {cmd}click to bypass · right-click to change	{name}: nhấp để mở · {cmd}nhấp để bỏ qua xử lý · nhấp phải để đổi	{name}: 클릭: 열기 · {cmd}클릭: 바이패스 · 오른쪽 클릭: 변경	{name}：クリックで開く · {cmd}クリックでバイパス · 右クリックで変更	{name}：按一下開啟 · {cmd}按一下旁通 · 按右鍵變更	{name}：单击打开 · {cmd}单击旁通 · 右键单击更改
+custom	tùy chỉnh	사용자 지정	カスタム	自訂	自定义
+extreme	cực lớn	매우 크게	特大	極大	极大
+fit to window	vừa cửa sổ	창에 맞춤	ウィンドウに合わせる	符合視窗	适合窗口
+jumbo	rất lớn	특대	非常に大きい	超大	超大
+large	lớn	크게	大	大	大
+medium	vừa	보통	中	中	中
+micro	siêu nhỏ	매우 작게	極小	極小	极小
+mini	rất nhỏ	아주 작게	非常に小さい	超小	超小
+small	nhỏ	작게	小	小	小
+latch	giữ	래치	ラッチ	鎖存	锁存
+mute	tắt tiếng	음소거	ミュート	靜音	静音
+off	tắt	끄기	オフ	關閉	关闭
+pan	vị trí trái/phải	팬	パン	聲像	声像
+pan {}	vị trí trái/phải {}	팬 {}	パン {}	聲像 {}	声像 {}
+read	đọc	읽기	リード	讀取	读取
+send {} level	mức đường gửi {}	센드 {} 레벨	センド {} レベル	傳送 {} 電平	发送 {} 电平
+send {} mute	tắt tiếng đường gửi {}	센드 {} 음소거	センド {} ミュート	傳送 {} 靜音	发送 {} 静音
+send {} pan	vị trí đường gửi {}	센드 {} 팬	センド {} パン	傳送 {} 聲像	发送 {} 声像
+touch	chạm	터치	タッチ	觸控	触控
+touch/latch	chạm/giữ	터치/래치	タッチ／ラッチ	觸控／鎖存	触控／锁存
+trim	tinh chỉnh	트림	トリム	修整	修剪
+volume	âm lượng	볼륨	ボリューム	音量	音量
+write	ghi	쓰기	ライト	寫入	写入
+insert {} {param}	hiệu ứng chèn {} {param}	인서트 {} {param}	インサート {} {param}	插入效果 {} {param}	插入效果 {} {param}
+1/2 note	nốt trắng	2분음표	2 分音符	二分音符	二分音符
+1/4 note	nốt đen	4분음표	4 分音符	四分音符	四分音符
+1/8 note	nốt móc đơn	8분음표	8 分音符	八分音符	八分音符
+1/16 note	nốt móc kép	16분음표	16 分音符	十六分音符	十六分音符
+1/32 note	nốt móc ba	32분음표	32 分音符	三十二分音符	三十二分音符
+1/64 note	nốt móc tư	64분음표	64 分音符	六十四分音符	六十四分音符
+{note} dotted	{note} chấm dôi	점{note}	付点{note}	附點{note}	附点{note}
+{note} triplet	{note} liên ba	셋잇단 {note}	3 連{note}	三連{note}	三连{note}
+{value} seconds	{value} giây	{value}초	{value} 秒	{value} 秒	{value} 秒
+{count} frames	{count} khung hình	{count}프레임	{count} フレーム	{count} 影格	{count} 帧
+{count} samples	{count} mẫu	{count}샘플	{count} サンプル	{count} 個樣本	{count} 个样本
+{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · {tracks} rãnh · {status}	{name} · {rate} Hz · {depth} · 트랙 {tracks}개 · {status}	{name} · {rate} Hz · {depth} · {tracks} トラック · {status}	{name} · {rate} Hz · {depth} · {tracks} 條軌道 · {status}	{name} · {rate} Hz · {depth} · {tracks} 条轨道 · {status}
+16-bit	16 bit	16비트	16 ビット	16 位元	16 位
+24-bit	24 bit	24비트	24 ビット	24 位元	24 位
+saved	đã lưu	저장됨	保存済み	已儲存	已保存
+modified	đã sửa	수정됨	変更あり	已修改	已修改
+dyn	động	동적	動的	動態	动态
+notes	nốt nhạc	음표	ノート	音符	音符
+waveform	dạng sóng	파형	波形	波形	波形
+regions	vùng	영역	リージョン	區域	区域
+blocks	khối	블록	ブロック	區塊	块
+clip_gain	độ khuếch đại đoạn	클립 게인	クリップゲイン	片段增益	片段增益
+playlists	danh sách phát	재생 목록	プレイリスト	播放清單	播放列表
+GRID	LƯỚI	그리드	グリッド	格線	网格
+SLIP	TRƯỢT TỰ DO	슬립	スリップ	自由滑動	自由滑动
+SPOT	ĐỊNH VỊ	스폿	スポット	精確定位	精确定位
+CLIPS	CÁC ĐOẠN	클립	クリップ	片段	片段
+29.97 Drop	29.97 bỏ khung	29.97 드롭 프레임	29.97 ドロップフレーム	29.97 掉格	29.97 丢帧
+59.94 Drop	59.94 bỏ khung	59.94 드롭 프레임	59.94 ドロップフレーム	59.94 掉格	59.94 丢帧
+Compressor	Bộ nén	컴프레서	コンプレッサー	壓縮器	压缩器
+ dotted	 chấm dôi	 점음표	 付点	 附點	 附点
+ triplet	 liên ba	 셋잇단음표	 3 連符	 三連音	 三连音
+{f} frame{}	{f} khung hình{}	{f}프레임{}	{f} フレーム{}	{f} 影格{}	{f} 帧{}
+{n} samples	{n} mẫu	{n}샘플	{n} サンプル	{n} 個樣本	{n} 个样本
+{s:.3} sec	{s:.3} giây	{s:.3}초	{s:.3} 秒	{s:.3} 秒	{s:.3} 秒
+Amp Attack	Thời gian tăng biên độ	앰프 어택	アンプアタック	振幅起音	振幅起音
+Amp Decay	Thời gian suy giảm biên độ	앰프 디케이	アンプディケイ	振幅衰減	振幅衰减
+Amp Release	Thời gian nhả biên độ	앰프 릴리스	アンプリリース	振幅釋音	振幅释音
+Amp Sustain	Mức duy trì biên độ	앰프 서스테인	アンプサステイン	振幅延音	振幅延音
+Asymmetry	Độ bất đối xứng	비대칭	非対称	不對稱	不对称
+Attack	Thời gian tác động	어택	アタック	起音	起音
+Aux Input	Đầu vào phụ	보조 입력	Aux 入力	輔助輸入	辅助输入
+Band Pass	Thông dải	대역 통과	バンドパス	帶通	带通
+Ceiling	Mức trần	출력 상한	シーリング	輸出上限	输出上限
+Center	Giữa	중앙	中央	中央	中央
+Closed Hat Decay	Độ tắt tiếng hi-hat đóng	클로즈드 하이햇 디케이	クローズドハイハットの減衰	閉合鈸衰減	闭镲衰减
+Comp Attack	Thời gian tác động bộ nén	컴프레서 어택	コンプレッサーアタック	壓縮器起音	压缩器起音
+Comp Makeup	Bù mức bộ nén	컴프레서 메이크업	コンプレッサーメイクアップ	壓縮器補償增益	压缩器补偿增益
+Comp Ratio	Tỷ lệ nén	컴프레서 비율	コンプレッサー比率	壓縮比	压缩比
+Comp Release	Thời gian nhả bộ nén	컴프레서 릴리스	コンプレッサーリリース	壓縮器釋放	压缩器释放
+Comp Thresh	Ngưỡng nén	컴프레서 임계값	コンプレッサーしきい値	壓縮門檻	压缩阈值
+Cutoff	Tần số cắt	컷오프	カットオフ	截止頻率	截止频率
+Cymbal Decay	Độ tắt tiếng chũm chọe	심벌 디케이	シンバルの減衰	鈸聲衰減	钹声衰减
+Decay	Thời gian suy giảm	디케이	ディケイ	衰減	衰减
+Depth	Độ sâu	깊이	深さ	深度	深度
+Diffusion	Độ khuếch tán	확산	ディフュージョン	擴散	扩散
+Drive	Mức kích âm	드라이브	ドライブ	驅動	驱动
+Equal Power	Công suất bằng nhau	등전력	等電力	等功率	等功率
+Exponential	Hàm mũ	지수	指数	指數	指数
+Feedback	Hồi tiếp	피드백	フィードバック	回授	反馈
+Filter Attack	Thời gian tăng bộ lọc	필터 어택	フィルターアタック	濾波器起音	滤波器起音
+Filter Decay	Thời gian suy giảm bộ lọc	필터 디케이	フィルターディケイ	濾波器衰減	滤波器衰减
+Filter Env	Đường bao bộ lọc	필터 엔벌로프	フィルターエンベロープ	濾波器包絡	滤波器包络
+Filter Release	Thời gian nhả bộ lọc	필터 릴리스	フィルターリリース	濾波器釋音	滤波器释音
+Filter Sustain	Mức duy trì bộ lọc	필터 서스테인	フィルターサステイン	濾波器延音	滤波器延音
+Fine	Tinh chỉnh	미세 조정	微調整	微調	微调
+Fine Tune	Chỉnh cao độ tinh	미세 튜닝	ファインチューン	微調音高	微调音高
+Forward	Tiến	정방향	順方向	正向	正向
+Freq	Tần số	주파수	周波数	頻率	频率
+Frequency	Tần số	주파수	周波数	頻率	频率
+Gate Range	Mức giảm của cổng nhiễu	게이트 범위	ゲートレンジ	雜訊閘範圍	噪声门范围
+Gate Release	Thời gian nhả cổng nhiễu	게이트 릴리스	ゲートリリース	雜訊閘釋放	噪声门释放
+Gate Thresh	Ngưỡng cổng nhiễu	게이트 임계값	ゲートしきい値	雜訊閘門檻	噪声门阈值
+Glide	Lướt cao độ	글라이드	グライド	滑音	滑音
+Grabber	Công cụ kéo chọn	그래버	グラバー	抓取工具	抓取工具
+HF Damping	Suy giảm tần số cao	고역 감쇠	高域ダンピング	高頻阻尼	高频阻尼
+High Freq	Tần số cao	고역 주파수	高域周波数	高頻頻率	高频频率
+High Gain	Khuếch đại tần số cao	고역 게인	高域ゲイン	高頻增益	高频增益
+High Pass	Thông cao	고역 통과	ハイパス	高通	高通
+High Shelf	Lọc dải cao	하이 셸프	ハイシェルフ	高頻棚架	高频搁架
+Highest Key	Phím cao nhất	최고 음	最高キー	最高音鍵	最高音键
+Highest Velocity	Lực nhấn cao nhất	최대 벨로시티	最大ベロシティ	最高力度	最高力度
+Hold	Thời gian giữ	홀드	ホールド	保持	保持
+Instrument Track	Rãnh nhạc cụ	악기 트랙	インストゥルメントトラック	樂器軌	乐器轨
+Key Tracking	Bám theo phím	키 트래킹	キートラッキング	鍵盤追蹤	键盘跟踪
+Kick Decay	Độ tắt tiếng trống bass	킥 디케이	キックの減衰	大鼓衰減	底鼓衰减
+Kick Tune	Cao độ trống bass	킥 튜닝	キックのチューニング	大鼓調音	底鼓调音
+Knee	Độ mềm điểm nén	니	ニー	壓縮轉折	压缩拐点
+Limit	Giới hạn	리미트	リミット	限制	限制
+Linear	Tuyến tính	선형	リニア	線性	线性
+Listen	Nghe kiểm tra	청취	試聴	監聽	监听
+Logarithmic	Logarit	로그	対数	對數	对数
+Lookahead	Dự đoán trước	룩어헤드	ルックアヘッド	前瞻	前瞻
+Loop	Lặp	루프	ループ	循環	循环
+Loop End	Kết thúc lặp	루프 끝	ループ終端	循環結尾	循环结尾
+Loop Start	Bắt đầu lặp	루프 시작	ループ先頭	循環開頭	循环开头
+Low Cut	Cắt tần số thấp	저역 컷	ローカット	低頻切除	低频切除
+Low Freq	Tần số thấp	저역 주파수	低域周波数	低頻頻率	低频频率
+Low Gain	Khuếch đại tần số thấp	저역 게인	低域ゲイン	低頻增益	低频增益
+Low Pass	Thông thấp	저역 통과	ローパス	低通	低通
+Low Shelf	Lọc dải thấp	로우 셸프	ローシェルフ	低頻棚架	低频搁架
+Lowest Key	Phím thấp nhất	최저 음	最低キー	最低音鍵	最低音键
+Lowest Velocity	Lực nhấn thấp nhất	최소 벨로시티	最小ベロシティ	最低力度	最低力度
+MIDI Track	Rãnh MIDI	MIDI 트랙	MIDI トラック	MIDI 軌	MIDI 轨
+Makeup	Bù mức	메이크업 게인	メイクアップゲイン	補償增益	补偿增益
+Master Fader	Cần gạt tổng	마스터 페이더	マスターフェーダー	主推桿	主推子
+Mid Freq	Tần số trung	중역 주파수	中域周波数	中頻頻率	中频频率
+Mid Gain	Khuếch đại tần số trung	중역 게인	中域ゲイン	中頻增益	中频增益
+Mid Q	Hệ số Q tần số trung	중역 Q	中域 Q	中頻 Q	中频 Q
+Mod Depth	Độ sâu điều biến	모듈레이션 깊이	モジュレーションの深さ	調變深度	调制深度
+Mod Rate	Tốc độ điều biến	모듈레이션 속도	モジュレーション速度	調變速率	调制速率
+Mode	Chế độ	모드	モード	模式	模式
+Noise	Nhiễu	노이즈	ノイズ	雜訊	噪声
+Noise Shaping	Định hình nhiễu	노이즈 셰이핑	ノイズシェーピング	雜訊整形	噪声整形
+Notch	Loại dải hẹp	노치	ノッチ	陷波	陷波
+Off	Tắt	끄기	オフ	關閉	关闭
+One Shot	Phát một lần	원샷	ワンショット	單次播放	单次播放
+Open Hat Decay	Độ tắt tiếng hi-hat mở	오픈 하이햇 디케이	オープンハイハットの減衰	開放鈸衰減	开镲衰减
+Osc 1	Bộ dao động 1	오실레이터 1	オシレーター 1	振盪器 1	振荡器 1
+Osc 2	Bộ dao động 2	오실레이터 2	オシレーター 2	振盪器 2	振荡器 2
+Osc 2 Detune	Lệch giọng bộ dao động 2	오실레이터 2 디튠	オシレーター 2 デチューン	振盪器 2 失諧	振荡器 2 失谐
+Osc 2 Pitch	Cao độ bộ dao động 2	오실레이터 2 피치	オシレーター 2 ピッチ	振盪器 2 音高	振荡器 2 音高
+Osc Mix	Trộn bộ dao động	오실레이터 믹스	オシレーターミックス	振盪器混合	振荡器混合
+Pencil	Bút chì	연필	鉛筆	鉛筆	铅笔
+Phase Invert	Đảo cực pha	위상 반전	位相反転	反轉相位	反转相位
+Ping-Pong	Qua lại trái/phải	핑퐁	ピンポン	乒乓延遲	乒乓延迟
+Pink Noise	Nhiễu hồng	핑크 노이즈	ピンクノイズ	粉紅雜訊	粉红噪声
+Play Mode	Chế độ phát	재생 모드	再生モード	播放模式	播放模式
+Pre-Delay	Độ trễ ban đầu	프리 딜레이	プリディレイ	預延遲	预延迟
+Range	Phạm vi	범위	範囲	範圍	范围
+Rate	Tốc độ	속도	レート	速率	速率
+Ratio	Tỷ lệ	비율	比率	比例	比例
+Release	Thời gian nhả	릴리스	リリース	釋放	释放
+Resonance	Cộng hưởng	레조넌스	レゾナンス	共振	共振
+Root Note	Nốt gốc	기준 음	ルートノート	根音	根音
+Routing Folder Track	Rãnh thư mục định tuyến	라우팅 폴더 트랙	ルーティングフォルダートラック	路由資料夾軌	路由文件夹轨
+S-Curve	Đường cong chữ S	S자 곡선	S 字カーブ	S 型曲線	S 形曲线
+Sample Start	Bắt đầu mẫu âm thanh	샘플 시작	サンプル開始	樣本起點	样本起点
+Saw	Răng cưa	톱니파	ノコギリ波	鋸齒波	锯齿波
+Scrubber	Công cụ nghe rà	스크러버	スクラバー	刷聽工具	擦听工具
+Selector	Công cụ chọn	선택 도구	選択ツール	選取工具	选择工具
+Sine	Hình sin	사인파	サイン波	正弦波	正弦波
+Size	Kích thước	크기	サイズ	大小	大小
+Smart Tool	Công cụ thông minh	스마트 도구	スマートツール	智慧工具	智能工具
+Snare Decay	Độ tắt tiếng trống snare	스네어 디케이	スネアの減衰	小鼓衰減	军鼓衰减
+Snare Snappy	Độ đanh trống snare	스네어 스내피	スネアの歯切れ	小鼓響弦	军鼓响弦
+Snare Tune	Cao độ trống snare	스네어 튜닝	スネアのチューニング	小鼓調音	军鼓调音
+Spread	Độ lan tỏa	스프레드	スプレッド	擴展	扩展
+Square	Vuông	사각파	矩形波	方波	方波
+Stages	Số tầng	스테이지	段数	級數	级数
+Sustain	Mức duy trì	서스테인	サステイン	延音	延音
+Threshold	Ngưỡng	임계값	しきい値	臨界值	阈值
+Time	Thời gian	시간	時間	時間	时间
+Tom Decay	Độ tắt tiếng trống tom	탐 디케이	タムの減衰	通鼓衰減	嗵鼓衰减
+Tom Tune	Cao độ trống tom	탐 튜닝	タムのチューニング	通鼓調音	嗵鼓调音
+Tone	Âm sắc	톤	トーン	音色	音色
+Triangle	Tam giác	삼각파	三角波	三角波	三角波
+VCA Master	Điều khiển tổng VCA	VCA 마스터	VCA マスター	VCA 主控	VCA 主控
+Velocity Sens	Độ nhạy lực nhấn	벨로시티 감도	ベロシティ感度	力度靈敏度	力度灵敏度
+Video Track	Rãnh video	비디오 트랙	ビデオトラック	影片軌	视频轨
+Waveform	Dạng sóng	파형	波形	波形	波形
+White Noise	Nhiễu trắng	화이트 노이즈	ホワイトノイズ	白雜訊	白噪声
+Width	Độ rộng	폭	幅	寬度	宽度
+Zoomer	Công cụ thu phóng	확대/축소 도구	ズームツール	縮放工具	缩放工具
+Unsupported interface language	Ngôn ngữ giao diện không được hỗ trợ	지원하지 않는 인터페이스 언어	未対応のインターフェース言語	不支援的介面語言	不支持的界面语言
+missing	không tìm thấy	누락됨	見つかりません	遺失	缺失
+1 clip	1 đoạn	클립 1개	1 個のクリップ	1 個片段	1 个片段
+1 file	1 tệp	파일 1개	1 個のファイル	1 個檔案	1 个文件
+the file "{name}"	tệp "{name}"	파일 "{name}"	ファイル「{name}」	檔案「{name}」	文件“{name}”
+{clips} and {files}	{clips} và {files}	{clips} 및 {files}	{clips} と {files}	{clips} 與 {files}	{clips} 和 {files}
+ {count} of the files are used by {users}	 Có {count} tệp đang được {users} sử dụng	 파일 {count}개를 {users}에서 사용 중입니다	 {count} 個のファイルが {users} で使用中です	 有 {count} 個檔案正由 {users} 使用	 有 {count} 个文件正由 {users} 使用
+“{name}” has {what} from an earlier run, autosaved {age}.	“{name}” có {what} từ lần chạy trước, được tự động lưu {age}.	“{name}”에 이전 실행의 {what}이(가) 있으며 {age}에 자동 저장되었습니다.	「{name}」には前回実行時の {what} があり、{age} に自動保存されました。	「{name}」有先前執行時的{what}，已於 {age} 自動儲存。	“{name}”有上次运行时的{what}，已于 {age} 自动保存。
+View > Mix Window Views > {sec}	Xem > Chế độ xem cửa sổ phối âm > {sec}	보기 > 믹스 창 보기 > {sec}	表示 > ミックスウィンドウ表示 > {sec}	檢視 > 混音視窗檢視 > {sec}	视图 > 混音窗口视图 > {sec}
+0 dB	0 dB	0 dB	0 dB	0 dB	0 dB
+bpm	bpm	bpm	bpm	bpm	bpm
+{count} clips	{count} đoạn	클립 {count}개	{count} 個のクリップ	{count} 個片段	{count} 个片段
+{count} files	{count} tệp	파일 {count}개	{count} 個のファイル	{count} 個檔案	{count} 个文件
+{count} minutes ago	{count} phút trước	{count}분 전	{count} 分前	{count} 分鐘前	{count} 分钟前
+{count} hours ago	{count} giờ trước	{count}시간 전	{count} 時間前	{count} 小時前	{count} 小时前
+{count} days ago	{count} ngày trước	{count}일 전	{count} 日前	{count} 天前	{count} 天前
+1 minute ago	1 phút trước	1분 전	1 分前	1 分鐘前	1 分钟前
+1 hour ago	1 giờ trước	1시간 전	1 時間前	1 小時前	1 小时前
+1 day ago	1 ngày trước	1일 전	1 日前	1 天前	1 天前
+recently	gần đây	최근	最近	最近	最近
+file	tệp	파일	ファイル	檔案	文件
+ARA Note Overlay	Lớp phủ nốt ARA	ARA 음표 오버레이	ARA ノートオーバーレイ	ARA 音符覆蓋	ARA 音符叠加
+ARA Plugins	Trình cắm ARA	ARA 플러그인	ARA プラグイン	ARA 外掛	ARA 插件
+All	Tất cả	전체	すべて	全部	全部
+Arrange	Sắp xếp	정렬	配置	排列	排列
+Commits	Lượt đóng góp mã	커밋	コミット	提交次數	提交次数
+Company	Công ty	회사	会社	公司	公司
+Contributors	Người đóng góp	기여자	貢献者	貢獻者	贡献者
+Default	Mặc định	기본값	既定	預設	默认
+Discard	Bỏ thay đổi	변경 사항 버리기	変更を破棄	捨棄變更	放弃更改
+Don't Save	Không lưu	저장 안 함	保存しない	不要儲存	不保存
+Format	Định dạng	형식	形式	格式	格式
+Front	Phía trước	전면	前方	前方	前方
+Grab bag	Công cụ khác	기타 도구	その他のツール	其他工具	其他工具
+Group	Nhóm	그룹	グループ	群組	编组
+Home	Trang chủ	홈	ホーム	首頁	主页
+Level	Mức	레벨	レベル	電平	电平
+Lines +/−	Dòng +/−	줄 +/−	行 +/−	行數 +/−	行数 +/−
+Lines added	Dòng đã thêm	추가된 줄	追加行	新增行數	新增行数
+Lines deleted	Dòng đã xóa	삭제된 줄	削除行	刪除行數	删除行数
+Location	Vị trí	위치	場所	位置	位置
+Model	Mô hình	모델	モデル	模型	模型
+Name (A–Z)	Tên (A–Z)	이름(A–Z)	名前（A–Z）	名稱（A–Z）	名称（A–Z）
+New Group…	Nhóm mới…	새 그룹…	新規グループ…	新增群組…	新建编组…
+Operation	Thao tác	작업	操作	操作	操作
+Paste Special	Dán đặc biệt	특수 붙여넣기	特殊ペースト	選擇性貼上	选择性粘贴
+Repeat	Lặp lại	반복	繰り返し	重複	重复
+Rulers	Thước	눈금자	ルーラー	尺規	标尺
+Spot	Đặt vị trí chính xác	스폿	スポット	精確定位	精确定位
+Table	Bảng	표	表	表格	表格
+Thin	Giảm mật độ	간소화	間引き	稀疏化	稀疏化
+Transparency	Độ trong suốt	투명도	透明度	透明度	透明度
+Type	Loại	유형	種類	類型	类型
+Ungroup	Bỏ nhóm	그룹 해제	グループ解除	取消群組	取消编组
+Untitled	Chưa có tên	제목 없음	名称未設定	未命名	未命名
+none	không có	없음	なし	無	无
+open must be a boolean	open phải là giá trị boolean	open은 불리언 값이어야 합니다	open は真偽値で指定してください	open 必須為布林值	open 必须为布尔值
+operation is required	cần có operation	operation이 필요합니다	operation が必要です	必須提供 operation	必须提供 operation
+operation must be open, close, activate, float, move, moveFloating, resizeSplit, setStackOpen or resizeStack	operation phải là open, close, activate, float, move, moveFloating, resizeSplit, setStackOpen hoặc resizeStack	operation은 open, close, activate, float, move, moveFloating, resizeSplit, setStackOpen 또는 resizeStack이어야 합니다	operation は open、close、activate、float、move、moveFloating、resizeSplit、setStackOpen、resizeStack のいずれかで指定してください	operation 必須為 open、close、activate、float、move、moveFloating、resizeSplit、setStackOpen 或 resizeStack	operation 必须为 open、close、activate、float、move、moveFloating、resizeSplit、setStackOpen 或 resizeStack
+panel is required	cần có panel	panel이 필요합니다	panel が必要です	必須提供 panel	必须提供 panel
+path is required	cần có path	path가 필요합니다	path が必要です	必須提供 path	必须提供 path
+rect must be [x,y,width,height]	rect phải có dạng [x,y,width,height]	rect는 [x,y,width,height] 형식이어야 합니다	rect は [x,y,width,height] で指定してください	rect 必須為 [x,y,width,height]	rect 必须为 [x,y,width,height]
+rect values must be finite and bounded	các giá trị rect phải hữu hạn và trong giới hạn	rect 값은 유한하며 허용 범위 안에 있어야 합니다	rect の値は有限で、許容範囲内である必要があります	rect 值必須為有限值且在範圍內	rect 值必须为有限值且在范围内
+size is required	cần có size	size가 필요합니다	size が必要です	必須提供 size	必须提供 size
+target is required	cần có target	target이 필요합니다	target が必要です	必須提供 target	必须提供 target
+zone must be center, left, right, top or bottom	zone phải là center, left, right, top hoặc bottom	zone은 center, left, right, top 또는 bottom이어야 합니다	zone は center、left、right、top、bottom のいずれかで指定してください	zone 必須為 center、left、right、top 或 bottom	zone 必须为 center、left、right、top 或 bottom
+New MIDI Clip	Đoạn MIDI mới	새 MIDI 클립	新規 MIDI クリップ	新增 MIDI 片段	新建 MIDI 片段
+New Workspace	Không gian làm việc mới	새 작업 영역	新規ワークスペース	新增工作區	新建工作区
+Bring to Front	Đưa lên trước	앞으로 가져오기	前面へ移動	移至前方	移到前方
+Send to Back	Đưa ra sau	뒤로 보내기	背面へ移動	移至後方	移到后方
+Cascade	Xếp chồng cửa sổ	계단식 배열	重ねて表示	重疊排列	层叠排列
+View	Xem	보기	表示	檢視	视图
+Window	Cửa sổ	창	ウィンドウ	視窗	窗口
+Setup	Thiết lập	설정	設定	設定	设置
+File	Tệp	파일	ファイル	檔案	文件
+Other	Khác	기타	その他	其他	其他
+Open	Mở	열기	開く	開啟	打开
+Edit	Chỉnh sửa	편집	編集	編輯	编辑
+New	Mới	새로 만들기	新規	新增	新建
+Duplicate	Nhân bản	복제	複製	複製	复制
+Rename	Đổi tên	이름 바꾸기	名前を変更	重新命名	重命名
+Keyboard Shortcuts	Phím tắt	단축키	キーボードショートカット	鍵盤快速鍵	键盘快捷键
+Preferences	Tùy chọn	환경 설정	環境設定	偏好設定	首选项
+Video	Video	비디오	ビデオ	影片	视频
+Reverse	Đảo ngược	역방향	リバース	反轉	反转
+AudioSuite · {title}	AudioSuite · {title}	AudioSuite · {title}	AudioSuite · {title}	AudioSuite · {title}	AudioSuite · {title}
+A hidden panel cannot restore over the document view	Không thể khôi phục bảng ẩn đè lên vùng tài liệu	숨긴 패널을 문서 보기 위에 복원할 수 없습니다	非表示パネルをドキュメント表示の上に復元できません	無法將隱藏面板還原至文件檢視上方	无法将隐藏面板恢复到文档视图上方
+A hidden panel has an invalid or duplicate identity	Bảng ẩn có mã định danh không hợp lệ hoặc trùng lặp	숨긴 패널의 식별자가 올바르지 않거나 중복되었습니다	非表示パネルの識別子が無効または重複しています	隱藏面板的識別碼無效或重複	隐藏面板的标识符无效或重复
+The document view cannot be collapsed	Không thể thu gọn vùng tài liệu	문서 보기를 접을 수 없습니다	ドキュメント表示は折りたためません	無法收合文件檢視	无法折叠文档视图
+The document view cannot float	Không thể thả nổi vùng tài liệu	문서 보기를 분리할 수 없습니다	ドキュメント表示はフローティングにできません	文件檢視無法浮動	文档视图无法浮动
+The document view cannot share a tab group	Vùng tài liệu không thể dùng chung nhóm thẻ	문서 보기는 탭 그룹을 공유할 수 없습니다	ドキュメント表示はタブグループを共有できません	文件檢視無法共用索引標籤群組	文档视图无法共享选项卡组
+The panel layout must contain its document view and bounded hidden panels	Bố cục phải có vùng tài liệu và các bảng ẩn trong giới hạn	패널 배치에는 문서 보기와 범위가 제한된 숨김 패널이 포함되어야 합니다	パネル配置にはドキュメント表示と範囲内の非表示パネルが必要です	面板配置必須包含文件檢視及範圍內的隱藏面板	面板布局必须包含文档视图及范围内的隐藏面板
+`section` required	Cần có `section`	`section`이 필요합니다	`section` が必要です	必須提供 `section`	必须提供 `section`
+a clip on the timeline, which is removed too.	một đoạn trên dòng thời gian, đoạn này cũng sẽ bị xóa.	타임라인의 클립도 함께 제거됩니다.	タイムライン上のクリップも削除されます。	時間軸上的片段也會一併移除。	时间轴上的片段也会一并移除。
+active	đang hoạt động	활성	有効	作用中	活动
+audio on	âm thanh bật	오디오 켜짐	オーディオ有効	音訊開啟	音频开启
+auto {}	tự động {}	자동 {}	自動 {}	自動 {}	自动 {}
+bad ui state: {e}	trạng thái giao diện không hợp lệ: {e}	올바르지 않은 UI 상태: {e}	無効な UI 状態：{e}	無效的介面狀態：{e}	无效的界面状态：{e}
+bar(s)	ô nhịp	마디	小節	小節	小节
+before must be a panel ID or null	before phải là mã bảng hoặc null	before는 패널 ID 또는 null이어야 합니다	before はパネル ID または null で指定してください	before 必須為面板 ID 或 null	before 必须为面板 ID 或 null
+before only applies to a center move	before chỉ áp dụng khi chuyển vào giữa	before는 중앙 이동에만 적용됩니다	before は中央への移動にのみ適用できます	before 僅適用於移至中央	before 仅适用于移到中央
+change meter	đổi nhịp	박자 변경	拍子を変更	變更拍號	更改拍号
+change velocity	đổi lực nhấn	벨로시티 변경	ベロシティを変更	變更力度	更改力度
+clip	đoạn	클립	クリップ	片段	片段
+default buffer	bộ đệm mặc định	기본 버퍼	既定のバッファー	預設緩衝區	默认缓冲区
+end bpm 	bpm cuối 	종료 bpm 	終了 bpm 	結束 bpm 	结束 bpm 
+equal power	công suất bằng nhau	등전력	等電力	等功率	等功率
+flatten performance	ghi cố định phần trình diễn	연주 병합	演奏をフラット化	平面化演奏	拼合演奏
+front	phía trước	전면	前方	前方	前方
+height is required	cần có chiều cao	높이가 필요합니다	高さが必要です	必須提供高度	必须提供高度
+height must be finite and bounded	chiều cao phải hữu hạn và trong giới hạn	높이는 유한하며 허용 범위 안에 있어야 합니다	高さは有限で、許容範囲内である必要があります	高度必須為有限值且在範圍內	高度必须为有限值且在范围内
+in	vào	입력	入力	輸入	输入
+insertion point moved	đã di chuyển điểm chèn	삽입 지점 이동됨	挿入位置を移動しました	已移動插入點	已移动插入点
+less than a minute ago	chưa đầy một phút trước	1분 미만 전	1 分未満前	不到一分鐘前	不到一分钟前
+media offline	phương tiện ngoại tuyến	미디어 오프라인	メディアはオフラインです	媒體離線	媒体离线
+media offline: {e}	phương tiện ngoại tuyến: {e}	미디어 오프라인: {e}	メディアはオフラインです：{e}	媒體離線：{e}	媒体离线：{e}
+menu item `{path}` is not implemented yet	mục menu `{path}` chưa được triển khai	메뉴 항목 `{path}`은(는) 아직 구현되지 않았습니다	メニュー項目 `{path}` はまだ実装されていません	選單項目 `{path}` 尚未實作	菜单项 `{path}` 尚未实现
+move song start	dời điểm bắt đầu bài	곡 시작 위치 이동	曲の開始位置を移動	移動歌曲起點	移动歌曲起点
+movie missing from session	phiên không có tệp video	세션에 비디오 파일이 없습니다	セッションにビデオがありません	工作階段中缺少影片	会话中缺少视频
+movie offline	video ngoại tuyến	비디오 오프라인	ビデオはオフラインです	影片離線	视频离线
+name — folder	tên — thư mục	이름 — 폴더	名前 — フォルダー	名稱 — 資料夾	名称 — 文件夹
+new bus...	bus âm thanh mới...	새 버스...	新規バス...	新增匯流排...	新建总线...
+no device (silent clock)	không có thiết bị (đồng hồ im lặng)	장치 없음(무음 클록)	デバイスなし（無音クロック）	沒有裝置（靜音時鐘）	没有设备（静音时钟）
+no engine	không có bộ máy âm thanh	엔진 없음	エンジンなし	沒有引擎	没有引擎
+no group	không có nhóm	그룹 없음	グループなし	沒有群組	没有编组
+no input	không có đầu vào	입력 없음	入力なし	沒有輸入	没有输入
+no insert	không có hiệu ứng chèn	인서트 없음	インサートなし	沒有插入效果	没有插入效果
+no instrument	không có nhạc cụ	악기 없음	インストゥルメントなし	沒有樂器	没有乐器
+no output	không có đầu ra	출력 없음	出力なし	沒有輸出	没有输出
+opened on first record or monitor	mở khi thu hoặc giám sát lần đầu	첫 녹음 또는 모니터링 시 열림	最初の録音またはモニタリング時に開きます	首次錄音或監聽時開啟	首次录音或监听时打开
+playlist	danh sách phát	재생 목록	プレイリスト	播放清單	播放列表
+restore performance	khôi phục phần trình diễn	연주 복원	演奏を復元	還原演奏	恢复演奏
+send level	mức đường gửi	센드 레벨	センドレベル	傳送電平	发送电平
+send mute	tắt tiếng đường gửi	센드 음소거	センドミュート	傳送靜音	发送静音
+send pan	vị trí trái/phải của đường gửi	센드 팬	センドパン	傳送聲像	发送声像
+silent clock	đồng hồ im lặng	무음 클록	無音クロック	靜音時鐘	静音时钟
+start bpm 	bpm đầu 	시작 bpm 	開始 bpm 	開始 bpm 	开始 bpm 
+the clip "{name}"	đoạn "{name}"	클립 "{name}"	クリップ「{name}」	片段「{name}」	片段“{name}”
+ticks	tick	틱	ティック	刻度	刻度
+track	rãnh	트랙	トラック	軌道	轨道
+unknown theme `{mode}` (system, light or dark)	chủ đề `{mode}` không xác định (system, light hoặc dark)	알 수 없는 테마 `{mode}`(system, light 또는 dark)	不明なテーマ `{mode}`（system、light、dark）	未知主題 `{mode}`（system、light 或 dark）	未知主题 `{mode}`（system、light 或 dark）
+unsaved changes	thay đổi chưa lưu	저장되지 않은 변경 사항	未保存の変更	未儲存的變更	未保存的更改
+unsaved changes and an unfinished recording	thay đổi chưa lưu và bản thu chưa hoàn tất	저장되지 않은 변경 사항 및 완료되지 않은 녹음	未保存の変更と未完了の録音	未儲存的變更與尚未完成的錄音	未保存的更改和未完成的录音
+{bars} bars	{bars} ô nhịp	{bars}마디	{bars} 小節	{bars} 小節	{bars} 小节
+{bit_depth}-bit	{bit_depth} bit	{bit_depth}비트	{bit_depth} ビット	{bit_depth} 位元	{bit_depth} 位
+{b} samples	{b} mẫu	{b}샘플	{b} サンプル	{b} 個樣本	{b} 个样本
+{b}-bit	{b} bit	{b}비트	{b} ビット	{b} 位元	{b} 位
+{name} loaded into the sampler	Đã nạp {name} vào bộ phát mẫu	{name}을(를) 샘플러에 로드했습니다	{name} をサンプラーに読み込みました	已將 {name} 載入取樣器	已将 {name} 加载到采样器
+{name} · Send {}	{name} · Đường gửi {}	{name} · 센드 {}	{name} · センド {}	{name} · 傳送 {}	{name} · 发送 {}
+{n} ch	{n} kênh	{n}채널	{n} チャンネル	{n} 聲道	{n} 声道
+{n} clips on the timeline, which are removed too.	{n} đoạn trên dòng thời gian cũng sẽ bị xóa.	타임라인의 클립 {n}개도 함께 제거됩니다.	タイムライン上の {n} 個のクリップも削除されます。	時間軸上的 {n} 個片段也會一併移除。	时间轴上的 {n} 个片段也会一并移除。
+{path}\nnot found	{path}\nkhông tìm thấy	{path}\n찾을 수 없음	{path}\n見つかりません	{path}\n找不到	{path}\n未找到
+{question} Your changes will be lost.	{question} Các thay đổi sẽ bị mất.	{question} 변경 사항이 사라집니다.	{question} 変更内容は失われます。	{question} 您的變更將會遺失。	{question} 您的更改将会丢失。
+{undo}   {:.1} ms/frame	{undo}   {:.1} ms/khung hình	{undo}   {:.1} ms/프레임	{undo}   {:.1} ms／フレーム	{undo}   {:.1} ms／影格	{undo}   {:.1} ms／帧
+{}  (missing)	{}  (không tìm thấy)	{}  (누락)	{}（見つかりません）	{}（遺失）	{}（缺失）
+{}  —  Mix	{}  —  Phối âm	{}  —  믹스	{}  —  ミックス	{}  —  混音	{}  —  混音
+{} ({} ch)	{} ({} kênh)	{} ({}채널)	{}（{} チャンネル）	{}（{} 聲道）	{}（{} 声道）
+{} ({}ch)	{} ({} kênh)	{} ({}채널)	{}（{} チャンネル）	{}（{} 聲道）	{}（{} 声道）
+{} audio clips checked · {} issues	Đã kiểm tra {} đoạn âm thanh · {} vấn đề	오디오 클립 {}개 검사 · 문제 {}개	{} 個のオーディオクリップを検査 · {} 件の問題	已檢查 {} 個音訊片段 · {} 個問題	已检查 {} 个音频片段 · {} 个问题
+{} ch	{} kênh	{}채널	{} チャンネル	{} 聲道	{} 声道
+{} mode ({fkey}); Shift-click adds Snap to Grid	Chế độ {} ({fkey}); Shift-nhấp để thêm bám lưới	{} 모드({fkey}), Shift+클릭으로 그리드 스냅 추가	{} モード（{fkey}）、Shift＋クリックでグリッドスナップを追加	{} 模式（{fkey}）；Shift＋按一下加入貼齊格線	{} 模式（{fkey}）；Shift＋单击加入吸附到网格
+{} object track(s)	{} rãnh đối tượng	오브젝트 트랙 {}개	{} 個のオブジェクトトラック	{} 條物件軌道	{} 条对象轨道
+{} preset	Thiết lập {} có sẵn	{} 프리셋	{} プリセット	{} 預設集	{} 预设
+{} · {} Hz · {} ch	{} · {} Hz · {} kênh	{} · {} Hz · {}채널	{} · {} Hz · {} チャンネル	{} · {} Hz · {} 聲道	{} · {} Hz · {} 声道
+{} · {} Hz · {} ch · {buf}	{} · {} Hz · {} kênh · {buf}	{} · {} Hz · {}채널 · {buf}	{} · {} Hz · {} チャンネル · {buf}	{} · {} Hz · {} 聲道 · {buf}	{} · {} Hz · {} 声道 · {buf}
+{} · {} Hz · {} · {} tracks · {}	{} · {} Hz · {} · {} rãnh · {}	{} · {} Hz · {} · 트랙 {}개 · {}	{} · {} Hz · {} · {} トラック · {}	{} · {} Hz · {} · {} 條軌道 · {}	{} · {} Hz · {} · {} 条轨道 · {}
+{} · {} notes · {} selected · Pencil: add · drag: move/select · arrows: move · Delete: remove	{} · {} nốt · đã chọn {} · Bút chì: thêm · kéo: di chuyển/chọn · phím mũi tên: di chuyển · Delete: xóa	{} · 음표 {}개 · {}개 선택됨 · 연필: 추가 · 드래그: 이동/선택 · 방향키: 이동 · Delete: 삭제	{} · {} ノート · {} 選択 · 鉛筆：追加 · ドラッグ：移動／選択 · 矢印：移動 · Delete：削除	{} · {} 個音符 · 已選取 {} 個 · 鉛筆：新增 · 拖曳：移動／選取 · 方向鍵：移動 · Delete：移除	{} · {} 个音符 · 已选择 {} 个 · 铅笔：添加 · 拖动：移动／选择 · 方向键：移动 · Delete：移除
+{} — {} from channel {}	{} — {} từ kênh {}	{} — {}(채널 {})	{} — {}（チャンネル {}）	{} — {}（來自聲道 {}）	{} — {}（来自声道 {}）
+“{}” already exists. Do you want to replace it?	“{}” đã tồn tại. Bạn có muốn thay thế không?	“{}”이(가) 이미 있습니다. 바꿀까요?	「{}」はすでに存在します。置き換えますか？	「{}」已存在。要取代嗎？	“{}”已存在。是否替换？
+🔍 Find clips	🔍 Tìm đoạn	🔍 클립 찾기	🔍 クリップを検索	🔍 尋找片段	🔍 查找片段
+Scale...	Tỷ lệ...	비율 조정...	スケール...	縮放...	缩放...
+Scan CLAP	Quét CLAP	CLAP 검색	CLAP をスキャン	掃描 CLAP	扫描 CLAP
+Scan VST3	Quét VST3	VST3 검색	VST3 をスキャン	掃描 VST3	扫描 VST3
+Scene And Take	Cảnh và lần thu	장면 및 테이크	シーンとテイク	場景與錄音版本	场景与录音版本
+Scroll to Track...	Cuộn đến rãnh...	트랙으로 스크롤...	トラックへスクロール...	捲動至軌道...	滚动到轨道...
+Search buses…	Tìm bus âm thanh…	버스 검색…	バスを検索…	搜尋匯流排…	搜索总线…
+Search instruments…	Tìm nhạc cụ…	악기 검색…	インストゥルメントを検索…	搜尋樂器…	搜索乐器…
+Search plugins…	Tìm trình cắm…	플러그인 검색…	プラグインを検索…	搜尋外掛…	搜索插件…
+Select Tracks in Group	Chọn các rãnh trong nhóm	그룹의 트랙 선택	グループ内のトラックを選択	選取群組中的軌道	选择编组中的轨道
+Select/Split Notes...	Chọn/Tách nốt...	음표 선택/분할...	ノートを選択／分割...	選取／分割音符...	选择／分割音符...
+Selected Tracks as New AAF/OMF...	Xuất rãnh đã chọn thành AAF/OMF mới...	선택한 트랙을 새 AAF/OMF로...	選択トラックを新規 AAF/OMF として...	將所選軌道另存為新 AAF/OMF...	将所选轨道另存为新 AAF/OMF...
+Selected Tracks as New Media Composer Compatible Session...	Xuất rãnh đã chọn thành phiên mới tương thích Media Composer...	선택한 트랙을 새 Media Composer 호환 세션으로...	選択トラックを新規 Media Composer 互換セッションとして...	將所選軌道另存為 Media Composer 相容工作階段...	将所选轨道另存为 Media Composer 兼容会话...
+Selected Tracks as New Session...	Xuất rãnh đã chọn thành phiên mới...	선택한 트랙을 새 세션으로...	選択トラックを新規セッションとして...	將所選軌道另存為新工作階段...	将所选轨道另存为新会话...
+Semitones	Nửa cung	반음	半音	半音	半音
+Send To...	Gửi đến...	보내기 대상...	送信先...	傳送至...	发送到...
+Send {which} level	Mức đường gửi {which}	센드 {which} 레벨	センド {which} のレベル	傳送 {which} 電平	发送 {which} 电平
+Send {}	Đường gửi {}	센드 {}	センド {}	傳送 {}	发送 {}
+Send {} · Choose destination	Đường gửi {} · Chọn đích đến	센드 {} · 대상 선택	センド {} · 送信先を選択	傳送 {} · 選擇目的地	发送 {} · 选择目标
+Send {} · {}	Đường gửi {} · {}	센드 {} · {}	センド {} · {}	傳送 {} · {}	发送 {} · {}
+Sensitivity	Độ nhạy	감도	感度	靈敏度	灵敏度
+Separate	Tách	분할	分割	分割	分割
+Separate clips at detected beats	Tách đoạn tại các phách được phát hiện	감지된 비트에서 클립 분할	検出したビートでクリップを分割	在偵測到的節拍處分割片段	在检测到的节拍处分割片段
+Session Data...	Dữ liệu phiên...	세션 데이터...	セッションデータ...	工作階段資料...	会话数据...
+Session Info as Text...	Thông tin phiên dạng văn bản...	세션 정보를 텍스트로...	セッション情報をテキストとして...	將工作階段資訊另存為文字...	将会话信息另存为文本...
+Session file: {p}	Tệp phiên: {p}	세션 파일: {p}	セッションファイル：{p}	工作階段檔案：{p}	会话文件：{p}
+Session media: {} files, {:.1} MB in memory (32-bit float)	Phương tiện của phiên: {} tệp, {:.1} MB trong bộ nhớ (số thực 32 bit)	세션 미디어: 파일 {}개, 메모리 {:.1} MB(32비트 부동소수점)	セッションメディア：{} ファイル、メモリー使用量 {:.1} MB（32 ビット浮動小数点）	工作階段媒體：{} 個檔案，記憶體使用量 {:.1} MB（32 位元浮點數）	会话媒体：{} 个文件，内存使用量 {:.1} MB（32 位浮点数）
+Set Record Tracks to Input Only	Chỉ giám sát đầu vào trên rãnh thu	녹음 트랙을 입력 전용으로 설정	録音トラックを入力のみへ設定	將錄音軌設為僅監聽輸入	将录音轨设为仅监听输入
+Set Tempo	Đặt nhịp độ	템포 설정	テンポを設定	設定速度	设置速度
+Set UI State	Đặt trạng thái giao diện	UI 상태 설정	UI 状態を設定	設定介面狀態	设置界面状态
+Set the session tempo from the beats	Đặt nhịp độ phiên theo các phách	비트를 기준으로 세션 템포 설정	ビートからセッションのテンポを設定	依節拍設定工作階段速度	根据节拍设置会话速度
+Shift (seconds)	Dịch (giây)	이동(초)	シフト（秒）	位移（秒）	位移（秒）
+Shift...	Dịch...	이동...	シフト...	位移...	位移...
+Show / Hide...	Hiện / Ẩn...	표시/숨기기...	表示／非表示...	顯示／隱藏...	显示／隐藏...
+Show Target Playlist	Hiện danh sách phát đích	대상 재생 목록 표시	ターゲットプレイリストを表示	顯示目標播放清單	显示目标播放列表
+Show grid lines	Hiện đường lưới	그리드 선 표시	グリッド線を表示	顯示格線	显示网格线
+Show in the Mix window	Hiện trong cửa sổ phối âm	믹스 창에 표시	ミックスウィンドウに表示	在混音視窗顯示	在混音窗口显示
+Show track names	Hiện tên rãnh	트랙 이름 표시	トラック名を表示	顯示軌道名稱	显示轨道名称
+Show volume automation	Hiện tự động hóa âm lượng	볼륨 오토메이션 표시	ボリュームオートメーションを表示	顯示音量自動化	显示音量自动化
+SigGen	Tạo tín hiệu	신호 생성	信号生成	訊號產生	信号生成
+Sign In	Đăng nhập	로그인	サインイン	登入	登录
+Signal Generator	Bộ tạo tín hiệu	신호 생성기	信号ジェネレーター	訊號產生器	信号发生器
+Sketch to Front	Đưa phác thảo lên trước	스케치 앞으로 가져오기	スケッチを前面へ	將草圖移至前方	将草图移到前方
+Sketch...	Phác thảo...	스케치...	スケッチ...	草圖...	草图...
+Slip	Trượt tự do	슬립	スリップ	自由滑動	自由滑动
+Smart Tool (F6+F7 / F7+F8)	Công cụ thông minh (F6+F7 / F7+F8)	스마트 도구(F6+F7 / F7+F8)	スマートツール（F6+F7 / F7+F8）	智慧工具（F6+F7 / F7+F8）	智能工具（F6+F7 / F7+F8）
+Snap to	Bám vào	스냅 대상	スナップ先	貼齊至	吸附到
+Space Clips…	Giãn cách các đoạn…	클립 간격 조정…	クリップの間隔を調整…	調整片段間距…	调整片段间距…
+Splice	Nối chèn	이어 붙이기	スプライス	接合	拼接
+Split into Mono	Tách thành đơn âm	모노로 분리	モノラルに分割	分割為單聲道	拆分为单声道
+Spot to where it was recorded	Đặt về vị trí đã thu	녹음된 위치에 배치	録音された位置に配置	定位至錄音時的位置	定位到录音时的位置
+Start (ticks)	Bắt đầu (tick)	시작(틱)	開始（ティック）	開始（刻度）	开始（刻度）
+Start Collaboration...	Bắt đầu cộng tác...	공동 작업 시작...	共同作業を開始...	開始協作...	开始协作...
+Start from the demo session	Bắt đầu từ phiên minh họa	데모 세션으로 시작	デモセッションから開始	從示範工作階段開始	从演示会话开始
+Start to Fill Selection	Lấp vùng chọn từ đầu	시작부터 선택 영역 채우기	先頭から選択範囲を埋める	從開頭填滿選取範圍	从开头填满选区
+Start to Insertion	Từ đầu đến điểm chèn	시작에서 삽입 지점까지	先頭から挿入位置まで	開頭至插入點	开头到插入点
+Step Input...	Nhập từng bước...	스텝 입력...	ステップ入力...	步進輸入...	步进输入...
+Stop (Space)	Dừng (Space)	정지(Space)	停止（Space）	停止（Space）	停止（Space）
+Store Plugin State	Lưu trạng thái trình cắm	플러그인 상태 저장	プラグインの状態を保存	儲存外掛狀態	保存插件状态
+Strength %	Cường độ %	강도 %	強度 %	強度 %	强度 %
+Stretch...	Co giãn...	늘이기...	ストレッチ...	伸縮...	伸缩...
+Strip	Cắt khoảng lặng	무음 잘라내기	無音を除去	移除靜音	移除静音
+Swing %	Độ lắc nhịp %	스윙 %	スウィング %	搖擺 %	摇摆 %
+Sync Point	Điểm đồng bộ	동기화 지점	同期ポイント	同步點	同步点
+Synchronization	Đồng bộ hóa	동기화	同期	同步	同步
+System Usage	Mức sử dụng hệ thống	시스템 사용량	システム使用状況	系統使用量	系统使用量
+TCE Edit to Timeline Selection	Co giãn vùng chỉnh sửa theo vùng dòng thời gian	편집 영역을 타임라인 선택에 맞게 시간 압축/확장	編集範囲をタイムライン選択範囲に伸縮	將編輯範圍時間伸縮至時間軸選取範圍	将编辑范围时间伸缩到时间轴选区
+Tab to Transient	Tab đến điểm chuyển tiếp	Tab으로 트랜지언트 이동	Tab でトランジェントへ移動	以 Tab 移至瞬態	用 Tab 移到瞬态
+Target Playlist	Danh sách phát đích	대상 재생 목록	ターゲットプレイリスト	目標播放清單	目标播放列表
+Task Manager	Trình quản lý tác vụ	작업 관리자	タスクマネージャー	工作管理員	任务管理器
+Thin All	Giảm mật độ toàn bộ	모두 간소화	すべてを間引く	全部稀疏化	全部稀疏化
+Threshold dB	Ngưỡng dB	임계값 dB	しきい値 dB	臨界值 dB	阈值 dB
+Tile	Xếp ô	바둑판식 배열	並べて表示	並排	平铺
+Tile Horizontal	Xếp theo chiều ngang	가로로 바둑판식 배열	左右に並べて表示	水平並排	水平平铺
+Tile Vertical	Xếp theo chiều dọc	세로로 바둑판식 배열	上下に並べて表示	垂直並排	垂直平铺
+Time Compression Expansion	Nén/giãn thời gian	시간 압축/확장	タイムコンプレッション／エクスパンション	時間壓縮／擴展	时间压缩／扩展
+Time Lock/Unlock	Khóa/Mở khóa thời gian	시간 잠금/해제	時間をロック／解除	鎖定／解除鎖定時間	锁定／解锁时间
+Time Operations	Thao tác thời gian	시간 작업	時間操作	時間操作	时间操作
+Time Operations Window	Cửa sổ thao tác thời gian	시간 작업 창	時間操作ウィンドウ	時間操作視窗	时间操作窗口
+Time Scale	Thang thời gian	시간 배율	タイムスケール	時間刻度	时间刻度
+Time Shift	Dịch thời gian	타임 시프트	タイムシフト	時間位移	时间位移
+Timecode 2	Mã thời gian 2	타임코드 2	タイムコード 2	時間碼 2	时间码 2
+To Current Automation Type	Đến loại tự động hóa hiện tại	현재 오토메이션 유형으로	現在のオートメーションタイプへ	至目前自動化類型	到当前自动化类型
+To File Boundaries	Đến biên tệp	파일 경계까지	ファイル境界まで	至檔案邊界	到文件边界
+To File End	Đến cuối tệp	파일 끝까지	ファイル終端まで	至檔案結尾	到文件结尾
+To File Start	Đến đầu tệp	파일 시작까지	ファイル先頭まで	至檔案開頭	到文件开头
+To Fill Selection	Để lấp vùng chọn	선택 영역 채우기	選択範囲を埋める	填滿選取範圍	填满选区
+To Selection	Đến vùng chọn	선택 영역까지	選択範囲まで	至選取範圍	到选区
+Toggle Mix/Edit	Chuyển phối âm/chỉnh sửa	믹스/편집 전환	ミックス／編集を切り替え	切換混音／編輯	切换混音／编辑
+Toggle Recent Playlist	Chuyển danh sách phát gần đây	최근 재생 목록 전환	最近のプレイリストを切り替え	切換最近播放清單	切换最近播放列表
+Track Color	Màu rãnh	트랙 색상	トラックの色	軌道顏色	轨道颜色
+Track Height	Chiều cao rãnh	트랙 높이	トラックの高さ	軌道高度	轨道高度
+Track Lane	Làn rãnh	트랙 레인	トラックレーン	軌道泳道	轨道泳道
+Track Lane Color	Màu làn rãnh	트랙 레인 색상	トラックレーンの色	軌道泳道顏色	轨道泳道颜色
+Track Transcription Lane	Làn bản chép lời	트랙 전사 레인	トラックの文字起こしレーン	軌道轉錄泳道	轨道转录泳道
+Tracks: {}	Số rãnh: {}	트랙: {}	トラック：{}	軌道：{}	轨道：{}
+Transcript	Bản chép lời	전사문	文字起こし	轉錄文字	转录文本
+Transcription Settings...	Thiết lập chép lời...	전사 설정...	文字起こし設定...	轉錄設定...	转录设置...
+Trim	Xén	트림	トリム	修整	修剪
+Trim Playlist	Cắt gọn danh sách phát	재생 목록 트림	プレイリストをトリム	修整播放清單	修剪播放列表
+Trim and Downmix	Cắt gọn và trộn xuống	트림 및 다운믹스	トリムしてダウンミックス	修整並降混	修剪并缩混
+Trim to All Enabled	Tinh chỉnh mọi tham số đang bật	활성화된 모든 항목 트림	すべての有効項目をトリム	修整所有已啟用項目	修剪所有已启用项目
+Trim to Current	Tinh chỉnh đến giá trị hiện tại	현재 값으로 트림	現在値にトリム	修整至目前值	修剪到当前值
+UI Customization	Tùy chỉnh giao diện	UI 사용자 지정	UI のカスタマイズ	自訂介面	自定义界面
+UI frame time: {:.1} ms	Thời gian mỗi khung giao diện: {:.1} ms	UI 프레임 시간: {:.1} ms	UI フレーム時間：{:.1} ms	介面影格時間：{:.1} ms	界面帧时间：{:.1} ms
+Undo History	Lịch sử hoàn tác	실행 취소 기록	取り消し履歴	復原記錄	撤销历史
+Undo steps: {}	Số bước hoàn tác: {}	실행 취소 단계: {}	取り消し回数：{}	復原步驟：{}	撤销步数：{}
+Undo {l}	Hoàn tác {l}	실행 취소: {l}	取り消し：{l}	復原 {l}	撤销 {l}
+Unfreeze	Bỏ đóng băng	프리즈 해제	フリーズ解除	解除凍結	解除冻结
+Ungroup All	Bỏ mọi nhóm	모든 그룹 해제	すべてのグループを解除	全部取消群組	全部取消编组
+Universe	Tổng quan phiên	전체 개요	ユニバース	全域概覽	全局概览
+Unknown panel: {id}	Bảng không xác định: {id}	알 수 없는 패널: {id}	不明なパネル：{id}	未知面板：{id}	未知面板：{id}
+Unknown vendor	Nhà cung cấp không xác định	알 수 없는 공급업체	不明なベンダー	未知廠商	未知厂商
+Unloop...	Bỏ lặp...	루프 해제...	ループ解除...	解除循環...	解除循环...
+Unsaved Changes	Thay đổi chưa lưu	저장되지 않은 변경 사항	未保存の変更	未儲存的變更	未保存的更改
+Update Active Configuration	Cập nhật cấu hình đang dùng	활성 구성 업데이트	有効な構成を更新	更新目前配置	更新当前配置
+Upstream SoundCraft community	Cộng đồng SoundCraft gốc	원본 SoundCraft 커뮤니티	元の SoundCraft コミュニティ	原 SoundCraft 社群	原 SoundCraft 社区
+Upstream SoundCraft project	Dự án SoundCraft gốc	원본 SoundCraft 프로젝트	元の SoundCraft プロジェクト	原 SoundCraft 專案	原 SoundCraft 项目
+Use	Sử dụng	사용	使用	使用	使用
+User Time Stamp	Dấu thời gian người dùng	사용자 타임스탬프	ユーザータイムスタンプ	使用者時間戳記	用户时间戳
+VENUE Channel Names as Track Names	Dùng tên kênh VENUE làm tên rãnh	VENUE 채널 이름을 트랙 이름으로	VENUE のチャンネル名をトラック名に使用	以 VENUE 聲道名稱作為軌道名稱	使用 VENUE 声道名称作为轨道名称
+Vel	Lực nhấn	벨로시티	ベロシティ	力度	力度
+Vel +10	Lực nhấn +10	벨로시티 +10	ベロシティ +10	力度 +10	力度 +10
+Vel −10	Lực nhấn −10	벨로시티 −10	ベロシティ −10	力度 −10	力度 −10
+Velocity +	Tăng lực nhấn	벨로시티 +	ベロシティ +	力度 +	力度 +
+Video Sync Offset...	Độ lệch đồng bộ video...	비디오 동기화 오프셋...	ビデオ同期オフセット...	影片同步偏移...	视频同步偏移...
+Video Track Offline	Rãnh video ngoại tuyến	비디오 트랙 오프라인	ビデオトラックをオフラインにする	影片軌離線	视频轨离线
+Video Track Online	Rãnh video trực tuyến	비디오 트랙 온라인	ビデオトラックをオンラインにする	影片軌連線	视频轨联机
+Video Universe	Tổng quan video	비디오 전체 개요	ビデオユニバース	影片全域概覽	视频全局概览
+Waveform zoom in (Cmd+Alt+])	Phóng to dạng sóng (Cmd+Alt+])	파형 확대(Cmd+Alt+])	波形を拡大（Cmd+Alt+]）	放大波形（Cmd+Alt+]）	放大波形（Cmd+Alt+]）
+Window Configuration List	Danh sách cấu hình cửa sổ	창 구성 목록	ウィンドウ構成リスト	視窗配置清單	窗口配置列表
+Window Configurations	Cấu hình cửa sổ	창 구성	ウィンドウ構成	視窗配置	窗口配置
+Window configuration could not be restored: {error}	Không thể khôi phục cấu hình cửa sổ: {error}	창 구성을 복원할 수 없습니다: {error}	ウィンドウ構成を復元できませんでした：{error}	無法還原視窗配置：{error}	无法恢复窗口配置：{error}
+Workspaces	Không gian làm việc	작업 영역	ワークスペース	工作區	工作区
+Workspaces to Front	Đưa không gian làm việc lên trước	작업 영역 앞으로 가져오기	ワークスペースを前面へ	將工作區移至前方	将工作区移到前方
+Write MIDI Real-Time Properties	Ghi thuộc tính MIDI thời gian thực	MIDI 실시간 속성 기록	MIDI リアルタイムプロパティを書き込む	寫入 MIDI 即時屬性	写入 MIDI 实时属性
+Write to All Enabled	Ghi vào mọi tham số đang bật	활성화된 모든 항목에 기록	すべての有効項目に書き込む	寫入所有已啟用項目	写入所有已启用项目
+Write to Current	Ghi vào giá trị hiện tại	현재 값에 기록	現在値に書き込む	寫入目前值	写入当前值
+Write to Notes	Ghi thành nốt	음표에 기록	ノートに書き込む	寫入音符	写入音符
+X-OR (Cancels Previous Solo)	X-OR (hủy nghe riêng trước đó)	X-OR(이전 솔로 취소)	X-OR（前のソロを解除）	X-OR（取消先前獨奏）	X-OR（取消先前独奏）
+Zoom Toggle (E)	Chuyển mức thu phóng (E)	확대/축소 전환(E)	ズームを切り替え（E）	切換縮放（E）	切换缩放（E）
+Zoom in (Cmd+])	Phóng to (Cmd+])	확대(Cmd+])	拡大（Cmd+]）	放大（Cmd+]）	放大（Cmd+]）
+Zoom out (Cmd+[)	Thu nhỏ (Cmd+[)	축소(Cmd+[)	縮小（Cmd+[）	縮小（Cmd+[）	缩小（Cmd+[）
+Zoom preset (click to recall, Cmd-click to store)	Mức thu phóng có sẵn (nhấp để gọi, Cmd-nhấp để lưu)	확대/축소 프리셋(클릭: 불러오기, Cmd+클릭: 저장)	ズームプリセット（クリック：呼び出し、Cmd＋クリック：保存）	縮放預設集（按一下叫回，Cmd＋按一下儲存）	缩放预设（单击调出，Cmd＋单击保存）
+Duplicate Dolby Atmos Plugin Automation to Pan Automation	Sao chép tự động hóa trình cắm Dolby Atmos sang vị trí âm thanh	Dolby Atmos 플러그인 오토메이션을 팬 오토메이션으로 복제	Dolby Atmos プラグインのオートメーションをパンに複製	將 Dolby Atmos 外掛自動化複製至聲像自動化	将 Dolby Atmos 插件自动化复制到声像自动化
+Duplicate Pan Automation to Dolby Atmos Plugin Automation	Sao chép tự động hóa vị trí âm thanh sang trình cắm Dolby Atmos	팬 오토메이션을 Dolby Atmos 플러그인 오토메이션으로 복제	パンオートメーションを Dolby Atmos プラグインに複製	將聲像自動化複製至 Dolby Atmos 外掛自動化	将声像自动化复制到 Dolby Atmos 插件自动化
+Duplicate and Extend Edit	Nhân bản và mở rộng vùng chỉnh sửa	편집 영역 복제 및 확장	編集範囲を複製して拡張	複製並延伸編輯範圍	复制并扩展编辑范围
+Duplicate of Main Playlist	Bản sao danh sách phát chính	메인 재생 목록 복제본	メインプレイリストの複製	主要播放清單的複本	主播放列表的副本
+EQ Curve	Đường cong cân bằng âm	EQ 곡선	EQ カーブ	等化器曲線	均衡器曲线
+Edit Lock/Unlock	Khóa/Mở khóa chỉnh sửa	편집 잠금/해제	編集をロック／解除	鎖定／解除鎖定編輯	锁定／解锁编辑
+Edit Parameters…	Chỉnh sửa tham số…	매개변수 편집…	パラメーターを編集…	編輯參數…	编辑参数…
+Edit Window Scrolling	Cuộn cửa sổ chỉnh sửa	편집 창 스크롤	編集ウィンドウのスクロール	編輯視窗捲動	编辑窗口滚动
+Edit Window Views	Chế độ xem cửa sổ chỉnh sửa	편집 창 보기	編集ウィンドウ表示	編輯視窗檢視	编辑窗口视图
+Edit group	Nhóm chỉnh sửa	편집 그룹	編集グループ	編輯群組	编辑编组
+Edit/Tool Mode Keyboard Lock	Khóa bàn phím chế độ chỉnh sửa/công cụ	편집/도구 모드 키보드 잠금	編集／ツールモードのキーボードロック	編輯／工具模式鍵盤鎖定	编辑／工具模式键盘锁定
+Enabled parameters	Tham số đang bật	활성화된 매개변수	有効なパラメーター	已啟用的參數	已启用的参数
+End to Fill Selection	Lấp vùng chọn đến cuối	끝까지 선택 영역 채우기	終端まで選択範囲を埋める	填滿選取範圍至結尾	填满选区到结尾
+End to Insertion	Từ cuối đến điểm chèn	끝에서 삽입 지점까지	終端から挿入位置まで	結尾至插入點	结尾到插入点
+Event	Sự kiện	이벤트	イベント	事件	事件
+Expanded	Mở rộng	확장	展開	展開	展开
+Expanded Sends	Đường gửi mở rộng	확장 센드	拡張センド	展開的傳送	展开的发送
+Exported {} clip(s) to {}	Đã xuất {} đoạn tới {}	클립 {}개를 {}에 내보냈습니다	{} 個のクリップを {} に書き出しました	已將 {} 個片段匯出至 {}	已将 {} 个片段导出到 {}
+Extend Edit Down	Mở rộng vùng chỉnh sửa xuống	편집 영역 아래로 확장	編集範囲を下に拡張	向下延伸編輯範圍	向下扩展编辑范围
+Extend Edit Down to Members	Mở rộng xuống các rãnh trong nhóm	그룹 멤버까지 아래로 확장	グループメンバーまで下に拡張	向下延伸至群組成員	向下扩展到编组成员
+Extend Edit Up	Mở rộng vùng chỉnh sửa lên	편집 영역 위로 확장	編集範囲を上に拡張	向上延伸編輯範圍	向上扩展编辑范围
+Extend Edit Up to Members	Mở rộng lên các rãnh trong nhóm	그룹 멤버까지 위로 확장	グループメンバーまで上に拡張	向上延伸至群組成員	向上扩展到编组成员
+Extend Edit Selection To Marker Lane Above	Mở rộng vùng chỉnh sửa đến làn dấu mốc phía trên	편집 선택 영역을 위 마커 레인까지 확장	編集選択範囲を上のマーカーレーンまで拡張	將編輯選取範圍延伸至上方標記軌	将编辑选区扩展到上方标记轨
+Extend Edit Selection To Marker Lane Below	Mở rộng vùng chỉnh sửa đến làn dấu mốc phía dưới	편집 선택 영역을 아래 마커 레인까지 확장	編集選択範囲を下のマーカーレーンまで拡張	將編輯選取範圍延伸至下方標記軌	将编辑选区扩展到下方标记轨
+External Timecode Offset...	Độ lệch mã thời gian ngoài...	외부 타임코드 오프셋...	外部タイムコードオフセット...	外部時間碼偏移...	外部时间码偏移...
+Extract Chords from Selection	Trích hợp âm từ vùng chọn	선택 영역에서 코드 추출	選択範囲からコードを抽出	從選取範圍擷取和弦	从选区提取和弦
+Extract MIDI to New Track	Trích MIDI sang rãnh mới	새 트랙으로 MIDI 추출	新規トラックに MIDI を抽出	將 MIDI 擷取至新軌道	将 MIDI 提取到新轨道
+FX	Hiệu ứng	효과	エフェクト	效果	效果
+Fade to End	Giảm dần đến cuối	끝까지 페이드	終端までフェード	淡化至結尾	淡化到结尾
+Fade to Start	Tăng dần từ đầu	시작부터 페이드	先頭からフェード	從開頭淡入	从开头淡入
+Feet+Frames	Feet+khung hình	피트+프레임	フィート＋フレーム	英呎＋影格	英尺＋帧
+Find Talent	Tìm cộng tác viên	참여자 찾기	参加者を探す	尋找合作人才	寻找合作人才
+Flatten Performance...	Ghi cố định phần trình diễn...	연주 병합...	演奏をフラット化...	平面化演奏...	拼合演奏...
+Folder Lines	Đường thư mục	폴더 선	フォルダーの線	資料夾線條	文件夹线条
+Freeze	Đóng băng	프리즈	フリーズ	凍結	冻结
+Get Info...	Xem thông tin...	정보 보기...	情報を見る...	取得資訊...	查看信息...
+Glide Pan Only	Chỉ chuyển dần vị trí âm thanh	팬만 점진 변경	パンのみをグライド	僅漸變聲像	仅渐变声像
+Glide to All Enabled	Chuyển dần mọi tham số đang bật	활성화된 모든 항목으로 점진 변경	すべての有効項目にグライド	漸變至所有已啟用項目	渐变到所有已启用项目
+Glide to Current	Chuyển dần đến giá trị hiện tại	현재 값으로 점진 변경	現在値へグライド	漸變至目前值	渐变到当前值
+Go to End (End)	Đến cuối (End)	끝으로 이동(End)	終端へ移動（End）	移至結尾（End）	移到结尾（End）
+Group {}	Nhóm {}	그룹 {}	グループ {}	群組 {}	编组 {}
+Halve Edit	Giảm nửa vùng chỉnh sửa	편집 영역 절반으로	編集範囲を半分にする	編輯範圍減半	编辑范围减半
+Hardware...	Phần cứng...	하드웨어...	ハードウェア...	硬體...	硬件...
+Heal Separation	Nối lại phần đã tách	분할 복구	分割を修復	修復分割	修复分割
+Hide All Floating Windows	Ẩn mọi cửa sổ nổi	모든 플로팅 창 숨기기	すべてのフローティングウィンドウを非表示	隱藏所有浮動視窗	隐藏所有浮动窗口
+Hide automation	Ẩn tự động hóa	오토메이션 숨기기	オートメーションを非表示	隱藏自動化	隐藏自动化
+I/O Setup	Thiết lập vào/ra	입출력 설정	入出力設定	輸入／輸出設定	输入／输出设置
+I/O...	Vào/ra...	입출력...	入出力...	輸入／輸出...	输入／输出...
+Identify Beat...	Xác định phách...	비트 식별...	ビートを特定...	識別節拍...	识别节拍...
+Identify Beat: selection is	Xác định phách: vùng chọn là	비트 식별: 선택 영역	ビートの特定：選択範囲	識別節拍：選取範圍為	识别节拍：选区为
+Identify Sync Point	Xác định điểm đồng bộ	동기화 지점 식별	同期ポイントを特定	識別同步點	识别同步点
+In 1	Vào 1	입력 1	入力 1	輸入 1	输入 1
+In {i}	Vào {i}	입력 {i}	入力 {i}	輸入 {i}	输入 {i}
+Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	Bản phát triển KIO độc lập dựa trên SoundCraft v0.7.0 của nhóm ArtCraft. Không được dự án gốc bảo chứng.	ArtCraft 팀의 SoundCraft v0.7.0을 기반으로 한 독립 KIO 파생판입니다. 원 프로젝트의 보증을 의미하지 않습니다.	ArtCraft チームの SoundCraft v0.7.0 を基にした独立した KIO 派生版です。元プロジェクトによる推奨を意味しません。	以 ArtCraft 團隊的 SoundCraft v0.7.0 為基礎的獨立 KIO 衍生版本，並非由原專案背書。	基于 ArtCraft 团队的 SoundCraft v0.7.0 的独立 KIO 衍生版本，并非由原项目背书。
+Input Quantize...	Lượng tử hóa đầu vào...	입력 퀀타이즈...	入力クオンタイズ...	輸入量化...	输入量化...
+Insert Time...	Chèn thời gian...	시간 삽입...	時間を挿入...	插入時間...	插入时间...
+Insert {}	Hiệu ứng chèn {}	인서트 {}	インサート {}	插入效果 {}	插入效果 {}
+Insertion Follows Playback	Điểm chèn theo vị trí phát	재생 위치에 삽입 지점 맞춤	挿入位置を再生に追従	插入點跟隨播放	插入点跟随播放
+Interface scale	Tỷ lệ giao diện	인터페이스 배율	インターフェースの倍率	介面縮放	界面缩放
+Invert	Đảo cực	극성 반전	極性を反転	反轉極性	反转极性
+Key	Giọng	조성	調	調性	调性
+Latch	Giữ giá trị cuối	래치	ラッチ	鎖存	锁存
+Layered Editing	Chỉnh sửa nhiều lớp	레이어 편집	レイヤー編集	分層編輯	分层编辑
+Learn	Học điều khiển	컨트롤 학습	コントロールを学習	學習控制	学习控制
+Linear...	Tuyến tính...	선형...	リニア...	線性...	线性...
+Link Timeline and Edit Selection	Liên kết vùng chọn dòng thời gian và chỉnh sửa	타임라인 및 편집 선택 영역 연결	タイムラインと編集の選択範囲をリンク	連結時間軸與編輯選取範圍	关联时间轴和编辑选区
+Link Track and Edit Selection	Liên kết chọn rãnh và vùng chỉnh sửa	트랙 및 편집 선택 영역 연결	トラックと編集の選択範囲をリンク	連結軌道與編輯選取範圍	关联轨道和编辑选区
+Load Sample…	Nạp mẫu âm thanh…	샘플 로드…	サンプルを読み込む…	載入樣本…	加载样本…
+Loop...	Lặp...	루프...	ループ...	循環...	循环...
+Lower Dock	Bảng ghim dưới	하단 도크	下部ドック	下方停駐區	底部停靠区
+MIDI Beat Clock...	Xung nhịp MIDI...	MIDI 비트 클록...	MIDI ビートクロック...	MIDI 節拍時鐘...	MIDI 节拍时钟...
+MIDI Editors to Back	Đưa trình biên tập MIDI ra sau	MIDI 편집기 뒤로 보내기	MIDI エディターを背面へ	將 MIDI 編輯器移至後方	将 MIDI 编辑器移到后方
+MIDI Editors to Front	Đưa trình biên tập MIDI lên trước	MIDI 편집기 앞으로 가져오기	MIDI エディターを前面へ	將 MIDI 編輯器移至前方	将 MIDI 编辑器移到前方
+MIDI Input Devices...	Thiết bị đầu vào MIDI...	MIDI 입력 장치...	MIDI 入力デバイス...	MIDI 輸入裝置...	MIDI 输入设备...
+MIDI Input Filter...	Bộ lọc đầu vào MIDI...	MIDI 입력 필터...	MIDI 入力フィルター...	MIDI 輸入篩選器...	MIDI 输入过滤器...
+MIDI Studio...	Phòng thu MIDI...	MIDI 스튜디오...	MIDI スタジオ...	MIDI 工作室...	MIDI 工作室...
+Machine Track Arming	Bật thu rãnh thiết bị	머신 트랙 녹음 대기	マシントラックの録音待機	機器軌道錄音待命	设备轨道录音待命
+Machine Track Arming Profiles...	Hồ sơ bật thu rãnh thiết bị...	머신 트랙 녹음 대기 프로필...	マシントラック録音待機プロファイル...	機器軌道錄音待命設定檔...	设备轨道录音待命配置...
+Make Inactive	Đặt không hoạt động	비활성 상태로 설정	非アクティブにする	設為非作用中	设为非活动状态
+Marker Target Follows First Selected Track	Đích dấu mốc theo rãnh được chọn đầu tiên	마커 대상을 첫 선택 트랙에 맞춤	マーカーの対象を最初の選択トラックに追従	標記目標跟隨第一條所選軌道	标记目标跟随第一条所选轨道
+Markers Follow Edit	Dấu mốc theo chỉnh sửa	편집 시 마커 함께 이동	マーカーを編集に追従	標記隨編輯移動	标记随编辑移动
+Max	Tối đa	최대	最大	最大	最大
+Maximizer	Bộ tăng mức tối đa	맥시마이저	マキシマイザー	最大化器	最大化器
+Messages	Thông báo	메시지	メッセージ	訊息	消息
+Metadata Inspector	Trình kiểm tra siêu dữ liệu	메타데이터 검사기	メタデータインスペクター	中繼資料檢查器	元数据检查器
+Mirrored MIDI Editing	Chỉnh sửa MIDI đồng bộ bản sao	미러 MIDI 편집	ミラー MIDI 編集	鏡像 MIDI 編輯	镜像 MIDI 编辑
+Momentary	Tạm thời	순간	モーメンタリー	暫時	瞬时
+Move Edit Left	Dịch vùng chỉnh sửa sang trái	편집 영역 왼쪽 이동	編集範囲を左に移動	向左移動編輯範圍	向左移动编辑范围
+Move Edit Right	Dịch vùng chỉnh sửa sang phải	편집 영역 오른쪽 이동	編集範囲を右に移動	向右移動編輯範圍	向右移动编辑范围
+Move Edit Selection To Marker Lane Above	Chuyển vùng chỉnh sửa đến làn dấu mốc phía trên	편집 선택 영역을 위 마커 레인으로 이동	編集選択範囲を上のマーカーレーンに移動	將編輯選取範圍移至上方標記軌	将编辑选区移到上方标记轨
+Move Edit Selection To Marker Lane Below	Chuyển vùng chỉnh sửa đến làn dấu mốc phía dưới	편집 선택 영역을 아래 마커 레인으로 이동	編集選択範囲を下のマーカーレーンに移動	將編輯選取範圍移至下方標記軌	将编辑选区移到下方标记轨
+Move Selection to...	Chuyển vùng chọn đến...	선택 영역 이동 위치...	選択範囲を移動先へ...	移動選取範圍至...	移动选区到...
+Move Song Start...	Dời điểm bắt đầu bài...	곡 시작 위치 이동...	曲の開始位置を移動...	移動歌曲起點...	移动歌曲起点...
+Move to Folder	Chuyển vào thư mục	폴더로 이동	フォルダーに移動	移至資料夾	移到文件夹
+Move to New Folder...	Chuyển vào thư mục mới...	새 폴더로 이동...	新規フォルダーに移動...	移至新資料夾...	移到新文件夹...
+Narrow Mix	Bộ phối thu gọn	좁은 믹스	ミックスを狭く表示	窄版混音	窄版混音
+New Configuration	Cấu hình mới	새 구성	新規構成	新增配置	新建配置
+No Scrolling	Không cuộn	스크롤 안 함	スクロールしない	不捲動	不滚动
+No Time	Không có thời gian	시간 없음	時間なし	無時間	无时间
+No matches	Không có kết quả	일치 항목 없음	一致する項目はありません	沒有相符項目	没有匹配项
+On Grid	Theo lưới	그리드에서	グリッド上	在格線上	在网格上
+Open Plugin Editor	Mở trình biên tập trình cắm	플러그인 편집기 열기	プラグインエディターを開く	開啟外掛編輯器	打开插件编辑器
+Open folder	Mở thư mục	폴더 열기	フォルダーを開く	開啟資料夾	打开文件夹
+Original Time Stamp	Dấu thời gian gốc	원본 타임스탬프	元のタイムスタンプ	原始時間戳記	原始时间戳
+Other Displays	Hiển thị khác	기타 표시	その他の表示	其他顯示	其他显示
+Out 1-2	Ra 1-2	출력 1-2	出力 1-2	輸出 1-2	输出 1-2
+Overlap Shadows	Bóng vùng chồng lấn	겹침 그림자	重なりの影	重疊陰影	重叠阴影
+Overlapped Crossfades	Chuyển âm chồng lấn	겹친 크로스페이드	重なったクロスフェード	重疊交叉淡化	重叠交叉淡化
+Overwrite Indicator	Chỉ báo ghi đè	덮어쓰기 표시	上書きインジケーター	覆寫指示	覆盖指示
+PREAMP	TIỀN KHUẾCH ĐẠI	프리앰프	プリアンプ	前級放大器	前置放大器
+PRs	Yêu cầu hợp nhất	풀 리퀘스트	プルリクエスト	合併請求	合并请求
+Panel layout could not be restored: {error}	Không thể khôi phục bố cục bảng: {error}	패널 배치를 복원할 수 없습니다: {error}	パネル配置を復元できませんでした：{error}	無法還原面板配置：{error}	无法恢复面板布局：{error}
+Panel move was not applied: {error}	Không thể di chuyển bảng: {error}	패널 이동을 적용하지 못했습니다: {error}	パネルの移動を適用できませんでした：{error}	無法套用面板移動：{error}	无法应用面板移动：{error}
+Panel windows could not be arranged: {error}	Không thể sắp xếp cửa sổ bảng: {error}	패널 창을 정렬할 수 없습니다: {error}	パネルウィンドウを配置できませんでした：{error}	無法排列面板視窗：{error}	无法排列面板窗口：{error}
+Parabolic...	Parabol...	포물선...	放物線...	拋物線...	抛物线...
+Parent folder	Thư mục cha	상위 폴더	親フォルダー	上層資料夾	上级文件夹
+Peripherals...	Thiết bị ngoại vi...	주변 기기...	周辺機器...	周邊裝置...	外围设备...
+Pinned Tracks	Rãnh đã ghim	고정된 트랙	固定トラック	釘選軌道	固定轨道
+Pitch II	Dịch cao độ II	피치 II	ピッチ II	音高 II	音高 II
+Pitch Shift Legacy	Dịch cao độ phiên bản cũ	이전 피치 시프트	旧ピッチシフト	舊版音高偏移	旧版音高偏移
+Place on New Track	Đặt trên rãnh mới	새 트랙에 배치	新規トラックに配置	置於新軌道	放在新轨道
+Place on Selected Track	Đặt trên rãnh đã chọn	선택한 트랙에 배치	選択トラックに配置	置於所選軌道	放在所选轨道
+Plate	Tấm vang	플레이트	プレート	板式殘響	板式混响
+Plate Reverb	Âm vang tấm	플레이트 리버브	プレートリバーブ	板式殘響	板式混响
+Play (Space)	Phát (Space)	재생(Space)	再生（Space）	播放（Space）	播放（Space）
+Play Edit	Phát vùng chỉnh sửa	편집 영역 재생	編集範囲を再生	播放編輯範圍	播放编辑范围
+Play Timeline	Phát dòng thời gian	타임라인 재생	タイムラインを再生	播放時間軸	播放时间轴
+Plus/Minus	Cộng/Trừ	플러스/마이너스	プラス／マイナス	加／減	加／减
+Power	Bật/Tắt	전원	電源	電源	电源
+Pre/Post	Trước/Sau	이전/이후	前／後	前／後	前／后
+Pre/Post-Roll	Phát trước/sau	프리롤/포스트롤	プリ／ポストロール	預先／後續播放	预先／后续播放
+Prepare DPE Tracks	Chuẩn bị rãnh DPE	DPE 트랙 준비	DPE トラックを準備	準備 DPE 軌道	准备 DPE 轨道
+Presets ▾	Thiết lập có sẵn ▾	프리셋 ▾	プリセット ▾	預設集 ▾	预设 ▾
+Print Score...	In bản nhạc...	악보 인쇄...	楽譜を印刷...	列印樂譜...	打印乐谱...
+Pro Tools Projects	Dự án Pro Tools	Pro Tools 프로젝트	Pro Tools プロジェクト	Pro Tools 專案	Pro Tools 项目
+Pro Tools Search	Tìm kiếm Pro Tools	Pro Tools 검색	Pro Tools 検索	Pro Tools 搜尋	Pro Tools 搜索
+Processing State	Trạng thái xử lý	처리 상태	処理状態	處理狀態	处理状态
+Project...	Dự án...	프로젝트...	プロジェクト...	專案...	项目...
+Quad	Bốn kênh	쿼드	クアッド	四聲道	四声道
+Quit	Thoát	종료	終了	結束	退出
+REL GRID	LƯỚI TƯƠNG ĐỐI	상대 그리드	相対グリッド	相對格線	相对网格
+Rating	Đánh giá	평가	評価	評等	评分
+Real-Time Properties	Thuộc tính thời gian thực	실시간 속성	リアルタイムプロパティ	即時屬性	实时属性
+Recall	Gọi lại	불러오기	呼び出す	叫回	调出
+Record (Cmd+Space)	Thu âm (Cmd+Space)	녹음(Cmd+Space)	録音（Cmd+Space）	錄音（Cmd+Space）	录音（Cmd+Space）
+Recover	Khôi phục	복구	復旧	復原	恢复
+Recover Unsaved Work	Khôi phục công việc chưa lưu	저장하지 않은 작업 복구	未保存の作業を復旧	復原未儲存的工作	恢复未保存的工作
+Rectified	Đã chỉnh lưu	정류됨	整流済み	已整流	已整流
+Rectifier	Bộ chỉnh lưu	정류기	整流器	整流器	整流器
+Rectify	Chỉnh lưu	정류	整流	整流	整流
+Redo {l}	Làm lại {l}	다시 실행: {l}	やり直し：{l}	重做 {l}	重做 {l}
+Reduce motion	Giảm chuyển động	동작 줄이기	視差効果を減らす	減少動態效果	减少动态效果
+Refresh Report	Làm mới báo cáo	보고서 새로 고침	レポートを更新	重新整理報告	刷新报告
+Remove Duplicate Notes	Xóa nốt trùng lặp	중복 음표 제거	重複ノートを削除	移除重複音符	移除重复音符
+Remove Edit from Bottom	Thu vùng chỉnh sửa từ dưới	아래쪽 편집 영역 제거	編集範囲を下から縮小	從底部縮減編輯範圍	从底部缩减编辑范围
+Remove Edit from Top	Thu vùng chỉnh sửa từ trên	위쪽 편집 영역 제거	編集範囲を上から縮小	從頂部縮減編輯範圍	从顶部缩减编辑范围
+Remove Pitch Shift	Xóa dịch cao độ	피치 시프트 제거	ピッチシフトを削除	移除音高偏移	移除音高偏移
+Remove Warp	Xóa co giãn thời gian	워프 제거	ワープを削除	移除時間扭曲	移除时间扭曲
+Remove from Folder	Đưa ra khỏi thư mục	폴더에서 제거	フォルダーから取り出す	從資料夾移除	从文件夹移除
+Remove {what} from the session?	Xóa {what} khỏi phiên?	세션에서 {what}을(를) 제거할까요?	セッションから {what} を削除しますか？	要從工作階段移除 {what} 嗎？	要从会话中移除 {what} 吗？
+Rename Clip	Đổi tên đoạn	클립 이름 바꾸기	クリップ名を変更	重新命名片段	重命名片段
+Rename Marker	Đổi tên dấu mốc	마커 이름 바꾸기	マーカー名を変更	重新命名標記	重命名标记
+Rename Track	Đổi tên rãnh	트랙 이름 바꾸기	トラック名を変更	重新命名軌道	重命名轨道
+Rename bus…	Đổi tên bus âm thanh…	버스 이름 바꾸기…	バス名を変更…	重新命名匯流排…	重命名总线…
+Render Clip Gain	Kết xuất khuếch đại đoạn	클립 게인 렌더링	クリップゲインをレンダリング	算繪片段增益	渲染片段增益
+Renderer	Bộ kết xuất	렌더러	レンダラー	算繪器	渲染器
+Renumber Bars...	Đánh lại số ô nhịp...	마디 번호 다시 지정...	小節番号を振り直す...	重新編排小節編號...	重新编排小节编号...
+Repeat to Fill Selection	Lặp để lấp vùng chọn	반복하여 선택 영역 채우기	繰り返して選択範囲を埋める	重複以填滿選取範圍	重复以填满选区
+Reset Panel Layout	Đặt lại bố cục bảng	패널 배치 초기화	パネル配置をリセット	重設面板配置	重置面板布局
+Restore Last Selection	Khôi phục vùng chọn trước	이전 선택 영역 복원	前の選択範囲を復元	還原上次選取範圍	恢复上次选区
+Restore Performance...	Khôi phục phần trình diễn...	연주 복원...	演奏を復元...	還原演奏...	恢复演奏...
+Retrospective Record	Thu hồi tố	소급 녹음	レトロスペクティブ録音	回溯錄音	回溯录音
+Return to Zero (Home)	Về đầu (Home)	처음으로 돌아가기(Home)	先頭に戻る（Home）	回到起點（Home）	回到起点（Home）
+Revert Session to Saved...	Khôi phục phiên đã lưu...	저장된 세션으로 되돌리기...	セッションを保存時の状態に戻す...	將工作階段回復至已儲存狀態...	将会话还原到已保存状态...
+Revert to Saved	Khôi phục bản đã lưu	저장된 상태로 되돌리기	保存時の状態に戻す	回復至已儲存狀態	还原到已保存状态
+Revert “{name}” to its last saved version?	Khôi phục “{name}” về lần lưu gần nhất?	“{name}”을(를) 마지막 저장 상태로 되돌릴까요?	「{name}」を最後に保存した状態に戻しますか？	要將「{name}」回復至上次儲存的版本嗎？	要将“{name}”还原到上次保存的版本吗？
+Room	Phòng	룸	ルーム	房間	房间
+Ruler Lane Color	Màu làn thước	눈금자 레인 색상	ルーラーレーンの色	尺規軌顏色	标尺轨颜色
+Ruler Lines	Đường thước	눈금자 선	ルーラーの線	尺規線	标尺线
+S-Curve...	Đường cong chữ S...	S자 곡선...	S 字カーブ...	S 型曲線...	S 形曲线...
+Satur	Bão hòa	새추레이션	サチュレーション	飽和	饱和
+Save As Template...	Lưu làm mẫu...	템플릿으로 저장...	テンプレートとして保存...	儲存為範本...	保存为模板...
+Save Session Copy In...	Lưu bản sao phiên vào...	세션 복사본 저장 위치...	セッションのコピーを保存先へ...	儲存工作階段複本至...	保存会话副本到...
+Save Track Preset...	Lưu thiết lập rãnh...	트랙 프리셋 저장...	トラックプリセットを保存...	儲存軌道預設集...	保存轨道预设...
+Save changes to “{name}” before closing?	Lưu thay đổi của “{name}” trước khi đóng?	닫기 전에 “{name}”의 변경 사항을 저장할까요?	閉じる前に「{name}」の変更を保存しますか？	關閉前要儲存「{name}」的變更嗎？	关闭前要保存“{name}”的更改吗？
+Saved preset {clean}	Đã lưu thiết lập {clean}	프리셋 {clean} 저장됨	プリセット {clean} を保存しました	已儲存預設集 {clean}	已保存预设 {clean}
+Active audio end time is unknown (invalid session sample rate)	Không xác định được thời điểm kết thúc âm thanh (tần số lấy mẫu của phiên không hợp lệ)	활성 오디오 종료 시간을 알 수 없습니다(세션 샘플 레이트가 올바르지 않음)	有効なオーディオの終了時刻は不明です（セッションのサンプルレートが無効）	無法判定有效音訊的結束時間（工作階段取樣率無效）	无法确定有效音频的结束时间（会话采样率无效）
+Active audio ends at {seconds:.2} seconds	Âm thanh đang dùng kết thúc tại {seconds:.2} giây	활성 오디오가 {seconds:.2}초에 끝납니다	有効なオーディオは {seconds:.2} 秒で終了します	有效音訊於 {seconds:.2} 秒結束	有效音频在 {seconds:.2} 秒结束
+Active plugin instances: {plugins}	Số trình cắm đang hoạt động: {plugins}	활성 플러그인 인스턴스: {plugins}	有効なプラグインインスタンス：{plugins}	使用中的外掛實例：{plugins}	正在使用的插件实例：{plugins}
+All audio clips have loaded media within source bounds.	Mọi đoạn âm thanh đều đã nạp phương tiện nằm trong phạm vi nguồn.	모든 오디오 클립의 미디어가 로드되었으며 소스 범위 안에 있습니다.	すべてのオーディオクリップで、ソース範囲内のメディアが読み込まれています。	所有音訊片段皆已載入媒體，且位於來源範圍內。	所有音频片段均已加载媒体，且位于源范围内。
+Checks loaded media only, not files on disk, signal levels, plugins or routing.	Chỉ kiểm tra phương tiện đã nạp; không kiểm tra tệp trên đĩa, mức tín hiệu, trình cắm hay định tuyến.	로드된 미디어만 검사합니다. 디스크 파일, 신호 레벨, 플러그인 및 라우팅은 검사하지 않습니다.	読み込み済みメディアのみを検査します。ディスク上のファイル、信号レベル、プラグイン、ルーティングは検査しません。	僅檢查已載入的媒體，不檢查磁碟檔案、訊號電平、外掛或路由。	仅检查已加载的媒体，不检查磁盘文件、信号电平、插件或路由。
+Includes alternate takes and muted clips. Refresh after editing.	Bao gồm các lần thu thay thế và đoạn đã tắt tiếng. Hãy làm mới sau khi chỉnh sửa.	대체 테이크와 음소거된 클립도 포함합니다. 편집 후 새로 고치세요.	別テイクとミュートしたクリップも含みます。編集後に更新してください。	包含替代錄音與靜音片段。編輯後請重新整理。	包含备用录音和静音片段。编辑后请刷新。
+Analyses the edit selection on the selected tracks.	Phân tích vùng chỉnh sửa trên các rãnh đã chọn.	선택한 트랙의 편집 선택 영역을 분석합니다.	選択したトラックの編集選択範囲を解析します。	分析所選軌道的編輯選取範圍。	分析所选轨道的编辑选区。
+Applies across the edit selection (constant: at the insertion point; scale: factor = end / start; stretch: factor = start / end).	Áp dụng trên vùng chỉnh sửa (cố định: tại điểm chèn; tỷ lệ: hệ số = cuối / đầu; co giãn: hệ số = đầu / cuối).	편집 선택 영역에 적용합니다(일정: 삽입 지점, 비율: 계수 = 끝 / 시작, 늘이기: 계수 = 시작 / 끝).	編集選択範囲に適用します（一定：挿入位置、スケール：係数 = 終了 / 開始、ストレッチ：係数 = 開始 / 終了）。	套用至編輯選取範圍（固定：插入點；縮放：係數 = 結束 / 開始；伸縮：係數 = 開始 / 結束）。	应用于编辑选区（固定：插入点；缩放：系数 = 结束 / 开始；伸缩：系数 = 开始 / 结束）。
+Click a take (or the selection) to promote it to the main playlist	Nhấp vào một lần thu (hoặc vùng chọn) để đưa vào danh sách phát chính	테이크 또는 선택 영역을 클릭하면 메인 재생 목록으로 올립니다	テイクまたは選択範囲をクリックすると、メインプレイリストに採用します	按一下錄音版本或選取範圍，將其加入主要播放清單	单击录音版本或选区，将其加入主播放列表
+Click keys to step-enter notes into the selected MIDI clip at the insertion point.	Nhấp các phím để nhập từng nốt vào đoạn MIDI đã chọn tại điểm chèn.	건반을 클릭하여 선택한 MIDI 클립의 삽입 지점에 음표를 한 단계씩 입력합니다.	鍵盤をクリックすると、選択した MIDI クリップの挿入位置にノートをステップ入力します。	按一下琴鍵，在所選 MIDI 片段的插入點逐步輸入音符。	单击琴键，在所选 MIDI 片段的插入点逐步输入音符。
+Click to add a MIDI clip to {name} at the insertion point.	Nhấp để thêm đoạn MIDI vào {name} tại điểm chèn.	클릭하면 {name}의 삽입 지점에 MIDI 클립을 추가합니다.	クリックすると {name} の挿入位置に MIDI クリップを追加します。	按一下，在 {name} 的插入點加入 MIDI 片段。	单击，在 {name} 的插入点添加 MIDI 片段。
+Click: open instrument · right-click: change	Nhấp: mở nhạc cụ · nhấp phải: đổi	클릭: 악기 열기 · 오른쪽 클릭: 변경	クリック：インストゥルメントを開く · 右クリック：変更	按一下：開啟樂器 · 按右鍵：變更	单击：打开乐器 · 右键单击：更改
+Clips and MIDI panels belong to the Edit window	Bảng đoạn và MIDI thuộc cửa sổ chỉnh sửa	클립 및 MIDI 패널은 편집 창에 속합니다	クリップと MIDI パネルは編集ウィンドウに属します	片段與 MIDI 面板屬於編輯視窗	片段和 MIDI 面板属于编辑窗口
+Columns beside the track headers: inserts, sends, I/O…	Các cột cạnh tiêu đề rãnh: hiệu ứng chèn, đường gửi, vào/ra…	트랙 헤더 옆 열: 인서트, 센드, 입출력…	トラックヘッダー横の列：インサート、センド、入出力…	軌道標頭旁的欄位：插入效果、傳送、輸入／輸出…	轨道标题旁的列：插入效果、发送、输入／输出…
+Commands Keyboard Focus (single-key editing)	Phím lệnh trực tiếp (chỉnh sửa bằng một phím)	명령 키보드 포커스(단일 키 편집)	コマンドキーボードフォーカス（単一キー編集）	指令鍵盤焦點（單鍵編輯）	命令键盘焦点（单键编辑）
+Could not save the preset	Không thể lưu thiết lập	프리셋을 저장할 수 없습니다	プリセットを保存できませんでした	無法儲存預設集	无法保存预设
+Double-click to import audio/MIDI at the insertion point or open a session.	Nhấp đúp để nhập âm thanh/MIDI tại điểm chèn hoặc mở phiên.	두 번 클릭하여 삽입 지점에 오디오/MIDI를 가져오거나 세션을 엽니다.	ダブルクリックすると、挿入位置にオーディオ／MIDI を読み込むか、セッションを開きます。	按兩下，在插入點匯入音訊／MIDI，或開啟工作階段。	双击，在插入点导入音频／MIDI，或打开会话。
+Drag to change the tempo (Shift: fine steps), or click to type it	Kéo để đổi nhịp độ (Shift: điều chỉnh nhỏ), hoặc nhấp để nhập	드래그하여 템포 변경(Shift: 미세 조정), 클릭하여 직접 입력	ドラッグでテンポを変更（Shift：微調整）、クリックで直接入力	拖曳以變更速度（Shift：微調），或按一下直接輸入	拖动以更改速度（Shift：微调），或单击直接输入
+Drop an audio file here	Thả tệp âm thanh vào đây	여기에 오디오 파일을 놓으세요	ここにオーディオファイルをドロップ	將音訊檔案拖放至此	将音频文件拖放到此处
+Drop an audio file on this window	Thả tệp âm thanh vào cửa sổ này	이 창에 오디오 파일을 놓으세요	このウィンドウにオーディオファイルをドロップ	將音訊檔案拖放至此視窗	将音频文件拖放到此窗口
+Fills the selection on the selected tracks with a new clip.	Lấp vùng chọn trên các rãnh đã chọn bằng một đoạn mới.	선택한 트랙의 선택 영역을 새 클립으로 채웁니다.	選択したトラックの選択範囲を新しいクリップで埋めます。	以新片段填滿所選軌道的選取範圍。	用新片段填满所选轨道的选区。
+Fill window with session (Alt+A)	Vừa toàn bộ phiên vào cửa sổ (Alt+A)	세션을 창에 맞추기(Alt+A)	セッション全体をウィンドウに合わせる（Alt+A）	將工作階段調整至視窗大小（Alt+A）	将会话调整到窗口大小（Alt+A）
+Grid mode ({fkey}; again for Relative); Shift-click: Snap to Grid in the other modes	Chế độ lưới ({fkey}; nhấn lại để dùng lưới tương đối); Shift-nhấp: bám lưới trong chế độ khác	그리드 모드({fkey}, 다시 누르면 상대 그리드). Shift+클릭: 다른 모드에서 그리드에 스냅	グリッドモード（{fkey}、再押下で相対グリッド）。Shift＋クリック：他のモードでグリッドにスナップ	格線模式（{fkey}；再按一次切換相對格線）；Shift＋按一下：在其他模式中貼齊格線	网格模式（{fkey}；再次按下切换相对网格）；Shift＋单击：在其他模式中吸附到网格
+Load and edit sounds in the plugin's own editor.	Nạp và chỉnh sửa âm thanh trong trình biên tập riêng của trình cắm.	플러그인 자체 편집기에서 사운드를 로드하고 편집합니다.	プラグイン専用のエディターでサウンドを読み込み、編集します。	在外掛本身的編輯器中載入並編輯聲音。	在插件自带的编辑器中加载并编辑声音。
+No Audio Units found	Không tìm thấy Audio Units	Audio Units를 찾지 못했습니다	Audio Units が見つかりません	找不到 Audio Units	未找到 Audio Units
+No CLAP plugins found	Không tìm thấy trình cắm CLAP	CLAP 플러그인을 찾지 못했습니다	CLAP プラグインが見つかりません	找不到 CLAP 外掛	未找到 CLAP 插件
+No VST3 plugins found	Không tìm thấy trình cắm VST3	VST3 플러그인을 찾지 못했습니다	VST3 プラグインが見つかりません	找不到 VST3 外掛	未找到 VST3 插件
+No Recent Sessions	Không có phiên gần đây	최근 세션 없음	最近使ったセッションはありません	沒有最近的工作階段	没有最近的会话
+No Video track — File › Import › Video…	Chưa có rãnh video — Tệp › Nhập › Video…	비디오 트랙 없음 — 파일 › 가져오기 › 비디오…	ビデオトラックがありません — ファイル › 読み込み › ビデオ…	沒有影片軌 — 檔案 › 匯入 › 影片…	没有视频轨 — 文件 › 导入 › 视频…
+No background tasks are running.	Không có tác vụ nền đang chạy.	실행 중인 백그라운드 작업이 없습니다.	実行中のバックグラウンドタスクはありません。	沒有正在執行的背景工作。	没有正在运行的后台任务。
+No contributor data was built into this copy.	Bản này không kèm dữ liệu người đóng góp.	이 빌드에는 기여자 데이터가 포함되지 않았습니다.	このビルドには貢献者データが含まれていません。	此版本未內建貢獻者資料。	此版本未内置贡献者数据。
+No model credits were built into this copy.	Bản này không kèm thông tin ghi nhận mô hình.	이 빌드에는 모델 기여 정보가 포함되지 않았습니다.	このビルドにはモデルのクレジット情報が含まれていません。	此版本未內建模型致謝資料。	此版本未内置模型致谢信息。
+No object tracks. Use the Object view in the Mix window to route tracks as objects.	Chưa có rãnh đối tượng. Dùng chế độ Đối tượng trong cửa sổ phối âm để định tuyến rãnh thành đối tượng.	오브젝트 트랙이 없습니다. 믹스 창의 오브젝트 보기에서 트랙을 오브젝트로 라우팅하세요.	オブジェクトトラックがありません。ミックスウィンドウのオブジェクト表示でトラックをオブジェクトとしてルーティングしてください。	沒有物件軌道。請在混音視窗的物件檢視中，將軌道路由為物件。	没有对象轨道。请在混音窗口的对象视图中将轨道路由为对象。
+No parameters.	Không có tham số.	매개변수가 없습니다.	パラメーターはありません。	沒有參數。	没有参数。
+No sample	Chưa có mẫu âm thanh	샘플 없음	サンプルなし	沒有樣本	没有样本
+Non-destructive, applied at playback to the selected MIDI tracks.	Không phá hủy dữ liệu, áp dụng khi phát các rãnh MIDI đã chọn.	비파괴 방식으로 선택한 MIDI 트랙의 재생 시 적용합니다.	選択した MIDI トラックの再生時に非破壊で適用します。	以非破壞方式在播放所選 MIDI 軌道時套用。	以非破坏方式在播放所选 MIDI 轨道时应用。
+Notation view of the MIDI clip; edit notes in the MIDI Editor or Event List.	Xem bản nhạc của đoạn MIDI; chỉnh sửa nốt trong trình biên tập MIDI hoặc danh sách sự kiện.	MIDI 클립의 악보 보기입니다. MIDI 편집기나 이벤트 목록에서 음표를 편집하세요.	MIDI クリップの楽譜表示です。ノートの編集は MIDI エディターまたはイベントリストで行います。	顯示 MIDI 片段的樂譜；請在 MIDI 編輯器或事件清單中編輯音符。	显示 MIDI 片段的乐谱；请在 MIDI 编辑器或事件列表中编辑音符。
+Pan (drag; double-click centres)	Vị trí trái/phải (kéo; nhấp đúp để về giữa)	팬(드래그, 두 번 클릭하면 중앙)	パン（ドラッグ、ダブルクリックで中央）	聲像（拖曳；按兩下置中）	声像（拖动；双击居中）
+Processes selected clips offline	Xử lý ngoại tuyến các đoạn đã chọn	선택한 클립을 오프라인 처리	選択したクリップをオフライン処理	離線處理所選片段	离线处理所选片段
+Processes the selected clips and replaces them with rendered audio.	Xử lý các đoạn đã chọn và thay bằng âm thanh đã kết xuất.	선택한 클립을 처리한 뒤 렌더링된 오디오로 바꿉니다.	選択したクリップを処理し、レンダリングしたオーディオに置き換えます。	處理所選片段，並以算繪後的音訊取代。	处理所选片段，并用渲染后的音频替换。
+Recording at 24-bit uses {per_min:.1} MB per mono track-minute	Thu ở 24 bit dùng {per_min:.1} MB mỗi phút cho mỗi rãnh đơn âm	24비트 녹음 시 모노 트랙 1분당 {per_min:.1} MB를 사용합니다	24 ビット録音は、モノラルトラック 1 分あたり {per_min:.1} MB を使用します	24 位元錄音每條單聲道軌每分鐘使用 {per_min:.1} MB	24 位录音每条单声道轨每分钟使用 {per_min:.1} MB
+Renders and AudioSuite processes run to completion before returning.	Tác vụ kết xuất và xử lý AudioSuite sẽ hoàn tất trước khi trả kết quả.	렌더링 및 AudioSuite 처리는 완료된 후 결과를 반환합니다.	レンダリングと AudioSuite 処理は、完了してから結果を返します。	算繪與 AudioSuite 處理會完成後才傳回結果。	渲染和 AudioSuite 处理将在完成后返回结果。
+Reopen the audio devices with these settings	Mở lại thiết bị âm thanh bằng các thiết lập này	이 설정으로 오디오 장치 다시 열기	この設定でオーディオデバイスを開き直す	以這些設定重新開啟音訊裝置	使用这些设置重新打开音频设备
+Route as an immersive object or to the bed	Định tuyến thành đối tượng âm thanh đắm chìm hoặc vào lớp âm nền	몰입형 오브젝트 또는 베드로 라우팅	イマーシブオブジェクトまたはベッドへルーティング	路由為沉浸式音訊物件或至底層聲道	路由为沉浸式音频对象或至底层声道
+Select a MIDI clip (or a MIDI track) to edit its notes.	Chọn một đoạn MIDI (hoặc rãnh MIDI) để chỉnh sửa nốt.	음표를 편집하려면 MIDI 클립 또는 MIDI 트랙을 선택하세요.	ノートを編集するには、MIDI クリップまたは MIDI トラックを選択してください。	選取 MIDI 片段或 MIDI 軌道以編輯音符。	选择 MIDI 片段或 MIDI 轨道以编辑音符。
+Select a MIDI clip or MIDI track.	Chọn một đoạn MIDI hoặc rãnh MIDI.	MIDI 클립 또는 MIDI 트랙을 선택하세요.	MIDI クリップまたは MIDI トラックを選択してください。	請選取 MIDI 片段或 MIDI 軌道。	请选择 MIDI 片段或 MIDI 轨道。
+Select a MIDI clip.	Chọn một đoạn MIDI.	MIDI 클립을 선택하세요.	MIDI クリップを選択してください。	請選取 MIDI 片段。	请选择 MIDI 片段。
+Select an audio clip.	Chọn một đoạn âm thanh.	오디오 클립을 선택하세요.	オーディオクリップを選択してください。	請選取音訊片段。	请选择音频片段。
+Send pan (drag; double-click centres)	Vị trí trái/phải của đường gửi (kéo; nhấp đúp để về giữa)	센드 팬(드래그, 두 번 클릭하면 중앙)	センドパン（ドラッグ、ダブルクリックで中央）	傳送聲像（拖曳；按兩下置中）	发送声像（拖动；双击居中）
+Send {which} to {name}: {} dB\nClick for the send fader · drag vertically to adjust · Shift-drag for fine control · Alt-click for 0 dB · right-click for options	Gửi {which} đến {name}: {} dB\nNhấp để mở cần gạt · kéo dọc để chỉnh · Shift-kéo để tinh chỉnh · Alt-nhấp để về 0 dB · nhấp phải để mở tùy chọn	센드 {which} → {name}: {} dB\n클릭: 센드 페이더 · 세로 드래그: 조정 · Shift+드래그: 미세 조정 · Alt+클릭: 0 dB · 오른쪽 클릭: 옵션	センド {which} → {name}：{} dB\nクリック：センドフェーダー · 縦ドラッグ：調整 · Shift＋ドラッグ：微調整 · Alt＋クリック：0 dB · 右クリック：オプション	傳送 {which} 至 {name}：{} dB\n按一下：傳送推桿 · 垂直拖曳：調整 · Shift＋拖曳：微調 · Alt＋按一下：0 dB · 按右鍵：選項	发送 {which} 到 {name}：{} dB\n单击：发送推子 · 垂直拖动：调整 · Shift＋拖动：微调 · Alt＋单击：0 dB · 右键单击：选项
+Show Edit and Mix at once, e.g. one per monitor	Hiện đồng thời chỉnh sửa và phối âm, ví dụ mỗi cửa sổ trên một màn hình	편집과 믹스를 동시에 표시합니다. 예: 모니터마다 하나씩	編集とミックスを同時に表示します（例：各モニターに 1 つずつ）	同時顯示編輯與混音，例如每部螢幕各顯示一個視窗	同时显示编辑和混音，例如每台显示器各显示一个窗口
+Shuffle is locked ({cmd}-click to unlock)	Chế độ dồn đoạn đã khóa ({cmd}-nhấp để mở khóa)	셔플이 잠겨 있습니다({cmd}+클릭으로 잠금 해제)	シャッフルはロックされています（{cmd}＋クリックで解除）	隨動模式已鎖定（{cmd}＋按一下解鎖）	随动模式已锁定（{cmd}＋单击解锁）
+Shuffle mode ({fkey}); {cmd}-click locks it out	Chế độ dồn đoạn ({fkey}); {cmd}-nhấp để khóa	셔플 모드({fkey}), {cmd}+클릭으로 잠금	シャッフルモード（{fkey}）、{cmd}＋クリックでロック	隨動模式（{fkey}）；{cmd}＋按一下鎖定	随动模式（{fkey}）；{cmd}＋单击锁定
+Stop recording first	Hãy dừng thu âm trước	먼저 녹음을 중지하세요	先に録音を停止してください	請先停止錄音	请先停止录音
+Surround pan: drag the puck · double-click: front centre · Alt-drag: divergence	Vị trí âm thanh vòm: kéo điểm điều khiển · nhấp đúp: giữa phía trước · Alt-kéo: độ phân tán	서라운드 팬: 점 드래그 · 두 번 클릭: 전면 중앙 · Alt+드래그: 확산	サラウンドパン：パックをドラッグ · ダブルクリック：前方中央 · Alt＋ドラッグ：広がり	環繞聲像：拖曳控制點 · 按兩下：前方中央 · Alt＋拖曳：擴散度	环绕声像：拖动控制点 · 双击：前方中央 · Alt＋拖动：扩散度
+The mix runs in 512-sample blocks; the buffer size sets the device's own latency.	Bộ phối xử lý theo khối 512 mẫu; kích thước bộ đệm quyết định độ trễ của thiết bị.	믹스는 512샘플 블록으로 처리되며 버퍼 크기는 장치 자체의 지연을 설정합니다.	ミックスは 512 サンプル単位で処理されます。バッファーサイズはデバイス自体の遅延を設定します。	混音以 512 個樣本為區塊處理；緩衝區大小決定裝置本身的延遲。	混音以 512 个样本为一块处理；缓冲区大小决定设备本身的延迟。
+This plugin has no editor of its own, or it is not loaded	Trình cắm này không có trình biên tập riêng hoặc chưa được nạp	이 플러그인에는 자체 편집기가 없거나 로드되지 않았습니다	このプラグインには専用エディターがないか、読み込まれていません	此外掛沒有專屬編輯器，或尚未載入	此插件没有专用编辑器，或尚未加载
+Track tint in the Edit window	Màu rãnh trong cửa sổ chỉnh sửa	편집 창의 트랙 색조	編集ウィンドウ内のトラックの色合い	編輯視窗中的軌道色調	编辑窗口中的轨道色调
+User presets need the desktop app.	Thiết lập do người dùng lưu cần ứng dụng máy tính.	사용자 프리셋은 데스크톱 앱이 필요합니다.	ユーザープリセットにはデスクトップアプリが必要です。	使用者預設集需要桌面版應用程式。	用户预设需要桌面应用。
+Uses the edit selection.	Sử dụng vùng chỉnh sửa đã chọn.	편집 선택 영역을 사용합니다.	編集選択範囲を使用します。	使用編輯選取範圍。	使用编辑选区。
+Voice: dyn plays the track, off makes it inactive	Phát âm: dyn phát rãnh, off vô hiệu hóa rãnh	보이스: dyn은 트랙 재생, off는 비활성화	ボイス：dyn はトラックを再生、off は無効にします	發聲：dyn 播放軌道，off 停用軌道	发声：dyn 播放轨道，off 停用轨道
+Write automation for the selected tracks:	Ghi tự động hóa cho các rãnh đã chọn:	선택한 트랙의 오토메이션 기록:	選択したトラックにオートメーションを書き込み：	為所選軌道寫入自動化：	为所选轨道写入自动化：
+# Shared meanings explicitly reviewed for Sound: credits, generic UI and selection.
+% of all commits	% tổng số lần ghi nhận	전체 커밋의 %	全コミットに占める割合（%）	占所有提交的 %	占所有提交的 %
+Appearance	Giao diện	모양	外観	外觀	外观
+Binary assets added	Tài nguyên nhị phân đã thêm	추가된 바이너리 에셋	追加されたバイナリアセット	新增的二進位資產	添加的二进制资源
+Binary assets removed	Tài nguyên nhị phân đã xóa	삭제된 바이너리 에셋	削除されたバイナリアセット	移除的二進位資產	移除的二进制资源
+Comments	Nhận xét	메모	コメント	註解	批注
+First	Đầu tiên	처음	最初	第一個	第一个
+First commit	Lần ghi nhận đầu tiên	첫 커밋	最初のコミット	首次提交	首次提交
+Last	Cuối cùng	마지막	最後	最後一個	最后一个
+Last commit	Lần ghi nhận cuối cùng	마지막 커밋	最後のコミット	最後提交	最后提交
+Line delta	Chênh lệch số dòng	줄 수 변화	行数の差分	行數差異	行数差异
+Merged PRs	Yêu cầu hợp nhất đã gộp	병합된 PR	マージされた PR	已合併的 PR	已合并的 PR
+Models	Mô hình	모델	モデル	模型	模型
+None	Không có	없음	なし	無	无
+Options	Tùy chọn	옵션	オプション	選項	选项
+Regroup	Nhóm lại	다시 그룹화	再グループ化	重新群組	重新组合
+Reverse the order	Đảo thứ tự	순서 반전	順序を逆にする	反轉順序	反转顺序
+Revert	Khôi phục bản đã lưu	저장된 상태로 되돌리기	保存した状態に戻す	回復為已儲存版本	还原为已保存版本
+Search commands…	Tìm lệnh…	명령 검색…	コマンドを検索…	搜尋命令…	搜索命令…
+Title	Tiêu đề	제목	タイトル	標題	标题
+Version {}	Phiên bản {}	버전 {}	バージョン {}	版本 {}	版本 {}
+{} contributors · {} commits	{} người đóng góp · {} lần ghi nhận	기여자 {}명 · 커밋 {}개	貢献者 {} 人・コミット {} 件	{} 位貢獻者・{} 次提交	{} 位贡献者・{} 次提交
+# Exact canonical identifiers; corresponding app-scoped review reasons are in JSON.
+ "{name}" is used by {users}	 "{name}" đang được {users} sử dụng	 "{name}"을(를) {users}에서 사용 중입니다	 「{name}」は {users} で使用中です	 「{name}」正由 {users} 使用	 “{name}”正由 {users} 使用
+ (alternate playlist)	 (danh sách phát thay thế)	 (대체 재생 목록)	（別プレイリスト）	（替代播放清單）	（备用播放列表）
+ (resampled to the device rate)	 (đã lấy mẫu lại theo tần số thiết bị)	 (장치 샘플 레이트로 리샘플링)	（デバイスのレートに再サンプリング）	（已重新取樣為裝置取樣率）	（已重采样为设备采样率）
+ It is used by {users}	 Đang được {users} sử dụng	 {users}에서 사용 중입니다	 {users} で使用中です	 正由 {users} 使用	 正由 {users} 使用
+ They are used by {users}	 Đang được {users} sử dụng	 {users}에서 사용 중입니다	 {users} で使用中です	 正由 {users} 使用	 正由 {users} 使用
+ The file stays on disk.	 Tệp vẫn được giữ trên đĩa.	 파일은 디스크에 그대로 유지됩니다.	 ファイルはディスク上に残ります。	 檔案仍會保留在磁碟上。	 文件仍会保留在磁盘上。
+ The files stay on disk.	 Các tệp vẫn được giữ trên đĩa.	 파일은 디스크에 그대로 유지됩니다.	 ファイルはディスク上に残ります。	 檔案仍會保留在磁碟上。	 文件仍会保留在磁盘上。
+(redo) {r}	(làm lại) {r}	(다시 실행) {r}	（やり直し）{r}	（重做）{r}	（重做）{r}
+1 bar	1 ô nhịp	1마디	1 小節	1 小節	1 小节
+1 frame	1 khung hình	1프레임	1 フレーム	1 影格	1 帧
+1 msec	1 mili giây	1밀리초	1 ミリ秒	1 毫秒	1 毫秒
+1 second	1 giây	1초	1 秒	1 秒	1 秒
+10 msec	10 mili giây	10밀리초	10 ミリ秒	10 毫秒	10 毫秒
+100 msec	100 mili giây	100밀리초	100 ミリ秒	100 毫秒	100 毫秒
+100 samples	100 mẫu	100샘플	100 サンプル	100 個樣本	100 个样本
+32-bit float	Số thực 32 bit	32비트 부동소수점	32 ビット浮動小数点	32 位元浮點數	32 位浮点数
+1st Order Ambisonics	Âm thanh đa hướng bậc 1	1차 앰비소닉스	1 次アンビソニックス	一階全景聲	一阶全景声
+2nd Order Ambisonics	Âm thanh đa hướng bậc 2	2차 앰비소닉스	2 次アンビソニックス	二階全景聲	二阶全景声
+3rd Order Ambisonics	Âm thanh đa hướng bậc 3	3차 앰비소닉스	3 次アンビソニックス	三階全景聲	三阶全景声
+4th Order Ambisonics	Âm thanh đa hướng bậc 4	4차 앰비소닉스	4 次アンビソニックス	四階全景聲	四阶全景声
+5th Order Ambisonics	Âm thanh đa hướng bậc 5	5차 앰비소닉스	5 次アンビソニックス	五階全景聲	五阶全景声
+6th Order Ambisonics	Âm thanh đa hướng bậc 6	6차 앰비소닉스	6 次アンビソニックス	六階全景聲	六阶全景声
+7th Order Ambisonics	Âm thanh đa hướng bậc 7	7차 앰비소닉스	7 次アンビソニックス	七階全景聲	七阶全景声
+<factory default>	<mặc định gốc>	<출하 시 기본값>	<出荷時設定>	<原廠預設值>	<出厂默认值>
+AFL (After Fader Listen)	AFL (nghe sau cần gạt)	AFL(페이더 후단 청취)	AFL（アフターフェーダーリッスン）	AFL（推桿後監聽）	AFL（推子后监听）
+PFL (Pre Fader Listen)	PFL (nghe trước cần gạt)	PFL(페이더 전단 청취)	PFL（プリフェーダーリッスン）	PFL（推桿前監聽）	PFL（推子前监听）
+SIP (Solo In Place)	SIP (nghe riêng tại chỗ)	SIP(인플레이스 솔로)	SIP（ソロインプレース）	SIP（原位獨奏）	SIP（原位独奏）
+Activate HEAT	Kích hoạt HEAT	HEAT 활성화	HEAT を有効化	啟用 HEAT	启用 HEAT
+Add Key Change...	Thêm thay đổi giọng...	조성 변경 추가...	調の変更を追加...	加入調性變更...	添加调性变化...
+After Playback	Sau khi phát	재생 후	再生後	播放後	播放后
+All Automation	Tất cả tự động hóa	모든 오토메이션	すべてのオートメーション	所有自動化	所有自动化
+All MIDI Notes Off	Tắt tất cả nốt MIDI	모든 MIDI 음 끄기	すべての MIDI ノートをオフ	關閉所有 MIDI 音符	关闭所有 MIDI 音符
+All Marker Rulers	Tất cả thước dấu mốc	모든 마커 눈금자	すべてのマーカールーラー	所有標記尺規	所有标记标尺
+Analyze	Phân tích	분석	解析	分析	分析
+Applies to the selected MIDI clips (or those under the selection).	Áp dụng cho các đoạn MIDI đã chọn (hoặc nằm trong vùng chọn).	선택한 MIDI 클립 또는 선택 영역 안의 클립에 적용합니다.	選択した MIDI クリップ、または選択範囲内のクリップに適用します。	套用至所選 MIDI 片段，或選取範圍內的片段。	应用于所选 MIDI 片段或选区内的片段。
+Apply to selected tracks (Shift: selected clips)	Áp dụng cho rãnh đã chọn (Shift: đoạn đã chọn)	선택한 트랙에 적용(Shift: 선택한 클립)	選択トラックに適用（Shift：選択クリップ）	套用至所選軌道（Shift：所選片段）	应用于所选轨道（Shift：所选片段）
+Arrange Panel	Sắp xếp bảng	패널 정렬	パネルを配置	排列面板	排列面板
+At Selection	Tại vùng chọn	선택 영역에서	選択範囲で	在選取範圍處	在选区处
+At Transients	Tại điểm chuyển tiếp	트랜지언트에서	トランジェントで	在瞬態處	在瞬态处
+Auto-Spot Clips	Tự đặt đoạn vào vị trí gốc	클립 자동 스폿	クリップを自動スポット	自動定位片段	自动定位片段
+Auto-Update Active Configuration	Tự cập nhật cấu hình đang dùng	활성 구성 자동 업데이트	有効な構成を自動更新	自動更新目前配置	自动更新当前配置
+Auto-update configuration	Tự cập nhật cấu hình	구성 자동 업데이트	構成を自動更新	自動更新配置	自动更新配置
+BED	LỚP ÂM NỀN	베드	ベッド	底層聲道	底层声道
+Bars per system	Số ô nhịp mỗi dòng	단당 마디 수	1 段あたりの小節数	每行小節數	每行小节数
+Beat Detective	Bộ dò nhịp	비트 감지	ビート検出	節拍偵測	节拍检测
+Big Counter	Bộ đếm lớn	큰 카운터	ビッグカウンター	大型計數器	大计数器
+Built-in	Tích hợp	내장	内蔵	內建	内置
+C major	Đô trưởng	다장조	ハ長調	C 大調	C 大调
+G major	Sol trưởng	사장조	ト長調	G 大調	G 大调
+COMMENTS	GHI CHÚ	주석	コメント	註解	注释
+Calibration Mode	Chế độ hiệu chuẩn	보정 모드	キャリブレーションモード	校準模式	校准模式
+Can't Redo	Không thể làm lại	다시 실행할 수 없음	やり直しできません	無法重做	无法重做
+Can't Undo	Không thể hoàn tác	실행 취소할 수 없음	取り消しできません	無法復原	无法撤销
+Capture...	Ghi lại...	캡처...	キャプチャー...	擷取...	捕获...
+Center Playhead	Căn giữa đầu phát	재생 헤드 가운데 맞춤	再生ヘッドを中央に配置	播放頭置中	播放头居中
+Change Duration...	Đổi thời lượng...	길이 변경...	長さを変更...	變更持續時間...	更改持续时间...
+Change Edit to Match Timeline	Khớp vùng chỉnh sửa với dòng thời gian	편집 영역을 타임라인에 맞춤	編集範囲をタイムラインに合わせる	將編輯範圍設為時間軸範圍	将编辑范围设为时间轴范围
+Change Timeline to Match Edit	Khớp dòng thời gian với vùng chỉnh sửa	타임라인을 편집 영역에 맞춤	タイムラインを編集範囲に合わせる	將時間軸範圍設為編輯範圍	将时间轴范围设为编辑范围
+Change Meter...	Đổi nhịp...	박자 변경...	拍子を変更...	變更拍號...	更改拍号...
+Change Track Width	Đổi độ rộng rãnh	트랙 폭 변경	トラック幅を変更	變更軌道寬度	更改轨道宽度
+Change Velocity...	Đổi lực nhấn...	벨로시티 변경...	ベロシティを変更...	變更力度...	更改力度...
+Chord Symbols	Ký hiệu hợp âm	코드 기호	コード記号	和弦符號	和弦符号
+Chords	Hợp âm	코드	コード	和弦	和弦
+Clear	Xóa	지우기	消去	清除	清除
+Clear All Clip Indicators	Xóa tất cả chỉ báo quá mức	모든 클리핑 표시 지우기	すべてのクリップインジケーターを消去	清除所有削波指示	清除所有削波指示
+Clear Special	Xóa đặc biệt	특수 지우기	特殊消去	特殊清除	特殊清除
+Clear Trim Automation	Xóa tự động hóa tinh chỉnh	트림 오토메이션 지우기	トリムオートメーションを消去	清除修整自動化	清除修整自动化
+Clear…	Xóa…	지우기…	消去…	清除…	清除…
+Click/Countoff...	Máy đếm nhịp/đếm trước...	클릭/카운트인...	クリック／カウントオフ...	節拍器／預備拍...	节拍器／预备拍...
+Clip Groups...	Nhóm đoạn...	클립 그룹...	クリップグループ...	片段群組...	片段编组...
+Close All Workspaces	Đóng mọi không gian làm việc	모든 작업 영역 닫기	すべてのワークスペースを閉じる	關閉所有工作區	关闭所有工作区
+Close Plugin Editor	Đóng trình biên tập trình cắm	플러그인 편집기 닫기	プラグインエディターを閉じる	關閉外掛編輯器	关闭插件编辑器
+Close Window	Đóng cửa sổ	창 닫기	ウィンドウを閉じる	關閉視窗	关闭窗口
+Close folder	Đóng thư mục	폴더 닫기	フォルダーを閉じる	關閉資料夾	关闭文件夹
+Close “{name}” without saving?	Đóng “{name}” mà không lưu?	“{name}”을(를) 저장하지 않고 닫을까요?	「{name}」を保存せずに閉じますか？	要關閉「{name}」而不儲存嗎？	要关闭“{name}”而不保存吗？
+Coalesce Clip Gain to Volume Automation	Gộp khuếch đại đoạn vào tự động hóa âm lượng	클립 게인을 볼륨 오토메이션에 합치기	クリップゲインをボリュームオートメーションに統合	將片段增益合併至音量自動化	将片段增益合并到音量自动化
+Coalesce Pan Guide Automation	Gộp tự động hóa hướng dẫn vị trí	팬 가이드 오토메이션 합치기	パンガイドオートメーションを統合	合併聲像導引自動化	合并声像引导自动化
+Coalesce Trim Automation	Gộp tự động hóa tinh chỉnh	트림 오토메이션 합치기	トリムオートメーションを統合	合併修整自動化	合并修整自动化
+Coalesce VCA Controller Automation	Gộp tự động hóa bộ điều khiển VCA	VCA 컨트롤러 오토메이션 합치기	VCA コントローラーのオートメーションを統合	合併 VCA 控制器自動化	合并 VCA 控制器自动化
+Coalesce Volume Automation to Clip Gain	Gộp tự động hóa âm lượng vào khuếch đại đoạn	볼륨 오토메이션을 클립 게인에 합치기	ボリュームオートメーションをクリップゲインに統合	將音量自動化合併至片段增益	将音量自动化合并到片段增益
+Collaboration	Cộng tác	공동 작업	共同作業	協作	协作
+Color Palette	Bảng màu	색상 팔레트	カラーパレット	調色盤	调色板
+Commit...	Kết xuất cố định...	커밋...	コミット...	提交算繪...	提交渲染...
+Comp	Bộ nén	컴프레서	コンプレッサー	壓縮器	压缩器
+Composer	Nhạc sĩ sáng tác	작곡가	作曲者	作曲者	作曲者
+Composite Playlist	Danh sách phát tổng hợp	합성 재생 목록	コンポジットプレイリスト	合成播放清單	合成播放列表
+Configuration {n}	Cấu hình {n}	구성 {n}	構成 {n}	配置 {n}	配置 {n}
+Configurations	Cấu hình	구성	構成	配置	配置
+Conform to Tempo	Khớp theo nhịp độ	템포에 맞춤	テンポに合わせる	符合速度	匹配速度
+Consolidate	Hợp nhất	통합	統合	整合	整合
+Constant...	Cố định...	일정...	一定...	固定...	固定...
+Continuous	Liên tục	연속	連続	連續	连续
+Convert Aux to Routing Folder	Đổi rãnh phụ thành thư mục định tuyến	보조 트랙을 라우팅 폴더로 변환	Aux をルーティングフォルダーに変換	將輔助軌轉為路由資料夾	将辅助轨转换为路由文件夹
+Convert Clip Gain to Volume Automation	Đổi khuếch đại đoạn thành tự động hóa âm lượng	클립 게인을 볼륨 오토메이션으로 변환	クリップゲインをボリュームオートメーションに変換	將片段增益轉為音量自動化	将片段增益转换为音量自动化
+Convert Volume Automation to Clip Gain	Đổi tự động hóa âm lượng thành khuếch đại đoạn	볼륨 오토메이션을 클립 게인으로 변환	ボリュームオートメーションをクリップゲインに変換	將音量自動化轉為片段增益	将音量自动化转换为片段增益
+Copy Selection to...	Sao chép vùng chọn đến...	선택 영역 복사 위치...	選択範囲をコピー先へ...	複製選取範圍至...	复制选区到...
+Copy Special	Sao chép đặc biệt	특수 복사	特殊コピー	特殊複製	特殊复制
+Copy to Send...	Sao chép vào đường gửi...	센드로 복사...	センドへコピー...	複製至傳送...	复制到发送...
+Copy/Move Indicators	Chỉ báo sao chép/di chuyển	복사/이동 표시	コピー／移動インジケーター	複製／移動指示	复制／移动指示
+Counters	Bộ đếm	카운터	カウンター	計數器	计数器
+Create Group	Tạo nhóm	그룹 만들기	グループを作成	建立群組	创建编组
+Create...	Tạo...	만들기...	作成...	建立...	创建...
+Current Feet+Frames Position...	Vị trí feet+khung hình hiện tại...	현재 피트+프레임 위치...	現在のフィート＋フレーム位置...	目前英呎＋影格位置...	当前英尺＋帧位置...
+Current Time	Thời gian hiện tại	현재 시간	現在の時刻	目前時間	当前时间
+Current Timecode Position...	Vị trí mã thời gian hiện tại...	현재 타임코드 위치...	現在のタイムコード位置...	目前時間碼位置...	当前时间码位置...
+Cut Special	Cắt đặc biệt	특수 잘라내기	特殊カット	特殊剪下	特殊剪切
+Cut Time...	Cắt khoảng thời gian...	시간 잘라내기...	時間をカット...	剪下時間...	剪切时间...
+DC Offset Removal	Loại bỏ độ lệch DC	DC 오프셋 제거	DC オフセットを除去	移除直流偏移	移除直流偏移
+DC Rmv	Khử DC	DC 제거	DC 除去	移除 DC	移除 DC
+DESTINATION	ĐÍCH ĐẾN	대상	出力先	目的地	目标
+Dashboard...	Bảng điều khiển...	대시보드...	ダッシュボード...	儀表板...	仪表板...
+De-Esser	Bộ giảm âm xì	디에서	ディエッサー	齒音消除器	齿音消除器
+DeEss	Giảm âm xì	디에싱	ディエッサー	消除齒音	消除齿音
+Default ({default})	Mặc định ({default})	기본값({default})	既定（{default}）	預設（{default}）	默认（{default}）
+Default ({def})	Mặc định ({def})	기본값({def})	既定（{def}）	預設（{def}）	默认（{def}）
+Delete Unused...	Xóa mục không dùng...	사용하지 않는 항목 삭제...	未使用項目を削除...	刪除未使用項目...	删除未使用项目...
+Designate as Target Playlist	Đặt làm danh sách phát đích	대상 재생 목록으로 지정	ターゲットプレイリストに指定	指定為目標播放清單	指定为目标播放列表
+Destructive Record	Thu ghi đè	파괴적 녹음	破壊録音	破壞式錄音	破坏式录音
+Disable	Vô hiệu hóa	비활성화	無効化	停用	禁用
+Enable	Kích hoạt	활성화	有効化	啟用	启用
+Disk Allocation...	Phân bổ ổ đĩa...	디스크 할당...	ディスク割り当て...	磁碟配置...	磁盘分配...
+Display on All Channels	Hiển thị trên mọi kênh	모든 채널에 표시	すべてのチャンネルに表示	在所有聲道顯示	在所有声道显示
+Divergence (0 = point source)	Độ phân tán (0 = nguồn điểm)	확산(0 = 점 음원)	広がり（0 = 点音源）	擴散度（0 = 點音源）	扩散度（0 = 点声源）
+Double Edit	Nhân đôi vùng chỉnh sửa	편집 영역 두 배로	編集範囲を 2 倍にする	編輯範圍加倍	编辑范围加倍
+Dropped Video Frame Indicator	Chỉ báo khung hình video bị bỏ	비디오 프레임 누락 표시	ビデオのドロップフレームインジケーター	影片掉格指示	视频掉帧指示
+Dual-licensed MIT OR Apache-2.0. Made with Rust and egui.	Cấp phép kép MIT OR Apache-2.0. Được tạo bằng Rust và egui.	MIT OR Apache-2.0 이중 라이선스. Rust와 egui로 제작했습니다.	MIT OR Apache-2.0 のデュアルライセンス。Rust と egui で制作。	採用 MIT OR Apache-2.0 雙重授權。使用 Rust 與 egui 製作。	采用 MIT OR Apache-2.0 双重许可。使用 Rust 和 egui 制作。
+Alt	Alt	Alt	Alt	Alt	Alt
+Alt+'	Alt+'	Alt+'	Alt+'	Alt+'	Alt+'
+Alt+6	Alt+6	Alt+6	Alt+6	Alt+6	Alt+6
+Alt+7	Alt+7	Alt+7	Alt+7	Alt+7	Alt+7
+Alt+=	Alt+=	Alt+=	Alt+=	Alt+=	Alt+=
+Alt+I	Alt+I	Alt+I	Alt+I	Alt+I	Alt+I
+Alt+J	Alt+J	Alt+J	Alt+J	Alt+J	Alt+J
+Cmd	Cmd	Cmd	Cmd	Cmd	Cmd
+Cmd+1	Cmd+1	Cmd+1	Cmd+1	Cmd+1	Cmd+1
+Cmd+3	Cmd+3	Cmd+3	Cmd+3	Cmd+3	Cmd+3
+Cmd+4	Cmd+4	Cmd+4	Cmd+4	Cmd+4	Cmd+4
+Cmd+5	Cmd+5	Cmd+5	Cmd+5	Cmd+5	Cmd+5
+Cmd+9	Cmd+9	Cmd+9	Cmd+9	Cmd+9	Cmd+9
+Cmd+=	Cmd+=	Cmd+=	Cmd+=	Cmd+=	Cmd+=
+Cmd+Alt+0-5	Cmd+Alt+0-5	Cmd+Alt+0-5	Cmd+Alt+0-5	Cmd+Alt+0-5	Cmd+Alt+0-5
+Cmd+Alt+J	Cmd+Alt+J	Cmd+Alt+J	Cmd+Alt+J	Cmd+Alt+J	Cmd+Alt+J
+Cmd+Alt+M	Cmd+Alt+M	Cmd+Alt+M	Cmd+Alt+M	Cmd+Alt+M	Cmd+Alt+M
+Cmd+Alt+[ / ]	Cmd+Alt+[ / ]	Cmd+Alt+[ / ]	Cmd+Alt+[ / ]	Cmd+Alt+[ / ]	Cmd+Alt+[ / ]
+Cmd+Ctrl+1-5	Cmd+Ctrl+1-5	Cmd+Ctrl+1-5	Cmd+Ctrl+1-5	Cmd+Ctrl+1-5	Cmd+Ctrl+1-5
+Cmd+Ctrl+=	Cmd+Ctrl+=	Cmd+Ctrl+=	Cmd+Ctrl+=	Cmd+Ctrl+=	Cmd+Ctrl+=
+Cmd+Ctrl+S	Cmd+Ctrl+S	Cmd+Ctrl+S	Cmd+Ctrl+S	Cmd+Ctrl+S	Cmd+Ctrl+S
+Cmd+Ctrl+W	Cmd+Ctrl+W	Cmd+Ctrl+W	Cmd+Ctrl+W	Cmd+Ctrl+W	Cmd+Ctrl+W
+Cmd+N	Cmd+N	Cmd+N	Cmd+N	Cmd+N	Cmd+N
+Cmd+Shift+N	Cmd+Shift+N	Cmd+Shift+N	Cmd+Shift+N	Cmd+Shift+N	Cmd+Shift+N
+Cmd+Shift+X	Cmd+Shift+X	Cmd+Shift+X	Cmd+Shift+X	Cmd+Shift+X	Cmd+Shift+X
+Cmd+W	Cmd+W	Cmd+W	Cmd+W	Cmd+W	Cmd+W
+Ctrl	Ctrl	Ctrl	Ctrl	Ctrl	Ctrl
+Ctrl+	Ctrl+	Ctrl+	Ctrl+	Ctrl+	Ctrl+
+Ctrl+Down	Ctrl+Down	Ctrl+Down	Ctrl+Down	Ctrl+Down	Ctrl+Down
+Ctrl+Shift+Down	Ctrl+Shift+Down	Ctrl+Shift+Down	Ctrl+Shift+Down	Ctrl+Shift+Down	Ctrl+Shift+Down
+Ctrl+Shift+Up	Ctrl+Shift+Up	Ctrl+Shift+Up	Ctrl+Shift+Up	Ctrl+Shift+Up	Ctrl+Shift+Up
+Ctrl+Up	Ctrl+Up	Ctrl+Up	Ctrl+Up	Ctrl+Up	Ctrl+Up
+Enter	Enter	Enter	Enter	Enter	Enter
+Shift	Shift	Shift	Shift	Shift	Shift
+Shift+K	Shift+K	Shift+K	Shift+K	Shift+K	Shift+K
+Space	Space	Space	Space	Space	Space
+Tab	Tab	Tab	Tab	Tab	Tab
+1	1	1	1	1	1
+2	2	2	2	2	2
+3	3	3	3	3	3
+4	4	4	4	4	4
+5	5	5	5	5	5
+5.0	5.0	5.0	5.0	5.0	5.0
+5.0.2	5.0.2	5.0.2	5.0.2	5.0.2	5.0.2
+5.0.4	5.0.4	5.0.4	5.0.4	5.0.4	5.0.4
+5.1	5.1	5.1	5.1	5.1	5.1
+5.1.2	5.1.2	5.1.2	5.1.2	5.1.2	5.1.2
+5.1.4	5.1.4	5.1.4	5.1.4	5.1.4	5.1.4
+6.0	6.0	6.0	6.0	6.0	6.0
+6.1	6.1	6.1	6.1	6.1	6.1
+7.0	7.0	7.0	7.0	7.0	7.0
+7.0.2	7.0.2	7.0.2	7.0.2	7.0.2	7.0.2
+7.0.4	7.0.4	7.0.4	7.0.4	7.0.4	7.0.4
+7.0.6	7.0.6	7.0.6	7.0.6	7.0.6	7.0.6
+7.1	7.1	7.1	7.1	7.1	7.1
+7.1.2	7.1.2	7.1.2	7.1.2	7.1.2	7.1.2
+7.1.4	7.1.4	7.1.4	7.1.4	7.1.4	7.1.4
+7.1.6	7.1.6	7.1.6	7.1.6	7.1.6	7.1.6
+9.0.4	9.0.4	9.0.4	9.0.4	9.0.4	9.0.4
+9.0.6	9.0.6	9.0.6	9.0.6	9.0.6	9.0.6
+9.1.4	9.1.4	9.1.4	9.1.4	9.1.4	9.1.4
+9.1.6	9.1.6	9.1.6	9.1.6	9.1.6	9.1.6
+7.0 SDDS	7.0 SDDS	7.0 SDDS	7.0 SDDS	7.0 SDDS	7.0 SDDS
+7.1 SDDS	7.1 SDDS	7.1 SDDS	7.1 SDDS	7.1 SDDS	7.1 SDDS
+LCR	LCR	LCR	LCR	LCR	LCR
+LCRS	LCRS	LCRS	LCRS	LCRS	LCRS
+Ableton Link	Ableton Link	Ableton Link	Ableton Link	Ableton Link	Ableton Link
+Audio Units	Audio Units	Audio Units	Audio Units	Audio Units	Audio Units
+AudioSuite	AudioSuite	AudioSuite	AudioSuite	AudioSuite	AudioSuite
+BF-76	BF-76	BF-76	BF-76	BF-76	BF-76
+CLAP	CLAP	CLAP	CLAP	CLAP	CLAP
+D-Verb	D-Verb	D-Verb	D-Verb	D-Verb	D-Verb
+Dyn3 Compressor/Limiter	Dyn3 Compressor/Limiter	Dyn3 Compressor/Limiter	Dyn3 Compressor/Limiter	Dyn3 Compressor/Limiter	Dyn3 Compressor/Limiter
+Dyn3 De-Esser	Dyn3 De-Esser	Dyn3 De-Esser	Dyn3 De-Esser	Dyn3 De-Esser	Dyn3 De-Esser
+Dyn3 Expander/Gate	Dyn3 Expander/Gate	Dyn3 Expander/Gate	Dyn3 Expander/Gate	Dyn3 Expander/Gate	Dyn3 Expander/Gate
+EQ	EQ	EQ	EQ	EQ	EQ
+EQ1	EQ1	EQ1	EQ1	EQ1	EQ1
+EQ7	EQ7	EQ7	EQ7	EQ7	EQ7
+EQ 1-Band	EQ 1-Band	EQ 1-Band	EQ 1-Band	EQ 1-Band	EQ 1-Band
+EQ 7-Band	EQ 7-Band	EQ 7-Band	EQ 7-Band	EQ 7-Band	EQ 7-Band
+EQ3 1-Band	EQ3 1-Band	EQ3 1-Band	EQ3 1-Band	EQ3 1-Band	EQ3 1-Band
+EQ3 7-Band	EQ3 7-Band	EQ3 7-Band	EQ3 7-Band	EQ3 7-Band	EQ3 7-Band
+Eleven Lite	Eleven Lite	Eleven Lite	Eleven Lite	Eleven Lite	Eleven Lite
+HEAT	HEAT	HEAT	HEAT	HEAT	HEAT
+Lo-Fi	Lo-Fi	Lo-Fi	Lo-Fi	Lo-Fi	Lo-Fi
+LoFi	LoFi	LoFi	LoFi	LoFi	LoFi
+Maxim	Maxim	Maxim	Maxim	Maxim	Maxim
+Melodyne	Melodyne	Melodyne	Melodyne	Melodyne	Melodyne
+Mod Delay	Mod Delay	Mod Delay	Mod Delay	Mod Delay	Mod Delay
+Mod Delay III	Mod Delay III	Mod Delay III	Mod Delay III	Mod Delay III	Mod Delay III
+ModDly	ModDly	ModDly	ModDly	ModDly	ModDly
+QuickPunch	QuickPunch	QuickPunch	QuickPunch	QuickPunch	QuickPunch
+DestructivePunch	DestructivePunch	DestructivePunch	DestructivePunch	DestructivePunch	DestructivePunch
+TrackPunch	TrackPunch	TrackPunch	TrackPunch	TrackPunch	TrackPunch
+Recti-Fi	Recti-Fi	Recti-Fi	Recti-Fi	Recti-Fi	Recti-Fi
+SansAmp PSA-1	SansAmp PSA-1	SansAmp PSA-1	SansAmp PSA-1	SansAmp PSA-1	SansAmp PSA-1
+Sci-Fi	Sci-Fi	Sci-Fi	Sci-Fi	Sci-Fi	Sci-Fi
+Sibelius	Sibelius	Sibelius	Sibelius	Sibelius	Sibelius
+SoundFlow	SoundFlow	SoundFlow	SoundFlow	SoundFlow	SoundFlow
+Soundbase	Soundbase	Soundbase	Soundbase	Soundbase	Soundbase
+SubSynth	SubSynth	SubSynth	SubSynth	SubSynth	SubSynth
+TShift	TShift	TShift	TShift	TShift	TShift
+Vari-Fi	Vari-Fi	Vari-Fi	Vari-Fi	Vari-Fi	Vari-Fi
+VST3	VST3	VST3	VST3	VST3	VST3
+ dB	 dB	 dB	 dB	 dB	 dB
+ s	 s	 s	 s	 s	 s
+I/O	I/O	I/O	I/O	I/O	I/O
+I / O	I / O	I / O	I / O	I / O	I / O
+I A-E	I A-E	I A-E	I A-E	I A-E	I A-E
+I F-J	I F-J	I F-J	I F-J	I F-J	I F-J
+S A-E	S A-E	S A-E	S A-E	S A-E	S A-E
+S F-J	S F-J	S F-J	S F-J	S F-J	S F-J
+{:+.1} dB	{:+.1} dB	{:+.1} dB	{:+.1} dB	{:+.1} dB	{:+.1} dB
+{:.2} s	{:.2} s	{:.2} s	{:.2} s	{:.2} s	{:.2} s
+{r} Hz	{r} Hz	{r} Hz	{r} Hz	{r} Hz	{r} Hz
+{sample_rate} Hz	{sample_rate} Hz	{sample_rate} Hz	{sample_rate} Hz	{sample_rate} Hz	{sample_rate} Hz
+{sr} Hz{note}	{sr} Hz{note}	{sr} Hz{note}	{sr} Hz{note}	{sr} Hz{note}	{sr} Hz{note}
+{} Hz	{} Hz	{} Hz	{} Hz	{} Hz	{} Hz
+{} @ {} Hz	{} @ {} Hz	{} @ {} Hz	{} @ {} Hz	{} @ {} Hz	{} @ {} Hz
+ΔLOC	ΔLOC	ΔLOC	ΔLOC	ΔLOC	ΔLOC
+# Derived exact menu hierarchies and ellipsis variants from reviewed captions above.
++ Marker	+ Dấu đánh dấu	+ 마커	+ マーカー	+ 標記	+ 标记
++ Selection	+ Vùng chọn	+ 선택 영역	+ 選択範囲	+ 選取範圍	+ 选区
+<ALL>	<TẤT CẢ>	<모두>	<すべて>	<全部>	<全部>
+About	Giới thiệu	정보	このアプリについて	關於	关于
+About KIO Sound	Giới thiệu KIO Sound	KIO Sound 정보	KIO Sound について	關於 KIO Sound	关于 KIO Sound
+Add	Thêm	추가	追加	新增	添加
+Apply	Áp dụng	적용	適用	套用	应用
+AudioSuite > Delay > Mod Delay III	AudioSuite > Độ trễ > Mod Delay III	AudioSuite > 딜레이 > Mod Delay III	AudioSuite > ディレイ > Mod Delay III	AudioSuite > 延遲 > Mod Delay III	AudioSuite > 延迟 > Mod Delay III
+AudioSuite > Dynamics > BF-76	AudioSuite > Động học âm thanh > BF-76	AudioSuite > 다이내믹스 > BF-76	AudioSuite > ダイナミクス > BF-76	AudioSuite > 動態處理 > BF-76	AudioSuite > 动态处理 > BF-76
+AudioSuite > Dynamics > Channel Strip	AudioSuite > Động học âm thanh > Dải kênh	AudioSuite > 다이내믹스 > 채널 스트립	AudioSuite > ダイナミクス > チャンネルストリップ	AudioSuite > 動態處理 > 通道條	AudioSuite > 动态处理 > 通道条
+AudioSuite > Dynamics > Dyn3 Compressor/Limiter	AudioSuite > Động học âm thanh > Dyn3 Compressor/Limiter	AudioSuite > 다이내믹스 > Dyn3 Compressor/Limiter	AudioSuite > ダイナミクス > Dyn3 Compressor/Limiter	AudioSuite > 動態處理 > Dyn3 Compressor/Limiter	AudioSuite > 动态处理 > Dyn3 Compressor/Limiter
+AudioSuite > Dynamics > Dyn3 De-Esser	AudioSuite > Động học âm thanh > Dyn3 De-Esser	AudioSuite > 다이내믹스 > Dyn3 De-Esser	AudioSuite > ダイナミクス > Dyn3 De-Esser	AudioSuite > 動態處理 > Dyn3 De-Esser	AudioSuite > 动态处理 > Dyn3 De-Esser
+AudioSuite > Dynamics > Dyn3 Expander/Gate	AudioSuite > Động học âm thanh > Dyn3 Expander/Gate	AudioSuite > 다이내믹스 > Dyn3 Expander/Gate	AudioSuite > ダイナミクス > Dyn3 Expander/Gate	AudioSuite > 動態處理 > Dyn3 Expander/Gate	AudioSuite > 动态处理 > Dyn3 Expander/Gate
+AudioSuite > Dynamics > Maxim	AudioSuite > Động học âm thanh > Maxim	AudioSuite > 다이내믹스 > Maxim	AudioSuite > ダイナミクス > Maxim	AudioSuite > 動態處理 > Maxim	AudioSuite > 动态处理 > Maxim
+AudioSuite > EQ > Channel Strip	AudioSuite > EQ > Dải kênh	AudioSuite > EQ > 채널 스트립	AudioSuite > EQ > チャンネルストリップ	AudioSuite > EQ > 通道條	AudioSuite > EQ > 通道条
+AudioSuite > EQ > EQ3 1-Band	AudioSuite > EQ > EQ3 1-Band	AudioSuite > EQ > EQ3 1-Band	AudioSuite > EQ > EQ3 1-Band	AudioSuite > EQ > EQ3 1-Band	AudioSuite > EQ > EQ3 1-Band
+AudioSuite > EQ > EQ3 7-Band	AudioSuite > EQ > EQ3 7-Band	AudioSuite > EQ > EQ3 7-Band	AudioSuite > EQ > EQ3 7-Band	AudioSuite > EQ > EQ3 7-Band	AudioSuite > EQ > EQ3 7-Band
+AudioSuite > Harmonic > Eleven Lite	AudioSuite > Hài âm > Eleven Lite	AudioSuite > 하모닉 > Eleven Lite	AudioSuite > ハーモニック > Eleven Lite	AudioSuite > 諧波 > Eleven Lite	AudioSuite > 谐波 > Eleven Lite
+AudioSuite > Harmonic > Lo-Fi	AudioSuite > Hài âm > Lo-Fi	AudioSuite > 하모닉 > Lo-Fi	AudioSuite > ハーモニック > Lo-Fi	AudioSuite > 諧波 > Lo-Fi	AudioSuite > 谐波 > Lo-Fi
+AudioSuite > Harmonic > Recti-Fi	AudioSuite > Hài âm > Recti-Fi	AudioSuite > 하모닉 > Recti-Fi	AudioSuite > ハーモニック > Recti-Fi	AudioSuite > 諧波 > Recti-Fi	AudioSuite > 谐波 > Recti-Fi
+AudioSuite > Harmonic > SansAmp PSA-1	AudioSuite > Hài âm > SansAmp PSA-1	AudioSuite > 하모닉 > SansAmp PSA-1	AudioSuite > ハーモニック > SansAmp PSA-1	AudioSuite > 諧波 > SansAmp PSA-1	AudioSuite > 谐波 > SansAmp PSA-1
+AudioSuite > Modulation > Sci-Fi	AudioSuite > Điều biến > Sci-Fi	AudioSuite > 모듈레이션 > Sci-Fi	AudioSuite > モジュレーション > Sci-Fi	AudioSuite > 調變 > Sci-Fi	AudioSuite > 调制 > Sci-Fi
+AudioSuite > Other > DC Offset Removal	AudioSuite > Khác > Loại bỏ độ lệch DC	AudioSuite > 기타 > DC 오프셋 제거	AudioSuite > その他 > DC オフセットを除去	AudioSuite > 其他 > 移除直流偏移	AudioSuite > 其他 > 移除直流偏移
+AudioSuite > Other > Duplicate	AudioSuite > Khác > Nhân bản	AudioSuite > 기타 > 복제	AudioSuite > その他 > 複製	AudioSuite > 其他 > 複製	AudioSuite > 其他 > 复制
+AudioSuite > Other > Gain	AudioSuite > Khác > Độ khuếch đại	AudioSuite > 기타 > 게인	AudioSuite > その他 > ゲイン	AudioSuite > 其他 > 增益	AudioSuite > 其他 > 增益
+AudioSuite > Other > Invert	AudioSuite > Khác > Đảo cực	AudioSuite > 기타 > 극성 반전	AudioSuite > その他 > 極性を反転	AudioSuite > 其他 > 反轉極性	AudioSuite > 其他 > 反转极性
+AudioSuite > Other > Normalize	AudioSuite > Khác > Chuẩn hóa	AudioSuite > 기타 > 노멀라이즈	AudioSuite > その他 > ノーマライズ	AudioSuite > 其他 > 正規化	AudioSuite > 其他 > 标准化
+AudioSuite > Other > Reverse	AudioSuite > Khác > Đảo ngược	AudioSuite > 기타 > 역방향	AudioSuite > その他 > リバース	AudioSuite > 其他 > 反轉	AudioSuite > 其他 > 反转
+AudioSuite > Other > Signal Generator	AudioSuite > Khác > Bộ tạo tín hiệu	AudioSuite > 기타 > 신호 생성기	AudioSuite > その他 > 信号ジェネレーター	AudioSuite > 其他 > 訊號產生器	AudioSuite > 其他 > 信号发生器
+AudioSuite > Other > Time Compression Expansion	AudioSuite > Khác > Nén/giãn thời gian	AudioSuite > 기타 > 시간 압축/확장	AudioSuite > その他 > タイムコンプレッション／エクスパンション	AudioSuite > 其他 > 時間壓縮／擴展	AudioSuite > 其他 > 时间压缩／扩展
+AudioSuite > Pitch Shift > Pitch II	AudioSuite > Dịch cao độ > Dịch cao độ II	AudioSuite > 피치 시프트 > 피치 II	AudioSuite > ピッチシフト > ピッチ II	AudioSuite > 音高偏移 > 音高 II	AudioSuite > 音高偏移 > 音高 II
+AudioSuite > Pitch Shift > Pitch Shift Legacy	AudioSuite > Dịch cao độ > Dịch cao độ phiên bản cũ	AudioSuite > 피치 시프트 > 이전 피치 시프트	AudioSuite > ピッチシフト > 旧ピッチシフト	AudioSuite > 音高偏移 > 舊版音高偏移	AudioSuite > 音高偏移 > 旧版音高偏移
+AudioSuite > Pitch Shift > Time Shift	AudioSuite > Dịch cao độ > Dịch thời gian	AudioSuite > 피치 시프트 > 타임 시프트	AudioSuite > ピッチシフト > タイムシフト	AudioSuite > 音高偏移 > 時間位移	AudioSuite > 音高偏移 > 时间位移
+AudioSuite > Pitch Shift > Vari-Fi	AudioSuite > Dịch cao độ > Vari-Fi	AudioSuite > 피치 시프트 > Vari-Fi	AudioSuite > ピッチシフト > Vari-Fi	AudioSuite > 音高偏移 > Vari-Fi	AudioSuite > 音高偏移 > Vari-Fi
+AudioSuite > Reverb > D-Verb	AudioSuite > Âm vang > D-Verb	AudioSuite > 리버브 > D-Verb	AudioSuite > リバーブ > D-Verb	AudioSuite > 殘響 > D-Verb	AudioSuite > 混响 > D-Verb
+Automatic (system language)	Tự động (ngôn ngữ hệ thống)	자동 (시스템 언어)	自動（システム言語）	自動（系統語言）	自动（系统语言）
+Bars|Beats	Ô nhịp|Phách	마디|박자	小節|拍	小節|拍點	小节|拍
+Browse…	Duyệt…	찾아보기…	参照…	瀏覽…	浏览…
+Cancel	Hủy	취소	キャンセル	取消	取消
+Clear Recent	Xóa danh sách gần đây	최근 목록 지우기	最近使った項目をクリア	清除最近使用的項目	清除最近使用的项目
+Click	Bấm	클릭	クリック	按一下	单击
+Clip > New MIDI Clip	Đoạn âm thanh > Đoạn MIDI mới	클립 > 새 MIDI 클립	クリップ > 新規 MIDI クリップ	片段 > 新增 MIDI 片段	片段 > 新建 MIDI 片段
+Copy	Sao chép	복사	コピー	複製	复制
+Create	Tạo	만들기	作成	建立	创建
+Curve	Đường cong	곡선	カーブ	曲線	曲线
+Cut	Cắt	잘라내기	切り取り	剪下	剪切
+Delete	Xóa	삭제	削除	刪除	删除
+Delete Group	Xóa nhóm	그룹 삭제	グループを削除	刪除群組	删除组
+Display name	Tên hiển thị	표시 이름	表示名	顯示名稱	显示名称
+Dither	Hòa sắc	디더링	ディザ	混色	仿色
+Duplicate...	Nhân bản...	복제...	複製...	複製...	复制...
+Duration	Thời lượng	지속 시간	長さ	持續時間	持续时间
+End	Kết thúc	끝	終了	結束	结束
+Event > Beat Detective	Sự kiện > Bộ dò nhịp	이벤트 > 비트 감지	イベント > ビート検出	事件 > 節拍偵測	事件 > 节拍检测
+Event > MIDI Operations > MIDI Operations Window	Sự kiện > Thao tác MIDI > Cửa sổ thao tác MIDI	이벤트 > MIDI 작업 > MIDI 작업 창	イベント > MIDI 操作 > MIDI 操作ウィンドウ	事件 > MIDI 操作 > MIDI 操作視窗	事件 > MIDI 操作 > MIDI 操作窗口
+Event > MIDI Real-Time Properties	Sự kiện > Thuộc tính MIDI thời gian thực	이벤트 > MIDI 실시간 속성	イベント > MIDI リアルタイムプロパティ	事件 > MIDI 即時屬性	事件 > MIDI 实时属性
+Event > Tempo Operations > Tempo Operations Window	Sự kiện > Thao tác nhịp độ > Cửa sổ thao tác nhịp độ	이벤트 > 템포 작업 > 템포 작업 창	イベント > テンポ操作 > テンポ操作ウィンドウ	事件 > 速度操作 > 速度操作視窗	事件 > 速度操作 > 速度操作窗口
+Event > Time Operations > Time Operations Window	Sự kiện > Thao tác thời gian > Cửa sổ thao tác thời gian	이벤트 > 시간 작업 > 시간 작업 창	イベント > 時間操作 > 時間操作ウィンドウ	事件 > 時間操作 > 時間操作視窗	事件 > 时间操作 > 时间操作窗口
+Export	Xuất	내보내기	書き出し	匯出	导出
+File > Open	Tệp > Mở	파일 > 열기	ファイル > 開く	檔案 > 開啟	文件 > 打开
+GROUPS	NHÓM	그룹	グループ	群組	分组
+Grid	Lưới	그리드	グリッド	格線	网格
+Group...	Nhóm...	그룹...	グループ...	群組...	编组...
+Hide	Ẩn	숨기기	非表示	隱藏	隐藏
+Hz	Hz	Hz	Hz	Hz	Hz
+Import	Nhập	가져오기	読み込み	匯入	导入
+Input	Đầu vào	입력	入力	輸入	输入
+KIO Sound	KIO Sound	KIO Sound	KIO Sound	KIO Sound	KIO Sound
+Keyboard Shortcuts...	Phím tắt...	단축키...	キーボードショートカット...	鍵盤快速鍵...	键盘快捷键...
+Language	Ngôn ngữ	언어	言語	語言	语言
+Length	Chiều dài	길이	長さ	長度	长度
+MIDI	MIDI	MIDI	MIDI	MIDI	MIDI
+MIDI...	MIDI...	MIDI...	MIDI...	MIDI...	MIDI...
+Markers 2	Dấu mốc 2	마커 2	マーカー 2	標記 2	标记 2
+Markers 3	Dấu mốc 3	마커 3	マーカー 3	標記 3	标记 3
+Markers 4	Dấu mốc 4	마커 4	マーカー 4	標記 4	标记 4
+Markers 5	Dấu mốc 5	마커 5	マーカー 5	標記 5	标记 5
+Min:Secs	Phút:Giây	분:초	分:秒	分:秒	分:秒
+Minimal	Tối giản	최소	最小	最少	最少
+Name	Tên	이름	名前	名稱	名称
+Name:	Tên:	이름:	名前:	名稱：	名称：
+New Configuration...	Cấu hình mới...	새 구성...	新規構成...	新增配置...	新建配置...
+New Configuration…	Cấu hình mới…	새 구성…	新規構成…	新增配置…	新建配置…
+New...	Mới...	새로 만들기...	新規...	新增...	新建...
+Next	Tiếp theo	다음	次へ	下一步	下一步
+Open Recent	Mở gần đây	최근 항목 열기	最近使った項目を開く	開啟最近使用的項目	打开最近使用的项目
+Outlines	Đường bao	윤곽선	アウトライン	外框	轮廓
+Output	Đầu ra	출력	出力	輸出	输出
+Page	Trang	페이지	ページ	頁面	页面
+Paste	Dán	붙여넣기	貼り付け	貼上	粘贴
+Preferences...	Tùy chọn...	환경 설정...	環境設定...	偏好設定...	首选项...
+Previous	Trước	이전	前へ	上一步	上一步
+Quantize...	Lượng tử hóa...	퀀타이즈...	クオンタイズ...	量化...	量化...
+Real name	Tên thật	실명	本名	真實姓名	真实姓名
+Remove	Xóa bỏ	제거	削除	移除	移除
+Rename...	Đổi tên...	이름 바꾸기...	名前を変更...	重新命名...	重命名...
+Render	Kết xuất	렌더	描画	演算上色	渲染
+Repeat...	Lặp lại...	반복...	繰り返し...	重複...	重复...
+Replace	Thay thế	바꾸기	置換	取代	替换
+Reset	Đặt lại	재설정	リセット	重設	重置
+SHUFFLE	DỒN ĐOẠN	셔플	シャッフル	順移	顺移
+Save	Lưu	저장	保存	儲存	保存
+Score Setup...	Thiết lập bản nhạc...	악보 설정...	スコア設定...	樂譜設定...	乐谱设置...
+Search	Tìm kiếm	검색	検索	搜尋	搜索
+Select All	Chọn tất cả	모두 선택	すべて選択	全選	全选
+Selection	Vùng chọn	선택 영역	選択範囲	選取範圍	选区
+Send A	Đường gửi A	센드 A	センド A	傳送 A	发送 A
+Send B	Đường gửi B	센드 B	センド B	傳送 B	发送 B
+Send C	Đường gửi C	센드 C	センド C	傳送 C	发送 C
+Send D	Đường gửi D	센드 D	センド D	傳送 D	发送 D
+Send E	Đường gửi E	센드 E	センド E	傳送 E	发送 E
+Send F	Đường gửi F	센드 F	センド F	傳送 F	发送 F
+Send G	Đường gửi G	센드 G	センド G	傳送 G	发送 G
+Send H	Đường gửi H	센드 H	センド H	傳送 H	发送 H
+Send I	Đường gửi I	센드 I	センド I	傳送 I	发送 I
+Send J	Đường gửi J	센드 J	センド J	傳送 J	发送 J
+Session...	Phiên...	세션...	セッション...	工作階段...	会话...
+Setup > Appearance	Thiết lập > Giao diện	설정 > 모양	設定 > 外観	設定 > 外觀	设置 > 外观
+Setup > Hardware...	Thiết lập > Phần cứng...	설정 > 하드웨어...	設定 > ハードウェア...	設定 > 硬體...	设置 > 硬件...
+Setup > I/O...	Thiết lập > Vào/ra...	설정 > 입출력...	設定 > 入出力...	設定 > 輸入／輸出...	设置 > 输入／输出...
+Setup > Keyboard Shortcuts...	Thiết lập > Phím tắt...	설정 > 단축키...	設定 > キーボードショートカット...	設定 > 鍵盤快速鍵...	设置 > 键盘快捷键...
+Setup > Playback Engine...	Thiết lập > Bộ máy phát âm thanh...	설정 > 재생 엔진...	設定 > プレイバックエンジン...	設定 > 播放引擎...	设置 > 播放引擎...
+Setup > Session	Thiết lập > Phiên	설정 > 세션	設定 > セッション	設定 > 工作階段	设置 > 会话
+Show	Hiện	표시	表示	顯示	显示
+Sibelius...	Sibelius...	Sibelius...	Sibelius...	Sibelius...	Sibelius...
+Sort	Sắp xếp	정렬	並べ替え	排序	排序
+Speed	Tốc độ	속도	速度	速度	速度
+Start	Bắt đầu	시작	開始	開始	开始
+Sub	Phụ	보조	サブ	次計數器	次计数器
+Theme	Chủ đề	테마	テーマ	主題	主题
+Track > New...	Rãnh > Mới...	트랙 > 새로 만들기...	トラック > 新規...	軌道 > 新增...	轨道 > 新建...
+Transpose...	Chuyển giọng...	조옮김...	トランスポーズ...	移調...	移调...
+UNDO HISTORY	LỊCH SỬ HOÀN TÁC	실행 취소 기록	操作履歴	復原記錄	撤销历史
+Username	Tên người dùng	사용자 이름	ユーザー名	使用者名稱	用户名
+Version	Phiên bản	버전	バージョン	版本	版本
+Video...	Video...	비디오...	ビデオ...	影片...	视频...
+View > Narrow Mix	Xem > Bộ phối thu gọn	보기 > 좁은 믹스	表示 > ミックスを狭く表示	檢視 > 窄版混音	视图 > 窄版混音
+View > Other Displays > Clip List	Xem > Hiển thị khác > Danh sách đoạn	보기 > 기타 표시 > 클립 목록	表示 > その他の表示 > クリップリスト	檢視 > 其他顯示 > 片段清單	视图 > 其他显示 > 片段列表
+View > Other Displays > Lower Dock > Clip Effects	Xem > Hiển thị khác > Bảng ghim dưới > Hiệu ứng đoạn	보기 > 기타 표시 > 하단 도크 > 클립 효과	表示 > その他の表示 > 下部ドック > クリップエフェクト	檢視 > 其他顯示 > 下方停駐區 > 片段效果	视图 > 其他显示 > 底部停靠区 > 片段效果
+View > Other Displays > Track List	Xem > Hiển thị khác > Danh sách rãnh	보기 > 기타 표시 > 트랙 목록	表示 > その他の表示 > トラックリスト	檢視 > 其他顯示 > 軌道清單	视图 > 其他显示 > 轨道列表
+View > Other Displays > Universe	Xem > Hiển thị khác > Tổng quan phiên	보기 > 기타 표시 > 전체 개요	表示 > その他の表示 > ユニバース	檢視 > 其他顯示 > 全域概覽	视图 > 其他显示 > 全局概览
+Views	Chế độ xem	보기	表示	檢視	视图
+Window > Arrange > Cascade	Cửa sổ > Sắp xếp > Xếp chồng cửa sổ	창 > 정렬 > 계단식 배열	ウィンドウ > 配置 > 重ねて表示	視窗 > 排列 > 重疊排列	窗口 > 排列 > 层叠排列
+Window > Arrange > Tile	Cửa sổ > Sắp xếp > Xếp ô	창 > 정렬 > 바둑판식 배열	ウィンドウ > 配置 > 並べて表示	視窗 > 排列 > 並排	窗口 > 排列 > 平铺
+Window > Arrange > Tile Horizontal	Cửa sổ > Sắp xếp > Xếp theo chiều ngang	창 > 정렬 > 가로로 바둑판식 배열	ウィンドウ > 配置 > 左右に並べて表示	視窗 > 排列 > 水平並排	窗口 > 排列 > 水平平铺
+Window > Arrange > Tile Vertical	Cửa sổ > Sắp xếp > Xếp theo chiều dọc	창 > 정렬 > 세로로 바둑판식 배열	ウィンドウ > 配置 > 上下に並べて表示	視窗 > 排列 > 垂直並排	窗口 > 排列 > 垂直平铺
+Window > Automation	Cửa sổ > Tự động hóa	창 > 오토메이션	ウィンドウ > オートメーション	視窗 > 自動化	窗口 > 自动化
+Window > Big Counter	Cửa sổ > Bộ đếm lớn	창 > 큰 카운터	ウィンドウ > ビッグカウンター	視窗 > 大型計數器	窗口 > 大计数器
+Window > Clip Effects	Cửa sổ > Hiệu ứng đoạn	창 > 클립 효과	ウィンドウ > クリップエフェクト	視窗 > 片段效果	窗口 > 片段效果
+Window > Clip List	Cửa sổ > Danh sách đoạn	창 > 클립 목록	ウィンドウ > クリップリスト	視窗 > 片段清單	窗口 > 片段列表
+Window > Close Window	Cửa sổ > Đóng cửa sổ	창 > 창 닫기	ウィンドウ > ウィンドウを閉じる	視窗 > 關閉視窗	窗口 > 关闭窗口
+Window > Color Palette	Cửa sổ > Bảng màu	창 > 색상 팔레트	ウィンドウ > カラーパレット	視窗 > 調色盤	窗口 > 调色板
+Window > Configurations > Auto-Update Active Configuration	Cửa sổ > Cấu hình > Tự cập nhật cấu hình đang dùng	창 > 구성 > 활성 구성 자동 업데이트	ウィンドウ > 構成 > 有効な構成を自動更新	視窗 > 配置 > 自動更新目前配置	窗口 > 配置 > 自动更新当前配置
+Window > Configurations > New Configuration...	Cửa sổ > Cấu hình > Cấu hình mới...	창 > 구성 > 새 구성...	ウィンドウ > 構成 > 新規構成...	視窗 > 配置 > 新增配置...	窗口 > 配置 > 新建配置...
+Window > Configurations > Update Active Configuration	Cửa sổ > Cấu hình > Cập nhật cấu hình đang dùng	창 > 구성 > 활성 구성 업데이트	ウィンドウ > 構成 > 有効な構成を更新	視窗 > 配置 > 更新目前配置	窗口 > 配置 > 更新当前配置
+Window > Configurations > Window Configuration List	Cửa sổ > Cấu hình > Danh sách cấu hình cửa sổ	창 > 구성 > 창 구성 목록	ウィンドウ > 構成 > ウィンドウ構成リスト	視窗 > 配置 > 視窗配置清單	窗口 > 配置 > 窗口配置列表
+Window > Disk Usage	Cửa sổ > Mức sử dụng ổ đĩa	창 > 디스크 사용량	ウィンドウ > ディスク使用状況	視窗 > 磁碟使用量	窗口 > 磁盘使用量
+Window > Edit	Cửa sổ > Chỉnh sửa	창 > 편집	ウィンドウ > 編集	視窗 > 編輯	窗口 > 编辑
+Window > Hide All Floating Windows	Cửa sổ > Ẩn mọi cửa sổ nổi	창 > 모든 플로팅 창 숨기기	ウィンドウ > すべてのフローティングウィンドウを非表示	視窗 > 隱藏所有浮動視窗	窗口 > 隐藏所有浮动窗口
+Window > MIDI Editor	Cửa sổ > Trình biên tập MIDI	창 > MIDI 편집기	ウィンドウ > MIDI エディター	視窗 > MIDI 編輯器	窗口 > MIDI 编辑器
+Window > MIDI Editors > Bring to Front	Cửa sổ > Các trình biên tập MIDI > Đưa lên trước	창 > MIDI 편집기 > 앞으로 가져오기	ウィンドウ > MIDI エディター > 前面へ移動	視窗 > MIDI 編輯器 > 移至前方	窗口 > MIDI 编辑器 > 移到前方
+Window > MIDI Editors > Send to Back	Cửa sổ > Các trình biên tập MIDI > Đưa ra sau	창 > MIDI 편집기 > 뒤로 보내기	ウィンドウ > MIDI エディター > 背面へ移動	視窗 > MIDI 編輯器 > 移至後方	窗口 > MIDI 编辑器 > 移到后方
+Window > MIDI Event List	Cửa sổ > Danh sách sự kiện MIDI	창 > MIDI 이벤트 목록	ウィンドウ > MIDI イベントリスト	視窗 > MIDI 事件清單	窗口 > MIDI 事件列表
+Window > MIDI Keyboard	Cửa sổ > Bàn phím MIDI	창 > MIDI 키보드	ウィンドウ > MIDI キーボード	視窗 > MIDI 鍵盤	窗口 > MIDI 键盘
+Window > Memory Locations	Cửa sổ > Vị trí đã ghi nhớ	창 > 메모리 위치	ウィンドウ > メモリーロケーション	視窗 > 記憶位置	窗口 > 记忆位置
+Window > Metadata Inspector	Cửa sổ > Trình kiểm tra siêu dữ liệu	창 > 메타데이터 검사기	ウィンドウ > メタデータインスペクター	視窗 > 中繼資料檢查器	窗口 > 元数据检查器
+Window > Mix	Cửa sổ > Bản phối	창 > 믹스	ウィンドウ > ミックス	視窗 > 混音	窗口 > 混音
+Window > New Workspace > Default	Cửa sổ > Không gian làm việc mới > Mặc định	창 > 새 작업 영역 > 기본값	ウィンドウ > 新規ワークスペース > 既定	視窗 > 新增工作區 > 預設	窗口 > 新建工作区 > 默认
+Window > New Workspace > Soundbase	Cửa sổ > Không gian làm việc mới > Soundbase	창 > 새 작업 영역 > Soundbase	ウィンドウ > 新規ワークスペース > Soundbase	視窗 > 新增工作區 > Soundbase	窗口 > 新建工作区 > Soundbase
+Window > New Workspace > Track Presets	Cửa sổ > Không gian làm việc mới > Thiết lập rãnh có sẵn	창 > 새 작업 영역 > 트랙 프리셋	ウィンドウ > 新規ワークスペース > トラックプリセット	視窗 > 新增工作區 > 軌道預設集	窗口 > 新建工作区 > 轨道预设
+Window > Pro Tools Search	Cửa sổ > Tìm kiếm Pro Tools	창 > Pro Tools 검색	ウィンドウ > Pro Tools 検索	視窗 > Pro Tools 搜尋	窗口 > Pro Tools 搜索
+Window > Renderer	Cửa sổ > Bộ kết xuất	창 > 렌더러	ウィンドウ > レンダラー	視窗 > 算繪器	窗口 > 渲染器
+Window > Reset Panel Layout	Cửa sổ > Đặt lại bố cục bảng	창 > 패널 배치 초기화	ウィンドウ > パネル配置をリセット	視窗 > 重設面板配置	窗口 > 重置面板布局
+Window > Score Editor	Cửa sổ > Trình biên tập bản nhạc	창 > 악보 편집기	ウィンドウ > スコアエディター	視窗 > 樂譜編輯器	窗口 > 乐谱编辑器
+Window > System Usage	Cửa sổ > Mức sử dụng hệ thống	창 > 시스템 사용량	ウィンドウ > システム使用状況	視窗 > 系統使用量	窗口 > 系统使用量
+Window > Task Manager	Cửa sổ > Trình quản lý tác vụ	창 > 작업 관리자	ウィンドウ > タスクマネージャー	視窗 > 工作管理員	窗口 > 任务管理器
+Window > Transport	Cửa sổ > Điều khiển phát và thu	창 > 트랜스포트	ウィンドウ > トランスポート	視窗 > 播放與錄音控制	窗口 > 播放与录音控制
+Window > UI Customization	Cửa sổ > Tùy chỉnh giao diện	창 > UI 사용자 지정	ウィンドウ > UI のカスタマイズ	視窗 > 自訂介面	窗口 > 自定义界面
+Window > Undo History	Cửa sổ > Lịch sử hoàn tác	창 > 실행 취소 기록	ウィンドウ > 取り消し履歴	視窗 > 復原記錄	窗口 > 撤销历史
+Window > Video	Cửa sổ > Video	창 > 비디오	ウィンドウ > ビデオ	視窗 > 影片	窗口 > 视频
+Window > Video Universe	Cửa sổ > Tổng quan video	창 > 비디오 전체 개요	ウィンドウ > ビデオユニバース	視窗 > 影片全域概覽	窗口 > 视频全局概览
+Window > Workspaces > Bring to Front	Cửa sổ > Không gian làm việc > Đưa lên trước	창 > 작업 영역 > 앞으로 가져오기	ウィンドウ > ワークスペース > 前面へ移動	視窗 > 工作區 > 移至前方	窗口 > 工作区 > 移到前方
+Window > Workspaces > Close All Workspaces	Cửa sổ > Không gian làm việc > Đóng mọi không gian làm việc	창 > 작업 영역 > 모든 작업 영역 닫기	ウィンドウ > ワークスペース > すべてのワークスペースを閉じる	視窗 > 工作區 > 關閉所有工作區	窗口 > 工作区 > 关闭所有工作区
+Workspace	Không gian làm việc	작업 영역	ワークスペース	工作區	工作区
+new	mới	새 항목	新規	新增	新建
+no audio engine	chưa có bộ máy âm thanh	오디오 엔진 없음	オーディオエンジンなし	沒有音訊引擎	没有音频引擎
+LF Freq	Tần số dải thấp	저역 주파수	低域周波数	低頻頻率	低频频率
+LF Gain	Khuếch đại dải thấp	저역 게인	低域ゲイン	低頻增益	低频增益
+LF Q	Hệ số Q dải thấp	저역 Q	低域 Q	低頻 Q	低频 Q
+LMF Freq	Tần số dải trung trầm	중저역 주파수	中低域周波数	中低頻頻率	中低频频率
+LMF Gain	Khuếch đại dải trung trầm	중저역 게인	中低域ゲイン	中低頻增益	中低频增益
+LMF Q	Hệ số Q dải trung trầm	중저역 Q	中低域 Q	中低頻 Q	中低频 Q
+MF Freq	Tần số dải trung	중역 주파수	中域周波数	中頻頻率	中频频率
+MF Gain	Khuếch đại dải trung	중역 게인	中域ゲイン	中頻增益	中频增益
+MF Q	Hệ số Q dải trung	중역 Q	中域 Q	中頻 Q	中频 Q
+HMF Freq	Tần số dải trung cao	중고역 주파수	中高域周波数	中高頻頻率	中高频频率
+HMF Gain	Khuếch đại dải trung cao	중고역 게인	中高域ゲイン	中高頻增益	中高频增益
+HMF Q	Hệ số Q dải trung cao	중고역 Q	中高域 Q	中高頻 Q	中高频 Q
+HF Freq	Tần số dải cao	고역 주파수	高域周波数	高頻頻率	高频频率
+HF Gain	Khuếch đại dải cao	고역 게인	高域ゲイン	高頻增益	高频增益
+HF Q	Hệ số Q dải cao	고역 Q	高域 Q	高頻 Q	高频 Q
+HPF	Lọc thông cao	하이패스 필터	ハイパスフィルター	高通濾波器	高通滤波器
+LPF	Lọc thông thấp	로우패스 필터	ローパスフィルター	低通濾波器	低通滤波器
+HPF Freq	Tần số lọc thông cao	하이패스 주파수	ハイパス周波数	高通頻率	高通频率
+LPF Freq	Tần số lọc thông thấp	로우패스 주파수	ローパス周波数	低通頻率	低通频率
+HPF Slope	Độ dốc lọc thông cao	하이패스 기울기	ハイパスの傾き	高通斜率	高通斜率
+LPF Slope	Độ dốc lọc thông thấp	로우패스 기울기	ローパスの傾き	低通斜率	低通斜率
+SC HPF	Lọc thông cao chuỗi bên	사이드체인 하이패스 필터	サイドチェーンハイパス	側鏈高通濾波器	侧链高通滤波器
+SC HPF Freq	Tần số lọc thông cao chuỗi bên	사이드체인 하이패스 주파수	サイドチェーンハイパス周波数	側鏈高通頻率	侧链高通频率
+C	C	C	C	C	C
+Cs	Cs	Cs	Cs	Cs	Cs
+L	L	L	L	L	L
+LFE	LFE	LFE	LFE	LFE	LFE
+Lc	Lc	Lc	Lc	Lc	Lc
+Lrs	Lrs	Lrs	Lrs	Lrs	Lrs
+Ls	Ls	Ls	Ls	Ls	Ls
+Lss	Lss	Lss	Lss	Lss	Lss
+Ltf	Ltf	Ltf	Ltf	Ltf	Ltf
+Ltm	Ltm	Ltm	Ltm	Ltm	Ltm
+Ltr	Ltr	Ltr	Ltr	Ltr	Ltr
+Lw	Lw	Lw	Lw	Lw	Lw
+Q	Q	Q	Q	Q	Q
+R	R	R	R	R	R
+Rc	Rc	Rc	Rc	Rc	Rc
+Rrs	Rrs	Rrs	Rrs	Rrs	Rrs
+Rs	Rs	Rs	Rs	Rs	Rs
+Rss	Rss	Rss	Rss	Rss	Rss
+Rtf	Rtf	Rtf	Rtf	Rtf	Rtf
+Rtm	Rtm	Rtm	Rtm	Rtm	Rtm
+Rtr	Rtr	Rtr	Rtr	Rtr	Rtr
+Rw	Rw	Rw	Rw	Rw	Rw
+s	s	s	s	s	s
+6 dB/oct	6 dB/oct	6 dB/oct	6 dB/oct	6 dB/oct	6 dB/oct
+12 dB/oct	12 dB/oct	12 dB/oct	12 dB/oct	12 dB/oct	12 dB/oct
+18 dB/oct	18 dB/oct	18 dB/oct	18 dB/oct	18 dB/oct	18 dB/oct
+24 dB/oct	24 dB/oct	24 dB/oct	24 dB/oct	24 dB/oct	24 dB/oct
