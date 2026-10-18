@@ -38,7 +38,13 @@ def seed(root, app):
     donors = defaultdict(set)
     for name in (*reuse.APPS, 'launcher'):
         source = root / ('.work/launcher/source' if name == 'launcher' else '.work/full-native/' + name + '/source')
+        scoped_path = DATA / (name + '-interface.tsv')
+        scoped_keys = set(authored_rows(scoped_path)) if name != app and scoped_path.is_file() else set()
         for row in reuse.read_app(name, source)['rows']:
+            # A presentation "Bounce" is an animation; an audio "Bounce" exports
+            # a mix. App-specific editorial decisions are not generic donors.
+            if row['source'] in scoped_keys:
+                continue
             if row['language'] == 'en' or row['context'] or row['kind'] != 'plain' or reuse.invalid_reason(row, allowed):
                 continue
             donors[row['source'], row['language']].add(row['translation'])
@@ -49,6 +55,13 @@ def seed(root, app):
     for key, values in authored_rows(DATA / 'editor-interface.tsv').items():
         for code, value in values.items():
             pool[key, code] = value
+    scoped = DATA / (app + '-interface.tsv')
+    scoped_rows = {}
+    if scoped.is_file():
+        scoped_rows = authored_rows(scoped)
+        for key, values in scoped_rows.items():
+            for code, value in values.items():
+                pool[key, code] = value
     keys = json.loads((DATA / (app + '-source-keys.json')).read_text(encoding='utf-8'))['keys']
     folder = root / '.work/full-native' / app / 'source/crates/ui-egui/src/i18n'
     folder.mkdir(exist_ok=True)
@@ -67,7 +80,9 @@ def seed(root, app):
         lines = ['# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.']
         missing = []
         for key in keys:
-            value = key if code == 'en' or ('', key) in allowed else existing.get(key) or pool.get((key, code))
+            # Scoped editorial rows were reviewed for this application. They may
+            # correct a generic donor in these newly introduced candidate catalogs.
+            value = key if code == 'en' or ('', key) in allowed else scoped_rows.get(key, {}).get(code) or existing.get(key) or pool.get((key, code))
             if value:
                 lines.append('\t'.join(map(escape, ('@msg' if '{' in key else '', key, value))))
             else:

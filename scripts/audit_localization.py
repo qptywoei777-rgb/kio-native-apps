@@ -25,6 +25,13 @@ LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn|msg)\s*
 OFFICIAL_NAMES = {'launcher': {('', value) for value in ('Launcher', 'KIO App Suite', 'Discord', 'GitHub', 'KIO Launcher {version}', 'KIO Launcher', 'ArtCraft', '{name} {version}')}}
 
 
+def reviewed_exceptions(app, language):
+    path = Path(__file__).resolve().parents[1] / 'patches/localization-shared/reviewed-interface-exceptions.json'
+    entries = json.loads(path.read_text(encoding='utf-8'))['entries'] if path.is_file() else []
+    return {(row.get('context', ''), row['source']) for row in entries
+            if row['app'] == app and language in row['languages'] and row.get('reason')}
+
+
 def canonical_language(code):
     code = code.lower().replace('_', '-')
     return ALIASES.get(code, code)
@@ -171,6 +178,7 @@ def audit_app(app, source):
     keys = set().union(*[set(c) for c in catalogs.values()], literal_keys)
     rows = {}
     for lang in LANGUAGES:
+        exceptions = OFFICIAL_NAMES.get(app, set()) | reviewed_exceptions(app, lang)
         data = {key: key[1] for key in keys} if lang == 'en' else catalogs.get(lang, {})
         missing = sorted(keys - data.keys())
         empty, mismatch, unchanged = [], [], []
@@ -183,7 +191,7 @@ def audit_app(app, source):
                 expected = placeholders(english.split('|')[0] if context == '@plural' else english)
                 if any(placeholders(form) != expected for form in (value.split('|') if context == '@plural' else [value])):
                     mismatch.append(list(key))
-            if lang != 'en' and value == english and key not in OFFICIAL_NAMES.get(app, set()) and re.search('[A-Za-z]{3}', english):
+            if lang != 'en' and value == english and key not in exceptions and re.search('[A-Za-z]{3}', english):
                 unchanged.append(list(key))  # review queue, including legitimate official names
         rows[lang] = {'keys': len(data), 'missing': len(missing), 'empty': len(empty), 'placeholderErrors': len(mismatch), 'sameAsEnglishReview': len(unchanged), 'missingKeys': [list(k) for k in missing], 'emptyKeys': empty, 'placeholderKeys': mismatch, 'unchangedKeys': unchanged}
     complete = bool(keys) and not direct and not parse_errors and all(not (r['missing'] or r['empty'] or r['placeholderErrors'] or r['sameAsEnglishReview']) for r in rows.values())

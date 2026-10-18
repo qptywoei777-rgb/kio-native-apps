@@ -5,8 +5,8 @@
   "basePreparedTreeSha256": "f75f76714c6bfecd468cd4cdd8a03d2a693dcef438762bd8fa987839336d001c",
   "patch": {
     "path": "patches/localization-candidates/deck.patch",
-    "sha256": "b4cb57f17c6aac2f0436d3eb4c4d19f0123b93353789426d6a2827e7f8b73669",
-    "bytes": 257825
+    "sha256": "5a490268cce23a264baed6474095e39f6eaabf2fbad73581d5848067f1ecc07c",
+    "bytes": 429181
   },
   "files": [
     {
@@ -38,8 +38,8 @@
         "bytes": 54821
       },
       "after": {
-        "sha256": "3004c64c5cf9fc6b580aec37af4a662e3e7461944069f5fffcfdd680064fea8a",
-        "bytes": 55990
+        "sha256": "f2764bf547be14f690b4cea17c3e70a5f58843a064c67942ee311b7d0993b2d0",
+        "bytes": 56099
       }
     },
     {
@@ -49,8 +49,19 @@
         "bytes": 32356
       },
       "after": {
-        "sha256": "9ed357c63e1981acbc463bbb98b68d626a8daa1eaf873a347cffa80bf23a4532",
-        "bytes": 32516
+        "sha256": "b6939ee05fb760e950aad5a22daca9c7d8f63c90c21ad0d71093f952373195a9",
+        "bytes": 32596
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/control.rs",
+      "before": {
+        "sha256": "4e65601fbdbcfb1f8ec2e42a3578fdd6930093d4ffaefc06f40e5d82c7ab2158",
+        "bytes": 17558
+      },
+      "after": {
+        "sha256": "aa7a61b95073fc684570a17f40ac0949f09d0b65b0907fa58f3a2af52ebb5025",
+        "bytes": 17857
       }
     },
     {
@@ -60,8 +71,8 @@
         "bytes": 13814
       },
       "after": {
-        "sha256": "188e10fbe7612966451df88e45d37b5da9b427a00d2dd8a45125888d7ac5f447",
-        "bytes": 14006
+        "sha256": "fcbfd8c23ea052d92d043774edd297c42c4fb4fd7438f4965848dbc2559cfd09",
+        "bytes": 14025
       }
     },
     {
@@ -71,8 +82,8 @@
         "bytes": 39652
       },
       "after": {
-        "sha256": "08e1efe46efe5c101501ca5ff2b527a59be5e4557745a71bbed24e0773da18e5",
-        "bytes": 40951
+        "sha256": "ea5cfb92090323d6438813f5b08fc568262331b811543d5b48b6928520062a11",
+        "bytes": 40989
       }
     },
     {
@@ -90,24 +101,24 @@
       "path": "crates/ui-egui/src/i18n/en.tsv",
       "before": null,
       "after": {
-        "sha256": "431171ad176b13ade8b9bd500e028c2997e2904db27f75b77b09e225bfe47343",
-        "bytes": 32647
+        "sha256": "8e67fd57f074b5eb82a58ba79aadede842feacf6859c7fa06bdb76c73aec85e8",
+        "bytes": 33606
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/ja.tsv",
       "before": null,
       "after": {
-        "sha256": "af4ceb3a7ac894e9cbfe49011b61dc38af339717f8d6298e9eda7662395d1613",
-        "bytes": 9928
+        "sha256": "58a805a3d98d324ea3871bda11ffc61a8216a7ef4044e48a1917164da2805efe",
+        "bytes": 42451
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/ko.tsv",
       "before": null,
       "after": {
-        "sha256": "d7f090e3d904ae47ac05041dcc132b8531368f49242fe80c5fcb6dd79230fa64",
-        "bytes": 7501
+        "sha256": "ce297153a05829b89713aa6b38d65295626b632036c2ddb68d2b98f238ad6f5d",
+        "bytes": 38772
       }
     },
     {
@@ -122,32 +133,32 @@
       "path": "crates/ui-egui/src/i18n/tests.rs",
       "before": null,
       "after": {
-        "sha256": "7096563342c7f1b3c8a54881580806788a13b94f354d1c397c9670cccff58696",
-        "bytes": 2715
+        "sha256": "fd2d48bca93b9f35d6a01997535d1ee1ec4a9abfb42c5ec585f009ad382a506f",
+        "bytes": 3970
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/vi.tsv",
       "before": null,
       "after": {
-        "sha256": "8aa26d24f34a735b97a4187ca4054992e2191e54cb09e96c5675e61c46b235ec",
-        "bytes": 6971
+        "sha256": "208cda06bd06ff05a8e9fc2cd461903959c532ab058e0f74a79cead235f418df",
+        "bytes": 41014
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/zh-CN.tsv",
       "before": null,
       "after": {
-        "sha256": "03ebe91a163e125444c79e7159a25f625e09274f76a5fc108aae76f7620bb21d",
-        "bytes": 8590
+        "sha256": "9bb94da5fb206d16ef78c3c9c28fd30a8cd7649c6ab709e75d5d7bdb4a62cc64",
+        "bytes": 34290
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/zh-TW.tsv",
       "before": null,
       "after": {
-        "sha256": "0e3a5f8f03c35d42dc9c1bde829969ac5e95ef93855f785f7b1e4dd106181149",
-        "bytes": 8615
+        "sha256": "23f30bfb3f7fb8e977877a2dfee8f4bed773392dc75cf58c65f1cf47c592f465",
+        "bytes": 34446
       }
     },
     {
@@ -220,8 +231,8 @@
         "bytes": 109359
       },
       "after": {
-        "sha256": "fac2fb559595c34637b8de450fc34cb68cce216378225aec848f41ae7f20f60b",
-        "bytes": 111653
+        "sha256": "e3b2dacad3928b9938da107eb5cb4ea667023e1010ac4c8d63bdfeaba68322a3",
+        "bytes": 111996
       }
     },
     {
@@ -231,8 +242,8 @@
         "bytes": 17927
       },
       "after": {
-        "sha256": "c77e9684f6619eb59d669f78de0fe39d8d0b9cdd47f0df1cad7ff46f6099a3eb",
-        "bytes": 18007
+        "sha256": "2885da0c7b75f2e5aff2408eba72b1e886a274baaccec9ce0bd2cafe4717d324",
+        "bytes": 18087
       }
     },
     {
@@ -264,8 +275,8 @@
         "bytes": 8112
       },
       "after": {
-        "sha256": "64485a88adaae40b2b32bb68ef35fb9d536c348cf9b0375ab369c1584428ffcf",
-        "bytes": 8275
+        "sha256": "6157ac09d418f0aab77a131660b6097d0a45f054f7a44b69472db0b106e877d5",
+        "bytes": 9211
       }
     },
     {
@@ -275,8 +286,8 @@
         "bytes": 13660
       },
       "after": {
-        "sha256": "0b02818920b6f3367084aa97db34f449e97ef107658be7df79a8ec33ecba90a9",
-        "bytes": 13868
+        "sha256": "c9ea669b72cec63613b878f8165ce6c8a2648491c572da16cdf75531c8c02bd7",
+        "bytes": 13919
       }
     },
     {
@@ -286,8 +297,8 @@
         "bytes": 3842
       },
       "after": {
-        "sha256": "0c0a378d6d833244cc6b93301d679e926fe706071c993247d84ac2dd518a2e98",
-        "bytes": 3874
+        "sha256": "f7700050fcd9b9218cbab2799ddd0835c283b7ab93792ac9c1831ef6e8f2e82f",
+        "bytes": 4150
       }
     },
     {
@@ -297,8 +308,8 @@
         "bytes": 21160
       },
       "after": {
-        "sha256": "4bde3b87634e55ac8b15a2d97de5aa70a07a03090c12ba6526a900788a3c6dfc",
-        "bytes": 21569
+        "sha256": "64e431e0a1d2200850579f94b1207fa57a0cb5149c114ba1a176c080eeba9986",
+        "bytes": 21601
       }
     }
   ],

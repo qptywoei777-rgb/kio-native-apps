@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "policy": "Exact app/language/context/source exceptions reviewed against actual code. Never a blanket allowance for English interface text.",
+  "entries": [
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Backspace","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Enter","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Escape","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Return","reason":"Physical key identifier; preserve shortcut notation."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Space","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"Tab","reason":"Physical key identifier, crates/ui-egui/src/lib.rs key-name mapping."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"RRGGBB","reason":"Hexadecimal RGB input notation in widgets.rs; letters describe the required data format."},
+    {"app":"deck","languages":["vi","ko","ja","zh-TW","zh-CN"],"context":"","source":"MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors","reason":"Preserve upstream SPDX license expression and copyright attribution in About dialog."},
+    {"app":"deck","languages":["vi"],"context":"","source":"Video","reason":"Standard Vietnamese loanword for video; this exception does not apply to Japanese, Korean or Chinese."}
+  ]
+}

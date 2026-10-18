@@ -1,0 +1,898 @@
+# Presentation-specific terminology; English, Vietnamese, Korean, Japanese, Traditional Chinese, Simplified Chinese.
+  Fixed date (empty = update automatically):	  Ngày cố định (để trống để tự động cập nhật):	  고정 날짜 (비워 두면 자동 업데이트):	  固定の日付（空欄で自動更新）:	  固定日期（留空則自動更新）：	  固定日期（留空则自动更新）：
+  Footer text:	  Nội dung chân trang:	  바닥글 텍스트:	  フッターの文字列:	  頁尾文字：	  页脚文字：
+  Present  	  Trình chiếu  	  발표 시작  	  発表する  	  開始放映  	  开始放映  
+ — Edited	 — Đã chỉnh sửa	 — 편집됨	 — 編集済み	 — 已編輯	 — 已编辑
+A3 Paper (297x420 mm)	Giấy A3 (297x420 mm)	A3 용지 (297x420 mm)	A3 用紙 (297x420 mm)	A3 紙張 (297x420 mm)	A3 纸张 (297x420 mm)
+A4 Paper (210x297 mm)	Giấy A4 (210x297 mm)	A4 용지 (210x297 mm)	A4 用紙 (210x297 mm)	A4 紙張 (210x297 mm)	A4 纸张 (210x297 mm)
+Accent 1	Màu nhấn 1	강조색 1	アクセント 1	輔色 1	着色 1
+Accent 2	Màu nhấn 2	강조색 2	アクセント 2	輔色 2	着色 2
+Accent 3	Màu nhấn 3	강조색 3	アクセント 3	輔色 3	着色 3
+Accent 4	Màu nhấn 4	강조색 4	アクセント 4	輔色 4	着色 4
+Accent 5	Màu nhấn 5	강조색 5	アクセント 5	輔色 5	着色 5
+Accent 6	Màu nhấn 6	강조색 6	アクセント 6	輔色 6	着色 6
+Action Button: {k}	Nút hành động: {k}	실행 단추: {k}	動作設定ボタン: {k}	動作按鈕：{k}	动作按钮：{k}
+Airplane	Máy bay	비행기	飛行機	飛機	飞机
+Align Center	Căn giữa	가운데 맞춤	中央揃え	置中對齊	居中对齐
+Align Left	Căn trái	왼쪽 맞춤	左揃え	靠左對齊	左对齐
+Align Right	Căn phải	오른쪽 맞춤	右揃え	靠右對齊	右对齐
+Appearance	Giao diện	모양	外観	外觀	外观
+Apply\nTo All	Áp dụng\ncho tất cả	모두\n적용	すべてに\n適用	全部\n套用	全部\n应用
+Arcs	Cung tròn	원호	円弧	弧線	弧线
+Arrow	Mũi tên	화살표	矢印	箭號	箭头
+B4 (ISO) Paper (250x353 mm)	Giấy B4 (ISO) (250x353 mm)	B4 (ISO) 용지 (250x353 mm)	B4 (ISO) 用紙 (250x353 mm)	B4 (ISO) 紙張 (250x353 mm)	B4 (ISO) 纸张 (250x353 mm)
+B5 (ISO) Paper (176x250 mm)	Giấy B5 (ISO) (176x250 mm)	B5 (ISO) 용지 (176x250 mm)	B5 (ISO) 用紙 (176x250 mm)	B5 (ISO) 紙張 (176x250 mm)	B5 (ISO) 纸张 (176x250 mm)
+Back (Esc)	Quay lại (Esc)	뒤로 (Esc)	戻る (Esc)	返回 (Esc)	返回 (Esc)
+Background\nStyles	Kiểu\nnền	배경\n스타일	背景の\nスタイル	背景\n樣式	背景\n样式
+Banner	Biểu ngữ	배너	バナー	橫幅	横幅
+Basic Cycle	Chu trình cơ bản	기본 주기형	基本循環	基本循環圖	基本循环图
+Basic List	Danh sách cơ bản	기본 목록형	基本リスト	基本清單	基本列表
+Basic Process	Quy trình cơ bản	기본 프로세스형	基本プロセス	基本程序圖	基本流程图
+Before text (in):	Trước văn bản (inch):	텍스트 앞 (인치):	文字列の前（インチ）:	文字之前（英吋）：	文本之前（英寸）：
+Blank	Trống	빈 화면	白紙	空白	空白
+Blinds	Mành sáo	블라인드	ブラインド	百葉窗	百叶窗
+Blue	Xanh dương	파랑	青	藍色	蓝色
+Blue Pen	Bút xanh dương	파랑 펜	青ペン	藍色畫筆	蓝色画笔
+Bold Flash	Nhấp nháy đậm	굵게 깜박이기	太字でフラッシュ	粗體閃爍	加粗闪烁
+Bottom	Dưới cùng	아래쪽	下	底端	底端
+Bounce	Nảy	바운드	バウンド	彈跳	弹跳
+Box	Hộp	상자	ボックス	方塊	方框
+Box and Whisker	Hộp và râu	상자 수염	箱ひげ図	盒鬚圖	箱形图
+Brightness {:+}%	Độ sáng {:+}%	밝기 {:+}%	明るさ {:+}%	亮度 {:+}%	亮度 {:+}%
+Bring\nForward	Đưa\nra trước	앞으로\n가져오기	前面へ\n移動	上移\n一層	上移\n一层
+Browsed at a kiosk (full screen)	Duyệt tại ki-ốt (toàn màn hình)	대화형 자동 진행 (전체 화면)	自動プレゼンテーション（フルスクリーン）	在資訊站瀏覽（全螢幕）	在展台浏览（全屏幕）
+Browsed by an individual (window)	Duyệt cá nhân (cửa sổ)	웹 형식으로 진행 (창)	出席者として参照する（ウィンドウ表示）	由個人瀏覽（視窗）	观众自行浏览（窗口）
+Bubble	Bong bóng	거품형	バブル	泡泡圖	气泡图
+Bullets	Dấu đầu dòng	글머리 기호	箇条書き	項目符號	项目符号
+Burst	Bùng nổ	폭발	破裂	爆發	爆发
+By Paragraph	Theo đoạn văn	단락별로	段落別	依段落	按段落
+Cameo	Khung hình camera	카메오	カメオ	攝影機畫面	摄像头画面
+Camera capture is not available yet	Chưa hỗ trợ ghi hình từ camera	카메라 캡처는 아직 지원되지 않습니다	カメラのキャプチャはまだ利用できません	目前尚不支援攝影機擷取	目前尚不支持摄像头捕获
+Capitalize Each Word	Viết hoa chữ đầu mỗi từ	각 단어의 첫 글자를 대문자로	各単語の先頭文字を大文字にする	每個字的第一個字母大寫	每个单词首字母大写
+Categories	Danh mục	범주	分類	類別	类别
+Center	Giữa	가운데	中央	置中	居中
+Centered	Căn giữa	가운데 맞춤	中央揃え	置中	居中
+Change\nChart Type	Đổi loại\nbiểu đồ	차트 종류\n변경	グラフの種類を\n変更	變更\n圖表類型	更改\n图表类型
+Change File Type	Đổi loại tệp	파일 형식 변경	ファイルの種類の変更	變更檔案類型	更改文件类型
+Change Picture	Thay ảnh	그림 변경	図の変更	變更圖片	更改图片
+Change Shape	Đổi hình dạng	도형 변경	図形の変更	變更圖案	更改形状
+Character Spacing	Giãn cách ký tự	문자 간격	文字間隔	字元間距	字符间距
+Characters	Ký tự	문자	文字	字元	字符
+Chart	Biểu đồ	차트	グラフ	圖表	图表
+Chart Data	Dữ liệu biểu đồ	차트 데이터	グラフのデータ	圖表資料	图表数据
+Chart Design	Thiết kế biểu đồ	차트 디자인	グラフのデザイン	圖表設計	图表设计
+Chart Title	Tiêu đề biểu đồ	차트 제목	グラフタイトル	圖表標題	图表标题
+Check\nAccessibility	Kiểm tra\nkhả năng tiếp cận	접근성\n검사	アクセシビリティ\nチェック	協助工具\n檢查	辅助功能\n检查
+Check for Issues	Kiểm tra sự cố	문제 확인	問題のチェック	檢查問題	检查问题
+Checkerboard	Bàn cờ	바둑판	チェッカーボード	棋盤	棋盘
+Chevron	Chữ V	갈매기형 수장	山形	＞形	V 形
+Choose a SmartArt Graphic	Chọn đồ họa SmartArt	SmartArt 그래픽 선택	SmartArt グラフィックの選択	選擇 SmartArt 圖形	选择 SmartArt 图形
+Choose where to save	Chọn nơi lưu	저장 위치 선택	保存先を選択	選擇儲存位置	选择保存位置
+Circle	Hình tròn	원	円	圓形	圆形
+Clear All Formatting	Xóa toàn bộ định dạng	모든 서식 지우기	すべての書式をクリア	清除所有格式	清除所有格式
+Click a symbol to insert it at the insertion point.	Nhấp vào ký hiệu để chèn tại vị trí con trỏ.	기호를 클릭하여 삽입 위치에 넣으세요.	記号をクリックすると、カーソルの位置に挿入されます。	按一下符號，即可在插入點插入該符號。	单击符号可将其插入到插入点。
+Click to add first slide	Nhấp để thêm trang chiếu đầu tiên	클릭하여 첫 슬라이드 추가	クリックして最初のスライドを追加	按一下以新增第一張投影片	单击以添加第一张幻灯片
+Click to add notes	Nhấp để thêm ghi chú	클릭하여 노트 추가	クリックしてノートを追加	按一下以新增備忘稿	单击以添加备注
+Click to edit Master text styles	Nhấp để sửa kiểu văn bản của trang chiếu cái	클릭하여 마스터 텍스트 스타일 편집	クリックしてマスターのテキストスタイルを編集	按一下以編輯母片文字樣式	单击以编辑母版文本样式
+Click to edit Master title style	Nhấp để sửa kiểu tiêu đề của trang chiếu cái	클릭하여 마스터 제목 스타일 편집	クリックしてマスターのタイトルスタイルを編集	按一下以編輯母片標題樣式	单击以编辑母版标题样式
+Clock	Đồng hồ	시계	時計	時鐘	时钟
+Clockwise	Theo chiều kim đồng hồ	시계 방향	時計回り	順時針	顺时针
+Close\nMaster View	Đóng dạng xem\ntrang chiếu cái	마스터 보기\n닫기	マスター表示を\n閉じる	關閉\n母片檢視	关闭\n母版视图
+Cloud	Đám mây	구름	雲	雲朵	云朵
+Clustered Bar	Thanh nhóm	묶은 가로 막대형	集合横棒	群組橫條圖	簇状条形图
+Clustered Column	Cột nhóm	묶은 세로 막대형	集合縦棒	群組直條圖	簇状柱形图
+Collapse the Ribbon	Thu gọn dải băng	리본 메뉴 축소	リボンを折りたたむ	摺疊功能區	折叠功能区
+Color Pulse	Nhấp nháy màu	색 깜박이기	色のパルス	色彩脈衝	颜色脉冲
+Colors	Màu sắc	색	色	色彩	颜色
+Comb	Lược	빗살	くし形	梳狀	梳状
+Combo	Kết hợp	혼합형	組み合わせ	組合圖	组合图
+Command Palette	Bảng lệnh	명령 팔레트	コマンドパレット	命令選擇區	命令面板
+Comment	Nhận xét	메모	コメント	註解	批注
+Comments	Nhận xét	메모	コメント	註解	批注
+Community Links	Liên kết cộng đồng	커뮤니티 링크	コミュニティのリンク	社群連結	社区链接
+Comparison	So sánh	비교	比較	比較	比较
+Complementary Color	Màu bổ sung	보색	補色	互補色	互补色
+Content	Nội dung	내용	コンテンツ	內容	内容
+Content Placeholder 2	Vùng giữ chỗ nội dung 2	내용 개체 틀 2	コンテンツのプレースホルダー 2	內容預留位置 2	内容占位符 2
+Content Placeholder 3	Vùng giữ chỗ nội dung 3	내용 개체 틀 3	コンテンツのプレースホルダー 3	內容預留位置 3	内容占位符 3
+Content Placeholder 5	Vùng giữ chỗ nội dung 5	내용 개체 틀 5	コンテンツのプレースホルダー 5	內容預留位置 5	内容占位符 5
+Content with Caption	Nội dung có chú thích	캡션 있는 콘텐츠	説明付きのコンテンツ	含標題的內容	带标题的内容
+Contrast	Độ tương phản	대비	コントラスト	對比	对比度
+Contrast {:+}%	Độ tương phản {:+}%	대비 {:+}%	コントラスト {:+}%	對比 {:+}%	对比度 {:+}%
+Conveyor	Băng chuyền	컨베이어	コンベヤー	輸送帶	传送带
+Copied the path	Đã sao chép đường dẫn	경로를 복사했습니다	パスをコピーしました	已複製路徑	已复制路径
+Copy path	Sao chép đường dẫn	경로 복사	パスをコピー	複製路徑	复制路径
+Corrections	Hiệu chỉnh	수정	修整	校正	更正
+Couldn't save AutoRecover information: {e}	Không thể lưu thông tin Tự động khôi phục: {e}	자동 복구 정보를 저장할 수 없습니다: {e}	自動回復用データを保存できませんでした: {e}	無法儲存自動回復資訊：{e}	无法保存自动恢复信息：{e}
+Counterclockwise	Ngược chiều kim đồng hồ	시계 반대 방향	反時計回り	逆時針	逆时针
+Cover	Che phủ	덮기	カバー	覆蓋	覆盖
+Create Handouts	Tạo bản phân phát	유인물 만들기	配布資料の作成	建立講義	创建讲义
+Create PDF	Tạo PDF	PDF 만들기	PDF の作成	建立 PDF	创建 PDF
+Create PDF Document	Tạo tài liệu PDF	PDF 문서 만들기	PDF ドキュメントの作成	建立 PDF 文件	创建 PDF 文档
+Create a PDF Document	Tạo tài liệu PDF	PDF 문서 만들기	PDF ドキュメントの作成	建立 PDF 文件	创建 PDF 文档
+Crop	Cắt xén	자르기	トリミング	裁剪	裁剪
+Crop 10% each side	Cắt 10% mỗi cạnh	각 가장자리 10% 자르기	各辺を 10% トリミング	每邊裁剪 10%	每边裁剪 10%
+Crop 20% each side	Cắt 20% mỗi cạnh	각 가장자리 20% 자르기	各辺を 20% トリミング	每邊裁剪 20%	每边裁剪 20%
+Crop to Shape	Cắt theo hình dạng	도형에 맞춰 자르기	図形に合わせてトリミング	裁剪成圖案	裁剪为形状
+Crush	Nghiền	분쇄	押しつぶし	粉碎	粉碎
+Cube	Khối lập phương	정육면체	キューブ	立方體	立方体
+Curtains	Rèm cửa	커튼	カーテン	布幕	帷幕
+Custom\nShow	Trình chiếu\ntùy chỉnh	사용자 지정\n슬라이드 쇼	目的別\nスライドショー	自訂\n放映	自定义\n放映
+Custom Path	Đường dẫn tùy chỉnh	사용자 지정 경로	ユーザー設定パス	自訂路徑	自定义路径
+Custom Range	Phạm vi tùy chỉnh	사용자 지정 범위	ユーザー設定範囲	自訂範圍	自定义范围
+Custom Show	Trình chiếu tùy chỉnh	사용자 지정 슬라이드 쇼	目的別スライドショー	自訂放映	自定义放映
+Custom Show 1	Trình chiếu tùy chỉnh 1	사용자 지정 슬라이드 쇼 1	目的別スライドショー 1	自訂放映 1	自定义放映 1
+Custom Shows	Các trình chiếu tùy chỉnh	사용자 지정 슬라이드 쇼	目的別スライドショー	自訂放映	自定义放映
+Dark\nMode	Chế độ\ntối	다크\n모드	ダーク\nモード	深色\n模式	深色\n模式
+Dark Blue	Xanh dương đậm	진한 파랑	濃い青	深藍色	深蓝色
+Dark Mode	Chế độ tối	다크 모드	ダークモード	深色模式	深色模式
+Dark Red	Đỏ đậm	진한 빨강	濃い赤	深紅色	深红色
+Dark Style 1	Kiểu tối 1	어두운 스타일 1	濃色スタイル 1	深色樣式 1	深色样式 1
+Dark appearance	Giao diện tối	어두운 모양	ダークな外観	深色外觀	深色外观
+Dash Dot	Gạch chấm	일점쇄선	一点鎖線	虛線點	点划线
+Dashes	Nét đứt	파선	破線	虛線	虚线
+Database	Cơ sở dữ liệu	데이터베이스	データベース	資料庫	数据库
+Date &\nTime	Ngày và\ngiờ	날짜 및\n시간	日付と\n時刻	日期與\n時間	日期和\n时间
+Date Placeholder	Vùng giữ chỗ ngày	날짜 개체 틀	日付のプレースホルダー	日期預留位置	日期占位符
+Date and time	Ngày và giờ	날짜 및 시간	日付と時刻	日期與時間	日期和时间
+Decision	Quyết định	의사 결정	判断	決策	决策
+Decrease List Level	Giảm cấp danh sách	목록 수준 줄임	インデントを減らす	降低清單階層	降低列表级别
+Delete Columns	Xóa cột	열 삭제	列の削除	刪除欄	删除列
+Delete Rows	Xóa hàng	행 삭제	行の削除	刪除列	删除行
+Delete Slide	Xóa trang chiếu	슬라이드 삭제	スライドの削除	刪除投影片	删除幻灯片
+Delete Table	Xóa bảng	표 삭제	表の削除	刪除表格	删除表格
+Design	Thiết kế	디자인	デザイン	設計	设计
+Design\nIdeas	Ý tưởng\nthiết kế	디자인\n아이디어	デザイン\nアイデア	設計\n構想	设计\n灵感
+Design Ideas	Ý tưởng thiết kế	디자인 아이디어	デザインアイデア	設計構想	设计灵感
+Diamonds	Hình thoi	다이아몬드	ひし形	菱形	菱形
+Disappear	Biến mất	사라지기	消失	消失	消失
+Dissolve In	Hiện dần từng điểm	디졸브 인	ディゾルブイン	溶入	溶入
+Dissolve Out	Biến mất từng điểm	디졸브 아웃	ディゾルブアウト	溶出	溶出
+Distribute Columns	Phân bố đều cột	열 너비를 같게	列の幅を揃える	平均分配欄寬	平均分布各列
+Distribute Horizontally	Phân bố đều theo chiều ngang	가로 간격을 동일하게	左右に整列	水平平均分配	横向分布
+Distribute Rows	Phân bố đều hàng	행 높이를 같게	行の高さを揃える	平均分配列高	平均分布各行
+Distribute Vertically	Phân bố đều theo chiều dọc	세로 간격을 동일하게	上下に整列	垂直平均分配	纵向分布
+Do not Autofit	Không tự động khớp	자동 맞춤 안 함	自動調整なし	不要自動調整	不自动调整
+Do you want to save the changes you made to {what}?	Bạn có muốn lưu các thay đổi đối với {what} không?	{what}의 변경 내용을 저장하시겠습니까?	{what} への変更を保存しますか？	要儲存對 {what} 所做的變更嗎？	是否保存对 {what} 所做的更改？
+Don't show on title slide	Không hiện trên trang chiếu tiêu đề	제목 슬라이드에는 표시 안 함	タイトルスライドに表示しない	不要顯示於標題投影片	标题幻灯片中不显示
+Doors	Cánh cửa	문	ドア	門扉	门扉
+Double Left	Mũi tên kép sang trái	왼쪽 이중 화살표	左向き二重矢印	向左雙箭號	向左双箭头
+Double Right	Mũi tên kép sang phải	오른쪽 이중 화살표	右向き二重矢印	向右雙箭號	向右双箭头
+Doughnut	Vành khuyên	도넛형	ドーナツ	環圈圖	圆环图
+Download the file	Tải tệp xuống	파일 다운로드	ファイルをダウンロード	下載檔案	下载文件
+Drape	Vải phủ	드레이프	ドレープ	垂簾	垂帘
+Drop Shadow Rectangle	Hình chữ nhật đổ bóng	그림자 있는 사각형	影付き四角形	陰影矩形	阴影矩形
+Duplicate Selected Slides	Nhân đôi các trang chiếu đã chọn	선택한 슬라이드 복제	選択したスライドを複製	複製選取的投影片	复制选定的幻灯片
+Duplicate Slide	Nhân đôi trang chiếu	슬라이드 복제	スライドの複製	複製投影片	复制幻灯片
+Dynamic Content	Nội dung động	동적 콘텐츠	動的コンテンツ	動態內容	动态内容
+Edit\nData	Sửa\ndữ liệu	데이터\n편집	データの\n編集	編輯\n資料	编辑\n数据
+Edit\nShape	Sửa\nhình dạng	도형\n편집	図形の\n編集	編輯\n圖案	编辑\n形状
+Edit Alt Text…	Sửa văn bản thay thế…	대체 텍스트 편집…	代替テキストの編集…	編輯替代文字…	编辑替代文字…
+Edit Header & Footer	Sửa đầu trang và chân trang	머리글 및 바닥글 편집	ヘッダーとフッターの編集	編輯頁首及頁尾	编辑页眉和页脚
+Edit the data: first row = series names, first column = categories.	Sửa dữ liệu: hàng đầu tiên = tên chuỗi, cột đầu tiên = danh mục.	데이터 편집: 첫 번째 행 = 계열 이름, 첫 번째 열 = 범주.	データを編集: 最初の行は系列名、最初の列は分類です。	編輯資料：第一列為數列名稱，第一欄為類別。	编辑数据：第一行为系列名称，第一列为类别。
+Editing	Chỉnh sửa	편집	編集	編輯	编辑
+Effect\nOptions	Tùy chọn\nhiệu ứng	효과\n옵션	効果の\nオプション	效果\n選項	效果\n选项
+Email Address	Địa chỉ email	전자 메일 주소	メールアドレス	電子郵件地址	电子邮件地址
+Email address:	Địa chỉ email:	전자 메일 주소:	メールアドレス:	電子郵件地址：	电子邮件地址：
+Emphasis	Nhấn mạnh	강조	強調	強調	强调
+End Show	Kết thúc trình chiếu	쇼 마침	スライドショーの終了	結束放映	结束放映
+End of slide show	Kết thúc trình chiếu	슬라이드 쇼 끝	スライドショーの最後	投影片放映結束	幻灯片放映结束
+End of slide show, click to exit.	Đã kết thúc trình chiếu, nhấp để thoát.	슬라이드 쇼가 끝났습니다. 클릭하여 종료하세요.	スライドショーの最後です。クリックすると終了します。	投影片放映結束，按一下以結束。	幻灯片放映结束，单击退出。
+End trim (s):	Điểm kết thúc cắt (giây):	트리밍 끝 (초):	トリミングの終了位置（秒）:	修剪結束點（秒）：	剪裁结束点（秒）：
+English (United Kingdom)	Tiếng Anh (Vương quốc Anh)	영어 (영국)	英語（英国）	英文（英國）	英语（英国）
+English (United States)	Tiếng Anh (Hoa Kỳ)	영어 (미국)	英語（米国）	英文（美國）	英语（美国）
+Entrance	Xuất hiện	나타내기	開始	進入	进入
+Equals	Dấu bằng	등호	等号	等號	等号
+Equation	Phương trình	수식	数式	方程式	公式
+Eraser	Tẩy	지우개	消しゴム	橡皮擦	橡皮擦
+Exciting	Nổi bật	화려한 효과	はなやか	華麗	华丽
+Export the presentation as:	Xuất bản trình chiếu dưới dạng:	프레젠테이션 내보내기 형식:	プレゼンテーションの書き出し形式:	簡報匯出格式：	演示文稿导出格式：
+Fade in (s):	Hiện dần (giây):	페이드 인 (초):	フェードイン（秒）:	淡入（秒）：	淡入（秒）：
+Fade out (s):	Mờ dần (giây):	페이드 아웃 (초):	フェードアウト（秒）:	淡出（秒）：	淡出（秒）：
+Fall Over	Đổ xuống	넘어지기	倒れる	傾倒	倒下
+Ferris Wheel	Vòng đu quay	대관람차	観覧車	摩天輪	摩天轮
+File (Alt+F)	Tệp (Alt+F)	파일 (Alt+F)	ファイル (Alt+F)	檔案 (Alt+F)	文件 (Alt+F)
+File › {} needs an open presentation	Tệp › {} yêu cầu mở một bản trình chiếu	파일 › {} 기능을 사용하려면 프레젠테이션을 여세요	ファイル › {} を使うにはプレゼンテーションを開いてください	檔案 › {} 需要先開啟簡報	文件 › {} 需要先打开演示文稿
+Fill & Line	Tô và nét	채우기 및 선	塗りつぶしと線	填滿與線條	填充与线条
+Filled Radar	Radar có tô màu	채워진 방사형	塗りつぶしレーダー	填滿雷達圖	填充雷达图
+First	Đầu tiên	처음	最初	第一個	第一个
+First Column	Cột đầu tiên	첫째 열	最初の列	第一欄	第一列
+First commit	Lần ghi nhận đầu tiên	첫 커밋	最初のコミット	首次提交	首次提交
+Fit	Vừa khít	맞춤	合わせる	符合大小	适应大小
+Fit slide to current window	Khớp trang chiếu với cửa sổ hiện tại	슬라이드를 현재 창에 맞춤	スライドを現在のウィンドウに合わせる	將投影片調整為目前視窗大小	将幻灯片调整为当前窗口大小
+Fit to\nWindow	Khớp với\ncửa sổ	창에\n맞춤	ウィンドウに\n合わせる	符合\n視窗大小	适应\n窗口大小
+Fit to Window	Khớp với cửa sổ	창에 맞춤	ウィンドウに合わせる	符合視窗大小	适应窗口大小
+Float In	Nổi vào	플로트 인	フロートイン	浮入	浮入
+Float Out	Nổi ra	플로트 아웃	フロートアウト	浮出	浮出
+Fly In	Bay vào	날아오기	スライドイン	飛入	飞入
+Fly Out	Bay ra	날아가기	スライドアウト	飛出	飞出
+Fly Through	Bay xuyên qua	통과 비행	フライスルー	飛越	飞越
+Follow the layout	Theo bố cục	레이아웃 따르기	レイアウトに従う	依照版面配置	遵循版式
+Followed Hyperlink	Siêu liên kết đã truy cập	열어 본 하이퍼링크	表示済みのハイパーリンク	已瀏覽的超連結	已访问的超链接
+Font Color	Màu chữ	글꼴 색	文字の色	字型色彩	字体颜色
+Footer	Chân trang	바닥글	フッター	頁尾	页脚
+Footer Placeholder	Vùng giữ chỗ chân trang	바닥글 개체 틀	フッターのプレースホルダー	頁尾預留位置	页脚占位符
+Format\nBackground	Định dạng\nnền	배경\n서식	背景の\n書式設定	背景\n格式	背景\n格式
+Format\nPane	Ngăn\nđịnh dạng	서식\n창	書式設定\nウィンドウ	格式\n窗格	格式\n窗格
+Format Background	Định dạng nền	배경 서식	背景の書式設定	設定背景格式	设置背景格式
+Format Background…	Định dạng nền…	배경 서식…	背景の書式設定…	設定背景格式…	设置背景格式…
+Format Painter (double-click to keep it on)	Sao chép định dạng (nhấp đúp để tiếp tục sử dụng)	서식 복사 (계속 사용하려면 두 번 클릭)	書式のコピー（ダブルクリックで連続使用）	複製格式（按兩下以持續使用）	格式刷（双击可连续使用）
+Format Shape	Định dạng hình dạng	도형 서식	図形の書式設定	設定圖案格式	设置形状格式
+Format Shape…	Định dạng hình dạng…	도형 서식…	図形の書式設定…	設定圖案格式…	设置形状格式…
+Fracture	Vỡ vụn	조각내기	破砕	碎裂	碎裂
+Frame Slides	Tạo khung trang chiếu	슬라이드 테두리	スライドに枠を付ける	投影片加框	幻灯片加框
+From\nBeginning	Từ\nđầu	처음\n부터	最初\nから	從頭\n開始	从头\n开始
+From\nCurrent Slide	Từ trang chiếu\nhiện tại	현재 슬라이드\n부터	現在のスライド\nから	從目前\n投影片開始	从当前\n幻灯片开始
+From 	Từ 	시작 위치 	開始位置 	起點 	起点 
+From Bottom	Từ dưới lên	아래쪽에서	下から	從下方	从底部
+From Top	Từ trên xuống	위쪽에서	上から	從上方	从顶部
+From bottom left	Từ dưới bên trái	왼쪽 아래에서	左下から	從左下方	从左下方
+From bottom right	Từ dưới bên phải	오른쪽 아래에서	右下から	從右下方	从右下方
+From center	Từ giữa	가운데에서	中央から	從中央	从中心
+From top left	Từ trên bên trái	왼쪽 위에서	左上から	從左上方	从左上方
+From top right	Từ trên bên phải	오른쪽 위에서	右上から	從右上方	从右上方
+Full	Toàn bộ	전체	全体	全部	全部
+Full Page Slides	Trang chiếu toàn trang	전체 페이지 슬라이드	フルページサイズのスライド	全頁投影片	整页幻灯片
+Funnel	Phễu	깔때기형	じょうご	漏斗圖	漏斗图
+Gallery	Bộ sưu tập	갤러리	ギャラリー	圖庫	库
+Glitter	Lấp lánh	반짝이기	きらめき	閃耀	闪耀
+Go to	Đi tới	이동	移動先	移至	转到
+Gradient fill	Tô chuyển màu	그라데이션 채우기	塗りつぶし（グラデーション）	漸層填滿	渐变填充
+Gridlines	Đường lưới	눈금선	目盛線	格線	网格线
+Group Objects	Nhóm đối tượng	개체 그룹화	オブジェクトのグループ化	群組物件	组合对象
+Grow/Shrink	Phóng to/thu nhỏ	확대/축소	拡大／縮小	放大／縮小	放大／缩小
+Half	Một nửa	절반	半分	一半	一半
+Handout\nMaster	Trang cái\nbản phân phát	유인물\n마스터	配布資料\nマスター	講義\n母片	讲义\n母版
+Handout Master (coming soon)	Trang cái bản phân phát (sắp có)	유인물 마스터 (지원 예정)	配布資料マスター（近日対応予定）	講義母片（即將推出）	讲义母版（即将推出）
+Handouts (1 slide per page)	Bản phân phát (1 trang chiếu mỗi trang)	유인물 (페이지당 슬라이드 1개)	配布資料（1 ページに 1 スライド）	講義（每頁 1 張投影片）	讲义（每页 1 张幻灯片）
+Handouts (2 slides per page)	Bản phân phát (2 trang chiếu mỗi trang)	유인물 (페이지당 슬라이드 2개)	配布資料（1 ページに 2 スライド）	講義（每頁 2 張投影片）	讲义（每页 2 张幻灯片）
+Handouts (3 slides per page)	Bản phân phát (3 trang chiếu mỗi trang)	유인물 (페이지당 슬라이드 3개)	配布資料（1 ページに 3 スライド）	講義（每頁 3 張投影片）	讲义（每页 3 张幻灯片）
+Handouts (4 slides per page)	Bản phân phát (4 trang chiếu mỗi trang)	유인물 (페이지당 슬라이드 4개)	配布資料（1 ページに 4 スライド）	講義（每頁 4 張投影片）	讲义（每页 4 张幻灯片）
+Handouts (6 slides per page)	Bản phân phát (6 trang chiếu mỗi trang)	유인물 (페이지당 슬라이드 6개)	配布資料（1 ページに 6 スライド）	講義（每頁 6 張投影片）	讲义（每页 6 张幻灯片）
+Handouts (9 slides per page)	Bản phân phát (9 trang chiếu mỗi trang)	유인물 (페이지당 슬라이드 9개)	配布資料（1 ページに 9 スライド）	講義（每頁 9 張投影片）	讲义（每页 9 张幻灯片）
+Header &\nFooter	Đầu trang và\nchân trang	머리글 및\n바닥글	ヘッダーと\nフッター	頁首及\n頁尾	页眉和\n页脚
+Header Row	Hàng tiêu đề	머리글 행	見出し行	標題列	标题行
+Header and Footer	Đầu trang và chân trang	머리글 및 바닥글	ヘッダーとフッター	頁首及頁尾	页眉和页脚
+Height (in):	Chiều cao (inch):	높이 (인치):	高さ（インチ）:	高度（英吋）：	高度（英寸）：
+Hexagons	Hình lục giác	육각형	六角形	六角形	六边形
+Hidden slides	Trang chiếu ẩn	숨겨진 슬라이드	非表示のスライド	隱藏的投影片	隐藏的幻灯片
+Hide\nSlide	Ẩn\ntrang chiếu	슬라이드\n숨기기	スライドを\n非表示	隱藏\n投影片	隐藏\n幻灯片
+Hide During Show	Ẩn khi trình chiếu	쇼 동안 숨기기	スライドショー中に非表示	放映時隱藏	放映时隐藏
+Hide Slide	Ẩn trang chiếu	슬라이드 숨기기	スライドを非表示	隱藏投影片	隐藏幻灯片
+Hide background graphics	Ẩn đồ họa nền	배경 그래픽 숨기기	背景のグラフィックを非表示	隱藏背景圖形	隐藏背景图形
+Hierarchy	Phân cấp	계층 구조형	階層構造	階層圖	层次结构图
+Highlighter	Bút đánh dấu	형광펜	蛍光ペン	螢光筆	荧光笔
+Histogram	Biểu đồ tần suất	히스토그램	ヒストグラム	直方圖	直方图
+Honeycomb	Tổ ong	벌집	ハチの巣	蜂巢	蜂巢
+How would you describe this object and its context to someone who is blind or has low vision?	Bạn sẽ mô tả đối tượng này và ngữ cảnh của nó cho người khiếm thị hoặc có thị lực kém như thế nào?	시각 장애가 있거나 시력이 낮은 사람에게 이 개체와 맥락을 어떻게 설명하시겠습니까?	目が見えない方や見えにくい方に、このオブジェクトとその前後関係をどのように説明しますか？	您會如何向視障或弱視人士描述此物件及其相關情境？	您会如何向视障或低视力人士描述此对象及其相关情境？
+Hyperlink	Siêu liên kết	하이퍼링크	ハイパーリンク	超連結	超链接
+Icons	Biểu tượng	아이콘	アイコン	圖示	图标
+Include hidden slides	Bao gồm trang chiếu ẩn	숨겨진 슬라이드 포함	非表示のスライドを含める	包含隱藏的投影片	包括隐藏的幻灯片
+Increase List Level	Tăng cấp danh sách	목록 수준 늘림	インデントを増やす	提高清單階層	提高列表级别
+Independent KIO fork. Original DeckCraft v0.7.0 by the ArtCraft team.	Bản KIO phát triển độc lập từ DeckCraft v0.7.0 của nhóm ArtCraft.	독립적인 KIO 포크입니다. 원본 DeckCraft v0.7.0은 ArtCraft 팀이 제작했습니다.	独立した KIO 派生版です。元の DeckCraft v0.7.0 は ArtCraft チームの作品です。	KIO 獨立衍生版本。原版 DeckCraft v0.7.0 由 ArtCraft 團隊開發。	KIO 独立衍生版本。原版 DeckCraft v0.7.0 由 ArtCraft 团队开发。
+Ink to\nMath	Chuyển nét vẽ\nthành công thức	잉크를\n수식으로	インクを\n数式に変換	筆跡轉換\n數學式	墨迹转换\n数学公式
+Ink to\nShape	Chuyển nét vẽ\nthành hình dạng	잉크를\n도형으로	インクを\n図形に変換	筆跡轉換\n圖案	墨迹转换\n形状
+Ink to\nText	Chuyển nét vẽ\nthành văn bản	잉크를\n텍스트로	インクを\nテキストに変換	筆跡轉換\n文字	墨迹转换\n文本
+Ink to Math (coming soon)	Chuyển nét vẽ thành công thức (sắp có)	잉크를 수식으로 (지원 예정)	インクを数式に変換（近日対応予定）	筆跡轉換數學式（即將推出）	墨迹转换数学公式（即将推出）
+Ink to Shape (coming soon)	Chuyển nét vẽ thành hình dạng (sắp có)	잉크를 도형으로 (지원 예정)	インクを図形に変換（近日対応予定）	筆跡轉換圖案（即將推出）	墨迹转换形状（即将推出）
+Ink to Text (coming soon)	Chuyển nét vẽ thành văn bản (sắp có)	잉크를 텍스트로 (지원 예정)	インクをテキストに変換（近日対応予定）	筆跡轉換文字（即將推出）	墨迹转换文本（即将推出）
+Inner	Bên trong	안쪽	内側	內部	内部
+Insert	Chèn	삽입	挿入	插入	插入
+Insert\nAbove	Chèn\nphía trên	위에\n삽입	上に\n挿入	在上方\n插入	在上方\n插入
+Insert\nBelow	Chèn\nphía dưới	아래에\n삽입	下に\n挿入	在下方\n插入	在下方\n插入
+Insert\nLayout	Chèn\nbố cục	레이아웃\n삽입	レイアウトを\n挿入	插入\n版面配置	插入\n版式
+Insert\nLeft	Chèn\nbên trái	왼쪽에\n삽입	左に\n挿入	在左方\n插入	在左侧\n插入
+Insert\nPlaceholder	Chèn\nvùng giữ chỗ	개체 틀\n삽입	プレースホルダーを\n挿入	插入\n預留位置	插入\n占位符
+Insert\nRight	Chèn\nbên phải	오른쪽에\n삽입	右に\n挿入	在右方\n插入	在右侧\n插入
+Insert Hyperlink	Chèn siêu liên kết	하이퍼링크 삽입	ハイパーリンクの挿入	插入超連結	插入超链接
+Insert Table	Chèn bảng	표 삽입	表の挿入	插入表格	插入表格
+Insert Table…	Chèn bảng…	표 삽입…	表の挿入…	插入表格…	插入表格…
+Insert picture from file…	Chèn ảnh từ tệp…	파일에서 그림 삽입…	ファイルから画像を挿入…	從檔案插入圖片…	从文件插入图片…
+Inspect Presentation	Kiểm tra bản trình chiếu	프레젠테이션 검사	プレゼンテーションの検査	檢查簡報	检查演示文稿
+Interface size	Kích thước giao diện	인터페이스 크기	インターフェイスのサイズ	介面大小	界面大小
+JPEG Picture (*.jpg)	Ảnh JPEG (*.jpg)	JPEG 그림 (*.jpg)	JPEG 画像 (*.jpg)	JPEG 圖片 (*.jpg)	JPEG 图片 (*.jpg)
+JPEG image (current slide)	Ảnh JPEG (trang chiếu hiện tại)	JPEG 이미지 (현재 슬라이드)	JPEG 画像（現在のスライド）	JPEG 圖片（目前的投影片）	JPEG 图像（当前幻灯片）
+Join our community on Discord	Tham gia cộng đồng của chúng tôi trên Discord	Discord 커뮤니티에 참여하기	Discord のコミュニティに参加	加入我們的 Discord 社群	加入我们的 Discord 社区
+KIO Deck Presentation (*.deckcraft)	Bản trình chiếu KIO Deck (*.deckcraft)	KIO Deck 프레젠테이션 (*.deckcraft)	KIO Deck プレゼンテーション (*.deckcraft)	KIO Deck 簡報 (*.deckcraft)	KIO Deck 演示文稿 (*.deckcraft)
+KIO Deck can't export “{other}”	KIO Deck không thể xuất “{other}”	KIO Deck에서 “{other}”을(를) 내보낼 수 없습니다	KIO Deck は「{other}」を書き出せません	KIO Deck 無法匯出「{other}」	KIO Deck 无法导出“{other}”
+KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck không sử dụng tài khoản: bạn không cần đăng nhập và bản trình chiếu được lưu trên thiết bị của bạn.	KIO Deck에는 계정이 없습니다. 로그인할 필요가 없으며 프레젠테이션은 기기에 보관됩니다.	KIO Deck にはアカウントがありません。ログインは不要で、プレゼンテーションはお使いのデバイスに保存されます。	KIO Deck 不使用帳戶：無須登入，簡報會保留在您的裝置上。	KIO Deck 不使用账户：无需登录，演示文稿保留在您的设备上。
+KIO Deck prints through a PDF: it downloads, ready to print from your browser or PDF viewer.	KIO Deck in qua PDF: tệp sẽ được tải xuống để bạn in từ trình duyệt hoặc trình xem PDF.	KIO Deck은 PDF를 통해 인쇄합니다. 다운로드한 파일을 브라우저나 PDF 뷰어에서 인쇄하세요.	KIO Deck は PDF 経由で印刷します。ダウンロードしたファイルをブラウザーまたは PDF ビューアーで印刷してください。	KIO Deck 透過 PDF 列印：下載後即可從瀏覽器或 PDF 檢視器列印。	KIO Deck 通过 PDF 打印：下载后可从浏览器或 PDF 阅读器打印。
+KIO Deck prints through a PDF: it opens in your PDF viewer, where you choose the printer.	KIO Deck in qua PDF: tệp sẽ mở trong trình xem PDF để bạn chọn máy in.	KIO Deck은 PDF를 통해 인쇄합니다. PDF 뷰어에서 열린 파일의 프린터를 선택하세요.	KIO Deck は PDF 経由で印刷します。PDF ビューアーでファイルが開いたらプリンターを選択してください。	KIO Deck 透過 PDF 列印：檔案會在 PDF 檢視器中開啟，供您選擇印表機。	KIO Deck 通过 PDF 打印：文件会在 PDF 阅读器中打开，供您选择打印机。
+KIO Deck's own format: everything is kept	Định dạng riêng của KIO Deck: giữ lại mọi nội dung	KIO Deck 고유 형식: 모든 내용 유지	KIO Deck 独自の形式: すべての内容を保持	KIO Deck 專用格式：保留所有內容	KIO Deck 专用格式：保留所有内容
+Keeps the layout, fonts and pictures	Giữ nguyên bố cục, phông chữ và hình ảnh	레이아웃, 글꼴 및 그림 유지	レイアウト、フォント、画像を保持	保留版面配置、字型及圖片	保留版式、字体和图片
+Last	Cuối cùng	마지막	最後	最後一個	最后一个
+Last Column	Cột cuối cùng	마지막 열	最後の列	最後一欄	最后一列
+Last commit	Lần ghi nhận cuối cùng	마지막 커밋	最後のコミット	最後提交	最后提交
+Learn\nMore	Tìm hiểu\nthêm	자세히\n알아보기	詳細を\n見る	深入\n瞭解	了解\n详情
+Ledger Paper (11x17 in)	Giấy Ledger (11x17 inch)	Ledger 용지 (11x17 인치)	Ledger 用紙（11x17 インチ）	Ledger 紙張（11x17 英吋）	Ledger 纸张（11x17 英寸）
+Light Green	Xanh lá nhạt	연한 녹색	薄い緑	淺綠色	浅绿色
+Light Style 1	Kiểu sáng 1	밝은 스타일 1	淡色スタイル 1	淺色樣式 1	浅色样式 1
+Light Style 2	Kiểu sáng 2	밝은 스타일 2	淡色スタイル 2	淺色樣式 2	浅色样式 2
+Lightning	Tia chớp	번개	稲妻	閃電	闪电
+Line	Đường kẻ	선	線	線條	线条
+Line Spacing	Giãn cách dòng	줄 간격	行間	行距	行距
+Line Spacing Options…	Tùy chọn giãn cách dòng…	줄 간격 옵션…	行間のオプション…	行距選項…	行距选项…
+Line delta	Chênh lệch số dòng	줄 수 변화	行数の差分	行數差異	行数差异
+Line spacing (lines):	Giãn cách dòng (số dòng):	줄 간격 (줄):	行間（行数）:	行距（行）：	行距（行）：
+Line with Markers	Đường có dấu dữ liệu	표식이 있는 꺾은선형	マーカー付き折れ線	含資料標記的折線圖	带数据标记的折线图
+Lines	Đường kẻ	선	線	線條	线条
+Link…	Liên kết…	링크…	リンク…	連結…	链接…
+Long Dash	Nét đứt dài	긴 파선	長い破線	長虛線	长划线
+Long Dash Dot	Nét đứt dài chấm	긴 일점쇄선	長い一点鎖線	長虛線點	长点划线
+Loop continuously until 'Esc'	Lặp liên tục cho đến khi nhấn 'Esc'	'Esc' 키를 누를 때까지 계속 반복	'Esc' キーが押されるまで繰り返す	持續循環播放，直到按下 'Esc'	持续循环播放，直到按下 'Esc'
+Loop until Stopped	Lặp cho đến khi dừng	중지할 때까지 반복	停止するまで繰り返す	循環播放直到停止	循环播放直到停止
+Loops	Vòng lặp	고리	ループ	迴圈	环形
+Loose	Rộng	넓게	広く	寬鬆	宽松
+Manage Presentation	Quản lý bản trình chiếu	프레젠테이션 관리	プレゼンテーションの管理	管理簡報	管理演示文稿
+Margins (pt)	Lề (pt)	여백 (pt)	余白 (pt)	邊界 (pt)	边距 (pt)
+Mark as decorative	Đánh dấu là trang trí	장식으로 표시	装飾用としてマーク	標示為裝飾性	标记为装饰性
+Mark selected text as:	Đánh dấu văn bản đã chọn là:	선택한 텍스트의 언어:	選択した文字列の言語:	所選文字的語言：	所选文字的语言：
+Math	Toán học	수학	数式	數學	数学
+Matrix	Ma trận	행렬	行列	矩陣	矩阵
+Maximize content (else ensure fit)	Phóng to tối đa nội dung (nếu không, điều chỉnh cho vừa)	콘텐츠 최대화 (선택하지 않으면 크기에 맞춤)	コンテンツを最大化（オフの場合はサイズに合わせる）	最大化內容（否則確保符合大小）	最大化内容（否则确保适合大小）
+Medium Style 2	Kiểu trung bình 2	보통 스타일 2	中色スタイル 2	中度樣式 2	中等样式 2
+Medium Style 4	Kiểu trung bình 4	보통 스타일 4	中色スタイル 4	中度樣式 4	中等样式 4
+Merge\nCells	Gộp\nô	셀\n병합	セルの\n結合	合併\n儲存格	合并\n单元格
+Merge\nShapes	Gộp\nhình dạng	도형\n병합	図形の\n結合	合併\n圖案	合并\n形状
+Merge Shapes	Gộp hình dạng	도형 병합	図形の結合	合併圖案	合并形状
+Merged PRs	Yêu cầu hợp nhất đã gộp	병합된 PR	マージされた PR	已合併的 PR	已合并的 PR
+Middle	Giữa	중간	中央	中間	中间
+Models	Mô hình	모델	モデル	模型	模型
+Moon	Mặt trăng	달	月	月亮	月亮
+More Colors… #	Màu khác… #	다른 색… #	その他の色… #	其他色彩… #	其他颜色… #
+More presentations	Thêm bản trình chiếu	더 많은 프레젠테이션	その他のプレゼンテーション	更多簡報	更多演示文稿
+More themes	Thêm chủ đề	더 많은 테마	その他のテーマ	更多佈景主題	更多主题
+Morph	Biến đổi	모핑	変形	轉化	平滑
+Motion Paths	Đường di chuyển	이동 경로	アニメーションの軌跡	移動路徑	动作路径
+Move Section Down	Di chuyển phần xuống	구역을 아래로 이동	セクションを下へ移動	向下移動節	向下移动节
+Move Section Up	Di chuyển phần lên	구역을 위로 이동	セクションを上へ移動	向上移動節	向上移动节
+New\nComment	Nhận xét\nmới	새\n메모	新しい\nコメント	新增\n註解	新建\n批注
+New\nSlide	Trang chiếu\nmới	새\n슬라이드	新しい\nスライド	新增\n投影片	新建\n幻灯片
+New Comment	Nhận xét mới	새 메모	新しいコメント	新增註解	新建批注
+New Presentation	Bản trình chiếu mới	새 프레젠테이션	新しいプレゼンテーション	新增簡報	新建演示文稿
+New Slide (⇧⌘N)	Trang chiếu mới (⇧⌘N)	새 슬라이드 (⇧⌘N)	新しいスライド (⇧⌘N)	新增投影片 (⇧⌘N)	新建幻灯片 (⇧⌘N)
+New show name:	Tên trình chiếu mới:	새 슬라이드 쇼 이름:	新しいスライドショー名:	新放映名稱：	新放映名称：
+Next ▶	Tiếp theo ▶	다음 ▶	次へ ▶	下一個 ▶	下一个 ▶
+No Fill	Không tô	채우기 없음	塗りつぶしなし	無填滿	无填充
+No Glow	Không phát sáng	네온 없음	光彩なし	無光暈	无发光
+No Outline	Không viền	윤곽선 없음	枠線なし	無外框	无轮廓
+No Reflection	Không phản chiếu	반사 없음	反射なし	無反射	无映像
+No Shadow	Không đổ bóng	그림자 없음	影なし	無陰影	无阴影
+No Soft Edges	Không làm mềm cạnh	부드러운 가장자리 없음	ぼかしなし	無柔邊	无柔化边缘
+No Style, No Grid	Không kiểu, không lưới	스타일 및 눈금 없음	スタイルなし、罫線なし	無樣式、無格線	无样式、无网格
+No Style, Table Grid	Không kiểu, có lưới bảng	스타일 없음, 표 눈금	スタイルなし、表の罫線	無樣式、表格格線	无样式、表格网格
+No accessibility issues found. People with disabilities should not have difficulty reading this document.	Không tìm thấy vấn đề về khả năng tiếp cận. Người khuyết tật có thể đọc tài liệu này mà không gặp khó khăn.	접근성 문제가 발견되지 않았습니다. 장애가 있는 사용자도 이 문서를 읽는 데 어려움이 없을 것으로 예상됩니다.	アクセシビリティの問題は見つかりませんでした。障害のある方にも読みやすいドキュメントと考えられます。	未發現協助工具問題。身心障礙人士應可順利閱讀此文件。	未发现辅助功能问题。残障人士应可顺利阅读此文档。
+No comments on this slide.	Trang chiếu này chưa có nhận xét.	이 슬라이드에 메모가 없습니다.	このスライドにコメントはありません。	此投影片沒有註解。	此幻灯片没有批注。
+No contributor data was built into this copy.	Bản này không kèm dữ liệu về người đóng góp.	이 사본에는 기여자 데이터가 포함되지 않았습니다.	このコピーには貢献者のデータが含まれていません。	此版本未內建貢獻者資料。	此版本未内置贡献者数据。
+No fill	Không tô	채우기 없음	塗りつぶしなし	無填滿	无填充
+No line	Không đường kẻ	선 없음	線なし	無線條	无线条
+No model credits were built into this copy.	Bản này không kèm thông tin ghi công mô hình.	이 사본에는 모델 기여 정보가 포함되지 않았습니다.	このコピーにはモデルのクレジット情報が含まれていません。	此版本未內建模型致謝資訊。	此版本未内置模型致谢信息。
+No presentation is open.	Chưa mở bản trình chiếu nào.	열린 프레젠테이션이 없습니다.	プレゼンテーションが開かれていません。	目前沒有開啟的簡報。	当前没有打开的演示文稿。
+No recent presentations match “{}”.	Không có bản trình chiếu gần đây nào khớp với “{}”.	“{}”와(과) 일치하는 최근 프레젠테이션이 없습니다.	「{}」に一致する最近のプレゼンテーションはありません。	沒有符合「{}」的最近簡報。	没有匹配“{}”的最近演示文稿。
+No sound: {err}	Không có âm thanh: {err}	소리 없음: {err}	音声を再生できません: {err}	無法播放音訊：{err}	无法播放音频：{err}
+No themes match “{}”.	Không có chủ đề nào khớp với “{}”.	“{}”와(과) 일치하는 테마가 없습니다.	「{}」に一致するテーマはありません。	沒有符合「{}」的佈景主題。	没有匹配“{}”的主题。
+None	Không có	없음	なし	無	无
+Normal	Thông thường	기본	標準	標準	普通
+Not allowed	Không được phép	허용되지 않음	許可されていません	不允許	不允许
+Not saved yet	Chưa lưu	아직 저장되지 않음	未保存	尚未儲存	尚未保存
+Notes\nMaster	Trang cái\nghi chú	슬라이드 노트\n마스터	ノート\nマスター	備忘稿\n母片	备注\n母版
+Notes\nPage	Trang\nghi chú	슬라이드\n노트	ノート\nページ	備忘稿\n頁面	备注\n页
+Notes Master (coming soon)	Trang cái ghi chú (sắp có)	슬라이드 노트 마스터 (지원 예정)	ノートマスター（近日対応予定）	備忘稿母片（即將推出）	备注母版（即将推出）
+Notes Page	Trang ghi chú	슬라이드 노트	ノートページ	備忘稿頁面	备注页
+Notes Pages	Các trang ghi chú	슬라이드 노트 페이지	ノートページ	備忘稿頁面	备注页
+Nothing to print: every slide in the range is hidden.	Không có nội dung để in: mọi trang chiếu trong phạm vi đều bị ẩn.	인쇄할 내용이 없습니다. 범위 내 모든 슬라이드가 숨겨져 있습니다.	印刷する内容がありません。範囲内のすべてのスライドが非表示です。	沒有可列印的內容：範圍內的所有投影片皆已隱藏。	没有可打印的内容：范围内的所有幻灯片均已隐藏。
+Number of columns:	Số cột:	열 개수:	列数:	欄數：	列数：
+Number of rows:	Số hàng:	행 개수:	行数:	列數：	行数：
+Numbering	Đánh số	번호 매기기	段落番号	編號	编号
+OK	Đồng ý	확인	確定	確定	确定
+Object Color	Màu đối tượng	개체 색	オブジェクトの色	物件色彩	对象颜色
+On Click	Khi nhấp	클릭할 때	クリック時	按一下時	单击时
+On Click of {name}	Khi nhấp vào {name}	{name}을(를) 클릭할 때	{name} のクリック時	按一下 {name} 時	单击 {name} 时
+On Click of… (none)	Khi nhấp vào… (không có)	클릭할 개체… (없음)	クリックする対象…（なし）	按一下…時（無）	单击…时（无）
+On Mouse Click	Khi nhấp chuột	마우스를 클릭할 때	クリック時	按一下滑鼠時	单击鼠标时
+On-screen Show (16:10)	Trình chiếu trên màn hình (16:10)	화면 슬라이드 쇼 (16:10)	画面に合わせる (16:10)	螢幕放映 (16:10)	屏幕放映 (16:10)
+Open Dialog	Mở hộp thoại	대화 상자 열기	ダイアログを開く	開啟對話方塊	打开对话框
+Open a presentation from a folder (Ctrl+O)	Mở bản trình chiếu từ thư mục (Ctrl+O)	폴더에서 프레젠테이션 열기 (Ctrl+O)	フォルダーからプレゼンテーションを開く (Ctrl+O)	從資料夾開啟簡報 (Ctrl+O)	从文件夹打开演示文稿 (Ctrl+O)
+Open file location	Mở vị trí tệp	파일 위치 열기	ファイルの場所を開く	開啟檔案位置	打开文件所在位置
+Open source under MIT OR Apache-2.0. Not affiliated with Microsoft.	Mã nguồn mở theo giấy phép MIT OR Apache-2.0. Không liên kết với Microsoft.	MIT OR Apache-2.0 라이선스의 오픈 소스입니다. Microsoft와 제휴 관계가 없습니다.	MIT OR Apache-2.0 ライセンスのオープンソースです。Microsoft とは関係ありません。	採用 MIT OR Apache-2.0 授權的開放原始碼。與 Microsoft 無關。	采用 MIT OR Apache-2.0 许可的开源软件。与 Microsoft 无关联。
+Opened the presentation as a PDF to print	Đã mở bản trình chiếu dưới dạng PDF để in	인쇄할 프레젠테이션을 PDF로 열었습니다	印刷用の PDF としてプレゼンテーションを開きました	已將簡報開啟為 PDF 以供列印	已将演示文稿以 PDF 形式打开以供打印
+Opens in PowerPoint and other presentation apps	Mở được bằng PowerPoint và các ứng dụng trình chiếu khác	PowerPoint 및 다른 프레젠테이션 앱에서 열기	PowerPoint などのプレゼンテーションアプリで開けます	可在 PowerPoint 及其他簡報應用程式中開啟	可在 PowerPoint 和其他演示应用中打开
+Opens on any device with a PDF viewer	Mở được trên mọi thiết bị có trình xem PDF	PDF 뷰어가 있는 모든 기기에서 열기	PDF ビューアーがあればどのデバイスでも開けます	可在任何具有 PDF 檢視器的裝置上開啟	可在任何具有 PDF 阅读器的设备上打开
+Options	Tùy chọn	옵션	オプション	選項	选项
+Orbit	Quỹ đạo	궤도	軌道	軌道	轨道
+Order Objects	Sắp xếp đối tượng	개체 순서	オブジェクトの順序	排列物件	排列对象
+Origami	Gấp giấy	종이접기	折り紙	摺紙	折纸
+Outer	Bên ngoài	바깥쪽	外側	外部	外部
+Outline\nView	Dạng xem\ndàn ý	개요\n보기	アウトライン\n表示	大綱\n檢視	大纲\n视图
+Outline (*.txt)	Dàn ý (*.txt)	개요 (*.txt)	アウトライン (*.txt)	大綱 (*.txt)	大纲 (*.txt)
+Outline (.txt)	Dàn ý (.txt)	개요 (.txt)	アウトライン (.txt)	大綱 (.txt)	大纲 (.txt)
+Outline View	Dạng xem dàn ý	개요 보기	アウトライン表示	大綱檢視	大纲视图
+Oval ends	Đầu hình bầu dục	타원형 끝	楕円形の端	橢圓形端點	椭圆形端点
+Overhead	Máy chiếu qua đầu	오버헤드	オーバーヘッド	投影膠片	投影胶片
+PDF (*.pdf)	Tệp PDF (*.pdf)	PDF 파일 (*.pdf)	PDF ファイル (*.pdf)	PDF 檔案 (*.pdf)	PDF 文件 (*.pdf)
+PDF document (.pdf)	Tài liệu PDF (.pdf)	PDF 문서 (.pdf)	PDF ドキュメント (.pdf)	PDF 文件 (.pdf)	PDF 文档 (.pdf)
+PNG Picture (*.png)	Ảnh PNG (*.png)	PNG 그림 (*.png)	PNG 画像 (*.png)	PNG 圖片 (*.png)	PNG 图片 (*.png)
+PNG images (all slides)	Ảnh PNG (mọi trang chiếu)	PNG 이미지 (모든 슬라이드)	PNG 画像（すべてのスライド）	PNG 圖片（所有投影片）	PNG 图像（所有幻灯片）
+PNG images (current slide)	Ảnh PNG (trang chiếu hiện tại)	PNG 이미지 (현재 슬라이드)	PNG 画像（現在のスライド）	PNG 圖片（目前的投影片）	PNG 图像（当前幻灯片）
+Page Curl	Lật trang	페이지 말기	ページめくり	翻頁	翻页
+Pane	Ngăn	창	ウィンドウ	窗格	窗格
+Pareto	Biểu đồ Pareto	파레토 차트	パレート図	柏拉圖	帕累托图
+Particles	Hạt	입자	粒子	粒子	粒子
+Paste (⌘V)	Dán (⌘V)	붙여넣기 (⌘V)	貼り付け (⌘V)	貼上 (⌘V)	粘贴 (⌘V)
+Paste Formatting	Dán định dạng	서식 붙여넣기	書式の貼り付け	貼上格式	粘贴格式
+Paste and Match Formatting	Dán và khớp định dạng	서식에 맞춰 붙여넣기	書式を合わせて貼り付け	貼上並符合格式	粘贴并匹配格式
+Paste or type an outline. Unindented lines become slide titles; tab-indented lines become bullets.	Dán hoặc nhập dàn ý. Dòng không thụt lề trở thành tiêu đề trang chiếu; dòng thụt lề bằng phím Tab trở thành mục đầu dòng.	개요를 붙여넣거나 입력하세요. 들여쓰기가 없는 줄은 슬라이드 제목이 되고 Tab으로 들여쓴 줄은 글머리 기호가 됩니다.	アウトラインを貼り付けるか入力してください。字下げのない行はスライドのタイトルに、タブで字下げした行は箇条書きになります。	貼上或輸入大綱。未縮排的行會成為投影片標題；以 Tab 縮排的行會成為項目符號。	粘贴或输入大纲。未缩进的行将成为幻灯片标题；使用 Tab 缩进的行将成为项目符号。
+Pattern fill	Tô mẫu	패턴 채우기	塗りつぶし（パターン）	圖樣填滿	图案填充
+Peek In	Hé vào	살짝 들어오기	ピークイン	窺入	窥入
+Peel Off	Bóc ra	벗겨내기	はがれ	剝離	剥离
+Pick a graphic; type one item per line.	Chọn đồ họa; nhập một mục trên mỗi dòng.	그래픽을 선택하고 한 줄에 항목 하나씩 입력하세요.	グラフィックを選択し、1 行に 1 項目ずつ入力してください。	選擇圖形，並在每行輸入一個項目。	选择图形，每行输入一个项目。
+Pick a look for your slides. Ideas are generated on your device.	Chọn kiểu cho trang chiếu. Các ý tưởng được tạo trên thiết bị của bạn.	슬라이드 모양을 선택하세요. 아이디어는 기기에서 생성됩니다.	スライドの見た目を選んでください。アイデアはお使いのデバイス上で生成されます。	選擇投影片的外觀。設計構想會在您的裝置上產生。	选择幻灯片的外观。设计灵感将在您的设备上生成。
+% of all commits	% tổng số lần ghi nhận	전체 커밋의 %	全コミットに占める割合（%）	占所有提交的 %	占所有提交的 %
+@{}: {} PRs, {} commits, +{} / −{} lines (Δ {}), +{} / −{} binary assets, {} – {}	@{}: {} PR, {} lần ghi nhận, +{} / −{} dòng (Δ {}), +{} / −{} tài nguyên nhị phân, {} – {}	@{}: PR {}개, 커밋 {}개, 줄 +{} / −{} (Δ {}), 바이너리 에셋 +{} / −{}, {} – {}	@{}: PR {} 件、コミット {} 件、行 +{} / −{} (Δ {})、バイナリアセット +{} / −{}、{} – {}	@{}：{} 個 PR、{} 次提交、+{} / −{} 行（Δ {}）、+{} / −{} 個二進位資產、{} – {}	@{}：{} 个 PR、{} 次提交、+{} / −{} 行（Δ {}）、+{} / −{} 个二进制资源、{} – {}
+Binary assets added	Tài nguyên nhị phân đã thêm	추가된 바이너리 에셋	追加されたバイナリアセット	新增的二進位資產	添加的二进制资源
+Binary assets removed	Tài nguyên nhị phân đã xóa	삭제된 바이너리 에셋	削除されたバイナリアセット	移除的二進位資產	移除的二进制资源
+Picture	Hình ảnh	그림	図	圖片	图片
+Picture\nStyles	Kiểu\nảnh	그림\n스타일	図の\nスタイル	圖片\n樣式	图片\n样式
+Picture Format	Định dạng ảnh	그림 서식	図の形式	圖片格式	图片格式
+Picture Placeholder 2	Vùng giữ chỗ ảnh 2	그림 개체 틀 2	図のプレースホルダー 2	圖片預留位置 2	图片占位符 2
+Picture from File…	Ảnh từ tệp…	파일에서 그림…	ファイルから画像…	從檔案插入圖片…	从文件插入图片…
+Picture or texture fill	Tô ảnh hoặc họa tiết	그림 또는 질감 채우기	塗りつぶし（図またはテクスチャ）	圖片或材質填滿	图片或纹理填充
+Picture with Caption	Ảnh có chú thích	캡션 있는 그림	説明付きの図	含標題的圖片	带标题的图片
+Pie	Biểu đồ tròn	원형	円グラフ	圓形圖	饼图
+Pin	Ghim	고정	ピン留め	釘選	固定
+Placeholder colour	Màu vùng giữ chỗ	개체 틀 색	プレースホルダーの色	預留位置色彩	占位符颜色
+Plan\nBuild\nLaunch	Lập kế hoạch\nXây dựng\nRa mắt	계획\n제작\n출시	計画\n構築\n公開	規劃\n建置\n推出	规划\n构建\n发布
+Play Across Slides	Phát qua các trang chiếu	여러 슬라이드에서 재생	スライド切り替え後も再生	跨投影片播放	跨幻灯片播放
+Play Full Screen	Phát toàn màn hình	전체 화면 재생	全画面再生	全螢幕播放	全屏播放
+Play Narrations	Phát lời tường thuật	설명 재생	ナレーションの再生	播放旁白	播放旁白
+Play from\nCurrent Slide	Phát từ\ntrang chiếu hiện tại	현재 슬라이드\n부터 재생	現在のスライド\nから再生	從目前\n投影片播放	从当前\n幻灯片播放
+Play from\nStart	Phát từ\nđầu	처음부터\n재생	最初から\n再生	從頭\n播放	从头\n播放
+Play from Current Slide	Phát từ trang chiếu hiện tại	현재 슬라이드부터 재생	現在のスライドから再生	從目前投影片播放	从当前幻灯片播放
+Play from Start	Phát từ đầu	처음부터 재생	最初から再生	從頭播放	从头播放
+Play from Start (F5)	Phát từ đầu (F5)	처음부터 재생 (F5)	最初から再生 (F5)	從頭播放 (F5)	从头播放 (F5)
+Plus	Dấu cộng	더하기	プラス	加號	加号
+Portrait (9:16)	Dọc (9:16)	세로 (9:16)	縦 (9:16)	直向 (9:16)	纵向 (9:16)
+Position Objects	Định vị đối tượng	개체 위치	オブジェクトの位置	定位物件	定位对象
+Post	Đăng	게시	投稿	張貼	发布
+PowerPoint Presentation (*.pptx)	Bản trình chiếu PowerPoint (*.pptx)	PowerPoint 프레젠테이션 (*.pptx)	PowerPoint プレゼンテーション (*.pptx)	PowerPoint 簡報 (*.pptx)	PowerPoint 演示文稿 (*.pptx)
+PowerPoint Presentation (.pptx)	Bản trình chiếu PowerPoint (.pptx)	PowerPoint 프레젠테이션 (.pptx)	PowerPoint プレゼンテーション (.pptx)	PowerPoint 簡報 (.pptx)	PowerPoint 演示文稿 (.pptx)
+Presentations and slide shows, rebuilt from scratch in pure Rust.	Tạo bản trình chiếu và trình chiếu bằng ứng dụng được xây dựng lại hoàn toàn bằng Rust.	순수 Rust로 처음부터 다시 만든 프레젠테이션 및 슬라이드 쇼 앱입니다.	プレゼンテーションとスライドショーの機能を、純粋な Rust で一から構築しました。	以純 Rust 從頭打造的簡報與投影片放映功能。	使用纯 Rust 从头构建的演示文稿和幻灯片放映功能。
+Presentations you open show up here. Use Open to browse for one.	Các bản trình chiếu bạn mở sẽ xuất hiện ở đây. Dùng Mở để tìm tệp.	열었던 프레젠테이션이 여기에 표시됩니다. 열기를 사용하여 파일을 찾으세요.	開いたプレゼンテーションがここに表示されます。「開く」からファイルを選んでください。	您開啟的簡報會顯示於此。使用「開啟」瀏覽檔案。	您打开过的演示文稿会显示在此处。使用“打开”浏览文件。
+Presented by a speaker (full screen)	Người diễn thuyết trình bày (toàn màn hình)	발표자가 발표 (전체 화면)	発表者として使用する（フルスクリーン）	由演講者簡報（全螢幕）	演讲者放映（全屏幕）
+Presenter\nView	Dạng xem\ndiễn giả	발표자\n보기	発表者\nツール	簡報者\n檢視畫面	演讲者\n视图
+Presenter View	Dạng xem diễn giả	발표자 보기	発表者ツール	簡報者檢視畫面	演讲者视图
+Presenter View — KIO Deck	Dạng xem diễn giả — KIO Deck	발표자 보기 — KIO Deck	発表者ツール — KIO Deck	簡報者檢視畫面 — KIO Deck	演讲者视图 — KIO Deck
+Preset gradients	Màu chuyển sắc đặt sẵn	미리 설정된 그라데이션	既定のグラデーション	預設漸層	预设渐变
+Prestige	Uy tín	품격	プレステージ	尊榮	典雅
+Print All Slides	In mọi trang chiếu	모든 슬라이드 인쇄	すべてのスライドを印刷	列印所有投影片	打印所有幻灯片
+Print Current Slide	In trang chiếu hiện tại	현재 슬라이드 인쇄	現在のスライドを印刷	列印目前的投影片	打印当前幻灯片
+Print Hidden Slides	In trang chiếu ẩn	숨겨진 슬라이드 인쇄	非表示のスライドを印刷	列印隱藏的投影片	打印隐藏的幻灯片
+Print layout:	Bố cục in:	인쇄 레이아웃:	印刷レイアウト:	列印版面配置：	打印版式：
+Print them for your audience	In để phát cho khán giả	청중용으로 인쇄	聴衆に配布するために印刷	列印以供聽眾使用	打印以供观众使用
+Product Information	Thông tin sản phẩm	제품 정보	製品情報	產品資訊	产品信息
+Pulse	Nhịp đập	맥박	パルス	脈衝	脉冲
+Push	Đẩy	밀어내기	プッシュ	推入	推进
+Pyramid	Kim tự tháp	피라미드형	ピラミッド	金字塔	棱锥图
+Quick\nStyles	Kiểu\nnhanh	빠른\n스타일	クイック\nスタイル	快速\n樣式	快速\n样式
+Radar	Biểu đồ radar	방사형	レーダー	雷達圖	雷达图
+Radial	Tỏa tròn	방사형	放射状	放射狀	辐射状
+Random Bars	Thanh ngẫu nhiên	임의의 막대	ランダムストライプ	隨機線條	随机线条
+Reading\nView	Dạng xem\nđọc	읽기\n보기	閲覧\n表示	閱讀\n檢視	阅读\n视图
+Reading View	Dạng xem đọc	읽기 보기	閲覧表示	閱讀檢視	阅读视图
+Recording narration needs audio capture (coming soon)	Ghi lời tường thuật cần tính năng thu âm (sắp có)	설명을 녹음하려면 오디오 캡처가 필요합니다 (지원 예정)	ナレーションの録音には音声キャプチャが必要です（近日対応予定）	錄製旁白需要音訊擷取功能（即將推出）	录制旁白需要音频捕获功能（即将推出）
+Recover Unsaved Presentations	Khôi phục bản trình chiếu chưa lưu	저장하지 않은 프레젠테이션 복구	保存されていないプレゼンテーションの回復	復原未儲存的簡報	恢复未保存的演示文稿
+Rectangular	Hình chữ nhật	사각형	長方形	矩形	矩形
+Red Pen	Bút đỏ	빨강 펜	赤ペン	紅色畫筆	红色画笔
+Redo (⌘Y)	Làm lại (⌘Y)	다시 실행 (⌘Y)	やり直し (⌘Y)	重做 (⌘Y)	重做 (⌘Y)
+Reflected Rounded Rectangle	Hình chữ nhật bo góc có phản chiếu	반사된 둥근 사각형	反射付き角丸四角形	反射圓角矩形	映像圆角矩形
+Reflection	Phản chiếu	반사	反射	反射	映像
+Regroup	Nhóm lại	다시 그룹화	再グループ化	重新群組	重新组合
+Rehearse\nTimings	Diễn tập\nthời gian	예행\n연습	リハーサル\nの実行	排練\n計時	排练\n计时
+Remove\nBackground	Xóa\nnền	배경\n제거	背景の\n削除	移除\n背景	删除\n背景
+Remove All Sections	Xóa mọi phần	모든 구역 제거	すべてのセクションを削除	移除所有節	删除所有节
+Remove Background (coming soon)	Xóa nền (sắp có)	배경 제거 (지원 예정)	背景の削除（近日対応予定）	移除背景（即將推出）	删除背景（即将推出）
+Remove Section	Xóa phần	구역 제거	セクションの削除	移除節	删除节
+Remove Section & Slides	Xóa phần và trang chiếu	구역 및 슬라이드 제거	セクションとスライドの削除	移除節與投影片	删除节及幻灯片
+Rename Layout	Đổi tên bố cục	레이아웃 이름 바꾸기	レイアウト名の変更	重新命名版面配置	重命名版式
+Rename Section	Đổi tên phần	구역 이름 바꾸기	セクション名の変更	重新命名節	重命名节
+Rename Section…	Đổi tên phần…	구역 이름 바꾸기…	セクション名の変更…	重新命名節…	重命名节…
+Reopen	Mở lại	다시 열기	再度開く	重新開啟	重新打开
+Replace straight quotes with smart quotes	Thay dấu ngoặc kép thẳng bằng dấu ngoặc kép cong	곧은 따옴표를 둥근 따옴표로 바꾸기	まっすぐな引用符を左右の区別がある引用符に置換	將直引號取代為智慧引號	将直引号替换为弯引号
+Reply…	Trả lời…	회신…	返信…	回覆…	回复…
+Reset Background	Đặt lại nền	배경 다시 설정	背景のリセット	重設背景	重置背景
+Reset Crop	Đặt lại phần cắt	자르기 다시 설정	トリミングのリセット	重設裁剪	重置裁剪
+Reset Effects	Đặt lại hiệu ứng	효과 다시 설정	効果のリセット	重設效果	重置效果
+Reset Picture	Đặt lại ảnh	그림 다시 설정	図のリセット	重設圖片	重置图片
+Reset Slide	Đặt lại trang chiếu	슬라이드 원래대로	スライドのリセット	重設投影片	重置幻灯片
+Reset Slide Background	Đặt lại nền trang chiếu	슬라이드 배경 다시 설정	スライドの背景のリセット	重設投影片背景	重置幻灯片背景
+Resize shape to fit text	Đổi kích thước hình để vừa văn bản	텍스트에 맞게 도형 크기 조정	テキストに合わせて図形のサイズを調整	調整圖案大小以符合文字	调整形状大小以适应文字
+Resolve	Giải quyết	해결	解決済みにする	解決	解决
+Reveal	Hiện ra	드러내기	現れる	揭露	揭开
+Reverse the order	Đảo thứ tự	순서 반전	順序を逆にする	反轉順序	反转顺序
+Revert	Khôi phục bản đã lưu	저장된 상태로 되돌리기	保存した状態に戻す	回復為已儲存版本	还原为已保存版本
+Review	Xem lại	검토	校閲	校閱	审阅
+Rewind after Playing	Tua về đầu sau khi phát	재생 후 되감기	再生後に巻き戻す	播放後倒帶	播放后倒带
+Ribbon Tab	Thẻ dải băng	리본 탭	リボンのタブ	功能區索引標籤	功能区选项卡
+Right-to-Left Text Direction	Hướng văn bản từ phải sang trái	오른쪽에서 왼쪽으로 텍스트 방향	右から左へ書く	從右到左的文字方向	从右到左的文字方向
+Rise Up	Nổi lên	떠오르기	上昇	上升	上升
+Rotate Left 90°	Xoay trái 90°	왼쪽으로 90° 회전	左へ 90° 回転	向左旋轉 90°	向左旋转 90°
+Rotate Right 90°	Xoay phải 90°	오른쪽으로 90° 회전	右へ 90° 回転	向右旋轉 90°	向右旋转 90°
+Rotate all text 270°	Xoay toàn bộ văn bản 270°	모든 텍스트 270° 회전	すべての文字列を 270° 回転	將所有文字旋轉 270°	将所有文字旋转 270°
+Rotate all text 90°	Xoay toàn bộ văn bản 90°	모든 텍스트 90° 회전	すべての文字列を 90° 回転	將所有文字旋轉 90°	将所有文字旋转 90°
+Rotate with shape	Xoay cùng hình dạng	도형과 함께 회전	図形に合わせて回転	隨圖案旋轉	随形状旋转
+Rotation	Góc xoay	회전	回転	旋轉	旋转
+Round Dot	Chấm tròn	원형 점	丸点	圓點	圆点
+Rounded Diagonal Corner	Góc chéo bo tròn	대각선 둥근 모서리	対角の角を丸める	對角圓角	对角圆角
+Sample deck: Northern Lights	Bản trình chiếu mẫu: Cực quang	예제 프레젠테이션: 오로라	サンプル: オーロラ	範例簡報：北極光	示例演示文稿：北极光
+Saturation {}%	Độ bão hòa {}%	채도 {}%	彩度 {}%	飽和度 {}%	饱和度 {}%
+Save (⌘S)	Lưu (⌘S)	저장 (⌘S)	保存 (⌘S)	儲存 (⌘S)	保存 (⌘S)
+Saving a copy needs a file picker, which this window doesn't have.	Lưu bản sao cần hộp chọn tệp, nhưng cửa sổ này không có tính năng đó.	사본을 저장하려면 파일 선택 창이 필요하지만 이 창에서는 사용할 수 없습니다.	コピーの保存にはファイル選択ダイアログが必要ですが、このウィンドウでは利用できません。	儲存複本需要檔案選擇器，但此視窗不提供該功能。	保存副本需要文件选择器，但此窗口不提供该功能。
+Scatter	Phân tán	분산형	散布図	散佈圖	散点图
+Screenshot	Ảnh chụp màn hình	스크린샷	スクリーンショット	螢幕擷取畫面	屏幕截图
+Screenshot (not available yet)	Ảnh chụp màn hình (chưa hỗ trợ)	스크린샷 (아직 지원되지 않음)	スクリーンショット（未対応）	螢幕擷取畫面（尚未提供）	屏幕截图（尚未提供）
+Search commands (⇧⌘P)	Tìm lệnh (⇧⌘P)	명령 검색 (⇧⌘P)	コマンドを検索 (⇧⌘P)	搜尋命令 (⇧⌘P)	搜索命令 (⇧⌘P)
+Search commands…	Tìm lệnh…	명령 검색…	コマンドを検索…	搜尋命令…	搜索命令…
+Search for a file	Tìm tệp	파일 검색	ファイルを検索	搜尋檔案	搜索文件
+Search for themes	Tìm chủ đề	테마 검색	テーマを検索	搜尋佈景主題	搜索主题
+Section	Phần	구역	セクション	節	节
+Section Header	Tiêu đề phần	구역 머리글	セクション見出し	節標題	节标题
+Select a chart first.	Hãy chọn biểu đồ trước.	먼저 차트를 선택하세요.	まずグラフを選択してください。	請先選取圖表。	请先选择图表。
+Select a shape to format it.	Chọn hình dạng để định dạng.	서식을 지정할 도형을 선택하세요.	書式を設定する図形を選択してください。	選取圖案以設定其格式。	选择形状以设置其格式。
+Select an object on the slide and add an animation from the Animations tab.	Chọn đối tượng trên trang chiếu rồi thêm hoạt hình từ thẻ Hoạt hình.	슬라이드에서 개체를 선택한 다음 애니메이션 탭에서 애니메이션을 추가하세요.	スライド上のオブジェクトを選択し、「アニメーション」タブからアニメーションを追加してください。	選取投影片上的物件，再從「動畫」索引標籤新增動畫。	选择幻灯片上的对象，然后从“动画”选项卡添加动画。
+Selection\nPane	Ngăn\nlựa chọn	선택\n창	選択\nウィンドウ	選取\n窗格	选择\n窗格
+Selection Pane…	Ngăn lựa chọn…	선택 창…	選択ウィンドウ…	選取窗格…	选择窗格…
+Send\nBackward	Đưa\nra sau	뒤로\n보내기	背面へ\n移動	下移\n一層	下移\n一层
+Sentence case.	Viết hoa đầu câu.	문장 첫 글자를 대문자로.	文頭のみ大文字にする。	句首字母大寫。	句首字母大写。
+Set Up\nSlide Show	Thiết lập\ntrình chiếu	슬라이드 쇼\n설정	スライドショーの\n設定	設定\n投影片放映	设置\n幻灯片放映
+Set Up Show…	Thiết lập trình chiếu…	슬라이드 쇼 설정…	スライドショーの設定…	設定放映…	设置放映…
+Set Up Slide Show	Thiết lập trình chiếu	슬라이드 쇼 설정	スライドショーの設定	設定投影片放映	设置幻灯片放映
+Set as Default Shape	Đặt làm hình dạng mặc định	기본 도형으로 설정	既定の図形に設定	設為預設圖案	设为默认形状
+Several slides on each page of a PDF	Nhiều trang chiếu trên mỗi trang PDF	PDF 페이지당 여러 슬라이드	PDF の各ページに複数のスライド	每頁 PDF 包含多張投影片	每页 PDF 包含多张幻灯片
+Shape	Hình dạng	도형	図形	圖案	形状
+Shape\nStyles	Kiểu\nhình dạng	도형\n스타일	図形の\nスタイル	圖案\n樣式	形状\n样式
+Shape Fill	Tô hình dạng	도형 채우기	図形の塗りつぶし	圖案填滿	形状填充
+Shape Format	Định dạng hình dạng	도형 서식	図形の書式	圖案格式	形状格式
+Shape Outline	Viền hình dạng	도형 윤곽선	図形の枠線	圖案外框	形状轮廓
+Shape {}	Hình dạng {}	도형 {}	図形 {}	圖案 {}	形状 {}
+Shapes	Hình dạng	도형	図形	圖案	形状
+Show\nComments	Hiện\nnhận xét	메모\n표시	コメントを\n表示	顯示\n註解	显示\n批注
+Show Media Controls	Hiện điều khiển phương tiện	미디어 컨트롤 표시	メディアコントロールの表示	顯示媒體控制項	显示媒体控件
+Show Slide	Hiện trang chiếu	슬라이드 표시	スライドを表示	顯示投影片	显示幻灯片
+Show smart guides	Hiện đường căn chỉnh thông minh	스마트 안내선 표시	スマートガイドを表示	顯示智慧輔助線	显示智能参考线
+Show type	Kiểu trình chiếu	쇼 형식	種類	放映類型	放映类型
+Show without animation	Trình chiếu không có hoạt hình	애니메이션 없이 보기	アニメーションを表示しない	放映時不顯示動畫	放映时不显示动画
+Show without narration	Trình chiếu không có lời tường thuật	설명 없이 보기	ナレーションを再生しない	放映時不播放旁白	放映时不播放旁白
+Shred	Xé vụn	잘게 찢기	細断	撕碎	撕碎
+Shrink text on overflow	Thu nhỏ văn bản khi tràn	넘치면 텍스트 축소	はみ出す場合だけ自動調整	溢位時縮小文字	溢出时缩小文本
+Simple Frame, White	Khung đơn giản, trắng	기본 프레임, 흰색	シンプルな枠、白	簡單框架，白色	简单框架，白色
+Single Left	Mũi tên đơn sang trái	왼쪽 단일 화살표	左向き単一矢印	向左單箭號	向左单箭头
+Single Right	Mũi tên đơn sang phải	오른쪽 단일 화살표	右向き単一矢印	向右單箭號	向右单箭头
+Size & Properties	Kích thước và thuộc tính	크기 및 속성	サイズとプロパティ	大小與內容	大小与属性
+Slide\nMaster	Trang chiếu\ncái	슬라이드\n마스터	スライド\nマスター	投影片\n母片	幻灯片\n母版
+Slide\nNumber	Số\ntrang chiếu	슬라이드\n번호	スライド\n番号	投影片\n編號	幻灯片\n编号
+Slide\nSize	Kích thước\ntrang chiếu	슬라이드\n크기	スライドの\nサイズ	投影片\n大小	幻灯片\n大小
+Slide\nSorter	Sắp xếp\ntrang chiếu	여러 슬라이드\n보기	スライド\n一覧	投影片\n瀏覽	幻灯片\n浏览
+Slide Master	Trang chiếu cái	슬라이드 마스터	スライドマスター	投影片母片	幻灯片母版
+Slide Number	Số trang chiếu	슬라이드 번호	スライド番号	投影片編號	幻灯片编号
+Slide Number Placeholder	Vùng giữ chỗ số trang chiếu	슬라이드 번호 개체 틀	スライド番号のプレースホルダー	投影片編號預留位置	幻灯片编号占位符
+Slide Size	Kích thước trang chiếu	슬라이드 크기	スライドのサイズ	投影片大小	幻灯片大小
+Slide Sorter	Sắp xếp trang chiếu	여러 슬라이드 보기	スライド一覧	投影片瀏覽	幻灯片浏览
+Slide number	Số trang chiếu	슬라이드 번호	スライド番号	投影片編號	幻灯片编号
+Slide timings recorded.	Đã ghi thời gian trang chiếu.	슬라이드 시간이 기록되었습니다.	スライドのタイミングを記録しました。	已錄製投影片時間。	已记录幻灯片计时。
+Slide {:02}:{:04.1}   Total {:02}:{:02}	Trang chiếu {:02}:{:04.1}   Tổng {:02}:{:02}	슬라이드 {:02}:{:04.1}   전체 {:02}:{:02}	スライド {:02}:{:04.1}   合計 {:02}:{:02}	投影片 {:02}:{:04.1}   總計 {:02}:{:02}	幻灯片 {:02}:{:04.1}   总计 {:02}:{:02}
+Slide {} of {}	Trang chiếu {} trên {}	슬라이드 {} / {}	スライド {} / {}	投影片 {} / {}	幻灯片 {} / {}
+Slide {}: {}{}	Trang chiếu {}: {}{}	슬라이드 {}: {}{}	スライド {}: {}{}	投影片 {}：{}{}	幻灯片 {}：{}{}
+Slide {}: “{w}”	Trang chiếu {}: “{w}”	슬라이드 {}: “{w}”	スライド {}:「{w}」	投影片 {}：「{w}」	幻灯片 {}：“{w}”
+Slides (e.g. 1,3,5):	Trang chiếu (ví dụ: 1,3,5):	슬라이드 (예: 1,3,5):	スライド（例: 1,3,5）:	投影片（例如 1,3,5）：	幻灯片（例如 1,3,5）：
+Slides from Outline	Trang chiếu từ dàn ý	개요에서 슬라이드	アウトラインからスライド	從大綱插入投影片	从大纲插入幻灯片
+Slides from Outline…	Trang chiếu từ dàn ý…	개요에서 슬라이드…	アウトラインからスライド…	從大綱插入投影片…	从大纲插入幻灯片…
+Slides sized for:	Kích thước trang chiếu theo:	슬라이드 크기:	スライドのサイズ指定:	投影片大小：	幻灯片大小：
+Smile	Mỉm cười	미소	笑顔	微笑	微笑
+Smoothly	Mượt mà	부드럽게	滑らかに	平滑	平滑
+Snap objects to grid	Bắt đối tượng vào lưới	개체를 눈금에 맞춤	描画オブジェクトをグリッド線に合わせる	將物件貼齊格線	将对象对齐到网格
+Soft Edge Rectangle	Hình chữ nhật cạnh mềm	부드러운 가장자리 사각형	ぼかし付き四角形	柔邊矩形	柔化边缘矩形
+Soft Edges	Cạnh mềm	부드러운 가장자리	ぼかし	柔邊	柔化边缘
+Solid	Liền	실선	実線	實線	实线
+Solid fill	Tô màu đặc	단색 채우기	塗りつぶし（単色）	實心填滿	纯色填充
+Solid line	Đường liền	실선	実線	實線	实线
+Source on GitHub	Mã nguồn trên GitHub	GitHub 소스 코드	GitHub のソースコード	GitHub 原始碼	GitHub 源代码
+Spacing after (pt):	Khoảng cách sau (pt):	단락 뒤 간격 (pt):	段落後の間隔 (pt):	段落後間距 (pt)：	段后间距 (pt)：
+Spacing before (pt):	Khoảng cách trước (pt):	단락 앞 간격 (pt):	段落前の間隔 (pt):	段落前間距 (pt)：	段前间距 (pt)：
+Special — hanging (in):	Đặc biệt — thụt lề treo (inch):	특수 — 내어쓰기 (인치):	最初の行 — ぶら下げ（インチ）:	特殊格式 — 凸排（英吋）：	特殊格式 — 悬挂缩进（英寸）：
+Specify the company	Nhập tên công ty	회사 지정	会社名を入力	指定公司	指定公司
+Specify the subject	Nhập chủ đề	주제 지정	件名を入力	指定主旨	指定主题
+Speech	Lời nói	말풍선	吹き出し	對話框	对话气泡
+Spin	Quay	회전	スピン	旋轉	旋转
+Spinner	Vòng xoay	회전판	回転体	旋轉器	旋转器
+Split	Tách	나누기	分割	分割	分割
+Split\nCells	Tách\nô	셀\n분할	セルの\n分割	分割\n儲存格	拆分\n单元格
+Square (1:1)	Vuông (1:1)	정사각형 (1:1)	正方形 (1:1)	正方形 (1:1)	正方形 (1:1)
+Square Dot	Chấm vuông	사각형 점	角点	方點	方点
+Stacked Area	Miền xếp chồng	누적 영역형	積み上げ面	堆疊區域圖	堆积面积图
+Stacked Bar	Thanh xếp chồng	누적 가로 막대형	積み上げ横棒	堆疊橫條圖	堆积条形图
+Stacked Column	Cột xếp chồng	누적 세로 막대형	積み上げ縦棒	堆疊直條圖	堆积柱形图
+Stacked Line	Đường xếp chồng	누적 꺾은선형	積み上げ折れ線	堆疊折線圖	堆积折线图
+Standard (4:3)	Tiêu chuẩn (4:3)	표준 (4:3)	標準 (4:3)	標準 (4:3)	标准 (4:3)
+Standard Colors	Màu tiêu chuẩn	표준 색	標準の色	標準色彩	标准色
+Start After Previous	Bắt đầu sau hiệu ứng trước	이전 효과 다음에 시작	直前の動作の後に開始	接續前動畫之後開始	上一动画之后开始
+Start Automatically	Bắt đầu tự động	자동으로 시작	自動的に開始	自動開始	自动开始
+Start On Click	Bắt đầu khi nhấp	클릭할 때 시작	クリック時に開始	按一下時開始	单击时开始
+Start With Previous	Bắt đầu cùng hiệu ứng trước	이전 효과와 함께 시작	直前の動作と同時に開始	與前動畫同時開始	与上一动画同时开始
+Start a conversation	Bắt đầu cuộc trò chuyện	대화 시작	会話を開始	開始交談	开始对话
+Start time (s):	Thời điểm bắt đầu (giây):	시작 시간 (초):	開始時刻（秒）:	開始時間（秒）：	开始时间（秒）：
+Stealth end	Đầu mũi tên lõm	오목한 화살촉	ステルス矢印の先端	凹形箭頭端點	凹形箭头端点
+Stock	Chứng khoán	주식형	株価	股票圖	股价图
+Strips	Dải	줄무늬	ストリップ	條紋	条纹
+Style {i}	Kiểu {i}	스타일 {i}	スタイル {i}	樣式 {i}	样式 {i}
+Subtitle 2	Phụ đề 2	부제목 2	サブタイトル 2	副標題 2	副标题 2
+Subtle	Nhẹ nhàng	은은한 효과	控えめ	細緻	细微
+Sun	Mặt trời	태양	太陽	太陽	太阳
+Sunburst	Tia nắng	선버스트형	サンバースト	旭日圖	旭日图
+Surface	Bề mặt	표면형	等高線	曲面圖	曲面图
+Switch	Chuyển đổi	전환	切り替え	切換	切换
+Swivel	Xoay trục	회전축	旋回	迴旋	回旋
+Symbol	Ký hiệu	기호	記号	符號	符号
+Table Design	Thiết kế bảng	표 디자인	テーブルデザイン	表格設計	表格设计
+Table…	Bảng…	표…	表…	表格…	表格…
+Tags	Thẻ	태그	タグ	標籤	标签
+Task Pane	Ngăn tác vụ	작업 창	作業ウィンドウ	工作窗格	任务窗格
+Teeter	Lắc lư	흔들기	シーソー	搖晃	跷跷板
+Text\nBox	Hộp\nvăn bản	텍스트\n상자	テキスト\nボックス	文字\n方塊	文本\n框
+Text Box	Hộp văn bản	텍스트 상자	テキストボックス	文字方塊	文本框
+Text Direction	Hướng văn bản	텍스트 방향	文字列の方向	文字方向	文字方向
+Text Effects	Hiệu ứng văn bản	텍스트 효과	文字の効果	文字效果	文本效果
+Text Fill	Tô văn bản	텍스트 채우기	文字の塗りつぶし	文字填滿	文本填充
+Text Highlight Color	Màu tô sáng văn bản	텍스트 강조 색	文字の蛍光ペンの色	文字醒目提示色彩	文本突出显示颜色
+Text Options	Tùy chọn văn bản	텍스트 옵션	文字のオプション	文字選項	文本选项
+Text Outline	Viền văn bản	텍스트 윤곽선	文字の輪郭	文字外框	文本轮廓
+Text Placeholder 2	Vùng giữ chỗ văn bản 2	텍스트 개체 틀 2	テキストのプレースホルダー 2	文字預留位置 2	文本占位符 2
+Text Placeholder 3	Vùng giữ chỗ văn bản 3	텍스트 개체 틀 3	テキストのプレースホルダー 3	文字預留位置 3	文本占位符 3
+Text Placeholder 4	Vùng giữ chỗ văn bản 4	텍스트 개체 틀 4	テキストのプレースホルダー 4	文字預留位置 4	文本占位符 4
+Text/Background - Dark 1	Văn bản/Nền - Tối 1	텍스트/배경 - 어둡게 1	テキスト／背景 - 濃色 1	文字／背景 - 深色 1	文本/背景 - 深色 1
+Text/Background - Dark 2	Văn bản/Nền - Tối 2	텍스트/배경 - 어둡게 2	テキスト／背景 - 濃色 2	文字／背景 - 深色 2	文本/背景 - 深色 2
+Text/Background - Light 1	Văn bản/Nền - Sáng 1	텍스트/배경 - 밝게 1	テキスト／背景 - 淡色 1	文字／背景 - 淺色 1	文本/背景 - 浅色 1
+Text/Background - Light 2	Văn bản/Nền - Sáng 2	텍스트/배경 - 밝게 2	テキスト／背景 - 淡色 2	文字／背景 - 淺色 2	文本/背景 - 浅色 2
+The current slide as a compressed picture	Trang chiếu hiện tại dưới dạng ảnh nén	현재 슬라이드를 압축된 그림으로 저장	現在のスライドを圧縮画像として保存	將目前投影片儲存為壓縮圖片	将当前幻灯片保存为压缩图像
+The current slide as a picture	Trang chiếu hiện tại dưới dạng ảnh	현재 슬라이드를 그림으로 저장	現在のスライドを画像として保存	將目前投影片儲存為圖片	将当前幻灯片保存为图像
+The presentation keeps its own file	Bản trình chiếu vẫn giữ tệp riêng của nó	프레젠테이션의 원래 파일을 유지합니다	プレゼンテーションの元のファイルは保持されます	簡報會保留原有檔案	演示文稿保留其原文件
+The slide titles and bullet text as plain text	Tiêu đề trang chiếu và mục đầu dòng dưới dạng văn bản thuần	슬라이드 제목과 글머리 기호 텍스트를 일반 텍스트로 저장	スライドのタイトルと箇条書きをプレーンテキストとして保存	將投影片標題與項目符號文字儲存為純文字	将幻灯片标题与项目符号文本保存为纯文本
+The spelling check is complete. No issues found.	Đã kiểm tra chính tả. Không tìm thấy lỗi.	맞춤법 검사가 완료되었습니다. 문제가 발견되지 않았습니다.	スペルチェックが完了しました。問題は見つかりませんでした。	拼字檢查已完成，未發現問題。	拼写检查已完成，未发现问题。
+The version, the people and models who built it, and where to find us.	Phiên bản, những người và mô hình đã xây dựng ứng dụng, cùng thông tin liên hệ.	버전, 제작에 참여한 사람과 모델, 연락처를 확인하세요.	バージョン、開発に携わった人々とモデル、連絡先について。	版本、參與開發的人員與模型，以及聯絡資訊。	版本、参与开发的人员和模型，以及联系信息。
+Theme Colors	Màu chủ đề	테마 색	テーマの色	佈景主題色彩	主题颜色
+Themes	Chủ đề	테마	テーマ	佈景主題	主题
+There are no unsaved changes.	Không có thay đổi nào chưa lưu.	저장하지 않은 변경 사항이 없습니다.	未保存の変更はありません。	沒有未儲存的變更。	没有未保存的更改。
+There are no unsaved presentations to recover	Không có bản trình chiếu chưa lưu để khôi phục	복구할 저장되지 않은 프레젠테이션이 없습니다	回復できる未保存のプレゼンテーションはありません	沒有可復原的未儲存簡報	没有可恢复的未保存演示文稿
+Thesaurus	Từ điển đồng nghĩa	동의어 사전	類義語辞典	同義字庫	同义词库
+Thesaurus (coming soon)	Từ điển đồng nghĩa (sắp có)	동의어 사전 (지원 예정)	類義語辞典（近日対応予定）	同義字庫（即將推出）	同义词库（即将推出）
+This Document	Tài liệu này	이 문서	このドキュメント	此文件	此文档
+This presentation has never been saved.	Bản trình chiếu này chưa từng được lưu.	이 프레젠테이션은 한 번도 저장되지 않았습니다.	このプレゼンテーションはまだ一度も保存されていません。	此簡報尚未儲存過。	此演示文稿尚未保存过。
+This presentation has unsaved changes. Revert goes back to the saved file.	Bản trình chiếu này có thay đổi chưa lưu. Khôi phục sẽ đưa về tệp đã lưu.	이 프레젠테이션에 저장하지 않은 변경 사항이 있습니다. 되돌리기를 선택하면 저장된 파일로 돌아갑니다.	このプレゼンテーションには未保存の変更があります。「保存した状態に戻す」を選ぶと保存済みのファイルに戻ります。	此簡報有未儲存的變更。回復會返回已儲存的檔案。	此演示文稿有未保存的更改。还原将返回已保存的文件。
+Thought	Suy nghĩ	생각 풍선	思考の吹き出し	思考框	思想气泡
+Three a page leaves lines for notes	Ba trang chiếu mỗi trang, chừa dòng để ghi chú	페이지당 3개를 배치하고 메모할 줄을 남깁니다	1 ページに 3 スライドを配置し、メモ用の罫線を付けます	每頁三張，並留有筆記用橫線	每页三张，并留有笔记横线
+Through Black	Qua màn hình đen	검정 화면을 거쳐서	黒い画面を経由	經過黑畫面	经黑屏
+Tight	Hẹp	좁게	狭く	緊密	紧密
+Title	Tiêu đề	제목	タイトル	標題	标题
+Title 1	Tiêu đề 1	제목 1	タイトル 1	標題 1	标题 1
+Title Only	Chỉ tiêu đề	제목만	タイトルのみ	僅標題	仅标题
+Title Slide	Trang chiếu tiêu đề	제목 슬라이드	タイトルスライド	標題投影片	标题幻灯片
+Title and Content	Tiêu đề và nội dung	제목 및 내용	タイトルとコンテンツ	標題及內容	标题和内容
+Title and Vertical Text	Tiêu đề và văn bản dọc	제목 및 세로 텍스트	タイトルと縦書きテキスト	標題及直排文字	标题和竖排文本
+Total Row	Hàng tổng	요약 행	集計行	合計列	汇总行
+Transitions	Chuyển tiếp	전환	画面切り替え	轉場	切换
+Translate	Dịch	번역	翻訳	翻譯	翻译
+Translation needs a language model (not bundled)	Dịch cần mô hình ngôn ngữ (không kèm sẵn)	번역에는 언어 모델이 필요합니다 (포함되지 않음)	翻訳には言語モデルが必要です（同梱されていません）	翻譯需要語言模型（未隨附）	翻译需要语言模型（未附带）
+Treemap	Sơ đồ cây	트리맵	ツリーマップ	樹狀圖	树状图
+Trigger	Kích hoạt	트리거	トリガー	觸發程序	触发器
+Trim	Cắt	트리밍	トリミング	修剪	剪裁
+Trim Media	Cắt phương tiện	미디어 트리밍	メディアのトリミング	修剪媒體	剪裁媒体
+Turns	Vòng xoắn	회전 경로	ターン	轉彎	转弯
+Two Content	Hai nội dung	콘텐츠 2개	2 つのコンテンツ	兩項內容	两栏内容
+Type an equation in linear form (e.g. a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a).	Nhập phương trình dạng tuyến tính (ví dụ: a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a).	수식을 선형 형식으로 입력하세요 (예: a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a).	数式を線形形式で入力してください（例: a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a）。	以線性格式輸入方程式（例如 a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a）。	以线性格式输入公式（例如 a^2+b^2=c^2, x=(-b±√(b^2-4ac))/2a）。
+Uncover	Mở ra	벗겨내기	カバーを外す	揭開	揭开
+Undo (⌘Z)	Hoàn tác (⌘Z)	실행 취소 (⌘Z)	元に戻す (⌘Z)	復原 (⌘Z)	撤销 (⌘Z)
+Upstream DeckCraft community	Cộng đồng dự án gốc DeckCraft	원본 DeckCraft 커뮤니티	元の DeckCraft コミュニティ	原始 DeckCraft 社群	上游 DeckCraft 社区
+Upstream DeckCraft project	Dự án gốc DeckCraft	원본 DeckCraft 프로젝트	元の DeckCraft プロジェクト	原始 DeckCraft 專案	上游 DeckCraft 项目
+Use Timings	Sử dụng thời gian	시간 사용	タイミングを使用	使用計時	使用计时
+Use timings, if present	Sử dụng thời gian nếu có	시간 설정이 있으면 사용	タイミングが設定されていれば使用	使用已設定的計時	使用已设置的计时
+User Information	Thông tin người dùng	사용자 정보	ユーザー情報	使用者資訊	用户信息
+Version {}	Phiên bản {}	버전 {}	バージョン {}	版本 {}	版本 {}
+Vertical Text Placeholder 2	Vùng giữ chỗ văn bản dọc 2	세로 텍스트 개체 틀 2	縦書きテキストのプレースホルダー 2	直排文字預留位置 2	竖排文本占位符 2
+Vertical Title 1	Tiêu đề dọc 1	세로 제목 1	縦書きタイトル 1	直排標題 1	竖排标题 1
+Vertical Title and Text	Tiêu đề và văn bản dọc	세로 제목 및 텍스트	縦書きタイトルとテキスト	直排標題及文字	竖排标题和文本
+Vertical alignment	Căn chỉnh dọc	세로 맞춤	垂直方向の配置	垂直對齊	垂直对齐
+Very Loose	Rất rộng	매우 넓게	より広く	非常寬鬆	非常宽松
+Very Tight	Rất hẹp	매우 좁게	より狭く	非常緊密	非常紧密
+Video from File…	Video từ tệp…	파일에서 동영상…	ファイルからビデオ…	從檔案插入影片…	从文件插入视频…
+Vortex	Xoáy	소용돌이	渦巻き	漩渦	旋涡
+Waterfall	Thác nước	폭포형	ウォーターフォール	瀑布圖	瀑布图
+Web Page or File	Trang web hoặc tệp	웹 페이지 또는 파일	Web ページまたはファイル	網頁或檔案	网页或文件
+Wedge	Hình nêm	쐐기	くさび	楔形	楔形
+Wheel	Bánh xe	바퀴	ホイール	輪形	轮子
+Widescreen (16:9)	Màn hình rộng (16:9)	와이드스크린 (16:9)	ワイド画面 (16:9)	寬螢幕 (16:9)	宽屏 (16:9)
+Width (in):	Chiều rộng (inch):	너비 (인치):	幅（インチ）:	寬度（英吋）：	宽度（英寸）：
+Wipe	Quét	닦아내기	ワイプ	擦去	擦除
+With Previous	Cùng hiệu ứng trước	이전 효과와 함께	直前の動作と同時	與前動畫同時	与上一动画同时
+WordArt style {}	Kiểu WordArt {}	WordArt 스타일 {}	ワードアートのスタイル {}	文字藝術師樣式 {}	艺术字样式 {}
+Words	Từ	단어	単語	字詞	字词
+Wrap text in shape	Ngắt dòng văn bản trong hình	도형 안에서 텍스트 줄 바꿈	図形内でテキストを折り返す	在圖案內自動換行	在形状内自动换行
+Your name (comments):	Tên của bạn (nhận xét):	이름 (메모):	名前（コメント用）:	您的姓名（用於註解）：	您的姓名（用于批注）：
+Zoom and Rotate	Thu phóng và xoay	확대/축소 및 회전	ズームと回転	縮放與旋轉	缩放和旋转
+Zoom…	Thu phóng…	확대/축소…	ズーム…	縮放…	缩放…
+dropped file	Tệp đã thả	끌어 놓은 파일	ドロップされたファイル	拖放的檔案	拖放的文件
+missing `id`	Thiếu `id`	`id` 누락	`id` がありません	缺少 `id`	缺少 `id`
+missing `percent`	Thiếu `percent`	`percent` 누락	`percent` がありません	缺少 `percent`	缺少 `percent`
+missing `tab`	Thiếu `tab`	`tab` 누락	`tab` がありません	缺少 `tab`	缺少 `tab`
+no frame was presented (screen locked or window hidden); use ui.render	Không có khung hình được hiển thị (màn hình bị khóa hoặc cửa sổ bị ẩn); hãy dùng ui.render	표시된 프레임이 없습니다 (화면이 잠겨 있거나 창이 숨겨짐). ui.render를 사용하세요	フレームが表示されていません（画面がロック中、またはウィンドウが非表示）。ui.render を使用してください	未顯示影格（螢幕已鎖定或視窗已隱藏）；請使用 ui.render	未显示帧（屏幕已锁定或窗口已隐藏）；请使用 ui.render
+nothing to print: no presentation is open	Không có gì để in: chưa mở bản trình chiếu nào	인쇄할 내용이 없습니다. 열린 프레젠테이션이 없습니다	印刷する内容がありません。プレゼンテーションが開かれていません	沒有可列印的內容：未開啟簡報	没有可打印的内容：未打开演示文稿
+size (pt)	Cỡ (pt)	크기 (pt)	サイズ (pt)	大小 (pt)	大小 (pt)
+tOGGLE cASE	đẢO cHỮ hOA/tHƯỜNG	대/소문자 전환	大文字と小文字を入れ替える	切換大小寫	切换大小写
+unknown File page `{id}`	Trang Tệp không xác định `{id}`	알 수 없는 파일 페이지 `{id}`	不明なファイルページ `{id}`	未知的檔案頁面 `{id}`	未知的文件页面 `{id}`
+unknown UI command `{id}`	Lệnh giao diện không xác định `{id}`	알 수 없는 UI 명령 `{id}`	不明な UI コマンド `{id}`	未知的介面命令 `{id}`	未知的界面命令 `{id}`
+“{}” is not available yet.	“{}” hiện chưa khả dụng.	“{}”은(는) 아직 사용할 수 없습니다.	「{}」はまだ利用できません。	「{}」尚未提供。	“{}”尚未提供。
+▶ Play All	▶ Phát tất cả	▶ 모두 재생	▶ すべて再生	▶ 全部播放	▶ 全部播放
+◀ Previous	◀ Trước	◀ 이전	◀ 前へ	◀ 上一個	◀ 上一个
+✏ on	✏ bật	✏ 켜짐	✏ オン	✏ 開啟	✏ 开启
+Action	Hành động	동작	動作	動作	动作
+Align	Căn chỉnh	맞춤	配置	對齊	对齐
+Area	Miền	영역형	面	區域圖	面积图
+Arrange	Sắp xếp	정렬	配置	排列	排列
+Arrows	Mũi tên	화살표	矢印	箭號	箭头
+Bevel	Cạnh xiên	입체 효과	面取り	斜角	棱台
+Bold	Đậm	굵게	太字	粗體	加粗
+Bring Forward	Đưa ra trước	앞으로 가져오기	前面へ移動	上移一層	上移一层
+Browse	Duyệt	찾아보기	参照	瀏覽	浏览
+Change Case	Đổi chữ hoa/thường	대/소문자 바꾸기	文字種の変換	變更大小寫	更改大小写
+Collapse	Thu gọn	축소	折りたたむ	摺疊	折叠
+Color	Màu	색	色	色彩	颜色
+Columns	Cột	단	段組み	分欄	分栏
+Commits	Lần ghi nhận	커밋	コミット	提交次數	提交次数
+Company	Công ty	회사	会社	公司	公司
+Contributors	Người đóng góp	기여자	貢献者	貢獻者	贡献者
+Currency	Tiền tệ	통화	通貨	貨幣	货币
+Custom	Tùy chỉnh	사용자 지정	ユーザー設定	自訂	自定义
+Dark	Tối	어둡게	暗い	深色	深色
+Darken	Làm tối	어둡게 하기	暗くする	變暗	变暗
+Dash	Nét đứt	파선	破線	虛線	虚线
+Decrease Font Size	Giảm cỡ chữ	글꼴 크기 줄임	フォントサイズを小さくする	縮小字型	减小字号
+Desaturate	Giảm độ bão hòa	채도 낮추기	彩度を下げる	降低飽和度	降低饱和度
+Diamond	Hình thoi	마름모	ひし形	菱形	菱形
+Dissolve	Tan dần	디졸브	ディゾルブ	溶解	溶解
+Document	Tài liệu	문서	ドキュメント	文件	文档
+Don't Save	Không lưu	저장 안 함	保存しない	不要儲存	不保存
+Down	Xuống	아래로	下へ	向下	向下
+Draw	Vẽ	그리기	描画	繪圖	绘图
+Effects	Hiệu ứng	효과	効果	效果	效果
+Exit	Thoát	끝내기	終了	結束	退出
+Expand	Mở rộng	확장	展開	展開	展开
+Fade	Mờ dần	페이드	フェード	淡出淡入	淡化
+Fill	Tô	채우기	塗りつぶし	填滿	填充
+Fill Color	Màu tô	채우기 색	塗りつぶしの色	填滿色彩	填充颜色
+Flash	Chớp sáng	깜박이기	フラッシュ	閃光	闪光
+Flip Horizontal	Lật ngang	좌우 대칭	左右反転	水平翻轉	水平翻转
+Flip Vertical	Lật dọc	상하 대칭	上下反転	垂直翻轉	垂直翻转
+Fonts	Phông chữ	글꼴	フォント	字型	字体
+Format	Định dạng	서식	書式	格式	格式
+From Left	Từ trái	왼쪽에서	左から	從左方	从左侧
+From Right	Từ phải	오른쪽에서	右から	從右方	从右侧
+General	Chung	일반	全般	一般	常规
+Glow	Phát sáng	네온	光彩	光暈	发光
+Grab bag	Tổng hợp	모아 보기	まとめ表示	綜合檢視	综合视图
+Grayscale	Thang xám	회색조	グレースケール	灰階	灰度
+Greek	Hy Lạp	그리스 문자	ギリシャ文字	希臘字母	希腊字母
+Green	Xanh lá	녹색	緑	綠色	绿色
+Group	Nhóm	그룹화	グループ化	群組	组合
+Hide All	Ẩn tất cả	모두 숨기기	すべて非表示	全部隱藏	全部隐藏
+High	Cao	높음	高	高	高
+Home	Trang đầu	홈	ホーム	常用	开始
+Horizontal	Ngang	가로	横	水平	水平
+In	Vào	안으로	内側へ	向內	向内
+Increase Font Size	Tăng cỡ chữ	글꼴 크기 늘림	フォントサイズを大きくする	放大字型	增大字号
+Italic	Nghiêng	기울임꼴	斜体	斜體	倾斜
+Justify	Căn đều	양쪽 맞춤	両端揃え	左右對齊	两端对齐
+Layout	Bố cục	레이아웃	レイアウト	版面配置	版式
+Left	Trái	왼쪽	左	左	左
+Light	Sáng	밝게	明るい	淺色	浅色
+Lighten	Làm sáng	밝게 하기	明るくする	變亮	变亮
+Linear	Tuyến tính	선형	線形	線性	线性
+Lines +/−	Dòng +/−	줄 +/−	行 +/−	行數 +/−	行数 +/−
+Lines added	Dòng đã thêm	추가된 줄	追加された行	新增行數	添加行数
+Lines deleted	Dòng đã xóa	삭제된 줄	削除された行	刪除行數	删除行数
+Link	Liên kết	링크	リンク	連結	链接
+Location	Vị trí	위치	場所	位置	位置
+Lock	Khóa	잠금	ロック	鎖定	锁定
+Low	Thấp	낮음	低	低	低
+Media	Phương tiện	미디어	メディア	媒體	媒体
+Medium	Trung bình	보통	中	中	中
+Model	Mô hình	모델	モデル	模型	模型
+Motion	Chuyển động	동작	動き	動作	动作
+Name (A–Z)	Tên (A–Z)	이름 (A–Z)	名前 (A–Z)	名稱 (A–Z)	名称 (A–Z)
+Next Page	Trang tiếp theo	다음 페이지	次のページ	下一頁	下一页
+No Color	Không màu	색 없음	色なし	無色彩	无颜色
+Notes	Ghi chú	노트	ノート	備忘稿	备注
+Orange	Cam	주황	オレンジ	橙色	橙色
+Out	Ra	바깥으로	外側へ	向外	向外
+Perspective	Phối cảnh	원근	透視投影	透視	透视
+Preview	Xem trước	미리 보기	プレビュー	預覽	预览
+Properties	Thuộc tính	속성	プロパティ	內容	属性
+Purple	Tím	보라	紫	紫色	紫色
+Random	Ngẫu nhiên	임의	ランダム	隨機	随机
+Recent	Gần đây	최근 항목	最近使った項目	最近使用	最近使用
+Red	Đỏ	빨강	赤	紅色	红色
+Remove stop	Xóa điểm dừng	중지점 제거	分岐点を削除	移除停駐點	删除光圈
+Right	Phải	오른쪽	右	右	右
+Ripple	Gợn sóng	잔물결	波紋	漣漪	涟漪
+Ruler	Thước	눈금자	ルーラー	尺規	标尺
+Save As	Lưu thành	다른 이름으로 저장	名前を付けて保存	另存新檔	另存为
+Saved	Đã lưu	저장됨	保存済み	已儲存	已保存
+Select	Chọn	선택	選択	選取	选择
+Send Backward	Đưa ra sau	뒤로 보내기	背面へ移動	下移一層	下移一层
+Shading	Tô nền	음영	網かけ	網底	底纹
+Shadow	Đổ bóng	그림자	影	陰影	阴影
+Shape Effects	Hiệu ứng hình dạng	도형 효과	図形の効果	圖案效果	形状效果
+Size	Kích thước	크기	サイズ	大小	大小
+Spelling	Chính tả	맞춤법 검사	スペルチェック	拼字檢查	拼写检查
+Stacked	Xếp chồng	세로로 쌓기	積み上げ	堆疊	堆叠
+Star	Ngôi sao	별	星	星形	星形
+Strikethrough	Gạch ngang	취소선	取り消し線	刪除線	删除线
+Subject	Chủ đề	주제	件名	主旨	主题
+Subscript	Chỉ số dưới	아래 첨자	下付き	下標	下标
+Superscript	Chỉ số trên	위 첨자	上付き	上標	上标
+Table	Bảng	표	表	表格	表格
+Text	Văn bản	텍스트	テキスト	文字	文本
+Top	Trên cùng	위쪽	上	頂端	顶端
+Transparency	Độ trong suốt	투명도	透明度	透明度	透明度
+Type	Loại	종류	種類	類型	类型
+UPPERCASE	CHỮ HOA	대문자로	大文字	大寫	大写
+Ungroup	Rã nhóm	그룹 해제	グループ解除	取消群組	取消组合
+Unlock	Mở khóa	잠금 해제	ロック解除	解除鎖定	解锁
+Up	Lên	위로	上へ	向上	向上
+Vertical	Dọc	세로	縦	垂直	垂直
+Wave	Sóng	물결	波	波浪	波浪
+Weight	Độ dày	두께	太さ	粗細	粗细
+Wind	Gió	바람	風	風	风
+Yellow	Vàng	노랑	黄色	黃色	黄色
+Your changes will be lost if you don't save them.	Các thay đổi sẽ bị mất nếu bạn không lưu.	저장하지 않으면 변경 내용이 사라집니다.	保存しない場合、変更内容は失われます。	如果不儲存，您的變更將會遺失。	如果不保存，您的更改将会丢失。
+Zoom	Thu phóng	확대/축소	ズーム	縮放	缩放
+{} presentations	{} bản trình chiếu	프레젠테이션 {}개	{} 件のプレゼンテーション	{} 份簡報	{} 份演示文稿
+{} Slide Master	Trang chiếu cái {}	{} 슬라이드 마스터	{} スライドマスター	{} 投影片母片	{} 幻灯片母版
+Missing fonts: {}. Similar fonts are used for display.	Phông chữ chưa được cài: {}. Dùng phông chữ tương tự để hiển thị.	설치되지 않은 글꼴: {}. 비슷한 글꼴로 표시합니다.	インストールされていないフォント: {}。類似のフォントで表示します。	未安裝的字型：{}。將使用相似字型顯示。	未安装的字体：{}。将使用相似字体显示。
+{name}: KIO Deck can't open this kind of file	{name}: KIO Deck không thể mở loại tệp này	{name}: KIO Deck에서 이 형식의 파일을 열 수 없습니다	{name}: KIO Deck はこの種類のファイルを開けません	{name}：KIO Deck 無法開啟此類型的檔案	{name}：KIO Deck 无法打开此类型的文件
+After:	Sau:	다음 시간 후:	後:	之後：	之后：
+Delay:	Độ trễ:	지연:	遅延:	延遲：	延迟：
+Duration:	Thời lượng:	기간:	継続時間:	持續時間：	持续时间：
+Height:	Chiều cao:	높이:	高さ:	高度：	高度：
+Slides:	Trang chiếu:	슬라이드:	スライド:	投影片：	幻灯片：
+Start:	Bắt đầu:	시작:	開始:	開始：	开始：
+Width:	Chiều rộng:	너비:	幅:	寬度：	宽度：
+Width: 	Chiều rộng: 	너비: 	幅: 	寬度： 	宽度： 
+e.g. 1-3, 5	ví dụ: 1-3, 5	예: 1-3, 5	例: 1-3, 5	例如 1-3, 5	例如 1-3, 5
+{f} (Headings)	{f} (Tiêu đề)	{f} (제목)	{f}（見出し）	{f}（標題）	{f}（标题）
+{f} (Body)	{f} (Nội dung)	{f} (본문)	{f}（本文）	{f}（本文）	{f}（正文）
+{ch}  Bullet	{ch}  Dấu đầu dòng	{ch}  글머리 기호	{ch}  箇条書き	{ch}  項目符號	{ch}  项目符号
+Columns: {n}	Số cột: {n}	단 수: {n}	段数: {n}	欄數：{n}	栏数：{n}
+{r} pt glow	Phát sáng {r} pt	네온 {r} pt	光彩 {r} pt	光暈 {r} pt	发光 {r} pt
+{}x{} Table	Bảng {}x{}	{}x{} 표	{}x{} の表	{}x{} 表格	{}x{} 表格
+{} ({} slides)	{} ({} trang chiếu)	{} (슬라이드 {}개)	{}（{} スライド）	{}（{} 張投影片）	{}（{} 张幻灯片）
+{} of {}	{} trên {}	{} / {}	{} / {}	{} / {}	{} / {}
+{n} slides per page	{n} trang chiếu mỗi trang	페이지당 슬라이드 {n}개	1 ページに {n} スライド	每頁 {n} 張投影片	每页 {n} 张幻灯片
+{} contributors · {} commits	{} người đóng góp · {} lần ghi nhận	기여자 {}명 · 커밋 {}개	貢献者 {} 人・コミット {} 件	{} 位貢獻者・{} 次提交	{} 位贡献者・{} 次提交
+Relaxed Inset	Lõm nhẹ	완만한 오목	緩やかな凹形	平緩內嵌	平缓内嵌
+Cross	Chữ thập	십자형	十字	十字	十字
+Cool Slant	Vát nghiêng	기울어진 경사	斜めの傾斜	斜切	斜切
+Angle	Góc	각도	角度	角度	角度
+Soft Round	Bo tròn mềm	부드러운 원형	柔らかい丸み	柔和圓角	柔和圆角
+Convex	Lồi	볼록	凸形	凸面	凸面
+Slope	Dốc	경사	傾斜	斜面	斜面
+Divot	Lõm	움푹한 모양	くぼみ	凹陷	凹陷
+Riblet	Gờ nhỏ	작은 돌출	小さな隆起	細稜	细棱
+Hard Edge	Cạnh sắc	날카로운 가장자리	硬いエッジ	硬邊	硬边
+Art Deco	Nghệ thuật trang trí	아르데코	アールデコ	裝飾藝術	装饰艺术
+# Physical key names, color notation and original copyright attribution remain literal.
+Backspace	Backspace	Backspace	Backspace	Backspace	Backspace
+Enter	Enter	Enter	Enter	Enter	Enter
+Escape	Escape	Escape	Escape	Escape	Escape
+Return	Return	Return	Return	Return	Return
+Space	Space	Space	Space	Space	Space
+Tab	Tab	Tab	Tab	Tab	Tab
+RRGGBB	RRGGBB	RRGGBB	RRGGBB	RRGGBB	RRGGBB
+MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors	MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors	MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors	MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors	MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors	MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors
