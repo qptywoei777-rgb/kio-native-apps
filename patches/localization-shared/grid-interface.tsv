@@ -326,3 +326,35 @@ Returns one value when a condition is TRUE and another when it is FALSE.	Trả v
 Returns a fallback when the value is an error, otherwise the value.	Trả về giá trị thay thế khi có lỗi; nếu không, trả về giá trị ban đầu.	값이 오류이면 대체 값을 반환하고, 아니면 원래 값을 반환합니다.	値がエラーなら代わりの値を返し、それ以外は元の値を返します。	值為錯誤時傳回替代值，否則傳回原值。	值为错误时返回替代值，否则返回原值。
 Finds a value in the first column of a table and returns the value in the same row of another column.	Tìm giá trị ở cột đầu của bảng rồi trả về giá trị cùng hàng ở cột khác.	표의 첫 번째 열에서 값을 찾아 다른 열의 같은 행에 있는 값을 반환합니다.	表の先頭列で値を検索し、別の列の同じ行にある値を返します。	在表格的第一欄尋找值，並傳回另一欄同一列的值。	在表格的第一列查找值，并返回另一列同一行的值。
 Searches a row or column and returns the matching item, row or column from another array.	Tìm trong một hàng hoặc cột rồi trả về mục, hàng hoặc cột tương ứng trong mảng khác.	행 또는 열을 검색하고 다른 배열에서 일치하는 항목, 행 또는 열을 반환합니다.	行または列を検索し、別の配列から一致する項目、行、列を返します。	搜尋一列或一欄，並從另一個陣列傳回符合的項目、列或欄。	搜索一行或一列，并从另一个数组返回匹配的项、行或列。
+Share	Chia sẻ	공유	共有	共用	共享
+Share: export or save a copy	Chia sẻ: xuất hoặc lưu bản sao	공유: 내보내기 또는 복사본 저장	共有: エクスポートまたはコピーを保存	共用：匯出或儲存複本	共享：导出或保存副本
+Sort & Filter	Sắp xếp và lọc	정렬 및 필터	並べ替えとフィルター	排序與篩選	排序和筛选
+Sort &\nFilter	Sắp xếp\nvà lọc	정렬 및\n필터	並べ替えと\nフィルター	排序與\n篩選	排序和\n筛选
+Find & Select	Tìm và chọn	찾기 및 선택	検索と選択	尋找與選取	查找和选择
+Find &\nSelect	Tìm\nvà chọn	찾기 및\n선택	検索と\n選択	尋找與\n選取	查找和\n选择
+Draw	Vẽ	그리기	描画	繪圖	绘图
+General	Chung	일반	標準	通用格式	常规
+Number	Số	숫자	数値	數值	数字
+Currency	Tiền tệ	통화	通貨	貨幣	货币
+Short Date	Ngày dạng ngắn	간단한 날짜	短い日付形式	簡短日期	短日期
+Long Date	Ngày dạng dài	자세한 날짜	長い日付形式	完整日期	长日期
+Percentage	Phần trăm	백분율	パーセンテージ	百分比	百分比
+Fraction	Phân số	분수	分数	分數	分数
+Scientific	Khoa học	지수	指数	科學記號	科学记数
+Text	Văn bản	텍스트	文字列	文字	文本
+Alignment	Căn chỉnh	맞춤	配置	對齊	对齐
+Border	Đường viền	테두리	罫線	外框	边框
+Fill	Lấp đầy	채우기	繰り返し	填滿	填充
+Protection	Bảo vệ	보호	保護	保護	保护
+Format Cells	Định dạng ô	셀 서식	セルの書式設定	儲存格格式	设置单元格格式
+Sample	Mẫu	예제	サンプル	範例	示例
+Type (custom format code):	Loại (mã định dạng tùy chỉnh):	형식(사용자 지정 서식 코드):	種類（ユーザー定義の書式コード）:	類型（自訂格式代碼）：	类型（自定义格式代码）：
+Ready	Sẵn sàng	준비	準備完了	就緒	就绪
+Compatibility	Tương thích	호환성	互換性	相容性	兼容性
+Web	Trang web	웹	ウェブ	網頁	网络
+Cube	Khối dữ liệu	큐브	キューブ	多維度資料	多维数据
+Add-in and Automation	Phần bổ trợ và tự động hóa	추가 기능 및 자동화	アドインと自動化	增益集與自動化	加载项和自动化
+Absolute value of a number.	Giá trị tuyệt đối của một số.	숫자의 절댓값을 구합니다.	数値の絶対値を求めます。	計算數字的絕對值。	计算数字的绝对值。
+e.g. lookup, average, date	ví dụ: tra cứu, trung bình, ngày	예: 찾기, 평균, 날짜	例: 検索、平均、日付	例如：查閱、平均、日期	例如：查找、平均值、日期
+Format Cells|Fill	Tô màu	채우기	塗りつぶし	填滿	填充
+Time	Thời gian	시간	時刻	時間	时间

@@ -20,6 +20,9 @@ jobs:
         app: [deck, sound, grid]
         runner: [macos-15, windows-2022]
     runs-on: ${{ matrix.runner }}
+    env:
+      CARGO_TARGET_DIR: ${{ github.workspace }}/target/localization-${{ matrix.app }}
+      CARGO_PROFILE_DEV_DEBUG: '0'
     timeout-minutes: 90
     defaults:
       run:
@@ -42,7 +45,7 @@ jobs:
           CARGO_PROFILE_TEST_DEBUG: '0'
         run: |
           export CRAFT_FONTS_DIR="$GITHUB_WORKSPACE/.work/full-native/${{ matrix.app }}/craft-fonts"
-          cargo +1.95.0 check --locked --manifest-path .work/full-native/${{ matrix.app }}/source/Cargo.toml -p ${{ matrix.app }}craft -p ${{ matrix.app }}craft-ui-egui
+          cargo +1.95.0 build --locked --manifest-path .work/full-native/${{ matrix.app }}/source/Cargo.toml -p ${{ matrix.app }}craft -p ${{ matrix.app }}craft-cli
           cargo +1.95.0 test --locked --manifest-path .work/full-native/${{ matrix.app }}/source/Cargo.toml -p ${{ matrix.app }}craft-ui-egui --lib
       - name: Strict six-language completeness gate
         if: always()
@@ -52,5 +55,18 @@ jobs:
         with:
           name: ${{ matrix.app }}-${{ matrix.runner }}-localization-evidence
           path: dist/*candidate*.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain development executables only when every gate passes
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: success()
+        with:
+          name: ${{ matrix.app }}-${{ matrix.runner }}-development-not-release-approved
+          path: |
+            target/localization-${{ matrix.app }}/debug/${{ matrix.app }}craft
+            target/localization-${{ matrix.app }}/debug/${{ matrix.app }}craft-cli
+            target/localization-${{ matrix.app }}/debug/${{ matrix.app }}craft.exe
+            target/localization-${{ matrix.app }}/debug/${{ matrix.app }}craft-cli.exe
+            dist/${{ matrix.app }}-candidate-source.json
           if-no-files-found: error
           retention-days: 14

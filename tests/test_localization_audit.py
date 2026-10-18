@@ -12,14 +12,21 @@ spec.loader.exec_module(audit)
 
 
 class LocalizationFailures(unittest.TestCase):
+    def test_non_english_hardcoded_captions_cannot_bypass_the_detector(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='ui.button("로그인 완료"); ui.label("保存"); ui.heading("Lưu"); ui.button("A"); ui.label("π");')
+            result=audit.audit_app('fixture',root)
+            self.assertEqual({r['text'] for r in result['directUiReview']},{'로그인 완료','保存','Lưu'})
+
     def test_grid_indirect_labels_and_function_help_are_included_without_identifiers(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
             functions=root/'crates/functions/src';functions.mkdir(parents=True)
             (functions/'math.rs').write_text('// f!("FAKE", "FAKE()", "Comment")\nf!("SUM", 1, VAR, Math, A, "SUM(values)", "Adds numbers.", sum);',encoding='utf-8')
             engine=root/'crates/engine/src/cmd';engine.mkdir(parents=True)
-            (engine/'file.rs').write_text('CommandSpec {id:"file.save", label:"Save", menu:&["File"], params:"{path}", run:save}',encoding='utf-8')
-            self.assertEqual(audit.grid_metadata_keys(root),{('','Adds numbers.'),('','Save'),('','File')})
+            (engine/'file.rs').write_text('CommandSpec {id:"file.save", label:"Save", menu:&["File"], params:"{path}", run:save}; cmd!(query "range.read", "Read Values", ["Data"], None, "{range}", always, read); for (label,id) in [("Copy","edit.copy")] {show(label)}; Field::Choice { options:vec![("stable-wire-value","Displayed choice")] }',encoding='utf-8')
+            self.assertEqual(audit.grid_metadata_keys(root),{('','Adds numbers.'),('','Save'),('','File'),('','Read Values'),('','Data'),('','Copy'),('','Displayed choice')})
 
     def test_nested_user_data_does_not_become_a_caption_or_cross_a_statement(self):
         with tempfile.TemporaryDirectory() as tmp:

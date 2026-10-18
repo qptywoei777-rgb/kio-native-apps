@@ -240,6 +240,14 @@ def read_app(app, source):
             body(path)  # Source lookup keys are also snapshot-bound inputs.
         for match in matches:
             keys.add(('', decode(match[1]), 'plain'))
+    scoped = Path(__file__).resolve().parents[1] / 'patches/localization-shared' / (app + '-interface.tsv')
+    if scoped.is_file():
+        # A spreadsheet Cube and a 3D Cube share an English spelling, not meaning.
+        scoped_keys = {unescape_tsv(line.split('\t')[0]) for line in scoped.read_text(encoding='utf-8').splitlines()
+                       if line and not line.startswith('#')}
+        for row in rows:
+            if row['source'] in scoped_keys:
+                row['donorScope'] = 'app'
     return {'app': app, 'source': str(source), 'available': source.is_dir(), 'rows': rows, 'keys': keys, 'files': files, 'issues': issues}
 
 
@@ -268,6 +276,8 @@ def build_plan(apps, exceptions=(), supplement=()):
         if row['language'] == 'en':
             continue
         current[(row['app'], row['language'], *identity(row))].append(row)
+        if row.get('donorScope') == 'app':
+            continue  # Preserve its own valid translation, but never export its domain to another app.
         reason = invalid_reason(row, allowed)
         if reason:
             rejected.append({'language': row['language'], 'context': row['context'], 'source': row['source'], 'translation': row['translation'], 'reason': reason, 'provenance': row['provenance']})

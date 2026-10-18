@@ -56,6 +56,12 @@ def unescape_tsv(text):
     return re.sub(r'\\([nt\\])', lambda m: {'n': '\n', 't': '\t', '\\': '\\'}[m[1]], text)
 
 
+def display_prose(text):
+    # Catch Korean/Japanese/Chinese and accented Vietnamese too; single Latin
+    # hotkey letters and punctuation-only icons are technical, not prose.
+    return sum(char.isalpha() for char in text) >= 2 or bool(re.search('[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7a3]', text))
+
+
 def read_tsv(path):
     rows, errors = {}, []
     for n, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1):
@@ -154,21 +160,21 @@ def source_literals(source):
                 keys.add(('', value))
         for m in (*DIRECT_UI.finditer(text), *DIRECT_CHOICE_UI.finditer(text), *DIRECT_RICH_UI.finditer(text), *DIRECT_LINK_UI.finditer(text), *CUSTOM_CHECKBOX_UI.finditer(text)):
             value = literal(m[1])
-            if re.search('[A-Za-z]{2}', value):
+            if display_prose(value):
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
         for m in DIRECT_WINDOW_UI.finditer(text):
             # A hidden-title window may use its constructor solely as a stable widget ID.
             if re.match(r'\s*\)\s*\.title_bar\(false\)', text[m.end():]):
                 continue
             value = literal(m[1])
-            if re.search('[A-Za-z]{2}', value):
+            if display_prose(value):
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
         for m in DIRECT_FORMAT_UI.finditer(text):
             value = literal(m[1])
             fixed = re.sub(r'\{[^{}]*\}', '', value).strip()
             # Standard unit symbols remain literal; variable names themselves
             # are not UI text. Actual prose around arguments needs localization.
-            if re.search('[A-Za-z]{2}', fixed) and fixed not in {'pt', 'px', 'mm', 'cm', 'in', 'ms', 'Hz', 'kHz', 'KB', 'MB', 'GB', 'TB'}:
+            if display_prose(fixed) and fixed not in {'pt', 'px', 'mm', 'cm', 'in', 'ms', 'Hz', 'kHz', 'KB', 'MB', 'GB', 'TB'}:
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value, 'kind': 'untranslatedFormatTemplate'})
     return keys, review
 
@@ -195,6 +201,14 @@ def grid_metadata_keys(source):
                 keys.update(('', literal(raw)) for raw in re.findall(RSTRING, match[1]))
             for match in re.finditer(r'\b(?:Dialog::)?(?:form|custom)\(\s*' + RSTRING + r'\s*,\s*(' + RSTRING + ')', text):
                 keys.add(('', literal(match[1])))
+            # Static menu tuples separate the human label from command/format IDs.
+            for block in re.finditer(r'for\s*\(\s*label\s*,[^)]*\)\s+in\s*\[(.*?)\]\s*\{', text, re.S):
+                for row in re.finditer(r'\(\s*(' + RSTRING + r')\s*,', block[1]):
+                    keys.add(('', literal(row[1])))
+            # Choice tuples store (wire value, displayed caption), in that order.
+            for block in re.finditer(r'\boptions:\s*vec!\[(.*?)\]', text, re.S):
+                for row in re.finditer(r'\(\s*' + RSTRING + r'\s*,\s*(' + RSTRING + r')\s*\)', block[1]):
+                    keys.add(('', literal(row[1])))
     function_names = set()
     for path in (source / 'crates/functions/src').glob('*.rs'):
         text = path.read_text(encoding='utf-8').split('#[cfg(test)]')[0]

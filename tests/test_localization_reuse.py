@@ -23,6 +23,14 @@ def app(name, rows=(), keys=(('', 'Save {name}', 'plain'),)):
 
 
 class CatalogReuseSafety(unittest.TestCase):
+    def test_app_scoped_meaning_cannot_become_a_generic_exact_spelling_donor(self):
+        scoped=row('grid',text='Khối dữ liệu',key='Cube')
+        scoped['donorScope']='app'
+        keys=(('', 'Cube', 'plain'),)
+        plan=reuse.build_plan([app('photo',keys=keys),app('grid',[scoped],keys=keys)])
+        self.assertEqual(plan['proposalCount'],0)
+        self.assertEqual(plan['rejectedCount'],0,'An app-specific translation is valid in its own context')
+
     def test_windows_candidate_path_matches_the_published_posix_manifest(self):
         root=PureWindowsPath('D:/a/kio-native-apps/kio-native-apps')
         path=root/'patches/localization-candidates/sound.patch'

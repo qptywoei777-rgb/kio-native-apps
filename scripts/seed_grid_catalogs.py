@@ -14,13 +14,13 @@ catalogs,_,_=audit.collect_catalogs(source);keys=set().union(*(set(v) for v in c
 keys|={('',x['text']) for x in direct}
 keys.add(('','Follow system language'))
 # Exact original Grid rows always win over a generic donor.
-allowed={(e.get('context',''),e['source']) for e in json.loads((data/'official-exceptions.json').read_text())['entries']}
+allowed={(e.get('context',''),e['source']) for e in json.loads((data/'official-exceptions.json').read_text(encoding='utf-8'))['entries']}
 donors=collections.defaultdict(set)
 for app in (*reuse.APPS,'launcher'):
  if app=='grid':continue
  src=root/('.work/launcher/source' if app=='launcher' else '.work/full-native/'+app+'/source')
  for row in reuse.read_app(app,src)['rows']:
-  if row['language']=='en' or row['context'] or row['kind']!='plain' or reuse.invalid_reason(row,allowed):continue
+  if row['language']=='en' or row['context'] or row['kind']!='plain' or row.get('donorScope')=='app' or reuse.invalid_reason(row,allowed):continue
   donors[row['source'],row['language']].add(row['translation'])
 pool={k:next(iter(v)) for k,v in donors.items() if len(v)==1}
 for row in reuse.read_supplement(data/'common-software-terms.json'):pool[row['source'],row['language']]=row['translation']
@@ -57,8 +57,8 @@ for code in reuse.LANGUAGES:
     values[key]=result[0];report['derivedEntries'].append({'language':code,'source':key,'translation':result[0],'rule':result[1]})
   if key not in values:missing.append(key)
  rows=['\t'.join(map(escape,(context,key,values[key]))) for context,key in sorted(keys) if key in values]
- (folder/(code+'.tsv')).write_text('# KIO Grid interface overlay; original extra language catalogs remain intact.\n'+'\n'.join(rows)+'\n')
+ (folder/(code+'.tsv')).write_text('# KIO Grid interface overlay; original extra language catalogs remain intact.\n'+'\n'.join(rows)+'\n',encoding='utf-8')
  report['languages'][code]={'keys':len(rows),'missing':len(missing),'missingKeys':missing}
-(data/'grid-source-keys.json').write_text(json.dumps({'keys':sorted(k for c,k in keys),'scope':report['scope']},ensure_ascii=False,indent=2)+'\n')
-(out/'grid-source-progress.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+(data/'grid-source-keys.json').write_text(json.dumps({'keys':sorted(k for c,k in keys),'scope':report['scope']},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(out/'grid-source-progress.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'app':report['app'],'keys':report['keys'],'derivedEntries':len(report['derivedEntries']),'languages':{k:{n:v for n,v in row.items() if n!='missingKeys'} for k,row in report['languages'].items()}},ensure_ascii=False))

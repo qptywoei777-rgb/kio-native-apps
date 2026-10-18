@@ -1,11 +1,14 @@
 --- a/apps/gridcraft-web/src/web.rs
 +++ b/apps/gridcraft-web/src/web.rs
-@@ -54,7 +54,7 @@
+@@ -54,7 +54,10 @@
                      let browser = gridcraft_ui_egui::i18n::Language::system();
                      if !matches!(
                          browser,
 -                        gridcraft_ui_egui::i18n::Language::Zh | gridcraft_ui_egui::i18n::Language::Ja | gridcraft_ui_egui::i18n::Language::Ko
-+                        gridcraft_ui_egui::i18n::Language::Zh | gridcraft_ui_egui::i18n::Language::ZhTw | gridcraft_ui_egui::i18n::Language::Ja | gridcraft_ui_egui::i18n::Language::Ko
++                        gridcraft_ui_egui::i18n::Language::Zh
++                            | gridcraft_ui_egui::i18n::Language::ZhTw
++                            | gridcraft_ui_egui::i18n::Language::Ja
++                            | gridcraft_ui_egui::i18n::Language::Ko
                      ) {
                          app.ui.language = browser;
                      }
@@ -124,6 +127,21 @@
      let (area, response) = ui.allocate_exact_size(vec2(248.0, 104.0), Sense::hover());
      response.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Label, true, "Border preview"));
      let t = Tokens::get(ui.ctx());
+--- a/crates/ui-egui/src/control.rs
++++ b/crates/ui-egui/src/control.rs
+@@ -195,7 +195,11 @@
+                     "Submit Print Job",
+                     "existing file.print sheet/pagination params → {printing,bytes,pending}; submits without opening a dialog",
+                 ),
+-                ("app.language.set", "Interface Language", "{language: \"en\"|\"zh\"|\"ja\"|\"ko\"|\"ru\"|\"pt\"|\"de\"|\"cs\"} (alias: code)"),
++                (
++                    "app.language.set",
++                    "Interface Language",
++                    "{language: \"vi\"|\"en\"|\"ko\"|\"ja\"|\"zh-TW\"|\"zh-CN\"|\"auto\"} (alias: code; legacy language aliases retained)",
++                ),
+                 ("app.language.english", "Interface Language: English", ""),
+                 ("app.language.japanese", "Interface Language: Japanese", ""),
+             ] {
 --- a/crates/ui-egui/src/credits.rs
 +++ b/crates/ui-egui/src/credits.rs
 @@ -215,14 +215,14 @@
@@ -361,7 +379,7 @@
                  }
              });
          }
-@@ -1748,8 +1756,10 @@
+@@ -1748,19 +1756,22 @@
  
  fn insert_function(app: &mut SheetApp, ui: &mut egui::Ui, d: &mut Dialog, confirm: &mut bool) {
      ui.horizontal(|ui| {
@@ -374,7 +392,35 @@
          r.request_focus();
      });
      let locale = app.ui.language.formula_locale();
-@@ -1783,7 +1793,8 @@
+     let list = gridcraft_engine::cmd::formulas::function_list();
+-    let q = d.search.to_ascii_lowercase();
++    let q = d.search.to_lowercase();
+     let hits: Vec<&Json> = list
+         .iter()
+         .filter(|f| {
+             q.is_empty()
+                 || f["name"].as_str().is_some_and(|n| locale.function_name(n).to_ascii_lowercase().contains(&q))
+-                || f["description"].as_str().is_some_and(|n| n.to_ascii_lowercase().contains(&q))
++                || f["description"].as_str().is_some_and(|n| app.ui.language.tr(n).to_lowercase().contains(&q))
++                || f["category"].as_str().is_some_and(|n| app.ui.language.function_category(n).to_lowercase().contains(&q))
+         })
+         .take(300)
+         .collect();
+@@ -1768,8 +1779,11 @@
+         for (i, f) in hits.iter().enumerate() {
+             let name = locale.function_name(f["name"].as_str().unwrap_or(""));
+             let r = ui.add(
+-                egui::Button::selectable(i == d.list_index, format!("{name:<18} {}", f["category"].as_str().unwrap_or("")))
+-                    .min_size(vec2(480.0, 20.0)),
++                egui::Button::selectable(
++                    i == d.list_index,
++                    format!("{name:<18} {}", app.ui.language.function_category(f["category"].as_str().unwrap_or(""))),
++                )
++                .min_size(vec2(480.0, 20.0)),
+             );
+             if r.clicked() {
+                 d.list_index = i;
+@@ -1783,7 +1797,8 @@
      if let Some(f) = hits.get(d.list_index) {
          ui.separator();
          ui.label(egui::RichText::new(crate::formula_locale::signature(f["name"].as_str().unwrap_or(""), locale).unwrap_or_default()).strong());
@@ -384,7 +430,7 @@
      }
      let mut open = true;
      ok_cancel(ui, confirm, &mut open);
-@@ -1812,12 +1823,12 @@
+@@ -1812,12 +1827,12 @@
      let mut what = d.values.get("what").and_then(Json::as_str).unwrap_or("").to_string();
      let mut with = d.values.get("with").and_then(Json::as_str).unwrap_or("").to_string();
      ui.horizontal(|ui| {
@@ -399,7 +445,7 @@
              ui.add(egui::TextEdit::singleline(&mut with).desired_width(244.0));
          });
      }
-@@ -1825,9 +1836,9 @@
+@@ -1825,9 +1840,9 @@
      let mut whole = d.values.get("wholeCell").and_then(Json::as_bool).unwrap_or(false);
      let mut wb = d.values.get("within").and_then(Json::as_str) == Some("workbook");
      ui.horizontal(|ui| {
@@ -412,7 +458,7 @@
      });
      d.values.insert("what".into(), json!(what));
      d.values.insert("with".into(), json!(with));
-@@ -1837,7 +1848,7 @@
+@@ -1837,7 +1852,7 @@
      let base = json!({"what": what, "matchCase": case, "wholeCell": whole, "within": if wb { "workbook" } else { "sheet" }});
      ui.horizontal(|ui| {
          if d.tab == "Replace" {
@@ -421,7 +467,7 @@
                  let mut p = base.clone();
                  p["with"] = json!(with);
                  p["all"] = json!(true);
-@@ -1846,7 +1857,7 @@
+@@ -1846,7 +1861,7 @@
                      Err(e) => app.message = Some(("Find and Replace".into(), crate::clean_error(&e))),
                  }
              }
@@ -430,7 +476,7 @@
                  let mut p = base.clone();
                  p["with"] = json!(with);
                  p["all"] = json!(false);
-@@ -1854,12 +1865,12 @@
+@@ -1854,12 +1869,12 @@
                  let _ = app.run("edit.find", base.clone());
              }
          }
@@ -445,7 +491,7 @@
              if let Err(e) = app.run("edit.find", base.clone()) {
                  app.message = Some(("Find and Replace".into(), crate::clean_error(&e)));
              }
-@@ -1870,7 +1881,7 @@
+@@ -1870,7 +1885,7 @@
          && let Some(list) = r["results"].as_array()
      {
          ui.separator();
@@ -454,7 +500,7 @@
          egui::ScrollArea::vertical().max_height(180.0).show(ui, |ui| {
              for item in list {
                  let label = format!(
-@@ -1900,11 +1911,11 @@
+@@ -1900,11 +1915,11 @@
      }
      let mut r = d.values.get("reference").and_then(Json::as_str).unwrap_or("").to_string();
      ui.horizontal(|ui| {
@@ -468,7 +514,7 @@
          app.open_dialog("goToSpecial", json!({}));
          return;
      }
-@@ -1921,7 +1932,7 @@
+@@ -1921,7 +1936,7 @@
  
  fn sort(app: &mut SheetApp, ui: &mut egui::Ui, d: &mut Dialog, confirm: &mut bool) {
      let mut header = d.values.get("header").and_then(Json::as_bool).unwrap_or(true);
@@ -477,7 +523,7 @@
      d.values.insert("header".into(), json!(header));
      let mut levels: Vec<Json> = d.values.get("levels").and_then(Json::as_array).cloned().unwrap_or_default();
      let mut remove = None;
-@@ -1958,7 +1969,7 @@
+@@ -1958,7 +1973,7 @@
      {
          levels.remove(i);
      }
@@ -486,7 +532,7 @@
          levels.push(json!({"column": "B", "order": "asc"}));
      }
      d.values.insert("levels".into(), Json::Array(levels.clone()));
-@@ -1978,7 +1989,7 @@
+@@ -1978,7 +1993,7 @@
      let selected = names.get(d.list_index).cloned();
      let field = |n: &Json, k: &str| n.get(k).and_then(Json::as_str).unwrap_or("").to_string();
      ui.horizontal(|ui| {
@@ -495,7 +541,7 @@
              app.open_dialog("defineName", json!({}));
          }
          if ui.add_enabled(selected.is_some(), egui::Button::new("Edit…")).clicked()
-@@ -2001,13 +2012,13 @@
+@@ -2001,13 +2016,13 @@
      ui.add_space(4.0);
      egui::ScrollArea::vertical().max_height(260.0).show(ui, |ui| {
          egui::Grid::new("names").striped(true).num_columns(4).show(ui, |ui| {
@@ -514,7 +560,7 @@
                  ui.end_row();
              }
              for (i, n) in names.iter().enumerate() {
-@@ -2023,7 +2034,7 @@
+@@ -2023,7 +2038,7 @@
      });
      ui.add_space(8.0);
      ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
@@ -523,7 +569,7 @@
              *open = false;
          }
      });
-@@ -2160,7 +2171,7 @@
+@@ -2160,7 +2175,7 @@
      };
      edit(ui, d, "range", "Chart data range:");
      ui.add_space(6.0);
@@ -532,7 +578,7 @@
      let names: Vec<String> =
          d.values.get("names").and_then(Json::as_array).map(|a| a.iter().map(|n| n.as_str().unwrap_or("").to_string()).collect()).unwrap_or_default();
      let mut remove: Vec<u64> =
-@@ -2174,7 +2185,7 @@
+@@ -2174,7 +2189,7 @@
                  let label = if name.is_empty() { format!("Series{}", i + 1) } else { name.clone() };
                  ui.label(if removed { egui::RichText::new(label).strikethrough().weak() } else { egui::RichText::new(label) });
                  if removed {
@@ -541,7 +587,7 @@
                          remove.retain(|x| *x != i);
                      }
                  } else if ui.add_enabled(kept > 1, egui::Button::new("Remove").small()).clicked() {
-@@ -2216,23 +2227,44 @@
+@@ -2216,23 +2231,44 @@
      let list = app.session.run("home.manageRules", json!({})).unwrap_or(Json::Null);
      let rules = list["rules"].as_array().cloned().unwrap_or_default();
      if rules.is_empty() {
@@ -593,7 +639,7 @@
                  app.run_or_alert("home.manageRules", json!({"delete": i}));
              }
          });
-@@ -2240,7 +2272,11 @@
+@@ -2240,7 +2276,11 @@
  }
  
  fn command_search(app: &mut SheetApp, ui: &mut egui::Ui, d: &mut Dialog, confirm: &mut bool) {
@@ -606,7 +652,7 @@
      r.request_focus();
      let q = d.search.to_ascii_lowercase();
      let cmds: Vec<(String, String, String)> = app
-@@ -2248,8 +2284,16 @@
+@@ -2248,8 +2288,16 @@
          .commands()
          .into_iter()
          .filter(|c| c.enabled)
@@ -625,7 +671,7 @@
          .take(40)
          .collect();
      if ui.input(|i| i.key_pressed(Key::ArrowDown)) {
-@@ -2282,13 +2326,13 @@
+@@ -2282,13 +2330,13 @@
      let get = |k: &str| d.values.get(k).and_then(Json::as_str).unwrap_or("").to_string();
      let (mut set, mut to, mut changing) = (get("set"), get("to"), get("changing"));
      egui::Grid::new("gs").show(ui, |ui| {
@@ -642,7 +688,7 @@
          ui.text_edit_singleline(&mut changing);
          ui.end_row();
      });
-@@ -2387,14 +2431,14 @@
+@@ -2387,14 +2435,14 @@
  fn analysis_toolpak(app: &mut SheetApp, ui: &mut egui::Ui, d: &mut Dialog, confirm: &mut bool, open: &mut bool) {
      use gridcraft_engine::cmd::analysis::TOOLS;
      if d.values.get("askOverwrite").and_then(Json::as_bool) == Some(true) {
@@ -660,7 +706,7 @@
                  d.values.remove("askOverwrite");
              }
          });
-@@ -2402,7 +2446,7 @@
+@@ -2402,7 +2450,7 @@
      }
      let tool = d.values.get("tool").and_then(Json::as_str).unwrap_or("").to_string();
      let Some((_, label)) = TOOLS.iter().find(|(id, _)| *id == tool) else {
@@ -669,7 +715,7 @@
          let pick = d.values.get("pick").and_then(Json::as_str).unwrap_or("").to_string();
          let mut chosen = false;
          egui::ScrollArea::vertical().max_height(260.0).show(ui, |ui| {
-@@ -2429,7 +2473,7 @@
+@@ -2429,7 +2477,7 @@
      d.fields = toolpak_fields(&tool);
      form_fields(ui, d);
      ui.separator();
@@ -678,7 +724,7 @@
      let to = d.values.get("outputTo").and_then(Json::as_str).unwrap_or("newSheet").to_string();
      for (key, choice, text_label) in [("output", "range", "Output Range:"), ("newSheet", "newSheet", "New Worksheet Ply:")] {
          ui.horizontal(|ui| {
-@@ -2457,12 +2501,12 @@
+@@ -2457,12 +2505,12 @@
          }
      };
      ui.horizontal(|ui| {
@@ -693,7 +739,7 @@
          for (g, label) in [("max", "Max"), ("min", "Min"), ("value", "Value Of:")] {
              if ui.radio(goal == g, label).clicked() {
                  d.values.insert("goal".into(), json!(g));
-@@ -2470,9 +2514,9 @@
+@@ -2470,9 +2518,9 @@
          }
          edit(ui, d, "value", 80.0);
      });
@@ -705,7 +751,7 @@
      let list: Vec<String> = d
          .values
          .get("constraints")
-@@ -2502,7 +2546,7 @@
+@@ -2502,7 +2550,7 @@
          if !matches!(op.as_str(), "int" | "bin") {
              edit(ui, d, "newRhs", 110.0);
          }
@@ -714,7 +760,7 @@
              let lhs = text(d, "newLhs");
              if !lhs.trim().is_empty() {
                  let rhs = if matches!(op.as_str(), "int" | "bin") { String::new() } else { format!(" {}", text(d, "newRhs").trim()) };
-@@ -2522,12 +2566,12 @@
+@@ -2522,12 +2570,12 @@
          }
      });
      let mut nonneg = d.values.get("nonNegative").and_then(Json::as_bool).unwrap_or(true);
@@ -729,7 +775,7 @@
          let label = |m: &str| match m {
              "simplex" => "Simplex LP",
              "evolutionary" => "Evolutionary",
-@@ -2551,12 +2595,14 @@
+@@ -2551,12 +2599,14 @@
      );
      ui.add_space(8.0);
      ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
@@ -747,7 +793,7 @@
              *open = false;
          }
      });
-@@ -2570,10 +2616,10 @@
+@@ -2570,10 +2620,10 @@
      let restore = d.values.get("restore").and_then(Json::as_bool).unwrap_or(false);
      if changed {
          ui.add_space(4.0);
@@ -760,7 +806,7 @@
              d.values.insert("restore".into(), json!(true));
          }
      }
-@@ -2581,7 +2627,7 @@
+@@ -2581,7 +2631,7 @@
      let solved = d.values.get("values").and_then(Json::as_object).is_some_and(|v| !v.is_empty());
      if solved {
          ui.add_space(4.0);
@@ -769,7 +815,7 @@
          for (key, label) in [("answerReport", "Answer"), ("limitsReport", "Limits")] {
              let mut on = d.values.get(key).and_then(Json::as_bool).unwrap_or(false);
              if ui.checkbox(&mut on, label).changed() {
-@@ -2618,19 +2664,19 @@
+@@ -2618,19 +2668,19 @@
      }
      let issues = r["issues"].as_array().cloned().unwrap_or_default();
      let Some(it) = issues.get(d.list_index) else {
@@ -793,7 +839,7 @@
      let mut pick = d.values.get("pick").and_then(Json::as_str).unwrap_or("").to_string();
      for s in &sugg {
          if ui.selectable_label(pick == *s, s).clicked() {
-@@ -2638,24 +2684,24 @@
+@@ -2638,24 +2688,24 @@
          }
      }
      if sugg.is_empty() {
@@ -979,7 +1025,7 @@
              "zh" => Some(Self::Zh),
              "ja" => Some(Self::Ja),
              "ko" => Some(Self::Ko),
-@@ -100,12 +122,48 @@
+@@ -100,12 +122,59 @@
      pub fn system() -> Self {
          #[cfg(not(target_arch = "wasm32"))]
          {
@@ -1028,10 +1074,21 @@
 +        }
 +        result.push_str(rest);
 +        result
++    }
++
++    /// Human-facing function category; serialized category IDs and function names stay stable.
++    pub fn function_category(self, code: &str) -> &str {
++        self.tr(match code {
++            "MathTrig" => "Math & Trig",
++            "DateTime" => "Date & Time",
++            "Lookup" => "Lookup & Reference",
++            "AddIn" => "Add-in and Automation",
++            _ => code,
++        })
      }
  
      pub fn formula_locale(self) -> gridcraft_engine::formula::FormulaLocale {
-@@ -117,7 +175,11 @@
+@@ -117,7 +186,11 @@
      /// A label that needs two translations (Home's text "Orientation" vs Page Layout's print
      /// "Orientation") is keyed `context|label`: English shows only the part after the `|`.
      pub fn tr(self, text: &str) -> &str {
@@ -1043,7 +1100,7 @@
              Self::En => None,
              Self::Es => es::translate(text),
              Self::Ja => JAPANESE.iter().find(|(english, _)| *english == text).map(|(_, translated)| *translated),
-@@ -130,7 +192,10 @@
+@@ -130,7 +203,10 @@
              Self::Fr => fr::translate(text),
              Self::Sr => sr::translate(text),
          };
@@ -1055,7 +1112,7 @@
      }
  }
  
-@@ -154,7 +219,15 @@
+@@ -154,7 +230,15 @@
  /// to tell "saved English" from "nothing usable saved" (first run, an older file, an unknown
  /// value), which starts from [`Language::system`] instead.
  pub fn saved_language(ui_json: &serde_json::Value) -> Option<Language> {
@@ -1071,7 +1128,16 @@
  }
  
  /// egui context-data key holding the language of the frame being drawn. Widgets that only get a
-@@ -715,3 +788,108 @@
+@@ -599,7 +683,7 @@
+         for (i, (en, ja)) in JAPANESE.iter().enumerate() {
+             assert!(!ja.is_empty());
+             assert!(JAPANESE.iter().take(i).all(|(other, _)| en != other));
+-            assert_eq!(Language::En.tr(en), en.rsplit_once('|').map_or(*en, |(_, label)| label));
++            assert_eq!(Language::En.tr(en), super::catalog::platform_shortcuts(en.rsplit_once('|').map_or(*en, |(_, label)| label)));
+         }
+         for (english, _) in JAPANESE {
+             assert!(zh::translate(english).is_some_and(|text| !text.is_empty()), "missing Simplified Chinese: {english}");
+@@ -715,3 +799,150 @@
          }
      }
  }
@@ -1117,6 +1183,48 @@
 +mod kio_language_state_tests {
 +    use super::Language;
 +    use serde_json::json;
++    #[test]
++    fn shortcut_captions_follow_the_platform_without_touching_message_values() {
++        for language in [Language::Vi, Language::En, Language::Ko, Language::Ja, Language::ZhTw, Language::Zh] {
++            let cut = language.tr("Cut (⌘X)");
++            assert!(cut.contains(if cfg!(target_os = "windows") { "Ctrl+X" } else { "⌘X" }));
++            let value = "C:/⌘S/{cell}/서울.xlsx";
++            assert!(language.msg("Not in Dictionary ({cell}):", &[("cell", value)]).contains(value));
++        }
++        if cfg!(target_os = "windows") {
++            assert_eq!(super::catalog::platform_shortcuts("⌘⇧S · hold ⌥"), "Ctrl+Shift+S · hold Alt");
++        }
++    }
++    #[test]
++    fn repeating_alignment_and_background_fill_keep_their_separate_contexts() {
++        assert_ne!(Language::Ja.tr("Fill"), Language::Ja.tr("Format Cells|Fill"));
++        assert_ne!(Language::Vi.tr("Fill"), Language::Vi.tr("Format Cells|Fill"));
++        assert_eq!(Language::En.tr("Format Cells|Fill"), "Fill");
++    }
++    #[test]
++    fn function_categories_translate_without_exposing_wire_identifiers() {
++        for language in [Language::Vi, Language::Ko, Language::Ja, Language::ZhTw, Language::Zh] {
++            for code in [
++                "Financial",
++                "Logical",
++                "Text",
++                "DateTime",
++                "Lookup",
++                "MathTrig",
++                "Statistical",
++                "Engineering",
++                "Information",
++                "Database",
++                "Compatibility",
++                "Web",
++                "Cube",
++                "AddIn",
++            ] {
++                assert_ne!(language.function_category(code), Language::En.function_category(code), "{language:?}: {code}");
++            }
++        }
++        assert_eq!(Language::En.function_category("MathTrig"), "Math & Trig");
++    }
 +    #[test]
 +    fn actual_command_and_function_metadata_is_in_the_inventory() {
 +        let mut missing = Vec::new();
@@ -1182,7 +1290,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/catalog.rs
-@@ -0,0 +1,74 @@
+@@ -0,0 +1,99 @@
 +//! Source-keyed presentation overlay. No workbook contents or formula identifiers enter it.
 +use super::Language;
 +use std::collections::{HashMap, HashSet};
@@ -1197,6 +1305,31 @@
 +    ("zh-CN", include_str!("zh-CN.tsv")),
 +];
 +type Catalog = HashMap<String, HashMap<String, String>>;
++
++pub(super) fn platform_shortcuts(text: &str) -> String {
++    if !cfg!(target_os = "windows") {
++        return text.to_owned();
++    }
++    let mut result = String::new();
++    let mut chars = text.chars().peekable();
++    while let Some(c) = chars.next() {
++        let name = match c {
++            '⌘' | '⌃' => "Ctrl",
++            '⇧' => "Shift",
++            '⌥' => "Alt",
++            _ => {
++                result.push(c);
++                continue;
++            }
++        };
++        result.push_str(name);
++        if chars.peek().is_some_and(|next| next.is_alphanumeric() || matches!(*next, '⌘' | '⌃' | '⇧' | '⌥' | '↑' | '↓' | '←' | '→' | '{'))
++        {
++            result.push('+');
++        }
++    }
++    result
++}
 +fn unescape(text: &str) -> String {
 +    let mut result = String::new();
 +    let mut chars = text.chars();
@@ -1231,7 +1364,7 @@
 +                        let mut columns = line.split('\t');
 +                        let _context = columns.next()?;
 +                        let key = unescape(columns.next()?);
-+                        let value = unescape(columns.next()?);
++                        let value = platform_shortcuts(&unescape(columns.next()?));
 +                        if columns.next().is_some() || value.trim().is_empty() {
 +                            return None;
 +                        }
@@ -1259,7 +1392,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/en.tsv
-@@ -0,0 +1,1733 @@
+@@ -0,0 +1,1787 @@
 +# KIO Grid interface overlay; original extra language catalogs remain intact.
 +	  OK  	  OK  
 +	  Solve  	  Solve  
@@ -1276,6 +1409,16 @@
 +	100%	100%
 +	100% Stacked Bar	100% Stacked Bar
 +	100% Stacked Column	100% Stacked Column
++	200%	200%
++	25%	25%
++	3 Arrows	3 Arrows
++	3 Symbols	3 Symbols
++	3 Traffic Lights	3 Traffic Lights
++	4 Ratings	4 Ratings
++	5 Arrows	5 Arrows
++	5 Quarters	5 Quarters
++	50%	50%
++	75%	75%
 +	A CSV file, web page or PDF is a copy: the workbook keeps its own file.	A CSV file, web page or PDF is a copy: the workbook keeps its own file.
 +	A Date Occurring…	A Date Occurring…
 +	A random integer between two bounds, inclusive.	A random integer between two bounds, inclusive.
@@ -1330,6 +1473,7 @@
 +	Align Right	Align Right
 +	Alignment	Alignment
 +	All	All
++	All Borders	All Borders
 +	All Charts	All Charts
 +	All Scripts	All Scripts
 +	All done. We made {count} replacements.	All done. We made {count} replacements.
@@ -1366,6 +1510,7 @@
 +	Arithmetic mean of the numbers.	Arithmetic mean of the numbers.
 +	Arrange	Arrange
 +	Arrange All	Arrange All
++	Arrow	Arrow
 +	At each change in (column letter):	At each change in (column letter):
 +	Author	Author
 +	Auto	Auto
@@ -1390,6 +1535,7 @@
 +	Background Color:	Background Color:
 +	Banded Columns	Banded Columns
 +	Banded Rows	Banded Rows
++	Bar	Bar
 +	Base-10 logarithm of a complex number.	Base-10 logarithm of a complex number.
 +	Base-10 logarithm.	Base-10 logarithm.
 +	Base-2 logarithm of a complex number.	Base-2 logarithm of a complex number.
@@ -1398,6 +1544,7 @@
 +	Bessel function of the first kind, J_n(x).	Bessel function of the first kind, J_n(x).
 +	Bessel function of the second kind, Y_n(x).	Bessel function of the second kind, Y_n(x).
 +	Beta distribution density or probability.	Beta distribution density or probability.
++	Between…	Between…
 +	Bin Range (blank for automatic bins):	Bin Range (blank for automatic bins):
 +	Binomial probability.	Binomial probability.
 +	Bitwise AND of two non-negative integers.	Bitwise AND of two non-negative integers.
@@ -1405,6 +1552,8 @@
 +	Bitwise exclusive OR of two non-negative integers.	Bitwise exclusive OR of two non-negative integers.
 +	Blank workbook	Blank workbook
 +	Blanks	Blanks
++	Blue	Blue
++	Blue - White - Red	Blue - White - Red
 +	Bold	Bold
 +	Bold (⌘B)	Bold (⌘B)
 +	Bond-equivalent yield of a Treasury bill.	Bond-equivalent yield of a Treasury bill.
@@ -1415,6 +1564,8 @@
 +	Bottom 10 Items	Bottom 10 Items
 +	Bottom 10%	Bottom 10%
 +	Bottom Align	Bottom Align
++	Bottom Border	Bottom Border
++	Bottom Double Border	Bottom Double Border
 +	Bottom Margin	Bottom Margin
 +	Bottom margin (in):	Bottom margin (in):
 +	Breaks	Breaks
@@ -1520,6 +1671,7 @@
 +	Color Scales	Color Scales
 +	Color:	Color:
 +	Colors	Colors
++	Column	Column
 +	Column Width	Column Width
 +	Column Width…	Column Width…
 +	Column chart	Column chart
@@ -1756,6 +1908,7 @@
 +	Enter Cell	Enter Cell
 +	Entire column	Entire column
 +	Entire row	Entire row
++	Equal To…	Equal To…
 +	Equivalent interest rate for the growth of an investment.	Equivalent interest rate for the growth of an investment.
 +	Erase ink strokes	Erase ink strokes
 +	Eraser	Eraser
@@ -1782,8 +1935,10 @@
 +	Exponential of a complex number.	Exponential of a complex number.
 +	Export	Export
 +	Export as CSV	Export as CSV
++	Export as CSV…	Export as CSV…
 +	Export as PDF	Export as PDF
 +	Export as PDF…	Export as PDF…
++	Export as Web Page (.html)…	Export as Web Page (.html)…
 +	Extracts data from XML with an XPath (not available; returns #VALUE!).	Extracts data from XML with an XPath (not available; returns #VALUE!).
 +	Extracts the first match, all matches or the capture groups of a regular expression.	Extracts the first match, all matches or the capture groups of a regular expression.
 +	F distribution density or left-tailed probability.	F distribution density or left-tailed probability.
@@ -1916,7 +2071,11 @@
 +	Grab bag	Grab bag
 +	Gradebook	Gradebook
 +	Grand Totals	Grand Totals
++	Greater Than…	Greater Than…
 +	Greatest common divisor of integers.	Greatest common divisor of integers.
++	Green	Green
++	Green - White - Red	Green - White - Red
++	Green - Yellow - Red	Green - Yellow - Red
 +	Green Fill with Dark Green Text	Green Fill with Dark Green Text
 +	Gridlines	Gridlines
 +	Gridlines: None	Gridlines: None
@@ -2023,6 +2182,7 @@
 +	Insert checkboxes in the selected cells	Insert checkboxes in the selected cells
 +	Insert rows	Insert rows
 +	Insert…	Insert…
++	Inside Borders	Inside Borders
 +	Inspect Workbook	Inspect Workbook
 +	Integer part of a division.	Integer part of a division.
 +	Interest paid in a period of a loan with even principal payments.	Interest paid in a period of a loan with even principal payments.
@@ -2083,6 +2243,7 @@
 +	Least common multiple of integers.	Least common multiple of integers.
 +	Least-squares line coefficients and optional regression statistics.	Least-squares line coefficients and optional regression statistics.
 +	Left	Left
++	Left Border	Left Border
 +	Left Margin	Left Margin
 +	Left margin (in):	Left margin (in):
 +	Left-tailed inverse of Student's t distribution.	Left-tailed inverse of Student's t distribution.
@@ -2092,7 +2253,9 @@
 +	Legend: Right	Legend: Right
 +	Legend: Top	Legend: Top
 +	Length of the repeating pattern detected in a time series.	Length of the repeating pattern detected in a time series.
++	Less Than…	Less Than…
 +	Light	Light
++	Light Blue	Light Blue
 +	Light Red Fill	Light Red Fill
 +	Light Red Fill with Dark Red Text	Light Red Fill with Dark Red Text
 +	Line	Line
@@ -2222,6 +2385,7 @@
 +	Next page	Next page
 +	Next sheet	Next sheet
 +	Next week	Next week
++	No Border	No Border
 +	No Color	No Color
 +	No comments on this sheet yet. Select a cell and choose New Comment.	No comments on this sheet yet. Select a cell and choose New Comment.
 +	No contributor data was built into this copy.	No contributor data was built into this copy.
@@ -2268,12 +2432,15 @@
 +	Options	Options
 +	Options|General	General
 +	Options|Save	Save
++	Orange	Orange
 +	Orientation	Orientation
 +	Orientation (degrees)	Orientation (degrees)
 +	Other:	Other:
 +	Outline	Outline
 +	Output Range:	Output Range:
 +	Output options	Output options
++	Outside Borders	Outside Borders
++	Oval	Oval
 +	PDF (*.pdf)	PDF (*.pdf)
 +	PDF (.pdf)	PDF (.pdf)
 +	Page\nLayout	Page\nLayout
@@ -2331,6 +2498,8 @@
 +	PivotTables	PivotTables
 +	Place Picture in Cell	Place Picture in Cell
 +	Place Picture over Cells	Place Picture over Cells
++	Place in Cell	Place in Cell
++	Place over Cells	Place over Cells
 +	Places arrays side by side.	Places arrays side by side.
 +	Point	Point
 +	Poisson probability.	Poisson probability.
@@ -2388,6 +2557,7 @@
 +	Protect Workbook	Protect Workbook
 +	Protect Workbook structure	Protect Workbook structure
 +	Protection	Protection
++	Purple	Purple
 +	Quarterly Sales Dashboard	Quarterly Sales Dashboard
 +	Quartile (0–4) of a data set, inclusive method.	Quartile (0–4) of a data set, inclusive method.
 +	Quartile (0–4) of a data set.	Quartile (0–4) of a data set.
@@ -2416,6 +2586,9 @@
 +	Recommended Charts	Recommended Charts
 +	Recommended PivotTables	Recommended PivotTables
 +	Record Actions	Record Actions
++	Rectangle	Rectangle
++	Red	Red
++	Red - Yellow - Green	Red - Yellow - Green
 +	Red Border	Red Border
 +	Red Text	Red Text
 +	Redo	Redo
@@ -2515,6 +2688,7 @@
 +	Reverses a logical value.	Reverses a logical value.
 +	Review	Review
 +	Right	Right
++	Right Border	Right Border
 +	Right Margin	Right Margin
 +	Right margin (in):	Right margin (in):
 +	Right-tailed F probability.	Right-tailed F probability.
@@ -2523,6 +2697,7 @@
 +	Rotate	Rotate
 +	Rotate Text Down	Rotate Text Down
 +	Rotate Text Up	Rotate Text Up
++	Rounded Rectangle	Rounded Rectangle
 +	Rounds a number and formats it as text with fixed decimals and optional thousands separators.	Rounds a number and formats it as text with fixed decimals and optional thousands separators.
 +	Rounds a number away from zero to a given number of digits.	Rounds a number away from zero to a given number of digits.
 +	Rounds a number down to a multiple of significance.	Rounds a number down to a multiple of significance.
@@ -2561,6 +2736,7 @@
 +	Save As…	Save As…
 +	Save Changes?	Save Changes?
 +	Save a Copy	Save a Copy
++	Save a Copy as Excel Workbook (.xlsx)…	Save a Copy as Excel Workbook (.xlsx)…
 +	Save a copy as .{fmt}	Save a copy as .{fmt}
 +	Save a copy as .{format}	Save a copy as .{format}
 +	Save as Web Page	Save as Web Page
@@ -2820,6 +2996,8 @@
 +	There are no conditional formatting rules on this sheet.	There are no conditional formatting rules on this sheet.
 +	There are no shapes, pictures or charts on this sheet.	There are no shapes, pictures or charts on this sheet.
 +	Thesaurus	Thesaurus
++	Thick Bottom Border	Thick Bottom Border
++	Thick Outside Borders	Thick Outside Borders
 +	This month	This month
 +	This week	This week
 +	This workbook	This workbook
@@ -2841,7 +3019,11 @@
 +	Top 10 Items	Top 10 Items
 +	Top 10%	Top 10%
 +	Top Align	Top Align
++	Top Border	Top Border
 +	Top Margin	Top Margin
++	Top and Bottom Border	Top and Bottom Border
++	Top and Double Bottom Border	Top and Double Bottom Border
++	Top and Thick Bottom Border	Top and Thick Bottom Border
 +	Top margin (in):	Top margin (in):
 +	Top/Bottom Rules	Top/Bottom Rules
 +	Total Row	Total Row
@@ -2853,6 +3035,8 @@
 +	Transpose	Transpose
 +	Transpose (E)	Transpose (E)
 +	Treat consecutive delimiters as one	Treat consecutive delimiters as one
++	Treemap	Treemap
++	Triangle	Triangle
 +	Two-tailed Student's t probability.	Two-tailed Student's t probability.
 +	Two-tailed inverse of Student's t distribution.	Two-tailed inverse of Student's t distribution.
 +	Two-tailed probability that two variances do not differ.	Two-tailed probability that two variances do not differ.
@@ -2919,8 +3103,11 @@
 +	Weibull density or probability.	Weibull density or probability.
 +	What-If\nAnalysis	What-If\nAnalysis
 +	What-If Analysis	What-If Analysis
++	White - Green	White - Green
++	White - Red	White - Red
 +	Whole number	Whole number
 +	Wide	Wide
++	Win/Loss	Win/Loss
 +	Window	Window
 +	Within workbook	Within workbook
 +	Workbook	Workbook
@@ -2995,7 +3182,7 @@
 +	↓  Sort Descending	↓  Sort Descending
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ja.tsv
-@@ -0,0 +1,762 @@
+@@ -0,0 +1,789 @@
 +# KIO Grid interface overlay; original extra language catalogs remain intact.
 +	  OK  	  OK  
 +	 Close 	 閉じる 
@@ -3012,6 +3199,7 @@
 +	About KIO Grid	KIO Grid について
 +	Above Average	平均より上
 +	Above/Below Average	平均より上/下
++	Absolute value of a number.	数値の絶対値を求めます。
 +	Accessibility	アクセシビリティ
 +	Accounting	会計
 +	Accounting Number Format	会計の表示形式
@@ -3025,12 +3213,15 @@
 +	Add footer	フッターの追加
 +	Add header	ヘッダーの追加
 +	Add to Dictionary	辞書に追加
++	Add-in and Automation	アドインと自動化
 +	Adds all the numbers in the arguments.	引数に含まれるすべての数値を合計します。
 +	Adds the cells that meet a condition.	条件を満たすセルを合計します。
 +	Adds the cells that meet every condition.	すべての条件を満たすセルを合計します。
 +	Agent\nControl	エージェント制御
 +	Align Left	左揃え
 +	Align Right	右揃え
++	Alignment	配置
++	All Borders	格子
 +	All Scripts	すべての文字
 +	All except borders	罫線を除くすべて
 +	Allow	入力値の種類
@@ -3044,6 +3235,7 @@
 +	Any value	すべての値
 +	Apply	適用
 +	Arithmetic mean of the numbers.	数値の算術平均を求めます。
++	Arrow	矢印
 +	Author	作成者
 +	Auto	自動
 +	AutoFit Column Width	列の幅の自動調整
@@ -3066,12 +3258,14 @@
 +	Blanks	空白セル
 +	Bold	太字
 +	Bold (⌘B)	太字 (⌘B)
++	Border	罫線
 +	Borders	罫線
 +	Bottom	下
 +	Bottom\nAlign	下\n揃え
 +	Bottom 10 Items	下位10項目
 +	Bottom 10%	下位10%
 +	Bottom Align	下揃え
++	Bottom Border	下罫線
 +	Bottom Margin	下余白
 +	Breaks	改ページ
 +	Browse…	参照…
@@ -3168,6 +3362,7 @@
 +	Create PDF	PDF の作成
 +	Create a copy	コピーを作成する
 +	Create from Selection	選択範囲から作成
++	Cube	キューブ
 +	Currency	通貨
 +	Current\nDate	現在の\n日付
 +	Current\nTime	現在の\n時刻
@@ -3263,14 +3458,15 @@
 +	File\nPath	ファイルの\nパス
 +	File Name	ファイル名
 +	File Path	ファイルのパス
-+	Fill	フィル
++	Fill	繰り返し
 +	Fill Color	塗りつぶしの色
 +	Fill…	塗りつぶし…
 +	Filter	フィルター
 +	Filter (⌘⇧F)	フィルター (⌘⇧F)
 +	Financial	財務
 +	Find	検索
-+	Find &\nSelect	検索と選択
++	Find &\nSelect	検索と\n選択
++	Find & Select	検索と選択
 +	Find All	すべて検索
 +	Find Next	次を検索
 +	Find and Replace	検索と置換
@@ -3294,6 +3490,8 @@
 +	Format\nPane	書式ウィンドウ
 +	Format\nas Table	テーブルとして\n書式設定
 +	Format Cell Alignment…	セルの配置…
++	Format Cells	セルの書式設定
++	Format Cells|Fill	塗りつぶし
 +	Format Cells…	セルの書式設定…
 +	Format Painter	書式のコピー/貼り付け
 +	Format Painter (double-click to keep it on)	書式のコピー/貼り付け (ダブルクリックで固定)
@@ -3374,6 +3572,7 @@
 +	Insert Sheet Rows	シートの行を挿入
 +	Insert checkboxes in the selected cells	選択したセルにチェックボックスを挿入
 +	Insert…	挿入…
++	Inside Borders	内側の罫線
 +	Interface language	表示言語
 +	Interface size	表示倍率
 +	Interpolation	補間
@@ -3391,6 +3590,7 @@
 +	Layout	レイアウト
 +	Layout {n}	レイアウト {n}
 +	Left	左
++	Left Border	左罫線
 +	Left Margin	左余白
 +	Legend Entries (Series)	凡例項目（系列）
 +	Legend: Bottom	凡例: 下
@@ -3398,6 +3598,7 @@
 +	Legend: Right	凡例: 右
 +	Legend: Top	凡例: 上
 +	Light	ライト
++	Light Blue	ライトブルー
 +	Link	リンク
 +	Links	リンク
 +	Link…	リンク…
@@ -3407,7 +3608,7 @@
 +	Lock the sheet structure so sheets can't be added, moved, renamed or deleted.	シートの構成をロックして、シートの追加、移動、名前の変更、削除をできないようにします。
 +	Locked	ロック
 +	Logical	論理
-+	Long Date	長い日付
++	Long Date	長い日付形式
 +	Lookup &\nReference	検索/\n行列
 +	Lookup & Reference	検索/行列
 +	Macros	マクロ
@@ -3462,6 +3663,7 @@
 +	Next month	次の月
 +	Next page	次のページ
 +	Next sheet	次のシート
++	No Border	枠なし
 +	No names defined	定義された名前はありません
 +	No recent workbooks yet.	最近使ったブックはありません。
 +	No workbook is open.	ブックが開いていません。
@@ -3487,9 +3689,12 @@
 +	Options	オプション
 +	Options|General	全般
 +	Options|Save	保存
++	Orange	オレンジ
 +	Orientation	方向
 +	Orientation (degrees)	方向 (degrees)
 +	Outline	アウトライン
++	Outside Borders	外枠
++	Oval	楕円
 +	PDF (*.pdf)	PDF ファイル (*.pdf)
 +	PDF (.pdf)	PDF (.pdf)
 +	Page\nLayout	ページ レイアウト
@@ -3540,6 +3745,7 @@
 +	Protect\nWorkbook	ブックの保護
 +	Protect Sheet…	シートの保護…
 +	Protect Workbook	ブックの保護
++	Protection	保護
 +	Ready	準備完了
 +	Reapply	再適用
 +	Recent	最近使ったアイテム
@@ -3568,6 +3774,7 @@
 +	Returns the current date.	現在の日付を返します。
 +	Review	校閲
 +	Right	右
++	Right Border	右罫線
 +	Right Margin	右余白
 +	Rotate	回転
 +	Rotate Text Down	文字列を下へ回転
@@ -3577,6 +3784,7 @@
 +	Row Height…	行の高さ…
 +	Ruler	ルーラー
 +	Run Script	スクリプトを実行
++	Sample	サンプル
 +	Save	上書き保存
 +	Save (⌘S)	上書き保存 (⌘S)
 +	Save .xlsx workbooks automatically after every change	変更のたびに .xlsx ブックを自動的に保存する
@@ -3610,6 +3818,7 @@
 +	Shape Styles	図形のスタイル
 +	Shapes	図形
 +	Share	共有
++	Share: export or save a copy	共有: エクスポートまたはコピーを保存
 +	Sheet\nName	シート名
 +	Sheet\nRight-to-Left	シートを右から左へ
 +	Sheet Name	シート名
@@ -3617,7 +3826,7 @@
 +	Sheet Right-to-Left	シートを右から左へ
 +	Sheet structure is locked: sheets can't be added, moved, renamed or deleted.	シートの構成はロックされています。シートの追加、移動、名前の変更、削除はできません。
 +	Sheets	シート
-+	Short Date	日付
++	Short Date	短い日付形式
 +	Show	表示
 +	Show\nComments	コメントの表示
 +	Show All Notes	すべてのメモを表示
@@ -3633,7 +3842,8 @@
 +	Solver	ソルバー
 +	Solver…	ソルバー…
 +	Sort	並べ替え
-+	Sort &\nFilter	並べ替えとフィルター
++	Sort &\nFilter	並べ替えと\nフィルター
++	Sort & Filter	並べ替えとフィルター
 +	Sort A to Z	昇順
 +	Sort Ascending	昇順で並べ替え
 +	Sort Descending	降順で並べ替え
@@ -3696,6 +3906,7 @@
 +	Top 10 Items	上位10項目
 +	Top 10%	上位10%
 +	Top Align	上揃え
++	Top Border	上罫線
 +	Top Margin	上余白
 +	Top/Bottom Rules	上位/下位ルール
 +	Total Row	集計行
@@ -3703,6 +3914,8 @@
 +	Trace Precedents	参照元のトレース
 +	Transpose	行列の入れ替え
 +	Transpose (E)	行列の入れ替え (E)
++	Triangle	三角形
++	Type (custom format code):	種類（ユーザー定義の書式コード）:
 +	Type to filter…	入力して絞り込み…
 +	Underline	下線
 +	Underline (⌘U)	下線 (⌘U)
@@ -3745,6 +3958,7 @@
 +	Zoom to 100%	100% にズーム
 +	Zoom to Selection	選択範囲にズーム
 +	Zoom…	ズーム…
++	e.g. lookup, average, date	例: 検索、平均、日付
 +	none	なし
 +	this workbook	このブック
 +	{count} engine commands are available. See docs/mcp.md and docs/control-protocol.md.	{count}個のエンジンコマンドを使用できます。docs/mcp.md と docs/control-protocol.md を参照してください。
@@ -3760,7 +3974,7 @@
 +	↓  Sort Descending	↓  降順で並べ替え
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ko.tsv
-@@ -0,0 +1,724 @@
+@@ -0,0 +1,745 @@
 +# KIO Grid interface overlay; original extra language catalogs remain intact.
 +	  OK  	  확인  
 +	 Close 	 닫기 
@@ -3776,6 +3990,7 @@
 +	About KIO Grid	KIO Grid 정보
 +	Above Average	평균 초과
 +	Above/Below Average	평균 초과/미만
++	Absolute value of a number.	숫자의 절댓값을 구합니다.
 +	Accessibility	접근성
 +	Accounting	회계
 +	Accounting Number Format	회계 표시 형식
@@ -3788,6 +4003,7 @@
 +	Add footer	바닥글 추가
 +	Add header	머리글 추가
 +	Add to Dictionary	사전에 추가
++	Add-in and Automation	추가 기능 및 자동화
 +	Adds all the numbers in the arguments.	인수에 있는 모든 숫자를 더합니다.
 +	Adds the cells that meet a condition.	조건에 맞는 셀을 더합니다.
 +	Adds the cells that meet every condition.	모든 조건에 맞는 셀을 더합니다.
@@ -3795,7 +4011,7 @@
 +	Align	정렬
 +	Align Left	왼쪽 맞춤
 +	Align Right	오른쪽 맞춤
-+	Alignment	정렬
++	Alignment	맞춤
 +	All Scripts	모든 스크립트
 +	All except borders	테두리만 제외
 +	Allow	허용
@@ -3809,6 +4025,7 @@
 +	Any value	모든 값
 +	Apply	적용
 +	Arithmetic mean of the numbers.	숫자의 산술 평균을 구합니다.
++	Arrow	화살표
 +	Author	만든 이
 +	Auto	자동
 +	AutoFit Column Width	열 너비 자동 맞춤
@@ -3903,6 +4120,7 @@
 +	Color Scales	색조
 +	Color:	색상:
 +	Colors	색상
++	Column	열
 +	Column Width	열 너비
 +	Column Width…	열 너비…
 +	Column chart	세로 막대형 차트
@@ -3917,6 +4135,7 @@
 +	Comments	메모
 +	Comments pane	메모 창
 +	Company	회사
++	Compatibility	호환성
 +	Conditional\nFormatting	조건부\n서식
 +	Conditional Formatting	조건부 서식
 +	Conditional Formatting Rules Manager	조건부 서식 규칙 관리자
@@ -3936,6 +4155,7 @@
 +	Create PDF	PDF 만들기
 +	Create a copy	복사본 만들기
 +	Create from Selection	선택 영역에서 만들기
++	Cube	큐브
 +	Currency	통화
 +	Current\nDate	현재\n날짜
 +	Current\nTime	현재\n시간
@@ -4037,6 +4257,7 @@
 +	Financial	재무
 +	Find	찾기
 +	Find &\nSelect	찾기 및\n선택
++	Find & Select	찾기 및 선택
 +	Find All	모두 찾기
 +	Find Next	다음 찾기
 +	Find and Replace	찾기 및 바꾸기
@@ -4060,6 +4281,8 @@
 +	Format\nPane	서식\n창
 +	Format\nas Table	표 서식\n지정
 +	Format Cell Alignment…	셀 맞춤 서식…
++	Format Cells	셀 서식
++	Format Cells|Fill	채우기
 +	Format Cells…	셀 서식…
 +	Format Painter (double-click to keep it on)	서식 복사 (두 번 클릭하여 유지)
 +	Format as Table	표 서식 지정
@@ -4155,6 +4378,7 @@
 +	Legend: Right	범례: 오른쪽
 +	Legend: Top	범례: 위쪽
 +	Light	밝게
++	Light Blue	연한 파랑
 +	Linear	선형
 +	Link	링크
 +	Links	링크
@@ -4241,9 +4465,11 @@
 +	Options	옵션
 +	Options|General	일반
 +	Options|Save	저장
++	Orange	주황
 +	Orientation	방향
 +	Orientation (degrees)	방향 (degrees)
 +	Outline	개요
++	Oval	타원
 +	PDF (*.pdf)	PDF 파일 (*.pdf)
 +	PDF (.pdf)	PDF (.pdf)
 +	Page\nLayout	페이지\n레이아웃
@@ -4288,6 +4514,8 @@
 +	Protect\nWorkbook	통합 문서\n보호
 +	Protect Sheet…	시트 보호…
 +	Protect Workbook	통합 문서 보호
++	Protection	보호
++	Purple	보라
 +	Ready	준비
 +	Reapply	다시 적용
 +	Recent	최근 항목
@@ -4321,11 +4549,13 @@
 +	Rotate	회전
 +	Rotate Text Down	텍스트 아래로 회전
 +	Rotate Text Up	텍스트 위로 회전
++	Rounded Rectangle	둥근 사각형
 +	Rounds a number to a given number of digits, halves away from zero.	지정한 자릿수로 반올림하며, 중간값은 0에서 먼 쪽으로 처리합니다.
 +	Row Height	행 높이
 +	Row Height…	행 높이…
 +	Rows	행
 +	Ruler	눈금자
++	Sample	예제
 +	Save	저장
 +	Save (⌘S)	저장(⌘S)
 +	Save .xlsx workbooks automatically after every change	변경할 때마다 .xlsx 통합 문서를 자동으로 저장
@@ -4339,7 +4569,7 @@
 +	Save the workbook as a web page.	통합 문서를 웹 페이지로 저장합니다.
 +	Save the workbook under another name or in another folder.	통합 문서를 다른 이름 또는 다른 폴더에 저장합니다.
 +	Scenario Manager…	시나리오 관리자…
-+	Scientific	과학
++	Scientific	지수
 +	Scope	범위
 +	Search	검색
 +	Search:	검색:
@@ -4355,6 +4585,7 @@
 +	Set Print Area	인쇄 영역 설정
 +	Shapes	도형
 +	Share	공유
++	Share: export or save a copy	공유: 내보내기 또는 복사본 저장
 +	Sheet\nName	시트\n이름
 +	Sheet\nRight-to-Left	시트\n오른쪽에서 왼쪽으로
 +	Sheet Name	시트 이름
@@ -4376,6 +4607,7 @@
 +	Solver…	해 찾기…
 +	Sort	정렬
 +	Sort &\nFilter	정렬 및\n필터
++	Sort & Filter	정렬 및 필터
 +	Sort A to Z	오름차순 정렬
 +	Sort Ascending	오름차순 정렬
 +	Sort Descending	내림차순 정렬
@@ -4433,6 +4665,8 @@
 +	Trace Precedents	선행 셀 추적
 +	Transpose	행/열 바꿈
 +	Transpose (E)	행/열 바꿈 (E)
++	Triangle	삼각형
++	Type (custom format code):	형식(사용자 지정 서식 코드):
 +	Type to filter…	입력하여 필터링…
 +	Underline	밑줄
 +	Underline (⌘U)	밑줄 (⌘U)
@@ -4473,6 +4707,7 @@
 +	Zoom to 100%	100%로 확대/축소
 +	Zoom to Selection	선택 항목에 맞춰 확대/축소
 +	Zoom…	확대/축소…
++	e.g. lookup, average, date	예: 찾기, 평균, 날짜
 +	this workbook	이 통합 문서
 +	{count} engine commands are available. See docs/mcp.md and docs/control-protocol.md.	엔진 명령 {count}개를 사용할 수 있습니다. docs/mcp.md 및 docs/control-protocol.md를 참고하세요.
 +	{number}. {kind}  applies to {ranges}	{number}. {kind}  적용 대상: {ranges}
@@ -4487,10 +4722,20 @@
 +	↓  Sort Descending	↓  내림차순 정렬
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/os.rs
-@@ -0,0 +1,60 @@
+@@ -0,0 +1,73 @@
 +//! Actual desktop display-language preferences, before the first frame.
 +#[cfg(not(target_arch = "wasm32"))]
 +pub(super) fn languages() -> Vec<String> {
++    // The existing pinned sys-locale dependency calls GetUserPreferredUILanguages
++    // on Windows and CFLocaleCopyPreferredLanguages on macOS. Keep that actual
++    // display-language order ahead of process culture and regional fallbacks.
++    #[cfg(any(target_os = "macos", target_os = "windows"))]
++    {
++        let native: Vec<String> = sys_locale::get_locales().filter(|tag| !tag.trim().is_empty()).collect();
++        if !native.is_empty() {
++            return native;
++        }
++    }
 +    #[cfg(target_os = "macos")]
 +    if let Some(output) = native_output("/usr/bin/defaults", &["read", "-g", "AppleLanguages"]) {
 +        let values: Vec<String> = output.split([',', '\n', '(', ')', '"']).map(str::trim).filter(|s| !s.is_empty()).map(str::to_owned).collect();
@@ -4522,8 +4767,11 @@
 +    if tags.is_empty() { sys_locale::get_locale().into_iter().collect() } else { tags }
 +}
 +
-+// A broken OS helper must not block the audio application's startup indefinitely.
++// A broken fallback helper must not block the interface startup indefinitely.
 +#[cfg(any(target_os = "macos", target_os = "windows"))]
++// The monotonic fallback deadline is compiled only for native desktop targets;
++// std::time::Instant is never compiled or called by this module on wasm.
++#[allow(clippy::disallowed_methods)]
 +fn native_output(program: &str, args: &[&str]) -> Option<String> {
 +    use std::process::{Command, Stdio};
 +    let mut command = Command::new(program);
@@ -4550,7 +4798,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/vi.tsv
-@@ -0,0 +1,533 @@
+@@ -0,0 +1,564 @@
 +# KIO Grid interface overlay; original extra language catalogs remain intact.
 +	  OK  	  Đồng ý  
 +	 Close 	 Đóng 
@@ -4564,6 +4812,7 @@
 +	About KIO Grid	Giới thiệu KIO Grid
 +	Above Average	Trên trung bình
 +	Above/Below Average	Trên/dưới trung bình
++	Absolute value of a number.	Giá trị tuyệt đối của một số.
 +	Accounting	Kế toán
 +	Accounting Number Format	Định dạng số kế toán
 +	Action	Thao tác
@@ -4571,6 +4820,7 @@
 +	Add Chart\nElement	Thêm thành phần\nbiểu đồ
 +	Add Chart Element	Thêm thành phần biểu đồ
 +	Add to Dictionary	Thêm vào từ điển
++	Add-in and Automation	Phần bổ trợ và tự động hóa
 +	Adds all the numbers in the arguments.	Cộng tất cả các số trong đối số.
 +	Adds the cells that meet a condition.	Cộng các ô đáp ứng điều kiện.
 +	Adds the cells that meet every condition.	Cộng các ô đáp ứng tất cả điều kiện.
@@ -4613,7 +4863,7 @@
 +	Blanks	Ô trống
 +	Bold	Đậm
 +	Bold (⌘B)	Đậm (⌘B)
-+	Border	Viền
++	Border	Đường viền
 +	Borders	Đường viền
 +	Bottom\nAlign	Căn\ndưới
 +	Bottom 10 Items	10 mục thấp nhất
@@ -4698,6 +4948,7 @@
 +	Counts the numbers.	Đếm các số.
 +	Create a copy	Tạo bản sao
 +	Create from Selection	Tạo từ vùng chọn
++	Cube	Khối dữ liệu
 +	Currency	Tiền tệ
 +	Current\nDate	Ngày\nhiện tại
 +	Current\nTime	Giờ\nhiện tại
@@ -4772,13 +5023,15 @@
 +	Excel Workbook (.xlsx)	Sổ làm việc Excel (.xlsx)
 +	Export	Xuất
 +	File	Tệp
-+	Fill	Tô
++	Fill	Lấp đầy
 +	Fill Color	Màu tô
 +	Fill…	Tô…
 +	Filter	Bộ lọc
 +	Filter (⌘⇧F)	Bộ lọc (⌘⇧F)
 +	Financial	Tài chính
 +	Find	Tìm
++	Find &\nSelect	Tìm\nvà chọn
++	Find & Select	Tìm và chọn
 +	Find All	Tìm tất cả
 +	Find Next	Tìm tiếp
 +	Find what:	Nội dung cần tìm:
@@ -4791,6 +5044,9 @@
 +	Fonts	Phông chữ
 +	Format	Định dạng
 +	Format\nas Table	Định dạng\nthành bảng
++	Format Cells	Định dạng ô
++	Format Cells|Fill	Tô màu
++	Format Cells…	Định dạng ô…
 +	Format as Table	Định dạng thành bảng
 +	Formula	Công thức
 +	Formula Bar	Thanh công thức
@@ -4799,6 +5055,7 @@
 +	Formulas	Công thức
 +	Formulas (F)	Công thức (F)
 +	Formulas and number formats	Công thức và định dạng số
++	Fraction	Phân số
 +	Freeze\nPanes	Cố định\nngăn
 +	Freeze First Column	Cố định cột đầu tiên
 +	Freeze Panes	Cố định ngăn
@@ -4809,6 +5066,7 @@
 +	Go To Special…	Đi tới đặc biệt…
 +	Go To…	Đi tới…
 +	Grab bag	Tổng hợp
++	Green	Xanh lá
 +	Gridlines	Đường lưới
 +	Gridlines: None	Đường lưới: Ẩn
 +	Gridlines: Show	Đường lưới: Hiện
@@ -4860,6 +5118,7 @@
 +	Left	Trái
 +	Legend Entries (Series)	Mục chú giải (chuỗi)
 +	Light	Sáng
++	Light Blue	Xanh lam nhạt
 +	Linear	Tuyến tính
 +	Link	Liên kết
 +	Links	Liên kết
@@ -4869,6 +5128,7 @@
 +	Lock Cell	Khóa ô
 +	Locked	Đã khóa
 +	Logical	Lô-gic
++	Long Date	Ngày dạng dài
 +	Lookup &\nReference	Tra cứu\nvà tham chiếu
 +	Lookup & Reference	Tra cứu và tham chiếu
 +	Macros	Macro
@@ -4935,7 +5195,9 @@
 +	OpenDocument Spreadsheet (data import)	Bảng tính OpenDocument (nhập dữ liệu)
 +	Open…	Mở…
 +	Operation	Thao tác
++	Orange	Cam
 +	Outline	Dàn ý
++	Oval	Hình bầu dục
 +	PDF (.pdf)	PDF (.pdf)
 +	Page Layout	Bố trí trang
 +	Page Setup…	Thiết lập trang…
@@ -4951,6 +5213,7 @@
 +	Paste Values	Dán giá trị
 +	Pen	Bút
 +	Percent Style	Kiểu phần trăm
++	Percentage	Phần trăm
 +	Picture file path (PNG or JPEG):	Đường dẫn ảnh (PNG hoặc JPEG):
 +	Pictures	Hình ảnh
 +	Pictures (PNG, JPEG)	Hình ảnh (PNG, JPEG)
@@ -4964,9 +5227,13 @@
 +	Print Preview	Xem trước in
 +	Print…	In…
 +	Properties	Thuộc tính
++	Protection	Bảo vệ
++	Purple	Tím
 +	Ready	Sẵn sàng
 +	Recent	Gần đây
 +	Recently Used	Dùng gần đây
++	Rectangle	Hình chữ nhật
++	Red	Đỏ
 +	Redo	Làm lại
 +	Redo (⌘Y)	Làm lại (⌘Y)
 +	Reference:	Tham chiếu:
@@ -4988,17 +5255,20 @@
 +	Rotate	Xoay
 +	Rotate Text Down	Xoay văn bản xuống
 +	Rotate Text Up	Xoay văn bản lên
++	Rounded Rectangle	Hình chữ nhật bo góc
 +	Rounds a number to a given number of digits, halves away from zero.	Làm tròn số đến số chữ số chỉ định; trường hợp đúng nửa đơn vị được làm tròn ra xa số 0.
 +	Row Height	Chiều cao hàng
 +	Row Height…	Chiều cao hàng…
 +	Rows	Hàng
 +	Ruler	Thước
++	Sample	Mẫu
 +	Save	Lưu
 +	Save (⌘S)	Lưu (⌘S)
 +	Save As	Lưu thành
 +	Save As…	Lưu thành…
 +	Save a Copy	Lưu bản sao
 +	Save a copy as .{fmt}	Lưu bản sao dưới dạng .{fmt}
++	Scientific	Khoa học
 +	Scope	Phạm vi
 +	Search	Tìm kiếm
 +	Search:	Tìm kiếm:
@@ -5008,11 +5278,16 @@
 +	Select All Sheets	Chọn tất cả trang tính
 +	Send	Gửi
 +	Send Backward	Đưa ra sau
++	Share	Chia sẻ
++	Share: export or save a copy	Chia sẻ: xuất hoặc lưu bản sao
++	Short Date	Ngày dạng ngắn
 +	Show	Hiện
 +	Show password	Hiện mật khẩu
 +	Size	Kích thước
 +	Smallest number (0 when there are none).	Số nhỏ nhất (0 nếu không có số).
 +	Sort	Sắp xếp
++	Sort &\nFilter	Sắp xếp\nvà lọc
++	Sort & Filter	Sắp xếp và lọc
 +	Sort Ascending	Sắp xếp tăng dần
 +	Sort Descending	Sắp xếp giảm dần
 +	Sort…	Sắp xếp…
@@ -5049,7 +5324,9 @@
 +	Top/Bottom Rules	Quy tắc cao nhất/thấp nhất
 +	Transpose	Chuyển vị
 +	Transpose (E)	Chuyển vị (E)
++	Triangle	Tam giác
 +	Type	Chữ
++	Type (custom format code):	Loại (mã định dạng tùy chỉnh):
 +	Type to filter…	Nhập để lọc…
 +	Underline	Gạch chân
 +	Underline (⌘U)	Gạch chân (⌘U)
@@ -5066,6 +5343,7 @@
 +	Vertical	Dọc
 +	Vertical Text	Văn bản dọc
 +	View	Xem
++	Web	Trang web
 +	Web Page (.html)	Trang web (.html)
 +	Whole number	Số nguyên
 +	Window	Cửa sổ
@@ -5077,6 +5355,7 @@
 +	Zoom Out	Thu nhỏ
 +	Zoom to Selection	Thu phóng đến vùng chọn
 +	Zoom…	Thu phóng…
++	e.g. lookup, average, date	ví dụ: tra cứu, trung bình, ngày
 +	none	Không
 +	this workbook	sổ làm việc này
 +	{count} engine commands are available. See docs/mcp.md and docs/control-protocol.md.	Có {count} lệnh xử lý. Xem docs/mcp.md và docs/control-protocol.md.
@@ -5086,7 +5365,7 @@
 +	↓  Sort Descending	↓  Sắp xếp giảm dần
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-CN.tsv
-@@ -0,0 +1,758 @@
+@@ -0,0 +1,786 @@
 +# KIO Grid interface overlay; original extra language catalogs remain intact.
 +	  OK  	  确定  
 +	 Close 	 关闭 
@@ -5103,6 +5382,7 @@
 +	About KIO Grid	关于 KIO Grid
 +	Above Average	高于平均值
 +	Above/Below Average	高于/低于平均值
++	Absolute value of a number.	计算数字的绝对值。
 +	Accounting	会计
 +	Accounting Number Format	会计数字格式
 +	Action\nJournal	操作\n日志
@@ -5112,6 +5392,7 @@
 +	Add Field	添加域
 +	Add footer	添加页脚
 +	Add header	添加页眉
++	Add-in and Automation	加载项和自动化
 +	Adds all the numbers in the arguments.	将参数中的所有数字相加。
 +	Adds the cells that meet a condition.	将满足条件的单元格相加。
 +	Adds the cells that meet every condition.	将满足所有条件的单元格相加。
@@ -5119,7 +5400,9 @@
 +	Align	对齐
 +	Align Left	左对齐
 +	Align Right	右对齐
++	Alignment	对齐
 +	All	全部
++	All Borders	所有框线
 +	All Scripts	所有文字系统
 +	All except borders	除边框外的所有内容
 +	Allow	允许
@@ -5134,6 +5417,7 @@
 +	Apply	应用
 +	Arithmetic mean of the numbers.	计算数字的算术平均值。
 +	Arrange	排列
++	Arrow	箭头
 +	Author	作者
 +	Auto	自动
 +	AutoFit Column Width	自动调整列宽
@@ -5162,6 +5446,7 @@
 +	Bottom 10 Items	后10项
 +	Bottom 10%	后10%
 +	Bottom Align	底端对齐
++	Bottom Border	下框线
 +	Bottom Margin	下边距
 +	Breaks	分页符
 +	Browse…	浏览…
@@ -5259,6 +5544,7 @@
 +	Create PDF	创建 PDF
 +	Create a copy	建立副本
 +	Create from Selection	根据所选内容创建
++	Cube	多维数据
 +	Currency	货币
 +	Current\nDate	当前\n日期
 +	Current\nTime	当前\n时间
@@ -5360,7 +5646,8 @@
 +	Filters	筛选器
 +	Financial	财务
 +	Find	查找
-+	Find &\nSelect	查找与\n选择
++	Find &\nSelect	查找和\n选择
++	Find & Select	查找和选择
 +	Find All	查找全部
 +	Find Next	查找下一个
 +	Find and Replace	查找和替换
@@ -5384,6 +5671,8 @@
 +	Format\nPane	格式\n窗格
 +	Format\nas Table	套用\n表格格式
 +	Format Cell Alignment…	设置单元格对齐方式…
++	Format Cells	设置单元格格式
++	Format Cells|Fill	填充
 +	Format Cells…	设置单元格格式…
 +	Format Painter	格式刷
 +	Format Painter (double-click to keep it on)	格式刷（双击可持续使用）
@@ -5465,6 +5754,7 @@
 +	Insert Sheet Rows	插入工作表行
 +	Insert checkboxes in the selected cells	在所选单元格中插入复选框
 +	Insert…	插入…
++	Inside Borders	内部框线
 +	Interface language	界面语言
 +	Interface size	界面大小
 +	Interpolation	插值
@@ -5482,6 +5772,7 @@
 +	Last cell	最后一个单元格
 +	Layout {n}	布局 {n}
 +	Left	左对齐
++	Left Border	左框线
 +	Left Margin	左边距
 +	Legend Entries (Series)	图例项（系列）
 +	Legend: Bottom	图例：底部
@@ -5489,6 +5780,7 @@
 +	Legend: Right	图例：右侧
 +	Legend: Top	图例：顶部
 +	Light	浅色
++	Light Blue	浅蓝色
 +	Link	链接
 +	Links	链接
 +	Link…	链接…
@@ -5554,6 +5846,7 @@
 +	Next month	下个月
 +	Next page	下一页
 +	Next sheet	下一工作表
++	No Border	无框线
 +	No Color	无颜色
 +	No names defined	尚未定义名称
 +	No recent workbooks yet.	尚无最近使用的工作簿。
@@ -5567,7 +5860,7 @@
 +	Note:	注释：
 +	Notes	备注
 +	Nothing to print.	没有可打印的内容。
-+	Number	数值
++	Number	数字
 +	Number\nof Pages	页数
 +	Number of Pages	页数
 +	OK	确定
@@ -5581,6 +5874,8 @@
 +	Orientation	方向
 +	Orientation (degrees)	方向 (degrees)
 +	Outline	大纲
++	Outside Borders	外侧框线
++	Oval	椭圆
 +	PDF (*.pdf)	PDF 文件 (*.pdf)
 +	PDF (.pdf)	PDF (.pdf)
 +	Page\nLayout	页面\n布局
@@ -5629,11 +5924,13 @@
 +	Protect\nWorkbook	保护\n工作簿
 +	Protect Sheet…	保护工作表…
 +	Protect Workbook	保护工作簿
++	Protection	保护
 +	Ready	就绪
 +	Reapply	重新应用
 +	Recent	最近
 +	Recently Used	最近使用
 +	Recommended\nCharts	推荐\n图表
++	Rectangle	矩形
 +	Redo	重做
 +	Redo (⌘Y)	重做 (⌘Y)
 +	Reference:	引用位置：
@@ -5657,15 +5954,18 @@
 +	Returns the current date.	返回当前日期。
 +	Review	审阅
 +	Right	右对齐
++	Right Border	右框线
 +	Right Margin	右边距
 +	Rotate	旋转
 +	Rotate Text Down	向下旋转文字
 +	Rotate Text Up	向上旋转文字
++	Rounded Rectangle	圆角矩形
 +	Rounds a number to a given number of digits, halves away from zero.	将数字四舍五入到指定位数，恰好位于中间的值向远离0的方向舍入。
 +	Row Height	行高
 +	Row Height…	行高…
 +	Ruler	标尺
 +	Run Script	运行脚本
++	Sample	示例
 +	Save	保存
 +	Save (⌘S)	保存 (⌘S)
 +	Save .xlsx workbooks automatically after every change	每次更改后自动保存 .xlsx 工作簿
@@ -5679,7 +5979,7 @@
 +	Save the workbook as a web page.	将工作簿另存为网页。
 +	Save the workbook under another name or in another folder.	以其他名称或在其他文件夹中保存工作簿。
 +	Scenario Manager…	方案管理器…
-+	Scientific	科学记数法
++	Scientific	科学记数
 +	Scope	范围
 +	Search	搜索
 +	Search Commands	搜索命令
@@ -5698,7 +5998,8 @@
 +	Shape Outline	形状轮廓
 +	Shape Styles	形状样式
 +	Shapes	形状
-+	Share	分享
++	Share	共享
++	Share: export or save a copy	共享：导出或保存副本
 +	Sheet\nName	工作表名
 +	Sheet\nRight-to-Left	工作表\n从右到左
 +	Sheet Name	工作表名
@@ -5723,6 +6024,7 @@
 +	Solver…	规划求解…
 +	Sort	排序
 +	Sort &\nFilter	排序和\n筛选
++	Sort & Filter	排序和筛选
 +	Sort A to Z	升序排序
 +	Sort Ascending	升序排序
 +	Sort Descending	降序排序
@@ -5785,6 +6087,7 @@
 +	Top 10 Items	前10项
 +	Top 10%	前10%
 +	Top Align	顶端对齐
++	Top Border	上框线
 +	Top Margin	上边距
 +	Top/Bottom Rules	最前/最后规则
 +	Total Row	汇总行
@@ -5792,6 +6095,8 @@
 +	Trace Precedents	追踪引用单元格
 +	Transpose	转置
 +	Transpose (E)	转置 (E)
++	Triangle	三角形
++	Type (custom format code):	类型（自定义格式代码）：
 +	Type to filter…	输入以筛选…
 +	Underline	下划线
 +	Underline (⌘U)	下划线 (⌘U)
@@ -5814,6 +6119,7 @@
 +	View	视图
 +	Warning	警告
 +	Watch Window	监视窗口
++	Web	网络
 +	Web Page (*.html)	网页 (*.html)
 +	Web Page (.html)	网页 (.html)
 +	What-If\nAnalysis	假设分析
@@ -5832,6 +6138,7 @@
 +	Zoom to 100%	缩放至 100%
 +	Zoom to Selection	缩放到所选对象
 +	Zoom…	缩放…
++	e.g. lookup, average, date	例如：查找、平均值、日期
 +	none	无
 +	this workbook	此工作簿
 +	{count} engine commands are available. See docs/mcp.md and docs/control-protocol.md.	可使用 {count} 个引擎命令。请参阅 docs/mcp.md 和 docs/control-protocol.md。
@@ -5847,7 +6154,7 @@
 +	↓  Sort Descending	↓  降序排序
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-TW.tsv
-@@ -0,0 +1,601 @@
+@@ -0,0 +1,647 @@
 +# KIO Grid interface overlay; original extra language catalogs remain intact.
 +	  OK  	  確定  
 +	 Close 	 關閉 
@@ -5861,6 +6168,7 @@
 +	About KIO Grid	關於 KIO Grid
 +	Above Average	高於平均
 +	Above/Below Average	高於/低於平均
++	Absolute value of a number.	計算數字的絕對值。
 +	Accounting	會計
 +	Accounting Number Format	會計數字格式
 +	Action	動作
@@ -5870,13 +6178,16 @@
 +	Add Field	新增欄位
 +	Add footer	新增頁尾
 +	Add header	新增頁首
++	Add-in and Automation	增益集與自動化
 +	Adds all the numbers in the arguments.	加總引數中的所有數字。
 +	Adds the cells that meet a condition.	加總符合條件的儲存格。
 +	Adds the cells that meet every condition.	加總符合所有條件的儲存格。
 +	Align	對齊
 +	Align Left	靠左對齊
 +	Align Right	靠右對齊
++	Alignment	對齊
 +	All	全部
++	All Borders	所有框線
 +	All Scripts	所有文字
 +	All except borders	除框線外的全部內容
 +	Allow	允許
@@ -5904,17 +6215,20 @@
 +	Background Color:	背景顏色：
 +	Banded Columns	欄帶狀格式
 +	Banded Rows	列帶狀格式
++	Bar	豎線
 +	Below Average	低於平均
 +	Blank workbook	空白活頁簿
 +	Blanks	空白
 +	Bold	粗體
 +	Bold (⌘B)	粗體 (⌘B)
++	Border	外框
 +	Borders	框線
 +	Bottom	下
 +	Bottom\nAlign	靠下\n對齊
 +	Bottom 10 Items	後10個項目
 +	Bottom 10%	後10%
 +	Bottom Align	靠下對齊
++	Bottom Border	下框線
 +	Bottom Margin	下邊界
 +	Breaks	分隔設定
 +	Browse…	瀏覽…
@@ -5973,6 +6287,7 @@
 +	Clustered Bar	群組橫條圖
 +	Clustered Column	群組直條圖
 +	Color Scales	色階
++	Column	欄
 +	Column Width	欄寬
 +	Column Width…	欄寬…
 +	Column chart	直條圖
@@ -6005,6 +6320,8 @@
 +	Counts the numbers.	計算數字的個數。
 +	Create a copy	建立複本
 +	Create from Selection	從選取範圍建立
++	Cube	多維度資料
++	Currency	貨幣
 +	Current\nDate	目前\n日期
 +	Current\nTime	目前\n時間
 +	Current Date	目前日期
@@ -6064,6 +6381,7 @@
 +	Doughnut	環圈圖
 +	Down	下
 +	Download	下載
++	Draw	繪圖
 +	Duplicate	複製
 +	Duplicate Values…	重複的值…
 +	Edit	編輯
@@ -6085,10 +6403,13 @@
 +	Export	匯出
 +	File	檔案
 +	File Path	檔案路徑
++	Fill	填滿
 +	Fill Color	填滿色彩
 +	Fill…	填滿…
 +	Financial	財務
 +	Find	尋找
++	Find &\nSelect	尋找與\n選取
++	Find & Select	尋找與選取
 +	Find All	全部尋找
 +	Find Next	找下一個
 +	Find and Replace	尋找及取代
@@ -6103,6 +6424,9 @@
 +	Footer:	頁尾:
 +	Format	格式
 +	Format\nas Table	格式化為\n表格
++	Format Cells	儲存格格式
++	Format Cells|Fill	填滿
++	Format Cells…	儲存格格式…
 +	Format Painter	複製格式
 +	Format as Table	格式化為表格
 +	Formula	公式
@@ -6117,6 +6441,7 @@
 +	Freeze First Column	凍結首欄
 +	Freeze Panes	凍結窗格
 +	Freeze Top Row	凍結頂端列
++	General	通用格式
 +	Go To	到
 +	Go To Special	特殊目標
 +	Go To Special…	特殊目標…
@@ -6165,6 +6490,7 @@
 +	Insert Hyperlink	插入超連結
 +	Insert Sheet	插入工作表
 +	Insert…	插入…
++	Inside Borders	內框線
 +	Interface language	介面語言
 +	Interface size	介面大小
 +	Interpolation	內插
@@ -6182,8 +6508,10 @@
 +	Layout	版面配置
 +	Layout {n}	版面配置 {n}
 +	Left	左
++	Left Border	左框線
 +	Left Margin	左邊界
 +	Legend Entries (Series)	圖例項目（數列）
++	Light Blue	淺藍色
 +	Line	直線
 +	Link	連結
 +	Links	連結
@@ -6193,6 +6521,7 @@
 +	Lock Cell	鎖定儲存格
 +	Locked	鎖定
 +	Logical	邏輯
++	Long Date	完整日期
 +	Lookup &\nReference	查閱與\n參照
 +	Lookup & Reference	查閱與參照
 +	Macros	巨集
@@ -6242,6 +6571,7 @@
 +	Next month	下個月
 +	Next page	下一頁
 +	Next sheet	下一張工作表
++	No Border	無框線
 +	No names defined	尚未定義名稱
 +	No recent workbooks yet.	尚無最近使用的活頁簿。
 +	No workbook is open.	未開啟任何活頁簿。
@@ -6253,15 +6583,19 @@
 +	Not saved yet	尚未儲存
 +	Note:	註解：
 +	Notes	註解
++	Number	數值
 +	OK	確定
 +	Object Properties	物件內容
 +	Open	開啟
 +	OpenDocument Spreadsheet (data import)	OpenDocument 試算表（資料匯入）
 +	Open…	開啟…
 +	Options	選項
++	Orange	橙色
 +	Orientation	方向
 +	Orientation (degrees)	方向 (degrees)
 +	Outline	大綱
++	Outside Borders	外框線
++	Oval	橢圓
 +	PDF (.pdf)	PDF (.pdf)
 +	Page\nNumber	頁碼
 +	Page Breaks	分頁符號
@@ -6297,7 +6631,12 @@
 +	Print…	列印…
 +	Proofing	校訂
 +	Protect	保護
++	Protection	保護
++	Purple	紫色
++	Ready	就緒
 +	Recently Used	最近使用
++	Rectangle	矩形
++	Red	紅色
 +	Redo	重做
 +	Redo (⌘Y)	重做 (⌘Y)
 +	Reference:	參照：
@@ -6319,21 +6658,25 @@
 +	Reverse the order	反轉順序
 +	Review	校閱
 +	Right	右
++	Right Border	右框線
 +	Right Margin	右邊界
 +	Rotate	旋轉
 +	Rotate Text Down	文字向下旋轉
 +	Rotate Text Up	文字向上旋轉
++	Rounded Rectangle	圓角矩形
 +	Rounds a number to a given number of digits, halves away from zero.	將數字四捨五入至指定的位數，正好位於中間的值會往遠離0的方向進位。
 +	Row Height	列高
 +	Row Height…	列高…
 +	Rows	列
 +	Ruler	尺規
++	Sample	範例
 +	Save	儲存
 +	Save (⌘S)	儲存 (⌘S)
 +	Save As	另存新檔
 +	Save As…	另存新檔…
 +	Save a Copy	儲存拷貝
 +	Save a copy as .{fmt}	另存複本為 .{fmt}
++	Scientific	科學記號
 +	Scope	範圍
 +	Search	搜尋
 +	Search Commands	搜尋命令
@@ -6347,6 +6690,8 @@
 +	Shape Outline	圖案外框
 +	Shape Styles	圖案樣式
 +	Share	共用
++	Share: export or save a copy	共用：匯出或儲存複本
++	Short Date	簡短日期
 +	Show	顯示
 +	Show\nComments	顯示註解
 +	Show Comments	顯示註解
@@ -6354,6 +6699,8 @@
 +	Single	單線
 +	Smallest number (0 when there are none).	傳回最小的數字（沒有數字時為0）。
 +	Sort	排序
++	Sort &\nFilter	排序與\n篩選
++	Sort & Filter	排序與篩選
 +	Sort Ascending	遞增排序
 +	Sort Descending	遞減排序
 +	Sort…	排序…
@@ -6385,6 +6732,7 @@
 +	Table Style Options	表格樣式選項
 +	Table Styles	表格樣式
 +	Tables	表格
++	Text	文字
 +	Text\nBox	文字方塊
 +	Text Begins With	文字開頭為
 +	Text Box	文字方塊
@@ -6395,6 +6743,7 @@
 +	Theme Colors	佈景主題色彩
 +	Themes	佈景主題
 +	Thesaurus	同義字典
++	Time	時間
 +	Title	標題
 +	Title:	標題：
 +	To:	至：
@@ -6405,11 +6754,14 @@
 +	Top 10 Items	前10個項目
 +	Top 10%	前10%
 +	Top Align	靠上對齊
++	Top Border	上框線
 +	Top Margin	上邊界
 +	Top/Bottom Rules	前段/後段項目規則
 +	Total Row	合計列
 +	Transpose	轉置
 +	Transpose (E)	轉置 (E)
++	Triangle	三角形
++	Type (custom format code):	類型（自訂格式代碼）：
 +	Type to filter…	輸入以篩選…
 +	Underline	底線
 +	Underline (⌘U)	底線 (⌘U)
@@ -6439,6 +6791,7 @@
 +	Zoom Out	縮小
 +	Zoom to Selection	縮放至選取範圍
 +	Zoom…	縮放…
++	e.g. lookup, average, date	例如：查閱、平均、日期
 +	none	無
 +	this workbook	此活頁簿
 +	{count} engine commands are available. See docs/mcp.md and docs/control-protocol.md.	可使用 {count} 個引擎指令。請參閱 docs/mcp.md 與 docs/control-protocol.md。
@@ -6449,6 +6802,17 @@
 +	— Steps: {count}	— 步驟數：{count}
 +	↑  Sort Ascending	↑  遞增排序
 +	↓  Sort Descending	↓  遞減排序
+--- a/crates/ui-egui/src/keytips/keytip_table/generated.rs
++++ b/crates/ui-egui/src/keytips/keytip_table/generated.rs
+@@ -8,7 +8,7 @@
+ pub const SEQUENCES: &[(&str, Entry)] = &[
+     ("H", Entry::Tab("Home")),
+     ("N", Entry::Tab("Insert")),
+-    ("JI", Entry::Tab("Draw")), // Two-letter unit. Deeper Draw letters differ between Excel and KIO Grid; left blank for future contributors.
++    ("JI", Entry::Tab("Draw")), // Two-letter unit. Deeper Draw letters differ between Excel and GridCraft; left blank for future contributors.
+     ("P", Entry::Tab("Page Layout")),
+     ("M", Entry::Tab("Formulas")),
+     ("A", Entry::Tab("Data")),
 --- a/crates/ui-egui/src/lib.rs
 +++ b/crates/ui-egui/src/lib.rs
 @@ -71,6 +71,9 @@
@@ -6683,7 +7047,12 @@
                          app.run_or_alert("edit.undo", json!({"steps": i + 1}));
                      }
                  }
-@@ -108,7 +108,7 @@
+@@ -104,60 +104,72 @@
+                     ("Sort A to Z", "data.sortAscending"),
+                     ("Calculate Now", "formulas.calculateNow"),
+                 ] {
+-                    if ui.button(label).clicked() {
++                    if ui.button(app.ui.language.tr(label)).clicked() {
                          app.run_or_alert(id, json!({}));
                      }
                  }
@@ -6692,24 +7061,218 @@
                      app.print_now(json!({}));
                  }
              });
-@@ -131,7 +131,7 @@
-                 }
-                 let share = small_button(ui, Icon::Share, "Share", "Share: export or save a copy", true);
-                 egui::Popup::menu(&share).show(|ui| {
+-            // Centered title.
+-            let title = app.session.active().map(|d| d.display_title()).unwrap_or_default();
+-            let dirty = app.session.active().is_some_and(|d| d.is_dirty());
+-            ui.painter().text(
+-                rect.center(),
+-                Align2::CENTER_CENTER,
+-                format!("{title}{}", if dirty { " •" } else { "" }),
+-                theme::ui_bold(13.0),
+-                t.text,
+-            );
+-            ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+-                ui.add_space(8.0);
+-                let __k = icon_button(ui, Icon::Search, t.text_dim, "Search commands (⌘⇧Space)", vec2(28.0, ch));
+-                control_keytip(app, ui, &__k, "commandSearch");
+-                if __k.clicked() {
+-                    app.open_dialog("commandSearch", json!({}));
+-                }
+-                let share = small_button(ui, Icon::Share, "Share", "Share: export or save a copy", true);
+-                egui::Popup::menu(&share).show(|ui| {
 -                    if ui.button("Export as PDF…").clicked() {
-+                    if ui.button(crate::i18n::current(ui.ctx()).tr("Export as PDF…")).clicked() {
-                         app.run_or_alert("file.exportPdf", json!({}));
+-                        app.run_or_alert("file.exportPdf", json!({}));
++            // Paint the document title only in the real gap between control groups.
++            let title_left = ui.cursor().min.x + 6.0;
++            let title_right = ui
++                .with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
++                    ui.add_space(8.0);
++                    let __k = icon_button(ui, Icon::Search, t.text_dim, "Search commands (⌘⇧Space)", vec2(28.0, ch));
++                    control_keytip(app, ui, &__k, "commandSearch");
++                    if __k.clicked() {
++                        app.open_dialog("commandSearch", json!({}));
                      }
-                     for (label, fmt) in
-@@ -149,6 +149,7 @@
-                 }
-                 // Quick light/dark switch (#194); right-click offers System as well. The same
-                 // choice lives in File › Display theme and the View tab.
-+                language_menu(app, ui);
-                 let lang = app.ui.language;
-                 let theme = icon_button(ui, Icon::Appearance, t.text_dim, "Dark Mode", vec2(28.0, 26.0));
-                 let dark = ui.ctx().theme() == egui::Theme::Dark;
-@@ -425,7 +426,9 @@
+-                    for (label, fmt) in
+-                        [("Save a Copy as Excel Workbook (.xlsx)…", "xlsx"), ("Export as CSV…", "csv"), ("Export as Web Page (.html)…", "html")]
+-                    {
+-                        if ui.button(label).clicked() {
+-                            app.open_dialog("saveCopy", json!({"format": fmt}));
++                    let share_label = if rect.width() < 800.0 { "" } else { "Share" };
++                    let share = small_button(ui, Icon::Share, share_label, "Share: export or save a copy", true);
++                    share.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, ui.is_enabled(), app.ui.language.tr("Share")));
++                    egui::Popup::menu(&share).show(|ui| {
++                        if ui.button(crate::i18n::current(ui.ctx()).tr("Export as PDF…")).clicked() {
++                            app.run_or_alert("file.exportPdf", json!({}));
+                         }
++                        for (label, fmt) in
++                            [("Save a Copy as Excel Workbook (.xlsx)…", "xlsx"), ("Export as CSV…", "csv"), ("Export as Web Page (.html)…", "html")]
++                        {
++                            if ui.button(app.ui.language.tr(label)).clicked() {
++                                app.open_dialog("saveCopy", json!({"format": fmt}));
++                            }
++                        }
++                    });
++                    let __k = icon_button(ui, Icon::Comment, t.text_dim, "Comments", vec2(28.0, ch));
++                    control_keytip(app, ui, &__k, "comments");
++                    if __k.clicked() {
++                        app.open_dialog("comments", json!({}));
+                     }
+-                });
+-                let __k = icon_button(ui, Icon::Comment, t.text_dim, "Comments", vec2(28.0, ch));
+-                control_keytip(app, ui, &__k, "comments");
+-                if __k.clicked() {
+-                    app.open_dialog("comments", json!({}));
+-                }
+-                // Quick light/dark switch (#194); right-click offers System as well. The same
+-                // choice lives in File › Display theme and the View tab.
+-                let lang = app.ui.language;
+-                let theme = icon_button(ui, Icon::Appearance, t.text_dim, "Dark Mode", vec2(28.0, 26.0));
+-                let dark = ui.ctx().theme() == egui::Theme::Dark;
+-                theme.widget_info(|| egui::WidgetInfo::selected(egui::WidgetType::Checkbox, true, dark, lang.tr("Dark Mode")));
+-                if theme.clicked() {
+-                    act(app, "view.darkMode", json!({}));
+-                }
+-                theme.context_menu(|ui| theme_choices(app, ui));
+-            });
++                    // Quick light/dark switch (#194); right-click offers System as well. The same
++                    // choice lives in File › Display theme and the View tab.
++                    language_menu(app, ui);
++                    let lang = app.ui.language;
++                    let theme = icon_button(ui, Icon::Appearance, t.text_dim, "Dark Mode", vec2(28.0, 26.0));
++                    let dark = ui.ctx().theme() == egui::Theme::Dark;
++                    theme.widget_info(|| egui::WidgetInfo::selected(egui::WidgetType::Checkbox, true, dark, lang.tr("Dark Mode")));
++                    if theme.clicked() {
++                        act(app, "view.darkMode", json!({}));
++                    }
++                    theme.context_menu(|ui| theme_choices(app, ui));
++                    ui.cursor().max.x - 6.0
++                })
++                .inner;
++            let gap = Rect::from_min_max(pos2(title_left, rect.top()), pos2(title_right.max(title_left), rect.bottom()));
++            if gap.width() >= 12.0 {
++                let title = app.session.active().map(|d| d.display_title()).unwrap_or_default();
++                let dirty = app.session.active().is_some_and(|d| d.is_dirty());
++                let text = format!("{title}{}", if dirty { " •" } else { "" });
++                let mut job = egui::text::LayoutJob::simple(text.clone(), theme::ui_bold(13.0), t.text, gap.width());
++                job.wrap.max_rows = 1;
++                job.wrap.break_anywhere = true;
++                job.wrap.overflow_character = Some('…');
++                let galley = ui.painter().layout_job(job);
++                let x = (rect.center().x - galley.size().x * 0.5).clamp(gap.left(), (gap.right() - galley.size().x).max(gap.left()));
++                ui.painter().with_clip_rect(gap).galley(pos2(x, gap.center().y - galley.size().y * 0.5), galley, t.text);
++                ui.interact(gap, ui.id().with("document_title_hover"), Sense::hover()).on_hover_text(text);
++            }
+         });
+     });
+ }
+@@ -173,52 +185,54 @@
+             // Tabs row.
+             let tabs_rect = Rect::from_min_size(ui.cursor().min, vec2(ui.available_width(), 32.0));
+             ui.scope_builder(egui::UiBuilder::new().max_rect(tabs_rect), |ui| {
+-                ui.horizontal(|ui| {
+-                    ui.spacing_mut().item_spacing.x = 2.0;
+-                    ui.add_space(8.0);
+-                    file_menu(app, ui);
+-                    let mut tabs: Vec<&str> = TABS.to_vec();
+-                    let ctx_tabs = contextual_tabs(app);
+-                    tabs.extend(ctx_tabs.iter());
+-                    for tab in tabs {
+-                        let active = app.ui.ribbon_tab == tab;
+-                        let contextual = ctx_tabs.contains(&tab);
+-                        let font = theme::ui_font(13.5);
+-                        let label = app.ui.language.tr(tab);
+-                        let tw = ui.painter().layout_no_wrap(label.to_string(), font.clone(), t.text).size().x;
+-                        let (r, resp) = ui.allocate_exact_size(vec2(tw + 22.0, 30.0), Sense::click());
+-                        if resp.hovered() && !active {
+-                            ui.painter().rect_filled(r.shrink2(vec2(2.0, 4.0)), 5.0, t.hover);
+-                        }
+-                        let color = if contextual {
+-                            t.accent
+-                        } else if active {
+-                            t.text
+-                        } else {
+-                            t.text_dim
+-                        };
+-                        ui.painter().text(r.center(), Align2::CENTER_CENTER, label, if active { theme::ui_bold(13.5) } else { font }, color);
+-                        if active {
+-                            let ul = Rect::from_center_size(pos2(r.center().x, r.bottom() - 3.0), vec2(tw.clamp(20.0, 40.0), 3.0));
+-                            ui.painter().rect_filled(ul, 1.5, t.accent);
+-                        }
+-                        if resp.clicked() {
+-                            if active && !collapsed {
+-                                app.ui.ribbon_collapsed = true;
++                egui::ScrollArea::horizontal().id_salt("ribbon_tabs_scroll").show(ui, |ui| {
++                    ui.horizontal(|ui| {
++                        ui.spacing_mut().item_spacing.x = 2.0;
++                        ui.add_space(8.0);
++                        file_menu(app, ui);
++                        let mut tabs: Vec<&str> = TABS.to_vec();
++                        let ctx_tabs = contextual_tabs(app);
++                        tabs.extend(ctx_tabs.iter());
++                        for tab in tabs {
++                            let active = app.ui.ribbon_tab == tab;
++                            let contextual = ctx_tabs.contains(&tab);
++                            let font = theme::ui_font(13.5);
++                            let label = app.ui.language.tr(tab);
++                            let tw = ui.painter().layout_no_wrap(label.to_string(), font.clone(), t.text).size().x;
++                            let (r, resp) = ui.allocate_exact_size(vec2(tw + 22.0, 30.0), Sense::click());
++                            if resp.hovered() && !active {
++                                ui.painter().rect_filled(r.shrink2(vec2(2.0, 4.0)), 5.0, t.hover);
++                            }
++                            let color = if contextual {
++                                t.accent
++                            } else if active {
++                                t.text
+                             } else {
+-                                app.ui.ribbon_tab = tab.to_string();
+-                                app.ui.ribbon_collapsed = false;
++                                t.text_dim
++                            };
++                            ui.painter().text(r.center(), Align2::CENTER_CENTER, label, if active { theme::ui_bold(13.5) } else { font }, color);
++                            if active {
++                                let ul = Rect::from_center_size(pos2(r.center().x, r.bottom() - 3.0), vec2(tw.clamp(20.0, 40.0), 3.0));
++                                ui.painter().rect_filled(ul, 1.5, t.accent);
++                            }
++                            if resp.clicked() {
++                                if active && !collapsed {
++                                    app.ui.ribbon_collapsed = true;
++                                } else {
++                                    app.ui.ribbon_tab = tab.to_string();
++                                    app.ui.ribbon_collapsed = false;
++                                }
++                            }
++                            if resp.double_clicked() {
++                                app.ui.ribbon_collapsed = !collapsed;
++                            }
++                            if app.keytips.prefix() == Some("")
++                                && let Some(sequence) = keytip_table::tab_sequence(tab)
++                            {
++                                keytip(app, ui, sequence, pos2(r.center().x, r.bottom() - 1.0));
+                             }
+                         }
+-                        if resp.double_clicked() {
+-                            app.ui.ribbon_collapsed = !collapsed;
+-                        }
+-                        if app.keytips.prefix() == Some("")
+-                            && let Some(sequence) = keytip_table::tab_sequence(tab)
+-                        {
+-                            keytip(app, ui, sequence, pos2(r.center().x, r.bottom() - 1.0));
+-                        }
+-                    }
++                    });
+                 });
+             });
+             if collapsed {
+@@ -230,7 +244,7 @@
+             ui.painter().rect_stroke(card, 10.0, Stroke::new(1.0, t.ribbon_border), StrokeKind::Inside);
+             let inner = card.shrink2(vec2(10.0, 6.0));
+             ui.scope_builder(egui::UiBuilder::new().max_rect(inner), |ui| {
+-                egui::ScrollArea::horizontal().scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysHidden).show(ui, |ui| {
++                egui::ScrollArea::horizontal().id_salt(("ribbon_card_scroll", &app.ui.ribbon_tab)).show(ui, |ui| {
+                     ui.horizontal(|ui| {
+                         ui.spacing_mut().item_spacing = vec2(2.0, 2.0);
+                         match app.ui.ribbon_tab.as_str() {
+@@ -425,7 +439,9 @@
              });
          }
          let text_id = anchor.id.with(salt).with("__combo_text");
@@ -6720,7 +7283,7 @@
          if open_now && !te.has_focus() {
              ui.ctx().memory_mut(|m| m.request_focus(text_id));
              // Select all once focus lands so typing replaces the filter.
-@@ -657,7 +660,7 @@
+@@ -657,7 +673,7 @@
                      }
                  }
                  ui.separator();
@@ -6729,7 +7292,7 @@
                      app.open_dialog("formatCells", json!({"tab": "Border"}));
                  }
              });
-@@ -965,7 +968,7 @@
+@@ -965,7 +981,7 @@
                      }
                  }
                  ui.separator();
@@ -6738,14 +7301,15 @@
                      app.open_dialog("insertFunction", json!({}));
                  }
              });
-@@ -1142,23 +1145,23 @@
+@@ -1142,23 +1158,23 @@
  }
  
  fn cf_menu(app: &mut SheetApp, ui: &mut Ui) {
 -    ui.menu_button("Highlight Cells Rules", |ui| {
 +    ui.menu_button(crate::i18n::current(ui.ctx()).tr("Highlight Cells Rules"), |ui| {
          for (label, op) in [("Greater Than…", "greater"), ("Less Than…", "less"), ("Between…", "between"), ("Equal To…", "equal")] {
-             if ui.button(label).clicked() {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
                  app.open_dialog("cfQuick", json!({"type": "cellIs", "operator": op, "title": label}));
              }
          }
@@ -6767,7 +7331,7 @@
          menu_items(
              app,
              ui,
-@@ -1172,7 +1175,7 @@
+@@ -1172,16 +1188,16 @@
              ],
          );
      });
@@ -6776,7 +7340,9 @@
          for (label, c) in
              [("Blue", "#638EC6"), ("Green", "#63BE7B"), ("Red", "#F8696B"), ("Orange", "#FFB628"), ("Light Blue", "#008AEF"), ("Purple", "#D6007B")]
          {
-@@ -1181,7 +1184,7 @@
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 act(app, "home.conditionalFormat", json!({"rule": {"type": "dataBar", "color": c}}));
              }
          }
      });
@@ -6785,7 +7351,13 @@
          for (label, cols) in [
              ("Green - Yellow - Red", vec!["#63BE7B", "#FFEB84", "#F8696B"]),
              ("Red - Yellow - Green", vec!["#F8696B", "#FFEB84", "#63BE7B"]),
-@@ -1195,7 +1198,7 @@
+@@ -1190,12 +1206,12 @@
+             ("White - Green", vec!["#FCFCFF", "#63BE7B"]),
+             ("White - Red", vec!["#FCFCFF", "#F8696B"]),
+         ] {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 act(app, "home.conditionalFormat", json!({"rule": {"type": "colorScale", "colors": cols}}));
              }
          }
      });
@@ -6794,7 +7366,14 @@
          for (label, set) in [
              ("3 Arrows", "3Arrows"),
              ("3 Traffic Lights", "3TrafficLights1"),
-@@ -1210,10 +1213,10 @@
+@@ -1204,16 +1220,16 @@
+             ("5 Arrows", "5Arrows"),
+             ("5 Quarters", "5Quarters"),
+         ] {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 act(app, "home.conditionalFormat", json!({"rule": {"type": "iconSet", "set": set}}));
+             }
          }
      });
      ui.separator();
@@ -6807,7 +7386,7 @@
          menu_items(
              app,
              ui,
-@@ -1223,7 +1226,7 @@
+@@ -1223,7 +1239,7 @@
              ],
          );
      });
@@ -6816,7 +7395,34 @@
          app.open_dialog("manageRules", json!({}));
      }
  }
-@@ -1781,7 +1784,7 @@
+@@ -1386,7 +1402,7 @@
+     pic.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, ui.is_enabled(), "Pictures"));
+     egui::Popup::menu(&pic).show(|ui| {
+         for (label, placement) in [("Place in Cell", "cell"), ("Place over Cells", "overCells")] {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 app.open_dialog("insertPicture", json!({"placement": placement}));
+                 ui.close();
+             }
+@@ -1404,7 +1420,7 @@
+             ("Arrow", "arrow"),
+             ("Text Box", "textBox"),
+         ] {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 act(app, "insert.shape", json!({"kind": kind}));
+             }
+         }
+@@ -1529,7 +1545,7 @@
+     anchor_keytip(app, ui, &sp, &["dialog:sparkline"]);
+     egui::Popup::menu(&sp).show(|ui| {
+         for (label, kind) in [("Line", "line"), ("Column", "column"), ("Win/Loss", "winLoss")] {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 app.open_dialog("sparkline", json!({"type": kind}));
+             }
+         }
+@@ -1781,7 +1797,7 @@
                          let name =
                              app.session.active().map(|d| crate::formula_locale::completion_name(n, locale, &d.wb, d.wb.active_sheet)).unwrap_or(n);
                          let desc = crate::formula_locale::description(n, locale).unwrap_or_default();
@@ -6825,7 +7431,7 @@
                              app.run_or_alert("formulas.insertFunction", json!({"name": n}));
                              ui.close();
                          }
-@@ -2222,21 +2225,6 @@
+@@ -2222,21 +2238,6 @@
                  }
              });
      });
@@ -6847,7 +7453,7 @@
  }
  
  fn automate(app: &mut SheetApp, ui: &mut Ui) {
-@@ -2274,7 +2262,7 @@
+@@ -2274,7 +2275,7 @@
          return;
      };
      ui.vertical(|ui| {
@@ -6856,7 +7462,16 @@
          let field = egui::Id::new(("gridcraft.table_name", &tname));
          if let Some(name) = crate::widgets::committed_text(ui, field, &tname, Some(120.0))
              && name != tname
-@@ -2514,3 +2502,24 @@
+@@ -2381,7 +2382,7 @@
+             ("Funnel", "funnel", ""),
+             ("Treemap", "treemap", ""),
+         ] {
+-            if ui.button(label).clicked() {
++            if ui.button(app.ui.language.tr(label)).clicked() {
+                 act(app, "chart.set", json!({"chart": id, "type": k, "subtype": s}));
+             }
+         }
+@@ -2514,3 +2515,24 @@
          assert!(!checkbox_on(false, true));
      }
  }
@@ -7088,8 +7703,14 @@
 +
 +## KIO development follow-up — 2026-10-19
 +
-+KIO Grid development overlay: six primary language choices, native OS detection, explicit/automatic preferences and Traditional Chinese font ordering. Original additional languages remain available. The catalog remains incomplete: command/form metadata and function help were added to the audit rather than counted as translated. 97 local UI tests pass after the native-file-filter/help-caption follow-up, including actual runtime command/function inventory, opaque message values, workbook/undo/journal/input preservation and preference migration. Matching Windows CI and visual checks remain required. Engine, formula wire values, file formats and licensing are unchanged. The original upstream readiness assessment below is historical.
++KIO Grid development overlay: six primary language choices, native OS detection, explicit/automatic preferences and Traditional Chinese font ordering. Original additional languages remain available. The catalog remains incomplete: command/form metadata and function help were added to the audit rather than counted as translated. 100 local UI tests pass after the native-file-filter/help-caption follow-up, including actual runtime command/function inventory, opaque message values, workbook/undo/journal/input preservation and preference migration. The 97-test predecessor passed 97 tests on macOS and 96 platform-applicable tests on Windows (fc2ddf1, run 39154122002); its strict catalog gate failed correctly because translation work remains. New category/context and narrow-window fixes require their own matching CI result. Native capture was blocked by the locked Mac; 108 offscreen render frames are separate evidence, not a full visual pass. Engine, formula wire values, file formats and licensing are unchanged. The original upstream readiness assessment below is historical.
 +
  
  > **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-12 · **Change:** minor (Format Cells dialog looks its labels up in the catalog) · **Target:** Microsoft Excel (Microsoft 365), Excel for Mac 16.113.4
  
+@@ -85,3 +90,5 @@
+ | 2026-10-11 | minor | Czech (cs) ribbon table: 266 labels (~12%), menus only |
+ | 2026-10-10 | minor | Re-measured after #31, #104, #82, #38 merged: ribbon translated into ja, zh, ko, pt-BR and ru (266–268 labels, ~12%), system-language default, CJK/Thai/Hebrew font fallback; ~10% ready, 100–165 h |
+ | 2026-10-10 | major | Created: English only, no catalog, ~2,200 strings, script-support gaps, open language PRs |
++
++Local expanded gates: all workspace test binaries total 1,609 passes and one ignored test; changed UI/GUI/CLI crates pass Clippy with dependencies excluded from linting. Assets, layering, keytip generation, parity and wasm checks pass. Full-workspace Clippy still reports two unchanged original XLSX warnings; the full xtask ci gate is therefore not claimed to pass. Keytip regeneration changed only one provenance comment, with sequences/actions and generated tests unchanged. Windows shortcut glyphs are rendered as Ctrl/Shift/Alt without changing bindings or inserted user data. Legacy preferences without an origin marker are preserved as explicit choices because their original automatic/manual origin cannot be recovered.
