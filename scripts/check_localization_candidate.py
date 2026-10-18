@@ -13,7 +13,7 @@ import subprocess
 import full_native as native
 
 ROOT = Path(__file__).resolve().parents[1]
-CANDIDATES = ('photo','vector','film','pdf','word','cad','deck','sound')
+CANDIDATES = ('photo','vector','film','pdf','word','cad','deck','sound','grid')
 
 
 def checksum(data):
@@ -28,8 +28,10 @@ def allowed(app, path):
     native.common.safe_relative(path)
     if path.startswith('crates/ui-egui/src/i18n/') and path.endswith('.tsv'):
         return True
-    if app not in ('deck','sound'):
+    if app not in ('deck','sound','grid'):
         return False
+    if path == 'docs/localization-parity.md':
+        return True
     return path.endswith('.rs') and path.startswith(('crates/ui-egui/src/', f'apps/{app}craft/src/', f'apps/{app}craft-web/src/'))
 
 

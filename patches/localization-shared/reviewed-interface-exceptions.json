@@ -2208,6 +2208,71 @@
       "context": "",
       "source": "PowerPoint",
       "reason": "Official product/file-format name in the native file picker."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "KIO Deck",
+      "reason": "Official KIO product name, retained in every language."
+    },
+    {
+      "app": "grid",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "KIO Grid",
+      "reason": "Official KIO product name or canonical file format/encoding and extension; never translated into a different file type."
+    },
+    {
+      "app": "grid",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "CSV",
+      "reason": "Official KIO product name or canonical file format/encoding and extension; never translated into a different file type."
+    },
+    {
+      "app": "grid",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "CSV UTF-8 (.csv)",
+      "reason": "Official KIO product name or canonical file format/encoding and extension; never translated into a different file type."
+    },
+    {
+      "app": "grid",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "PDF (.pdf)",
+      "reason": "Official KIO product name or canonical file format/encoding and extension; never translated into a different file type."
     }
   ]
 }

@@ -214,7 +214,12 @@
              dim(ui, detail);
          });
      });
-@@ -638,7 +641,7 @@
+@@ -634,11 +637,11 @@
+     ui.horizontal(|ui| {
+         let (r, _) = ui.allocate_exact_size(vec2(36.0, 36.0), Sense::hover());
+         crate::dialogs::paint_logo(ui.painter(), r);
+-        ui.label(RichText::new("KIO Deck").font(theme::bold(24.0)).color(t.text));
++        ui.label(RichText::new(crate::i18n::t("KIO Deck")).font(theme::bold(24.0)).color(t.text));
      });
      ui.add_space(18.0);
      ui.horizontal(|ui| {
@@ -494,6 +499,15 @@
                          let _ = app.run("view.dark", json!({"on": on}));
                      }
                  }
+@@ -1219,7 +1239,7 @@
+             ui.horizontal(|ui| {
+                 let (r, _) = ui.allocate_exact_size(vec2(40.0, 40.0), Sense::hover());
+                 crate::dialogs::paint_logo(ui.painter(), r);
+-                ui.label(RichText::new("KIO Deck").font(theme::bold(24.0)).color(t.text));
++                ui.label(RichText::new(crate::i18n::t("KIO Deck")).font(theme::bold(24.0)).color(t.text));
+             });
+             dim(ui, &crate::dialogs::version_line());
+             dim(ui, "Open source under MIT OR Apache-2.0. Not affiliated with Microsoft.");
 @@ -1234,8 +1254,8 @@
              ) {
                  let _ = app.run("app.about", json!({}));
@@ -1172,8 +1186,12 @@
              let (ok, cancel) = buttons(ui, "OK");
              ok || cancel
          }
-@@ -788,14 +794,18 @@
-         ui.label(egui::RichText::new("KIO Deck").font(theme::bold(22.0)));
+@@ -785,17 +791,21 @@
+     ui.vertical_centered(|ui| {
+         let (r, _) = ui.allocate_exact_size(vec2(64.0, 64.0), Sense::hover());
+         paint_logo(ui.painter(), r);
+-        ui.label(egui::RichText::new("KIO Deck").font(theme::bold(22.0)));
++        ui.label(egui::RichText::new(crate::i18n::t("KIO Deck")).font(theme::bold(22.0)));
          ui.label(egui::RichText::new(version_line()).color(t.text_dim));
          ui.add_space(6.0);
 -        ui.label("Presentations and slide shows, rebuilt from scratch in pure Rust.");
@@ -1311,7 +1329,7 @@
              let r = ui.add(egui::Slider::new(&mut tr, 0.0..=100.0).suffix("%"));
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/en.tsv
-@@ -0,0 +1,1050 @@
+@@ -0,0 +1,1051 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  Fixed date (empty = update automatically):
 +	  Footer text:	  Footer text:
@@ -1765,6 +1783,7 @@
 +	JPEG image (current slide)	JPEG image (current slide)
 +	Join our community on Discord	Join our community on Discord
 +	Justify	Justify
++	KIO Deck	KIO Deck
 +	KIO Deck Presentation (*.deckcraft)	KIO Deck Presentation (*.deckcraft)
 +@msg	KIO Deck can't export “{other}”	KIO Deck can't export “{other}”
 +	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.
@@ -2364,7 +2383,7 @@
 +	✏ on	✏ on
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ja.tsv
-@@ -0,0 +1,1050 @@
+@@ -0,0 +1,1051 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  固定の日付（空欄で自動更新）:
 +	  Footer text:	  フッターの文字列:
@@ -2818,6 +2837,7 @@
 +	JPEG image (current slide)	JPEG 画像（現在のスライド）
 +	Join our community on Discord	Discord のコミュニティに参加
 +	Justify	両端揃え
++	KIO Deck	KIO Deck
 +	KIO Deck Presentation (*.deckcraft)	KIO Deck プレゼンテーション (*.deckcraft)
 +@msg	KIO Deck can't export “{other}”	KIO Deck は「{other}」を書き出せません
 +	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck にはアカウントがありません。ログインは不要で、プレゼンテーションはお使いのデバイスに保存されます。
@@ -3417,7 +3437,7 @@
 +	✏ on	✏ オン
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ko.tsv
-@@ -0,0 +1,1050 @@
+@@ -0,0 +1,1051 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  고정 날짜 (비워 두면 자동 업데이트):
 +	  Footer text:	  바닥글 텍스트:
@@ -3871,6 +3891,7 @@
 +	JPEG image (current slide)	JPEG 이미지 (현재 슬라이드)
 +	Join our community on Discord	Discord 커뮤니티에 참여하기
 +	Justify	양쪽 맞춤
++	KIO Deck	KIO Deck
 +	KIO Deck Presentation (*.deckcraft)	KIO Deck 프레젠테이션 (*.deckcraft)
 +@msg	KIO Deck can't export “{other}”	KIO Deck에서 “{other}”을(를) 내보낼 수 없습니다
 +	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck에는 계정이 없습니다. 로그인할 필요가 없으며 프레젠테이션은 기기에 보관됩니다.
@@ -4875,7 +4896,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/vi.tsv
-@@ -0,0 +1,1050 @@
+@@ -0,0 +1,1051 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  Ngày cố định (để trống để tự động cập nhật):
 +	  Footer text:	  Nội dung chân trang:
@@ -5329,6 +5350,7 @@
 +	JPEG image (current slide)	Ảnh JPEG (trang chiếu hiện tại)
 +	Join our community on Discord	Tham gia cộng đồng của chúng tôi trên Discord
 +	Justify	Căn đều
++	KIO Deck	KIO Deck
 +	KIO Deck Presentation (*.deckcraft)	Bản trình chiếu KIO Deck (*.deckcraft)
 +@msg	KIO Deck can't export “{other}”	KIO Deck không thể xuất “{other}”
 +	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck không sử dụng tài khoản: bạn không cần đăng nhập và bản trình chiếu được lưu trên thiết bị của bạn.
@@ -5928,7 +5950,7 @@
 +	✏ on	✏ bật
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-CN.tsv
-@@ -0,0 +1,1050 @@
+@@ -0,0 +1,1051 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  固定日期（留空则自动更新）：
 +	  Footer text:	  页脚文字：
@@ -6382,6 +6404,7 @@
 +	JPEG image (current slide)	JPEG 图像（当前幻灯片）
 +	Join our community on Discord	加入我们的 Discord 社区
 +	Justify	两端对齐
++	KIO Deck	KIO Deck
 +	KIO Deck Presentation (*.deckcraft)	KIO Deck 演示文稿 (*.deckcraft)
 +@msg	KIO Deck can't export “{other}”	KIO Deck 无法导出“{other}”
 +	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck 不使用账户：无需登录，演示文稿保留在您的设备上。
@@ -6981,7 +7004,7 @@
 +	✏ on	✏ 开启
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-TW.tsv
-@@ -0,0 +1,1050 @@
+@@ -0,0 +1,1051 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  固定日期（留空則自動更新）：
 +	  Footer text:	  頁尾文字：
@@ -7435,6 +7458,7 @@
 +	JPEG image (current slide)	JPEG 圖片（目前的投影片）
 +	Join our community on Discord	加入我們的 Discord 社群
 +	Justify	左右對齊
++	KIO Deck	KIO Deck
 +	KIO Deck Presentation (*.deckcraft)	KIO Deck 簡報 (*.deckcraft)
 +@msg	KIO Deck can't export “{other}”	KIO Deck 無法匯出「{other}」
 +	KIO Deck has no accounts: there is nothing to sign in to, and your presentations stay on your device.	KIO Deck 不使用帳戶：無須登入，簡報會保留在您的裝置上。
@@ -8223,7 +8247,14 @@
          );
 --- a/crates/ui-egui/src/menus.rs
 +++ b/crates/ui-egui/src/menus.rs
-@@ -82,7 +82,12 @@
+@@ -77,12 +77,18 @@
+     let t = Tokens::get(ctx);
+     let mut close = false;
+     let mut run: Option<String> = None;
+-    egui::Window::new("command_palette")
++    egui::Window::new(crate::i18n::t("Command Palette"))
++        .id(egui::Id::new("command_palette"))
+         .title_bar(false)
          .anchor(egui::Align2::CENTER_TOP, egui::vec2(0.0, 90.0))
          .fixed_size(egui::vec2(520.0, 380.0))
          .show(ctx, |ui| {
@@ -8237,7 +8268,7 @@
              r.request_focus();
              let q = query.to_lowercase();
              let mut items: Vec<(String, String, Option<&'static str>)> = app
-@@ -90,8 +95,8 @@
+@@ -90,8 +96,8 @@
                  .commands()
                  .into_iter()
                  .filter(|c| c.enabled)
@@ -8248,7 +8279,7 @@
                  .filter(|(id, label, _)| q.is_empty() || label.to_lowercase().contains(&q) || id.to_lowercase().contains(&q))
                  .collect();
              items.sort_by_key(|(_, l, _)| !l.to_lowercase().starts_with(&q));
-@@ -119,7 +124,7 @@
+@@ -119,7 +125,7 @@
              egui::ScrollArea::vertical().max_height(320.0).show(ui, |ui| {
                  for (k, (id, label, sc)) in items.iter().enumerate() {
                      let r = ui.horizontal(|ui| {
@@ -8257,7 +8288,7 @@
                          if let Some(s) = sc {
                              ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                                  ui.label(egui::RichText::new(crate::ribbon::pretty_shortcut(s)).color(t.text_faint));
-@@ -145,7 +150,7 @@
+@@ -145,7 +151,7 @@
  /// The application menu tree: (menu, [(label, command id, shortcut)]), "-" = separator. Used by the
  /// native macOS menu bar and as the parity catalogue's live side.
  pub fn menu_tree() -> Vec<(&'static str, Vec<(&'static str, &'static str)>)> {
@@ -8266,7 +8297,7 @@
          (
              "File",
              vec![
-@@ -263,5 +268,6 @@
+@@ -263,5 +269,6 @@
              ],
          ),
          ("Help", vec![("About KIO Deck", "app.about"), ("Command Palette", "app.palette")]),
@@ -10376,3 +10407,15 @@
      let t = Tokens::get(ui.ctx());
      let r = ui.add_enabled(enabled, egui::Button::new(if label.is_empty() { String::new() } else { format!("{label}   ") }).min_size(size));
      let col = if enabled { t.text_dim } else { t.text_faint };
+--- a/docs/localization-parity.md
++++ b/docs/localization-parity.md
+@@ -1,4 +1,9 @@
+ # Localization parity with PowerPoint
++
++## KIO development follow-up — 2026-10-19
++
++KIO Deck development overlay: 1,050 interface keys in six required languages. The 1,049-key predecessor passed 53 UI tests on macOS and Windows at commit 626da95 (run 39151404094). The product-name key and hidden palette accessible title have a later follow-up requiring matching verification. Native screenshots do not certify every function or installer. The original upstream readiness assessment below is historical.
++
+ 
+ > **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-12 · **Change:** minor (IME composition and CJK interface text, #101; previous: major, created; string count measured from source, PowerPoint's localizations read from its bundle) · **Target:** Microsoft PowerPoint for Mac 16.113 (Microsoft 365)
+ 

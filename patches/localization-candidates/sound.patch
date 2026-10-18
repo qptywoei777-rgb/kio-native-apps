@@ -15016,3 +15016,15 @@
              if (g - before).abs() > f32::EPSILON {
                  let _ =
                      app.engine.execute_merged("clip.effects_set", &json!({"clips": [cid.0], "params": {"gain": g}}), &format!("cfx:{}:gain", cid.0));
+--- a/docs/localization-parity.md
++++ b/docs/localization-parity.md
+@@ -1,4 +1,9 @@
+ # Localization parity
++
++## KIO development follow-up — 2026-10-19
++
++KIO Sound development overlay: 1,560 interface keys in each of vi/en/ko/ja/zh-TW/zh-CN. Exact compiled/UI tests passed 121 on macOS and Windows at commit 626da95 (run 39151404094). Actual macOS synthetic-session captures cover 29 screen types across six languages; these captures do not certify every feature, audio hardware, installer or number/date format. The original upstream readiness assessment below is historical.
++
+ 
+ > **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-10 · **Change:** major (first per-language status) · **Target:** Avid Pro Tools Ultimate 2026.4.1
+ 

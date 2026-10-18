@@ -5,8 +5,8 @@
   "basePreparedTreeSha256": "1b44d6f85665c5512aaa997b837d1ba5f77e24a81cc0e771289d11d7c41edddd",
   "patch": {
     "path": "patches/localization-candidates/sound.patch",
-    "sha256": "9249ca7fbb637670340662beb75fc65af347b488442bce318437688b0288c9e0",
-    "bytes": 683601
+    "sha256": "3f12165872c68562bd49ce87a0af9525269349d8b8905bc5f4c7228ba40255ff",
+    "bytes": 684349
   },
   "files": [
     {
@@ -360,6 +360,17 @@
       "after": {
         "sha256": "f22acac41169b6df54270b72135f0ed8722236f0b917dd6710b0e52758ed44a7",
         "bytes": 40067
+      }
+    },
+    {
+      "path": "docs/localization-parity.md",
+      "before": {
+        "sha256": "2d878b88d5aa0faf27e2ba823891149eee6a8f9bbedb8045511ad628e0bac90a",
+        "bytes": 2710
+      },
+      "after": {
+        "sha256": "cf2e8c955c934a433ce173f748cd87fb3122920a33ab29df7be567af7c4e53aa",
+        "bytes": 3180
       }
     }
   ],

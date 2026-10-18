@@ -20,7 +20,10 @@ APPS = ('photo', 'vector', 'film', 'light', 'pdf', 'effect', 'design', 'ui', 'wo
 ALIASES = {'zh': 'zh-CN', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW'}
 RSTRING = r'"(?:[^"\\]|\\.)*"'
 PLACEHOLDER = re.compile(r'(?<!\{)\{([A-Za-z_][\w]*(?::[^{}]*)?)\}(?!\})')
-DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|strong|weak|small|menu_button|link|radio|on_hover_text|on_disabled_hover_text|hint_text|selected_text|selectable_label|checkbox)\s*\(\s*(?!\))(?:[^,\n]+,\s*)?(' + RSTRING + ')')
+DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|strong|weak|small|menu_button|link|on_hover_text|on_disabled_hover_text|hint_text|selected_text)\s*\(\s*(' + RSTRING + ')')
+DIRECT_CHOICE_UI = re.compile(r'\.(?:radio|selectable_label|checkbox)\s*\(\s*[^,\n;()]+,\s*(' + RSTRING + ')')
+DIRECT_RICH_UI = re.compile(r'\bRichText::new\s*\(\s*(' + RSTRING + ')')
+DIRECT_WINDOW_UI = re.compile(r'\bWindow::new\s*\(\s*(' + RSTRING + ')')
 DIRECT_LINK_UI = re.compile(r'\.hyperlink_to\s*\(\s*(' + RSTRING + ')')
 CUSTOM_CHECKBOX_UI = re.compile(r'\b(?:crate::)?widgets::checkbox\s*\(\s*ui\s*,\s*[^,\n]+,\s*(' + RSTRING + ')')
 DIRECT_FORMAT_UI = re.compile(r'\.(?:label|button|small_button|heading|strong|weak|small|hyperlink_to|on_hover_text|hint_text|selected_text)\s*\(\s*(?:(?:egui::)?RichText::new\s*\(\s*)?format!\s*\(\s*(' + RSTRING + ')')
@@ -110,8 +113,9 @@ def collect_catalogs(source):
             put('ja', rows, ja)
         # Grid's Japanese pairs and its per-language match tables.
         if source.parent.name == 'grid':
-            for m in re.finditer(r'\(\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*\)', text):
-                catalogs.setdefault('ja', {})[('', literal(m[1]))] = literal(m[2])
+            for table in re.finditer(r'(?:const|static)\s+(?:JA|JAPANESE)\b[^=]+?=\s*&\[(.*?)\n\];', text, re.S):
+                for m in re.finditer(r'\(\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*,?\s*\)', table[1]):
+                    catalogs.setdefault('ja', {})[('', literal(m[1]))] = literal(m[2])
             for f in (root / 'src/i18n').glob('*.rs'):
                 code = canonical_language(f.stem)
                 rows = {('', literal(m[1])): literal(m[2]) for m in re.finditer('(' + RSTRING + r')\s*=>\s*(' + RSTRING + ')', f.read_text(encoding='utf-8').split('#[cfg(test)]')[0])}
@@ -148,7 +152,14 @@ def source_literals(source):
             # Empty text and punctuation-only icons have no linguistic content.
             if any(c.isalpha() for c in value):
                 keys.add(('', value))
-        for m in (*DIRECT_UI.finditer(text), *DIRECT_LINK_UI.finditer(text), *CUSTOM_CHECKBOX_UI.finditer(text)):
+        for m in (*DIRECT_UI.finditer(text), *DIRECT_CHOICE_UI.finditer(text), *DIRECT_RICH_UI.finditer(text), *DIRECT_LINK_UI.finditer(text), *CUSTOM_CHECKBOX_UI.finditer(text)):
+            value = literal(m[1])
+            if re.search('[A-Za-z]{2}', value):
+                review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
+        for m in DIRECT_WINDOW_UI.finditer(text):
+            # A hidden-title window may use its constructor solely as a stable widget ID.
+            if re.match(r'\s*\)\s*\.title_bar\(false\)', text[m.end():]):
+                continue
             value = literal(m[1])
             if re.search('[A-Za-z]{2}', value):
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
@@ -160,6 +171,53 @@ def source_literals(source):
             if re.search('[A-Za-z]{2}', fixed) and fixed not in {'pt', 'px', 'mm', 'cm', 'in', 'ms', 'Hz', 'kHz', 'KB', 'MB', 'GB', 'TB'}:
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value, 'kind': 'untranslatedFormatTemplate'})
     return keys, review
+
+
+def grid_metadata_keys(source):
+    """Grid draws engine labels, form metadata and function help indirectly.
+
+    Only presentation fields and function descriptions are included. Formula
+    names/signatures, command IDs, parameter docs and workbook values stay out.
+    """
+    keys = set()
+    folders = [source / 'crates/engine/src/cmd', source / 'crates/ui-egui/src']
+    for folder in folders:
+        for path in folder.glob('*.rs'):
+            if path.name.startswith('i18n'):
+                continue
+            text = path.read_text(encoding='utf-8').split('#[cfg(test)]')[0]
+            for match in re.finditer(r'\bcmd!\s*\(\s*(?:(?:noundo|query)\s+)?' + RSTRING + r'\s*,\s*(' + RSTRING + r')\s*,\s*\[([^\]]*)\]', text):
+                keys.add(('', literal(match[1])))
+                keys.update(('', literal(raw)) for raw in re.findall(RSTRING, match[2]))
+            for match in re.finditer(r'\blabel:\s*(' + RSTRING + ')', text):
+                keys.add(('', literal(match[1])))
+            for match in re.finditer(r'\bmenu:\s*&\[([^\]]*)\]', text):
+                keys.update(('', literal(raw)) for raw in re.findall(RSTRING, match[1]))
+            for match in re.finditer(r'\b(?:Dialog::)?(?:form|custom)\(\s*' + RSTRING + r'\s*,\s*(' + RSTRING + ')', text):
+                keys.add(('', literal(match[1])))
+    function_names = set()
+    for path in (source / 'crates/functions/src').glob('*.rs'):
+        text = path.read_text(encoding='utf-8').split('#[cfg(test)]')[0]
+        # Mask comments, preserving string contents and offsets.
+        tokens = re.compile(RSTRING + r'|//[^\n]*|/\*.*?\*/', re.S)
+        code = tokens.sub(lambda m: ' ' * len(m[0]) if m[0].startswith(('//', '/*')) else m[0], text)
+        for match in re.finditer(r'\bf!\s*\(', code):
+            strings = re.findall(RSTRING, code[match.end():match.end() + 8192])[:3]
+            if len(strings) == 3:
+                name, signature, description = map(literal, strings)
+                if re.fullmatch('[A-Z][A-Z0-9.]*', name) and signature.startswith(name + '('):
+                    keys.add(('', description))
+                    function_names.add(name)
+    special = source / 'crates/engine/src/cmd/formulas.rs'
+    if special.is_file():
+        text = special.read_text(encoding='utf-8').split('#[cfg(test)]')[0]
+        block = re.search(r'let specials:[^=]+=\s*&\[(.*?)\n\s*\];', text, re.S)
+        if block:
+            for row in re.finditer(r'\(\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*,?\s*\)', block[1]):
+                name, category, signature, description = map(literal, row.groups())
+                if name not in function_names and signature.startswith(name + '('):
+                    keys.update({('', category), ('', description)})
+    return keys
 
 
 def placeholders(text):
@@ -189,12 +247,17 @@ def audit_app(app, source):
         return {'id': app, 'sourceAvailable': False, 'complete': False}
     catalogs, inputs, parse_errors = collect_catalogs(source)
     literal_keys, direct = source_literals(source)
+    if app == 'grid':
+        literal_keys |= grid_metadata_keys(source)
     catalog_keys = set().union(*[set(c) for c in catalogs.values()])
     # Source-keyed format messages have a dedicated catalog context. A literal
     # call without that storage detail must not create a second phantom key.
     literal_keys = {('@msg', text) if (context, text) not in catalog_keys and ('@msg', text) in catalog_keys else (context, text)
                     for context, text in literal_keys}
-    keys = catalog_keys | literal_keys
+    # A known visible raw caption is missing in every target language even before
+    # a developer wraps it in a lookup; moving it into the catalog cannot hide debt.
+    direct_keys = {('@msg' if ('@msg', row['text']) in catalog_keys else '', row['text']) for row in direct}
+    keys = catalog_keys | literal_keys | direct_keys
     rows = {}
     for lang in LANGUAGES:
         exceptions = OFFICIAL_NAMES.get(app, set()) | reviewed_exceptions(app, lang)

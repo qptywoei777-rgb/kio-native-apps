@@ -12,6 +12,35 @@ spec.loader.exec_module(audit)
 
 
 class LocalizationFailures(unittest.TestCase):
+    def test_grid_indirect_labels_and_function_help_are_included_without_identifiers(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            functions=root/'crates/functions/src';functions.mkdir(parents=True)
+            (functions/'math.rs').write_text('// f!("FAKE", "FAKE()", "Comment")\nf!("SUM", 1, VAR, Math, A, "SUM(values)", "Adds numbers.", sum);',encoding='utf-8')
+            engine=root/'crates/engine/src/cmd';engine.mkdir(parents=True)
+            (engine/'file.rs').write_text('CommandSpec {id:"file.save", label:"Save", menu:&["File"], params:"{path}", run:save}',encoding='utf-8')
+            self.assertEqual(audit.grid_metadata_keys(root),{('','Adds numbers.'),('','Save'),('','File')})
+
+    def test_nested_user_data_does_not_become_a_caption_or_cross_a_statement(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='ui.label(field(n, "refersTo")); response.on_hover_text(samples.join(", ")); ui.label(lang.tr("Help"));')
+            self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
+
+    def test_rich_text_and_window_titles_are_user_captions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='ui.label(egui::RichText::new("Preview").strong()); egui::Window::new("Settings"); ui.checkbox(&mut checked, "Apply");')
+            result=audit.audit_app('fixture',root)
+            self.assertEqual({r['text'] for r in result['directUiReview']},{'Preview','Settings','Apply'})
+            self.assertEqual(result['languages']['vi']['missing'],3)
+
+    def test_hidden_window_constructor_is_an_id_not_a_display_caption(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='egui::Window::new("command_palette").title_bar(false).show(ctx, draw);')
+            self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
+
     def test_direct_dropdown_links_and_formatted_captions_fail_the_gate(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)

@@ -1,19 +1,27 @@
 # Development localization patches — not release-approved
 
-These eight patches preserve the current work without changing any release lock,
+These nine patches preserve the current work without changing any release lock,
 installer, update feed, or previously published source archive. They apply after
 the exact original full_native.py preparation recorded in each JSON manifest.
 
 Photo, Vector, Film, PDF, Word and CAD receive 1,491 additive catalog entries from
 unanimous exact-context/source donors. Existing translations remain unchanged.
 Deck and Sound receive six-language UI plumbing, device-local preferences,
-OS detection, native font fallback and stable window identity. Deck now has 1,049
+OS detection, native font fallback and stable window identity. Deck now has 1,050
 catalog keys in all six languages, including presentation-specific editorial
 translations and repaired dynamic menus, accessible labels and font notices.
 Sound now has 1,560 keys in each of the six languages, including the actual
 model/DSP presentation metadata, recovery and device-failure messages. Keyed
 compound messages preserve filenames and nested arguments; language changes
-retain the session. **Neither candidate is release-approved.**
+retain the session. **No candidate is release-approved.**
+
+Grid now has Vietnamese and independent Traditional Chinese choices, primary
+choice ordering, device-local explicit/automatic preferences, native OS detection,
+Traditional Chinese font priority and opaque keyed messages. Its 327 reviewed
+source rows supplement original translations and conservative exact donors.
+Grid remains incomplete: the expanded inventory includes command/form metadata
+and all runtime function descriptions. Its strict six-language gate must fail
+until those remaining translations are completed.
 
 To inspect a candidate in a fresh checkout:
 
@@ -33,9 +41,12 @@ repository permission and never packages or publishes a release.
 Local checks on macOS arm64: both GUI crates compile. Deck's 1,049-key candidate
 passed 53/53 UI tests and Sound's 1,560-key candidate passed 120/120 UI tests,
 with strict catalogs on both macOS and Windows in run 39149891494 (efa4fe0).
-A later Sound follow-up fixes nested engine-status fragments, plugin window
-captions and the reserved factory-preset label; it passes 121/121 locally and
-requires a matching native CI result. These counts refer to exact source revisions.
+Sound follow-up 626da95 passed 121/121 and the strict catalog gate on both OSes
+in run 39151404094. It fixes nested engine-status fragments, plugin window
+captions and the reserved factory-preset label. The current Deck 1,050-key follow-up
+and Grid candidate require their own matching CI results. Grid passes 97 UI tests
+locally, including actual runtime metadata inventory, workbook/undo/input
+preservation and preference migration; that does not imply a complete catalog. These counts refer to exact source revisions.
 Actual window inspection found untranslated model modes and status fragments;
 these were subsequently repaired. Deck's Vietnamese status counter and translated
 gallery captions were repaired using actual glyph widths. Native screenshots

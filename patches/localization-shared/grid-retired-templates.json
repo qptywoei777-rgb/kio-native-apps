@@ -1,0 +1,51 @@
+{
+  "scope": "Only newly generated development-overlay keys. Original legacy catalogs were checked and contain none of these entries. Replaced by explicit named-argument messages; workbook data and original model/export text are untouched.",
+  "keys": [
+    "{} contributors · {} commits",
+    "{} engine commands are available. See docs/mcp.md and docs/control-protocol.md.",
+    "Do you want to save the changes you made to {}?",
+    "Version {}",
+    "— {steps} step{}",
+    "{} cell(s) found",
+    "{}. {kind}  applies to {}",
+    "Circular References: {name}!{}"
+  ],
+  "overriddenFunctionFallbackDescriptions": {
+    "Matches a value against a list of cases.": {
+      "function": "SWITCH",
+      "usedDescription": "Compares an expression with a list of values and returns the result paired with the first match."
+    },
+    "Number of columns in a reference or array.": {
+      "function": "COLUMNS",
+      "usedDescription": "Counts the columns in an array or range."
+    },
+    "Number of rows in a reference or array.": {
+      "function": "ROWS",
+      "usedDescription": "Counts the rows in an array or range."
+    },
+    "Picks a value from a list by position.": {
+      "function": "CHOOSE",
+      "usedDescription": "Picks a value from the list by its position."
+    },
+    "Returns a fallback when a value is #N/A.": {
+      "function": "IFNA",
+      "usedDescription": "Returns a fallback when the value is #N/A, otherwise the value."
+    },
+    "Returns a fallback when a value is an error.": {
+      "function": "IFERROR",
+      "usedDescription": "Returns a fallback when the value is an error, otherwise the value."
+    },
+    "Returns one value if a condition is true and another if it's false.": {
+      "function": "IF",
+      "usedDescription": "Returns one value when a condition is TRUE and another when it is FALSE."
+    },
+    "Returns the value of the first true condition.": {
+      "function": "IFS",
+      "usedDescription": "Returns the value paired with the first condition that is TRUE."
+    },
+    "The value or reference at a position.": {
+      "function": "INDEX",
+      "usedDescription": "Returns the element, row or column of an array at the given position."
+    }
+  }
+}

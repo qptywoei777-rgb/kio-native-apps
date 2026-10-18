@@ -1,0 +1,328 @@
+# Reviewed spreadsheet interface terminology. English, Vietnamese, Korean, Japanese, Traditional Chinese, Simplified Chinese.
+Follow system language	Theo ngôn ngữ hệ thống	시스템 언어 따르기	システムの言語を使用	使用系統語言	跟随系统语言
+Interface language	Ngôn ngữ giao diện	화면 언어	表示言語	介面語言	界面语言
+Interface size	Kích thước giao diện	화면 배율	表示倍率	介面大小	界面大小
+Home	Trang đầu	홈	ホーム	常用	开始
+Insert	Chèn	삽입	挿入	插入	插入
+Page Layout	Bố trí trang	페이지 레이아웃	ページ レイアウト	版面配置	页面布局
+Formulas	Công thức	수식	数式	公式	公式
+Data	Dữ liệu	데이터	データ	資料	数据
+Review	Xem lại	검토	校閲	校閱	审阅
+View	Xem	보기	表示	檢視	视图
+Automate	Tự động hóa	자동화	自動化	自動化	自动化
+File	Tệp	파일	ファイル	檔案	文件
+Blank workbook	Sổ làm việc trống	새 통합 문서	空白のブック	空白活頁簿	空白工作簿
+Start a new workbook	Tạo sổ làm việc mới	새 통합 문서 만들기	新しいブックを作成	建立新的活頁簿	创建新工作簿
+About KIO Grid	Giới thiệu KIO Grid	KIO Grid 정보	KIO Grid について	關於 KIO Grid	关于 KIO Grid
+About\nKIO Grid	Giới thiệu\nKIO Grid	KIO Grid\n정보	KIO Grid\nについて	關於\nKIO Grid	关于\nKIO Grid
+Cell	Ô	셀	セル	儲存格	单元格
+Cell Values	Giá trị ô	셀 값	セルの値	儲存格值	单元格值
+Cell Styles	Kiểu ô	셀 스타일	セルのスタイル	儲存格樣式	单元格样式
+Cell\nStyles	Kiểu\nô	셀\n스타일	セルの\nスタイル	儲存格\n樣式	单元格\n样式
+Cell Color	Màu ô	셀 색	セルの色	儲存格色彩	单元格颜色
+Column Width	Độ rộng cột	열 너비	列の幅	欄寬	列宽
+Column width (characters):	Độ rộng cột (ký tự):	열 너비(문자 수):	列の幅（文字数）:	欄寬（字元數）：	列宽（字符数）：
+Column widths	Độ rộng cột	열 너비	列幅	欄寬	列宽
+Row Height	Chiều cao hàng	행 높이	行の高さ	列高	行高
+AutoFit Column Width	Tự khớp độ rộng cột	열 너비 자동 맞춤	列の幅の自動調整	自動調整欄寬	自动调整列宽
+AutoFit Row Height	Tự khớp chiều cao hàng	행 높이 자동 맞춤	行の高さの自動調整	自動調整列高	自动调整行高
+Borders	Đường viền	테두리	罫線	框線	边框
+More Borders…	Thêm đường viền…	다른 테두리…	その他の罫線…	其他框線…	其他边框…
+Font	Phông chữ	글꼴	フォント	字型	字体
+Font Color	Màu chữ	글꼴 색	フォントの色	字型色彩	字体颜色
+Fill Color	Màu tô	채우기 색	塗りつぶしの色	填滿色彩	填充颜色
+Bold	Đậm	굵게	太字	粗體	加粗
+Italic	Nghiêng	기울임꼴	斜体	斜體	倾斜
+Underline	Gạch chân	밑줄	下線	底線	下划线
+Double Underline	Gạch chân kép	이중 밑줄	二重下線	雙底線	双下划线
+Strikethrough	Gạch ngang	취소선	取り消し線	刪除線	删除线
+Increase Font Size	Tăng cỡ chữ	글꼴 크기 늘리기	フォント サイズの拡大	放大字型	增大字号
+Decrease Font Size	Giảm cỡ chữ	글꼴 크기 줄이기	フォント サイズの縮小	縮小字型	减小字号
+Align Left	Căn trái	왼쪽 맞춤	左揃え	靠左對齊	左对齐
+Align Right	Căn phải	오른쪽 맞춤	右揃え	靠右對齊	右对齐
+Center	Căn giữa	가운데 맞춤	中央揃え	置中對齊	居中
+Center Across Selection	Căn giữa vùng chọn	선택 영역의 가운데로	選択範囲内で中央	選取範圍內置中	跨列居中
+Top Align	Căn trên	위쪽 맞춤	上揃え	靠上對齊	顶端对齐
+Middle Align	Căn giữa theo chiều dọc	세로 가운데 맞춤	上下中央揃え	垂直置中	垂直居中
+Bottom Align	Căn dưới	아래쪽 맞춤	下揃え	靠下對齊	底端对齐
+Top\nAlign	Căn\ntrên	위쪽\n맞춤	上\n揃え	靠上\n對齊	顶端\n对齐
+Middle\nAlign	Căn giữa\ndọc	세로 가운데\n맞춤	上下中央\n揃え	垂直\n置中	垂直\n居中
+Bottom\nAlign	Căn\ndưới	아래쪽\n맞춤	下\n揃え	靠下\n對齊	底端\n对齐
+Wrap Text	Ngắt dòng văn bản	텍스트 줄 바꿈	折り返して全体を表示	自動換列	自动换行
+Merge & Center	Gộp và căn giữa	병합하고 가운데 맞춤	セルを結合して中央揃え	合併及置中	合并后居中
+Merge Cells	Gộp ô	셀 병합	セルの結合	合併儲存格	合并单元格
+Unmerge Cells	Bỏ gộp ô	셀 병합 해제	セル結合の解除	取消合併儲存格	取消合并单元格
+Merge Across	Gộp theo hàng	전체 병합	横方向に結合	跨欄合併	跨越合并
+Increase Indent	Tăng thụt lề	들여쓰기 늘리기	インデントを増やす	增加縮排	增加缩进
+Decrease Indent	Giảm thụt lề	들여쓰기 줄이기	インデントを減らす	減少縮排	减少缩进
+Angle Clockwise	Xoay theo chiều kim đồng hồ	시계 방향 각도	右回りに回転	順時針旋轉	顺时针旋转
+Angle Counterclockwise	Xoay ngược chiều kim đồng hồ	시계 반대 방향 각도	左回りに回転	逆時針旋轉	逆时针旋转
+Rotate Text Up	Xoay văn bản lên	텍스트 위로 회전	文字列を上へ回転	文字向上旋轉	向上旋转文字
+Rotate Text Down	Xoay văn bản xuống	텍스트 아래로 회전	文字列を下へ回転	文字向下旋轉	向下旋转文字
+Vertical Text	Văn bản dọc	세로 쓰기	縦書き	垂直文字	竖排文字
+Accounting	Kế toán	회계	会計	會計	会计
+Accounting Number Format	Định dạng số kế toán	회계 표시 형식	会計の表示形式	會計數字格式	会计数字格式
+Percent Style	Kiểu phần trăm	백분율 스타일	パーセント スタイル	百分比樣式	百分比样式
+Comma Style	Kiểu phân cách hàng nghìn	쉼표 스타일	桁区切りスタイル	千分位樣式	千位分隔样式
+Increase Decimal	Tăng chữ số thập phân	소수 자릿수 늘리기	小数点以下の表示桁数を増やす	增加小數位數	增加小数位数
+Decrease Decimal	Giảm chữ số thập phân	소수 자릿수 줄이기	小数点以下の表示桁数を減らす	減少小數位數	减少小数位数
+Decimal	Số thập phân	소수	小数	小數	小数
+Date	Ngày	날짜	日付	日期	日期
+Date & Time	Ngày và giờ	날짜 및 시간	日付と時刻	日期與時間	日期和时间
+Date &\nTime	Ngày\nvà giờ	날짜 및\n시간	日付と\n時刻	日期與\n時間	日期和\n时间
+Current Date	Ngày hiện tại	현재 날짜	現在の日付	目前日期	当前日期
+Current Time	Giờ hiện tại	현재 시간	現在の時刻	目前時間	当前时间
+Current\nDate	Ngày\nhiện tại	현재\n날짜	現在の\n日付	目前\n日期	当前\n日期
+Current\nTime	Giờ\nhiện tại	현재\n시간	現在の\n時刻	目前\n時間	当前\n时间
+Conditional Formatting	Định dạng có điều kiện	조건부 서식	条件付き書式	設定格式化的條件	条件格式
+Conditional\nFormatting	Định dạng\ncó điều kiện	조건부\n서식	条件付き\n書式	設定格式化\n的條件	条件\n格式
+Conditional Formatting Rules Manager	Quản lý quy tắc định dạng có điều kiện	조건부 서식 규칙 관리자	条件付き書式ルールの管理	條件式格式設定規則管理員	条件格式规则管理器
+Conditional formats	Định dạng có điều kiện	조건부 서식	条件付き書式	條件式格式	条件格式
+Highlight Cells Rules	Quy tắc tô sáng ô	셀 강조 규칙	セルの強調表示ルール	醒目提示儲存格規則	突出显示单元格规则
+Text that Contains…	Văn bản có chứa…	텍스트 포함…	文字列…	包含文字…	文本包含…
+A Date Occurring…	Ngày trong khoảng…	날짜 발생…	日付…	發生日期…	发生日期…
+Duplicate Values…	Giá trị trùng lặp…	중복 값…	重複する値…	重複的值…	重复值…
+Top/Bottom Rules	Quy tắc cao nhất/thấp nhất	상위/하위 규칙	上位/下位ルール	前段/後段項目規則	最前/最后规则
+Top 10 Items	10 mục cao nhất	상위 10개 항목	上位10項目	前10個項目	前10项
+Bottom 10 Items	10 mục thấp nhất	하위 10개 항목	下位10項目	後10個項目	后10项
+Top 10%	10% cao nhất	상위 10%	上位10%	前10%	前10%
+Bottom 10%	10% thấp nhất	하위 10%	下位10%	後10%	后10%
+Above Average	Trên trung bình	평균 초과	平均より上	高於平均	高于平均值
+Below Average	Dưới trung bình	평균 미만	平均より下	低於平均	低于平均值
+Data Bars	Thanh dữ liệu	데이터 막대	データ バー	資料橫條	数据条
+Color Scales	Thang màu	색조	カラー スケール	色階	色阶
+Icon Sets	Bộ biểu tượng	아이콘 집합	アイコン セット	圖示集	图标集
+Clear Rules	Xóa quy tắc	규칙 지우기	ルールのクリア	清除規則	清除规则
+Clear Rules from Entire Sheet	Xóa quy tắc trên toàn trang tính	전체 시트에서 규칙 지우기	シート全体からルールをクリア	清除整張工作表的規則	清除整个工作表的规则
+Clear Rules from Selected Cells	Xóa quy tắc ở các ô đã chọn	선택한 셀에서 규칙 지우기	選択したセルからルールをクリア	清除所選儲存格的規則	清除所选单元格的规则
+New Rule…	Quy tắc mới…	새 규칙…	新しいルール…	新增規則…	新建规则…
+Manage Rules…	Quản lý quy tắc…	규칙 관리…	ルールの管理…	管理規則…	管理规则…
+Format as Table	Định dạng thành bảng	표 서식 지정	テーブルとして書式設定	格式化為表格	套用表格格式
+Format\nas Table	Định dạng\nthành bảng	표 서식\n지정	テーブルとして\n書式設定	格式化為\n表格	套用\n表格格式
+Convert to Range	Chuyển thành vùng	범위로 변환	範囲に変換	轉換為範圍	转换为区域
+Convert\nto Range	Chuyển\nthành vùng	범위로\n변환	範囲に\n変換	轉換為\n範圍	转换为\n区域
+Clear Contents	Xóa nội dung	내용 지우기	数式と値のクリア	清除內容	清除内容
+Clear Formats	Xóa định dạng	서식 지우기	書式のクリア	清除格式	清除格式
+Clear Comments and Notes	Xóa chú thích và ghi chú	메모 및 노트 지우기	コメントとメモのクリア	清除註解與附註	清除批注和备注
+Clear Hyperlinks	Xóa siêu liên kết	하이퍼링크 지우기	ハイパーリンクのクリア	清除超連結	清除超链接
+Clear Validation	Xóa xác thực dữ liệu	데이터 유효성 검사 지우기	入力規則のクリア	清除資料驗證	清除数据验证
+Delete Cells…	Xóa ô…	셀 삭제…	セルの削除…	刪除儲存格…	删除单元格…
+Delete Sheet	Xóa trang tính	시트 삭제	シートの削除	刪除工作表	删除工作表
+Delete Sheet Columns	Xóa cột trong trang tính	시트 열 삭제	シートの列を削除	刪除工作表欄	删除工作表列
+Delete Sheet Rows	Xóa hàng trong trang tính	시트 행 삭제	シートの行を削除	刪除工作表列	删除工作表行
+Insert Sheet	Chèn trang tính	시트 삽입	シートの挿入	插入工作表	插入工作表
+Insert Cells…	Chèn ô…	셀 삽입…	セルの挿入…	插入儲存格…	插入单元格…
+Insert Copied Cells	Chèn các ô đã sao chép	복사한 셀 삽입	コピーしたセルの挿入	插入複製的儲存格	插入复制的单元格
+Insert Cut Cells	Chèn các ô đã cắt	잘라낸 셀 삽입	切り取ったセルの挿入	插入剪下的儲存格	插入剪切的单元格
+Paste Values	Dán giá trị	값 붙여넣기	値の貼り付け	貼上值	粘贴值
+Paste Formulas	Dán công thức	수식 붙여넣기	数式の貼り付け	貼上公式	粘贴公式
+Paste Formatting	Dán định dạng	서식 붙여넣기	書式の貼り付け	貼上格式	粘贴格式
+Paste Link	Dán liên kết	연결하여 붙여넣기	リンク貼り付け	貼上連結	粘贴链接
+Paste Special…	Dán đặc biệt…	선택하여 붙여넣기…	形式を選択して貼り付け…	選擇性貼上…	选择性粘贴…
+Transpose	Chuyển vị	행/열 바꿈	行列の入れ替え	轉置	转置
+All except borders	Tất cả trừ đường viền	테두리만 제외	罫線を除くすべて	除框線外的全部內容	除边框外的所有内容
+Column or Bar	Cột hoặc thanh	세로 막대 또는 가로 막대	縦棒/横棒	直條或橫條	柱形图或条形图
+Column chart	Biểu đồ cột	세로 막대형 차트	縦棒グラフ	直條圖	柱形图
+Clustered Bar	Thanh nhóm	묶은 가로 막대형	集合横棒	群組橫條圖	簇状条形图
+Clustered Column	Cột nhóm	묶은 세로 막대형	集合縦棒	群組直條圖	簇状柱形图
+100% Stacked Bar	Thanh xếp chồng 100%	100% 기준 누적 가로 막대형	100%積み上げ横棒	百分比堆疊橫條圖	百分比堆积条形图
+100% Stacked Column	Cột xếp chồng 100%	100% 기준 누적 세로 막대형	100%積み上げ縦棒	百分比堆疊直條圖	百分比堆积柱形图
+Doughnut	Vành khuyên	도넛형	ドーナツ	環圈圖	圆环图
+Chart	Biểu đồ	차트	グラフ	圖表	图表
+Chart Design	Thiết kế biểu đồ	차트 디자인	グラフのデザイン	圖表設計	图表设计
+Chart Title	Tiêu đề biểu đồ	차트 제목	グラフ タイトル	圖表標題	图表标题
+Chart\nTitle	Tiêu đề\nbiểu đồ	차트\n제목	グラフの\nタイトル	圖表\n標題	图表\n标题
+Chart data range:	Vùng dữ liệu biểu đồ:	차트 데이터 범위:	グラフ データの範囲:	圖表資料範圍：	图表数据区域：
+Change Chart Type	Đổi loại biểu đồ	차트 종류 변경	グラフの種類の変更	變更圖表類型	更改图表类型
+Change\nChart Type	Đổi loại\nbiểu đồ	차트 종류\n변경	グラフの種類\nの変更	變更圖表\n類型	更改图表\n类型
+Add Chart Element	Thêm thành phần biểu đồ	차트 요소 추가	グラフ要素の追加	新增圖表項目	添加图表元素
+Add Chart\nElement	Thêm thành phần\nbiểu đồ	차트 요소\n추가	グラフ要素\nの追加	新增圖表\n項目	添加图表\n元素
+Data Labels	Nhãn dữ liệu	데이터 레이블	データ ラベル	資料標籤	数据标签
+Data Labels: None	Nhãn dữ liệu: Không	데이터 레이블: 없음	データ ラベル: なし	資料標籤：無	数据标签：无
+Data Labels: Show	Nhãn dữ liệu: Hiện	데이터 레이블: 표시	データ ラベル: 表示	資料標籤：顯示	数据标签：显示
+Legend Entries (Series)	Mục chú giải (chuỗi)	범례 항목(계열)	凡例項目（系列）	圖例項目（數列）	图例项（系列）
+Edit chart title	Sửa tiêu đề biểu đồ	차트 제목 편집	グラフ タイトルの編集	編輯圖表標題	编辑图表标题
+Delete chart	Xóa biểu đồ	차트 삭제	グラフの削除	刪除圖表	删除图表
+Delete\nChart	Xóa\nbiểu đồ	차트\n삭제	グラフの\n削除	刪除\n圖表	删除\n图表
+AutoSave	Tự động lưu	자동 저장	自動保存	自動儲存	自动保存
+AutoSave: save after every change (workbooks saved to a file)	Tự động lưu sau mỗi thay đổi (sổ làm việc đã được lưu thành tệp)	자동 저장: 변경할 때마다 저장(파일로 저장된 통합 문서)	自動保存: 変更のたびに保存（保存済みのブック）	自動儲存：每次變更後儲存（已儲存至檔案的活頁簿）	自动保存：每次更改后保存（已保存为文件的工作簿）
+Can't Undo	Không thể hoàn tác	실행 취소할 수 없음	元に戻せません	無法復原	无法撤销
+Calculation Options	Tùy chọn tính toán	계산 옵션	計算方法の設定	計算選項	计算选项
+Calculation\nOptions	Tùy chọn\ntính toán	계산\n옵션	計算方法\nの設定	計算\n選項	计算\n选项
+Calculate	Tính toán	계산	計算	計算	计算
+Calculate Now	Tính toán ngay	지금 계산	再計算実行	立即計算	开始计算
+Calculate Sheet	Tính trang tính	시트 계산	シート再計算	計算工作表	计算工作表
+Automatic Except for Data Tables	Tự động trừ bảng dữ liệu	데이터 표만 수동	データ テーブル以外自動	除運算列表外自動計算	除数据表外自动重算
+Calculation settings are saved with the workbook.	Thiết đặt tính toán được lưu cùng sổ làm việc.	계산 설정은 통합 문서에 저장됩니다.	計算設定はブックに保存されます。	計算設定會隨活頁簿儲存。	计算设置将随工作簿保存。
+AutoSum	Tự động tính tổng	자동 합계	オートSUM	自動加總	自动求和
+Show password	Hiện mật khẩu	암호 표시	パスワードを表示	顯示密碼	显示密码
+Don't Save	Không lưu	저장 안 함	保存しない	不要儲存	不保存
+Description (optional):	Mô tả (không bắt buộc):	설명(선택 사항):	説明（省略可）:	描述（選填）：	说明（可选）：
+Picture file path (PNG or JPEG):	Đường dẫn ảnh (PNG hoặc JPEG):	그림 파일 경로(PNG 또는 JPEG):	画像ファイルのパス（PNG または JPEG）:	圖片檔案路徑（PNG 或 JPEG）：	图片文件路径（PNG 或 JPEG）：
+Choose a PNG or JPEG no larger than 16 MB.	Chọn ảnh PNG hoặc JPEG không lớn hơn 16 MB.	16MB 이하의 PNG 또는 JPEG를 선택하세요.	16 MB 以下の PNG または JPEG を選択してください。	選擇不超過16 MB的PNG或JPEG圖片。	请选择不超过16 MB的PNG或JPEG图片。
+Freeze Panes	Cố định ngăn	틀 고정	ウィンドウ枠の固定	凍結窗格	冻结窗格
+Freeze\nPanes	Cố định\nngăn	틀\n고정	ウィンドウ枠\nの固定	凍結\n窗格	冻结\n窗格
+Freeze First Column	Cố định cột đầu tiên	첫 열 고정	先頭列の固定	凍結首欄	冻结首列
+Freeze Top Row	Cố định hàng trên cùng	첫 행 고정	先頭行の固定	凍結頂端列	冻结首行
+Gridlines	Đường lưới	눈금선	目盛線	格線	网格线
+Gridlines: None	Đường lưới: Ẩn	눈금선: 없음	目盛線: なし	格線：無	网格线：无
+Gridlines: Show	Đường lưới: Hiện	눈금선: 표시	目盛線: 表示	格線：顯示	网格线：显示
+Headings	Tiêu đề hàng và cột	머리글	見出し	標題	标题
+Formula Bar	Thanh công thức	수식 입력줄	数式バー	資料編輯列	编辑栏
+Formula	Công thức	수식	数式	公式	公式
+Formula Builder	Trình tạo công thức	수식 작성기	数式ビルダー	公式產生器	公式生成器
+Formula:	Công thức:	수식:	数式:	公式：	公式：
+Formulas and number formats	Công thức và định dạng số	수식 및 숫자 서식	数式と数値の書式	公式及數字格式	公式和数字格式
+Insert Function	Chèn hàm	함수 삽입	関数の挿入	插入函數	插入函数
+Insert\nFunction	Chèn\nhàm	함수\n삽입	関数の\n挿入	插入\n函數	插入\n函数
+More Functions…	Thêm hàm…	함수 더 보기…	その他の関数…	其他函數…	其他函数…
+More\nFunctions	Thêm\nhàm	함수\n더 보기	その他の\n関数	其他\n函數	其他\n函数
+Lookup & Reference	Tra cứu và tham chiếu	찾기 및 참조	検索/行列	查閱與參照	查找和引用
+Lookup &\nReference	Tra cứu\nvà tham chiếu	찾기 및\n참조	検索/\n行列	查閱與\n參照	查找和\n引用
+Math & Trig	Toán và lượng giác	수학 및 삼각	数学/三角	數學與三角函數	数学和三角函数
+Math &\nTrig	Toán và\nlượng giác	수학 및\n삼각	数学/\n三角	數學與\n三角函數	数学和\n三角函数
+Financial	Tài chính	재무	財務	財務	财务
+Logical	Lô-gic	논리	論理	邏輯	逻辑
+Statistical	Thống kê	통계	統計	統計	统计
+Engineering	Kỹ thuật	공학	エンジニアリング	工程	工程
+Information	Thông tin	정보	情報	資訊	信息
+Database	Cơ sở dữ liệu	데이터베이스	データベース	資料庫	数据库
+Data Analysis	Phân tích dữ liệu	데이터 분석	データ分析	資料分析	数据分析
+Data\nAnalysis	Phân tích\ndữ liệu	데이터\n분석	データ\n分析	資料\n分析	数据\n分析
+Data Validation	Xác thực dữ liệu	데이터 유효성 검사	データの入力規則	資料驗證	数据验证
+Data\nValidation	Xác thực\ndữ liệu	데이터\n유효성 검사	データの\n入力規則	資料\n驗證	数据\n验证
+Data validation	Xác thực dữ liệu	데이터 유효성 검사	データの入力規則	資料驗證	数据验证
+Circle Invalid Data	Khoanh vùng dữ liệu không hợp lệ	잘못된 데이터 표시	無効データのマーク	圈選錯誤資料	圈释无效数据
+Allow	Cho phép	허용	入力値の種類	允許	允许
+Ignore blank	Bỏ qua ô trống	공백 무시	空白を無視する	忽略空白	忽略空值
+In-cell dropdown	Danh sách thả xuống trong ô	셀 안의 드롭다운 표시	ドロップダウン リストから選択	儲存格內下拉式清單	提供下拉箭头
+Input message:	Thông báo nhập liệu:	설명 메시지:	入力時メッセージ:	輸入訊息：	输入信息：
+Any value	Giá trị bất kỳ	모든 값	すべての値	任何值	任何值
+Whole number	Số nguyên	정수	整数	整數	整数
+Text length	Độ dài văn bản	텍스트 길이	文字列（長さ指定）	文字長度	文本长度
+Minimum:	Tối thiểu:	최솟값:	最小値:	最小值：	最小值：
+Maximum:	Tối đa:	최댓값:	最大値:	最大值：	最大值：
+Minimum / Source / Formula:	Tối thiểu / Nguồn / Công thức:	최솟값 / 원본 / 수식:	最小値 / 元の値 / 数式:	最小值／來源／公式：	最小值／来源／公式：
+Name Manager	Quản lý tên	이름 관리자	名前の管理	名稱管理員	名称管理器
+Name\nManager	Quản lý\ntên	이름\n관리자	名前の\n管理	名稱\n管理員	名称\n管理器
+Define Name	Xác định tên	이름 정의	名前の定義	定義名稱	定义名称
+Edit Name	Sửa tên	이름 편집	名前の編集	編輯名稱	编辑名称
+No names defined	Chưa có tên nào được xác định	정의된 이름 없음	定義された名前はありません	尚未定義名稱	尚未定义名称
+Name	Tên	이름	名前	名稱	名称
+Value	Giá trị	값	値	值	值
+Refers To	Tham chiếu đến	참조 대상	参照範囲	參照到	引用位置
+Scope	Phạm vi	범위	範囲	範圍	范围
+Match case	Phân biệt chữ hoa, chữ thường	대/소문자 구분	大文字と小文字を区別する	大小寫須相符	区分大小写
+Match entire cell contents	Khớp toàn bộ nội dung ô	전체 셀 내용 일치	セル内容が完全に同一であるものを検索する	儲存格內容須完全相同	单元格内容完全匹配
+Within workbook	Trong sổ làm việc	통합 문서에서	ブック内	活頁簿內	工作簿内
+Find what:	Nội dung cần tìm:	찾을 내용:	検索する文字列:	尋找目標：	查找内容：
+Replace with:	Thay bằng:	바꿀 내용:	置換後の文字列:	取代為：	替换为：
+Find All	Tìm tất cả	모두 찾기	すべて検索	全部尋找	查找全部
+Find Next	Tìm tiếp	다음 찾기	次を検索	找下一個	查找下一个
+Replace All	Thay tất cả	모두 바꾸기	すべて置換	全部取代	全部替换
+Replace	Thay thế	바꾸기	置換	取代	替换
+Search:	Tìm kiếm:	검색:	検索:	搜尋：	搜索：
+Search	Tìm kiếm	검색	検索	搜尋	搜索
+Sort	Sắp xếp	정렬	並べ替え	排序	排序
+Custom Sort	Sắp xếp tùy chỉnh	사용자 지정 정렬	ユーザー設定の並べ替え	自訂排序	自定义排序
+A to Z	Từ A đến Z	오름차순	昇順	從A到Z	从A到Z
+Z to A	Từ Z đến A	내림차순	降順	從Z到A	从Z到A
+Sort Ascending	Sắp xếp tăng dần	오름차순 정렬	昇順で並べ替え	遞增排序	升序排序
+Sort Descending	Sắp xếp giảm dần	내림차순 정렬	降順で並べ替え	遞減排序	降序排序
+My data has headers	Dữ liệu có tiêu đề	머리글 포함	先頭行をデータの見出しとして使用する	我的資料有標題	数据包含标题
+My list has headers	Danh sách có tiêu đề	목록에 머리글 포함	リストに見出しがあります	我的清單有標題	列表包含标题
++ Add Level	+ Thêm cấp	+ 기준 추가	+ レベルの追加	+ 新增層級	+ 添加条件
+Clear Filter	Xóa bộ lọc	필터 지우기	フィルターのクリア	清除篩選	清除筛选
+Type to filter…	Nhập để lọc…	입력하여 필터링…	入力して絞り込み…	輸入以篩選…	输入以筛选…
+Go To	Đi tới	이동	ジャンプ	到	定位
+Go To Special	Đi tới đặc biệt	이동 옵션	条件を選択してジャンプ	特殊目標	定位条件
+Reference:	Tham chiếu:	참조:	参照先:	參照：	引用位置：
+Current region	Vùng hiện tại	현재 영역	アクティブ セル領域	目前範圍	当前区域
+Last cell	Ô cuối	마지막 셀	最後のセル	最後一個儲存格	最后一个单元格
+Blanks	Ô trống	빈 셀	空白セル	空白	空值
+Constants	Hằng số	상수	定数	常數	常量
+Entire row	Toàn bộ hàng	행 전체	行全体	整列	整行
+Entire column	Toàn bộ cột	열 전체	列全体	整欄	整列
+Move or Copy	Di chuyển hoặc sao chép	이동 또는 복사	移動またはコピー	移動或複製	移动或复制
+Move or Copy Sheet…	Di chuyển hoặc sao chép trang tính…	시트 이동 또는 복사…	シートの移動またはコピー…	移動或複製工作表…	移动或复制工作表…
+Create a copy	Tạo bản sao	복사본 만들기	コピーを作成する	建立複本	建立副本
+Hide Sheet	Ẩn trang tính	시트 숨기기	シートを非表示	隱藏工作表	隐藏工作表
+Hide Rows	Ẩn hàng	행 숨기기	行を非表示	隱藏列	隐藏行
+Hide Columns	Ẩn cột	열 숨기기	列を非表示	隱藏欄	隐藏列
+Unhide…	Bỏ ẩn…	숨기기 취소…	再表示…	取消隱藏…	取消隐藏…
+Select All Sheets	Chọn tất cả trang tính	모든 시트 선택	すべてのシートを選択	選取所有工作表	选定全部工作表
+Next sheet	Trang tính tiếp theo	다음 시트	次のシート	下一張工作表	下一工作表
+Previous sheet	Trang tính trước	이전 시트	前のシート	上一張工作表	上一工作表
+Not saved yet	Chưa lưu	아직 저장하지 않음	未保存	尚未儲存	尚未保存
+No recent workbooks yet.	Chưa có sổ làm việc gần đây.	최근 통합 문서가 없습니다.	最近使ったブックはありません。	尚無最近使用的活頁簿。	尚无最近使用的工作簿。
+No workbook is open.	Chưa mở sổ làm việc nào.	열린 통합 문서가 없습니다.	ブックが開いていません。	未開啟任何活頁簿。	尚未打开工作簿。
+More workbooks	Thêm sổ làm việc	통합 문서 더 보기	その他のブック	更多活頁簿	更多工作簿
+Dark Mode	Chế độ tối	다크 모드	ダーク モード	深色模式	深色模式
+Display theme	Giao diện hiển thị	화면 테마	表示テーマ	顯示佈景主題	显示主题
+Normal	Bình thường	기본	標準	標準	普通
+Manual	Thủ công	수동	手動	手動	手动
+Hidden	Ẩn	숨김	非表示	隱藏	隐藏
+Locked	Đã khóa	잠김	ロック	鎖定	锁定
+Lock Cell	Khóa ô	셀 잠금	セルのロック	鎖定儲存格	锁定单元格
+Macros	Macro	매크로	マクロ	巨集	宏
+New Comment	Chú thích mới	새 메모	新しいコメント	新增註解	新建批注
+New\nComment	Chú thích\nmới	새\n메모	新しい\nコメント	新增\n註解	新建\n批注
+New Note	Ghi chú mới	새 노트	新しいメモ	新增附註	新建备注
+Comments	Chú thích	메모	コメント	註解	批注
+Comments pane	Ngăn chú thích	메모 창	コメント ウィンドウ	註解窗格	批注窗格
+Next Comment	Chú thích tiếp theo	다음 메모	次のコメント	下一個註解	下一条批注
+Previous Comment	Chú thích trước	이전 메모	前のコメント	上一個註解	上一条批注
+Delete Comment	Xóa chú thích	메모 삭제	コメントの削除	刪除註解	删除批注
+Send	Gửi	보내기	送信	傳送	发送
+Reply…	Trả lời…	답글…	返信…	回覆…	回复…
+OK	Đồng ý	확인	OK	確定	确定
+Keep	Giữ lại	유지	保持	保留	保留
+Enter	Nhập	입력	入力	輸入	输入
+Spreadsheets	Bảng tính	스프레드시트	スプレッドシート	試算表	电子表格
+Excel Workbook	Sổ làm việc Excel	Excel 통합 문서	Excel ブック	Excel 活頁簿	Excel 工作簿
+Excel 97-2003 Workbook (import)	Sổ làm việc Excel 97-2003 (nhập)	Excel 97-2003 통합 문서(가져오기)	Excel 97-2003 ブック（インポート）	Excel 97-2003 活頁簿（匯入）	Excel 97-2003 工作簿（导入）
+Excel Binary Workbook (data import)	Sổ làm việc nhị phân Excel (nhập dữ liệu)	Excel 바이너리 통합 문서(데이터 가져오기)	Excel バイナリ ブック（データのインポート）	Excel 二進位活頁簿（資料匯入）	Excel 二进制工作簿（数据导入）
+OpenDocument Spreadsheet (data import)	Bảng tính OpenDocument (nhập dữ liệu)	OpenDocument 스프레드시트(데이터 가져오기)	OpenDocument スプレッドシート（データのインポート）	OpenDocument 試算表（資料匯入）	OpenDocument 电子表格（数据导入）
+Pictures (PNG, JPEG)	Hình ảnh (PNG, JPEG)	그림(PNG, JPEG)	画像（PNG、JPEG）	圖片（PNG、JPEG）	图片（PNG、JPEG）
+Excel Workbook (.xlsx)	Sổ làm việc Excel (.xlsx)	Excel 통합 문서(.xlsx)	Excel ブック (.xlsx)	Excel 活頁簿 (.xlsx)	Excel 工作簿 (.xlsx)
+Web Page (.html)	Trang web (.html)	웹 페이지(.html)	Web ページ (.html)	網頁 (.html)	网页 (.html)
+Save a copy as .{fmt}	Lưu bản sao dưới dạng .{fmt}	.{fmt} 형식으로 복사본 저장	.{fmt} 形式でコピーを保存	另存複本為 .{fmt}	将副本另存为 .{fmt}
+Do you want to save the changes you made to {title}?	Bạn có muốn lưu thay đổi trong {title} không?	{title}의 변경 내용을 저장하시겠습니까?	{title} への変更を保存しますか？	要儲存對 {title} 所做的變更嗎？	是否保存对 {title} 所做的更改？
+Version {version}	Phiên bản {version}	버전 {version}	バージョン {version}	版本 {version}	版本 {version}
+Contributors: {count} · Commits: {commits}	Người đóng góp: {count} · Lần ghi nhận: {commits}	기여자: {count}명 · 커밋: {commits}개	貢献者: {count}人 · コミット: {commits}件	貢獻者：{count}人 · 提交次數：{commits}	贡献者：{count}人 · 提交次数：{commits}
+{count} engine commands are available. See docs/mcp.md and docs/control-protocol.md.	Có {count} lệnh xử lý. Xem docs/mcp.md và docs/control-protocol.md.	엔진 명령 {count}개를 사용할 수 있습니다. docs/mcp.md 및 docs/control-protocol.md를 참고하세요.	{count}個のエンジンコマンドを使用できます。docs/mcp.md と docs/control-protocol.md を参照してください。	可使用 {count} 個引擎指令。請參閱 docs/mcp.md 與 docs/control-protocol.md。	可使用 {count} 个引擎命令。请参阅 docs/mcp.md 和 docs/control-protocol.md。
+— Steps: {count}	— Số bước: {count}	— 단계: {count}개	— ステップ数: {count}	— 步驟數：{count}	— 步骤数：{count}
+Cells found: {count}	Số ô tìm thấy: {count}	찾은 셀: {count}개	見つかったセル: {count}個	找到的儲存格：{count}個	找到的单元格：{count}个
+Not in Dictionary ({cell}):	Không có trong từ điển ({cell}):	사전에 없는 단어({cell}):	辞書にない単語（{cell}）:	字典中找不到（{cell}）：	词典中找不到（{cell}）：
+Layout {n}	Bố trí {n}	레이아웃 {n}	レイアウト {n}	版面配置 {n}	布局 {n}
+Undo {l}	Hoàn tác {l}	{l} 실행 취소	{l} を元に戻す	復原 {l}	撤销 {l}
+Circular References: {sheet}!{cell}	Tham chiếu vòng: {sheet}!{cell}	순환 참조: {sheet}!{cell}	循環参照: {sheet}!{cell}	循環參照：{sheet}!{cell}	循环引用：{sheet}!{cell}
+{number}. {kind}  applies to {ranges}	{number}. {kind}  áp dụng cho {ranges}	{number}. {kind}  적용 대상: {ranges}	{number}. {kind}  適用先: {ranges}	{number}. {kind}  套用至 {ranges}	{number}. {kind}  应用于 {ranges}
+Text Does Not Contain	Văn bản không chứa	텍스트를 포함하지 않음	指定の文字列を含まない	不包含文字	文本不包含
+Text Begins With	Văn bản bắt đầu bằng	다음으로 시작하는 텍스트	指定の文字列で始まる	文字開頭為	文本开头是
+Text Ends With	Văn bản kết thúc bằng	다음으로 끝나는 텍스트	指定の文字列で終わる	文字結尾為	文本结尾是
+Nonblank Cells	Ô không trống	빈 셀이 아닌 셀	空白以外のセル	非空白儲存格	非空单元格
+Errors	Lỗi	오류	エラー	錯誤	错误
+Cells Without Errors	Ô không có lỗi	오류가 없는 셀	エラーのないセル	沒有錯誤的儲存格	没有错误的单元格
+Unique Values	Giá trị duy nhất	고유 값	一意の値	唯一值	唯一值
+Above/Below Average	Trên/dưới trung bình	평균 초과/미만	平均より上/下	高於/低於平均	高于/低于平均值
+this workbook	sổ làm việc này	이 통합 문서	このブック	此活頁簿	此工作簿
+KIO Grid	KIO Grid	KIO Grid	KIO Grid	KIO Grid	KIO Grid
+CSV	CSV	CSV	CSV	CSV	CSV
+CSV UTF-8 (.csv)	CSV UTF-8 (.csv)	CSV UTF-8 (.csv)	CSV UTF-8 (.csv)	CSV UTF-8 (.csv)	CSV UTF-8 (.csv)
+PDF (.pdf)	PDF (.pdf)	PDF (.pdf)	PDF (.pdf)	PDF (.pdf)	PDF (.pdf)
+Adds all the numbers in the arguments.	Cộng tất cả các số trong đối số.	인수에 있는 모든 숫자를 더합니다.	引数に含まれるすべての数値を合計します。	加總引數中的所有數字。	将参数中的所有数字相加。
+Adds the cells that meet a condition.	Cộng các ô đáp ứng điều kiện.	조건에 맞는 셀을 더합니다.	条件を満たすセルを合計します。	加總符合條件的儲存格。	将满足条件的单元格相加。
+Adds the cells that meet every condition.	Cộng các ô đáp ứng tất cả điều kiện.	모든 조건에 맞는 셀을 더합니다.	すべての条件を満たすセルを合計します。	加總符合所有條件的儲存格。	将满足所有条件的单元格相加。
+Arithmetic mean of the numbers.	Trung bình cộng của các số.	숫자의 산술 평균을 구합니다.	数値の算術平均を求めます。	計算數字的算術平均值。	计算数字的算术平均值。
+Smallest number (0 when there are none).	Số nhỏ nhất (0 nếu không có số).	가장 작은 숫자를 구합니다(숫자가 없으면 0).	最小の数値を求めます（数値がない場合は0）。	傳回最小的數字（沒有數字時為0）。	返回最小的数字（没有数字时为0）。
+Largest number (0 when there are none).	Số lớn nhất (0 nếu không có số).	가장 큰 숫자를 구합니다(숫자가 없으면 0).	最大の数値を求めます（数値がない場合は0）。	傳回最大的數字（沒有數字時為0）。	返回最大的数字（没有数字时为0）。
+Counts the numbers.	Đếm các số.	숫자의 개수를 셉니다.	数値の個数を数えます。	計算數字的個數。	计算数字的个数。
+Counts the non-empty values.	Đếm các giá trị không trống.	비어 있지 않은 값의 개수를 셉니다.	空白以外の値の個数を数えます。	計算非空白值的個數。	计算非空值的个数。
+Returns the current date and time.	Trả về ngày và giờ hiện tại.	현재 날짜와 시간을 반환합니다.	現在の日付と時刻を返します。	傳回目前的日期和時間。	返回当前日期和时间。
+Returns the current date.	Trả về ngày hiện tại.	현재 날짜를 반환합니다.	現在の日付を返します。	傳回目前的日期。	返回当前日期。
+Rounds a number to a given number of digits, halves away from zero.	Làm tròn số đến số chữ số chỉ định; trường hợp đúng nửa đơn vị được làm tròn ra xa số 0.	지정한 자릿수로 반올림하며, 중간값은 0에서 먼 쪽으로 처리합니다.	指定した桁数に四捨五入します。ちょうど中間の値は0から遠い方向へ丸めます。	將數字四捨五入至指定的位數，正好位於中間的值會往遠離0的方向進位。	将数字四舍五入到指定位数，恰好位于中间的值向远离0的方向舍入。
+Returns one value when a condition is TRUE and another when it is FALSE.	Trả về một giá trị khi điều kiện là TRUE và giá trị khác khi là FALSE.	조건이 TRUE이면 한 값을, FALSE이면 다른 값을 반환합니다.	条件がTRUEの場合とFALSEの場合で異なる値を返します。	條件為TRUE時傳回一個值，為FALSE時傳回另一個值。	条件为TRUE时返回一个值，为FALSE时返回另一个值。
+Returns a fallback when the value is an error, otherwise the value.	Trả về giá trị thay thế khi có lỗi; nếu không, trả về giá trị ban đầu.	값이 오류이면 대체 값을 반환하고, 아니면 원래 값을 반환합니다.	値がエラーなら代わりの値を返し、それ以外は元の値を返します。	值為錯誤時傳回替代值，否則傳回原值。	值为错误时返回替代值，否则返回原值。
+Finds a value in the first column of a table and returns the value in the same row of another column.	Tìm giá trị ở cột đầu của bảng rồi trả về giá trị cùng hàng ở cột khác.	표의 첫 번째 열에서 값을 찾아 다른 열의 같은 행에 있는 값을 반환합니다.	表の先頭列で値を検索し、別の列の同じ行にある値を返します。	在表格的第一欄尋找值，並傳回另一欄同一列的值。	在表格的第一列查找值，并返回另一列同一行的值。
+Searches a row or column and returns the matching item, row or column from another array.	Tìm trong một hàng hoặc cột rồi trả về mục, hàng hoặc cột tương ứng trong mảng khác.	행 또는 열을 검색하고 다른 배열에서 일치하는 항목, 행 또는 열을 반환합니다.	行または列を検索し、別の配列から一致する項目、行、列を返します。	搜尋一列或一欄，並從另一個陣列傳回符合的項目、列或欄。	搜索一行或一列，并从另一个数组返回匹配的项、行或列。

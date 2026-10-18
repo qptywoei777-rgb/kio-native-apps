@@ -1,0 +1,131 @@
+{
+  "scope": "Original exact punctuation, outer-whitespace and unchanged-shortcut derivation receipts, retained only when the current catalog still matches. No sentence translation or user-data replacement is inferred from these rules.",
+  "entries": [
+    {
+      "language": "vi",
+      "source": "  OK  ",
+      "translation": "  Đồng ý  ",
+      "rule": "outer whitespace"
+    },
+    {
+      "language": "vi",
+      "source": "Custom Sort…",
+      "translation": "Sắp xếp tùy chỉnh…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "vi",
+      "source": "Data Validation…",
+      "translation": "Xác thực dữ liệu…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "vi",
+      "source": "Define Name…",
+      "translation": "Xác định tên…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "vi",
+      "source": "Go To Special…",
+      "translation": "Đi tới đặc biệt…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "vi",
+      "source": "Go To…",
+      "translation": "Đi tới…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "vi",
+      "source": "Insert Function (⇧F3)",
+      "translation": "Chèn hàm (⇧F3)",
+      "rule": "unchanged shortcut"
+    },
+    {
+      "language": "vi",
+      "source": "Move or Copy…",
+      "translation": "Di chuyển hoặc sao chép…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "ko",
+      "source": "Insert Function (⇧F3)",
+      "translation": "함수 삽입 (⇧F3)",
+      "rule": "unchanged shortcut"
+    },
+    {
+      "language": "ko",
+      "source": "Move or Copy…",
+      "translation": "이동 또는 복사…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "ja",
+      "source": "  OK  ",
+      "translation": "  OK  ",
+      "rule": "outer whitespace"
+    },
+    {
+      "language": "ja",
+      "source": "Insert Function (⇧F3)",
+      "translation": "関数の挿入 (⇧F3)",
+      "rule": "unchanged shortcut"
+    },
+    {
+      "language": "ja",
+      "source": "Move or Copy…",
+      "translation": "移動またはコピー…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "zh-TW",
+      "source": "Custom Sort…",
+      "translation": "自訂排序…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "zh-TW",
+      "source": "Data Validation…",
+      "translation": "資料驗證…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "zh-TW",
+      "source": "Define Name…",
+      "translation": "定義名稱…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "zh-TW",
+      "source": "Go To Special…",
+      "translation": "特殊目標…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "zh-TW",
+      "source": "Insert Function (⇧F3)",
+      "translation": "插入函數 (⇧F3)",
+      "rule": "unchanged shortcut"
+    },
+    {
+      "language": "zh-TW",
+      "source": "Move or Copy…",
+      "translation": "移動或複製…",
+      "rule": "trailing punctuation"
+    },
+    {
+      "language": "zh-CN",
+      "source": "Insert Function (⇧F3)",
+      "translation": "插入函数 (⇧F3)",
+      "rule": "unchanged shortcut"
+    },
+    {
+      "language": "zh-CN",
+      "source": "Move or Copy…",
+      "translation": "移动或复制…",
+      "rule": "trailing punctuation"
+    }
+  ]
+}
