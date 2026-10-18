@@ -13017,18 +13017,25 @@
          }
      });
  }
-@@ -453,7 +465,7 @@
+@@ -451,9 +463,10 @@
+             continue;
+         };
          let Some(info) = crate::mix_window::plugin_info(&ins.plugin) else { continue };
-         let place = if instrument { "instrument".to_string() } else { char::from(b'a'.saturating_add(slot as u8)).to_string() };
+-        let place = if instrument { "instrument".to_string() } else { char::from(b'a'.saturating_add(slot as u8)).to_string() };
++        let place = if instrument { crate::i18n::t("Instrument") } else { char::from(b'a'.saturating_add(slot as u8)).to_string() };
++        let name = plugin_display_name(info);
          let mut open = true;
 -        let shown = egui::Window::new(format!("{tname} · {place} · {}", info.name))
-+        let shown = egui::Window::new(crate::i18n::t(&(format!("{tname} · {place} · {}", info.name))))
++        let shown = egui::Window::new(format!("{tname} · {place} · {name}"))
              .id(egui::Id::new(("plugin", tid.0, slot)))
              .open(&mut open)
              .default_width(340.0)
-@@ -464,18 +476,21 @@
+@@ -462,20 +475,23 @@
+                 ui.horizontal(|ui| {
+                     // Bypass and presets act on insert slots.
                      if !instrument {
-                         ui.label(egui::RichText::new(&ins.preset).color(Tokens::current().text_dim));
+-                        ui.label(egui::RichText::new(&ins.preset).color(Tokens::current().text_dim));
++                        ui.label(egui::RichText::new(preset_display_name(&ins.preset)).color(Tokens::current().text_dim));
                          let label = if ins.bypass { "BYPASSED" } else { "Bypass" };
 -                        if ui.button(label).clicked() {
 +                        if ui.button(crate::i18n::t(&(label))).clicked() {
@@ -13053,7 +13060,7 @@
                          if resp.clicked()
                              && let Some(p) = &app.player
                          {
-@@ -489,7 +504,9 @@
+@@ -489,7 +505,9 @@
                  });
                  if instrument && soundcraft_mix::is_third_party(&ins.plugin) {
                      // A hosted instrument keeps its sounds and settings in its own editor.
@@ -13064,7 +13071,7 @@
                      return;
                  }
                  if instrument && ins.plugin == crate::sampler_window::SAMPLER {
-@@ -503,15 +520,15 @@
+@@ -503,15 +521,15 @@
                      egui::Grid::new(("pg", tid.0, slot)).num_columns(3).show(ui, |ui| {
                          for p in info.params {
                              let v = ins.params.get(p.id).copied().unwrap_or(p.default);
@@ -13083,7 +13090,7 @@
                                          }
                                      });
                                  x = idx as f32;
-@@ -545,7 +562,7 @@
+@@ -545,7 +563,7 @@
                              }
                              let _ = resp;
                              let shown = if instrument { crate::sampler_window::format_param(&ins.plugin, p, x) } else { p.format(x) };
@@ -13092,7 +13099,7 @@
                              ui.end_row();
                          }
                      });
-@@ -594,30 +611,35 @@
+@@ -594,30 +612,35 @@
          return;
      }
      let tab_id = egui::Id::new("about_tab");
@@ -13149,7 +13156,7 @@
      app.ui.show_about = open;
  }
  
-@@ -626,13 +648,73 @@
+@@ -626,13 +649,83 @@
      if !open {
          return;
      }
@@ -13226,10 +13233,20 @@
 +        let _ = writeln!(out, "{}\t{}\t{}", marker.number, position(marker.start), marker.name);
 +    }
 +    out
++}
++
++/// Localize built-in plugin captions; hosted plugins retain their registered names.
++fn plugin_display_name(info: &soundcraft_dsp::PluginInfo) -> String {
++    if soundcraft_dsp::plugin_info(info.id).is_some() { crate::i18n::t(info.name) } else { info.name.to_owned() }
++}
++
++/// Only the reserved factory label is interface text. Custom preset names are document data.
++fn preset_display_name(name: &str) -> String {
++    if name == "<factory default>" { crate::i18n::t("<factory default>") } else { name.to_owned() }
  }
  
  /// Folder for a plugin's user presets.
-@@ -648,13 +730,13 @@
+@@ -648,13 +741,13 @@
      info: &soundcraft_dsp::PluginInfo,
      ins: &soundcraft_model::Insert,
  ) {
@@ -13245,7 +13262,7 @@
          return;
      };
      let mut names: Vec<String> = std::fs::read_dir(&dir)
-@@ -685,7 +767,7 @@
+@@ -685,7 +778,7 @@
      let mut name: String = ui.ctx().memory(|m| m.data.get_temp(key)).unwrap_or_else(|| format!("{} preset", info.name));
      ui.horizontal(|ui| {
          ui.add(egui::TextEdit::singleline(&mut name).desired_width(140.0));
@@ -13254,13 +13271,30 @@
              let clean = soundcraft_engine::io::sanitize_name(&name);
              let body = json!({"format": "soundcraft-plugin-preset", "plugin": info.id, "params": ins.params});
              let ok = std::fs::create_dir_all(&dir).is_ok() && std::fs::write(dir.join(format!("{clean}.json")), body.to_string()).is_ok();
-@@ -697,3 +779,31 @@
+@@ -697,3 +790,48 @@
      });
      ui.ctx().memory_mut(|m| m.data.insert_temp(key, name));
  }
 +
 +#[cfg(test)]
 +mod report_localization_tests {
++    #[test]
++    fn plugin_chrome_translates_without_changing_custom_names() {
++        let name = "Compressor {user} 東京";
++        let compressor = soundcraft_dsp::plugin_info("compressor").unwrap();
++        for language in crate::i18n::Language::ALL {
++            crate::i18n::activate(language);
++            assert_eq!(super::preset_display_name(name), name);
++            if language != crate::i18n::Language::En {
++                assert_ne!(super::preset_display_name("<factory default>"), "<factory default>");
++                assert_ne!(super::plugin_display_name(compressor), compressor.name);
++                assert_ne!(crate::i18n::t("no engine"), "no engine");
++                assert_ne!(crate::i18n::t(" (resampled to the device rate)"), " (resampled to the device rate)");
++            }
++        }
++        crate::i18n::activate(crate::i18n::Language::En);
++    }
++
 +    #[test]
 +    fn localized_report_preserves_data_and_leaves_export_format_unchanged() {
 +        let mut engine = soundcraft_engine::demo::demo_engine();
@@ -14463,7 +14497,7 @@
 -        ui.label(format!("Audio: {}", app.player.as_ref().map_or("no engine".to_string(), |p| format!("{} @ {} Hz", p.device_name, p.device_rate))));
 +        ui.label(crate::i18n::t(&(format!("UI frame time: {:.1} ms", app.frame_ms))));
 +        ui.label(crate::i18n::t(
-+            &(format!("Audio: {}", app.player.as_ref().map_or("no engine".to_string(), |p| format!("{} @ {} Hz", p.device_name, p.device_rate)))),
++            &(format!("Audio: {}", app.player.as_ref().map_or_else(|| crate::i18n::t("no engine"), |p| format!("{} @ {} Hz", p.device_name, p.device_rate)))),
 +        ));
          let plugins: usize = app.engine.session().tracks.iter().map(|t| t.mixer.inserts.iter().flatten().count()).sum();
 -        ui.label(format!("Active plugin instances: {plugins}"));
@@ -14843,8 +14877,9 @@
                  .player
                  .as_ref()
                  .filter(|p| !p.silent && p.device_rate != sr)
-                 .map_or(String::new(), |_| " (resampled to the device rate)".to_string());
+-                .map_or(String::new(), |_| " (resampled to the device rate)".to_string());
 -            ui.label(format!("{sr} Hz{note}"));
++                .map_or(String::new(), |_| crate::i18n::t(" (resampled to the device rate)"));
 +            ui.label(crate::i18n::t(&(format!("{sr} Hz{note}"))));
              ui.end_row();
          });

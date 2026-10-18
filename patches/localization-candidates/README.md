@@ -30,17 +30,17 @@ set. It does not update prepared.json, so ordinary release packaging continues t
 reject the candidate tree. The separate native verification workflow has read-only
 repository permission and never packages or publishes a release.
 
-Local checks on macOS arm64: both GUI crates compile; Deck UI tests 53/53 and
-Sound UI tests 120/120 pass. Deck's current candidate passed 53/53 and the strict
-catalog gate on both macOS and Windows in run 39142452059. Sound's revised
-candidate requires its own Windows run. The earlier Sound run failed correctly
-for its then-missing catalog entries; it is not evidence against or for this
-new source. Actual Sound window inspection found untranslated docking tabs,
-model modes, note units and status fragments; these were subsequently repaired.
-Deck's Vietnamese status counter and translated gallery captions were repaired
-using actual glyph widths. Native screenshots remain review evidence rather
-than a blanket full-GUI pass, and audio hardware/installation/real-login tests
-remain separately recorded.
+Local checks on macOS arm64: both GUI crates compile. Deck's 1,049-key candidate
+passed 53/53 UI tests and Sound's 1,560-key candidate passed 120/120 UI tests,
+with strict catalogs on both macOS and Windows in run 39149891494 (efa4fe0).
+A later Sound follow-up fixes nested engine-status fragments, plugin window
+captions and the reserved factory-preset label; it passes 121/121 locally and
+requires a matching native CI result. These counts refer to exact source revisions.
+Actual window inspection found untranslated model modes and status fragments;
+these were subsequently repaired. Deck's Vietnamese status counter and translated
+gallery captions were repaired using actual glyph widths. Native screenshots
+remain review evidence rather than a blanket full-GUI pass, and audio hardware,
+installation and real-login tests remain separately recorded.
 
 Translation data and scripts are in patches/localization-shared and scripts/.
 The authored TSV has English, Vietnamese, Korean, Japanese, Traditional Chinese,
