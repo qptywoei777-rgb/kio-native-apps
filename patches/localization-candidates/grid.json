@@ -5,8 +5,8 @@
   "basePreparedTreeSha256": "276ac49a394849de1f27ddf20ed6a0d226a055563ba99c0d6ba092b9ed2016ba",
   "patch": {
     "path": "patches/localization-candidates/grid.patch",
-    "sha256": "c6b7c98ff5995f4612243d0b5ca79d79573fcd1308ba7687d7dcc8d8917a4503",
-    "bytes": 742608
+    "sha256": "ca04c10465cc8ceed3289e5883bd5c6af8cea5f55f10d685989fc8c36b128214",
+    "bytes": 743310
   },
   "files": [
     {
@@ -71,8 +71,8 @@
         "bytes": 127881
       },
       "after": {
-        "sha256": "c47933e68eb15814f4555457b61e9be1f3462ae7b54afea4abd67e639e001048",
-        "bytes": 137818
+        "sha256": "67457fc207e0fc165fe497047fdcb0cb7fb5ee8cbd272060a61bd75f2dad279e",
+        "bytes": 137930
       }
     },
     {
