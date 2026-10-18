@@ -2273,6 +2273,32 @@
       "context": "",
       "source": "PDF (.pdf)",
       "reason": "Official KIO product name or canonical file format/encoding and extension; never translated into a different file type."
+    },
+    {
+      "app": "grid",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "PDF (*.pdf)",
+      "reason": "Exact standard file-format name and wildcard; no human descriptive prose. Preserve the format identifier and extension."
+    },
+    {
+      "app": "grid",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.",
+      "reason": "Preserve the original upstream license/copyright notice verbatim; the surrounding About UI and attribution explanation are translated."
     }
   ]
 }

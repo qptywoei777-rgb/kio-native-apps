@@ -358,3 +358,1288 @@ Absolute value of a number.	Giá trị tuyệt đối của một số.	숫자�
 e.g. lookup, average, date	ví dụ: tra cứu, trung bình, ngày	예: 찾기, 평균, 날짜	例: 検索、平均、日付	例如：查閱、平均、日期	例如：查找、平均值、日期
 Format Cells|Fill	Tô màu	채우기	塗りつぶし	填滿	填充
 Time	Thời gian	시간	時刻	時間	时间
+Accessibility	Trợ năng	접근성	アクセシビリティ	協助工具	辅助功能
+Action Journal	Nhật ký thao tác	작업 기록	操作履歴	動作記錄	操作日志
+Actions	Thao tác	작업	操作	動作	操作
+Activate Sheet	Chuyển đến trang tính	시트 활성화	シートをアクティブ化	切換至工作表	激活工作表
+Active Field	Trường đang chọn	활성 필드	アクティブなフィールド	作用中欄位	活动字段
+Add Field	Thêm trường	필드 추가	フィールドの追加	新增欄位	添加字段
+Add Scenario	Thêm kịch bản	시나리오 추가	シナリオの追加	新增分析藍本	添加方案
+Add Watch (active cell)	Thêm ô đang chọn vào cửa sổ theo dõi	현재 셀 조사식 추가	選択中のセルをウォッチに追加	新增作用中儲存格至監看視窗	将活动单元格添加到监视窗口
+Add footer	Thêm chân trang	바닥글 추가	フッターの追加	新增頁尾	添加页脚
+Add header	Thêm đầu trang	머리글 추가	ヘッダーの追加	新增頁首	添加页眉
+Add subtotal to (columns, e.g. C,D):	Tính tổng phụ cho các cột (ví dụ: C,D):	부분합 계산 열(예: C,D):	小計を追加する列（例: C,D）:	新增小計至欄（例如 C,D）：	添加分类汇总的列（例如 C,D）：
+Add-ins	Phần bổ trợ	추가 기능	アドイン	增益集	加载项
+Agent Control	Điều khiển tác tử	에이전트 제어	エージェント制御	代理程式控制	智能体控制
+Aggregate duplicates using	Gộp giá trị trùng bằng	중복 값 집계 방식	重複する値の集計方法	重複值的彙總方式	重复值的汇总方式
+All Borders	Tất cả đường viền	모든 테두리	格子	所有框線	所有框线
+All Charts	Tất cả biểu đồ	모든 차트	すべてのグラフ	所有圖表	所有图表
+All done. We made {count} replacements.	Đã thay thế xong {count} mục.	총 {count}개 항목을 바꿨습니다.	{count} 件の置換が完了しました。	已完成 {count} 處取代。	已完成 {count} 处替换。
+Allow Edit Ranges	Cho phép sửa vùng	범위 편집 허용	範囲の編集を許可	允許編輯範圍	允许编辑区域
+Allow all users of this sheet to:	Cho phép mọi người dùng trang tính này:	모든 시트 사용자가 수행할 수 있는 작업:	このシートのすべてのユーザーに許可する操作:	允許此工作表的所有使用者：	允许此工作表的所有用户：
+Analysis Tools	Công cụ phân tích	분석 도구	分析ツール	分析工具	分析工具
+Anova: Single Factor	Phân tích phương sai: một yếu tố	분산 분석: 일원 배치법	分散分析: 一元配置	變異數分析：單因子	方差分析：单因素
+Arrange All	Sắp xếp tất cả cửa sổ	모두 정렬	整列	全部重排	全部重排
+Arrow	Mũi tên	화살표	矢印	箭號	箭头
+At each change in (column letter):	Mỗi khi giá trị thay đổi trong cột (chữ cái):	그룹화 기준 열(열 문자):	グループの基準列（列記号）:	每次變更時的依據欄（欄字母）：	分类字段（列字母）：
+AutoFill	Tự động điền	자동 채우기	オートフィル	自動填滿	自动填充
+Bar	Thanh ngang	가로 막대	横棒	橫條圖	条形图
+Before sheet (position, 0 = first):	Trước trang tính (vị trí, 0 = đầu tiên):	앞에 놓을 시트 위치(0 = 맨 처음):	挿入先シート位置（0 = 先頭）:	置於工作表之前（位置，0 = 最前面）：	放在工作表之前（位置，0 = 最前面）：
+Between…	Nằm trong khoảng…	사이 값…	指定の範囲内…	介於…	介于…
+Bin Range (blank for automatic bins):	Vùng mốc phân nhóm (để trống để tự chia):	계급 구간 범위(비우면 자동):	データ区間の範囲（空欄で自動設定）:	組界範圍（留空以自動分組）：	接收区域（留空以自动分组）：
+Blue	Xanh dương	파랑	青	藍色	蓝色
+Blue - White - Red	Xanh dương - Trắng - Đỏ	파랑 - 흰색 - 빨강	青 - 白 - 赤	藍 - 白 - 紅	蓝 - 白 - 红
+Bottom	Dưới	아래쪽	下	下	底端
+Bottom Border	Viền dưới	아래쪽 테두리	下罫線	下框線	下框线
+Bottom Double Border	Viền dưới kép	아래쪽 이중 테두리	下二重罫線	雙下框線	双下框线
+Bottom Margin	Lề dưới	아래쪽 여백	下余白	下邊界	下边距
+Bottom margin (in):	Lề dưới (in):	아래쪽 여백(인치):	下余白（インチ）:	下邊界（英吋）：	下边距（英寸）：
+Breaks	Ngắt trang	나누기	改ページ	分隔設定	分隔符
+By Changing Variable Cells:	Bằng cách thay đổi các ô biến:	변경할 변수 셀:	変数セルの変更:	變更變數儲存格：	通过更改可变单元格：
+By changing cell:	Bằng cách thay đổi ô:	값을 바꿀 셀:	変化させるセル:	變更儲存格：	可变单元格：
+CSV (Comma delimited)	CSV (phân cách bằng dấu phẩy)	CSV(쉼표로 분리)	CSV（コンマ区切り）	CSV（逗號分隔）	CSV（逗号分隔）
+CSV UTF-8 (Comma delimited) (*.csv)	CSV UTF-8 (phân cách bằng dấu phẩy) (*.csv)	CSV UTF-8(쉼표로 분리) (*.csv)	CSV UTF-8（コンマ区切り）(*.csv)	CSV UTF-8（逗號分隔）(*.csv)	CSV UTF-8（逗号分隔）(*.csv)
+Calculated Field	Trường tính toán	계산 필드	集計フィールド	計算欄位	计算字段
+Calculation	Tính toán	계산	計算	計算	计算
+Cancel Copy	Hủy sao chép	복사 취소	コピーの解除	取消複製	取消复制
+Category:	Danh mục:	범주:	分類:	類別：	类别：
+Cell Controls	Điều khiển ô	셀 컨트롤	セルのコントロール	儲存格控制項	单元格控件
+Cells	Ô	셀	セル	儲存格	单元格
+Change	Thay đổi	변경	変更	變更	更改
+Change All	Thay đổi tất cả	모두 변경	すべて変更	全部變更	全部更改
+Change Colors	Đổi màu	색 변경	色の変更	變更色彩	更改颜色
+Change Data Source	Đổi nguồn dữ liệu	데이터 원본 변경	データ ソースの変更	變更資料來源	更改数据源
+Change File Type	Đổi loại tệp	파일 형식 변경	ファイルの種類の変更	變更檔案類型	更改文件类型
+Chart Layouts	Bố trí biểu đồ	차트 레이아웃	グラフのレイアウト	圖表版面配置	图表布局
+Chart Properties	Thuộc tính biểu đồ	차트 속성	グラフのプロパティ	圖表內容	图表属性
+Chart Recommendations	Gợi ý biểu đồ	추천 차트	おすすめグラフ	建議圖表	推荐图表
+Chart Styles	Kiểu biểu đồ	차트 스타일	グラフ スタイル	圖表樣式	图表样式
+Charts	Biểu đồ	차트	グラフ	圖表	图表
+Check Accessibility	Kiểm tra trợ năng	접근성 검사	アクセシビリティのチェック	檢查協助工具	检查辅助功能
+Check Value Against Validation	Kiểm tra giá trị theo quy tắc xác thực	데이터 유효성 검사	入力規則に対して値を検証	依驗證規則檢查值	按验证规则检查值
+Checkbox	Hộp kiểm	확인란	チェックボックス	核取方塊	复选框
+Choose fields to add to report:	Chọn trường để thêm vào báo cáo:	보고서에 추가할 필드 선택:	レポートに追加するフィールドを選択:	選擇要新增至報表的欄位：	选择要添加到报表的字段：
+Clear	Xóa	지우기	クリア	清除	清除
+Clear Print Area	Xóa vùng in	인쇄 영역 지우기	印刷範囲のクリア	清除列印範圍	取消打印区域
+Clear Slicer Filter	Xóa bộ lọc lát cắt	슬라이서 필터 지우기	スライサーのフィルターをクリア	清除交叉分析篩選器	清除切片器筛选
+Click to add data	Nhấp để thêm dữ liệu	클릭하여 데이터 추가	クリックしてデータを追加	按一下以新增資料	单击以添加数据
+Colors	Màu sắc	색	色	色彩	颜色
+Column	Cột	열	列	欄	列
+Columns (blank = all, e.g. A,C):	Cột (để trống = tất cả, ví dụ: A,C):	열(비우면 전체, 예: A,C):	列（空欄で全列、例: A,C）:	欄（留空 = 全部，例如 A,C）：	列（留空 = 全部，例如 A,C）：
+Combo	Kết hợp	혼합	組み合わせ	組合圖	组合图
+Comma	Dấu phẩy	쉼표	コンマ	逗號	逗号
+Command\nPalette	Bảng\nlệnh	명령\n팔레트	コマンド\nパレット	命令\n選擇區	命令\n面板
+Comment	Bình luận	메모	コメント	註解	批注
+Comment:	Bình luận:	메모:	コメント:	註解：	批注：
+Comments and notes (C)	Bình luận và ghi chú (C)	메모 및 노트(C)	コメントとメモ (C)	註解與附註 (C)	批注和备注 (C)
+Compact	Thu gọn	압축 형식	コンパクト形式	壓縮形式	压缩形式
+Confidence Level (%):	Mức tin cậy (%):	신뢰 수준(%):	信頼水準（%）:	信賴水準（%）：	置信水平（%）：
+Confidence Level for Mean (%), blank for none:	Mức tin cậy của trung bình (%), để trống nếu không dùng:	평균의 신뢰 수준(%), 사용하지 않으면 비움:	平均の信頼水準（%、不要なら空欄）:	平均值的信賴水準（%，不使用時留空）：	平均值的置信水平（%，不使用时留空）：
+Confidence interval	Khoảng tin cậy	신뢰 구간	信頼区間	信賴區間	置信区间
+Consolidate…	Hợp nhất…	통합…	統合…	合併彙算…	合并计算…
+Constant is Zero	Hằng số bằng không	상수는 0	定数に 0 を使用	常數為零	常数为零
+Convert	Chuyển đổi	변환	変換	轉換	转换
+Convert Text to Columns	Tách văn bản thành cột	텍스트 나누기	文字列を列に分割	文字分欄	文本分列
+Convert the last ink stroke to a shape	Chuyển nét mực cuối thành hình	마지막 잉크 선을 도형으로 변환	最後のインク ストロークを図形に変換	將最後一筆墨跡轉換為圖案	将最后一笔墨迹转换为形状
+Convert to Comments	Chuyển thành bình luận	메모로 변환	コメントに変換	轉換為註解	转换为批注
+Correlation	Tương quan	상관 관계	相関	相關	相关系数
+Covariance	Hiệp phương sai	공분산	共分散	共變異數	协方差
+Create Forecast Worksheet	Tạo trang tính dự báo	예측 시트 만들기	予測ワークシートの作成	建立預測工作表	创建预测工作表
+Create PDF	Tạo PDF	PDF 만들기	PDF の作成	建立 PDF	创建 PDF
+Create Sparklines	Tạo biểu đồ thu nhỏ	스파크라인 만들기	スパークラインの作成	建立走勢圖	创建迷你图
+Cumulative Percentage	Tỷ lệ phần trăm tích lũy	누적 백분율	累積百分率	累計百分比	累积百分比
+Current Selection	Vùng đang chọn	현재 선택 영역	現在の選択範囲	目前選取範圍	当前选定区域
+Custom (%):	Tùy chỉnh (%):	사용자 지정(%):	任意指定（%）:	自訂（%）：	自定义（%）：
+Custom Margins…	Lề tùy chỉnh…	사용자 지정 여백…	ユーザー設定の余白…	自訂邊界…	自定义边距…
+Custom Views…	Dạng xem tùy chỉnh…	사용자 지정 보기…	ユーザー設定のビュー…	自訂檢視…	自定义视图…
+Damping factor:	Hệ số làm trơn:	감쇠 계수:	減衰係数:	阻尼係數：	阻尼系数：
+Data Range:	Vùng dữ liệu:	데이터 범위:	データ範囲:	資料範圍：	数据区域：
+Data Table…	Bảng dữ liệu…	데이터 표…	データ テーブル…	運算列表…	模拟运算表…
+Data Tools	Công cụ dữ liệu	데이터 도구	データ ツール	資料工具	数据工具
+Date unit	Đơn vị ngày tháng	날짜 단위	日付の単位	日期單位	日期单位
+Day	Ngày	일	日	日	日
+Default Width…	Độ rộng mặc định…	기본 너비…	標準の幅…	預設欄寬…	默认列宽…
+Defined Names	Tên đã xác định	정의된 이름	定義された名前	已定義名稱	定义的名称
+Delete Chart	Xóa biểu đồ	차트 삭제	グラフの削除	刪除圖表	删除图表
+Delete Name	Xóa tên	이름 삭제	名前の削除	刪除名稱	删除名称
+Delete Object	Xóa đối tượng	개체 삭제	オブジェクトの削除	刪除物件	删除对象
+Delete PivotTable	Xóa bảng tổng hợp	피벗 테이블 삭제	ピボットテーブルの削除	刪除樞紐分析表	删除数据透视表
+Delete Scenario	Xóa kịch bản	시나리오 삭제	シナリオの削除	刪除分析藍本	删除方案
+Delete Script	Xóa tập lệnh	스크립트 삭제	スクリプトの削除	刪除指令碼	删除脚本
+Delete Slicer	Xóa bộ lọc lát cắt	슬라이서 삭제	スライサーの削除	刪除交叉分析篩選器	删除切片器
+Delete rows	Xóa hàng	행 삭제	行の削除	刪除列	删除行
+Descriptive Statistics	Thống kê mô tả	기술 통계법	基本統計量	敘述統計	描述统计
+Diagonal ↗	Chéo ↗	대각선 ↗	斜線 ↗	對角線 ↗	对角线 ↗
+Diagonal ↘	Chéo ↘	대각선 ↘	斜線 ↘	對角線 ↘	对角线 ↘
+Different First Page	Trang đầu khác	첫 페이지를 다르게 지정	先頭ページのみ別指定	首頁不同	首页不同
+Different Odd & Even Pages	Trang chẵn và lẻ khác nhau	홀수/짝수 페이지를 다르게 지정	奇数・偶数ページ別指定	奇偶頁不同	奇偶页不同
+Dismiss	Đóng thông báo	닫기	閉じる	關閉	关闭
+Display:	Hiển thị:	표시:	表示:	顯示：	显示：
+Distributed	Phân bố đều	균등 분할	均等割り付け	分散對齊	分散对齐
+Double	Kép	이중	二重	雙線	双线
+Double Accounting	Gạch dưới kép kiểu kế toán	회계용 이중 밑줄	会計（二重下線）	會計用雙底線	会计用双下划线
+Drag to freeze columns	Kéo để cố định cột	끌어서 열 고정	ドラッグして列を固定	拖曳以凍結欄	拖动以冻结列
+Drag to freeze rows	Kéo để cố định hàng	끌어서 행 고정	ドラッグして行を固定	拖曳以凍結列	拖动以冻结行
+Draw Border	Vẽ đường viền	테두리 그리기	罫線の作成	繪製框線	绘制边框
+Draw with ink	Vẽ bằng mực	잉크로 그리기	インクで描画	以筆跡繪圖	用墨迹绘图
+Edit Cell	Sửa ô	셀 편집	セルの編集	編輯儲存格	编辑单元格
+Edit Text Box	Sửa hộp văn bản	텍스트 상자 편집	テキスト ボックスの編集	編輯文字方塊	编辑文本框
+Editing	Chỉnh sửa	편집	編集	編輯	编辑
+Enable AutoComplete for cell values	Bật tự động hoàn thành giá trị ô	셀 값 자동 완성 사용	セルの値のオートコンプリートを有効にする	啟用儲存格值的自動完成功能	启用单元格值自动完成功能
+Enable iterative calculation	Bật tính toán lặp	반복 계산 사용	反復計算を有効にする	啟用反覆運算	启用迭代计算
+Encode Workbook	Mã hóa sổ làm việc	통합 문서 인코딩	ブックをエンコード	編碼活頁簿	编码工作簿
+Enter Cell	Nhập vào ô	셀 입력	セルに入力	輸入儲存格	输入单元格
+Equal To…	Bằng…	같음…	指定の値に等しい…	等於…	等于…
+Erase ink strokes	Xóa nét mực	잉크 지우기	インク ストロークの消去	清除筆跡	擦除墨迹
+Eraser	Tẩy	지우개	消しゴム	橡皮擦	橡皮擦
+Error Checking	Kiểm tra lỗi	오류 검사	エラー チェック	錯誤檢查	错误检查
+Error message:	Thông báo lỗi:	오류 메시지:	エラー メッセージ:	錯誤訊息：	错误信息：
+Error style	Kiểu cảnh báo lỗi	오류 스타일	エラーのスタイル	錯誤樣式	错误样式
+Evaluate	Tính giá trị	계산	評価	求值	求值
+Evaluate Formula	Tính từng bước công thức	수식 계산	数式の検証	評估值公式	公式求值
+Every command run in this session (replayable)	Mọi lệnh đã chạy trong phiên này (có thể phát lại)	현재 세션에서 실행한 모든 명령(재실행 가능)	このセッションで実行した全コマンド（再実行可能）	本次工作階段執行的所有命令（可重播）	本次会话执行的所有命令（可重放）
+Excel Workbook (*.xlsx)	Sổ làm việc Excel (*.xlsx)	Excel 통합 문서 (*.xlsx)	Excel ブック (*.xlsx)	Excel 活頁簿 (*.xlsx)	Excel 工作簿 (*.xlsx)
+Expand formula bar	Mở rộng thanh công thức	수식 입력줄 확장	数式バーの展開	展開資料編輯列	展开编辑栏
+Expand/Collapse Field	Mở rộng/thu gọn trường	필드 확장/축소	フィールドの展開/折りたたみ	展開／摺疊欄位	展开/折叠字段
+Exponential Smoothing	Làm trơn hàm mũ	지수 평활법	指数平滑	指數平滑法	指数平滑
+Export as CSV	Xuất sang CSV	CSV로 내보내기	CSV としてエクスポート	匯出為 CSV	导出为 CSV
+Export as PDF	Xuất sang PDF	PDF로 내보내기	PDF としてエクスポート	匯出為 PDF	导出为 PDF
+Export as Web Page (.html)…	Xuất thành trang web (.html)…	웹 페이지(.html)로 내보내기…	Web ページ（.html）としてエクスポート…	匯出為網頁 (.html)…	导出为网页 (.html)…
+Field List	Danh sách trường	필드 목록	フィールド リスト	欄位清單	字段列表
+File Name	Tên tệp	파일 이름	ファイル名	檔案名稱	文件名
+File Path	Đường dẫn tệp	파일 경로	ファイルのパス	檔案路徑	文件路径
+Fill Down	Điền xuống	아래로 채우기	下方向へコピー	向下填滿	向下填充
+Fill Left	Điền sang trái	왼쪽으로 채우기	左方向へコピー	向左填滿	向左填充
+Fill Range With Input	Điền dữ liệu nhập vào vùng	입력값으로 범위 채우기	入力値で範囲を埋める	以輸入值填滿範圍	用输入值填充区域
+Fill Right	Điền sang phải	오른쪽으로 채우기	右方向へコピー	向右填滿	向右填充
+Fill Up	Điền lên	위로 채우기	上方向へコピー	向上填滿	向上填充
+Fill missing points using	Điền điểm thiếu bằng	누락된 값 채우기 방식	欠損値の補完方法	遺漏資料點的填補方式	缺失数据点的填充方式
+Filter Column	Lọc cột	열 필터	列のフィルター	篩選欄	筛选列
+Filter Items	Lọc mục	항목 필터	項目のフィルター	篩選項目	筛选项
+Filter by Selected Cell's Value	Lọc theo giá trị ô đang chọn	선택한 셀 값으로 필터링	選択したセルの値でフィルター	依所選儲存格的值篩選	按所选单元格的值筛选
+Filters	Bộ lọc	필터	フィルター	篩選	筛选
+Find and Replace	Tìm và thay thế	찾기 및 바꾸기	検索と置換	尋找與取代	查找和替换
+First Column	Cột đầu tiên	첫째 열	最初の列	第一欄	第一列
+Fit Sheet on One Page	In trang tính vừa một trang	한 페이지에 시트 맞추기	シートを 1 ページに印刷	將工作表調整為一頁	将工作表调整为一页
+Flash Fill	Điền nhanh	빠른 채우기	フラッシュ フィル	快速填入	快速填充
+Footer	Chân trang	바닥글	フッター	頁尾	页脚
+Footer (in):	Chân trang (in):	바닥글(인치):	フッター（インチ）:	頁尾（英吋）：	页脚（英寸）：
+Footer Margin	Lề chân trang	바닥글 여백	フッターの余白	頁尾邊界	页脚边距
+Forecast	Dự báo	예측	予測	預測	预测
+Forecast Sheet	Trang tính dự báo	예측 시트	予測シート	預測工作表	预测工作表
+Format Cell Alignment…	Định dạng căn chỉnh ô…	셀 맞춤 서식…	セルの配置設定…	設定儲存格對齊…	设置单元格对齐格式…
+Format Chart pane	Ngăn định dạng biểu đồ	차트 서식 창	グラフの書式設定ウィンドウ	圖表格式窗格	图表格式窗格
+Format Painter	Sao chép định dạng	서식 복사	書式のコピー/貼り付け	複製格式	格式刷
+Format Painter (double-click to keep it on)	Sao chép định dạng (nhấp đúp để tiếp tục dùng)	서식 복사(두 번 클릭하여 계속 사용)	書式のコピー/貼り付け（ダブルクリックで連続使用）	複製格式（按兩下以持續使用）	格式刷（双击以连续使用）
+Format Selection	Định dạng vùng chọn	선택 영역 서식	選択対象の書式設定	設定選取範圍格式	设置所选内容格式
+Format cells	Định dạng ô	셀 서식	セルの書式設定	設定儲存格格式	设置单元格格式
+Format columns	Định dạng cột	열 서식	列の書式設定	設定欄格式	设置列格式
+Format rows	Định dạng hàng	행 서식	行の書式設定	設定列格式	设置行格式
+Formats (T)	Định dạng (T)	서식(T)	書式 (T)	格式 (T)	格式 (T)
+Formula Auditing	Kiểm tra công thức	수식 분석	ワークシート分析	公式稽核	公式审核
+From Table/Range	Từ bảng/vùng	테이블/범위에서	テーブルまたは範囲から	從表格／範圍	从表格/区域
+From Text/CSV	Từ văn bản/CSV	텍스트/CSV에서	テキストまたは CSV から	從文字／CSV	从文本/CSV
+Function Library	Thư viện hàm	함수 라이브러리	関数ライブラリ	函數庫	函数库
+Funnel	Phễu	깔때기형	じょうご	漏斗圖	漏斗图
+Get & Transform Data	Lấy và chuyển đổi dữ liệu	데이터 가져오기 및 변환	データの取得と変換	取得與轉換資料	获取和转换数据
+Get Cell	Đọc ô	셀 읽기	セルを取得	讀取儲存格	读取单元格
+Get Data	Lấy dữ liệu	데이터 가져오기	データの取得	取得資料	获取数据
+Go to Footer	Đến chân trang	바닥글로 이동	フッターに移動	移至頁尾	转至页脚
+Go to Header	Đến đầu trang	머리글로 이동	ヘッダーに移動	移至頁首	转至页眉
+Goal Seek	Tìm giá trị mục tiêu	목표값 찾기	ゴール シーク	目標搜尋	单变量求解
+Goal Seeking found a solution: {value}	Đã tìm được giá trị mục tiêu: {value}	목표값을 찾았습니다: {value}	ゴール シークの解が見つかりました: {value}	目標搜尋已找到解：{value}	单变量求解已找到解：{value}
+Gradebook	Sổ điểm	성적부	成績表	成績簿	成绩册
+Grand Totals	Tổng cộng	총합계	総計	總計	总计
+Greater Than…	Lớn hơn…	보다 큼…	指定の値より大きい…	大於…	大于…
+Green - White - Red	Xanh lá - Trắng - Đỏ	초록 - 흰색 - 빨강	緑 - 白 - 赤	綠 - 白 - 紅	绿 - 白 - 红
+Green - Yellow - Red	Xanh lá - Vàng - Đỏ	초록 - 노랑 - 빨강	緑 - 黄 - 赤	綠 - 黃 - 紅	绿 - 黄 - 红
+Green Fill with Dark Green Text	Nền xanh lá, chữ xanh lá đậm	진한 녹색 텍스트가 있는 녹색 채우기	濃い緑の文字、緑の背景	綠底深綠字	绿底深绿字
+Group Field	Nhóm trường	필드 그룹화	フィールドのグループ化	群組欄位	组合字段
+Group by Months	Nhóm theo tháng	월별 그룹화	月単位でグループ化	依月份群組	按月组合
+Group by Quarters	Nhóm theo quý	분기별 그룹화	四半期単位でグループ化	依季度群組	按季度组合
+Group by Years	Nhóm theo năm	연도별 그룹화	年単位でグループ化	依年份群組	按年组合
+Grouped By:	Nhóm theo:	그룹화 기준:	グループ化の方向:	分組方式：	分组方式：
+Growth	Tăng trưởng	성장률	成長率	成長率	增长率
+Header	Đầu trang	머리글	ヘッダー	頁首	页眉
+Header & Footer	Đầu trang và chân trang	머리글/바닥글	ヘッダーとフッター	頁首及頁尾	页眉和页脚
+Header (in):	Đầu trang (in):	머리글(인치):	ヘッダー（インチ）:	頁首（英吋）：	页眉（英寸）：
+Header Margin	Lề đầu trang	머리글 여백	ヘッダーの余白	頁首邊界	页眉边距
+Header Row	Hàng tiêu đề	머리글 행	見出し行	標題列	标题行
+Hidden: {sheets}	Đang ẩn: {sheets}	숨김: {sheets}	非表示: {sheets}	已隱藏：{sheets}	已隐藏：{sheets}
+Hide & Unhide	Ẩn và hiện	숨기기 및 숨기기 취소	非表示/再表示	隱藏及取消隱藏	隐藏和取消隐藏
+Hide Detail	Ẩn chi tiết	세부 정보 숨기기	詳細を非表示	隱藏詳細資料	隐藏明细数据
+Hierarchy & more	Phân cấp và các loại khác	계층 구조 및 기타	階層構造など	階層及其他	层次结构及其他
+Highlighter	Bút tô sáng	형광펜	蛍光ペン	螢光筆	荧光笔
+Histogram	Biểu đồ tần suất	히스토그램	ヒストグラム	直方圖	直方图
+Horizontal (Category) Axis Labels:	Nhãn trục ngang (danh mục):	가로(항목) 축 레이블:	横（項目）軸ラベル:	水平（類別）軸標籤：	水平（分类）轴标签：
+Horizontal axis title:	Tiêu đề trục ngang:	가로 축 제목:	横軸のタイトル:	水平軸標題：	水平轴标题：
+Household Budget	Ngân sách gia đình	가계부	家計簿	家庭預算	家庭预算
+How agents drive KIO Grid (MCP / control channel)	Cách tác tử điều khiển KIO Grid (MCP / kênh điều khiển)	에이전트의 KIO Grid 제어 방법(MCP / 제어 채널)	エージェントによる KIO Grid の操作方法（MCP / 制御チャネル）	代理程式如何操作 KIO Grid（MCP／控制通道）	智能体如何操作 KIO Grid（MCP / 控制通道）
+Icons	Biểu tượng	아이콘	アイコン	圖示	图标
+Ignore Once	Bỏ qua một lần	한 번 건너뛰기	1 回無視	略過一次	忽略一次
+Illustrations	Hình minh họa	일러스트레이션	図	插圖	插图
+Import a text or CSV file	Nhập tệp văn bản hoặc CSV	텍스트 또는 CSV 파일 가져오기	テキストまたは CSV ファイルをインポート	匯入文字或 CSV 檔案	导入文本或 CSV 文件
+In the last 7 days	Trong 7 ngày qua	지난 7일	過去 7 日間	過去 7 天	过去 7 天
+Include forecast statistics	Kèm thống kê dự báo	예측 통계 포함	予測統計を含める	包含預測統計資料	包含预测统计数据
+Indent	Thụt lề	들여쓰기	インデント	縮排	缩进
+Ink Stroke	Nét mực	잉크 선	インク ストローク	筆跡	墨迹笔划
+Ink to Shape	Chuyển mực thành hình	잉크를 도형으로	インクを図形に変換	筆跡轉圖案	墨迹转形状
+Input Range:	Vùng đầu vào:	입력 범위:	入力範囲:	輸入範圍：	输入区域：
+Input X Range:	Vùng X đầu vào:	X 입력 범위:	入力 X 範囲:	輸入 X 範圍：	X 值输入区域：
+Input Y Range:	Vùng Y đầu vào:	Y 입력 범위:	入力 Y 範囲:	輸入 Y 範圍：	Y 值输入区域：
+Insert Calculated Field	Chèn trường tính toán	계산 필드 삽입	集計フィールドの挿入	插入計算欄位	插入计算字段
+Insert Chart	Chèn biểu đồ	차트 삽입	グラフの挿入	插入圖表	插入图表
+Insert Hyperlink	Chèn siêu liên kết	하이퍼링크 삽입	ハイパーリンクの挿入	插入超連結	插入超链接
+Insert Link (⌘K)	Chèn liên kết (⌘K)	링크 삽입(⌘K)	リンクの挿入 (⌘K)	插入連結 (⌘K)	插入链接 (⌘K)
+Insert Page Break	Chèn ngắt trang	페이지 나누기 삽입	改ページの挿入	插入分頁	插入分页符
+Insert Paste	Chèn các ô đã sao chép	복사한 셀 삽입	コピーしたセルの挿入	插入複製的儲存格	插入复制的单元格
+Insert Sheet Columns	Chèn cột vào trang tính	시트 열 삽입	シートの列を挿入	插入工作表欄	插入工作表列
+Insert Sheet Rows	Chèn hàng vào trang tính	시트 행 삽입	シートの行を挿入	插入工作表列	插入工作表行
+Insert Slicer	Chèn bộ lọc lát cắt	슬라이서 삽입	スライサーの挿入	插入交叉分析篩選器	插入切片器
+Insert a picture	Chèn ảnh	그림 삽입	画像の挿入	插入圖片	插入图片
+Insert a slicer to filter a table	Chèn bộ lọc lát cắt để lọc bảng	표를 필터링할 슬라이서 삽입	テーブルを絞り込むスライサーを挿入	插入交叉分析篩選器以篩選表格	插入切片器以筛选表格
+Insert an icon	Chèn biểu tượng	아이콘 삽입	アイコンの挿入	插入圖示	插入图标
+Insert checkboxes in the selected cells	Chèn hộp kiểm vào các ô đã chọn	선택한 셀에 확인란 삽입	選択したセルにチェックボックスを挿入	在選取的儲存格中插入核取方塊	在所选单元格中插入复选框
+Insert rows	Chèn hàng	행 삽입	行の挿入	插入列	插入行
+Inside Borders	Đường viền bên trong	안쪽 테두리	内側罫線	內框線	内部框线
+Inspect Workbook	Kiểm tra sổ làm việc	통합 문서 검사	ブックの検査	檢查活頁簿	检查工作簿
+Interval:	Khoảng:	간격:	間隔:	間隔：	间隔：
+Just now	Vừa xong	방금	たった今	剛剛	刚刚
+Keep Solver Solution	Giữ nghiệm tìm được	해 찾기 결과 유지	ソルバーの解の保持	保留規劃求解的解	保留规划求解的解
+Kth Largest (blank for none):	Lớn thứ k (để trống nếu không dùng):	k번째 큰 값(사용하지 않으면 비움):	大きい方から k 番目（不要なら空欄）:	第 k 大值（不使用時留空）：	第 k 大值（不使用时留空）：
+Kth Smallest (blank for none):	Nhỏ thứ k (để trống nếu không dùng):	k번째 작은 값(사용하지 않으면 비움):	小さい方から k 番目（不要なら空欄）:	第 k 小值（不使用時留空）：	第 k 小值（不使用时留空）：
+Labels in first row	Nhãn nằm ở hàng đầu tiên	첫째 행에 이름표 있음	先頭行をラベルとして使用	標籤位於第一列	标志位于第一行
+Lasso Select	Chọn bằng dây bao	올가미 선택	投げ縄選択	套索選取	套索选择
+Last Column	Cột cuối cùng	마지막 열	最後の列	最後一欄	最后一列
+Last month	Tháng trước	지난달	先月	上個月	上个月
+Last week	Tuần trước	지난주	先週	上週	上周
+Left Border	Viền trái	왼쪽 테두리	左罫線	左框線	左框线
+Left Margin	Lề trái	왼쪽 여백	左余白	左邊界	左边距
+Left margin (in):	Lề trái (in):	왼쪽 여백(인치):	左余白（インチ）:	左邊界（英吋）：	左边距（英寸）：
+Legend: Bottom	Chú giải: dưới	범례: 아래쪽	凡例: 下	圖例：下方	图例：底部
+Legend: None	Chú giải: không có	범례: 없음	凡例: なし	圖例：無	图例：无
+Legend: Right	Chú giải: phải	범례: 오른쪽	凡例: 右	圖例：右方	图例：右侧
+Legend: Top	Chú giải: trên	범례: 위쪽	凡例: 上	圖例：上方	图例：顶部
+Less Than…	Nhỏ hơn…	보다 작음…	指定の値より小さい…	小於…	小于…
+Light Red Fill	Nền đỏ nhạt	연한 빨강 채우기	薄い赤の背景	淺紅底色	浅红底色
+Light Red Fill with Dark Red Text	Nền đỏ nhạt, chữ đỏ đậm	진한 빨강 텍스트가 있는 연한 빨강 채우기	濃い赤の文字、薄い赤の背景	淺紅底深紅字	浅红底深红字
+Line	Đường	꺾은선형	折れ線	折線圖	折线图
+Line chart	Biểu đồ đường	꺾은선형 차트	折れ線グラフ	折線圖	折线图
+Line or Area	Đường hoặc miền	꺾은선형 또는 영역형	折れ線または面	折線圖或區域圖	折线图或面积图
+Line with Markers	Đường có điểm đánh dấu	표식이 있는 꺾은선형	マーカー付き折れ線	含資料標記的折線圖	带数据标记的折线图
+Link to (web address, e-mail or Sheet!A1):	Liên kết đến (địa chỉ web, e-mail hoặc Sheet!A1):	연결 대상(웹 주소, 전자 메일 또는 Sheet!A1):	リンク先（Web アドレス、メール、または Sheet!A1）:	連結至（網址、電子郵件或 Sheet!A1）：	链接到（网址、电子邮件或 Sheet!A1）：
+List Commands	Liệt kê lệnh	명령 목록	コマンド一覧	列出命令	列出命令
+List Functions	Liệt kê hàm	함수 목록	関数一覧	列出函數	列出函数
+Location Range:	Vùng đặt biểu đồ:	위치 범위:	配置先の範囲:	位置範圍：	位置范围：
+Macros and scripts in this workbook (Alt+F8)	Macro và tập lệnh trong sổ làm việc này (Alt+F8)	이 통합 문서의 매크로 및 스크립트(Alt+F8)	このブックのマクロとスクリプト (Alt+F8)	此活頁簿中的巨集與指令碼 (Alt+F8)	此工作簿中的宏和脚本 (Alt+F8)
+Macros preserved (not executed)	Giữ lại macro (không thực thi)	매크로 보존됨(실행하지 않음)	マクロを保持（実行しません）	巨集已保留（不執行）	宏已保留（不执行）
+Magnification	Độ phóng đại	확대율	倍率	縮放比例	缩放比例
+Make Unconstrained Variables Non-Negative	Đặt các biến không có ràng buộc thành không âm	제한되지 않은 변수를 음수가 아닌 수로 지정	制約のない変数を非負数にする	將未受限制的變數設為非負數	使无约束变量为非负数
+Margins	Lề	여백	余白	邊界	页边距
+Models	Mô hình	모델	モデル	模型	模型
+Month	Tháng	월	月	月	月
+More Accounting Formats…	Thêm định dạng kế toán…	기타 회계 표시 형식…	その他の会計表示形式…	其他會計格式…	其他会计格式…
+More Functions	Hàm khác	함수 더 보기	その他の関数	其他函數	其他函数
+More Number Formats…	Thêm định dạng số…	기타 표시 형식…	その他の表示形式…	其他數值格式…	其他数字格式…
+More commands	Lệnh khác	명령 더 보기	その他のコマンド	其他命令	其他命令
+Move Chart…	Di chuyển biểu đồ…	차트 이동…	グラフの移動…	移動圖表…	移动图表…
+Move Columns	Di chuyển cột	열 이동	列の移動	移動欄	移动列
+Move Field	Di chuyển trường	필드 이동	フィールドの移動	移動欄位	移动字段
+Move Object	Di chuyển đối tượng	개체 이동	オブジェクトの移動	移動物件	移动对象
+Move Selection	Di chuyển vùng chọn	선택 영역 이동	選択範囲の移動	移動選取範圍	移动选定区域
+Move to Column Labels	Chuyển đến nhãn cột	열 레이블로 이동	列ラベルに移動	移至欄標籤	移至列标签
+Move to Report Filter	Chuyển đến bộ lọc báo cáo	보고서 필터로 이동	レポート フィルターに移動	移至報表篩選	移至报表筛选
+Move to Row Labels	Chuyển đến nhãn hàng	행 레이블로 이동	行ラベルに移動	移至列標籤	移至行标签
+Move to Values	Chuyển đến giá trị	값으로 이동	値に移動	移至值	移至值
+Moving Average	Trung bình trượt	이동 평균	移動平均	移動平均	移动平均
+Narrow	Hẹp	좁게	狭い	窄	窄
+New Cell Style…	Kiểu ô mới…	새 셀 스타일…	新しいセル スタイル…	新增儲存格樣式…	新建单元格样式…
+New Script	Tập lệnh mới	새 스크립트	新しいスクリプト	新增指令碼	新建脚本
+New Workbook	Sổ làm việc mới	새 통합 문서	新しいブック	新增活頁簿	新建工作簿
+New Worksheet Ply:	Trang tính mới:	새 워크시트:	新規ワークシート:	新工作表：	新工作表：
+New sheet (⇧F11)	Trang tính mới (⇧F11)	새 시트(⇧F11)	新しいシート (⇧F11)	新增工作表 (⇧F11)	新建工作表 (⇧F11)
+New title (Modify):	Tiêu đề mới (sửa):	새 제목(수정):	新しいタイトル（変更）:	新標題（修改）：	新标题（修改）：
+Next Cell in Selection	Ô tiếp theo trong vùng chọn	선택 영역의 다음 셀	選択範囲内の次のセル	選取範圍中的下一個儲存格	选定区域中的下一个单元格
+Next Sheet	Trang tính tiếp theo	다음 시트	次のシート	下一個工作表	下一个工作表
+Next month	Tháng sau	다음 달	来月	下個月	下个月
+Next week	Tuần sau	다음 주	来週	下週	下周
+No Border	Không có đường viền	테두리 없음	枠なし	無框線	无框线
+No picture selected	Chưa chọn ảnh	선택한 그림 없음	画像が選択されていません	未選取圖片	未选择图片
+None	Không có	없음	なし	無	无
+Normal Probability	Xác suất chuẩn	정규 확률	正規確率	常態機率	正态概率
+Number Format	Định dạng số	표시 형식	表示形式	數值格式	数字格式
+Number of Pages	Số trang	페이지 수	ページ数	頁數	页数
+Open Hyperlink	Mở siêu liên kết	하이퍼링크 열기	ハイパーリンクを開く	開啟超連結	打开超链接
+Options	Tùy chọn	옵션	オプション	選項	选项
+Options|General	Chung	일반	全般	一般	常规
+Options|Save	Lưu	저장	保存	儲存	保存
+Orientation	Hướng	방향	方向	方向	方向
+Orientation (degrees)	Góc xoay (độ)	방향(도)	角度（度）	方向（度）	方向（度）
+Other:	Khác:	기타:	その他:	其他：	其他：
+Output Range:	Vùng đầu ra:	출력 범위:	出力範囲:	輸出範圍：	输出区域：
+Output options	Tùy chọn đầu ra	출력 옵션	出力オプション	輸出選項	输出选项
+Outside Borders	Đường viền ngoài	바깥쪽 테두리	外枠	外框線	外侧框线
+Page Break Preview	Xem trước ngắt trang	페이지 나누기 미리 보기	改ページ プレビュー	分頁預覽	分页预览
+Page Breaks	Ngắt trang	페이지 나누기	改ページ	分頁	分页符
+Page Layout|Orientation	Hướng trang	용지 방향	印刷の向き	列印方向	纸张方向
+Page Number	Số trang	페이지 번호	ページ番号	頁碼	页码
+Page Setup	Thiết lập trang	페이지 설정	ページ設定	版面設定	页面设置
+Page {page} of {pages}	Trang {page}/{pages}	{page}/{pages}페이지	{page} / {pages} ページ	第 {page} 頁，共 {pages} 頁	第 {page} 页，共 {pages} 页
+Paper Size	Khổ giấy	용지 크기	用紙サイズ	紙張大小	纸张大小
+Pareto (sorted histogram)	Pareto (biểu đồ tần suất đã sắp xếp)	파레토(정렬된 히스토그램)	パレート図（並べ替え済みヒストグラム）	柏拉圖（已排序的直方圖）	帕累托图（已排序的直方图）
+Password (optional):	Mật khẩu (không bắt buộc):	암호(선택 사항):	パスワード（省略可）:	密碼（選填）：	密码（可选）：
+Pick From Drop-down List…	Chọn từ danh sách thả xuống…	드롭다운 목록에서 선택…	ドロップダウン リストから選択…	從下拉式清單挑選…	从下拉列表中选择…
+Pick From List	Chọn từ danh sách	목록에서 선택	リストから選択	從清單挑選	从列表中选择
+Picture	Ảnh	그림	画像	圖片	图片
+Pie	Tròn	원형	円	圓形圖	饼图
+Pie or Doughnut	Tròn hoặc vành khuyên	원형 또는 도넛형	円またはドーナツ	圓形圖或環圈圖	饼图或圆环图
+PivotChart	Biểu đồ tổng hợp	피벗 차트	ピボットグラフ	樞紐分析圖	数据透视图
+PivotTable	Bảng tổng hợp	피벗 테이블	ピボットテーブル	樞紐分析表	数据透视表
+PivotTable Analyze	Phân tích bảng tổng hợp	피벗 테이블 분석	ピボットテーブル分析	樞紐分析表分析	数据透视表分析
+PivotTable Design	Thiết kế bảng tổng hợp	피벗 테이블 디자인	ピボットテーブルのデザイン	樞紐分析表設計	数据透视表设计
+PivotTable Fields	Trường bảng tổng hợp	피벗 테이블 필드	ピボットテーブルのフィールド	樞紐分析表欄位	数据透视表字段
+PivotTable Layout	Bố trí bảng tổng hợp	피벗 테이블 레이아웃	ピボットテーブルのレイアウト	樞紐分析表版面配置	数据透视表布局
+PivotTable Styles	Kiểu bảng tổng hợp	피벗 테이블 스타일	ピボットテーブル スタイル	樞紐分析表樣式	数据透视表样式
+PivotTables	Bảng tổng hợp	피벗 테이블	ピボットテーブル	樞紐分析表	数据透视表
+Place Picture in Cell	Đặt ảnh trong ô	셀 안에 그림 배치	画像をセル内に配置	將圖片置於儲存格內	将图片放入单元格
+Place Picture over Cells	Đặt ảnh trên các ô	셀 위에 그림 배치	画像をセルの上に配置	將圖片置於儲存格上方	将图片放在单元格上方
+Place in Cell	Đặt trong ô	셀 안에 배치	セル内に配置	置於儲存格內	放入单元格
+Place over Cells	Đặt trên các ô	셀 위에 배치	セルの上に配置	置於儲存格上方	放在单元格上方
+Portrait	Dọc	세로	縦	直向	纵向
+Previous Sheet	Trang tính trước	이전 시트	前のシート	上一個工作表	上一个工作表
+Print Active Sheets	In các trang tính đang chọn	선택한 시트 인쇄	作業中のシートを印刷	列印使用中工作表	打印活动工作表
+Print Area	Vùng in	인쇄 영역	印刷範囲	列印範圍	打印区域
+Print Entire Workbook	In toàn bộ sổ làm việc	전체 통합 문서 인쇄	ブック全体を印刷	列印整份活頁簿	打印整个工作簿
+Print Gridlines	In đường lưới	눈금선 인쇄	枠線を印刷	列印格線	打印网格线
+Print Headings	In tiêu đề hàng và cột	행 및 열 머리글 인쇄	行列番号を印刷	列印列欄標題	打印行列标题
+Print Titles	Tiêu đề in	인쇄 제목	印刷タイトル	列印標題	打印标题
+Product	Tích	곱	積	乘積	乘积
+Proofing	Kiểm lỗi	언어 교정	文章校正	校訂	校对
+Protect	Bảo vệ	보호	保護	保護	保护
+Protect Sheet	Bảo vệ trang tính	시트 보호	シートの保護	保護工作表	保护工作表
+Protect Structure and Windows	Bảo vệ cấu trúc và cửa sổ	구조 및 창 보호	構成とウィンドウの保護	保護結構及視窗	保护结构和窗口
+Protect Workbook	Bảo vệ sổ làm việc	통합 문서 보호	ブックの保護	保護活頁簿	保护工作簿
+Protect Workbook structure	Bảo vệ cấu trúc sổ làm việc	통합 문서 구조 보호	ブックの構成を保護	保護活頁簿結構	保护工作簿结构
+Quarterly Sales Dashboard	Tổng quan doanh số theo quý	분기별 매출 대시보드	四半期売上ダッシュボード	季度銷售儀表板	季度销售仪表板
+Queries & Connections	Truy vấn và kết nối	쿼리 및 연결	クエリと接続	查詢與連線	查询和连接
+Quick Layout	Bố trí nhanh	빠른 레이아웃	クイック レイアウト	快速版面配置	快速布局
+Radar	Mạng nhện	방사형	レーダー	雷達圖	雷达图
+Range password:	Mật khẩu vùng:	범위 암호:	範囲のパスワード:	範圍密碼：	区域密码：
+Ranges that stay editable when the sheet is protected:	Các vùng vẫn sửa được khi trang tính được bảo vệ:	시트 보호 시에도 편집할 수 있는 범위:	シート保護中も編集を許可する範囲:	工作表受保護時仍可編輯的範圍：	工作表受保护时仍可编辑的区域：
+Rank and Percentile	Xếp hạng và phân vị	순위 및 백분위수	順位と百分位数	等級與百分位數	排位与百分比排位
+Read Range	Đọc vùng	범위 읽기	範囲を読み取り	讀取範圍	读取区域
+Reapply	Áp dụng lại	다시 적용	再適用	重新套用	重新应用
+Recommended Charts	Biểu đồ đề xuất	추천 차트	おすすめグラフ	建議圖表	推荐图表
+Recommended PivotTables	Bảng tổng hợp đề xuất	추천 피벗 테이블	おすすめピボットテーブル	建議樞紐分析表	推荐的数据透视表
+Record Actions	Ghi lại thao tác	작업 기록	操作を記録	記錄動作	记录操作
+Red - Yellow - Green	Đỏ - Vàng - Xanh lá	빨강 - 노랑 - 초록	赤 - 黄 - 緑	紅 - 黃 - 綠	红 - 黄 - 绿
+Red Border	Viền đỏ	빨강 테두리	赤の罫線	紅色框線	红色边框
+Red Text	Chữ đỏ	빨강 텍스트	赤の文字	紅字	红色文本
+Refers to cells:	Tham chiếu đến các ô:	참조 셀:	参照先のセル:	參照儲存格：	引用单元格：
+Refers to:	Tham chiếu đến:	참조 대상:	参照範囲:	參照到：	引用位置：
+Refresh All	Làm mới tất cả	모두 새로 고침	すべて更新	全部重新整理	全部刷新
+Regression	Hồi quy	회귀 분석	回帰分析	迴歸	回归分析
+Remove Arrows	Xóa mũi tên	화살표 제거	トレース矢印の削除	移除箭號	移去箭头
+Remove Duplicates	Loại bỏ giá trị trùng	중복된 항목 제거	重複の削除	移除重複	删除重复项
+Remove Field	Xóa trường	필드 제거	フィールドの削除	移除欄位	删除字段
+Remove Page Break	Xóa ngắt trang	페이지 나누기 제거	改ページの解除	移除分頁	删除分页符
+Remove the password (Modify)	Xóa mật khẩu (sửa)	암호 제거(수정)	パスワードを削除（変更）	移除密碼（修改）	删除密码（修改）
+Rename Sheet	Đổi tên trang tính	시트 이름 바꾸기	シート名の変更	重新命名工作表	重命名工作表
+Reply	Trả lời	답글	返信	回覆	回复
+Report Layout	Bố trí báo cáo	보고서 레이아웃	レポートのレイアウト	報表版面配置	报表布局
+Reports:	Báo cáo:	보고서:	レポート:	報表：	报告：
+Reset All Page Breaks	Đặt lại tất cả ngắt trang	모든 페이지 나누기 원래대로	すべての改ページを解除	重設所有分頁	重设所有分页符
+Residuals	Phần dư	잔차	残差	殘差	残差
+Resize Table	Đổi kích thước bảng	표 크기 조정	テーブルのサイズ変更	調整表格大小	调整表格大小
+Resolve Thread	Đánh dấu cuộc thảo luận đã giải quyết	스레드 해결	スレッドの解決	解決討論串	解决讨论
+Resolved	Đã giải quyết	해결됨	解決済み	已解決	已解决
+Restore Original Values	Khôi phục giá trị gốc	원래 값 복원	元の値に戻す	還原原始值	还原原始值
+Reverse the order	Đảo ngược thứ tự	역순으로	順序を逆にする	反轉順序	反转顺序
+Right Border	Viền phải	오른쪽 테두리	右罫線	右框線	右框线
+Right Margin	Lề phải	오른쪽 여백	右余白	右邊界	右边距
+Right margin (in):	Lề phải (in):	오른쪽 여백(인치):	右余白（インチ）:	右邊界（英吋）：	右边距（英寸）：
+Row height (pixels):	Chiều cao hàng (pixel):	행 높이(픽셀):	行の高さ（ピクセル）:	列高（像素）：	行高（像素）：
+Run Script	Chạy tập lệnh	스크립트 실행	スクリプトの実行	執行指令碼	运行脚本
+Save .xlsx workbooks automatically after every change	Tự động lưu sổ làm việc .xlsx sau mỗi thay đổi	변경할 때마다 .xlsx 통합 문서 자동 저장	変更のたびに .xlsx ブックを自動保存	每次變更後自動儲存 .xlsx 活頁簿	每次更改后自动保存 .xlsx 工作簿
+Save Changes?	Lưu thay đổi?	변경 내용을 저장하시겠습니까?	変更を保存しますか?	要儲存變更嗎？	是否保存更改？
+Save a Copy as Excel Workbook (.xlsx)…	Lưu bản sao dưới dạng sổ làm việc Excel (.xlsx)…	Excel 통합 문서(.xlsx)로 복사본 저장…	Excel ブック（.xlsx）としてコピーを保存…	將複本另存為 Excel 活頁簿 (.xlsx)…	将副本另存为 Excel 工作簿 (.xlsx)…
+Save a copy as .{format}	Lưu bản sao dưới dạng .{format}	.{format} 형식으로 복사본 저장	.{format} としてコピーを保存	將複本另存為 .{format}	将副本另存为 .{format}
+Save as Web Page	Lưu thành trang web	웹 페이지로 저장	Web ページとして保存	另存為網頁	另存为网页
+Save as type	Loại tệp lưu	파일 형식	ファイルの種類	存檔類型	保存类型
+Scale to Fit	Chỉnh tỷ lệ cho vừa	크기 조정	拡大縮小印刷	調整成適當大小	调整为合适大小
+Scatter	Phân tán	분산형	散布図	散佈圖	散点图
+Scatter or Bubble	Phân tán hoặc bong bóng	분산형 또는 거품형	散布図またはバブル	散佈圖或泡泡圖	散点图或气泡图
+Scatter with Lines	Phân tán có đường nối	직선이 있는 분산형	直線付き散布図	含直線的散佈圖	带直线的散点图
+Scenario Manager…	Quản lý kịch bản…	시나리오 관리자…	シナリオの登録と管理…	分析藍本管理員…	方案管理器…
+Scenario Summary	Tổng hợp kịch bản	시나리오 요약	シナリオの情報	分析藍本摘要	方案摘要
+Scope (Workbook or sheet name):	Phạm vi (sổ làm việc hoặc tên trang tính):	범위(통합 문서 또는 시트 이름):	範囲（ブックまたはシート名）:	範圍（活頁簿或工作表名稱）：	范围（工作簿或工作表名称）：
+ScreenTip:	Chú giải khi di chuột:	화면 설명:	ヒント:	螢幕提示：	屏幕提示：
+Scripting Tools	Công cụ viết tập lệnh	스크립트 도구	スクリプト ツール	指令碼工具	脚本工具
+Search Commands	Tìm lệnh	명령 검색	コマンドの検索	搜尋命令	搜索命令
+Search and run any command	Tìm và chạy lệnh bất kỳ	명령 검색 및 실행	コマンドを検索して実行	搜尋並執行任何命令	搜索并执行任意命令
+Search commands (⌘⇧Space)	Tìm lệnh (⌘⇧Space)	명령 검색(⌘⇧Space)	コマンドを検索 (⌘⇧Space)	搜尋命令 (⌘⇧Space)	搜索命令 (⌘⇧Space)
+Select Current Region	Chọn vùng dữ liệu hiện tại	현재 영역 선택	現在の領域を選択	選取目前區域	选择当前区域
+Select Data	Chọn dữ liệu	데이터 선택	データの選択	選取資料	选择数据
+Select Data Source	Chọn nguồn dữ liệu	데이터 원본 선택	データ ソースの選択	選取資料來源	选择数据源
+Select Entire Column	Chọn toàn bộ cột	전체 열 선택	列全体を選択	選取整欄	选择整列
+Select Entire Row	Chọn toàn bộ hàng	전체 행 선택	行全体を選択	選取整列	选择整行
+Select a Solving Method:	Chọn phương pháp giải:	해법 선택:	解決方法の選択:	選取求解方式：	选择求解方法：
+Select and move ink and shapes	Chọn và di chuyển nét mực và hình	잉크 및 도형 선택·이동	インクと図形を選択して移動	選取並移動筆跡及圖案	选择并移动墨迹和形状
+Select destination and press Enter or choose Paste	Chọn ô đích rồi nhấn Enter hoặc chọn Dán	대상을 선택하고 Enter를 누르거나 붙여넣기를 선택하세요	貼り付け先を選択して Enter を押すか、貼り付けを選択してください	選取目的地後按 Enter 或選擇貼上	选择目标位置后按 Enter 或选择粘贴
+Selection Pane	Ngăn vùng chọn	선택 창	選択ウィンドウ	選取窗格	选择窗格
+Selection Statistics	Thống kê vùng chọn	선택 영역 통계	選択範囲の統計	選取範圍統計	选定区域统计
+Semicolon	Dấu chấm phẩy	세미콜론	セミコロン	分號	分号
+Series	Chuỗi	계열	系列	數列	系列
+Series in	Chuỗi theo	계열 위치	系列の方向	數列方向	序列产生在
+Series{n}	Chuỗi{n}	계열{n}	系列{n}	數列{n}	系列{n}
+Set Objective:	Đặt mục tiêu:	목표 설정:	目的セル:	設定目標：	设置目标：
+Set Print Area	Đặt vùng in	인쇄 영역 설정	印刷範囲の設定	設定列印範圍	设置打印区域
+Set Values	Đặt giá trị	값 설정	値を設定	設定值	设置值
+Set cell:	Đặt ô:	수식 셀:	数式入力セル:	設定儲存格：	目标单元格：
+Shape Fill	Tô màu hình	도형 채우기	図形の塗りつぶし	圖案填滿	形状填充
+Shape Outline	Viền hình	도형 윤곽선	図形の枠線	圖案外框	形状轮廓
+Shape Styles	Kiểu hình	도형 스타일	図形のスタイル	圖案樣式	形状样式
+Shapes	Hình	도형	図形	圖案	形状
+Sheet Name	Tên trang tính	시트 이름	シート名	工作表名稱	工作表名称
+Sheet Options	Tùy chọn trang tính	시트 옵션	シートのオプション	工作表選項	工作表选项
+Sheet Options|View	Hiển thị	보기	表示	檢視	查看
+Sheet Right-to-Left	Trang tính từ phải sang trái	시트 오른쪽에서 왼쪽으로	シートを右から左へ表示	工作表由右至左	工作表从右向左
+Sheets	Trang tính	시트	シート	工作表	工作表
+Sheets: {sheets}	Trang tính: {sheets}	시트: {sheets}	シート: {sheets}	工作表：{sheets}	工作表：{sheets}
+Shift cells down	Dịch ô xuống	셀을 아래로 밀기	下方向にシフト	儲存格下移	下移单元格
+Shift cells left	Dịch ô sang trái	셀을 왼쪽으로 밀기	左方向にシフト	儲存格左移	左移单元格
+Shift cells right	Dịch ô sang phải	셀을 오른쪽으로 밀기	右方向にシフト	儲存格右移	右移单元格
+Shift cells up	Dịch ô lên	셀을 위로 밀기	上方向にシフト	儲存格上移	上移单元格
+Show All Notes	Hiện mọi ghi chú	모든 노트 표시	すべてのメモを表示	顯示所有附註	显示所有备注
+Show Comments	Hiện bình luận	메모 표시	コメントの表示	顯示註解	显示批注
+Show Detail	Hiện chi tiết	세부 정보 표시	詳細を表示	顯示詳細資料	显示明细数据
+Show Formulas	Hiện công thức	수식 표시	数式の表示	顯示公式	显示公式
+Show Outline Levels	Hiện các mức dàn bài	윤곽 수준 표시	アウトラインのレベルを表示	顯示大綱階層	显示分级显示级别
+Show Scenario	Hiện kịch bản	시나리오 표시	シナリオの表示	顯示分析藍本	显示方案
+Show Zeros	Hiện số không	0 값 표시	ゼロを表示	顯示零值	显示零值
+Show as % of Grand Total	Hiện theo % tổng cộng	총합계 비율로 표시	総計に対する比率で表示	顯示為總計百分比	显示为总计百分比
+Show as No Calculation	Hiện giá trị không tính thêm	계산 없이 표시	計算なしで表示	顯示原值	显示原值
+Show as Rank	Hiện theo thứ hạng	순위로 표시	順位で表示	顯示為排名	显示为排名
+Show as Running Total	Hiện theo tổng lũy kế	누계로 표시	累計で表示	顯示為累計	显示为累计
+Show formula bar	Hiện thanh công thức	수식 입력줄 표시	数式バーを表示	顯示資料編輯列	显示编辑栏
+Show/Hide Note	Hiện/ẩn ghi chú	노트 표시/숨기기	メモの表示/非表示	顯示／隱藏附註	显示/隐藏备注
+Shrink to Fit	Thu nhỏ cho vừa	셀에 맞춤	縮小して全体を表示	縮小字型以適合欄寬	缩小字体填充
+Single	Đơn	단일	一重	單線	单线
+Single Accounting	Gạch dưới đơn kiểu kế toán	회계용 단일 밑줄	会計（一重下線）	會計用單底線	会计用单下划线
+Skip blanks	Bỏ qua ô trống	빈 셀 건너뛰기	空白セルを無視	略過空白	跳过空单元格
+Slicer	Bộ lọc lát cắt	슬라이서	スライサー	交叉分析篩選器	切片器
+Solve	Giải	해 찾기	解決	求解	求解
+Solver	Bộ giải	해 찾기	ソルバー	規劃求解	规划求解
+Solver Parameters	Tham số bộ giải	해 찾기 매개 변수	ソルバーのパラメーター	規劃求解參數	规划求解参数
+Solver Reports	Báo cáo bộ giải	해 찾기 보고서	ソルバーのレポート	規劃求解報表	规划求解报告
+Solver Results	Kết quả bộ giải	해 찾기 결과	ソルバーの結果	規劃求解結果	规划求解结果
+Sort A to Z	Sắp xếp A đến Z	텍스트 오름차순 정렬	昇順に並べ替え	從 A 到 Z 排序	升序排序
+Sort Field	Sắp xếp trường	필드 정렬	フィールドの並べ替え	排序欄位	字段排序
+Sort Z to A	Sắp xếp Z đến A	텍스트 내림차순 정렬	降順に並べ替え	從 Z 到 A 排序	降序排序
+Sort by	Sắp xếp theo	정렬 기준	最優先されるキー	排序依據	主要关键字
+Source:	Nguồn:	원본:	元の範囲:	來源：	来源：
+Space	Dấu cách	공백	スペース	空格	空格
+Sparklines	Biểu đồ thu nhỏ	스파크라인	スパークライン	走勢圖	迷你图
+Special	Đặc biệt	특수	その他	特殊	特殊
+Split	Tách	분할	分割	分割	拆分
+Stacked Area	Miền xếp chồng	누적 영역형	積み上げ面	堆疊區域圖	堆积面积图
+Stacked Bar	Thanh ngang xếp chồng	누적 가로 막대형	積み上げ横棒	堆疊橫條圖	堆积条形图
+Stacked Column	Cột xếp chồng	누적 세로 막대형	積み上げ縦棒	堆疊直條圖	堆积柱形图
+Stacked Line	Đường xếp chồng	누적 꺾은선형	積み上げ折れ線	堆疊折線圖	堆积折线图
+Standard Colors	Màu tiêu chuẩn	표준 색	標準の色	標準色彩	标准色
+Standard Errors	Sai số chuẩn	표준 오차	標準誤差	標準誤差	标准误差
+Standard Width	Độ rộng tiêu chuẩn	표준 너비	標準の幅	標準欄寬	标准列宽
+Standard column width (pixels):	Độ rộng cột tiêu chuẩn (pixel):	표준 열 너비(픽셀):	標準の列幅（ピクセル）:	標準欄寬（像素）：	标准列宽（像素）：
+Standardized Residuals	Phần dư chuẩn hóa	표준화 잔차	標準化残差	標準化殘差	标准残差
+Start a conversation:	Bắt đầu thảo luận:	대화 시작:	会話を開始:	開始交談：	开始对话：
+Statistic	Thống kê	통계량	統計量	統計量	统计量
+Step value:	Bước tăng:	단계 값:	増分値:	間距值：	步长值：
+Stop value:	Giá trị dừng:	종료 값:	停止値:	終止值：	终止值：
+Subject to the Constraints:	Tuân theo các ràng buộc:	제한 조건:	制約条件:	符合下列限制式：	遵守约束条件：
+Subtotal	Tổng phụ	부분합	小計	小計	分类汇总
+Subtotals	Tổng phụ	부분합	小計	小計	分类汇总
+Sum	Tổng	합계	合計	加總	求和
+Summarize by Average	Tổng hợp theo trung bình	평균으로 요약	平均で集計	以平均值彙總	按平均值汇总
+Summarize by Count	Tổng hợp theo số lượng	개수로 요약	個数で集計	以計數彙總	按计数汇总
+Summarize by Max	Tổng hợp theo giá trị lớn nhất	최댓값으로 요약	最大値で集計	以最大值彙總	按最大值汇总
+Summarize by Min	Tổng hợp theo giá trị nhỏ nhất	최솟값으로 요약	最小値で集計	以最小值彙總	按最小值汇总
+Summarize by Sum	Tổng hợp theo tổng	합계로 요약	合計で集計	以加總彙總	按求和汇总
+Summarize with PivotTable	Tổng hợp bằng bảng tổng hợp	피벗 테이블로 요약	ピボットテーブルで集計	使用樞紐分析表彙總	使用数据透视表汇总
+Summary statistics	Thống kê tổng hợp	요약 통계량	統計情報	摘要統計	汇总统计
+Switch Row/Column	Đổi hàng/cột	행/열 전환	行/列の切り替え	切換列／欄	切换行/列
+Switch Window	Chuyển cửa sổ	창 전환	ウィンドウの切り替え	切換視窗	切换窗口
+Switch Windows	Chuyển cửa sổ	창 전환	ウィンドウの切り替え	切換視窗	切换窗口
+Symbol	Ký hiệu	기호	記号	符號	符号
+Tab	Ký tự tab	탭	タブ	定位字元	制表符
+Tab Color	Màu thẻ trang tính	탭 색	シート見出しの色	索引標籤色彩	工作表标签颜色
+Table Design	Thiết kế bảng	테이블 디자인	テーブル デザイン	表格設計	表格设计
+Table Name	Tên bảng	표 이름	テーブル名	表格名稱	表名称
+Table Name:	Tên bảng:	표 이름:	テーブル名:	表格名稱：	表名称：
+Table Style Options	Tùy chọn kiểu bảng	표 스타일 옵션	テーブル スタイルのオプション	表格樣式選項	表格样式选项
+Table Styles	Kiểu bảng	표 스타일	テーブル スタイル	表格樣式	表格样式
+Tables	Bảng	표	テーブル	表格	表格
+Tabular	Dạng bảng	테이블 형식	表形式	表格式	表格形式
+Tab|Insert	Chèn	삽입	挿入	插入	插入
+Text Box	Hộp văn bản	텍스트 상자	テキスト ボックス	文字方塊	文本框
+Text to Columns	Tách văn bản thành cột	텍스트 나누기	区切り位置	文字分欄	分列
+The output range already holds data. Replace it with the report?	Vùng đầu ra đã có dữ liệu. Thay bằng báo cáo này?	출력 범위에 데이터가 있습니다. 보고서로 바꾸시겠습니까?	出力範囲にデータがあります。レポートで置き換えますか?	輸出範圍已有資料。要以報表取代嗎？	输出区域已有数据。是否替换为报表？
+Theme Colors	Màu chủ đề	테마 색	テーマの色	佈景主題色彩	主题颜色
+Themes	Chủ đề	테마	テーマ	佈景主題	主题
+Then by	Tiếp theo theo	다음 기준	次に優先されるキー	次要排序依據	次要关键字
+Thesaurus	Từ điển đồng nghĩa	동의어 사전	類義語辞典	同義字	同义词库
+Thick Bottom Border	Viền dưới đậm	굵은 아래쪽 테두리	太い下罫線	粗下框線	粗下框线
+Thick Outside Borders	Đường viền ngoài đậm	굵은 바깥쪽 테두리	太い外枠	粗外框線	粗外侧框线
+This month	Tháng này	이번 달	今月	這個月	本月
+This week	Tuần này	이번 주	今週	本週	本周
+This workbook	Sổ làm việc này	이 통합 문서	このブック	此活頁簿	此工作簿
+Threaded Comments	Bình luận theo luồng	스레드 메모	スレッド形式のコメント	討論串註解	线程批注
+Title	Tiêu đề	제목	タイトル	標題	标题
+Title:	Tiêu đề:	제목:	タイトル:	標題：	标题：
+To value:	Đến giá trị:	찾는 값:	目標値:	目標值：	目标值：
+To:	Đến:	대상:	変更後:	目標：	目标：
+Today	Hôm nay	오늘	今日	今天	今天
+Toggle Checkbox	Bật/tắt hộp kiểm	확인란 전환	チェックボックスの切り替え	切換核取方塊	切换复选框
+Toggle Slicer Value	Bật/tắt giá trị bộ lọc lát cắt	슬라이서 값 전환	スライサーの値を切り替え	切換交叉分析篩選器值	切换切片器值
+Tomorrow	Ngày mai	내일	明日	明天	明天
+Top Border	Viền trên	위쪽 테두리	上罫線	上框線	上框线
+Top Margin	Lề trên	위쪽 여백	上余白	上邊界	上边距
+Top and Bottom Border	Viền trên và dưới	위쪽 및 아래쪽 테두리	上下罫線	上及下框線	上下框线
+Top and Double Bottom Border	Viền trên và viền dưới kép	위쪽 및 아래쪽 이중 테두리	上罫線と下二重罫線	上框線及雙下框線	上框线和双下框线
+Top and Thick Bottom Border	Viền trên và viền dưới đậm	위쪽 및 굵은 아래쪽 테두리	上罫線と太い下罫線	上框線及粗下框線	上框线和粗下框线
+Top margin (in):	Lề trên (in):	위쪽 여백(인치):	上余白（インチ）:	上邊界（英吋）：	上边距（英寸）：
+Total Row	Hàng tổng	요약 행	集計行	合計列	汇总行
+Totals Function	Hàm tổng hợp	요약 함수	集計関数	合計函數	汇总函数
+Trace Dependents	Truy vết ô phụ thuộc	참조하는 셀 추적	参照先のトレース	追蹤從屬參照	追踪从属单元格
+Trace Precedents	Truy vết ô được tham chiếu	참조되는 셀 추적	参照元のトレース	追蹤前導參照	追踪引用单元格
+Treat consecutive delimiters as one	Gộp các dấu phân cách liên tiếp	연속된 구분 기호를 하나로 처리	連続した区切り文字を 1 文字として扱う	將連續分隔符號視為單一符號	将连续分隔符视为单个处理
+Treemap	Bản đồ cây	트리맵	ツリーマップ	矩形式樹狀圖	树状图
+Type a command, e.g. freeze, chart, bold…	Nhập lệnh, ví dụ: cố định, biểu đồ, in đậm…	명령 입력(예: 고정, 차트, 굵게)…	コマンドを入力（例: 固定、グラフ、太字）…	輸入命令，例如凍結、圖表、粗體…	输入命令，例如冻结、图表、加粗…
+Undo History	Lịch sử hoàn tác	실행 취소 기록	元に戻す履歴	復原記錄	撤销历史记录
+Undo list	Danh sách hoàn tác	실행 취소 목록	元に戻す操作の一覧	復原清單	撤销列表
+Unfreeze Panes	Bỏ cố định ngăn	틀 고정 취소	ウィンドウ枠固定の解除	取消凍結窗格	取消冻结窗格
+Unhide	Hiện lại	숨기기 취소	再表示	取消隱藏	取消隐藏
+Unhide Columns	Hiện lại cột	열 숨기기 취소	列の再表示	取消隱藏欄	取消隐藏列
+Unhide Rows	Hiện lại hàng	행 숨기기 취소	行の再表示	取消隱藏列	取消隐藏行
+Unhide Sheet…	Hiện lại trang tính…	시트 숨기기 취소…	シートの再表示…	取消隱藏工作表…	取消隐藏工作表…
+Unhide sheet:	Trang tính cần hiện lại:	숨기기 취소할 시트:	再表示するシート:	取消隱藏的工作表：	要取消隐藏的工作表：
+Unlock with password	Mở khóa bằng mật khẩu	암호로 잠금 해제	パスワードでロック解除	使用密碼解除鎖定	使用密码解锁
+Unprotect Sheet	Bỏ bảo vệ trang tính	시트 보호 해제	シート保護の解除	取消工作表保護	撤销工作表保护
+Unprotect Workbook	Bỏ bảo vệ sổ làm việc	통합 문서 보호 해제	ブック保護の解除	取消活頁簿保護	撤销工作簿保护
+Upstream GridCraft community	Cộng đồng GridCraft gốc	원본 GridCraft 커뮤니티	開発元 GridCraft コミュニティ	原始 GridCraft 社群	原始 GridCraft 社区
+Upstream source: GridCraft	Mã nguồn gốc: GridCraft	원본 소스: GridCraft	開発元ソース: GridCraft	原始碼來源：GridCraft	源代码来源：GridCraft
+Use AutoFilter	Dùng bộ lọc tự động	자동 필터 사용	オートフィルターを使用	使用自動篩選	使用自动筛选
+Use a field's menu to move it between areas:	Dùng menu của trường để chuyển trường giữa các vùng:	필드 메뉴를 사용하여 영역 간에 이동하세요:	フィールドのメニューで領域間を移動できます:	使用欄位功能表將其移至其他區域：	使用字段菜单将其移到其他区域：
+Use function	Dùng hàm	함수 사용	関数を使用	使用函數	使用函数
+Use in Formula	Dùng trong công thức	수식에 사용	数式で使用	用於公式	用于公式
+Validation	Xác thực	유효성 검사	入力規則	驗證	验证
+Value Field Settings	Thiết lập trường giá trị	값 필드 설정	値フィールドの設定	值欄位設定	值字段设置
+Value Of:	Giá trị bằng:	목표값:	指定値:	值為：	目标值：
+Values	Giá trị	값	値	值	值
+Values (V)	Giá trị (V)	값(V)	値 (V)	值 (V)	值 (V)
+Values and number formats	Giá trị và định dạng số	값 및 표시 형식	値と数値の書式	值及數值格式	值和数字格式
+Variable 1 Range:	Vùng biến 1:	변수 1 범위:	変数 1 の範囲:	變數 1 範圍：	变量 1 区域：
+Variable 2 Range:	Vùng biến 2:	변수 2 범위:	変数 2 の範囲:	變數 2 範圍：	变量 2 区域：
+Version, contributors and the AI models that helped	Phiên bản, người đóng góp và các mô hình AI hỗ trợ	버전, 기여자 및 개발에 사용된 AI 모델	バージョン、貢献者、開発を支援した AI モデル	版本、貢獻者與協助開發的 AI 模型	版本、贡献者及协助开发的 AI 模型
+Vertical axis title:	Tiêu đề trục dọc:	세로 축 제목:	縦軸のタイトル:	垂直軸標題：	垂直轴标题：
+Visible cells only	Chỉ các ô đang hiện	화면에 보이는 셀만	可視セルのみ	僅可見儲存格	仅可见单元格
+Warning	Cảnh báo	경고	警告	警告	警告
+Watch Window	Cửa sổ theo dõi	조사식 창	ウォッチ ウィンドウ	監看視窗	监视窗口
+Waterfall	Thác nước	폭포형	ウォーターフォール	瀑布圖	瀑布图
+Web Page (*.html)	Trang web (*.html)	웹 페이지 (*.html)	Web ページ (*.html)	網頁 (*.html)	网页 (*.html)
+Weekday	Ngày trong tuần	요일	曜日	星期	星期
+What-If Analysis	Phân tích giả định	가상 분석	条件変更による分析	模擬分析	模拟分析
+White - Green	Trắng - Xanh lá	흰색 - 초록	白 - 緑	白 - 綠	白 - 绿
+White - Red	Trắng - Đỏ	흰색 - 빨강	白 - 赤	白 - 紅	白 - 红
+Wide	Rộng	넓게	広い	寬	宽
+Win/Loss	Thắng/thua	승패	勝敗	勝負	盈亏
+Workbook	Sổ làm việc	통합 문서	ブック	活頁簿	工作簿
+Workbook Statistics	Thống kê sổ làm việc	통합 문서 통계	ブックの統計情報	活頁簿統計資料	工作簿统计信息
+Workbook Views	Dạng xem sổ làm việc	통합 문서 보기	ブックの表示	活頁簿檢視	工作簿视图
+Workbook calculation	Tính toán sổ làm việc	통합 문서 계산	ブックの計算	活頁簿計算	工作簿计算
+Wrap text	Ngắt dòng văn bản	텍스트 줄 바꿈	折り返して全体を表示	自動換列	自动换行
+Year	Năm	년	年	年	年
+Yellow Fill with Dark Yellow Text	Nền vàng, chữ vàng đậm	진한 노랑 텍스트가 있는 노랑 채우기	濃い黄の文字、黄の背景	黃底深黃字	黄底深黄字
+Yesterday	Hôm qua	어제	昨日	昨天	昨天
+Zeros	Số không	0 값	ゼロ値	零值	零值
+Zoom to Selection	Phóng to vùng chọn	선택 영역 확대/축소	選択範囲に合わせて拡大/縮小	縮放至選取範圍	缩放到选定区域
+Zoom to 100%	Thu phóng về 100%	100%로 확대/축소	100% に拡大/縮小	縮放至 100%	缩放至 100%
+and:	và:	및:	かつ:	且：	且：
+applies to	áp dụng cho	적용 대상	適用先	套用至	应用于
+between	nằm trong khoảng	사이	次の値の間	介於	介于
+dashed	nét đứt	파선	破線	虛線	虚线
+dotted	nét chấm	점선	点線	點線	点线
+double	kép	이중	二重	雙線	双线
+equal to	bằng	같음	等しい	等於	等于
+greater than	lớn hơn	보다 큼	より大きい	大於	大于
+greater than or equal to	lớn hơn hoặc bằng	크거나 같음	以上	大於或等於	大于或等于
+less than	nhỏ hơn	보다 작음	より小さい	小於	小于
+less than or equal to	nhỏ hơn hoặc bằng	작거나 같음	以下	小於或等於	小于或等于
+medium	vừa	중간	中	中等	中等
+not between	ngoài khoảng	사이가 아님	次の値の間以外	不介於	不介于
+not equal to	không bằng	같지 않음	等しくない	不等於	不等于
+thick	đậm	굵게	太い	粗	粗
+thin	mảnh	얇게	細い	細	细
+with	với	및	と	與	与
+{count} cell(s) found	Tìm thấy {count} ô	{count}개 셀을 찾았습니다	{count} 個のセルが見つかりました	找到 {count} 個儲存格	找到 {count} 个单元格
+{n} days ago	{n} ngày trước	{n}일 전	{n} 日前	{n} 天前	{n} 天前
+{n} h ago	{n} giờ trước	{n}시간 전	{n} 時間前	{n} 小時前	{n} 小时前
+{n} min ago	{n} phút trước	{n}분 전	{n} 分前	{n} 分鐘前	{n} 分钟前
+{n} months ago	{n} tháng trước	{n}개월 전	{n} か月前	{n} 個月前	{n} 个月前
+{n} weeks ago	{n} tuần trước	{n}주 전	{n} 週間前	{n} 週前	{n} 周前
+{n} years ago	{n} năm trước	{n}년 전	{n} 年前	{n} 年前	{n} 年前
+— 1 step	— 1 bước	— 1단계	— 1 ステップ	— 1 個步驟	— 1 个步骤
+— VBA project (preserved, not run)	— Dự án VBA (giữ lại, không chạy)	— VBA 프로젝트(보존되지만 실행하지 않음)	— VBA プロジェクト（保持、実行しません）	— VBA 專案（保留但不執行）	— VBA 项目（保留但不执行）
+— {steps} steps	— {steps} bước	— {steps}단계	— {steps} ステップ	— {steps} 個步驟	— {steps} 个步骤
+Action\nJournal	Nhật ký\nthao tác	작업\n기록	操作\n履歴	動作\n記錄	操作\n日志
+Agent\nControl	Điều khiển\ntác tử	에이전트\n제어	エージェント\n制御	代理程式\n控制	智能体\n控制
+Allow Edit\nRanges	Cho phép\nsửa vùng	범위\n편집 허용	範囲の\n編集を許可	允許編輯\n範圍	允许编辑\n区域
+Check\nAccessibility	Kiểm tra\ntrợ năng	접근성\n검사	アクセシビリティの\nチェック	檢查\n協助工具	检查\n辅助功能
+File\nName	Tên\ntệp	파일\n이름	ファイル\n名	檔案\n名稱	文件\n名称
+File\nPath	Đường dẫn\ntệp	파일\n경로	ファイルの\nパス	檔案\n路徑	文件\n路径
+Flash\nFill	Điền\nnhanh	빠른\n채우기	フラッシュ\nフィル	快速\n填入	快速\n填充
+Forecast\nSheet	Trang tính\ndự báo	예측\n시트	予測\nシート	預測\n工作表	预测\n工作表
+Format\nPane	Ngăn\nđịnh dạng	서식\n창	書式設定\nウィンドウ	格式\n窗格	格式\n窗格
+Get Data\n(Text/CSV)	Lấy dữ liệu\n(văn bản/CSV)	데이터 가져오기\n(텍스트/CSV)	データの取得\n（テキスト/CSV）	取得資料\n（文字／CSV）	获取数据\n（文本/CSV）
+Go to\nFooter	Đến\nchân trang	바닥글로\n이동	フッターに\n移動	移至\n頁尾	转至\n页脚
+Go to\nHeader	Đến\nđầu trang	머리글로\n이동	ヘッダーに\n移動	移至\n頁首	转至\n页眉
+Header &\nFooter	Đầu trang và\nchân trang	머리글/\n바닥글	ヘッダーと\nフッター	頁首及\n頁尾	页眉和\n页脚
+Ink to\nShape	Chuyển mực\nthành hình	잉크를\n도형으로	インクを\n図形に変換	筆跡轉\n圖案	墨迹转\n形状
+Insert\nSlicer	Chèn bộ lọc\nlát cắt	슬라이서\n삽입	スライサーの\n挿入	插入交叉分析\n篩選器	插入\n切片器
+Number\nof Pages	Số\ntrang	페이지\n수	ページ\n数	總\n頁數	总\n页数
+Page\nLayout	Bố trí\ntrang	페이지\n레이아웃	ページ\nレイアウト	版面\n配置	页面\n布局
+Page\nNumber	Số\ntrang	페이지\n번호	ページ\n番号	頁\n碼	页\n码
+Page Break\nPreview	Xem trước\nngắt trang	페이지 나누기\n미리 보기	改ページ\nプレビュー	分頁\n預覽	分页\n预览
+Pen\nBlack	Bút\nđen	검정\n펜	ペン\n黒	黑色\n畫筆	黑色\n画笔
+Pen\nBlue	Bút\nxanh dương	파랑\n펜	ペン\n青	藍色\n畫筆	蓝色\n画笔
+Pen\nRed	Bút\nđỏ	빨강\n펜	ペン\n赤	紅色\n畫筆	红色\n画笔
+Print\nArea	Vùng\nin	인쇄\n영역	印刷\n範囲	列印\n範圍	打印\n区域
+Print\nTitles	Tiêu đề\nin	인쇄\n제목	印刷\nタイトル	列印\n標題	打印\n标题
+Protect\nSheet	Bảo vệ\ntrang tính	시트\n보호	シートの\n保護	保護\n工作表	保护\n工作表
+Protect\nWorkbook	Bảo vệ\nsổ làm việc	통합 문서\n보호	ブックの\n保護	保護\n活頁簿	保护\n工作簿
+Recommended\nCharts	Biểu đồ\nđề xuất	추천\n차트	おすすめ\nグラフ	建議\n圖表	推荐\n图表
+Remove\nDuplicates	Loại bỏ\ntrùng lặp	중복된 항목\n제거	重複の\n削除	移除\n重複	删除\n重复项
+Select\nData	Chọn\ndữ liệu	데이터\n선택	データの\n選択	選取\n資料	选择\n数据
+Select\nObjects	Chọn\nđối tượng	개체\n선택	オブジェクトの\n選択	選取\n物件	选择\n对象
+Sheet\nName	Tên\ntrang tính	시트\n이름	シート\n名	工作表\n名稱	工作表\n名称
+Sheet\nRight-to-Left	Trang tính\nphải sang trái	시트\n오른쪽에서 왼쪽	シートを\n右から左へ	工作表\n由右至左	工作表\n从右向左
+Show\nComments	Hiện\nbình luận	메모\n표시	コメントの\n表示	顯示\n註解	显示\n批注
+Switch\nRow/Column	Đổi\nhàng/cột	행/열\n전환	行/列の\n切り替え	切換\n列／欄	切换\n行/列
+Table\nStyles	Kiểu\nbảng	표\n스타일	テーブル\nスタイル	表格\n樣式	表格\n样式
+Text\nBox	Hộp\nvăn bản	텍스트\n상자	テキスト\nボックス	文字\n方塊	文本\n框
+Text to\nColumns	Tách văn bản\nthành cột	텍스트\n나누기	文字列の\n区切り位置	文字\n分欄	文本\n分列
+Unprotect\nSheet	Bỏ bảo vệ\ntrang tính	시트 보호\n해제	シート保護の\n解除	取消\n工作表保護	撤销\n工作表保护
+Watch\nWindow	Cửa sổ\ntheo dõi	조사식\n창	ウォッチ\nウィンドウ	監看\n視窗	监视\n窗口
+What-If\nAnalysis	Phân tích\ngiả định	가상\n분석	条件変更による\n分析	模擬\n分析	模拟\n分析
+Workbook\nStatistics	Thống kê\nsổ làm việc	통합 문서\n통계	ブックの\n統計情報	活頁簿\n統計資料	工作簿\n统计信息
+Zoom to\nSelection	Phóng to\nvùng chọn	선택 영역\n확대/축소	選択範囲に\nズーム	縮放至\n選取範圍	缩放到\n选定区域
+ (password)	 (có mật khẩu)	 (암호 있음)	（パスワードあり）	（有密碼）	（有密码）
+ (password, unlocked)	 (có mật khẩu, đã mở khóa)	 (암호 있음, 잠금 해제됨)	（パスワードあり、ロック解除済み）	（有密碼，已解除鎖定）	（有密码，已解锁）
+$ English (United States)	$ Tiếng Anh (Hoa Kỳ)	$ 영어(미국)	$ 英語（米国）	$ 英文（美國）	$ 英语（美国）
+'{file}' is protected.	'{file}' đang được bảo vệ.	'{file}'은(는) 보호되어 있습니다.	「{file}」は保護されています。	「{file}」已受保護。	“{file}”已受保护。
+(No suggestions)	(Không có gợi ý)	(제안 없음)	（候補なし）	（無建議）	（无建议）
+(none)	(không có)	(없음)	（なし）	（無）	（无）
+(unnamed)	(chưa đặt tên)	(이름 없음)	（名前なし）	（未命名）	（未命名）
+100%	100%	100%	100%	100%	100%
+200%	200%	200%	200%	200%	200%
+25%	25%	25%	25%	25%	25%
+3 Arrows	3 mũi tên	화살표 3개	3 方向矢印	3 個箭號	3 个箭头
+3 Symbols	3 ký hiệu	기호 3개	3 記号	3 個符號	3 个符号
+3 Traffic Lights	3 đèn tín hiệu	신호등 3개	3 信号	3 個交通號誌	3 个交通灯
+4 Ratings	4 mức đánh giá	등급 4개	4 段階評価	4 個評等	4 个等级
+5 Arrows	5 mũi tên	화살표 5개	5 方向矢印	5 個箭號	5 个箭头
+5 Quarters	5 mức phần tư	사분원 5개	5 段階の四分円	5 個四分圓	5 个四分圆
+50%	50%	50%	50%	50%	50%
+75%	75%	75%	75%	75%	75%
+A CSV file, web page or PDF is a copy: the workbook keeps its own file.	Tệp CSV, trang web hoặc PDF là bản sao; sổ làm việc vẫn giữ tệp riêng.	CSV, 웹 페이지, PDF는 복사본이며 통합 문서의 원래 파일은 유지됩니다.	CSV、Web ページ、PDF はコピーです。ブックの元のファイルは保持されます。	CSV、網頁或 PDF 是複本，活頁簿仍保留原有檔案。	CSV、网页或 PDF 是副本，工作簿仍保留原文件。
+A range or array without its blank outer rows and columns.	Trả về vùng hoặc mảng đã bỏ các hàng và cột trống ở ngoài cùng.	범위 또는 배열의 바깥쪽 빈 행과 열을 제거합니다.	範囲または配列の外側にある空白の行と列を取り除きます。	移除範圍或陣列外圍的空白列與欄。	移除区域或数组外围的空白行和列。
+A reference shifted from a starting point.	Trả về tham chiếu được dịch từ điểm bắt đầu.	기준점에서 이동한 위치의 참조를 반환합니다.	基準点から移動した位置の参照を返します。	傳回從起點位移後的參照。	返回从起点偏移后的引用。
+A subtotal that can skip hidden rows.	Tính tổng phụ, có thể bỏ qua hàng ẩn.	숨겨진 행을 제외할 수 있는 부분합을 계산합니다.	非表示の行を除外できる小計を求めます。	計算可略過隱藏列的小計。	计算可忽略隐藏行的分类汇总。
+Accumulates an array into one value.	Tích lũy các phần tử của mảng thành một giá trị.	배열의 값을 누적하여 하나의 값으로 만듭니다.	配列の要素を累積して 1 つの値にまとめます。	將陣列元素累積為單一值。	将数组元素累积为单个值。
+Action	Thao tác	작업	操作	動作	操作
+Add to Dictionary	Thêm vào từ điển	사전에 추가	辞書に追加	新增至字典	添加到词典
+Advanced…	Nâng cao…	고급…	詳細設定…	進階…	高级…
+Align	Căn chỉnh	맞춤	配置	對齊	对齐
+All	Tất cả	모두	すべて	全部	全部
+Alpha:	Hệ số alpha:	알파:	アルファ:	Alpha 係數：	Alpha 系数：
+An aggregate that can skip hidden rows and errors.	Tổng hợp dữ liệu, có thể bỏ qua hàng ẩn và lỗi.	숨겨진 행과 오류를 제외할 수 있는 집계값을 계산합니다.	非表示の行とエラーを除外できる集計値を求めます。	計算可略過隱藏列與錯誤的彙總值。	计算可忽略隐藏行和错误的汇总值。
+Applies a LAMBDA to each column.	Áp dụng hàm LAMBDA cho từng cột.	각 열에 LAMBDA를 적용합니다.	各列に LAMBDA を適用します。	將 LAMBDA 套用至每一欄。	将 LAMBDA 应用于每一列。
+Applies a LAMBDA to each row.	Áp dụng hàm LAMBDA cho từng hàng.	각 행에 LAMBDA를 적용합니다.	各行に LAMBDA を適用します。	將 LAMBDA 套用至每一列。	将 LAMBDA 应用于每一行。
+Applies a LAMBDA to each value.	Áp dụng hàm LAMBDA cho từng giá trị.	각 값에 LAMBDA를 적용합니다.	各値に LAMBDA を適用します。	將 LAMBDA 套用至每個值。	将 LAMBDA 应用于每个值。
+Area	Miền	영역형	面	區域圖	面积图
+Arrange	Sắp xếp	정렬	配置	排列	排列
+Automation in this workbook. KIO Grid runs its own scripts; a file's VBA project is preserved but not executed.	Tự động hóa trong sổ làm việc này. KIO Grid chạy tập lệnh riêng; dự án VBA trong tệp được giữ lại nhưng không được thực thi.	이 통합 문서의 자동화 기능입니다. KIO Grid는 자체 스크립트를 실행하며 파일의 VBA 프로젝트는 보존하지만 실행하지 않습니다.	このブックの自動化です。KIO Grid は独自のスクリプトを実行します。ファイル内の VBA プロジェクトは保持しますが、実行しません。	此活頁簿的自動化功能。KIO Grid 執行本身的指令碼；檔案中的 VBA 專案會保留，但不會執行。	此工作簿的自动化功能。KIO Grid 运行自己的脚本；文件中的 VBA 项目会保留，但不会执行。
+Bring Forward	Đưa lên một lớp	앞으로 가져오기	前面へ移動	上移一層	上移一层
+Builds an array from a LAMBDA.	Tạo mảng bằng hàm LAMBDA.	LAMBDA로 배열을 만듭니다.	LAMBDA から配列を作成します。	使用 LAMBDA 建立陣列。	使用 LAMBDA 创建数组。
+Calculations	Tính toán	계산	計算	計算	计算
+Color:	Màu:	색:	色:	色彩：	颜色：
+Column number of a reference.	Trả về số cột của tham chiếu.	참조의 열 번호를 반환합니다.	参照の列番号を返します。	傳回參照的欄號。	返回引用的列号。
+Columns	Cột	열	列	欄	列
+Confidence level (%):	Mức tin cậy (%):	신뢰 수준(%):	信頼水準（%）:	信賴水準（%）：	置信水平（%）：
+Contributors	Người đóng góp	기여자	貢献者	貢獻者	贡献者
+Count	Đếm	개수	個数	計數	计数
+CountA	Đếm ô không trống	비어 있지 않은 셀 개수	空白以外のセル数	非空白儲存格計數	非空单元格计数
+Creates a reusable custom function.	Tạo hàm tùy chỉnh có thể dùng lại.	다시 사용할 수 있는 사용자 지정 함수를 만듭니다.	再利用できるユーザー定義関数を作成します。	建立可重複使用的自訂函數。	创建可重复使用的自定义函数。
+Custom	Tùy chỉnh	사용자 지정	ユーザー設定	自訂	自定义
+Description	Mô tả	설명	説明	描述	说明
+Destination:	Đích:	대상:	出力先:	目的地：	目标位置：
+Divide	Chia	나누기	除算	除	除
+Down	Xuống	아래로	下	向下	向下
+Effects	Hiệu ứng	효과	効果	效果	效果
+F-Test Two-Sample for Variances	Kiểm định F so sánh phương sai hai mẫu	F 검정: 분산에 대한 두 집단	F 検定: 2 標本の分散	F 檢定：兩樣本變異數	F 检验：双样本方差
+Filter	Lọc	필터	フィルター	篩選	筛选
+Filter (⌘⇧F)	Lọc (⌘⇧F)	필터(⌘⇧F)	フィルター (⌘⇧F)	篩選 (⌘⇧F)	筛选 (⌘⇧F)
+Fits inside the selected cell and moves with its content.	Nằm gọn trong ô đã chọn và di chuyển cùng nội dung ô.	선택한 셀 안에 맞추고 셀 내용과 함께 이동합니다.	選択したセル内に収まり、セルの内容と一緒に移動します。	放入所選儲存格內，並隨其內容移動。	适合所选单元格并随其内容移动。
+Font Size	Cỡ chữ	글꼴 크기	フォント サイズ	字型大小	字号
+Fonts	Phông chữ	글꼴	フォント	字型	字体
+Forecast end (date or number; blank: a third of the history):	Kết thúc dự báo (ngày hoặc số; để trống: một phần ba độ dài lịch sử):	예측 종료(날짜 또는 숫자, 비우면 과거 데이터 길이의 1/3):	予測の終了（日付または数値、空欄で履歴の長さの 3 分の 1）:	預測結束（日期或數字；留空為歷程長度的三分之一）：	预测结束（日期或数字；留空为历史长度的三分之一）：
+Forecast start (a date or number in the history; blank: after the last point):	Bắt đầu dự báo (ngày hoặc số trong lịch sử; để trống: sau điểm cuối):	예측 시작(과거 데이터 내 날짜 또는 숫자, 비우면 마지막 값 이후):	予測の開始（履歴内の日付または数値、空欄で最終データの次）:	預測開始（歷程中的日期或數字；留空為最後一個資料點之後）：	预测开始（历史中的日期或数字；留空为最后一个数据点之后）：
+Format cells that are (value):	Định dạng các ô có giá trị:	서식을 지정할 셀 값:	書式設定するセルの値:	設定符合下列值的儲存格格式：	设置符合以下值的单元格格式：
+Format cells that contain a date occurring:	Định dạng các ô có ngày thuộc:	다음 날짜에 해당하는 셀 서식 지정:	該当する日付を含むセルを書式設定:	設定包含下列日期的儲存格格式：	设置包含以下日期的单元格格式：
+Format cells that contain the text:	Định dạng các ô chứa văn bản:	다음 텍스트를 포함하는 셀 서식 지정:	次の文字列を含むセルを書式設定:	設定包含下列文字的儲存格格式：	设置包含以下文本的单元格格式：
+Format values where this formula is true:	Định dạng các giá trị khi công thức này đúng:	다음 수식이 참인 값의 서식 지정:	次の数式が真の場合に書式設定:	此公式為真時設定值的格式：	此公式为真时设置值的格式：
+Formats a number as text.	Định dạng số thành văn bản.	숫자에 서식을 적용하여 텍스트로 반환합니다.	数値に書式を設定して文字列にします。	將數值格式化為文字。	将数字格式化为文本。
+GRG Nonlinear	Phi tuyến GRG	GRG 비선형	GRG 非線形	GRG 非線性	GRG 非线性
+Glide the selection outline to the cell you move to instead of jumping there	Di chuyển mượt viền vùng chọn đến ô đích thay vì nhảy ngay	선택 테두리가 대상 셀로 즉시 이동하지 않고 부드럽게 이동합니다	選択枠を移動先のセルへ瞬時に切り替えず、滑らかに移動させます	將選取框平滑移至目標儲存格，而非立即跳轉	将选框平滑移到目标单元格，而非立即跳转
+Grab bag	Khác	기타	その他	其他	其他
+Green	Xanh lá	초록	緑	綠色	绿色
+Header (&L left, &C center, &R right; &P page, &N pages, &D date, &A sheet):	Đầu trang (&L trái, &C giữa, &R phải; &P số trang, &N tổng số trang, &D ngày, &A tên trang tính):	머리글(&L 왼쪽, &C 가운데, &R 오른쪽; &P 페이지, &N 전체 페이지, &D 날짜, &A 시트):	ヘッダー（&L 左、&C 中央、&R 右、&P ページ、&N 総ページ数、&D 日付、&A シート）:	頁首（&L 左、&C 中、&R 右；&P 頁碼、&N 頁數、&D 日期、&A 工作表）：	页眉（&L 左、&C 中、&R 右；&P 页码、&N 页数、&D 日期、&A 工作表）：
+Hypothesized Mean Difference:	Chênh lệch trung bình giả định:	가설 평균차:	仮説平均との差異:	假設平均差：	假设平均差：
+Independent KIO fork. Original GridCraft v0.7.0 by the ArtCraft team.	Bản KIO phát triển độc lập từ GridCraft v0.7.0 của nhóm ArtCraft.	ArtCraft 팀의 원본 GridCraft v0.7.0을 기반으로 독립 개발한 KIO 버전입니다.	ArtCraft チームによる GridCraft v0.7.0 を基にした、独立した KIO 派生版です。	KIO 獨立衍生版本，原始 GridCraft v0.7.0 由 ArtCraft 團隊開發。	KIO 独立衍生版本，原始 GridCraft v0.7.0 由 ArtCraft 团队开发。
+Information about a cell.	Trả về thông tin về một ô.	셀에 대한 정보를 반환합니다.	セルに関する情報を返します。	傳回儲存格的資訊。	返回单元格的信息。
+Join the ArtCraft Discord	Tham gia Discord của ArtCraft	ArtCraft Discord 참여	ArtCraft の Discord に参加	加入 ArtCraft Discord	加入 ArtCraft Discord
+Justify	Căn đều	양쪽 맞춤	両端揃え	左右對齊	两端对齐
+KIO Grid is fully drivable by agents. Every menu item, button and gesture is a command:	Tác tử có thể điều khiển toàn bộ KIO Grid. Mỗi mục menu, nút và cử chỉ đều tương ứng với một lệnh:	에이전트로 KIO Grid의 모든 기능을 제어할 수 있습니다. 각 메뉴 항목, 버튼, 동작은 하나의 명령에 해당합니다:	KIO Grid はエージェントですべて操作できます。各メニュー項目、ボタン、ジェスチャーがコマンドに対応します:	代理程式可完整操作 KIO Grid。每個功能表項目、按鈕及手勢都對應一個命令：	智能体可完整操作 KIO Grid。每个菜单项、按钮和手势都对应一个命令：
+Landscape	Ngang	가로	横	橫向	横向
+Layout	Bố trí	레이아웃	レイアウト	版面配置	布局
+Light	Nhạt	연하게	淡い	淺色	浅色
+Linear	Tuyến tính	선형	線形	線性	线性
+Lock the sheet structure so sheets can't be added, moved, renamed or deleted.	Khóa cấu trúc để không thể thêm, di chuyển, đổi tên hoặc xóa trang tính.	시트를 추가, 이동, 이름 변경, 삭제할 수 없도록 구조를 잠급니다.	シートの追加、移動、名前の変更、削除ができないように構成をロックします。	鎖定結構，禁止新增、移動、重新命名或刪除工作表。	锁定结构，禁止添加、移动、重命名或删除工作表。
+Locking cells or hiding formulas has no effect until you protect the worksheet (Review › Protect Sheet).	Việc khóa ô hoặc ẩn công thức chỉ có hiệu lực sau khi bảo vệ trang tính (Xem lại › Bảo vệ trang tính).	워크시트를 보호해야 셀 잠금과 수식 숨김이 적용됩니다(검토 › 시트 보호).	セルのロックと数式の非表示は、シートを保護して初めて有効になります（校閲 › シートの保護）。	儲存格鎖定或隱藏公式，必須先保護工作表才會生效（校閱 › 保護工作表）。	锁定单元格或隐藏公式仅在保护工作表后才会生效（审阅 › 保护工作表）。
+Lookup	Tra cứu	찾기/참조	検索と参照	查閱	查找与引用
+MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.	MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.	MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.	MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.	MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.	MIT OR Apache-2.0. Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.
+MathTrig	Toán và lượng giác	수학/삼각	数学と三角関数	數學與三角函數	数学与三角函数
+Max	Lớn nhất	최댓값	最大値	最大值	最大值
+Median	Trung vị	중앙값	中央値	中位數	中位数
+Min	Nhỏ nhất	최솟값	最小値	最小值	最小值
+Modified	Đã sửa đổi	수정됨	変更済み	已修改	已修改
+Modify	Sửa	수정	変更	修改	修改
+Names intermediate results.	Đặt tên cho các kết quả trung gian.	중간 계산 결과에 이름을 지정합니다.	中間結果に名前を付けます。	為中間結果命名。	为中间结果命名。
+New Window	Cửa sổ mới	새 창	新しいウィンドウ	新增視窗	新建窗口
+No Color	Không màu	색 없음	色なし	無色彩	无颜色
+No comments on this sheet yet. Select a cell and choose New Comment.	Trang tính này chưa có bình luận. Chọn một ô rồi chọn Bình luận mới.	이 시트에 메모가 없습니다. 셀을 선택한 다음 새 메모를 선택하세요.	このシートにはまだコメントがありません。セルを選択して、新しいコメントを選んでください。	此工作表尚無註解。請選取儲存格，再選擇「新增註解」。	此工作表尚无批注。请选择单元格，再选择“新建批注”。
+No contributor data was built into this copy.	Bản này không kèm thông tin người đóng góp.	이 빌드에는 기여자 정보가 포함되어 있지 않습니다.	このビルドには貢献者情報が含まれていません。	此版本未包含貢獻者資料。	此版本未包含贡献者信息。
+No model credits were built into this copy.	Bản này không kèm thông tin ghi nhận các mô hình.	이 빌드에는 모델 기여 정보가 포함되어 있지 않습니다.	このビルドにはモデルのクレジットが含まれていません。	此版本未包含模型致謝資訊。	此版本未包含模型致谢信息。
+No ranges yet.	Chưa có vùng nào.	아직 범위가 없습니다.	範囲はまだありません。	尚無範圍。	尚无区域。
+Nothing to print.	Không có nội dung để in.	인쇄할 내용이 없습니다.	印刷する内容がありません。	沒有可列印的內容。	没有可打印的内容。
+Number of areas in a reference.	Số vùng trong một tham chiếu.	참조의 영역 수를 반환합니다.	参照に含まれる領域の数を返します。	傳回參照中的區域數。	返回引用中的区域数。
+Number of sheets.	Số trang tính.	시트 수를 반환합니다.	シートの数を返します。	傳回工作表數。	返回工作表数。
+Numbers	Số	숫자	数値	數值	数字
+Operation	Phép toán	연산	演算	運算	运算
+Orange	Cam	주황	オレンジ	橙色	橙色
+PDF (*.pdf)	PDF (*.pdf)	PDF (*.pdf)	PDF (*.pdf)	PDF (*.pdf)	PDF (*.pdf)
+Password	Mật khẩu	암호	パスワード	密碼	密码
+Paste Special	Dán đặc biệt	선택하여 붙여넣기	形式を選択して貼り付け	選擇性貼上	选择性粘贴
+Pen	Bút	펜	ペン	畫筆	画笔
+Point	Điểm	점	ポイント	點	点
+Preview	Xem trước	미리 보기	プレビュー	預覽	预览
+Properties	Thuộc tính	속성	プロパティ	內容	属性
+Purple	Tím	보라	紫	紫色	紫色
+Recent	Gần đây	최근 항목	最近使った項目	最近使用	最近使用
+Recently Used	Đã dùng gần đây	최근에 사용한 항목	最近使用した項目	最近使用過	最近使用过
+Rectangle	Hình chữ nhật	직사각형	四角形	矩形	矩形
+Red	Đỏ	빨강	赤	紅色	红色
+Rounded Rectangle	Hình chữ nhật bo góc	둥근 모서리 직사각형	角丸四角形	圓角矩形	圆角矩形
+Row number of a reference.	Trả về số hàng của tham chiếu.	참조의 행 번호를 반환합니다.	参照の行番号を返します。	傳回參照的列號。	返回引用的行号。
+Rows	Hàng	행	行	列	行
+Running accumulation of an array.	Trả về kết quả tích lũy qua từng phần tử của mảng.	배열의 각 단계별 누적 결과를 반환합니다.	配列の各段階の累積結果を返します。	傳回陣列逐步累積的結果。	返回数组逐步累积的结果。
+Save the active sheet as comma-separated text.	Lưu trang tính đang dùng thành văn bản phân cách bằng dấu phẩy.	현재 시트를 쉼표로 구분된 텍스트로 저장합니다.	アクティブなシートをコンマ区切りのテキストとして保存します。	將使用中的工作表儲存為逗號分隔文字。	将活动工作表保存为逗号分隔文本。
+Save the sheet as a PDF document that keeps its page layout.	Lưu trang tính thành PDF và giữ bố trí trang.	페이지 레이아웃을 유지하여 시트를 PDF로 저장합니다.	ページ レイアウトを保持した PDF 文書としてシートを保存します。	將工作表儲存為保留版面配置的 PDF 文件。	将工作表保存为保留页面布局的 PDF 文档。
+Save the workbook as a web page.	Lưu sổ làm việc thành trang web.	통합 문서를 웹 페이지로 저장합니다.	ブックを Web ページとして保存します。	將活頁簿儲存為網頁。	将工作簿保存为网页。
+Save the workbook under another name or in another folder.	Lưu sổ làm việc với tên khác hoặc trong thư mục khác.	통합 문서를 다른 이름 또는 다른 폴더에 저장합니다.	ブックを別の名前または別のフォルダーに保存します。	以其他名稱或存至其他資料夾儲存活頁簿。	以其他名称或保存到其他文件夹来保存工作簿。
+Seasonality (auto, 0 for none, or a season length):	Chu kỳ mùa vụ (tự động, 0 nếu không có, hoặc độ dài chu kỳ):	계절성(자동, 없으면 0 또는 주기 길이):	季節性（自動、なしは 0、または周期の長さ）:	季節性（自動、無則為 0，或指定週期長度）：	季节性（自动、无则为 0，或指定周期长度）：
+Select	Chọn	선택	選択	選取	选择
+Select a chart first.	Trước tiên, hãy chọn biểu đồ.	먼저 차트를 선택하세요.	先にグラフを選択してください。	請先選取圖表。	请先选择图表。
+Select a chart to format it.	Chọn biểu đồ cần định dạng.	서식을 지정할 차트를 선택하세요.	書式設定するグラフを選択してください。	請選取要設定格式的圖表。	请选择要设置格式的图表。
+Send Backward	Đưa xuống một lớp	뒤로 보내기	背面へ移動	下移一層	下移一层
+Sheet number.	Số thứ tự trang tính.	시트 번호를 반환합니다.	シート番号を返します。	傳回工作表編號。	返回工作表编号。
+Sheet structure is locked: sheets can't be added, moved, renamed or deleted.	Cấu trúc đã khóa: không thể thêm, di chuyển, đổi tên hoặc xóa trang tính.	시트 구조가 잠겨 있어 시트를 추가, 이동, 이름 변경, 삭제할 수 없습니다.	シート構成がロックされているため、シートの追加、移動、名前の変更、削除はできません。	工作表結構已鎖定，無法新增、移動、重新命名或刪除工作表。	工作表结构已锁定，无法添加、移动、重命名或删除工作表。
+Show Formulas (⌃`)	Hiện công thức (⌃`)	수식 표시(⌃`)	数式の表示 (⌃`)	顯示公式 (⌃`)	显示公式 (⌃`)
+Shrink to fit	Thu nhỏ cho vừa	셀에 맞춤	縮小して全体を表示	縮小字型以適合欄寬	缩小字体填充
+Size	Kích thước	크기	サイズ	大小	大小
+Subject	Chủ đề	주제	件名	主旨	主题
+Subscript	Chỉ số dưới	아래 첨자	下付き	下標	下标
+Subtract	Trừ	빼기	減算	減	减
+Superscript	Chỉ số trên	위 첨자	上付き	上標	上标
+Symbols	Ký hiệu	기호	記号	符號	符号
+TRUE for references.	Trả về TRUE nếu giá trị là tham chiếu.	참조이면 TRUE를 반환합니다.	参照であれば TRUE を返します。	若為參照則傳回 TRUE。	若为引用则返回 TRUE。
+TRUE when a LAMBDA argument was left out.	Trả về TRUE nếu một đối số LAMBDA bị bỏ qua.	LAMBDA 인수가 생략되었으면 TRUE를 반환합니다.	LAMBDA の引数が省略されていれば TRUE を返します。	若省略 LAMBDA 引數則傳回 TRUE。	若省略 LAMBDA 参数则返回 TRUE。
+TRUE when the cell has a formula.	Trả về TRUE nếu ô chứa công thức.	셀에 수식이 있으면 TRUE를 반환합니다.	セルに数式があれば TRUE を返します。	若儲存格包含公式則傳回 TRUE。	若单元格包含公式则返回 TRUE。
+The chart no longer exists.	Biểu đồ không còn tồn tại.	차트가 더 이상 존재하지 않습니다.	グラフは既に削除されています。	此圖表已不存在。	此图表已不存在。
+The formula of a cell as text.	Trả về công thức của ô dưới dạng văn bản.	셀의 수식을 텍스트로 반환합니다.	セルの数式を文字列として返します。	將儲存格的公式以文字傳回。	以文本形式返回单元格的公式。
+The reference named by a text string.	Trả về tham chiếu được chỉ định bằng chuỗi văn bản.	텍스트 문자열로 지정한 참조를 반환합니다.	文字列で指定した参照を返します。	傳回文字字串所指定的參照。	返回文本字符串指定的引用。
+The spelling check is complete for the entire sheet.	Đã kiểm tra chính tả toàn bộ trang tính.	전체 시트의 맞춤법 검사를 완료했습니다.	シート全体のスペル チェックが完了しました。	已完成整份工作表的拼字檢查。	已完成整个工作表的拼写检查。
+There are no conditional formatting rules on this sheet.	Trang tính này không có quy tắc định dạng có điều kiện.	이 시트에 조건부 서식 규칙이 없습니다.	このシートには条件付き書式のルールがありません。	此工作表沒有設定格式化的條件規則。	此工作表没有条件格式规则。
+There are no shapes, pictures or charts on this sheet.	Trang tính này không có hình, ảnh hoặc biểu đồ.	이 시트에 도형, 그림 또는 차트가 없습니다.	このシートには図形、画像、グラフがありません。	此工作表沒有圖案、圖片或圖表。	此工作表没有形状、图片或图表。
+This workbook has no scripts or macros.	Sổ làm việc này không có tập lệnh hoặc macro.	이 통합 문서에 스크립트나 매크로가 없습니다.	このブックにはスクリプトもマクロもありません。	此活頁簿沒有指令碼或巨集。	此工作簿没有脚本或宏。
+Timeline range (blank: first column of the selection):	Vùng thời gian (để trống: cột đầu của vùng chọn):	시간 표시 막대 범위(비우면 선택 영역의 첫째 열):	タイムラインの範囲（空欄で選択範囲の最初の列）:	時間軸範圍（留空為選取範圍的第一欄）：	时间线区域（留空为选定区域的第一列）：
+Top	Trên	위쪽	上	上	顶端
+Type	Loại	유형	種類	類型	类型
+Ungroup	Bỏ nhóm	그룹 해제	グループ解除	取消群組	取消组合
+Up	Lên	위로	上	向上	向上
+Values range (blank: second column of the selection):	Vùng giá trị (để trống: cột thứ hai của vùng chọn):	값 범위(비우면 선택 영역의 둘째 열):	値の範囲（空欄で選択範囲の 2 列目）:	值範圍（留空為選取範圍的第二欄）：	值区域（留空为选定区域的第二列）：
+Vertical	Dọc	세로	縦	垂直	垂直
+none	không có	없음	なし	無	无
+t-Test: Paired Two Sample for Means	Kiểm định t: hai mẫu ghép cặp cho trung bình	t 검정: 쌍체 비교	対応のある 2 標本による t 検定	t 檢定：成對兩樣本平均數	t 检验：成对双样本均值
+t-Test: Two-Sample Assuming Equal Variances	Kiểm định t: hai mẫu với phương sai bằng nhau	t 검정: 등분산 가정 두 집단	等分散を仮定した 2 標本による t 検定	t 檢定：假設變異數相等的兩樣本	t 检验：假设等方差的双样本
+t-Test: Two-Sample Assuming Unequal Variances	Kiểm định t: hai mẫu với phương sai khác nhau	t 검정: 이분산 가정 두 집단	分散が等しくないと仮定した 2 標本による t 検定	t 檢定：假設變異數不相等的兩樣本	t 检验：假设异方差的双样本
+£ English (United Kingdom)	£ Tiếng Anh (Vương quốc Anh)	£ 영어(영국)	£ 英語（英国）	£ 英文（英國）	£ 英语（英国）
+¥ Japanese	¥ Tiếng Nhật	¥ 일본어	¥ 日本語	¥ 日文	¥ 日语
+€ Euro	€ Đồng euro	€ 유로	€ ユーロ	€ 歐元	€ 欧元
+Sine of an angle in radians.	Tính sin của góc tính bằng radian.	라디안 단위 각도의 사인값을 반환합니다.	ラジアン単位の角度のサインを返します。	傳回弧度角的正弦值。	返回弧度角的正弦值。
+Sine of a complex number.	Tính sin của số phức.	복소수의 사인값을 반환합니다.	複素数のサインを返します。	傳回複數的正弦值。	返回复数的正弦值。
+Hyperbolic sine.	Tính sin hyperbol.	쌍곡사인값을 반환합니다.	双曲線サインを返します。	傳回雙曲正弦值。	返回双曲正弦值。
+Hyperbolic sine of a complex number.	Tính sin hyperbol của số phức.	복소수의 쌍곡사인값을 반환합니다.	複素数の双曲線サインを返します。	傳回複數的雙曲正弦值。	返回复数的双曲正弦值。
+Cosine of an angle in radians.	Tính cos của góc tính bằng radian.	라디안 단위 각도의 코사인값을 반환합니다.	ラジアン単位の角度のコサインを返します。	傳回弧度角的餘弦值。	返回弧度角的余弦值。
+Cosine of a complex number.	Tính cos của số phức.	복소수의 코사인값을 반환합니다.	複素数のコサインを返します。	傳回複數的餘弦值。	返回复数的余弦值。
+Hyperbolic cosine.	Tính cos hyperbol.	쌍곡코사인값을 반환합니다.	双曲線コサインを返します。	傳回雙曲餘弦值。	返回双曲余弦值。
+Hyperbolic cosine of a complex number.	Tính cos hyperbol của số phức.	복소수의 쌍곡코사인값을 반환합니다.	複素数の双曲線コサインを返します。	傳回複數的雙曲餘弦值。	返回复数的双曲余弦值。
+Tangent of an angle in radians.	Tính tan của góc tính bằng radian.	라디안 단위 각도의 탄젠트값을 반환합니다.	ラジアン単位の角度のタンジェントを返します。	傳回弧度角的正切值。	返回弧度角的正切值。
+Tangent of a complex number.	Tính tan của số phức.	복소수의 탄젠트값을 반환합니다.	複素数のタンジェントを返します。	傳回複數的正切值。	返回复数的正切值。
+Hyperbolic tangent.	Tính tan hyperbol.	쌍곡탄젠트값을 반환합니다.	双曲線タンジェントを返します。	傳回雙曲正切值。	返回双曲正切值。
+Cosecant of an angle in radians.	Tính cosec của góc tính bằng radian.	라디안 단위 각도의 코시컨트값을 반환합니다.	ラジアン単位の角度のコセカントを返します。	傳回弧度角的餘割值。	返回弧度角的余割值。
+Cosecant of a complex number.	Tính cosec của số phức.	복소수의 코시컨트값을 반환합니다.	複素数のコセカントを返します。	傳回複數的餘割值。	返回复数的余割值。
+Hyperbolic cosecant.	Tính cosec hyperbol.	쌍곡코시컨트값을 반환합니다.	双曲線コセカントを返します。	傳回雙曲餘割值。	返回双曲余割值。
+Hyperbolic cosecant of a complex number.	Tính cosec hyperbol của số phức.	복소수의 쌍곡코시컨트값을 반환합니다.	複素数の双曲線コセカントを返します。	傳回複數的雙曲餘割值。	返回复数的双曲余割值。
+Secant of an angle in radians.	Tính sec của góc tính bằng radian.	라디안 단위 각도의 시컨트값을 반환합니다.	ラジアン単位の角度のセカントを返します。	傳回弧度角的正割值。	返回弧度角的正割值。
+Secant of a complex number.	Tính sec của số phức.	복소수의 시컨트값을 반환합니다.	複素数のセカントを返します。	傳回複數的正割值。	返回复数的正割值。
+Hyperbolic secant.	Tính sec hyperbol.	쌍곡시컨트값을 반환합니다.	双曲線セカントを返します。	傳回雙曲正割值。	返回双曲正割值。
+Hyperbolic secant of a complex number.	Tính sec hyperbol của số phức.	복소수의 쌍곡시컨트값을 반환합니다.	複素数の双曲線セカントを返します。	傳回複數的雙曲正割值。	返回复数的双曲正割值。
+Cotangent of an angle in radians.	Tính cot của góc tính bằng radian.	라디안 단위 각도의 코탄젠트값을 반환합니다.	ラジアン単位の角度のコタンジェントを返します。	傳回弧度角的餘切值。	返回弧度角的余切值。
+Cotangent of a complex number.	Tính cot của số phức.	복소수의 코탄젠트값을 반환합니다.	複素数のコタンジェントを返します。	傳回複數的餘切值。	返回复数的余切值。
+Hyperbolic cotangent.	Tính cot hyperbol.	쌍곡코탄젠트값을 반환합니다.	双曲線コタンジェントを返します。	傳回雙曲餘切值。	返回双曲余切值。
+Inverse hyperbolic cosine.	Tính hàm nghịch đảo của cos hyperbol.	역쌍곡코사인값을 반환합니다.	逆双曲線コサインを返します。	傳回反雙曲餘弦值。	返回反双曲余弦值。
+Inverse hyperbolic sine.	Tính hàm nghịch đảo của sin hyperbol.	역쌍곡사인값을 반환합니다.	逆双曲線サインを返します。	傳回反雙曲正弦值。	返回反双曲正弦值。
+Inverse hyperbolic tangent.	Tính hàm nghịch đảo của tan hyperbol.	역쌍곡탄젠트값을 반환합니다.	逆双曲線タンジェントを返します。	傳回反雙曲正切值。	返回反双曲正切值。
+Inverse hyperbolic cotangent.	Tính hàm nghịch đảo của cot hyperbol.	역쌍곡코탄젠트값을 반환합니다.	逆双曲線コタンジェントを返します。	傳回反雙曲餘切值。	返回反双曲余切值。
+Arccosine in radians.	Tính arccos, kết quả tính bằng radian.	아크코사인값을 라디안 단위로 반환합니다.	アークコサインをラジアン単位で返します。	以弧度傳回反餘弦值。	以弧度返回反余弦值。
+Arcsine in radians.	Tính arcsin, kết quả tính bằng radian.	아크사인값을 라디안 단위로 반환합니다.	アークサインをラジアン単位で返します。	以弧度傳回反正弦值。	以弧度返回反正弦值。
+Arctangent in radians.	Tính arctan, kết quả tính bằng radian.	아크탄젠트값을 라디안 단위로 반환합니다.	アークタンジェントをラジアン単位で返します。	以弧度傳回反正切值。	以弧度返回反正切值。
+Arccotangent in radians (0 to pi).	Tính arccot, kết quả từ 0 đến pi radian.	아크코탄젠트값을 라디안 단위(0~pi)로 반환합니다.	アークコタンジェントをラジアン単位（0～pi）で返します。	以弧度傳回反餘切值（0 至 pi）。	以弧度返回反余切值（0 至 pi）。
+Converts a binary number to decimal.	Chuyển số nhị phân sang số thập phân.	이진수를 십진수로 변환합니다.	2 進数を10 進数に変換します。	將二進位數轉換為十進位數。	将二进制数转换为十进制数。
+Converts a binary number to hexadecimal.	Chuyển số nhị phân sang số thập lục phân.	이진수를 십육진수로 변환합니다.	2 進数を16 進数に変換します。	將二進位數轉換為十六進位數。	将二进制数转换为十六进制数。
+Converts a binary number to octal.	Chuyển số nhị phân sang số bát phân.	이진수를 팔진수로 변환합니다.	2 進数を8 進数に変換します。	將二進位數轉換為八進位數。	将二进制数转换为八进制数。
+Converts a decimal number to binary.	Chuyển số thập phân sang số nhị phân.	십진수를 이진수로 변환합니다.	10 進数を2 進数に変換します。	將十進位數轉換為二進位數。	将十进制数转换为二进制数。
+Converts a decimal number to hexadecimal.	Chuyển số thập phân sang số thập lục phân.	십진수를 십육진수로 변환합니다.	10 進数を16 進数に変換します。	將十進位數轉換為十六進位數。	将十进制数转换为十六进制数。
+Converts a decimal number to octal.	Chuyển số thập phân sang số bát phân.	십진수를 팔진수로 변환합니다.	10 進数を8 進数に変換します。	將十進位數轉換為八進位數。	将十进制数转换为八进制数。
+Converts a hexadecimal number to binary.	Chuyển số thập lục phân sang số nhị phân.	십육진수를 이진수로 변환합니다.	16 進数を2 進数に変換します。	將十六進位數轉換為二進位數。	将十六进制数转换为二进制数。
+Converts a hexadecimal number to decimal.	Chuyển số thập lục phân sang số thập phân.	십육진수를 십진수로 변환합니다.	16 進数を10 進数に変換します。	將十六進位數轉換為十進位數。	将十六进制数转换为十进制数。
+Converts a hexadecimal number to octal.	Chuyển số thập lục phân sang số bát phân.	십육진수를 팔진수로 변환합니다.	16 進数を8 進数に変換します。	將十六進位數轉換為八進位數。	将十六进制数转换为八进制数。
+Converts an octal number to binary.	Chuyển số bát phân sang số nhị phân.	팔진수를 이진수로 변환합니다.	8 進数を2 進数に変換します。	將八進位數轉換為二進位數。	将八进制数转换为二进制数。
+Converts an octal number to decimal.	Chuyển số bát phân sang số thập phân.	팔진수를 십진수로 변환합니다.	8 進数を10 進数に変換します。	將八進位數轉換為十進位數。	将八进制数转换为十进制数。
+Converts an octal number to hexadecimal.	Chuyển số bát phân sang số thập lục phân.	팔진수를 십육진수로 변환합니다.	8 進数を16 進数に変換します。	將八進位數轉換為十六進位數。	将八进制数转换为十六进制数。
+Population standard deviation.	Tính độ lệch chuẩn tổng thể.	모집단 표준 편차를 계산합니다.	母集団の標準偏差を求めます。	計算母體標準差。	计算总体标准差。
+Population standard deviation counting text as 0 and logicals as 1/0.	Tính độ lệch chuẩn tổng thể, tính văn bản là 0 và giá trị logic là 1/0.	텍스트는 0, 논리값은 1/0으로 처리하여 모집단 표준 편차를 계산합니다.	文字列を 0、論理値を 1/0 として母集団の標準偏差を求めます。	將文字視為 0、邏輯值視為 1/0，計算母體標準差。	将文本视为 0、逻辑值视为 1/0，计算总体标准差。
+Population standard deviation of a field over the matching records.	Tính độ lệch chuẩn tổng thể của một trường trong các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 모집단 표준 편차를 계산합니다.	条件に一致するレコードのフィールドから母集団の標準偏差を求めます。	計算符合條件記錄之欄位的母體標準差。	计算符合条件记录字段的总体标准差。
+Population variance.	Tính phương sai tổng thể.	모집단 분산을 계산합니다.	母集団の分散を求めます。	計算母體變異數。	计算总体方差。
+Population variance counting text as 0 and logicals as 1/0.	Tính phương sai tổng thể, tính văn bản là 0 và giá trị logic là 1/0.	텍스트는 0, 논리값은 1/0으로 처리하여 모집단 분산을 계산합니다.	文字列を 0、論理値を 1/0 として母集団の分散を求めます。	將文字視為 0、邏輯值視為 1/0，計算母體變異數。	将文本视为 0、逻辑值视为 1/0，计算总体方差。
+Population variance of a field over the matching records.	Tính phương sai tổng thể của một trường trong các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 모집단 분산을 계산합니다.	条件に一致するレコードのフィールドから母集団の分散を求めます。	計算符合條件記錄之欄位的母體變異數。	计算符合条件记录字段的总体方差。
+Population skewness.	Tính hệ số bất đối xứng tổng thể.	모집단 왜도를 계산합니다.	母集団の歪度を求めます。	計算母體偏態係數。	计算总体偏度。
+Population covariance of paired values.	Tính hiệp phương sai tổng thể của các cặp giá trị.	대응하는 값의 모집단 공분산을 계산합니다.	対応する値の母集団共分散を求めます。	計算成對值的母體共變異數。	计算成对值的总体协方差。
+Sample standard deviation.	Tính độ lệch chuẩn mẫu.	표본 표준 편차를 계산합니다.	標本の標準偏差を求めます。	計算樣本標準差。	计算样本标准差。
+Sample standard deviation counting text as 0 and logicals as 1/0.	Tính độ lệch chuẩn mẫu, tính văn bản là 0 và giá trị logic là 1/0.	텍스트는 0, 논리값은 1/0으로 처리하여 표본 표준 편차를 계산합니다.	文字列を 0、論理値を 1/0 として標本の標準偏差を求めます。	將文字視為 0、邏輯值視為 1/0，計算樣本標準差。	将文本视为 0、逻辑值视为 1/0，计算样本标准差。
+Sample standard deviation of a field over the matching records.	Tính độ lệch chuẩn mẫu của một trường trong các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 표본 표준 편차를 계산합니다.	条件に一致するレコードのフィールドから標本の標準偏差を求めます。	計算符合條件記錄之欄位的樣本標準差。	计算符合条件记录字段的样本标准差。
+Sample variance.	Tính phương sai mẫu.	표본 분산을 계산합니다.	標本の分散を求めます。	計算樣本變異數。	计算样本方差。
+Sample variance counting text as 0 and logicals as 1/0.	Tính phương sai mẫu, tính văn bản là 0 và giá trị logic là 1/0.	텍스트는 0, 논리값은 1/0으로 처리하여 표본 분산을 계산합니다.	文字列を 0、論理値を 1/0 として標本の分散を求めます。	將文字視為 0、邏輯值視為 1/0，計算樣本變異數。	将文本视为 0、逻辑值视为 1/0，计算样本方差。
+Sample variance of a field over the matching records.	Tính phương sai mẫu của một trường trong các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 표본 분산을 계산합니다.	条件に一致するレコードのフィールドから標本の分散を求めます。	計算符合條件記錄之欄位的樣本變異數。	计算符合条件记录字段的样本方差。
+Sample skewness.	Tính hệ số bất đối xứng mẫu.	표본 왜도를 계산합니다.	標本の歪度を求めます。	計算樣本偏態係數。	计算样本偏度。
+Sample covariance of paired values.	Tính hiệp phương sai mẫu của các cặp giá trị.	대응하는 값의 표본 공분산을 계산합니다.	対応する値の標本共分散を求めます。	計算成對值的樣本共變異數。	计算成对值的样本协方差。
+TRUE when a regular expression matches somewhere in the text.	Trả về TRUE nếu biểu thức chính quy khớp ở vị trí bất kỳ trong văn bản.	정규식이 텍스트의 어느 위치에서든 일치하면 TRUE를 반환합니다.	正規表現が文字列のいずれかの部分に一致すれば TRUE を返します。	若正規表示式符合文字中的任何部分則傳回 TRUE。	若正则表达式匹配文本中的任意部分则返回 TRUE。
+TRUE when an odd number of arguments are TRUE.	Trả về TRUE nếu số đối số có giá trị TRUE là số lẻ.	TRUE인 인수의 개수가 홀수이면 TRUE를 반환합니다.	TRUE の引数の数が奇数なら TRUE を返します。	若TRUE 引數的個數為奇數則傳回 TRUE。	若TRUE 参数的个数为奇数则返回 TRUE。
+TRUE when at least one argument is TRUE.	Trả về TRUE nếu ít nhất một đối số là TRUE.	인수 중 하나 이상이 TRUE이면 TRUE를 반환합니다.	少なくとも 1 つの引数が TRUE なら TRUE を返します。	若至少一個引數為 TRUE則傳回 TRUE。	若至少一个参数为 TRUE则返回 TRUE。
+TRUE when every argument is TRUE.	Trả về TRUE nếu mọi đối số đều là TRUE.	모든 인수가 TRUE이면 TRUE를 반환합니다.	すべての引数が TRUE なら TRUE を返します。	若所有引數皆為 TRUE則傳回 TRUE。	若所有参数均为 TRUE则返回 TRUE。
+TRUE when the integer part of a number is even.	Trả về TRUE nếu phần nguyên của số là số chẵn.	숫자의 정수 부분이 짝수이면 TRUE를 반환합니다.	数値の整数部分が偶数なら TRUE を返します。	若數值的整數部分為偶數則傳回 TRUE。	若数值的整数部分为偶数则返回 TRUE。
+TRUE when the integer part of a number is odd.	Trả về TRUE nếu phần nguyên của số là số lẻ.	숫자의 정수 부분이 홀수이면 TRUE를 반환합니다.	数値の整数部分が奇数なら TRUE を返します。	若數值的整數部分為奇數則傳回 TRUE。	若数值的整数部分为奇数则返回 TRUE。
+TRUE when the value is TRUE or FALSE.	Trả về TRUE nếu giá trị là TRUE hoặc FALSE.	값이 TRUE 또는 FALSE이면 TRUE를 반환합니다.	値が TRUE または FALSE なら TRUE を返します。	若值為 TRUE 或 FALSE則傳回 TRUE。	若值为 TRUE 或 FALSE则返回 TRUE。
+TRUE when the value is a number.	Trả về TRUE nếu giá trị là số.	값이 숫자이면 TRUE를 반환합니다.	値が数値なら TRUE を返します。	若值為數值則傳回 TRUE。	若值为数字则返回 TRUE。
+TRUE when the value is any error other than #N/A.	Trả về TRUE nếu giá trị là lỗi khác #N/A.	값이 #N/A 이외의 오류이면 TRUE를 반환합니다.	値が #N/A 以外のエラーなら TRUE を返します。	若值為 #N/A 以外的錯誤則傳回 TRUE。	若值为 #N/A 以外的错误则返回 TRUE。
+TRUE when the value is any error.	Trả về TRUE nếu giá trị là lỗi bất kỳ.	값이 오류이면 TRUE를 반환합니다.	値がエラーなら TRUE を返します。	若值為任何錯誤則傳回 TRUE。	若值为任意错误则返回 TRUE。
+TRUE when the value is anything other than text.	Trả về TRUE nếu giá trị không phải văn bản.	값이 텍스트가 아니면 TRUE를 반환합니다.	値が文字列以外なら TRUE を返します。	若值不是文字則傳回 TRUE。	若值不是文本则返回 TRUE。
+TRUE when the value is text.	Trả về TRUE nếu giá trị là văn bản.	값이 텍스트이면 TRUE를 반환합니다.	値が文字列なら TRUE を返します。	若值為文字則傳回 TRUE。	若值为文本则返回 TRUE。
+TRUE when the value is the #N/A error.	Trả về TRUE nếu giá trị là lỗi #N/A.	값이 #N/A 오류이면 TRUE를 반환합니다.	値が #N/A エラーなら TRUE を返します。	若值為 #N/A 錯誤則傳回 TRUE。	若值为 #N/A 错误则返回 TRUE。
+TRUE when the value refers to an empty cell.	Trả về TRUE nếu giá trị tham chiếu đến ô trống.	값이 빈 셀을 참조하면 TRUE를 반환합니다.	値が空白セルを参照していれば TRUE を返します。	若值參照空白儲存格則傳回 TRUE。	若值引用空单元格则返回 TRUE。
+TRUE when two texts are identical, including case.	Trả về TRUE nếu hai văn bản giống hệt nhau, kể cả chữ hoa và chữ thường.	대소문자를 포함하여 두 텍스트가 같으면 TRUE를 반환합니다.	大文字と小文字も含めて 2 つの文字列が一致すれば TRUE を返します。	若兩段文字完全相同，包含大小寫則傳回 TRUE。	若两段文本完全相同，包括大小写则返回 TRUE。
+Builds a cell address as text from row and column numbers.	Tạo địa chỉ ô dạng văn bản từ số hàng và số cột.	행과 열 번호로 셀 주소를 텍스트로 만듭니다.	行番号と列番号からセルのアドレスを文字列として作成します。	以列號和欄號建立文字形式的儲存格位址。	根据行号和列号生成文本形式的单元格地址。
+Builds a date serial number from a year, month and day.	Tạo số sê-ri ngày từ năm, tháng và ngày.	연도, 월, 일로 날짜 일련번호를 만듭니다.	年、月、日から日付のシリアル値を作成します。	以年、月、日建立日期序號。	根据年、月、日生成日期序列值。
+Builds a time (a fraction of a day) from hours, minutes and seconds.	Tạo giá trị thời gian (phần của một ngày) từ giờ, phút và giây.	시, 분, 초로 시간값(하루의 비율)을 만듭니다.	時、分、秒から時刻（1 日に対する割合）を作成します。	以時、分、秒建立時間值（一天的分數）。	根据时、分、秒生成时间值（一天的小数部分）。
+Byte version of FIND.	Phiên bản FIND đếm theo byte.	바이트 단위 FIND 함수입니다.	バイト単位で処理する FIND です。	以位元組計算的 FIND 版本。	按字节计算的 FIND 版本。
+Byte version of LEFT (same as LEFT for single-byte text).	Phiên bản LEFT theo byte (giống LEFT với văn bản một byte).	바이트 단위 LEFT 함수입니다(단일 바이트 텍스트에서는 LEFT와 동일).	バイト単位の LEFT です（半角文字列では LEFT と同じ）。	以位元組計算的 LEFT 版本（單位元組文字與 LEFT 相同）。	按字节计算的 LEFT 版本（单字节文本与 LEFT 相同）。
+Byte version of LEN (same as LEN for single-byte text).	Phiên bản LEN theo byte (giống LEN với văn bản một byte).	바이트 단위 LEN 함수입니다(단일 바이트 텍스트에서는 LEN과 동일).	バイト単位の LEN です（半角文字列では LEN と同じ）。	以位元組計算的 LEN 版本（單位元組文字與 LEN 相同）。	按字节计算的 LEN 版本（单字节文本与 LEN 相同）。
+Byte version of MID (same as MID for single-byte text).	Phiên bản MID theo byte (giống MID với văn bản một byte).	바이트 단위 MID 함수입니다(단일 바이트 텍스트에서는 MID와 동일).	バイト単位の MID です（半角文字列では MID と同じ）。	以位元組計算的 MID 版本（單位元組文字與 MID 相同）。	按字节计算的 MID 版本（单字节文本与 MID 相同）。
+Byte version of REPLACE.	Phiên bản REPLACE đếm theo byte.	바이트 단위 REPLACE 함수입니다.	バイト単位で処理する REPLACE です。	以位元組計算的 REPLACE 版本。	按字节计算的 REPLACE 版本。
+Byte version of RIGHT (same as RIGHT for single-byte text).	Phiên bản RIGHT theo byte (giống RIGHT với văn bản một byte).	바이트 단위 RIGHT 함수입니다(단일 바이트 텍스트에서는 RIGHT와 동일).	バイト単位の RIGHT です（半角文字列では RIGHT と同じ）。	以位元組計算的 RIGHT 版本（單位元組文字與 RIGHT 相同）。	按字节计算的 RIGHT 版本（单字节文本与 RIGHT 相同）。
+Byte version of SEARCH.	Phiên bản SEARCH đếm theo byte.	바이트 단위 SEARCH 함수입니다.	バイト単位で処理する SEARCH です。	以位元組計算的 SEARCH 版本。	按字节计算的 SEARCH 版本。
+Capitalises the first letter of each word and lower-cases the rest.	Viết hoa chữ đầu mỗi từ và viết thường các chữ còn lại.	각 단어의 첫 글자를 대문자로, 나머지를 소문자로 바꿉니다.	各単語の先頭を大文字、残りを小文字にします。	將每個單字的首字母轉為大寫，其餘轉為小寫。	将每个单词的首字母转为大写，其余转为小写。
+Converts Roman numerals to a number.	Chuyển số La Mã thành số.	로마 숫자를 숫자로 변환합니다.	ローマ数字を数値に変換します。	將羅馬數字轉換為數值。	将罗马数字转换为数值。
+Converts a date written as text into a date serial number.	Chuyển ngày viết dạng văn bản thành số sê-ri ngày.	텍스트로 표시된 날짜를 날짜 일련번호로 변환합니다.	文字列の日付を日付のシリアル値に変換します。	將文字日期轉換為日期序號。	将文本日期转换为日期序列值。
+Converts a decimal price to fractional notation.	Chuyển giá dạng thập phân sang dạng phân số.	소수로 표시된 가격을 분수 표기로 변환합니다.	小数表記の価格を分数表記に変換します。	將小數價格轉換為分數表示法。	将小数价格转换为分数表示法。
+Converts a fractional price notation to a decimal number.	Chuyển giá dạng phân số thành số thập phân.	분수로 표시된 가격을 소수로 변환합니다.	分数表記の価格を小数に変換します。	將分數價格轉換為小數。	将分数价格转换为小数。
+Converts a measurement from one unit to another.	Chuyển giá trị đo từ đơn vị này sang đơn vị khác.	측정값의 단위를 변환합니다.	測定値を別の単位に変換します。	將測量值從一種單位轉換為另一種單位。	将测量值从一种单位转换为另一种单位。
+Converts a number to Roman numerals in one of five styles.	Chuyển số sang số La Mã theo một trong năm kiểu.	숫자를 다섯 가지 형식 중 하나의 로마 숫자로 변환합니다.	数値を 5 種類のいずれかの形式でローマ数字に変換します。	將數值轉換為五種樣式之一的羅馬數字。	将数值转换为五种样式之一的罗马数字。
+Converts a time written as text into a fraction of a day.	Chuyển thời gian dạng văn bản thành phần của một ngày.	텍스트 시간을 하루의 비율로 변환합니다.	文字列の時刻を 1 日に対する割合に変換します。	將文字時間轉換為一天的分數。	将文本时间转换为一天的小数部分。
+Converts a value to a number: numbers stay, TRUE is 1, everything else is 0.	Chuyển giá trị thành số: giữ nguyên số, TRUE thành 1, các giá trị khác thành 0.	값을 숫자로 변환합니다. 숫자는 유지하고 TRUE는 1, 나머지는 0으로 변환합니다.	値を数値に変換します。数値はそのまま、TRUE は 1、それ以外は 0 になります。	將值轉換為數值：數字不變，TRUE 為 1，其餘為 0。	将值转换为数字：数字不变，TRUE 为 1，其余为 0。
+Converts an array to text, either as a comma list or as a strict array constant.	Chuyển mảng thành văn bản dạng danh sách phân cách bằng dấu phẩy hoặc hằng mảng nghiêm ngặt.	배열을 쉼표로 구분된 목록 또는 엄격한 배열 상수 형식의 텍스트로 변환합니다.	配列をコンマ区切りの一覧、または厳密な配列定数の文字列に変換します。	將陣列轉換為逗號分隔清單或嚴格陣列常數的文字。	将数组转换为逗号分隔列表或严格数组常量形式的文本。
+Converts any value to text, optionally in strict (quoted) form.	Chuyển giá trị bất kỳ thành văn bản, có thể dùng dạng nghiêm ngặt (có dấu ngoặc kép).	모든 값을 텍스트로 변환하며 엄격한 형식(따옴표 포함)을 선택할 수 있습니다.	任意の値を文字列に変換します。厳密な形式（引用符付き）も指定できます。	將任何值轉換為文字，可選擇嚴格格式（加上引號）。	将任意值转换为文本，可选择严格格式（加引号）。
+Converts full-width characters to half-width (no change for single-byte text).	Chuyển ký tự toàn chiều rộng sang nửa chiều rộng (không đổi văn bản một byte).	전각 문자를 반각으로 변환합니다(단일 바이트 텍스트는 변경하지 않음).	全角文字を半角に変換します（半角文字列は変更しません）。	將全形字元轉換為半形（單位元組文字不變）。	将全角字符转换为半角（单字节文本不变）。
+Converts half-width characters to full-width (no change in this locale).	Chuyển ký tự nửa chiều rộng sang toàn chiều rộng (không thay đổi trong miền ngôn ngữ này).	반각 문자를 전각으로 변환합니다(현재 로캘에서는 변경하지 않음).	半角文字を全角に変換します（このロケールでは変更しません）。	將半形字元轉換為全形（此地區設定下不變）。	将半角字符转换为全角（当前区域设置下不变）。
+Converts text that looks like a number, date or time into a number.	Chuyển văn bản có dạng số, ngày hoặc giờ thành số.	숫자, 날짜 또는 시간 형태의 텍스트를 숫자로 변환합니다.	数値、日付、時刻の形式の文字列を数値に変換します。	將數字、日期或時間形式的文字轉換為數值。	将数字、日期或时间形式的文本转换为数值。
+Converts text to a number using the given decimal and group separators.	Chuyển văn bản thành số theo dấu thập phân và dấu phân nhóm đã cho.	지정한 소수점 및 자릿수 구분 기호를 사용하여 텍스트를 숫자로 변환합니다.	指定された小数点と桁区切り記号で文字列を数値に変換します。	使用指定的小數點與分組分隔符號，將文字轉換為數值。	使用指定的小数点和分组分隔符将文本转换为数值。
+Converts text to lower case.	Chuyển văn bản thành chữ thường.	텍스트를 소문자로 변환합니다.	文字列を小文字に変換します。	將文字轉換為小寫。	将文本转换为小写。
+Converts text to upper case.	Chuyển văn bản thành chữ hoa.	텍스트를 대문자로 변환합니다.	文字列を大文字に変換します。	將文字轉換為大寫。	将文本转换为大写。
+Counts days between two dates on a 360-day year (US or European method).	Đếm số ngày giữa hai ngày theo năm 360 ngày (phương pháp Hoa Kỳ hoặc châu Âu).	1년을 360일로 하여 두 날짜 사이의 일수를 계산합니다(미국식 또는 유럽식).	1 年を 360 日として 2 つの日付間の日数を求めます（米国方式またはヨーロッパ方式）。	以一年 360 天計算兩日期間的天數（美式或歐式）。	按一年 360 天计算两个日期间的天数（美式或欧式）。
+Counts the characters in a text.	Đếm số ký tự trong văn bản.	텍스트의 문자 수를 계산합니다.	文字列の文字数を求めます。	計算文字中的字元數。	计算文本中的字符数。
+Counts whole years, months or days between two dates. unit: Y, M, D, MD, YM or YD.	Đếm số năm, tháng hoặc ngày trọn vẹn giữa hai ngày. Đơn vị: Y, M, D, MD, YM hoặc YD.	두 날짜 사이의 완전한 연, 월, 일 수를 계산합니다. 단위: Y, M, D, MD, YM, YD.	2 つの日付間の満年数、満月数、満日数を求めます。単位: Y、M、D、MD、YM、YD。	計算兩日期間的完整年、月或天數。單位：Y、M、D、MD、YM 或 YD。	计算两个日期间的完整年、月或天数。单位：Y、M、D、MD、YM 或 YD。
+Counts working days (Monday to Friday) between two dates, excluding holidays.	Đếm ngày làm việc (thứ Hai đến thứ Sáu) giữa hai ngày, không gồm ngày lễ.	공휴일을 제외한 두 날짜 사이의 근무일(월~금)을 계산합니다.	祝日を除き、2 つの日付間の稼働日数（月～金）を求めます。	計算兩日期間的工作天數（週一至週五），不含假日。	计算两个日期间的工作日数（周一至周五），不含节假日。
+Counts working days between two dates with a custom weekend, excluding holidays.	Đếm ngày làm việc giữa hai ngày với ngày nghỉ cuối tuần tùy chỉnh, không gồm ngày lễ.	사용자 지정 주말과 공휴일을 제외한 두 날짜 사이의 근무일을 계산합니다.	指定した週末と祝日を除き、2 つの日付間の稼働日数を求めます。	使用自訂週末計算兩日期間的工作天數，不含假日。	使用自定义周末计算两个日期间的工作日数，不含节假日。
+Creates a link; the cell shows the friendly name, or the link itself.	Tạo liên kết; ô hiển thị tên dễ đọc hoặc chính liên kết.	링크를 만들고 셀에는 표시 이름 또는 링크 자체를 표시합니다.	リンクを作成し、セルには表示名またはリンク自体を表示します。	建立連結；儲存格顯示易讀名稱或連結本身。	创建链接；单元格显示友好名称或链接本身。
+Extracts data from XML with an XPath (not available; returns #VALUE!).	Trích dữ liệu XML bằng XPath (chưa khả dụng; trả về #VALUE!).	XPath로 XML 데이터를 추출합니다(사용할 수 없어 #VALUE! 반환).	XPath で XML からデータを抽出します（未対応のため #VALUE! を返します）。	使用 XPath 從 XML 擷取資料（尚未支援；傳回 #VALUE!）。	使用 XPath 从 XML 提取数据（尚不支持；返回 #VALUE!）。
+Extracts the first match, all matches or the capture groups of a regular expression.	Trích kết quả khớp đầu tiên, mọi kết quả hoặc các nhóm bắt của biểu thức chính quy.	정규식의 첫 일치 항목, 모든 일치 항목 또는 캡처 그룹을 추출합니다.	正規表現の最初の一致、すべての一致、またはキャプチャ グループを抽出します。	擷取正規表示式的第一個符合項目、所有符合項目或擷取群組。	提取正则表达式的首个匹配项、所有匹配项或捕获组。
+Fetches data from a web service (not available; returns #VALUE!).	Lấy dữ liệu từ dịch vụ web (chưa khả dụng; trả về #VALUE!).	웹 서비스에서 데이터를 가져옵니다(사용할 수 없어 #VALUE! 반환).	Web サービスからデータを取得します（未対応のため #VALUE! を返します）。	從網路服務取得資料（尚未支援；傳回 #VALUE!）。	从网络服务获取数据（尚不支持；返回 #VALUE!）。
+Finds a value in the first row of a table and returns the value in the same column of another row.	Tìm giá trị trong hàng đầu của bảng và trả về giá trị cùng cột ở hàng khác.	표의 첫 행에서 값을 찾아 다른 행의 같은 열에 있는 값을 반환합니다.	表の先頭行で値を検索し、別の行の同じ列にある値を返します。	在表格第一列尋找值，並傳回另一列同欄的值。	在表格首行查找值，并返回另一行同列的值。
+Finds the position of one text in another (case-sensitive).	Tìm vị trí văn bản trong văn bản khác (phân biệt hoa thường).	다른 텍스트 안에서 텍스트의 위치를 찾습니다(대소문자 구분).	別の文字列内で文字列の位置を検索します（大文字と小文字を区別）。	尋找文字在另一段文字中的位置（區分大小寫）。	查找文本在另一段文本中的位置（区分大小写）。
+Finds the position of one text in another, ignoring case and allowing wildcards.	Tìm vị trí văn bản trong văn bản khác, không phân biệt hoa thường và cho phép ký tự đại diện.	대소문자를 구분하지 않고 와일드카드를 허용하여 다른 텍스트 안에서 위치를 찾습니다.	大文字と小文字を区別せず、ワイルドカードを使って別の文字列内の位置を検索します。	尋找文字在另一段文字中的位置，不區分大小寫且允許萬用字元。	查找文本在另一段文本中的位置，不区分大小写且允许通配符。
+Joins several text values into one.	Nối nhiều giá trị văn bản thành một.	여러 텍스트 값을 하나로 연결합니다.	複数の文字列を 1 つに結合します。	將多個文字值合併為一個。	将多个文本值合并为一个。
+Joins text from values and every cell of ranges, without a separator.	Nối văn bản từ các giá trị và mọi ô trong vùng, không có dấu phân cách.	값과 범위 내 모든 셀의 텍스트를 구분 기호 없이 연결합니다.	値と範囲内の全セルの文字列を、区切り文字なしで結合します。	合併值與範圍中每個儲存格的文字，不加分隔符號。	合并值与区域中所有单元格的文本，不加分隔符。
+Joins text from values and ranges with a delimiter, optionally skipping empty items.	Nối văn bản từ các giá trị và vùng bằng dấu phân cách, có thể bỏ qua mục trống.	값과 범위의 텍스트를 구분 기호로 연결하며 빈 항목은 제외할 수 있습니다.	値と範囲の文字列を区切り文字で結合します。空白の項目を無視できます。	使用分隔符號合併值與範圍的文字，可略過空白項目。	使用分隔符合并值与区域的文本，可忽略空白项。
+Percent-encodes text for use in a URL.	Mã hóa văn bản theo dạng phần trăm để dùng trong URL.	URL에 사용할 수 있도록 텍스트를 퍼센트 인코딩합니다.	URL で使用できるよう文字列をパーセント エンコードします。	將文字進行百分比編碼，以便用於 URL。	对文本进行百分号编码，以便用于 URL。
+Removes leading and trailing spaces and collapses runs of spaces to one.	Xóa khoảng trắng đầu và cuối, gộp các khoảng trắng liên tiếp thành một.	앞뒤 공백을 제거하고 연속 공백을 하나로 줄입니다.	前後のスペースを削除し、連続したスペースを 1 つにまとめます。	移除開頭與結尾空格，並將連續空格合併為一個。	删除首尾空格，并将连续空格合并为一个。
+Removes non-printable control characters from text.	Xóa các ký tự điều khiển không in được khỏi văn bản.	텍스트에서 인쇄할 수 없는 제어 문자를 제거합니다.	文字列から印刷できない制御文字を削除します。	移除文字中無法列印的控制字元。	删除文本中不可打印的控制字符。
+Repeats a text a given number of times.	Lặp văn bản theo số lần đã cho.	지정한 횟수만큼 텍스트를 반복합니다.	指定した回数だけ文字列を繰り返します。	依指定次數重複文字。	按指定次数重复文本。
+Replaces matches of a regular expression, all of them or a chosen occurrence.	Thay thế mọi kết quả khớp biểu thức chính quy hoặc một lần xuất hiện được chọn.	정규식의 모든 일치 항목 또는 지정한 일치 항목을 바꿉니다.	正規表現に一致するすべての箇所、または指定した箇所を置換します。	取代正規表示式的所有符合項目或指定的符合項目。	替换正则表达式的所有匹配项或指定匹配项。
+Replaces occurrences of one text with another, optionally only a given occurrence.	Thay văn bản này bằng văn bản khác, có thể chỉ thay lần xuất hiện đã chỉ định.	텍스트를 다른 텍스트로 바꾸며 지정한 번째 항목만 바꿀 수 있습니다.	文字列を別の文字列で置換します。指定した出現箇所だけを置換できます。	將文字取代為另一段文字，可只取代指定的出現位置。	将文本替换为另一段文本，可仅替换指定的出现位置。
+Replaces part of a text by position.	Thay một phần văn bản theo vị trí.	지정한 위치의 텍스트 일부를 바꿉니다.	位置を指定して文字列の一部を置換します。	依位置取代部分文字。	按位置替换部分文本。
+Returns characters from the middle of a text.	Trả về các ký tự ở giữa văn bản.	텍스트의 중간에 있는 문자를 반환합니다.	文字列の途中の文字を返します。	傳回文字中間的字元。	返回文本中间的字符。
+Returns information about the operating environment.	Trả về thông tin môi trường hoạt động.	운영 환경 정보를 반환합니다.	動作環境に関する情報を返します。	傳回作業環境的資訊。	返回运行环境的信息。
+Returns the ISO 8601 week number of a date.	Trả về số tuần của ngày theo ISO 8601.	날짜의 ISO 8601 주 번호를 반환합니다.	日付の ISO 8601 週番号を返します。	傳回日期的 ISO 8601 週數。	返回日期的 ISO 8601 周数。
+Returns the Unicode code point of the first character of a text.	Trả về mã Unicode của ký tự đầu tiên trong văn bản.	텍스트 첫 문자의 Unicode 코드 포인트를 반환합니다.	文字列の先頭文字の Unicode コード ポイントを返します。	傳回文字首字元的 Unicode 碼位。	返回文本首字符的 Unicode 码点。
+Returns the Windows-1252 code of the first character of a text.	Trả về mã Windows-1252 của ký tự đầu tiên trong văn bản.	텍스트 첫 문자의 Windows-1252 코드를 반환합니다.	文字列の先頭文字の Windows-1252 コードを返します。	傳回文字首字元的 Windows-1252 代碼。	返回文本首字符的 Windows-1252 代码。
+Returns the character for a Unicode code point.	Trả về ký tự ứng với mã Unicode.	Unicode 코드 포인트에 해당하는 문자를 반환합니다.	Unicode コード ポイントに対応する文字を返します。	傳回 Unicode 碼位對應的字元。	返回 Unicode 码点对应的字符。
+Returns the character for a code from the Windows-1252 character set.	Trả về ký tự ứng với mã trong bảng ký tự Windows-1252.	Windows-1252 문자 집합의 코드에 해당하는 문자를 반환합니다.	Windows-1252 文字セットのコードに対応する文字を返します。	傳回 Windows-1252 字元集代碼對應的字元。	返回 Windows-1252 字符集代码对应的字符。
+Returns the date a number of months before or after a date.	Trả về ngày cách ngày đã cho một số tháng trước hoặc sau.	날짜에서 지정한 개월 수 이전 또는 이후의 날짜를 반환합니다.	指定日から指定した月数だけ前または後の日付を返します。	傳回指定日期之前或之後相隔指定月數的日期。	返回指定日期之前或之后相隔指定月数的日期。
+Returns the date a number of working days away with a custom weekend.	Trả về ngày cách một số ngày làm việc với ngày nghỉ cuối tuần tùy chỉnh.	사용자 지정 주말을 적용하여 지정한 근무일 수만큼 떨어진 날짜를 반환합니다.	指定した週末を使い、指定した稼働日数だけ離れた日付を返します。	使用自訂週末，傳回相隔指定工作天數的日期。	使用自定义周末，返回相隔指定工作日数的日期。
+Returns the date a number of working days before or after a date.	Trả về ngày cách ngày đã cho một số ngày làm việc trước hoặc sau.	날짜에서 지정한 근무일 수 이전 또는 이후의 날짜를 반환합니다.	指定日から指定した稼働日数だけ前または後の日付を返します。	傳回指定日期之前或之後相隔指定工作天數的日期。	返回指定日期之前或之后相隔指定工作日数的日期。
+Returns the day of the month of a date.	Trả về ngày trong tháng của ngày đã cho.	날짜의 일을 반환합니다.	日付の日を返します。	傳回日期中的日。	返回日期中的日。
+Returns the day of the week of a date as a number.	Trả về thứ trong tuần của ngày dưới dạng số.	날짜의 요일을 숫자로 반환합니다.	日付の曜日を数値で返します。	以數字傳回日期的星期。	以数字返回日期的星期。
+Returns the first characters of a text.	Trả về các ký tự đầu của văn bản.	텍스트의 왼쪽부터 문자를 반환합니다.	文字列の先頭から文字を返します。	傳回文字開頭的字元。	返回文本开头的字符。
+Returns the fraction of a year between two dates under a day-count basis.	Trả về phần năm giữa hai ngày theo quy ước đếm ngày.	지정한 날짜 계산 기준으로 두 날짜 사이의 기간을 연수의 비율로 반환합니다.	日数計算基準に従い、2 つの日付間の期間を年の割合で返します。	依計日基準傳回兩日期間相隔的年數比例。	按日计数基准返回两个日期间相隔的年数比例。
+Returns the hour (0-23) of a time.	Trả về giờ (0–23) của thời gian.	시간의 시(0~23)를 반환합니다.	時刻の時（0～23）を返します。	傳回時間的小時（0–23）。	返回时间的小时（0–23）。
+Returns the last characters of a text.	Trả về các ký tự cuối của văn bản.	텍스트의 오른쪽부터 문자를 반환합니다.	文字列の末尾から文字を返します。	傳回文字結尾的字元。	返回文本末尾的字符。
+Returns the last day of the month a number of months away.	Trả về ngày cuối tháng cách một số tháng đã cho.	지정한 개월 수만큼 이전 또는 이후인 달의 마지막 날을 반환합니다.	指定した月数だけ離れた月の最終日を返します。	傳回相隔指定月數之月份的最後一天。	返回相隔指定月数的月份的最后一天。
+Returns the minute (0-59) of a time.	Trả về phút (0–59) của thời gian.	시간의 분(0~59)을 반환합니다.	時刻の分（0～59）を返します。	傳回時間的分鐘（0–59）。	返回时间的分钟（0–59）。
+Returns the month (1-12) of a date.	Trả về tháng (1–12) của ngày.	날짜의 월(1~12)을 반환합니다.	日付の月（1～12）を返します。	傳回日期的月份（1–12）。	返回日期的月份（1–12）。
+Returns the number of days between two dates.	Trả về số ngày giữa hai ngày.	두 날짜 사이의 일수를 반환합니다.	2 つの日付間の日数を返します。	傳回兩日期間的天數。	返回两个日期间的天数。
+Returns the phonetic (furigana) text; here the text itself.	Trả về văn bản phiên âm (furigana); ở đây là chính văn bản đó.	윗주(후리가나) 텍스트를 반환합니다. 여기서는 텍스트 자체를 반환합니다.	ふりがなを返します。この実装では文字列自体を返します。	傳回注音文字（假名）；此處傳回原文字。	返回注音文本（假名）；此处返回原文本。
+Returns the second (0-59) of a time.	Trả về giây (0–59) của thời gian.	시간의 초(0~59)를 반환합니다.	時刻の秒（0～59）を返します。	傳回時間的秒數（0–59）。	返回时间的秒数（0–59）。
+Returns the text that comes after a delimiter.	Trả về văn bản sau dấu phân cách.	구분 기호 뒤의 텍스트를 반환합니다.	区切り文字より後の文字列を返します。	傳回分隔符號之後的文字。	返回分隔符之后的文本。
+Returns the text that comes before a delimiter.	Trả về văn bản trước dấu phân cách.	구분 기호 앞의 텍스트를 반환합니다.	区切り文字より前の文字列を返します。	傳回分隔符號之前的文字。	返回分隔符之前的文本。
+Returns the week number of a date within its year.	Trả về số tuần trong năm của ngày.	날짜가 해당 연도의 몇 번째 주인지 반환합니다.	日付がその年の第何週かを返します。	傳回日期在該年度的週數。	返回日期在该年度的周数。
+Returns the year of a date.	Trả về năm của ngày.	날짜의 연도를 반환합니다.	日付の年を返します。	傳回日期的年份。	返回日期的年份。
+Spells out a number in Thai words with Baht.	Viết số bằng chữ tiếng Thái kèm đơn vị baht.	숫자를 바트 단위의 태국어 문자로 표시합니다.	数値をバーツ付きのタイ語表記に変換します。	將數字轉換為含泰銖單位的泰文文字。	将数字转换为含泰铢单位的泰文文本。
+Splits text into a grid of columns and rows at the given delimiters.	Tách văn bản thành các hàng và cột theo dấu phân cách đã cho.	지정한 구분 기호에서 텍스트를 행과 열로 나눕니다.	指定した区切り文字で文字列を行と列に分割します。	依指定分隔符號將文字分割為列與欄。	按指定分隔符将文本拆分为行和列。
+1 for positive, -1 for negative and 0 for zero.	Trả về 1 với số dương, -1 với số âm và 0 với số không.	양수이면 1, 음수이면 -1, 0이면 0을 반환합니다.	正の数なら 1、負の数なら -1、ゼロなら 0 を返します。	正數傳回 1、負數傳回 -1、零傳回 0。	正数返回 1、负数返回 -1、零返回 0。
+A random integer between two bounds, inclusive.	Trả về số nguyên ngẫu nhiên trong khoảng, gồm cả hai cận.	양 끝값을 포함하는 범위의 임의의 정수를 반환합니다.	両端を含む範囲内のランダムな整数を返します。	傳回包含上下限範圍內的隨機整數。	返回包含上下限的范围内的随机整数。
+A random number between 0 and 1, recalculated every time.	Trả về số ngẫu nhiên từ 0 đến 1, tính lại mỗi lần.	매번 다시 계산되는 0과 1 사이의 난수를 반환합니다.	計算のたびに変わる、0 から 1 の間の乱数を返します。	傳回每次都重新計算的 0 到 1 之間亂數。	返回每次都重新计算的 0 到 1 之间的随机数。
+Absolute value (modulus) of a complex number.	Tính trị tuyệt đối (môđun) của số phức.	복소수의 절댓값(크기)을 반환합니다.	複素数の絶対値を返します。	傳回複數的絕對值（模數）。	返回复数的绝对值（模）。
+Adds the numbers in a field of the records that meet the criteria.	Cộng các số trong một trường của các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 숫자의 합을 구합니다.	条件に一致するレコードのフィールド内の数値を合計します。	加總符合條件記錄之欄位中的數值。	对符合条件记录的字段中的数字求和。
+Adds the squares of the numbers.	Tính tổng bình phương của các số.	숫자의 제곱합을 구합니다.	数値の二乗の合計を求めます。	計算數值的平方和。	计算数值的平方和。
+Angle of a complex number in radians.	Trả về góc của số phức tính bằng radian.	복소수의 편각을 라디안 단위로 반환합니다.	複素数の偏角をラジアン単位で返します。	以弧度傳回複數的幅角。	以弧度返回复数的辐角。
+Angle of the point (x, y) from the x-axis in radians.	Trả về góc từ trục x đến điểm (x, y), tính bằng radian.	점 (x, y)가 x축과 이루는 각도를 라디안 단위로 반환합니다.	点 (x, y) と x 軸のなす角をラジアン単位で返します。	以弧度傳回點 (x, y) 相對於 x 軸的角度。	以弧度返回点 (x, y) 相对于 x 轴的角度。
+Approximate lookup in a sorted vector or the first row/column of an array.	Tra cứu gần đúng trong vectơ đã sắp xếp hoặc hàng/cột đầu của mảng.	정렬된 벡터 또는 배열의 첫 행/열에서 근삿값을 찾습니다.	並べ替え済みのベクトル、または配列の先頭行/列で近似一致を検索します。	在已排序向量或陣列第一列／欄中進行近似查閱。	在已排序向量或数组首行/首列中进行近似查找。
+Average absolute deviation from the mean.	Tính độ lệch tuyệt đối trung bình so với giá trị trung bình.	평균에 대한 절대 편차의 평균을 구합니다.	平均値に対する絶対偏差の平均を求めます。	計算相對平均值的平均絕對偏差。	计算相对于平均值的平均绝对偏差。
+Average of the cells that meet a condition.	Tính trung bình các ô thỏa một điều kiện.	조건에 맞는 셀의 평균을 구합니다.	条件に一致するセルの平均を求めます。	計算符合條件儲存格的平均值。	计算满足条件的单元格的平均值。
+Average of the cells that meet every condition.	Tính trung bình các ô thỏa mọi điều kiện.	모든 조건에 맞는 셀의 평균을 구합니다.	すべての条件に一致するセルの平均を求めます。	計算符合所有條件儲存格的平均值。	计算满足所有条件的单元格的平均值。
+Averages the numbers in a field of the records that meet the criteria.	Tính trung bình các số trong một trường của các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 숫자의 평균을 구합니다.	条件に一致するレコードのフィールド内の数値の平均を求めます。	計算符合條件記錄之欄位中數值的平均值。	计算符合条件记录的字段中数字的平均值。
+Base-10 logarithm of a complex number.	Tính logarit cơ số 10 của số phức.	복소수의 상용로그를 반환합니다.	複素数の常用対数を返します。	傳回複數以 10 為底的對數。	返回复数以 10 为底的对数。
+Base-10 logarithm.	Tính logarit cơ số 10.	상용로그를 반환합니다.	常用対数を返します。	傳回以 10 為底的對數。	返回以 10 为底的对数。
+Base-2 logarithm of a complex number.	Tính logarit cơ số 2 của số phức.	복소수의 밑이 2인 로그를 반환합니다.	複素数の底を 2 とする対数を返します。	傳回複數以 2 為底的對數。	返回复数以 2 为底的对数。
+Bitwise AND of two non-negative integers.	Tính phép VÀ theo bit của hai số nguyên không âm.	음수가 아닌 두 정수의 비트 AND를 구합니다.	2 つの非負整数のビット単位 AND を返します。	傳回兩個非負整數的位元 AND 結果。	返回两个非负整数的按位 AND 结果。
+Bitwise OR of two non-negative integers.	Tính phép HOẶC theo bit của hai số nguyên không âm.	음수가 아닌 두 정수의 비트 OR를 구합니다.	2 つの非負整数のビット単位 OR を返します。	傳回兩個非負整數的位元 OR 結果。	返回两个非负整数的按位 OR 结果。
+Bitwise exclusive OR of two non-negative integers.	Tính phép HOẶC loại trừ theo bit của hai số nguyên không âm.	음수가 아닌 두 정수의 비트 배타적 OR를 구합니다.	2 つの非負整数のビット単位の排他的 OR を返します。	傳回兩個非負整數的位元互斥 OR 結果。	返回两个非负整数的按位异或结果。
+Breaks a row or column into columns of the given length.	Chia một hàng hoặc cột thành các cột có độ dài đã cho.	행 또는 열을 지정한 길이의 여러 열로 나눕니다.	1 行または 1 列を、指定した長さの複数列に分けます。	將一列或一欄分成指定長度的多欄。	将一行或一列拆分为指定长度的多列。
+Breaks a row or column into rows of the given length.	Chia một hàng hoặc cột thành các hàng có độ dài đã cho.	행 또는 열을 지정한 길이의 여러 행으로 나눕니다.	1 行または 1 列を、指定した長さの複数行に分けます。	將一列或一欄分成指定長度的多列。	将一行或一列拆分为指定长度的多行。
+Builds a complex number as text from real and imaginary parts.	Tạo số phức dạng văn bản từ phần thực và phần ảo.	실수부와 허수부로 복소수를 텍스트로 만듭니다.	実部と虚部から複素数を文字列として作成します。	以實部與虛部建立文字形式的複數。	根据实部和虚部生成文本形式的复数。
+Builds a summary table grouping values by row and column fields.	Tạo bảng tổng hợp nhóm giá trị theo trường hàng và cột.	행 및 열 필드를 기준으로 값을 그룹화한 요약 표를 만듭니다.	行と列のフィールドで値をグループ化した集計表を作成します。	依列與欄欄位將值分組，建立彙總表。	按行列字段对值分组，生成汇总表。
+Builds an array of evenly stepped numbers.	Tạo mảng các số cách đều nhau.	일정한 간격의 숫자 배열을 만듭니다.	等間隔の数値の配列を作成します。	建立等間距數值的陣列。	生成等间距数值的数组。
+Builds an array of random numbers in a range.	Tạo mảng số ngẫu nhiên trong khoảng.	지정한 범위의 난수 배열을 만듭니다.	範囲内の乱数の配列を作成します。	建立範圍內隨機數值的陣列。	生成范围内随机数值的数组。
+Compares an expression with a list of values and returns the result paired with the first match.	So sánh biểu thức với danh sách giá trị và trả về kết quả ứng với mục khớp đầu tiên.	식을 값 목록과 비교하여 처음 일치하는 값에 해당하는 결과를 반환합니다.	式を値の一覧と比較し、最初に一致した値に対応する結果を返します。	將運算式與值清單比較，傳回第一個符合值所對應的結果。	将表达式与值列表比较，返回首个匹配值对应的结果。
+Complex conjugate of a complex number.	Trả về số phức liên hợp.	복소수의 켤레복소수를 반환합니다.	複素数の共役複素数を返します。	傳回複數的共軛複數。	返回复数的共轭复数。
+Converts degrees to radians.	Đổi độ sang radian.	도를 라디안으로 변환합니다.	度をラジアンに変換します。	將角度轉換為弧度。	将角度转换为弧度。
+Converts radians to degrees.	Đổi radian sang độ.	라디안을 도로 변환합니다.	ラジアンを度に変換します。	將弧度轉換為角度。	将弧度转换为角度。
+Counts empty cells and empty text in a range.	Đếm ô trống và văn bản rỗng trong vùng.	범위에서 빈 셀과 빈 텍스트의 개수를 셉니다.	範囲内の空白セルと空文字列を数えます。	計算範圍中的空白儲存格與空文字。	计算区域中的空单元格和空文本。
+Counts how many values fall into each bin, as a vertical array.	Đếm số giá trị trong từng nhóm và trả về mảng dọc.	각 구간에 속하는 값의 개수를 세어 세로 배열로 반환합니다.	各区間に入る値の数を数え、縦方向の配列で返します。	計算落在各組界內的值數量，以垂直陣列傳回。	计算落在各分组内的值的数量，以垂直数组返回。
+Counts non-blank cells in a field of the matching records (or the matching records).	Đếm ô không trống trong trường của bản ghi thỏa điều kiện (hoặc đếm các bản ghi đó).	조건에 맞는 레코드의 필드에서 비어 있지 않은 셀 또는 레코드의 개수를 셉니다.	条件に一致するレコードのフィールドで、空白でないセル（または一致するレコード）を数えます。	計算符合條件記錄之欄位中的非空白儲存格（或符合條件的記錄）數。	计算符合条件记录字段中的非空单元格（或符合条件记录）的数量。
+Counts numeric cells in a field of the matching records (or the matching records).	Đếm ô chứa số trong trường của bản ghi thỏa điều kiện (hoặc đếm các bản ghi đó).	조건에 맞는 레코드의 필드에서 숫자가 있는 셀 또는 레코드의 개수를 셉니다.	条件に一致するレコードのフィールドで、数値のセル（または一致するレコード）を数えます。	計算符合條件記錄之欄位中的數值儲存格（或符合條件的記錄）數。	计算符合条件记录字段中的数值单元格（或符合条件记录）的数量。
+Counts the cells that meet a condition.	Đếm ô thỏa điều kiện.	조건에 맞는 셀의 개수를 셉니다.	条件に一致するセルを数えます。	計算符合條件的儲存格數。	计算满足条件的单元格数。
+Counts the cells that meet every condition.	Đếm ô thỏa mọi điều kiện.	모든 조건에 맞는 셀의 개수를 셉니다.	すべての条件に一致するセルを数えます。	計算符合所有條件的儲存格數。	计算满足所有条件的单元格数。
+Counts the columns in an array or range.	Đếm số cột trong mảng hoặc vùng.	배열 또는 범위의 열 수를 셉니다.	配列または範囲の列数を数えます。	計算陣列或範圍的欄數。	计算数组或区域的列数。
+Counts the rows in an array or range.	Đếm số hàng trong mảng hoặc vùng.	배열 또는 범위의 행 수를 셉니다.	配列または範囲の行数を数えます。	計算陣列或範圍的列數。	计算数组或区域的行数。
+Cuts off the fractional part of a number at the given digits.	Cắt phần thập phân của số ở số chữ số đã cho.	지정한 자릿수에서 숫자의 소수 부분을 잘라 냅니다.	指定した桁数で数値を切り捨てます。	依指定位數截去數值的小數部分。	按指定位数截去数值的小数部分。
+Determinant of a square matrix.	Tính định thức của ma trận vuông.	정사각 행렬의 행렬식을 구합니다.	正方行列の行列式を求めます。	計算方陣的行列式。	计算方阵的行列式。
+Difference of two complex numbers.	Tính hiệu của hai số phức.	두 복소수의 차를 구합니다.	2 つの複素数の差を求めます。	計算兩個複數的差。	计算两个复数的差。
+Double factorial of a number.	Tính giai thừa kép của số.	숫자의 이중 계승을 구합니다.	数値の二重階乗を求めます。	計算數值的雙階乘。	计算数值的双阶乘。
+Exponential of a complex number.	Tính hàm mũ của số phức.	복소수의 지수함숫값을 반환합니다.	複素数の指数関数を返します。	傳回複數的指數函數值。	返回复数的指数函数值。
+Factorial of a number.	Tính giai thừa của số.	숫자의 계승을 구합니다.	数値の階乗を求めます。	計算數值的階乘。	计算数值的阶乘。
+Flattens an array into a single column, optionally skipping blanks or errors.	Trải mảng thành một cột, có thể bỏ qua ô trống hoặc lỗi.	배열을 한 열로 펼치며 빈 값 또는 오류를 제외할 수 있습니다.	配列を 1 列に展開します。空白やエラーを無視できます。	將陣列展開為單一欄，可略過空白或錯誤。	将数组展开为单列，可忽略空白或错误。
+Flattens an array into a single row, optionally skipping blanks or errors.	Trải mảng thành một hàng, có thể bỏ qua ô trống hoặc lỗi.	배열을 한 행으로 펼치며 빈 값 또는 오류를 제외할 수 있습니다.	配列を 1 行に展開します。空白やエラーを無視できます。	將陣列展開為單一列，可略過空白或錯誤。	将数组展开为单行，可忽略空白或错误。
+Geometric mean of positive numbers.	Tính trung bình nhân của các số dương.	양수의 기하 평균을 구합니다.	正の数の幾何平均を求めます。	計算正數的幾何平均值。	计算正数的几何平均值。
+Greatest common divisor of integers.	Tìm ước chung lớn nhất của các số nguyên.	정수의 최대공약수를 구합니다.	整数の最大公約数を求めます。	求整數的最大公因數。	求整数的最大公约数。
+Groups rows by key fields and aggregates the values of each group.	Nhóm hàng theo trường khóa và tổng hợp giá trị của mỗi nhóm.	키 필드로 행을 그룹화하고 각 그룹의 값을 집계합니다.	キー フィールドで行をグループ化し、各グループの値を集計します。	依索引鍵欄位將列分組，並彙總各組的值。	按键字段对行分组，并汇总各组的值。
+Grows an array to the given size, filling new cells with a pad value.	Mở rộng mảng đến kích thước đã cho, điền giá trị đệm vào các ô mới.	배열을 지정한 크기로 늘리고 새 셀을 지정한 값으로 채웁니다.	配列を指定サイズに拡張し、新しいセルを指定値で埋めます。	將陣列擴大至指定大小，並以填補值填入新儲存格。	将数组扩展到指定大小，并以填充值填充新单元格。
+Harmonic mean of positive numbers.	Tính trung bình điều hòa của các số dương.	양수의 조화 평균을 구합니다.	正の数の調和平均を求めます。	計算正數的調和平均值。	计算正数的调和平均值。
+Identity matrix of the given size.	Tạo ma trận đơn vị có kích thước đã cho.	지정한 크기의 단위행렬을 반환합니다.	指定サイズの単位行列を返します。	傳回指定大小的單位矩陣。	返回指定大小的单位矩阵。
+Imaginary coefficient of a complex number.	Trả về hệ số phần ảo của số phức.	복소수의 허수부 계수를 반환합니다.	複素数の虚部の係数を返します。	傳回複數虛部的係數。	返回复数虚部的系数。
+Integer part of a division.	Trả về phần nguyên của phép chia.	나눗셈 결과의 정수 부분을 반환합니다.	除算結果の整数部分を返します。	傳回除法結果的整數部分。	返回除法结果的整数部分。
+Inverse of a square matrix.	Tìm ma trận nghịch đảo của ma trận vuông.	정사각 행렬의 역행렬을 구합니다.	正方行列の逆行列を求めます。	計算方陣的反矩陣。	计算方阵的逆矩阵。
+Keeps rows or columns from the start (or end) of an array.	Giữ lại các hàng hoặc cột từ đầu (hoặc cuối) mảng.	배열의 처음 또는 끝에서 행이나 열을 가져옵니다.	配列の先頭（または末尾）から行や列を取り出します。	保留陣列開頭（或結尾）的列或欄。	保留数组开头（或末尾）的行或列。
+Keeps the rows or columns of an array whose include flag is TRUE.	Giữ hàng hoặc cột của mảng có cờ chọn là TRUE.	포함 조건이 TRUE인 배열의 행 또는 열을 유지합니다.	抽出条件が TRUE の配列の行や列を残します。	保留包含旗標為 TRUE 的陣列列或欄。	保留包含标志为 TRUE 的数组行或列。
+Largest number in a field of the matching records.	Tìm số lớn nhất trong trường của các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 최댓값을 구합니다.	条件に一致するレコードのフィールドで最大値を求めます。	求符合條件記錄之欄位中的最大值。	求符合条件记录字段中的最大值。
+Largest value among cells that meet every condition.	Tìm giá trị lớn nhất trong các ô thỏa mọi điều kiện.	모든 조건에 맞는 셀 중 최댓값을 구합니다.	すべての条件に一致するセルの最大値を求めます。	求符合所有條件儲存格中的最大值。	求满足所有条件的单元格中的最大值。
+Largest value counting text as 0 and logicals as 1/0.	Tìm giá trị lớn nhất, tính văn bản là 0 và giá trị logic là 1/0.	텍스트를 0, 논리값을 1/0으로 처리하여 최댓값을 구합니다.	文字列を 0、論理値を 1/0 として最大値を求めます。	將文字視為 0、邏輯值視為 1/0，求最大值。	将文本视为 0、逻辑值视为 1/0，求最大值。
+Least common multiple of integers.	Tìm bội chung nhỏ nhất của các số nguyên.	정수의 최소공배수를 구합니다.	整数の最小公倍数を求めます。	求整數的最小公倍數。	求整数的最小公倍数。
+Logarithm to the given base (10 by default).	Tính logarit theo cơ số đã cho (mặc định là 10).	지정한 밑의 로그를 구합니다(기본값 10).	指定した底の対数を求めます（既定は 10）。	計算指定底數的對數（預設為 10）。	计算指定底数的对数（默认为 10）。
+Matrix product of two arrays.	Tính tích ma trận của hai mảng.	두 배열의 행렬곱을 구합니다.	2 つの配列の行列積を求めます。	計算兩個陣列的矩陣乘積。	计算两个数组的矩阵乘积。
+Mean after trimming a fraction of points from both ends.	Tính trung bình sau khi bỏ một tỷ lệ điểm ở cả hai đầu.	양 끝에서 일정 비율의 값을 제외한 평균을 구합니다.	両端から一定割合のデータを除外して平均を求めます。	去除兩端一定比例的資料後計算平均值。	去除两端一定比例的数据后计算平均值。
+Mean counting text as 0 and logical values as 1 or 0.	Tính trung bình, tính văn bản là 0 và giá trị logic là 1 hoặc 0.	텍스트를 0, 논리값을 1 또는 0으로 처리하여 평균을 구합니다.	文字列を 0、論理値を 1 または 0 として平均を求めます。	將文字視為 0、邏輯值視為 1 或 0，計算平均值。	将文本视为 0、逻辑值视为 1 或 0，计算平均值。
+Middle value of the numbers.	Tìm giá trị trung vị của các số.	숫자의 중앙값을 구합니다.	数値の中央値を求めます。	求數值的中位數。	求数值的中位数。
+Most frequently occurring number.	Tìm số xuất hiện nhiều nhất.	가장 자주 나오는 숫자를 구합니다.	最も頻繁に現れる数値を求めます。	求最常出現的數值。	求出现次数最多的数值。
+Multiplies all the numbers in the arguments.	Nhân mọi số trong các đối số.	인수에 있는 모든 숫자를 곱합니다.	引数内のすべての数値を掛け合わせます。	將引數中的所有數值相乘。	将参数中的所有数字相乘。
+Multiplies matching elements of equally sized arrays and adds the products.	Nhân các phần tử tương ứng của các mảng cùng kích thước rồi cộng các tích.	크기가 같은 배열의 대응 요소를 곱한 후 그 합을 구합니다.	同じサイズの配列の対応要素を掛け合わせ、その積を合計します。	將相同大小陣列的對應元素相乘，再加總乘積。	将相同大小数组的对应元素相乘，再对乘积求和。
+Multiplies the numbers in a field of the matching records.	Nhân các số trong trường của các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 숫자를 곱합니다.	条件に一致するレコードのフィールド内の数値を掛け合わせます。	將符合條件記錄之欄位中的數值相乘。	将符合条件记录字段中的数字相乘。
+Natural log of the gamma function.	Tính logarit tự nhiên của hàm gamma.	감마 함수의 자연로그를 구합니다.	ガンマ関数の自然対数を求めます。	計算伽瑪函數的自然對數。	计算伽马函数的自然对数。
+Natural logarithm of a complex number.	Tính logarit tự nhiên của số phức.	복소수의 자연로그를 구합니다.	複素数の自然対数を求めます。	計算複數的自然對數。	计算复数的自然对数。
+Natural logarithm.	Tính logarit tự nhiên.	자연로그를 구합니다.	自然対数を求めます。	計算自然對數。	计算自然对数。
+Picks a value from the list by its position.	Chọn giá trị trong danh sách theo vị trí.	목록에서 위치에 해당하는 값을 선택합니다.	一覧から指定位置の値を取り出します。	依位置從清單中選取值。	按位置从列表中选择值。
+Picks columns of an array by position (negative counts from the end).	Chọn cột của mảng theo vị trí (số âm đếm từ cuối).	위치로 배열의 열을 선택합니다(음수는 끝에서부터 계산).	位置を指定して配列の列を取り出します（負数は末尾から数えます）。	依位置選取陣列欄（負數從結尾計算）。	按位置选择数组列（负数从末尾计数）。
+Picks rows of an array by position (negative counts from the end).	Chọn hàng của mảng theo vị trí (số âm đếm từ cuối).	위치로 배열의 행을 선택합니다(음수는 끝에서부터 계산).	位置を指定して配列の行を取り出します（負数は末尾から数えます）。	依位置選取陣列列（負數從結尾計算）。	按位置选择数组行（负数从末尾计数）。
+Places arrays side by side.	Ghép các mảng cạnh nhau theo chiều ngang.	배열을 가로로 나란히 배치합니다.	配列を横に並べます。	將陣列並排放置。	将数组横向并排放置。
+Positive square root.	Trả về căn bậc hai không âm.	음수가 아닌 제곱근을 반환합니다.	非負の平方根を返します。	傳回非負平方根。	返回非负平方根。
+Product of complex numbers.	Tính tích của các số phức.	복소수의 곱을 구합니다.	複素数の積を求めます。	計算複數的乘積。	计算复数的乘积。
+Quotient of two complex numbers.	Tính thương của hai số phức.	두 복소수의 몫을 구합니다.	2 つの複素数の商を求めます。	計算兩個複數的商。	计算两个复数的商。
+Raises a complex number to a power.	Tính lũy thừa của số phức.	복소수의 거듭제곱을 구합니다.	複素数のべき乗を求めます。	計算複數的次方。	计算复数的幂。
+Raises a number to a power.	Tính lũy thừa của số.	숫자의 거듭제곱을 구합니다.	数値のべき乗を求めます。	計算數值的次方。	计算数值的幂。
+Ratio of the factorial of a sum to the product of factorials.	Tính tỷ số giữa giai thừa của tổng và tích các giai thừa.	합의 계승을 각 계승의 곱으로 나눈 비율을 구합니다.	合計の階乗と各階乗の積の比を求めます。	計算總和的階乘與各階乘乘積的比值。	计算总和的阶乘与各阶乘乘积的比值。
+Reads text in a given base as a number.	Đọc văn bản ở cơ số đã cho thành số.	지정한 진법의 텍스트를 숫자로 읽습니다.	指定した基数の文字列を数値として読み取ります。	將指定進位的文字讀取為數值。	将指定进制的文本读取为数值。
+Real coefficient of a complex number.	Trả về hệ số phần thực của số phức.	복소수의 실수부 계수를 반환합니다.	複素数の実部の係数を返します。	傳回複數實部的係數。	返回复数实部的系数。
+Remainder of a division, with the sign of the divisor.	Trả về số dư phép chia, cùng dấu với số chia.	나누는 수와 같은 부호의 나머지를 반환합니다.	除数と同じ符号の剰余を返します。	傳回與除數同號的餘數。	返回与除数同号的余数。
+Removes rows or columns from the start (or end) of an array.	Bỏ các hàng hoặc cột từ đầu (hoặc cuối) mảng.	배열의 처음 또는 끝에서 행이나 열을 제거합니다.	配列の先頭（または末尾）から行や列を取り除きます。	移除陣列開頭（或結尾）的列或欄。	移除数组开头（或末尾）的行或列。
+Returns 1 when a number is at least the step, otherwise 0.	Trả về 1 nếu số không nhỏ hơn ngưỡng, ngược lại trả về 0.	숫자가 임계값 이상이면 1, 아니면 0을 반환합니다.	数値がしきい値以上なら 1、それ以外は 0 を返します。	數值大於或等於臨界值時傳回 1，否則傳回 0。	数值大于或等于阈值时返回 1，否则返回 0。
+Returns 1 when two numbers are equal, otherwise 0.	Trả về 1 nếu hai số bằng nhau, ngược lại trả về 0.	두 숫자가 같으면 1, 아니면 0을 반환합니다.	2 つの数値が等しければ 1、それ以外は 0 を返します。	兩數相等時傳回 1，否則傳回 0。	两数相等时返回 1，否则返回 0。
+Returns a code for the kind of value: 1 number, 2 text, 4 logical, 16 error, 64 array.	Trả về mã loại giá trị: 1 số, 2 văn bản, 4 logic, 16 lỗi, 64 mảng.	값의 종류를 코드로 반환합니다. 숫자 1, 텍스트 2, 논리값 4, 오류 16, 배열 64.	値の種類のコードを返します。1: 数値、2: 文字列、4: 論理値、16: エラー、64: 配列。	傳回值的類型代碼：1 數值、2 文字、4 邏輯值、16 錯誤、64 陣列。	返回值的类型代码：1 数字、2 文本、4 逻辑值、16 错误、64 数组。
+Returns a fallback when the value is #N/A, otherwise the value.	Trả về giá trị thay thế nếu giá trị là #N/A, nếu không giữ nguyên giá trị.	값이 #N/A이면 대체값을, 아니면 원래 값을 반환합니다.	値が #N/A なら代替値、それ以外は元の値を返します。	值為 #N/A 時傳回替代值，否則傳回原值。	值为 #N/A 时返回替代值，否则返回原值。
+Returns the #N/A error value.	Trả về lỗi #N/A.	#N/A 오류값을 반환합니다.	#N/A エラー値を返します。	傳回 #N/A 錯誤值。	返回 #N/A 错误值。
+Returns the 1-based position of a value in a row or column.	Trả về vị trí của giá trị trong hàng hoặc cột, bắt đầu từ 1.	행 또는 열에서 값의 위치를 1부터 시작하는 번호로 반환합니다.	行または列内の値の位置を、1 から始まる番号で返します。	傳回值在列或欄中的位置，從 1 開始編號。	返回值在行或列中的位置，从 1 开始编号。
+Returns the distinct rows or columns of an array.	Trả về các hàng hoặc cột không trùng trong mảng.	배열에서 중복되지 않는 행 또는 열을 반환합니다.	配列から重複しない行や列を返します。	傳回陣列中不重複的列或欄。	返回数组中不重复的行或列。
+Returns the element, row or column of an array at the given position.	Trả về phần tử, hàng hoặc cột của mảng ở vị trí đã cho.	지정한 위치에 있는 배열의 요소, 행 또는 열을 반환합니다.	配列の指定位置にある要素、行、列を返します。	傳回陣列中指定位置的元素、列或欄。	返回数组中指定位置的元素、行或列。
+Returns the field value of the single record that meets the criteria.	Trả về giá trị trường của bản ghi duy nhất thỏa điều kiện.	조건에 맞는 단일 레코드의 필드 값을 반환합니다.	条件に一致する単一レコードのフィールド値を返します。	傳回唯一符合條件記錄的欄位值。	返回唯一满足条件记录的字段值。
+Returns the logical value FALSE.	Trả về giá trị logic FALSE.	논리값 FALSE를 반환합니다.	論理値 FALSE を返します。	傳回邏輯值 FALSE。	返回逻辑值 FALSE。
+Returns the logical value TRUE.	Trả về giá trị logic TRUE.	논리값 TRUE를 반환합니다.	論理値 TRUE を返します。	傳回邏輯值 TRUE。	返回逻辑值 TRUE。
+Returns the number identifying an error value, or #N/A if it is not an error.	Trả về mã số loại lỗi, hoặc #N/A nếu giá trị không phải lỗi.	오류 종류를 나타내는 번호를 반환하며 오류가 아니면 #N/A를 반환합니다.	エラーの種類を表す番号を返します。エラーでなければ #N/A を返します。	傳回錯誤類型編號；若不是錯誤則傳回 #N/A。	返回错误类型编号；若不是错误则返回 #N/A。
+Returns the position of a value in a row or column with flexible match and search modes.	Trả về vị trí giá trị trong hàng hoặc cột với chế độ khớp và tìm kiếm linh hoạt.	다양한 일치 및 검색 방식을 사용하여 행 또는 열에서 값의 위치를 반환합니다.	柔軟な一致・検索モードで、行または列内の値の位置を返します。	使用彈性比對與搜尋模式，傳回值在列或欄中的位置。	使用灵活的匹配和搜索模式，返回值在行或列中的位置。
+Returns the value if it is text, otherwise empty text.	Trả về giá trị nếu là văn bản, nếu không trả về văn bản rỗng.	값이 텍스트이면 그대로, 아니면 빈 텍스트를 반환합니다.	値が文字列ならその値、それ以外は空文字列を返します。	值為文字時傳回原值，否則傳回空文字。	值为文本时返回原值，否则返回空文本。
+Returns the value paired with the first condition that is TRUE.	Trả về giá trị ứng với điều kiện TRUE đầu tiên.	처음으로 TRUE인 조건에 해당하는 값을 반환합니다.	最初に TRUE となる条件に対応する値を返します。	傳回第一個為 TRUE 的條件所對應的值。	返回首个为 TRUE 的条件对应的值。
+Reverses a logical value.	Đảo ngược giá trị logic.	논리값을 반전합니다.	論理値を反転します。	反轉邏輯值。	反转逻辑值。
+Shifts the bits of a number left (right for negative shifts).	Dịch bit của số sang trái (sang phải nếu số bước âm).	숫자의 비트를 왼쪽으로 이동합니다(이동 수가 음수이면 오른쪽).	数値のビットを左にシフトします（負数のシフトは右方向）。	將數值的位元向左移（負位移時向右）。	将数值的位向左移动（负位移时向右）。
+Shifts the bits of a number right (left for negative shifts).	Dịch bit của số sang phải (sang trái nếu số bước âm).	숫자의 비트를 오른쪽으로 이동합니다(이동 수가 음수이면 왼쪽).	数値のビットを右にシフトします（負数のシフトは左方向）。	將數值的位元向右移（負位移時向左）。	将数值的位向右移动（负位移时向左）。
+Smallest number in a field of the matching records.	Tìm số nhỏ nhất trong trường của các bản ghi thỏa điều kiện.	조건에 맞는 레코드의 필드에서 최솟값을 구합니다.	条件に一致するレコードのフィールドで最小値を求めます。	求符合條件記錄之欄位中的最小值。	求符合条件记录字段中的最小值。
+Smallest value among cells that meet every condition.	Tìm giá trị nhỏ nhất trong các ô thỏa mọi điều kiện.	모든 조건에 맞는 셀 중 최솟값을 구합니다.	すべての条件に一致するセルの最小値を求めます。	求符合所有條件儲存格中的最小值。	求满足所有条件的单元格中的最小值。
+Smallest value counting text as 0 and logicals as 1/0.	Tìm giá trị nhỏ nhất, tính văn bản là 0 và giá trị logic là 1/0.	텍스트를 0, 논리값을 1/0으로 처리하여 최솟값을 구합니다.	文字列を 0、論理値を 1/0 として最小値を求めます。	將文字視為 0、邏輯值視為 1/0，求最小值。	将文本视为 0、逻辑值视为 1/0，求最小值。
+Sorts an array by the values of other arrays of matching size.	Sắp xếp mảng theo giá trị của các mảng khác cùng kích thước.	크기가 같은 다른 배열의 값을 기준으로 배열을 정렬합니다.	同じサイズの別の配列の値で配列を並べ替えます。	依相同大小之其他陣列的值排序陣列。	按相同大小的其他数组的值对数组排序。
+Sorts the rows (or columns) of an array by one or more of its columns.	Sắp xếp các hàng (hoặc cột) của mảng theo một hoặc nhiều cột.	하나 이상의 열을 기준으로 배열의 행 또는 열을 정렬합니다.	配列内の 1 つ以上の列で、行（または列）を並べ替えます。	依陣列中一個或多個欄排序列（或欄）。	按数组中的一列或多列对行（或列）排序。
+Square root of a complex number.	Tính căn bậc hai của số phức.	복소수의 제곱근을 구합니다.	複素数の平方根を求めます。	計算複數的平方根。	计算复数的平方根。
+Square root of the number times pi.	Tính căn bậc hai của tích giữa số và pi.	숫자와 pi의 곱의 제곱근을 구합니다.	数値と pi の積の平方根を求めます。	計算數值乘以 pi 的平方根。	计算数值乘以 pi 的平方根。
+Stacks arrays on top of each other.	Ghép các mảng theo chiều dọc.	배열을 세로로 쌓습니다.	配列を縦に積み重ねます。	將陣列垂直堆疊。	将数组垂直堆叠。
+Sum of a power series.	Tính tổng chuỗi lũy thừa.	멱급수의 합을 구합니다.	べき級数の和を求めます。	計算冪級數的和。	计算幂级数的和。
+Sum of complex numbers.	Tính tổng các số phức.	복소수의 합을 구합니다.	複素数の和を求めます。	計算複數的總和。	计算复数的和。
+Sum of squared deviations from the mean.	Tính tổng bình phương độ lệch so với trung bình.	평균에 대한 편차 제곱합을 구합니다.	平均値からの偏差の二乗和を求めます。	計算相對平均值之偏差的平方和。	计算相对于平均值的离差平方和。
+Sums the differences of squares of matching elements.	Tính tổng hiệu các bình phương của các phần tử tương ứng.	대응하는 요소의 제곱 차를 합산합니다.	対応要素の二乗の差を合計します。	加總對應元素之平方的差。	对对应元素的平方差求和。
+Sums the squared differences of matching elements.	Tính tổng bình phương hiệu của các phần tử tương ứng.	대응하는 요소의 차를 제곱하여 합산합니다.	対応要素の差を二乗して合計します。	加總對應元素之差的平方。	对对应元素的差的平方求和。
+Sums the sums of squares of matching elements.	Tính tổng các tổng bình phương của các phần tử tương ứng.	대응하는 요소의 제곱합을 합산합니다.	対応要素の二乗和を合計します。	加總對應元素的平方和。	对对应元素的平方和求和。
+Swaps the rows and columns of an array.	Hoán đổi hàng và cột của mảng.	배열의 행과 열을 바꿉니다.	配列の行と列を入れ替えます。	對調陣列的列與欄。	交换数组的行和列。
+The constant pi to 15 digits.	Trả về hằng số pi với độ chính xác 15 chữ số.	15자리 정밀도의 상수 pi를 반환합니다.	15 桁の精度で定数 pi を返します。	以 15 位數精確度傳回常數 pi。	以 15 位数字精度返回常数 pi。
+The k-th largest number in a data set.	Tìm số lớn thứ k trong tập dữ liệu.	데이터 집합에서 k번째로 큰 수를 구합니다.	データセットで k 番目に大きい数値を求めます。	求資料集中的第 k 大值。	求数据集中的第 k 大值。
+The k-th smallest number in a data set.	Tìm số nhỏ thứ k trong tập dữ liệu.	데이터 집합에서 k번째로 작은 수를 구합니다.	データセットで k 番目に小さい数値を求めます。	求資料集中的第 k 小值。	求数据集中的第 k 小值。
+The sum of a subset as a fraction of the sum of all the values.	Tính tỷ lệ giữa tổng của tập con và tổng mọi giá trị.	전체 값의 합에 대한 부분 집합 합의 비율을 구합니다.	全体の合計に対する部分集合の合計の割合を求めます。	計算子集總和占全部值總和的比例。	计算子集之和占全部值之和的比例。
+Writes a number in another base, padded with zeros.	Biểu diễn số ở cơ số khác và thêm số không ở đầu cho đủ độ dài.	숫자를 다른 진법으로 표시하고 필요한 만큼 앞에 0을 채웁니다.	数値を別の基数で表し、必要な桁数までゼロを埋めます。	以其他進位表示數值，並補零至指定長度。	以其他进制表示数值，并补零至指定长度。
+e raised to the given power.	Tính e lũy thừa số mũ đã cho.	e의 지정한 거듭제곱을 구합니다.	e の指定されたべき乗を求めます。	計算 e 的指定次方。	计算 e 的指定次幂。
+Accrued interest of a security paying interest at maturity.	Tính lãi tích lũy của chứng khoán trả lãi khi đáo hạn.	만기에 이자를 지급하는 유가증권의 경과 이자를 구합니다.	満期に利息が支払われる証券の経過利息を求めます。	計算到期付息證券的應計利息。	计算到期付息证券的应计利息。
+Accrued interest of a security paying periodic interest.	Tính lãi tích lũy của chứng khoán trả lãi định kỳ.	이자를 정기적으로 지급하는 유가증권의 경과 이자를 구합니다.	定期的に利息が支払われる証券の経過利息を求めます。	計算定期付息證券的應計利息。	计算定期付息证券的应计利息。
+Amount received at maturity for a fully invested security.	Tính số tiền nhận khi đáo hạn của chứng khoán được đầu tư toàn bộ.	전액 투자한 유가증권의 만기 수령액을 구합니다.	全額投資した証券の満期受取額を求めます。	計算全額投資證券到期時的收款金額。	计算全额投资证券到期时的收款金额。
+Annual yield of a discounted security.	Tính lợi suất hằng năm của chứng khoán chiết khấu.	할인 발행 유가증권의 연 수익률을 구합니다.	割引証券の年利回りを求めます。	計算折價證券的年收益率。	计算贴现证券的年收益率。
+Annual yield of a security paying interest at maturity.	Tính lợi suất hằng năm của chứng khoán trả lãi khi đáo hạn.	만기에 이자를 지급하는 유가증권의 연 수익률을 구합니다.	満期に利息が支払われる証券の年利回りを求めます。	計算到期付息證券的年收益率。	计算到期付息证券的年收益率。
+Bond-equivalent yield of a Treasury bill.	Tính lợi suất tương đương trái phiếu của tín phiếu Kho bạc.	국고 단기 증권의 채권 등가 수익률을 구합니다.	財務省短期証券の債券換算利回りを求めます。	計算國庫券的債券等值收益率。	计算国库券的等价债券收益率。
+Converts between the euro and the former euro member currencies at the fixed rates.	Quy đổi giữa euro và tiền tệ cũ của các nước thành viên theo tỷ giá cố định.	고정 환율로 유로와 유로 가입국의 이전 통화를 상호 변환합니다.	固定換算レートで、ユーロとユーロ加盟国の旧通貨を換算します。	以固定匯率換算歐元與歐元區成員國的舊貨幣。	按固定汇率换算欧元与欧元区成员国的旧货币。
+Days from settlement to the next coupon date.	Tính số ngày từ ngày thanh toán đến ngày trả lãi tiếp theo.	결제일부터 다음 이자 지급일까지의 일수를 구합니다.	受渡日から次の利払日までの日数を求めます。	計算交割日至下一付息日的天數。	计算结算日到下一付息日的天数。
+Days from the start of the coupon period to settlement.	Tính số ngày từ đầu kỳ trả lãi đến ngày thanh toán.	이자 지급 기간 시작일부터 결제일까지의 일수를 구합니다.	利払期間の開始日から受渡日までの日数を求めます。	計算付息期間起日至交割日的天數。	计算付息期起始日到结算日的天数。
+Days in the coupon period that contains settlement.	Tính số ngày của kỳ trả lãi chứa ngày thanh toán.	결제일이 포함된 이자 지급 기간의 일수를 구합니다.	受渡日を含む利払期間の日数を求めます。	計算包含交割日之付息期間的天數。	计算包含结算日的付息期的天数。
+Declining-balance depreciation over any span of periods, switching to straight line.	Tính khấu hao số dư giảm dần trong khoảng kỳ bất kỳ, có chuyển sang đường thẳng.	임의의 기간에 대해 정액법으로 전환하는 정률법 감가상각액을 구합니다.	任意の期間について、定額法に切り替える定率法の減価償却費を求めます。	計算任意期間的餘額遞減折舊，並可轉為直線法。	计算任意期间的余额递减折旧，并可转为直线法。
+Discount rate of a security.	Tính tỷ lệ chiết khấu của chứng khoán.	유가증권의 할인율을 구합니다.	証券の割引率を求めます。	計算證券的折現率。	计算证券的贴现率。
+Double-declining-balance (or other factor) depreciation for a period.	Tính khấu hao trong kỳ theo số dư giảm dần kép (hoặc hệ số khác).	이중 체감법 또는 지정한 비율로 기간 감가상각액을 구합니다.	倍額定率法（または指定倍率）で 1 期間の減価償却費を求めます。	以雙倍餘額遞減法（或其他係數）計算一期的折舊。	用双倍余额递减法（或其他系数）计算一期的折旧。
+Effective annual rate from a nominal rate and compounding periods.	Tính lãi suất thực tế hằng năm từ lãi suất danh nghĩa và số kỳ ghép lãi.	명목 이율과 복리 계산 횟수로 실효 연이율을 구합니다.	名目利率と複利計算回数から実効年利率を求めます。	依名目利率與複利期數計算有效年利率。	根据名义利率和复利期数计算实际年利率。
+Equivalent interest rate for the growth of an investment.	Tính lãi suất tương đương với mức tăng trưởng của khoản đầu tư.	투자 성장에 해당하는 등가 이율을 구합니다.	投資の成長に相当する利率を求めます。	計算投資成長的等值利率。	计算投资增长的等值利率。
+Fixed-declining-balance depreciation for a period.	Tính khấu hao trong kỳ theo phương pháp số dư giảm dần cố định.	고정 정률법으로 기간 감가상각액을 구합니다.	固定定率法で 1 期間の減価償却費を求めます。	以固定餘額遞減法計算一期的折舊。	用固定余额递减法计算一期的折旧。
+Formats a number as currency text, like DOLLAR.	Định dạng số thành văn bản tiền tệ, giống hàm DOLLAR.	DOLLAR와 같이 숫자를 통화 형식의 텍스트로 표시합니다.	DOLLAR と同様に、数値を通貨形式の文字列にします。	如同 DOLLAR，將數值格式化為貨幣文字。	与 DOLLAR 一样，将数字格式化为货币文本。
+Formats a number as currency text.	Định dạng số thành văn bản tiền tệ.	숫자를 통화 형식의 텍스트로 표시합니다.	数値を通貨形式の文字列にします。	將數值格式化為貨幣文字。	将数字格式化为货币文本。
+French degressive depreciation with a life-based coefficient.	Tính khấu hao giảm dần kiểu Pháp với hệ số theo tuổi thọ tài sản.	자산 수명에 따른 계수로 프랑스식 정률 감가상각액을 구합니다.	耐用年数に基づく係数を使い、フランス方式の定率減価償却費を求めます。	使用依耐用年限決定的係數，計算法式遞減折舊。	使用由使用年限决定的系数，计算法式递减折旧。
+French linear depreciation prorated for the first period.	Tính khấu hao đường thẳng kiểu Pháp, phân bổ theo thời gian cho kỳ đầu.	첫 기간을 일할 계산하는 프랑스식 정액 감가상각액을 구합니다.	最初の期間を按分し、フランス方式の定額減価償却費を求めます。	計算法式直線折舊，首期依比例分攤。	计算法式直线折旧，首期按比例分摊。
+Future value of a principal after a series of compound rates.	Tính giá trị tương lai của vốn gốc qua chuỗi lãi suất ghép.	여러 복리 이율을 적용한 원금의 미래 가치를 구합니다.	一連の複利率を適用した元本の将来価値を求めます。	計算本金經一系列複利利率後的未來價值。	计算本金经过一系列复利利率后的未来值。
+Future value of an investment with constant payments and rate.	Tính giá trị tương lai của khoản đầu tư có số tiền trả và lãi suất cố định.	납입액과 이율이 일정한 투자의 미래 가치를 구합니다.	定額の支払いと一定利率による投資の将来価値を求めます。	計算固定付款額與利率之投資的未來價值。	计算固定付款额和利率的投资的未来值。
+Interest paid in a period of a loan with even principal payments.	Tính tiền lãi trong một kỳ của khoản vay trả đều gốc.	원금 균등 상환 대출의 기간 이자액을 구합니다.	元金均等返済のローンについて、1 期間の利息を求めます。	計算本金平均攤還貸款一期的利息。	计算等额本金贷款一期的利息。
+Interest part of a given period's payment.	Tính phần tiền lãi trong khoản trả của kỳ đã cho.	지정한 기간의 상환액 중 이자 부분을 구합니다.	指定期間の支払額のうち利息分を求めます。	計算指定期付款中的利息部分。	计算指定期付款中的利息部分。
+Interest rate of a fully invested security.	Tính lãi suất của chứng khoán được đầu tư toàn bộ.	전액 투자한 유가증권의 이율을 구합니다.	全額投資した証券の利率を求めます。	計算全額投資證券的利率。	计算全额投资证券的利率。
+Interest rate per period of an annuity, found iteratively.	Tính lãi suất mỗi kỳ của niên kim bằng phương pháp lặp.	반복 계산으로 연금의 기간별 이율을 구합니다.	反復計算で年金の 1 期間あたりの利率を求めます。	以反覆運算求年金每期的利率。	通过迭代计算年金每期的利率。
+Internal rate of return of cash flows on specific dates.	Tính tỷ suất hoàn vốn nội bộ của dòng tiền vào các ngày cụ thể.	날짜가 지정된 현금 흐름의 내부 수익률을 구합니다.	指定日のキャッシュ フローの内部収益率を求めます。	計算特定日期現金流量的內部報酬率。	计算指定日期现金流的内部收益率。
+Internal rate of return of periodic cash flows.	Tính tỷ suất hoàn vốn nội bộ của dòng tiền định kỳ.	정기적인 현금 흐름의 내부 수익률을 구합니다.	定期的なキャッシュ フローの内部収益率を求めます。	計算定期現金流量的內部報酬率。	计算定期现金流的内部收益率。
+Macaulay duration of a security with periodic interest.	Tính thời hạn Macaulay của chứng khoán trả lãi định kỳ.	정기 이자 지급 유가증권의 매콜리 듀레이션을 구합니다.	定期利払い証券のマコーレー デュレーションを求めます。	計算定期付息證券的麥考利存續期間。	计算定期付息证券的麦考利久期。
+Modified duration of a security with periodic interest.	Tính thời hạn hiệu chỉnh của chứng khoán trả lãi định kỳ.	정기 이자 지급 유가증권의 수정 듀레이션을 구합니다.	定期利払い証券の修正デュレーションを求めます。	計算定期付息證券的修正存續期間。	计算定期付息证券的修正久期。
+Modified internal rate of return using separate borrow and reinvest rates.	Tính tỷ suất hoàn vốn nội bộ hiệu chỉnh với lãi suất vay và tái đầu tư riêng.	차입 이율과 재투자 이율을 구분하여 수정 내부 수익률을 구합니다.	借入利率と再投資利率を別々に指定し、修正内部収益率を求めます。	使用不同的借款與再投資利率，計算修正內部報酬率。	使用不同的借款和再投资利率，计算修正内部收益率。
+Net present value of cash flows on specific dates.	Tính giá trị hiện tại ròng của dòng tiền vào các ngày cụ thể.	날짜가 지정된 현금 흐름의 순현재 가치를 구합니다.	指定日のキャッシュ フローの正味現在価値を求めます。	計算特定日期現金流量的淨現值。	计算指定日期现金流的净现值。
+Net present value of periodic cash flows at a discount rate.	Tính giá trị hiện tại ròng của dòng tiền định kỳ theo tỷ lệ chiết khấu.	할인율을 적용하여 정기 현금 흐름의 순현재 가치를 구합니다.	割引率を使い、定期的なキャッシュ フローの正味現在価値を求めます。	依折現率計算定期現金流量的淨現值。	按贴现率计算定期现金流的净现值。
+Next coupon date after settlement.	Trả về ngày trả lãi tiếp theo sau ngày thanh toán.	결제일 이후의 다음 이자 지급일을 반환합니다.	受渡日後の次の利払日を返します。	傳回交割日之後的下一付息日。	返回结算日之后的下一付息日。
+Nominal annual rate from an effective rate and compounding periods.	Tính lãi suất danh nghĩa hằng năm từ lãi suất thực tế và số kỳ ghép lãi.	실효 이율과 복리 계산 횟수로 명목 연이율을 구합니다.	実効利率と複利計算回数から名目年利率を求めます。	依有效利率與複利期數計算名目年利率。	根据实际利率和复利期数计算名义年利率。
+Number of coupons payable between settlement and maturity.	Tính số lần trả lãi từ ngày thanh toán đến ngày đáo hạn.	결제일부터 만기일까지의 이자 지급 횟수를 구합니다.	受渡日から満期日までの利払い回数を求めます。	計算交割日至到期日之間的付息次數。	计算结算日到到期日之间的付息次数。
+Number of periods needed to pay off or accumulate an amount.	Tính số kỳ cần để trả hết hoặc tích lũy một khoản tiền.	금액을 상환하거나 적립하는 데 필요한 기간 수를 구합니다.	金額の返済または積立に必要な期間数を求めます。	計算償清或累積金額所需的期數。	计算偿清或积累金额所需的期数。
+Periodic payment for a loan or annuity with constant payments and rate.	Tính khoản trả định kỳ cho khoản vay hoặc niên kim có số tiền trả và lãi suất cố định.	상환액과 이율이 일정한 대출 또는 연금의 정기 납입액을 구합니다.	定額払い・一定利率のローンまたは年金の定期支払額を求めます。	計算固定付款額與利率之貸款或年金的每期付款。	计算固定付款额和利率的贷款或年金的每期付款额。
+Periods needed for an investment to grow to a target value.	Tính số kỳ cần để khoản đầu tư tăng đến giá trị mục tiêu.	투자가 목표 금액에 도달하는 데 필요한 기간 수를 구합니다.	投資が目標額に達するまでに必要な期間数を求めます。	計算投資成長至目標值所需的期數。	计算投资增长至目标值所需的期数。
+Present value of a series of equal future payments.	Tính giá trị hiện tại của chuỗi khoản trả tương lai bằng nhau.	동일한 미래 납입액의 현재 가치를 구합니다.	将来の定額支払いの現在価値を求めます。	計算一系列未來等額付款的現值。	计算一系列未来等额付款的现值。
+Previous coupon date on or before settlement.	Trả về ngày trả lãi gần nhất vào hoặc trước ngày thanh toán.	결제일 또는 그 이전의 최근 이자 지급일을 반환합니다.	受渡日以前の直近の利払日を返します。	傳回交割日當日或之前最近的付息日。	返回结算日当天或之前最近的付息日。
+Price per 100 face value of a Treasury bill.	Tính giá tín phiếu Kho bạc trên mỗi 100 đơn vị mệnh giá.	액면가 100당 국고 단기 증권의 가격을 구합니다.	額面 100 あたりの財務省短期証券の価格を求めます。	計算每 100 單位面額國庫券的價格。	计算每 100 单位面值国库券的价格。
+Price per 100 face value of a discounted security.	Tính giá chứng khoán chiết khấu trên mỗi 100 đơn vị mệnh giá.	액면가 100당 할인 발행 유가증권의 가격을 구합니다.	額面 100 あたりの割引証券の価格を求めます。	計算每 100 單位面額折價證券的價格。	计算每 100 单位面值贴现证券的价格。
+Price per 100 face value of a security paying interest at maturity.	Tính giá chứng khoán trả lãi khi đáo hạn trên mỗi 100 đơn vị mệnh giá.	액면가 100당 만기 이자 지급 유가증권의 가격을 구합니다.	額面 100 あたりの満期利払い証券の価格を求めます。	計算每 100 單位面額到期付息證券的價格。	计算每 100 单位面值到期付息证券的价格。
+Price per 100 face value of a security paying periodic interest.	Tính giá chứng khoán trả lãi định kỳ trên mỗi 100 đơn vị mệnh giá.	액면가 100당 정기 이자 지급 유가증권의 가격을 구합니다.	額面 100 あたりの定期利払い証券の価格を求めます。	計算每 100 單位面額定期付息證券的價格。	计算每 100 单位面值定期付息证券的价格。
+Price per 100 face value of a security with an odd first period.	Tính giá chứng khoán có kỳ đầu bất thường trên mỗi 100 đơn vị mệnh giá.	첫 이자 지급 기간이 불규칙한 유가증권의 액면가 100당 가격을 구합니다.	最初の利払期間が変則的な証券の、額面 100 あたりの価格を求めます。	計算首期不規則之證券每 100 單位面額的價格。	计算首期不规则证券每 100 单位面值的价格。
+Price per 100 face value of a security with an odd last period.	Tính giá chứng khoán có kỳ cuối bất thường trên mỗi 100 đơn vị mệnh giá.	마지막 이자 지급 기간이 불규칙한 유가증권의 액면가 100당 가격을 구합니다.	最後の利払期間が変則的な証券の、額面 100 あたりの価格を求めます。	計算末期不規則之證券每 100 單位面額的價格。	计算末期不规则证券每 100 单位面值的价格。
+Principal part of a given period's payment.	Tính phần tiền gốc trong khoản trả của kỳ đã cho.	지정한 기간의 상환액 중 원금 부분을 구합니다.	指定期間の支払額のうち元金分を求めます。	計算指定期付款中的本金部分。	计算指定期付款中的本金部分。
+Straight-line depreciation for one period.	Tính khấu hao đường thẳng trong một kỳ.	정액법으로 한 기간의 감가상각액을 구합니다.	定額法で 1 期間の減価償却費を求めます。	以直線法計算一期的折舊。	用直线法计算一期的折旧。
+Sum-of-years'-digits depreciation for a period.	Tính khấu hao trong kỳ theo phương pháp tổng số năm sử dụng.	연수 합계법으로 기간 감가상각액을 구합니다.	級数法で 1 期間の減価償却費を求めます。	以年數合計法計算一期的折舊。	用年数总和法计算一期的折旧。
+Total interest paid between two periods.	Tính tổng lãi đã trả giữa hai kỳ.	두 기간 사이에 지급한 이자의 합을 구합니다.	2 つの期間の間に支払った利息の合計を求めます。	計算兩期之間支付的利息總額。	计算两期之间支付的利息总额。
+Total principal repaid between two periods.	Tính tổng gốc đã trả giữa hai kỳ.	두 기간 사이에 상환한 원금의 합을 구합니다.	2 つの期間の間に返済した元金の合計を求めます。	計算兩期之間償還的本金總額。	计算两期之间偿还的本金总额。
+Yield of a Treasury bill.	Tính lợi suất của tín phiếu Kho bạc.	국고 단기 증권의 수익률을 구합니다.	財務省短期証券の利回りを求めます。	計算國庫券的收益率。	计算国库券的收益率。
+Yield of a security paying periodic interest.	Tính lợi suất của chứng khoán trả lãi định kỳ.	정기 이자 지급 유가증권의 수익률을 구합니다.	定期利払い証券の利回りを求めます。	計算定期付息證券的收益率。	计算定期付息证券的收益率。
+Yield of a security with an odd first period.	Tính lợi suất của chứng khoán có kỳ đầu bất thường.	첫 이자 지급 기간이 불규칙한 유가증권의 수익률을 구합니다.	最初の利払期間が変則的な証券の利回りを求めます。	計算首期不規則之證券的收益率。	计算首期不规则证券的收益率。
+Yield of a security with an odd last period.	Tính lợi suất của chứng khoán có kỳ cuối bất thường.	마지막 이자 지급 기간이 불규칙한 유가증권의 수익률을 구합니다.	最後の利払期間が変則的な証券の利回りを求めます。	計算末期不規則之證券的收益率。	计算末期不规则证券的收益率。
+A statistic of the FORECAST.ETS model: 1 alpha, 2 beta, 3 gamma, 4 MASE, 5 SMAPE, 6 MAE, 7 RMSE, 8 step size.	Trả về thống kê mô hình FORECAST.ETS: 1 alpha, 2 beta, 3 gamma, 4 MASE, 5 SMAPE, 6 MAE, 7 RMSE, 8 kích thước bước.	FORECAST.ETS 모델 통계값을 반환합니다. 1 알파, 2 베타, 3 감마, 4 MASE, 5 SMAPE, 6 MAE, 7 RMSE, 8 단계 크기.	FORECAST.ETS モデルの統計値を返します。1: アルファ、2: ベータ、3: ガンマ、4: MASE、5: SMAPE、6: MAE、7: RMSE、8: ステップ幅。	傳回 FORECAST.ETS 模型統計值：1 Alpha、2 Beta、3 Gamma、4 MASE、5 SMAPE、6 MAE、7 RMSE、8 步長。	返回 FORECAST.ETS 模型统计值：1 Alpha、2 Beta、3 Gamma、4 MASE、5 SMAPE、6 MAE、7 RMSE、8 步长。
+Bessel function of the first kind, J_n(x).	Tính hàm Bessel loại một, J_n(x).	제1종 베셀 함수 J_n(x)를 구합니다.	第 1 種ベッセル関数 J_n(x) を求めます。	計算第一類貝塞爾函數 J_n(x)。	计算第一类贝塞尔函数 J_n(x)。
+Bessel function of the second kind, Y_n(x).	Tính hàm Bessel loại hai, Y_n(x).	제2종 베셀 함수 Y_n(x)를 구합니다.	第 2 種ベッセル関数 Y_n(x) を求めます。	計算第二類貝塞爾函數 Y_n(x)。	计算第二类贝塞尔函数 Y_n(x)。
+Beta distribution density or probability.	Tính mật độ hoặc xác suất phân phối beta.	베타 분포의 밀도 또는 확률을 구합니다.	ベータ分布の密度または確率を求めます。	計算 Beta 分配的密度或機率。	计算 Beta 分布的密度或概率。
+Binomial probability.	Tính xác suất nhị thức.	이항 확률을 구합니다.	二項確率を求めます。	計算二項機率。	计算二项概率。
+Chi-squared density or left-tailed probability.	Tính mật độ hoặc xác suất đuôi trái của phân phối chi bình phương.	카이 제곱 분포의 밀도 또는 왼쪽 꼬리 확률을 구합니다.	カイ二乗分布の密度または左側確率を求めます。	計算卡方分配的密度或左尾機率。	计算卡方分布的密度或左尾概率。
+Chi-squared test of independence.	Thực hiện kiểm định chi bình phương về tính độc lập.	독립성 카이 제곱 검정을 수행합니다.	独立性のカイ二乗検定を行います。	進行卡方獨立性檢定。	进行卡方独立性检验。
+Complementary error function, 1 - ERF(x).	Tính hàm sai số bù, 1 - ERF(x).	상보 오차 함수 1 - ERF(x)를 구합니다.	相補誤差関数 1 - ERF(x) を求めます。	計算互補誤差函數 1 - ERF(x)。	计算互补误差函数 1 - ERF(x)。
+Confidence interval half-width using Student's t distribution.	Tính nửa độ rộng khoảng tin cậy theo phân phối t Student.	스튜던트 t 분포를 이용한 신뢰 구간의 반폭을 구합니다.	スチューデントの t 分布による信頼区間の半幅を求めます。	使用 Student t 分配計算信賴區間半寬。	使用 Student t 分布计算置信区间半宽。
+Confidence interval half-width using the normal distribution.	Tính nửa độ rộng khoảng tin cậy theo phân phối chuẩn.	정규 분포를 이용한 신뢰 구간의 반폭을 구합니다.	正規分布による信頼区間の半幅を求めます。	使用常態分配計算信賴區間半寬。	使用正态分布计算置信区间半宽。
+Correlation coefficient of two data sets.	Tính hệ số tương quan của hai tập dữ liệu.	두 데이터 집합의 상관 계수를 구합니다.	2 つのデータセットの相関係数を求めます。	計算兩個資料集的相關係數。	计算两个数据集的相关系数。
+Counts the items in a cube set (no cube connections; #N/A).	Đếm mục trong tập khối dữ liệu (chưa có kết nối khối; #N/A).	큐브 집합의 항목 수를 셉니다(큐브 연결을 지원하지 않아 #N/A).	キューブ セット内の項目を数えます（キューブ接続は未対応、#N/A）。	計算 Cube 集合的項目數（尚無 Cube 連線；#N/A）。	计算多维数据集集合中的项数（尚无多维数据集连接；#N/A）。
+Cumulative beta probability.	Tính xác suất beta tích lũy.	베타 누적 확률을 구합니다.	ベータ累積確率を求めます。	計算累積 Beta 機率。	计算累积 Beta 概率。
+Cumulative lognormal probability.	Tính xác suất logarit chuẩn tích lũy.	로그 정규 누적 확률을 구합니다.	対数正規累積確率を求めます。	計算累積對數常態機率。	计算累积对数正态概率。
+Defines a set of cube members (no cube connections; #N/A).	Xác định tập thành viên của khối dữ liệu (chưa có kết nối khối; #N/A).	큐브 멤버 집합을 정의합니다(큐브 연결을 지원하지 않아 #N/A).	キューブ メンバーのセットを定義します（キューブ接続は未対応、#N/A）。	定義 Cube 成員集合（尚無 Cube 連線；#N/A）。	定义多维数据集成员集合（尚无多维数据集连接；#N/A）。
+Error function integrated from 0 to a limit, or between two limits.	Tính tích phân hàm sai số từ 0 đến một cận hoặc giữa hai cận.	0부터 한 경계까지 또는 두 경계 사이에서 오차 함수를 적분합니다.	0 から上限まで、または 2 つの限界間で誤差関数を積分します。	計算從 0 至指定界限或兩界限間的誤差函數積分。	计算从 0 到指定界限或两个界限之间的误差函数积分。
+Error function integrated from 0 to x.	Tính tích phân hàm sai số từ 0 đến x.	0부터 x까지 오차 함수를 적분합니다.	0 から x まで誤差関数を積分します。	計算從 0 至 x 的誤差函數積分。	计算从 0 到 x 的误差函数积分。
+Excess kurtosis of a sample.	Tính độ nhọn dư của mẫu.	표본의 초과 첨도를 구합니다.	標本の超過尖度を求めます。	計算樣本的超額峰度。	计算样本的超额峰度。
+Exponential curve coefficients and optional regression statistics.	Tính hệ số đường cong hàm mũ và thống kê hồi quy nếu được yêu cầu.	지수 곡선 계수와 선택적인 회귀 통계값을 구합니다.	指数曲線の係数と、指定に応じて回帰統計を求めます。	計算指數曲線係數，並可傳回迴歸統計值。	计算指数曲线系数，并可返回回归统计值。
+Exponential distribution density or probability.	Tính mật độ hoặc xác suất phân phối mũ.	지수 분포의 밀도 또는 확률을 구합니다.	指数分布の密度または確率を求めます。	計算指數分配的密度或機率。	计算指数分布的密度或概率。
+F distribution density or left-tailed probability.	Tính mật độ hoặc xác suất đuôi trái của phân phối F.	F 분포의 밀도 또는 왼쪽 꼬리 확률을 구합니다.	F 分布の密度または左側確率を求めます。	計算 F 分配的密度或左尾機率。	计算 F 分布的密度或左尾概率。
+Fisher transformation.	Thực hiện biến đổi Fisher.	피셔 변환을 수행합니다.	フィッシャー変換を行います。	進行費雪轉換。	进行费希尔变换。
+Forecasts a value by additive (AAA) exponential smoothing.	Dự báo giá trị bằng làm trơn hàm mũ cộng (AAA).	가법(AAA) 지수 평활법으로 값을 예측합니다.	加法型（AAA）指数平滑法で値を予測します。	使用加法式（AAA）指數平滑法預測值。	使用加法式（AAA）指数平滑法预测值。
+Gamma distribution density or probability.	Tính mật độ hoặc xác suất phân phối gamma.	감마 분포의 밀도 또는 확률을 구합니다.	ガンマ分布の密度または確率を求めます。	計算伽瑪分配的密度或機率。	计算伽马分布的密度或概率。
+Half-width of the confidence interval around a FORECAST.ETS value.	Tính nửa độ rộng khoảng tin cậy quanh giá trị FORECAST.ETS.	FORECAST.ETS 예측값의 신뢰 구간 반폭을 구합니다.	FORECAST.ETS の値に対する信頼区間の半幅を求めます。	計算 FORECAST.ETS 值的信賴區間半寬。	计算 FORECAST.ETS 值的置信区间半宽。
+Hypergeometric probability of an exact count.	Tính xác suất siêu bội của đúng số lần đã cho.	정확히 지정한 횟수에 대한 초기하 확률을 구합니다.	指定回数に対する超幾何確率を求めます。	計算恰好指定次數的超幾何機率。	计算恰好指定次数的超几何概率。
+Hypergeometric probability.	Tính xác suất siêu bội.	초기하 확률을 구합니다.	超幾何確率を求めます。	計算超幾何機率。	计算超几何概率。
+Inverse of the Fisher transformation.	Tính biến đổi Fisher nghịch đảo.	피셔 역변환을 구합니다.	フィッシャー逆変換を求めます。	計算費雪反轉換。	计算费希尔逆变换。
+Inverse of the cumulative beta distribution.	Tính hàm nghịch đảo của phân phối beta tích lũy.	베타 누적 분포의 역함수를 구합니다.	ベータ累積分布の逆関数を求めます。	計算累積 Beta 分配的反函數。	计算累积 Beta 分布的反函数。
+Inverse of the cumulative lognormal distribution.	Tính hàm nghịch đảo của phân phối logarit chuẩn tích lũy.	로그 정규 누적 분포의 역함수를 구합니다.	対数正規累積分布の逆関数を求めます。	計算累積對數常態分配的反函數。	计算累积对数正态分布的反函数。
+Inverse of the gamma cumulative distribution.	Tính hàm nghịch đảo của phân phối gamma tích lũy.	감마 누적 분포의 역함수를 구합니다.	ガンマ累積分布の逆関数を求めます。	計算伽瑪累積分配的反函數。	计算伽马累积分布的反函数。
+Inverse of the left-tailed F distribution.	Tính hàm nghịch đảo của phân phối F đuôi trái.	왼쪽 꼬리 F 분포의 역함수를 구합니다.	F 分布の左側確率の逆関数を求めます。	計算左尾 F 分配的反函數。	计算左尾 F 分布的反函数。
+Inverse of the left-tailed chi-squared distribution.	Tính hàm nghịch đảo của phân phối chi bình phương đuôi trái.	왼쪽 꼬리 카이 제곱 분포의 역함수를 구합니다.	カイ二乗分布の左側確率の逆関数を求めます。	計算左尾卡方分配的反函數。	计算左尾卡方分布的反函数。
+Inverse of the normal cumulative distribution.	Tính hàm nghịch đảo của phân phối chuẩn tích lũy.	정규 누적 분포의 역함수를 구합니다.	正規累積分布の逆関数を求めます。	計算常態累積分配的反函數。	计算正态累积分布的反函数。
+Inverse of the right-tailed F distribution.	Tính hàm nghịch đảo của phân phối F đuôi phải.	오른쪽 꼬리 F 분포의 역함수를 구합니다.	F 分布の右側確率の逆関数を求めます。	計算右尾 F 分配的反函數。	计算右尾 F 分布的反函数。
+Inverse of the right-tailed chi-squared distribution.	Tính hàm nghịch đảo của phân phối chi bình phương đuôi phải.	오른쪽 꼬리 카이 제곱 분포의 역함수를 구합니다.	カイ二乗分布の右側確率の逆関数を求めます。	計算右尾卡方分配的反函數。	计算右尾卡方分布的反函数。
+Inverse of the standard normal cumulative distribution.	Tính hàm nghịch đảo của phân phối chuẩn tắc tích lũy.	표준 정규 누적 분포의 역함수를 구합니다.	標準正規累積分布の逆関数を求めます。	計算標準常態累積分配的反函數。	计算标准正态累积分布的反函数。
+Least-squares line coefficients and optional regression statistics.	Tính hệ số đường thẳng bình phương tối thiểu và thống kê hồi quy nếu được yêu cầu.	최소제곱 직선의 계수와 선택적인 회귀 통계값을 구합니다.	最小二乗直線の係数と、指定に応じて回帰統計を求めます。	計算最小平方法直線係數，並可傳回迴歸統計值。	计算最小二乘直线系数，并可返回回归统计值。
+Left-tailed inverse of Student's t distribution.	Tính nghịch đảo đuôi trái của phân phối t Student.	스튜던트 t 분포의 왼쪽 꼬리 역함수를 구합니다.	スチューデントの t 分布の左側確率の逆関数を求めます。	計算 Student t 分配的左尾反函數。	计算 Student t 分布的左尾反函数。
+Length of the repeating pattern detected in a time series.	Tìm độ dài chu kỳ lặp được phát hiện trong chuỗi thời gian.	시계열에서 감지된 반복 패턴의 길이를 구합니다.	時系列で検出された繰り返しパターンの長さを求めます。	求時間序列中偵測到之重複模式的長度。	求时间序列中检测到的重复模式的长度。
+Lognormal density or probability.	Tính mật độ hoặc xác suất logarit chuẩn.	로그 정규 분포의 밀도 또는 확률을 구합니다.	対数正規分布の密度または確率を求めます。	計算對數常態密度或機率。	计算对数正态密度或概率。
+Modified Bessel function of the first kind, I_n(x).	Tính hàm Bessel biến đổi loại một, I_n(x).	제1종 수정 베셀 함수 I_n(x)를 구합니다.	第 1 種変形ベッセル関数 I_n(x) を求めます。	計算第一類修正貝塞爾函數 I_n(x)。	计算第一类修正贝塞尔函数 I_n(x)。
+Modified Bessel function of the second kind, K_n(x).	Tính hàm Bessel biến đổi loại hai, K_n(x).	제2종 수정 베셀 함수 K_n(x)를 구합니다.	第 2 種変形ベッセル関数 K_n(x) を求めます。	計算第二類修正貝塞爾函數 K_n(x)。	计算第二类修正贝塞尔函数 K_n(x)。
+Negative binomial probability.	Tính xác suất nhị thức âm.	음이항 확률을 구합니다.	負の二項確率を求めます。	計算負二項機率。	计算负二项概率。
+Normal distribution density or cumulative probability.	Tính mật độ hoặc xác suất tích lũy của phân phối chuẩn.	정규 분포의 밀도 또는 누적 확률을 구합니다.	正規分布の密度または累積確率を求めます。	計算常態分配的密度或累積機率。	计算正态分布的密度或累积概率。
+Number of combinations with repetition.	Tính số tổ hợp có lặp.	중복 조합의 수를 구합니다.	重複を許す組み合わせの数を求めます。	計算可重複組合的數目。	计算可重复组合的数量。
+Number of combinations without repetition.	Tính số tổ hợp không lặp.	중복 없는 조합의 수를 구합니다.	重複のない組み合わせの数を求めます。	計算不重複組合的數目。	计算不重复组合的数量。
+Number of ordered selections with repetition.	Tính số cách chọn có thứ tự và có lặp.	중복을 허용하는 순열의 수를 구합니다.	重複を許す順列の数を求めます。	計算可重複排列的數目。	计算可重复排列的数量。
+Number of ordered selections without repetition.	Tính số cách chọn có thứ tự và không lặp.	중복 없는 순열의 수를 구합니다.	重複のない順列の数を求めます。	計算不重複排列的數目。	计算不重复排列的数量。
+One- or two-tailed Student's t probability.	Tính xác suất một hoặc hai đuôi của phân phối t Student.	스튜던트 t 분포의 단측 또는 양측 확률을 구합니다.	スチューデントの t 分布の片側または両側確率を求めます。	計算 Student t 分配的單尾或雙尾機率。	计算 Student t 分布的单尾或双尾概率。
+One-tailed probability of a z-test.	Tính xác suất một đuôi của kiểm định z.	z 검정의 단측 확률을 구합니다.	z 検定の片側確率を求めます。	計算 z 檢定的單尾機率。	计算 z 检验的单尾概率。
+Pearson product-moment correlation coefficient.	Tính hệ số tương quan tích-mômen Pearson.	피어슨 적률 상관 계수를 구합니다.	ピアソンの積率相関係数を求めます。	計算皮爾森積差相關係數。	计算皮尔逊积矩相关系数。
+Poisson probability.	Tính xác suất Poisson.	푸아송 확률을 구합니다.	ポアソン確率を求めます。	計算卜瓦松機率。	计算泊松概率。
+Predicts a value along a linear trend.	Dự đoán giá trị theo xu hướng tuyến tính.	선형 추세에 따른 값을 예측합니다.	線形トレンドに基づいて値を予測します。	依線性趨勢預測值。	根据线性趋势预测值。
+Probability from Student's t-test.	Tính xác suất từ kiểm định t Student.	스튜던트 t 검정의 확률을 구합니다.	スチューデントの t 検定の確率を求めます。	計算 Student t 檢定的機率。	计算 Student t 检验的概率。
+Probability of a number of successes falling in a range.	Tính xác suất số lần thành công nằm trong khoảng.	성공 횟수가 범위 안에 있을 확률을 구합니다.	成功回数が範囲内に入る確率を求めます。	計算成功次數落在範圍內的機率。	计算成功次数落在范围内的概率。
+Probability that a standard normal value falls between the mean and z.	Tính xác suất giá trị chuẩn tắc nằm giữa trung bình và z.	표준 정규 값이 평균과 z 사이에 있을 확률을 구합니다.	標準正規の値が平均と z の間に入る確率を求めます。	計算標準常態值介於平均值與 z 之間的機率。	计算标准正态值介于均值与 z 之间的概率。
+Probability that values fall between two limits.	Tính xác suất giá trị nằm giữa hai cận.	값이 두 경계 사이에 있을 확률을 구합니다.	値が 2 つの限界間に入る確率を求めます。	計算值落在兩界限之間的機率。	计算值落在两个界限之间的概率。
+Quartile (0–4) of a data set, inclusive method.	Tính tứ phân vị (0–4) của tập dữ liệu theo cách gồm hai đầu.	양 끝을 포함하는 방식으로 데이터 집합의 사분위수(0~4)를 구합니다.	両端を含む方式でデータセットの四分位数（0～4）を求めます。	以包含端點方式計算資料集的四分位數（0–4）。	用包含端点的方法计算数据集的四分位数（0–4）。
+Quartile (0–4) of a data set.	Tính tứ phân vị (0–4) của tập dữ liệu.	데이터 집합의 사분위수(0~4)를 구합니다.	データセットの四分位数（0～4）を求めます。	計算資料集的四分位數（0–4）。	计算数据集的四分位数（0–4）。
+Quartile (1–3) of a data set, exclusive method.	Tính tứ phân vị (1–3) của tập dữ liệu theo cách loại hai đầu.	양 끝을 제외하는 방식으로 데이터 집합의 사분위수(1~3)를 구합니다.	両端を除く方式でデータセットの四分位数（1～3）を求めます。	以排除端點方式計算資料集的四分位數（1–3）。	用排除端点的方法计算数据集的四分位数（1–3）。
+Rank of a number within a list.	Tính thứ hạng của số trong danh sách.	목록에서 숫자의 순위를 구합니다.	一覧内の数値の順位を求めます。	計算數值在清單中的排名。	计算数值在列表中的排名。
+Rank of a number within a list; ties get the average rank.	Tính thứ hạng của số trong danh sách; các số bằng nhau nhận hạng trung bình.	목록에서 숫자의 순위를 구하며 동점은 평균 순위를 부여합니다.	一覧内の数値の順位を求め、同順位には平均順位を割り当てます。	計算數值在清單中的排名；同值取平均排名。	计算数值在列表中的排名；相同值取平均排名。
+Rank of a number within a list; ties share the top rank.	Tính thứ hạng của số trong danh sách; các số bằng nhau cùng nhận hạng cao nhất.	목록에서 숫자의 순위를 구하며 동점은 같은 최고 순위를 부여합니다.	一覧内の数値の順位を求め、同順位には最上位の順位を割り当てます。	計算數值在清單中的排名；同值共用最高排名。	计算数值在列表中的排名；相同值共用最高排名。
+Relative standing of a value as a fraction of the data set.	Tính vị trí tương đối của giá trị dưới dạng tỷ lệ trong tập dữ liệu.	데이터 집합에서 값의 상대적 순위를 비율로 구합니다.	データセット内の値の相対順位を割合で求めます。	以比例計算值在資料集中的相對位置。	以比例计算值在数据集中的相对位置。
+Relative standing of a value from 0 to 1 inclusive.	Tính vị trí tương đối của giá trị từ 0 đến 1, gồm hai đầu.	0과 1을 포함하는 범위에서 값의 상대적 순위를 구합니다.	0 と 1 を含む範囲で値の相対順位を求めます。	以包含 0 和 1 的範圍計算值的相對位置。	在包含 0 和 1 的范围内计算值的相对位置。
+Relative standing of a value strictly between 0 and 1.	Tính vị trí tương đối của giá trị lớn hơn 0 và nhỏ hơn 1.	0보다 크고 1보다 작은 범위에서 값의 상대적 순위를 구합니다.	0 より大きく 1 より小さい範囲で値の相対順位を求めます。	以不含 0 和 1 的範圍計算值的相對位置。	在不含 0 和 1 的范围内计算值的相对位置。
+Returns a key performance indicator property from a cube (no cube connections; #N/A).	Trả về thuộc tính chỉ số hiệu suất chính từ khối dữ liệu (chưa có kết nối khối; #N/A).	큐브에서 핵심 성과 지표 속성을 반환합니다(큐브 연결을 지원하지 않아 #N/A).	キューブの主要業績評価指標のプロパティを返します（キューブ接続は未対応、#N/A）。	從 Cube 傳回關鍵績效指標屬性（尚無 Cube 連線；#N/A）。	从多维数据集返回关键绩效指标属性（尚无多维数据集连接；#N/A）。
+Returns a member or tuple from a cube (no cube connections; #N/A).	Trả về thành viên hoặc bộ từ khối dữ liệu (chưa có kết nối khối; #N/A).	큐브에서 멤버 또는 튜플을 반환합니다(큐브 연결을 지원하지 않아 #N/A).	キューブのメンバーまたはタプルを返します（キューブ接続は未対応、#N/A）。	從 Cube 傳回成員或元組（尚無 Cube 連線；#N/A）。	从多维数据集返回成员或元组（尚无多维数据集连接；#N/A）。
+Returns a property of a cube member (no cube connections; #N/A).	Trả về thuộc tính thành viên khối dữ liệu (chưa có kết nối khối; #N/A).	큐브 멤버의 속성을 반환합니다(큐브 연결을 지원하지 않아 #N/A).	キューブ メンバーのプロパティを返します（キューブ接続は未対応、#N/A）。	傳回 Cube 成員的屬性（尚無 Cube 連線；#N/A）。	返回多维数据集成员的属性（尚无多维数据集连接；#N/A）。
+Returns an aggregated value from a cube (no cube connections; #N/A).	Trả về giá trị tổng hợp từ khối dữ liệu (chưa có kết nối khối; #N/A).	큐브의 집계값을 반환합니다(큐브 연결을 지원하지 않아 #N/A).	キューブの集計値を返します（キューブ接続は未対応、#N/A）。	從 Cube 傳回彙總值（尚無 Cube 連線；#N/A）。	从多维数据集返回汇总值（尚无多维数据集连接；#N/A）。
+Returns the nth member of a cube set (no cube connections; #N/A).	Trả về thành viên thứ n của tập khối dữ liệu (chưa có kết nối khối; #N/A).	큐브 집합의 n번째 멤버를 반환합니다(큐브 연결을 지원하지 않아 #N/A).	キューブ セットの n 番目のメンバーを返します（キューブ接続は未対応、#N/A）。	傳回 Cube 集合中的第 n 個成員（尚無 Cube 連線；#N/A）。	返回多维数据集集合中的第 n 个成员（尚无多维数据集连接；#N/A）。
+Right-tailed F probability.	Tính xác suất đuôi phải của phân phối F.	F 분포의 오른쪽 꼬리 확률을 구합니다.	F 分布の右側確率を求めます。	計算 F 分配的右尾機率。	计算 F 分布的右尾概率。
+Right-tailed Student's t probability.	Tính xác suất đuôi phải của phân phối t Student.	스튜던트 t 분포의 오른쪽 꼬리 확률을 구합니다.	スチューデントの t 分布の右側確率を求めます。	計算 Student t 分配的右尾機率。	计算 Student t 分布的右尾概率。
+Right-tailed chi-squared probability.	Tính xác suất đuôi phải của phân phối chi bình phương.	카이 제곱 분포의 오른쪽 꼬리 확률을 구합니다.	カイ二乗分布の右側確率を求めます。	計算卡方分配的右尾機率。	计算卡方分布的右尾概率。
+Rounds a number and formats it as text with fixed decimals and optional thousands separators.	Làm tròn số rồi chuyển thành văn bản với số chữ số thập phân cố định, có thể thêm dấu phân cách hàng nghìn.	숫자를 반올림하여 고정 소수 자릿수와 선택적인 천 단위 구분 기호가 있는 텍스트로 표시합니다.	数値を丸め、固定の小数桁数と任意の桁区切り記号で文字列にします。	將數值四捨五入，格式化為固定小數位的文字，並可加入千分位符號。	将数值四舍五入，格式化为固定小数位的文本，并可添加千位分隔符。
+Rounds a number away from zero to a given number of digits.	Làm tròn số ra xa 0 theo số chữ số đã cho.	지정한 자릿수에서 0에서 멀어지는 방향으로 올림합니다.	指定桁数で、0 から離れる方向に数値を丸めます。	依指定位數將數值朝遠離零的方向進位。	按指定位数将数值向远离零的方向舍入。
+Rounds a number down to a multiple of significance.	Làm tròn số xuống bội của mức đã cho.	숫자를 지정한 배수로 내림합니다.	数値を指定した基準値の倍数に切り下げます。	將數值無條件捨去至指定基數的倍數。	将数值向下舍入到指定基数的倍数。
+Rounds a number down to the nearest integer or multiple.	Làm tròn số xuống số nguyên hoặc bội gần nhất.	숫자를 가장 가까운 정수 또는 배수로 내림합니다.	数値を最も近い整数または倍数に切り下げます。	將數值無條件捨去至最接近的整數或倍數。	将数值向下舍入到最接近的整数或倍数。
+Rounds a number down to the nearest integer.	Làm tròn số xuống số nguyên gần nhất.	숫자를 가장 가까운 정수로 내림합니다.	数値を最も近い整数に切り下げます。	將數值無條件捨去至最接近的整數。	将数值向下舍入到最接近的整数。
+Rounds a number to the nearest multiple.	Làm tròn số đến bội gần nhất.	숫자를 가장 가까운 배수로 반올림합니다.	数値を最も近い倍数に丸めます。	將數值四捨五入至最接近的倍數。	将数值舍入到最接近的倍数。
+Rounds a number toward negative infinity to a multiple.	Làm tròn số về âm vô cùng đến một bội.	음의 무한대 방향으로 숫자를 배수에 맞춰 내림합니다.	負の無限大の方向に数値を倍数へ丸めます。	將數值朝負無限大方向捨去至倍數。	将数值向负无穷方向舍入到倍数。
+Rounds a number toward positive infinity to a multiple.	Làm tròn số về dương vô cùng đến một bội.	양의 무한대 방향으로 숫자를 배수에 맞춰 올림합니다.	正の無限大の方向に数値を倍数へ丸めます。	將數值朝正無限大方向進位至倍數。	将数值向正无穷方向舍入到倍数。
+Rounds a number toward zero to a given number of digits.	Làm tròn số về 0 theo số chữ số đã cho.	지정한 자릿수에서 0 방향으로 숫자를 버립니다.	指定桁数で、0 に近づく方向に数値を丸めます。	依指定位數將數值朝零的方向捨去。	按指定位数将数值向零的方向舍入。
+Rounds a number up to a multiple of significance.	Làm tròn số lên bội của mức đã cho.	숫자를 지정한 배수로 올림합니다.	数値を指定した基準値の倍数に切り上げます。	將數值無條件進位至指定基數的倍數。	将数值向上舍入到指定基数的倍数。
+Rounds a number up to the nearest integer or multiple.	Làm tròn số lên số nguyên hoặc bội gần nhất.	숫자를 가장 가까운 정수 또는 배수로 올림합니다.	数値を最も近い整数または倍数に切り上げます。	將數值無條件進位至最接近的整數或倍數。	将数值向上舍入到最接近的整数或倍数。
+Rounds away from zero to the nearest even integer.	Làm tròn ra xa 0 đến số nguyên chẵn gần nhất.	0에서 멀어지는 방향으로 가장 가까운 짝수 정수로 올림합니다.	0 から離れる方向に最も近い偶数へ丸めます。	朝遠離零的方向進位至最接近的偶數。	向远离零的方向舍入到最接近的偶数。
+Rounds away from zero to the nearest odd integer.	Làm tròn ra xa 0 đến số nguyên lẻ gần nhất.	0에서 멀어지는 방향으로 가장 가까운 홀수 정수로 올림합니다.	0 から離れる方向に最も近い奇数へ丸めます。	朝遠離零的方向進位至最接近的奇數。	向远离零的方向舍入到最接近的奇数。
+Slope of the least-squares regression line.	Tính độ dốc đường hồi quy bình phương tối thiểu.	최소제곱 회귀 직선의 기울기를 구합니다.	最小二乗回帰直線の傾きを求めます。	計算最小平方法迴歸直線的斜率。	计算最小二乘回归直线的斜率。
+Smallest success count whose cumulative binomial probability reaches alpha.	Tìm số lần thành công nhỏ nhất có xác suất nhị thức tích lũy đạt alpha.	이항 누적 확률이 알파에 도달하는 최소 성공 횟수를 구합니다.	二項累積確率がアルファに達する最小の成功回数を求めます。	求累積二項機率達到 Alpha 的最小成功次數。	求累积二项概率达到 Alpha 的最小成功次数。
+Square of the correlation coefficient.	Tính bình phương hệ số tương quan.	상관 계수의 제곱을 구합니다.	相関係数の二乗を求めます。	計算相關係數的平方。	计算相关系数的平方。
+Standard error of predicted y values in a regression.	Tính sai số chuẩn của các giá trị y dự đoán trong hồi quy.	회귀 분석에서 예측 y값의 표준 오차를 구합니다.	回帰における予測 y 値の標準誤差を求めます。	計算迴歸中預測 y 值的標準誤差。	计算回归中预测 y 值的标准误差。
+Standard normal cumulative probability.	Tính xác suất chuẩn tắc tích lũy.	표준 정규 누적 확률을 구합니다.	標準正規累積確率を求めます。	計算標準常態累積機率。	计算标准正态累积概率。
+Standard normal density or cumulative probability.	Tính mật độ hoặc xác suất tích lũy chuẩn tắc.	표준 정규 분포의 밀도 또는 누적 확률을 구합니다.	標準正規分布の密度または累積確率を求めます。	計算標準常態密度或累積機率。	计算标准正态密度或累积概率。
+Standard normal density.	Tính mật độ chuẩn tắc.	표준 정규 분포의 밀도를 구합니다.	標準正規分布の密度を求めます。	計算標準常態密度。	计算标准正态密度。
+Student's t density or left-tailed probability.	Tính mật độ hoặc xác suất đuôi trái của phân phối t Student.	스튜던트 t 분포의 밀도 또는 왼쪽 꼬리 확률을 구합니다.	スチューデントの t 分布の密度または左側確率を求めます。	計算 Student t 分配的密度或左尾機率。	计算 Student t 分布的密度或左尾概率。
+The gamma function.	Tính hàm gamma.	감마 함수를 구합니다.	ガンマ関数を求めます。	計算伽瑪函數。	计算伽马函数。
+Two-tailed Student's t probability.	Tính xác suất hai đuôi của phân phối t Student.	스튜던트 t 분포의 양측 확률을 구합니다.	スチューデントの t 分布の両側確率を求めます。	計算 Student t 分配的雙尾機率。	计算 Student t 分布的双尾概率。
+Two-tailed inverse of Student's t distribution.	Tính nghịch đảo hai đuôi của phân phối t Student.	스튜던트 t 분포의 양측 역함수를 구합니다.	スチューデントの t 分布の両側確率の逆関数を求めます。	計算 Student t 分配的雙尾反函數。	计算 Student t 分布的双尾反函数。
+Two-tailed probability that two variances do not differ.	Tính xác suất hai đuôi rằng hai phương sai không khác nhau.	두 분산이 다르지 않을 양측 확률을 구합니다.	2 つの分散に差がないことの両側確率を求めます。	計算兩變異數無差異的雙尾機率。	计算两个方差无差异的双尾概率。
+Values along a fitted exponential growth curve.	Tính các giá trị trên đường cong tăng trưởng hàm mũ đã khớp.	적합된 지수 성장 곡선의 값을 구합니다.	当てはめた指数成長曲線上の値を求めます。	計算擬合指數成長曲線上的值。	计算拟合指数增长曲线上的值。
+Values along a least-squares linear fit.	Tính các giá trị trên đường thẳng khớp bằng bình phương tối thiểu.	최소제곱법으로 적합된 직선의 값을 구합니다.	最小二乗法で当てはめた直線上の値を求めます。	計算最小平方法擬合直線上的值。	计算最小二乘拟合直线上的值。
+Vertical array of all the most frequent numbers.	Trả về mảng dọc chứa mọi số xuất hiện nhiều nhất.	가장 자주 나오는 모든 숫자를 세로 배열로 반환합니다.	最頻値をすべて縦方向の配列で返します。	以垂直陣列傳回所有最常出現的數值。	以垂直数组返回所有出现次数最多的数值。
+Weibull density or probability.	Tính mật độ hoặc xác suất Weibull.	와이블 분포의 밀도 또는 확률을 구합니다.	ワイブル分布の密度または確率を求めます。	計算韋伯密度或機率。	计算威布尔密度或概率。
+Y-intercept of the least-squares regression line.	Tính tung độ gốc của đường hồi quy bình phương tối thiểu.	최소제곱 회귀 직선의 y절편을 구합니다.	最小二乗回帰直線の y 切片を求めます。	計算最小平方法迴歸直線的 y 截距。	计算最小二乘回归直线的 y 截距。
+Z-score of a value.	Tính điểm z của giá trị.	값의 z점수를 구합니다.	値の z スコアを求めます。	計算值的 z 分數。	计算值的 z 分数。
+k-th percentile, k from 0 to 1 inclusive.	Tính phân vị thứ k, với k từ 0 đến 1 kể cả hai đầu.	0과 1을 포함하는 k의 백분위수를 구합니다.	0 と 1 を含む k に対する百分位数を求めます。	計算第 k 個百分位數，k 包含 0 至 1。	计算第 k 个百分位数，k 包含 0 到 1。
+k-th percentile, k strictly between 0 and 1.	Tính phân vị thứ k, với k lớn hơn 0 và nhỏ hơn 1.	0보다 크고 1보다 작은 k의 백분위수를 구합니다.	0 より大きく 1 より小さい k に対する百分位数を求めます。	計算第 k 個百分位數，k 嚴格介於 0 與 1。	计算第 k 个百分位数，k 严格介于 0 和 1。
+Ranges that stay editable when the sheet is protected:\n{summary}	Các vùng vẫn sửa được khi trang tính được bảo vệ:\n{summary}	시트 보호 시에도 편집할 수 있는 범위:\n{summary}	シート保護中も編集を許可する範囲:\n{summary}	工作表受保護時仍可編輯的範圍：\n{summary}	工作表受保护时仍可编辑的区域：\n{summary}
+Protect workbook for: Structure (sheets can't be added, moved, renamed, hidden or deleted).	Bảo vệ cấu trúc sổ làm việc (không thể thêm, di chuyển, đổi tên, ẩn hoặc xóa trang tính).	통합 문서의 구조를 보호합니다(시트 추가, 이동, 이름 변경, 숨기기, 삭제 방지).	ブックの構成を保護します（シートの追加、移動、名前の変更、非表示、削除を禁止）。	保護活頁簿結構（禁止新增、移動、重新命名、隱藏或刪除工作表）。	保护工作簿结构（禁止添加、移动、重命名、隐藏或删除工作表）。
+This workbook asks to open the address below. Links can lead to harmful sites or start other programs: open it only if you trust the workbook.\n\n{url}	Sổ làm việc này yêu cầu mở địa chỉ bên dưới. Liên kết có thể dẫn đến trang độc hại hoặc khởi chạy chương trình khác; chỉ mở nếu bạn tin cậy sổ làm việc.\n\n{url}	이 통합 문서가 아래 주소를 열도록 요청합니다. 링크는 유해한 사이트로 연결되거나 다른 프로그램을 실행할 수 있으므로 통합 문서를 신뢰하는 경우에만 여세요.\n\n{url}	このブックは次のアドレスを開こうとしています。リンクは有害なサイトにつながったり、別のプログラムを起動したりする可能性があります。ブックを信頼できる場合にのみ開いてください。\n\n{url}	此活頁簿要求開啟下方位址。連結可能導向有害網站或啟動其他程式，請僅在信任此活頁簿時開啟。\n\n{url}	此工作簿请求打开下方地址。链接可能指向有害网站或启动其他程序，请仅在信任此工作簿时打开。\n\n{url}
+This workbook contains VBA macros. KIO Grid keeps them intact when you save, but does not run them.	Sổ làm việc này chứa macro VBA. KIO Grid giữ nguyên chúng khi lưu nhưng không thực thi.	이 통합 문서에 VBA 매크로가 있습니다. KIO Grid는 저장 시 매크로를 그대로 보존하지만 실행하지 않습니다.	このブックには VBA マクロが含まれています。KIO Grid は保存時にそのまま保持しますが、実行しません。	此活頁簿包含 VBA 巨集。KIO Grid 儲存時會原樣保留，但不會執行。	此工作簿包含 VBA 宏。KIO Grid 保存时会原样保留，但不会运行。
+This workbook was password-protected. GridCraft saves it without the password.	Sổ làm việc này đã được bảo vệ bằng mật khẩu. KIO Grid sẽ lưu bản không có mật khẩu.	암호로 보호된 통합 문서입니다. KIO Grid는 암호 없이 저장합니다.	このブックはパスワードで保護されていました。KIO Grid はパスワードなしで保存します。	此活頁簿原本有密碼保護。KIO Grid 儲存時不會保留密碼。	此工作簿原先受密码保护。KIO Grid 保存时不会保留密码。
+What this means	Giải thích	자세한 설명	詳しい説明	詳細說明	详细说明
+no workbook open	Chưa mở sổ làm việc	열린 통합 문서가 없습니다	開いているブックがありません	尚未開啟活頁簿	尚未打开工作簿
+The cell or chart you're trying to change is on a protected sheet.	Ô hoặc biểu đồ bạn muốn sửa nằm trên trang tính được bảo vệ.	변경하려는 셀 또는 차트가 보호된 시트에 있습니다.	変更しようとしているセルまたはグラフは、保護されたシート上にあります。	您要變更的儲存格或圖表位於受保護的工作表上。	要更改的单元格或图表位于受保护的工作表上。
+{count} items in this file were handled differently. First: {warning}	{count} mục trong tệp này được xử lý khác. Mục đầu tiên: {warning}	이 파일의 항목 {count}개가 다르게 처리되었습니다. 첫 번째: {warning}	このファイルの {count} 項目が異なる方法で処理されました。最初の項目: {warning}	此檔案有 {count} 個項目以不同方式處理。第一項：{warning}	此文件有 {count} 个项目采用不同方式处理。第一项：{warning}

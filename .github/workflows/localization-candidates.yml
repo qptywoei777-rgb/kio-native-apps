@@ -50,6 +50,9 @@ jobs:
       - name: Strict six-language completeness gate
         if: always()
         run: python scripts/audit_localization.py --app ${{ matrix.app }} --require-complete --output dist/${{ matrix.app }}-candidate-localization.json
+      - name: Grid runtime diagnostic coverage gate
+        if: always() && matrix.app == 'grid'
+        run: python scripts/audit_grid_runtime_messages.py --require-complete --output dist/grid-candidate-runtime-messages.json
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:

@@ -197,6 +197,8 @@ def grid_metadata_keys(source):
                 keys.update(('', literal(raw)) for raw in re.findall(RSTRING, match[2]))
             for match in re.finditer(r'\blabel:\s*(' + RSTRING + ')', text):
                 keys.add(('', literal(match[1])))
+            for match in re.finditer(r'\bNote\(\s*(' + RSTRING + r')|\bMessage\s*\{\s*key:\s*(' + RSTRING + ')', text):
+                keys.add(('', literal(match[1] or match[2])))
             for match in re.finditer(r'\bmenu:\s*&\[([^\]]*)\]', text):
                 keys.update(('', literal(raw)) for raw in re.findall(RSTRING, match[1]))
             for match in re.finditer(r'\b(?:Dialog::)?(?:form|custom)\(\s*' + RSTRING + r'\s*,\s*(' + RSTRING + ')', text):

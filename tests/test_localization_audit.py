@@ -25,8 +25,8 @@ class LocalizationFailures(unittest.TestCase):
             functions=root/'crates/functions/src';functions.mkdir(parents=True)
             (functions/'math.rs').write_text('// f!("FAKE", "FAKE()", "Comment")\nf!("SUM", 1, VAR, Math, A, "SUM(values)", "Adds numbers.", sum);',encoding='utf-8')
             engine=root/'crates/engine/src/cmd';engine.mkdir(parents=True)
-            (engine/'file.rs').write_text('CommandSpec {id:"file.save", label:"Save", menu:&["File"], params:"{path}", run:save}; cmd!(query "range.read", "Read Values", ["Data"], None, "{range}", always, read); for (label,id) in [("Copy","edit.copy")] {show(label)}; Field::Choice { options:vec![("stable-wire-value","Displayed choice")] }',encoding='utf-8')
-            self.assertEqual(audit.grid_metadata_keys(root),{('','Adds numbers.'),('','Save'),('','File'),('','Read Values'),('','Data'),('','Copy'),('','Displayed choice')})
+            (engine/'file.rs').write_text('CommandSpec {id:"file.save", label:"Save", menu:&["File"], params:"{path}", run:save}; cmd!(query "range.read", "Read Values", ["Data"], None, "{range}", always, read); for (label,id) in [("Copy","edit.copy")] {show(label)}; Field::Choice { options:vec![("stable-wire-value","Displayed choice")] }; Note("Static note".into()); Message { key:"Protected: {file}", arguments:vec![("file", value)] }',encoding='utf-8')
+            self.assertEqual(audit.grid_metadata_keys(root),{('','Adds numbers.'),('','Save'),('','File'),('','Read Values'),('','Data'),('','Copy'),('','Displayed choice'),('','Static note'),('','Protected: {file}')})
 
     def test_nested_user_data_does_not_become_a_caption_or_cross_a_statement(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -5,8 +5,8 @@
   "basePreparedTreeSha256": "276ac49a394849de1f27ddf20ed6a0d226a055563ba99c0d6ba092b9ed2016ba",
   "patch": {
     "path": "patches/localization-candidates/grid.patch",
-    "sha256": "b2d811ee51944bac651d91929f9259945882a6abdefc0efbe1c439cecbe11c2c",
-    "bytes": 334793
+    "sha256": "c6b7c98ff5995f4612243d0b5ca79d79573fcd1308ba7687d7dcc8d8917a4503",
+    "bytes": 742608
   },
   "files": [
     {
@@ -71,8 +71,8 @@
         "bytes": 127881
       },
       "after": {
-        "sha256": "5dec6c1b68956a823389c585c02da655762950a80005ffa1a62e3e29d65a5869",
-        "bytes": 132784
+        "sha256": "c47933e68eb15814f4555457b61e9be1f3462ae7b54afea4abd67e639e001048",
+        "bytes": 137818
       }
     },
     {
@@ -104,40 +104,40 @@
         "bytes": 33246
       },
       "after": {
-        "sha256": "4270d51b2a3f178bcf7c66a5e6d63b403f492cd0d08d0d93eae9496621671a07",
-        "bytes": 43550
+        "sha256": "4903a66a256bb693c2d146f6e410a9fab1e2a5fc49c8b601f6932d4ccb01b14f",
+        "bytes": 46176
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/catalog.rs",
       "before": null,
       "after": {
-        "sha256": "ff975ffe3c2d47b142ebee314e9487056ab04c2c7e5e1325ad7891d2b1795ad5",
-        "bytes": 3596
+        "sha256": "897d7302eb386fbfb05edb575b0c9e3fd39ddf21f7d99da619ff610e905c0259",
+        "bytes": 4446
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/en.tsv",
       "before": null,
       "after": {
-        "sha256": "56cddefe8530f7461215c1049d7819f9fca6cb1da0408b49285e6a57bf0e21ed",
-        "bytes": 89207
+        "sha256": "454559beb61b6ac481a15b54dafe2a3990a35f2cb16cd5f304f2cbe9b4b73c18",
+        "bytes": 90534
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/ja.tsv",
       "before": null,
       "after": {
-        "sha256": "21d50a6c9d9127413e9fb94a84e6a49d81c8f223756ce680203ee04abd2bb2db",
-        "bytes": 28589
+        "sha256": "4df391cf43459f746aaf65afdbec6a20f92bac53ca108b1f2da9f526460c09f0",
+        "bytes": 106374
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/ko.tsv",
       "before": null,
       "after": {
-        "sha256": "12479382e5c877a26317ef470b0caefc638fa28cad6ecd30e6c269967e8a51db",
-        "bytes": 24788
+        "sha256": "c948f0f9bcc1ab7efbe55a4c3d0b04a9ff7e580a364051530ee5502bff9158d4",
+        "bytes": 102004
       }
     },
     {
@@ -152,24 +152,24 @@
       "path": "crates/ui-egui/src/i18n/vi.tsv",
       "before": null,
       "after": {
-        "sha256": "bd966fd5851d61312c88b826c2a2819e8489f83dd7a85acb8d96c5269a336fba",
-        "bytes": 19453
+        "sha256": "e5aaa9ffcf115b961ebe97105fd20c5d53f81ed90887b15fc609b61cc9552e80",
+        "bytes": 106474
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/zh-CN.tsv",
       "before": null,
       "after": {
-        "sha256": "a7347b3a8a2c82b6bee56185bbbca67c774bc8e82e8ae6fc0c5f70a17bdaa188",
-        "bytes": 24254
+        "sha256": "9662f585fafb20fda452d19ab43ab2083fab1cb997a0182a265e08eba5578c1f",
+        "bytes": 89689
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/zh-TW.tsv",
       "before": null,
       "after": {
-        "sha256": "c3baf29bc18cbcdf6ef460e91a0ce88ace1c9362589531f0666fbb6a0900a4e6",
-        "bytes": 18739
+        "sha256": "1b28e49fd474d266da2f282fe31e128b99b78cc80ec6c003a58856caaf1eced0",
+        "bytes": 90067
       }
     },
     {
@@ -245,8 +245,8 @@
         "bytes": 16542
       },
       "after": {
-        "sha256": "bf34eebe30d3f4bcc20320a13c2e15426b55f0d6ca59140b56e92c313de2948c",
-        "bytes": 16675
+        "sha256": "fd1de7067eaa11ae9acafe78c336ae5367ffeadaf7693076868f5ca1b5f8ea3a",
+        "bytes": 17040
       }
     },
     {
@@ -256,8 +256,8 @@
         "bytes": 6819
       },
       "after": {
-        "sha256": "2860ce9b39cb7b588f83cb2ada485db8ff42e8e6db26aacbf85b99f385666167",
-        "bytes": 8680
+        "sha256": "6562ac8f21c92830c623c5559a3c30e46b3a1be753dd015030e45691eca03253",
+        "bytes": 9527
       }
     }
   ],
