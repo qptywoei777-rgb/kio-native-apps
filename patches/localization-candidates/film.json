@@ -1,0 +1,25 @@
+{
+  "schema": "kio.localization-development-patch.v1",
+  "programId": "film",
+  "status": "incomplete-not-release-approved",
+  "basePreparedTreeSha256": "ca4bd84dca182c4a7580d41d90c5593804c6302e60c7cce315586d61ed053bac",
+  "patch": {
+    "path": "patches/localization-candidates/film.patch",
+    "sha256": "81e93f6e371d967895f31d0c2341cab164888622a7244a179f6ced34620bc222",
+    "bytes": 567
+  },
+  "files": [
+    {
+      "path": "crates/ui-egui/src/i18n/zh-cn.tsv",
+      "before": {
+        "sha256": "4ad2f16cf60c42a5c981d90b735483684db887337beb97182a2bbc66cf8b8d00",
+        "bytes": 132413
+      },
+      "after": {
+        "sha256": "182e352b46418851888133caa6a04586c6c03798552aed1ad111bebb3503fa35",
+        "bytes": 132589
+      }
+    }
+  ],
+  "releaseGate": "Do not publish binaries or mark complete until six-language/UI/security/native test gates pass."
+}

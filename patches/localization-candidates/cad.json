@@ -1,0 +1,36 @@
+{
+  "schema": "kio.localization-development-patch.v1",
+  "programId": "cad",
+  "status": "incomplete-not-release-approved",
+  "basePreparedTreeSha256": "611e020369e25c1427ef3bdb3b2794cbae070d373dd66dcbd28a5a691e2380d7",
+  "patch": {
+    "path": "patches/localization-candidates/cad.patch",
+    "sha256": "b6ccbcb26b0aa3027d7671bc09571b6d901f2a7a083ea0ae59de97b5277e5761",
+    "bytes": 1565
+  },
+  "files": [
+    {
+      "path": "crates/ui-egui/src/i18n/ko.tsv",
+      "before": {
+        "sha256": "0f63bfe08db6f1d4c3a09021063e01caecc50cbd14c124ba3dd26ec5ac6b9511",
+        "bytes": 49350
+      },
+      "after": {
+        "sha256": "f648488f310097f1ddcebd2bedc5376807b69b4636d2bc07554903e9ca5b5509",
+        "bytes": 49673
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/zh.tsv",
+      "before": {
+        "sha256": "61ddf63d44c111f077be4da1abf86843b0fc96f2b1a796c4e517f523f5417059",
+        "bytes": 40896
+      },
+      "after": {
+        "sha256": "b590aefc78dcf31ed1c00d012ca81d4aa85873f4f739625f6c69fc055b12149f",
+        "bytes": 41662
+      }
+    }
+  ],
+  "releaseGate": "Do not publish binaries or mark complete until six-language/UI/security/native test gates pass."
+}

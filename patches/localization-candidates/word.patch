@@ -1,0 +1,79 @@
+--- a/crates/ui-egui/src/i18n/ja.tsv
++++ b/crates/ui-egui/src/i18n/ja.tsv
+@@ -2087,3 +2087,26 @@
+ 	Privacy Settings	現在のプライバシー設定
+ 
+ 	KIO Word is an independent fork of WordCraft v0.7.0.	KIO Word は WordCraft v0.7.0 の独立した派生版です。
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Category	カテゴリー
++	Check	チェック
++	Column width	列の幅
++	Footnote Reference	脚注参照番号
++	Footnote Text	脚注テキスト
++	Functions	機能
++	Geometry	ジオメトリ
++	Intersection	交点
++	Keywords	キーワード
++	Large	大
++	Level 1	レベル 1
++	Level 2	レベル 2
++	Level 3	レベル 3
++	Level 4	レベル 4
++	Limit	上限
++	Models	モデル
++	Scripts	スクリプト
++	Subtitle	字幕
++	Summation	総和
++	This document has no bookmarks.	この文書にしおりはありません。
++	Union	合体
+--- a/crates/ui-egui/src/i18n/zh-hans.tsv
++++ b/crates/ui-egui/src/i18n/zh-hans.tsv
+@@ -2099,3 +2099,24 @@
+ 	Privacy Settings	当前隐私设置
+ 
+ 	KIO Word is an independent fork of WordCraft v0.7.0.	KIO Word 是 WordCraft v0.7.0 的独立衍生版本。
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Check	勾选
++	Column width	列宽
++	Contributors	贡献者
++	Dot	圆点
++	Footnote Reference	脚注引用
++	Footnote Text	脚注文本
++	Functions	功能
++	Intersection	交点
++	Large	大
++	Level 1	级别 1
++	Level 2	级别 2
++	Level 3	级别 3
++	Level 4	级别 4
++	Limit	上限
++	Models	模型
++	Scripts	脚本
++	Subtitle	字幕
++	Summation	总和
++	This document has no bookmarks.	本文档没有书签。
+--- a/crates/ui-egui/src/i18n/zh-hant.tsv
++++ b/crates/ui-egui/src/i18n/zh-hant.tsv
+@@ -2088,3 +2088,20 @@
+ 	Privacy Settings	目前的隱私設定
+ 
+ 	KIO Word is an independent fork of WordCraft v0.7.0.	KIO Word 是 WordCraft v0.7.0 的獨立衍生版本。
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Check	勾選記號
++	Column width	欄寬
++	Contributors	貢獻者
++	Dot	圓點
++	Dots	點
++	Functions	功能
++	Geometry	幾何
++	Intersection	交點
++	Keywords	關鍵字
++	Large	大
++	Models	模型
++	Normal	正常
++	Scripts	指令碼
++	Summation	總和
++	This document has no bookmarks.	本文件沒有書籤。

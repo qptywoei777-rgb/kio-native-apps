@@ -1,0 +1,112 @@
+--- a/crates/ui-egui/src/i18n/ja.tsv
++++ b/crates/ui-egui/src/i18n/ja.tsv
+@@ -2354,3 +2354,29 @@
+ 	This document is trying to open a local file:	この文書はローカルファイルを開こうとしています：
+ 	Move tag earlier	タグを前へ移動
+ 	Move tag later	タグを後へ移動
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Always	常に
++	Automatically	自動
++	Choose…	選択…
++	Comment	コメント
++	Creator	作成者
++	Disabled	無効
++	Duplicate	複製
++	Enabled	有効
++	Error	エラー
++	Filename	ファイル名
++	Font	フォント
++	Move	移動
++	Never	しない
++	Next	次へ
++	No results	結果はありません
++	On	オン
++	Previous	前へ
++	Refresh	更新
++	Rendering…	描画中…
++	Select all	すべて選択
++	System	システム
++	Theme	テーマ
++	Undo {action}	元に戻す: {action}
++	Warning	警告
+--- a/crates/ui-egui/src/i18n/zh-hans.tsv
++++ b/crates/ui-egui/src/i18n/zh-hans.tsv
+@@ -2318,3 +2318,28 @@
+ 	This document is trying to open a local file:	此文档正尝试打开本地文件：
+ 	Move tag earlier	将标签前移
+ 	Move tag later	将标签后移
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Always	始终
++	Automatically	自动
++	Choose…	选择…
++	Color	颜色
++	Creator	创建者
++	Disabled	已禁用
++	Enabled	已启用
++	Error	错误
++	Filename	文件名
++	Folder	文件夹
++	Font	字体
++	Import	导入
++	Move	移动
++	Never	从不
++	No results	无结果
++	Paste	粘贴
++	Refresh	刷新
++	Rendering…	正在渲染…
++	Select all	全选
++	Theme	主题
++	Undo {action}	撤消{action}
++	Warning	警告
++	of	共
+--- a/crates/ui-egui/src/i18n/zh-hant.tsv
++++ b/crates/ui-egui/src/i18n/zh-hant.tsv
+@@ -2228,3 +2228,46 @@
+ 	This document is trying to open a local file:	此文件正嘗試開啟本機檔案：
+ 	Move tag earlier	將標記前移
+ 	Move tag later	將標記後移
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	About	關於
++	Always	一律
++	Automatically	自動
++	Choose…	選擇…
++	Comment	註解
++	Commits	提交
++	Company	公司
++	Contributors	貢獻者
++	Create	建立
++	Creator	創作者
++	Disabled	已停用
++	Display name	顯示名稱
++	Enabled	已啟用
++	Error	錯誤
++	Filename	檔名
++	First commit	首次提交
++	Folder	資料夾
++	Import	匯入
++	Lines +/−	行數 +/−
++	Lines added	新增行數
++	Lines deleted	刪除行數
++	Merged PRs	已合併的 PR
++	Models	模型
++	Move	移動
++	Never	永不
++	No results	沒有結果
++	On	開
++	Open link	開啟連結
++	PRs	PR
++	Paste	貼上
++	Real name	真實姓名
++	Refresh	重新整理
++	Rendering…	正在算繪…
++	Reverse the order	反轉順序
++	Show	顯示
++	Sort	排序
++	System	系統
++	Table	表格
++	Theme	主題
++	Undo {action}	復原{action}
++	Username	使用者名稱

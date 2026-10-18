@@ -1,0 +1,56 @@
+name: Localization candidates — native verification only
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/suite-localization-followup]
+    paths:
+      - 'patches/localization-candidates/**'
+      - 'scripts/check_localization_candidate.py'
+      - '.github/workflows/localization-candidates.yml'
+permissions:
+  contents: read
+concurrency:
+  group: localization-candidates-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [deck, sound]
+        runner: [macos-15, windows-2022]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 90
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Install pinned native compiler
+        run: rustup toolchain install 1.95.0 --profile minimal
+      - name: Verify public upstream and apply candidate with exact hashes
+        run: |
+          python scripts/full_native.py prepare --app ${{ matrix.app }}
+          python scripts/check_localization_candidate.py --app ${{ matrix.app }}
+      - name: Native GUI and locale regression tests
+        env:
+          CARGO_PROFILE_TEST_DEBUG: '0'
+        run: |
+          export CRAFT_FONTS_DIR="$GITHUB_WORKSPACE/.work/full-native/${{ matrix.app }}/craft-fonts"
+          cargo +1.95.0 check --locked --manifest-path .work/full-native/${{ matrix.app }}/source/Cargo.toml -p ${{ matrix.app }}craft -p ${{ matrix.app }}craft-ui-egui
+          cargo +1.95.0 test --locked --manifest-path .work/full-native/${{ matrix.app }}/source/Cargo.toml -p ${{ matrix.app }}craft-ui-egui --lib
+      - name: Strict six-language completeness gate
+        if: always()
+        run: python scripts/audit_localization.py --app ${{ matrix.app }} --require-complete --output dist/${{ matrix.app }}-candidate-localization.json
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: ${{ matrix.app }}-${{ matrix.runner }}-localization-evidence
+          path: dist/*candidate*.json
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "policy": "Exact source/context exception decisions only; no general permission for untranslated English captions. Chinese locales remain independent.",
+  "entries": [
+    {
+      "context": "",
+      "source": "KIO App Suite",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Launcher",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Photo",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Vector",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Film",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Light",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO PDF",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Effect",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Design",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO UI",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Word",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Sound",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Deck",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO CAD",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "KIO Grid",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "GitHub",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "Discord",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "OpenType",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "TrueType",
+      "reason": "Official product or technology name preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "RGB",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "CMYK",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "sRGB",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "Display P3",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "ICC",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "PDF",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "PNG",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "JPEG",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "TIFF",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "SVG",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "EPS",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "PSD",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "CSV",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "JSON",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "XML",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "HTML",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "CSS",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "UTF-8",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "ASCII",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "GPU",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "CPU",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "API",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "URL",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "HTTP",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "HTTPS",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "TCP",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "UDP",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "MIDI",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "VST",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "VST3",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "WAV",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "FLAC",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "MP3",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "AAC",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "AIFF",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "3D",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "2D",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "DPI",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "PPI",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "Hz",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "kHz",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "MHz",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "px",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "pt",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "mm",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "cm",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "ms",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "MB",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "GB",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    },
+    {
+      "context": "",
+      "source": "%",
+      "reason": "Standard format, protocol, color-space, acronym or unit identifier preserves its canonical spelling."
+    }
+  ]
+}

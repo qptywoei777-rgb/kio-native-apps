@@ -1,0 +1,47 @@
+{
+  "schema": "kio.localization-development-patch.v1",
+  "programId": "word",
+  "status": "incomplete-not-release-approved",
+  "basePreparedTreeSha256": "58d8ab31fb2c18e3201ca3feb19a808ccc75b8e551709c0569138c8d0282f507",
+  "patch": {
+    "path": "patches/localization-candidates/word.patch",
+    "sha256": "a893d01cc7659faa5db995dcd7e5b9cb4892182123c04de25685450bb702a194",
+    "bytes": 2288
+  },
+  "files": [
+    {
+      "path": "crates/ui-egui/src/i18n/ja.tsv",
+      "before": {
+        "sha256": "5b65849763174296f1940eb9b910e20119305370075a697249c62aa533adf84d",
+        "bytes": 91721
+      },
+      "after": {
+        "sha256": "3c9ed926e6cf089903958d1d83b5ca97ca212727e067d39fae98857ab6fe2527",
+        "bytes": 92313
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/zh-hans.tsv",
+      "before": {
+        "sha256": "0ad35c94b38b5a3237162d59540987578f2841b8bff1306020d21fab182eabf9",
+        "bytes": 76102
+      },
+      "after": {
+        "sha256": "ee4a0e141f6702fde435accc2b9e3eaff17d224908dca3f6dea20f82c3a73a89",
+        "bytes": 76572
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/zh-hant.tsv",
+      "before": {
+        "sha256": "17e8e8ab7283e634636fd96d5084a14e0a6361e0d78e1d0f92646ad75f89e711",
+        "bytes": 76427
+      },
+      "after": {
+        "sha256": "80b17db7203dcbe2bd8511ea22b83939bdd4153531730d64803dfc628dab7b37",
+        "bytes": 76804
+      }
+    }
+  ],
+  "releaseGate": "Do not publish binaries or mark complete until six-language/UI/security/native test gates pass."
+}

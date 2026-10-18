@@ -1,0 +1,60 @@
+--- a/crates/ui-egui/src/i18n/ko.tsv
++++ b/crates/ui-egui/src/i18n/ko.tsv
+@@ -1238,3 +1238,16 @@
+ menu	Draw	그리기
+ menu	Dimension	치수
+ menu	Modify	수정
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Clear Recent Files	최근 파일 목록 지우기
++	Color 1	색상 1
++	Color 2	색상 2
++	Groups	그룹
++	Ignore	무시
++	Inverted	반전됨
++	Italic	기울임꼴
++	Justify	양쪽 정렬
++	Outer	바깥쪽
++	Text color	텍스트 색상
++	Underline	밑줄
+--- a/crates/ui-egui/src/i18n/zh.tsv
++++ b/crates/ui-egui/src/i18n/zh.tsv
+@@ -1116,3 +1116,38 @@
+ 	Polar angle measurement	极轴角测量
+ 	Relative to last segment	相对于上一线段
+ 	Show command prompting near the crosshairs	在光标附近显示命令提示
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Apply	应用
++	Bulleted list	项目符号列表
++	Centered	居中
++	Clear History	清除历史记录
++	Collect	收集
++	Color 1	颜色 1
++	Color 2	颜色 2
++	Convert	转换
++	Curved	曲线
++	Custom	自定义
++	Group Selection	编组选择
++	Groups	编组
++	History	历史记录
++	Ignore	忽略
++	Interface language	界面语言
++	Justify	两端对齐
++	Next Change	下一处修订
++	Numbered list	编号列表
++	Open	打开
++	Outer	外侧
++	Preview	预览
++	Previous Change	上一处修订
++	Reload	重新加载
++	Settings...	设置...
++	Shape	形状
++	Spherical	球面
++	Tables	表格
++	Text color	文字颜色
++	To	到
++	Underline	下划线
++	Unsaved changes	未保存的更改
++	Variables	变量
++	objects	个对象

@@ -1,0 +1,1024 @@
+--- a/crates/ui-egui/src/i18n/ja.tsv
++++ b/crates/ui-egui/src/i18n/ja.tsv
+@@ -3821,3 +3821,104 @@
+ 	Reset All Locked Settings	ロックされた設定をすべて初期化
+ 	Copy Texture to Other Tools	テクスチャを他のツールにコピー
+ 	ICO is limited to 256 × 256 pixels	ICO は 256 × 256 ピクセルまでです
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Add Mask	マスクを追加
++	Apply to All	すべてに適用
++	Artboards	アートボード
++	Blending Mode	描画モード
++	Case Sensitive	大文字と小文字を区別
++	Check for Updates	更新を確認
++	Checkerboard	チェッカーボード
++	Clipping Mask	クリッピングマスク
++	Clipping Path…	クリッピングパス…
++	Close Window	ウィンドウを閉じる
++	Color Picker	カラーピッカー
++	Color Swatches	カラースウォッチ
++	Compare	比較
++	Compression	圧縮
++	Confirm	確認
++	Continue	続行
++	Convert	変換
++	Date	日付
++	Decrease Brush Size	ブラシのサイズを小さく
++	Defaults	初期設定
++	Delete Mask	マスクを削除
++	Delete…	削除…
++	Disabled	無効
++	Discard Changes	変更を破棄
++	Display	表示
++	Documents	ドキュメント
++	Edit…	編集…
++	Enable	有効
++	Export Options	書き出しオプション
++	Export Settings	書き出し設定
++	Export to	書き出し形式
++	File Format	ファイル形式
++	File Name	ファイル名
++	File Size	ファイルサイズ
++	Filename	ファイル名
++	Find	検索
++	Finish	完了
++	Grid view	グリッド表示
++	Groups	グループ
++	Hide Grid	グリッドを隠す
++	Import Options	読み込みオプション
++	Increase Brush Size	ブラシのサイズを大きく
++	Invert Mask	マスクを反転
++	Layer Styles	レイヤースタイル
++	Less	少なく
++	Library	ライブラリ
++	Link	リンク
++	List view	リスト表示
++	Locked	ロック中
++	Manual	手動
++	Masks	マスク
++	Middle	中央
++	Next	次へ
++	No Document	ドキュメントなし
++	No Selection	選択なし
++	No recent files	最近のファイルがありません
++	No selection	選択なし
++	On	オン
++	Opened {url}	{url} を開きました
++	Page Setup…	ページ設定…
++	Panel	パネル
++	Preferences…	環境設定…
++	Previous	前へ
++	Quit	終了
++	Recent Files	最近使ったファイル
++	Rendering…	描画中…
++	Replace	置換
++	Reset All	すべてリセット
++	Reset Preferences	環境設定をリセット
++	Restart	再起動
++	Resume	再開
++	Retry	再試行
++	Sample Size	サンプルサイズ
++	Save Changes	変更を保存
++	Scroll menu down	メニューを下にスクロール
++	Scroll menu up	メニューを上にスクロール
++	Sensitivity	感度
++	Services	サービス
++	Shortcut	ショートカット
++	Shortcuts	ショートカット
++	Simulate Paper	紙色をシミュレート
++	Skip	スキップ
++	Snap to Grid	グリッドにスナップ
++	Space	スペース
++	Tablet	タブレット
++	Title	タイトル
++	To	変更先
++	Ungroup	グループ解除
++	Update	更新
++	Updates	更新
++	W:	幅:
++	Warning	警告
++	Workspaces	ワークスペース
++	blue	ブルー
++	green	グリーン
++	none	なし
++	red	レッド
++	unknown	不明
++	yellow	イエロー
+--- a/crates/ui-egui/src/i18n/ko.tsv
++++ b/crates/ui-egui/src/i18n/ko.tsv
+@@ -3319,3 +3319,146 @@
+ 	Sent to {printer}	{printer}(으)로 전송됨
+ 	set in Print Settings…	인쇄 설정에서 지정…
+ 	ICO is limited to 256 × 256 pixels	ICO는 256 × 256픽셀로 제한됩니다
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	(none)	(없음)
++	Accurate	정확
++	Any	하나 이상
++	Apply to All	모두에 적용
++	Arc	호
++	Artboards	아트보드
++	Aspect Ratio	가로세로 비율
++	Audio	오디오
++	Author	만든 이
++	Baseline Shift	기준선 이동
++	Basic Latin	기본 라틴
++	Before	변경 전
++	Bend	구부리기
++	Blending Mode	혼합 모드
++	Bulge	돌출
++	Case Sensitive	대소문자 구분
++	Channel	채널
++	Check for Updates	업데이트 확인
++	Checkerboard	체커보드
++	Choose…	선택…
++	Clear History	기록 지우기
++	Clipping Mask	클리핑 마스크
++	Color Picker	색상 피커
++	Color Swatches	색상 견본
++	Compression	압축
++	Confirm	확인
++	Continue	계속
++	Convert	변환
++	Convert to Grayscale	회색조로 변환
++	Currency	통화
++	Current Time	현재 시간
++	Dark Gray	어두운 회색
++	Date	날짜
++	Date Created	만든 날짜
++	Delete Mask	마스크 삭제
++	Delete…	삭제…
++	Diameter	지름
++	Digits	숫자
++	Disabled	비활성화됨
++	Discard Changes	변경 사항 버리기
++	Display	화면 표시
++	Duration	길이
++	Dynamics	다이내믹
++	Edit…	편집…
++	Enable	사용
++	Export Options	내보내기 옵션
++	Export Settings	설정 내보내기
++	Fast	빠름
++	File Format	파일 형식
++	File Name	파일 이름
++	File Size	파일 크기
++	Find	찾기
++	Finish	마침
++	Flash	플래시
++	Groups	그룹
++	Hidden	숨김
++	Hide	숨기기
++	Hide Grid	격자 숨기기
++	Import…	가져오기…
++	Invert Mask	마스크 반전
++	Justify	양쪽 정렬
++	Keywords	키워드
++	Layer Properties	도면층 특성
++	Less	간단히
++	Libraries	라이브러리
++	Library	라이브러리
++	Locked	잠김
++	Loop	반복
++	Make	만들기
++	Manual	수동
++	Mask	마스크
++	Masks	마스크
++	Measure	길이 분할
++	Medium Gray	중간 회색
++	More	더 보기
++	Nearest	근처점
++	New Group	새 그룹
++	New Layer…	새 레이어…
++	New Window	새 창
++	Next	다음
++	No Document	문서 없음
++	No Selection	선택 항목 없음
++	No selection	선택 항목 없음
++	Opacity Mask	불투명 마스크
++	Opened {url}	{url} 열림
++	Page Setup…	페이지 설정…
++	Panel	패널
++	Panel Options…	패널 옵션…
++	Path:	패스:
++	Pen	펜
++	Pencil Tool	연필 도구
++	Percentage	백분율
++	Phone	휴대폰
++	Preferences…	환경 설정…
++	Previous	이전
++	Punctuation	문장 부호
++	RGB	RGB
++	Recent Files	최근 파일
++	Replace	바꾸기
++	Reset Preferences	환경 설정 재설정
++	Restart	다시 시작
++	Result	결과
++	Resume	계속
++	Retry	다시 시도
++	Roman Hanging Punctuation	로마자 걸림 문장 부호
++	Ruler	눈금자
++	Sample Size	샘플 크기
++	Save Changes	변경 사항 저장
++	Sensitivity	감도
++	Services	서비스
++	Settings:	설정:
++	Shortcut	단축키
++	Shortcuts	단축키
++	Show All	모두 표시
++	Show Rulers	눈금자 표시
++	Simulate Paper	용지 시뮬레이션
++	Snap to Grid	격자에 스냅
++	Spacing:	간격:
++	Stop	중지
++	Stroke Color	선 색상
++	Subscript	아래 첨자
++	Superscript	위 첨자
++	Symbols	심볼
++	Tablet	태블릿
++	Target	대상
++	Tilt	기울이기
++	Time	시간
++	Timecode	타임코드
++	Title	제목
++	Toolbars	도구 모음
++	Twist	비틀기
++	Ungroup	그룹 해제
++	Units	단위
++	Unlink	연결 해제
++	Unlock	잠금 해제
++	Update	업데이트
++	Updates	업데이트
++	Vertical Type Tool	세로 문자 도구
++	Warning	경고
++	Width and Height	너비와 높이
++	Workspaces	작업 영역
+--- a/crates/ui-egui/src/i18n/vi.tsv
++++ b/crates/ui-egui/src/i18n/vi.tsv
+@@ -3631,3 +3631,75 @@
+ 	Sent to {printer}	Đã gửi tới {printer}
+ 	set in Print Settings…	đặt trong thiết lập in…
+ 	ICO is limited to 256 × 256 pixels	ICO giới hạn ở 256 × 256 pixel
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Apply to All	Áp dụng cho tất cả
++	Artboards	Các bảng vẽ
++	Aspect Ratio	Tỷ lệ khung hình
++	Blending Mode	Chế độ hòa trộn
++	Check for Updates	Kiểm tra bản cập nhật
++	Choose…	Chọn…
++	Clipping Mask	Mặt nạ cắt
++	Color Picker	Bộ chọn màu
++	Color Swatches	Mẫu màu
++	Compression	Nén
++	Confirm	Xác nhận
++	Continue	Tiếp tục
++	Convert to Grayscale	Chuyển sang thang xám
++	Dark Gray	Xám đậm
++	Disabled	Đã tắt
++	Discard Changes	Bỏ thay đổi
++	Edit Toolbar	Chỉnh sửa thanh công cụ
++	Edit…	Chỉnh sửa…
++	Export Settings	Cài đặt xuất
++	Exported {path}	Đã xuất {path}
++	Fill Color	Màu tô
++	Find	Tìm
++	Finish	Hoàn tất
++	Hide Grid	Ẩn lưới
++	Hide Others	Ẩn các mục khác
++	Import…	Nhập…
++	Install Plug-in	Cài đặt plug-in
++	Join the ArtCraft Discord	Tham gia Discord của ArtCraft
++	Less	Ít hơn
++	Library	Thư viện
++	Link	Liên kết
++	Medium Gray	Xám vừa
++	More	Thêm
++	New Window	Cửa sổ mới
++	Next	Tiếp theo
++	No Document	Không có tài liệu
++	No Selection	Không có vùng chọn
++	No selection	Không có vùng chọn
++	On	Bật
++	Opacity Mask	Mặt nạ độ mờ
++	Page Setup…	Thiết lập trang…
++	Panel Options…	Tùy chọn bảng…
++	Path:	Đường dẫn:
++	Preferences…	Tùy chọn…
++	Previous	Trước
++	Ready	Sẵn sàng
++	Recent Files	Các tệp gần đây
++	Replace	Thay thế
++	Reset Preferences	Đặt lại tùy chọn
++	Resume	Tiếp tục
++	Retry	Thử lại
++	Roman Hanging Punctuation	Dấu câu treo Roman
++	Save Changes	Lưu thay đổi
++	Save a Copy	Lưu bản sao
++	Services	Dịch vụ
++	Shortcut	Phím tắt
++	Shortcuts	Phím tắt
++	Show All	Hiện tất cả
++	Show Rulers	Hiện thước
++	Simulate Paper	Giả lập giấy
++	Snap to Grid	Hút vào lưới
++	Spacing:	Khoảng cách:
++	Stroke Color	Màu nét
++	Subscript	Chỉ số dưới
++	Superscript	Chỉ số trên
++	Ungroup	Bỏ nhóm
++	Unlock	Mở khóa
++	Update	Cập nhật
++	Updates	Bản cập nhật
++	Width and Height	Chiều rộng và chiều cao
+--- a/crates/ui-egui/src/i18n/zh-hans.tsv
++++ b/crates/ui-egui/src/i18n/zh-hans.tsv
+@@ -2754,3 +2754,369 @@
+ 	Sent to {printer}	已发送到 {printer}
+ 	set in Print Settings…	在打印设置中设置…
+ 	ICO is limited to 256 × 256 pixels	ICO 最大为 256 × 256 像素
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Accented Edges	强化的边缘
++	Accurate	精确
++	Add Mask	添加蒙版
++	Add to	添加到
++	Ambience	环境氛围
++	Angled Strokes	成角的线条
++	Aperture	光圈
++	Apply to All	应用到全部
++	Arrows	箭头
++	Artboards	画板
++	Artistic	艺术效果
++	Aspect Ratio	长宽比
++	Audio	音频
++	Author	作者
++	Baseline Shift	基线偏移
++	Basic Latin	基本拉丁文
++	Batch	批处理
++	Bend	弯曲
++	Best	最佳
++	Black Intensity	黑色强度
++	Blending Mode	混合模式
++	Blur Angle	模糊角度
++	Border	边框
++	Border Thickness	边框粗细
++	Brick	砖形
++	Browse	浏览
++	Brush Size	笔刷大小
++	Bulge	凸出
++	Burlap	粗麻布
++	CMYK:	CMYK：
++	Caption	题注
++	Case Sensitive	区分大小写
++	Cell Size	单元格大小
++	Center X	中心 X
++	Center Y	中心 Y
++	Charcoal	炭灰
++	Check for Updates	检查更新
++	Checkerboard	棋盘
++	Choose…	选择…
++	City	城市
++	Clear Amount	清除数量
++	Clear History	清除历史记录
++	Clipping Mask	剪切蒙版
++	Clipping Path	剪切路径
++	Clipping Path…	剪切路径…
++	Close Window	关闭窗口
++	Clumped	结块
++	Coarse Dots	粗点
++	Color Halftone	彩色半调
++	Color Noise Reduction	颜色降噪
++	Color Picker	拾色器
++	Color Range	颜色范围
++	Color Settings	颜色设置
++	Color Swatches	色板
++	Color Table	颜色表
++	Compare	比较
++	Compatibility	兼容性
++	Compression	压缩
++	Confirm	确认
++	Constraints	约束
++	Continue	继续
++	Contrasty	强反差
++	Convert	转换
++	Convert to Grayscale	转换为灰度
++	Copyright Info URL	版权信息 URL
++	Copyright Status	版权状态
++	Copyrighted	受版权保护
++	Country	国家/地区
++	Crack Brightness	裂缝亮度
++	Crack Depth	裂缝深度
++	Crack Spacing	裂缝间距
++	Craquelure	龟裂缝
++	Cross	叉号
++	Cross Process	交叉冲洗
++	Crosshatch	阴影线
++	Crystallize	晶格化
++	Currency	货币
++	Current	当前
++	Current Time	当前时间
++	Dark Gray	深灰色
++	Dark Intensity	深色强度
++	Dark Strokes	深色线条
++	Data	数据
++	Date	日期
++	Date Created	创建日期
++	Date and Time	日期和时间
++	De-Interlace	逐行
++	Decrease Brush Size	减小画笔尺寸
++	Defaults	默认值
++	Defringe	去边
++	Delete Mask	删除蒙版
++	Delete…	删除…
++	Detect Faces	检测人脸
++	Diameter	直径
++	Diffuse Glow	扩散亮光
++	Digits	数字
++	Direction Balance	方向平衡
++	Disabled	已禁用
++	Discard Changes	放弃更改
++	Display	显示
++	Documents	文档
++	Dot	圆点
++	Duplicate Layer	复制图层
++	Duplication	复制
++	Duration	持续时间
++	Dynamics	动态
++	Edge Brightness	边缘亮度
++	Edge Thickness	边缘厚度
++	Edge Width	边缘宽度
++	Edit Toolbar	编辑工具栏
++	Edit…	编辑…
++	Elevation	标高
++	Eliminate	消除
++	Email	电子邮件
++	Enable	启用
++	End X	终点 X
++	End Y	终点 Y
++	Enlarged	扩大
++	Even Fields	偶数场
++	Export As	导出为
++	Export Options	导出选项
++	Export Settings	导出设置
++	Export to	导出为
++	Exported {path}	已导出 {path}
++	Extrude	拉伸
++	Faded Film	褪色胶片
++	File Format	文件格式
++	File Info	文件信息
++	File Name	文件名
++	File Size	文件大小
++	Filename	文件名
++	Find	查找
++	Fine Dots	细点
++	Finish	完成
++	Flag	旗标
++	Forward	前进
++	Frosted	磨砂
++	Full Screen	全屏
++	Gaussian Blur	高斯模糊
++	Glass	玻璃
++	Glow Amount	发光量
++	Glow Brightness	辉光亮度
++	Glowing Edges	发光边缘
++	Grain Size	颗粒大小
++	Grain Type	颗粒类型
++	Graininess	颗粒
++	Grainy Dots	颗粒点
++	Greek	希腊语
++	Grid view	网格视图
++	Groups	编组
++	Grout Width	缝隙宽度
++	Hand	抓手
++	Heal	修复
++	Hexagon	六边形
++	Hide	隐藏
++	Hide Grid	隐藏网格
++	High	高
++	High Pass	高通
++	Highlight Area	高光区域
++	ISO Speed	ISO 感光度
++	Import Options	导入选项
++	Import…	导入…
++	Increase Brush Size	增大画笔尺寸
++	Inflate	膨胀
++	Ink Outlines	墨水轮廓
++	Install Plug-in	安装插件
++	Intensity	强度
++	Interpolation	插值
++	Interpret Footage	解释素材
++	Intersect with	相交于
++	Justify	两端对齐
++	Label	标签
++	Layer Properties	图层特性
++	Layer Styles	图层样式
++	Left Diagonal	左对角线
++	Legacy	旧版
++	Length	长度
++	Lens	镜头
++	Lens Blur	镜头模糊
++	Lens Corrections	镜头校正
++	Lens Flare	镜头光晕
++	Less	较少
++	Libraries	库
++	Light Direction	光照方向
++	Lighten Grout	加亮缝隙
++	Lighting	照明
++	Lighting Effects	光照效果
++	Link	链接
++	Liquify	液化
++	List	列表
++	List view	列表视图
++	Locked	已锁定
++	Long Lines	长线
++	Long Strokes	长笔画
++	Low	低
++	Make	创建
++	Manual	手动
++	Mask	蒙版
++	Medium Dots	中等点
++	Medium Gray	中灰色
++	Medium Lines	中等线
++	Medium Strokes	中等笔画
++	Method	方法
++	Mezzotint	铜版雕刻
++	Middle	中部
++	Monochromatic	单色
++	Mosaic	马赛克
++	Mosaic Tiles	马赛克拼贴
++	Motion Blur	运动模糊
++	Move Layer	移动图层
++	Nearest	最近点
++	New Group	新建组
++	New Guide	新建参考线
++	New Layer…	新建图层…
++	New Window	新建窗口
++	New document	新文档
++	No Document	未打开文档
++	No recent files	没有最近的文件
++	No selection	未选择
++	Ocean Ripple	海洋波纹
++	Octagon	八边形
++	Odd Fields	奇数场
++	Opacity Mask	不透明度蒙版
++	Opened {url}	已打开 {url}
++	Oval	椭圆
++	Package	打包
++	Page Setup…	页面设置…
++	Panel	面板
++	Panel Options…	面板选项…
++	Parallel	平行
++	Patchwork	拼缀图
++	Path:	路径：
++	Pencil Tool	铅笔工具
++	Pentagon	五边形
++	Percentage	百分比
++	Perimeter	周长
++	Phone	手机
++	Photocopy	复印
++	Pinch	收窄
++	Pixel	像素
++	Point Curve	点曲线
++	Pointillize	点彩
++	Preferences…	首选项…
++	Preserve	保留
++	Preset Manager	预设管理器
++	Profile	配置文件
++	Public Domain	公共领域
++	Punctuation	标点符号
++	Quit	退出
++	RGB	RGB
++	RGB:	RGB：
++	Radial Blur	径向模糊
++	Random	随机
++	Ready	就绪
++	Recent Files	最近使用的文件
++	Rectangle	矩形
++	Reduce Noise	降低噪声
++	Rendering…	正在渲染…
++	Repeat	重复
++	Replace	替换
++	Replace Color	替换颜色
++	Replace Footage	替换素材
++	Reset All	全部重置
++	Reset Preferences	重置首选项
++	Restart	重新开始
++	Result	结果
++	Resume	继续
++	Retry	重试
++	Right Diagonal	右对角线
++	Ripple Magnitude	波纹幅度
++	Ripple Size	波纹大小
++	Roman Hanging Punctuation	西文悬挂标点
++	Ruler	标尺
++	Ruler Units	标尺单位
++	Sample Size	采样大小
++	Sandstone	砂岩
++	Save Changes	保存更改
++	Save a Copy	存储副本
++	Scaling	缩放
++	Scroll menu down	向下滚动菜单
++	Scroll menu up	向上滚动菜单
++	Sensitivity	灵敏度
++	Services	服务
++	Settings	设置
++	Settings:	设置：
++	Shadow	阴影
++	Sharpen Amount	锐化量
++	Short Lines	短线
++	Short Strokes	短笔画
++	Shortcut	快捷键
++	Shortcuts	快捷键
++	Show Rulers	显示标尺
++	Shutter Speed	快门速度
++	Simple	简单
++	Simulate Paper	模拟纸张
++	Skip	跳过
++	Slice Options	切片选项
++	Smart Blur	智能模糊
++	Smoothness	平滑度
++	Snap to Grid	对齐网格
++	Softness	柔和度
++	Space	空格
++	Spacing:	间距：
++	Spatter	喷溅
++	Speckle	斑点
++	Speed	速度
++	Spherize	球面化
++	Spray Radius	喷色半径
++	Sprayed Strokes	喷色描边
++	Sprinkles	喷洒
++	Square Size	方形大小
++	Stained Glass	染色玻璃
++	Stamp	图章
++	Star	星形
++	Stars	星形
++	Start X	起点 X
++	Start Y	起点 Y
++	Statistics	统计信息
++	Stippled	点刻
++	Stop	停止
++	Stroke Color	描边颜色
++	Stroke Direction	描边方向
++	Stroke Length	描边长度
++	Stroke Pressure	描边压力
++	Stroke Width	描边宽度
++	Strokes	描边
++	Subscript	下标
++	Sumi-e	水墨画
++	Superscript	上标
++	Symbols	符号
++	Tablet	平板
++	Target	目标
++	Texturizer	纹理化
++	Tile Size	拼贴大小
++	Tilt	倾斜
++	Time	时间
++	Timecode	时间码
++	Tint Color	色调颜色
++	Tiny Lens	小镜头
++	Title	标题
++	To	到
++	Tone Curve	色调曲线
++	Toolbars	工具栏
++	Turbulent	湍流
++	Twirl	旋转扭曲
++	Twist	扭转
++	Units	单位
++	Unknown	未知
++	Unlink	取消链接
++	Update	更新
++	Updates	更新
++	Vertical Type Tool	直排文字工具
++	Warning	警告
++	White Intensity	白色强度
++	White Is High	白色为高
++	Width and Height	宽度与高度
++	Workspaces	工作区
++	Wrap	换行
++	blue	蓝色
++	green	绿色
++	none	无
++	red	红色
++	unknown	未知
++	yellow	黄色
+--- a/crates/ui-egui/src/i18n/zh-hant.tsv
++++ b/crates/ui-egui/src/i18n/zh-hant.tsv
+@@ -2739,3 +2739,315 @@
+ 	Sent to {printer}	已傳送至 {printer}
+ 	set in Print Settings…	在列印設定中設定…
+ 	ICO is limited to 256 × 256 pixels	ICO 最大為 256 × 256 像素
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Accented Edges	強調邊緣
++	Accurate	精確
++	Add Mask	新增遮色片
++	Add to	加入至
++	After	編輯後
++	Angled Strokes	傾斜筆觸
++	Any	任何
++	Aperture	光圈
++	Apply to All	全部套用
++	Arc	弧形
++	Arrows	箭頭
++	Artboards	工作區域
++	Artistic	藝術效果
++	Aspect Ratio	長寬比
++	Author	作者
++	Baseline Shift	基線位移
++	Basic Latin	基本拉丁文
++	Batch	批次
++	Before	編輯前
++	Best	最佳
++	Black Intensity	黑色強度
++	Bleach Bypass	漂白略過
++	Blend	漸變
++	Blending Mode	混合模式
++	Blocks	塊狀
++	Border Thickness	邊框粗細
++	Brick	磚塊
++	Brush Strokes	筆刷筆畫
++	Burlap	粗麻布
++	CMYK:	CMYK：
++	Charcoal	炭灰
++	Check for Updates	檢查更新
++	Choose…	選擇…
++	Circle	圓形
++	City	城市
++	Clear Amount	清除量
++	Clear History	清除歷史紀錄
++	Clipping Mask	剪裁遮色片
++	Clone	仿製
++	Close Window	關閉視窗
++	Clumped	結塊
++	Coarse Dots	粗點
++	Color Halftone	彩色半色調
++	Color Noise Reduction	色彩雜訊抑制
++	Color Picker	顏色選擇器
++	Color Range	色彩範圍
++	Color Settings	色彩設定
++	Color Swatches	色票
++	Color Table	色彩表
++	Compare	比較
++	Compatibility	相容性
++	Compression	壓縮
++	Confirm	確認
++	Continue	繼續
++	Contrasty	高反差
++	Convert	轉換
++	Convert to Grayscale	轉換為灰階
++	Copyright Info URL	著作權資訊網址
++	Copyright Status	著作權狀態
++	Copyrighted	受著作權保護
++	Crack Brightness	裂紋亮度
++	Crack Depth	裂紋深度
++	Crack Spacing	裂紋間距
++	Craquelure	龜裂紋
++	Cross	叉號
++	Cross Process	交叉沖洗
++	Crosshatch	交叉影線
++	Crystallize	結晶化
++	Current	目前
++	Dark Gray	深灰色
++	Dark Intensity	暗部強度
++	Dark Strokes	深色筆觸
++	Data	資料
++	Date	日期
++	Date and Time	日期和時間
++	De-Interlace	反交錯
++	Decrease Brush Size	縮小筆刷尺寸
++	Defaults	預設值
++	Defringe	去除邊緣色差
++	Delete Mask	刪除遮色片
++	Diffuse Glow	擴散光暈
++	Digits	數字
++	Direction Balance	方向平衡
++	Disabled	已停用
++	Discard Changes	捨棄變更
++	Display	顯示
++	Documents	文件
++	Dot	圓點
++	Draft	草稿
++	Duplicate Layer	製作圖層複本
++	Duplication	複製
++	Edge Brightness	邊緣亮度
++	Edge Width	邊緣寬度
++	Edit Toolbar	編輯工具列
++	Edit…	編輯…
++	Eliminate	消除
++	Enlarged	放大
++	Even Fields	偶數圖場
++	Export As	匯出為
++	Export Settings	匯出設定
++	Export to	匯出為
++	Exported {path}	已匯出 {path}
++	File Format	檔案格式
++	File Info	檔案資訊
++	File Size	檔案大小
++	Filename	檔名
++	Find	尋找
++	Fine Dots	細點
++	Finish	完成
++	Flag	旗標
++	Flash	閃光燈
++	Focus	專注
++	Frosted	磨砂
++	Full Screen	全螢幕
++	Gaussian Blur	高斯模糊
++	Glass	玻璃
++	Glow Amount	光暈量
++	Glowing Edges	發光邊緣
++	Good	良好
++	Grain Type	顆粒類型
++	Graininess	顆粒
++	Grainy Dots	顆粒點
++	Greek	希臘文
++	Grid view	格狀檢視
++	Grout Width	縫隙寬度
++	Heal	修復
++	Hidden	隱藏
++	Hide	隱藏
++	Hide Grid	隱藏格點
++	High	高
++	Highlight Area	亮部範圍
++	ISO Speed	ISO 感光度
++	Import…	匯入…
++	Increase Brush Size	放大筆刷尺寸
++	Inflate	膨脹
++	Ink Outlines	墨水輪廓
++	Install Plug-in	安裝增效模組
++	Intensity	強度
++	Interpolation	內插
++	Interpret Footage	解譯素材
++	Intersect with	與下列項目取交集
++	Invert Mask	反轉遮色片
++	Join the ArtCraft Discord	加入 ArtCraft Discord
++	Justification	對齊方式
++	Keywords	關鍵字
++	Label	標籤
++	Layer Styles	圖層樣式
++	Left Diagonal	左對角線
++	Lens	鏡頭
++	Lens Blur	鏡頭模糊
++	Lens Corrections	鏡頭校正
++	Less	較少
++	Libraries	資料庫
++	Light Direction	光源方向
++	Light Intensity	光源強度
++	Light Type	燈光類型
++	Lighten Grout	加亮縫隙
++	Lighting	照明
++	Link	連結
++	Liquify	液化
++	List	清單
++	List view	清單檢視
++	Locked	已鎖定
++	Long Lines	長線
++	Long Strokes	長筆畫
++	Low	低
++	Make	製作
++	Manual	手動
++	Mask	遮色片
++	Masks	遮色片
++	Measure	測量
++	Medium Dots	中等點
++	Medium Gray	中灰色
++	Medium Lines	中等線
++	Medium Strokes	中等筆畫
++	Method	方法
++	Mezzotint	網線銅版
++	Middle	中間
++	More	更多
++	Mosaic Tiles	馬賽克拼貼
++	New Group	新增群組
++	New Layer…	新增圖層…
++	New document	新文件
++	No Document	無文件
++	No Selection	未選取
++	No recent files	沒有最近的檔案
++	No selection	未選取
++	Ocean Ripple	海洋波紋
++	Odd Fields	奇數圖場
++	On	開
++	Opacity Mask	不透明度遮色片
++	Oval	橢圓
++	Package	封裝
++	Page Setup…	版面設定…
++	Panel Options…	面板選項…
++	Patchwork	拼綴圖
++	Path:	路徑：
++	Pen	畫筆
++	Pencil Tool	鉛筆工具
++	Percentage	百分比
++	Perimeter	周長
++	Point Curve	點曲線
++	Pointillize	點描
++	Preferences…	偏好設定…
++	Profile	描述檔
++	Public Domain	公有領域
++	Punctuation	標點符號
++	Quit	結束
++	RGB	RGB
++	RGB:	RGB：
++	Radial Blur	放射狀模糊
++	Random	隨機
++	Recent Files	最近使用的檔案
++	Rectangle	矩形
++	Relief	浮雕
++	Rendering…	正在算繪…
++	Repeat	重複
++	Replace	取代
++	Replace Footage	取代素材
++	Reset All	全部重設
++	Reset Preferences	重設偏好設定
++	Result	結果
++	Resume	繼續
++	Retry	重試
++	Right Diagonal	右對角線
++	Ripple Magnitude	波紋強度
++	Ripple Size	波紋大小
++	Ruler	尺規
++	Sandstone	砂岩
++	Save As	另存新檔
++	Save Changes	儲存變更
++	Save a Copy	儲存拷貝
++	Scaling	縮放
++	Scroll menu down	向下捲動選單
++	Scroll menu up	向上捲動選單
++	Sensitivity	靈敏度
++	Services	服務
++	Shadow	陰影
++	Sharpness	銳利度
++	Shear	傾斜
++	Short Lines	短線
++	Short Strokes	短筆畫
++	Shortcut	快速鍵
++	Shortcuts	快速鍵
++	Show All	全部顯示
++	Show Rulers	顯示尺標
++	Shutter Speed	快門速度
++	Simulate Paper	模擬紙張
++	Slice Options	切片選項
++	Smart Blur	智慧型模糊
++	Smoothness	平滑度
++	Snap to Grid	靠齊格點
++	Softness	柔和度
++	Space	空格
++	Spacing:	間距：
++	Spatter	噴濺
++	Speckle	斑點
++	Speed	速度
++	Spin	旋轉
++	Spray Radius	噴灑半徑
++	Sprayed Strokes	噴灑筆觸
++	Sprinkles	噴灑
++	Square Size	方塊大小
++	Stained Glass	彩色玻璃
++	Stamp	印章
++	Star	星形
++	Statistics	統計資料
++	Stippled	點刻
++	Stop	停止
++	Strength	力度
++	Stretch	伸展
++	Stroke Direction	筆觸方向
++	Stroke Length	筆觸長度
++	Stroke Pressure	筆觸壓力
++	Stroke Width	筆觸寬度
++	Strokes	筆畫
++	Subscript	下標
++	Sumi-e	水墨畫
++	Superscript	上標
++	Symbols	符號
++	Taper	錐化
++	Target	目標
++	Texturizer	紋理化
++	Thickness	粗細
++	Tile Size	拼貼大小
++	Tiny Lens	小鏡頭
++	Title	標題
++	Tone Curve	色調曲線
++	Toolbars	工具列
++	Transition	过渡
++	Trim	剪裁
++	Twist	扭轉
++	Uniform	等比例
++	Units	單位
++	Unknown	未知
++	Unlock	解除鎖定
++	Unsharp Mask	反銳利化遮罩
++	Update	更新
++	Updates	更新
++	Vertical Type Tool	垂直文字工具
++	W:	寬：
++	Wave	波浪線
++	White Intensity	白色強度
++	Width and Height	寬度與高度
++	blue	藍色
++	green	綠色
++	none	無
++	red	紅色
++	unknown	未知
++	yellow	黃色

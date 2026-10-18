@@ -1,0 +1,12 @@
+--- a/crates/ui-egui/src/i18n/zh-cn.tsv
++++ b/crates/ui-egui/src/i18n/zh-cn.tsv
+@@ -3585,3 +3585,9 @@
+ 	Shows the version, community links and credits in a KIO Film window.	在 KIO Film 窗口中显示版本、社区链接和致谢。
+ 	Couldn't open your web browser	无法打开网页浏览器
+ 	Open this address in your browser yourself:	请自行在浏览器中打开此地址：
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	Dark Theme	深色主题
++	Light Theme	浅色主题
++	Linear Gradient	线性渐变
++	Settings	设置

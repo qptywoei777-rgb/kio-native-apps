@@ -1,0 +1,356 @@
+--- a/crates/ui-egui/src/i18n/ja.tsv
++++ b/crates/ui-egui/src/i18n/ja.tsv
+@@ -4374,3 +4374,90 @@
+ 	Softness	柔らかさ
+ 	Ambient Light	環境光
+ 	Light behind the object	オブジェクトの背後のライト
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	16 bit	16 ビット
++	24 bit	24 ビット
++	24 bits/pixel	24 ビット/ピクセル
++	32 bit	32 ビット
++	32 bits/pixel	32 ビット/ピクセル
++	8 bit	8 ビット
++	Adaptive	アダプティブ
++	All Layers	すべてのレイヤー
++	All Slices	すべてのスライス
++	Any except extracting pages	ページ抽出以外のすべて
++	Arrow	矢印
++	Art & Illustration	アート・イラスト
++	Ascent	アセント
++	Auto Size	自動サイズ
++	Barbed	かぎ付き
++	Bicubic	バイキュービック
++	Black & White	白黒
++	Bloat	膨張
++	Bracket	かっこ
++	Brown	ブラウン
++	Cap Height	大文字の高さ
++	Command	コマンド
++	Composite	コンポジット
++	Cool	クール
++	Copyright and Contact Info	著作権と連絡先
++	Copyrighted	著作権あり
++	Diffusion	拡散
++	Distance	距離
++	Essentials	基本
++	Exact	正確
++	Feather	ぼかし
++	Film & Video	フィルム・ビデオ
++	First Baseline	最初のベースライン
++	Freeform	フリーフォーム
++	Gray	グレー
++	Gray Gamma 2.2	グレー ガンマ 2.2
++	Hand	手のひら
++	Hexagon	六角形
++	High Contrast	高コントラスト
++	High Resolution	高解像度
++	High resolution	高解像度
++	Keyboard Shortcuts	キーボードショートカット
++	Layout	レイアウト
++	Legal	リーガル
++	Length	長さ
++	Length:	長さ:
++	Low Resolution	低解像度
++	Measure	測定
++	Medium Resolution	中解像度
++	Mesh	メッシュ
++	Mobile	モバイル
++	Monochromatic	モノクロ
++	Monochrome	モノクロ
++	No Dither	ディザなし
++	OpenType	OpenType
++	Orange	オレンジ
++	Oval	楕円
++	PRs	PR
++	Painting	ペイント
++	Pen	ペン
++	Perceptual	知覚的
++	Pink	ピンク
++	Pixel	ピクセル
++	Preserve	保持
++	Press keys…	キーを押してください…
++	Printing and Proofing	プリントとカラー校正
++	Public Domain	パブリックドメイン
++	Pucker	収縮
++	RGB	RGB
++	Roman	ローマン
++	Rotate View	表示を回転
++	Save Selection	選択範囲を保存
++	Selective	特定色
++	Slash	斜線
++	Subset	対象範囲
++	Tabloid	タブロイド
++	Tag	タグ
++	Tool	ツール
++	Triangle	三角形
++	Twirl	渦巻き
++	Unknown	不明
++	Use Default	既定を使用
++	Warm	ウォーム
++	Web	ウェブ
++	x Height	x の高さ
+--- a/crates/ui-egui/src/i18n/ko.tsv
++++ b/crates/ui-egui/src/i18n/ko.tsv
+@@ -4344,3 +4344,73 @@
+ 	Softness	부드러움
+ 	Ambient Light	주변광
+ 	Light behind the object	개체 뒤의 조명
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	16 bit	16비트
++	24 bit	24비트
++	24 bits/pixel	24비트/픽셀
++	32 bit	32비트
++	32 bits/pixel	32비트/픽셀
++	8 bit	8비트
++	Absolute Colorimetric	절대 색도계
++	Adaptive	적응형
++	All Layers	모든 레이어
++	All Slices	모든 분할 영역
++	Arrow	화살표
++	Art & Illustration	아트 및 일러스트레이션
++	Bicubic	쌍입방
++	Black & White	흑백
++	Brown	갈색
++	Command	명령
++	Composite	합성
++	Copyright and Contact Info	저작권 및 연락처 정보
++	Cross	십자
++	Diffusion	확산
++	Distance	거리
++	Essentials	필수
++	Exact	정확하게
++	Feather	페더
++	Film & Video	필름 및 비디오
++	Freeform	자유형
++	Gray	회색
++	Gray Gamma 2.2	회색 감마 2.2
++	Group Selection	그룹 선택
++	Hexagon	육각형
++	Justify	양쪽 정렬
++	Keyboard Shortcuts	키보드 단축키
++	Lasso	올가미
++	Legal	리걸
++	Length	길이
++	Length:	길이:
++	Linear	선형
++	Measure	길이 분할
++	Mesh	메시
++	Mobile	모바일
++	Monochromatic	단색
++	Monochrome	단색
++	Muted	차분하게
++	No Dither	디더링 없음
++	OpenType	OpenType
++	Orange	주황
++	Oval	타원
++	PRs	PR
++	Painting	페인팅
++	Pen	펜
++	Perceptual	지각적
++	Preserve	유지
++	Press keys…	키를 누르세요…
++	Purple	보라
++	RGB	RGB
++	Relative Colorimetric	상대 색도계
++	Reset to Defaults	기본값으로 초기화
++	Rotate View	보기 회전
++	Save Selection	선택 영역 저장
++	Selective	선택적
++	Symbol	기호
++	Tabloid	타블로이드
++	Tool	도구
++	Triangle	삼각형
++	Typography	타이포그래피
++	Use Default	기본값 사용
++	Vivid	선명하게
++	Web	웹
+--- a/crates/ui-egui/src/i18n/vi.tsv
++++ b/crates/ui-egui/src/i18n/vi.tsv
+@@ -4362,3 +4362,70 @@
+ 	Softness	Độ mềm
+ 	Ambient Light	Ánh sáng môi trường
+ 	Light behind the object	Ánh sáng phía sau đối tượng
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	16 bit	16-bit
++	24 bits/pixel	24 bit/pixel
++	32 bits/pixel	32 bit/pixel
++	8 bit	8-bit
++	Absolute Colorimetric	Đo màu tuyệt đối
++	Adaptive	Thích ứng
++	All Layers	Mọi lớp
++	All Slices	Mọi lát cắt
++	Art & Illustration	Nghệ thuật & Minh họa
++	Black & White	Đen & Trắng
++	Bloat	Phồng ra
++	Command	Lệnh
++	Cool	Mát
++	Copyright and Contact Info	Bản quyền và thông tin liên hệ
++	Copyrighted	Được bảo vệ bản quyền
++	Cross	Chữ thập
++	Diffusion	Khuếch tán
++	Distance	Khoảng cách
++	Essentials	Cơ bản
++	Exact	Chính xác
++	Feather	Làm mềm cạnh
++	Film & Video	Phim & Video
++	Gray	Xám
++	Gutter	Lề
++	Hand	Tay
++	Hexagon	Lục giác
++	Justify	Căn đều
++	Keyboard Shortcuts	Phím tắt
++	Lasso	Dây mềm
++	Layout	Bố cục
++	Legal	Khổ pháp lý
++	Length	Chiều dài
++	Length:	Độ dài:
++	Linear	Tuyến tính
++	Measure	Đo
++	Mesh	Lưới
++	Minimum	Cực tiểu
++	Mobile	Di động
++	Monochromatic	Đơn sắc
++	Monochrome	Đơn sắc
++	No Dither	Không hòa sắc
++	OpenType	OpenType
++	Orange	Cam
++	Oval	Hình bầu dục
++	Painting	Vẽ
++	Pen	Bút
++	Perceptual	Cảm nhận
++	Preserve	Giữ hồ sơ nhúng
++	Press keys…	Nhấn phím…
++	Public Domain	Miền công cộng
++	Pucker	Co vào
++	Purple	Tím
++	RGB	RGB
++	Relative Colorimetric	Đo màu tương đối
++	Roman	Chữ thường
++	Rotate View	Xoay khung nhìn
++	Save Selection	Lưu vùng chọn
++	Selective	Chọn lọc
++	Tabloid	Khổ báo
++	Tool	Công cụ
++	Triangle	Tam giác
++	Twirl	Xoáy
++	Unknown	Không rõ
++	Use Default	Dùng mặc định
++	Warm	Ấm
+--- a/crates/ui-egui/src/i18n/zh-hans.tsv
++++ b/crates/ui-egui/src/i18n/zh-hans.tsv
+@@ -3957,3 +3957,47 @@
+ 	Softness	柔和度
+ 	Ambient Light	环境光
+ 	Light behind the object	光源位于对象后方
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	16 bit	16 位
++	24 bit	24 位
++	24 bits/pixel	24 位/像素
++	32 bit	32 位
++	32 bits/pixel	32 位/像素
++	8 bit	8 位
++	Adaptive	自适应
++	All Layers	所有图层
++	All Slices	所有切片
++	Any except extracting pages	除提取页面外的任何操作
++	Arrow	箭头
++	Ascent	上升高度
++	Barbed	倒钩
++	Bicubic	双三次
++	Black & White	黑白
++	Bracket	括号
++	Cap Height	大写字母高度
++	Composite	合成
++	Copyright and Contact Info	版权与联系信息
++	Copyrighted	受版权保护
++	Cross	叉号
++	Diffusion	扩散
++	Distance	距离
++	Feather	羽化
++	First Baseline	首行基线
++	Freeform	自由形式
++	Hexagon	六边形
++	High resolution	高分辨率
++	Justify	两端对齐
++	Length	长度
++	No Dither	无仿色
++	Oval	椭圆
++	Public Domain	公共领域
++	Selective	选择性
++	Slash	斜线
++	Subset	子集
++	Symbol	符号
++	Tag	标记
++	Triangle	三角形
++	Twirl	旋转扭曲
++	Unknown	未知
++	x Height	x 字高
+--- a/crates/ui-egui/src/i18n/zh-hant.tsv
++++ b/crates/ui-egui/src/i18n/zh-hant.tsv
+@@ -3741,3 +3741,61 @@
+ 	Softness	柔和度
+ 	Ambient Light	環境光
+ 	Light behind the object	光源位於物件後方
++
++# KIO additive translations: exact source/context, unanimous catalog donors.
++	16 bit	16 位元
++	24 bits/pixel	24 位元/像素
++	32 bits/pixel	32 位元/像素
++	8 bit	8 位元
++	Absolute Colorimetric	絕對色度
++	Adaptive	適應性
++	All Layers	所有圖層
++	All Slices	所有切片
++	Any except extracting pages	除提取頁面外的任何操作
++	Art & Illustration	藝術與插畫
++	Bar	豎線
++	Bicubic	雙三次
++	Black & White	黑白
++	Bracket	括號
++	Command	指令
++	Copyright and Contact Info	版權與聯絡資訊
++	Copyrighted	受著作權保護
++	Cross	叉號
++	Diffusion	擴散
++	Exact	精確
++	Feather	羽化
++	Film & Video	電影與視訊
++	Gray	灰色
++	Gray Gamma 2.2	灰階 Gamma 2.2
++	Gutter	欄距
++	High Resolution	高解析度
++	High resolution	高解析度
++	Keyboard Shortcuts	鍵盤快速鍵
++	Lasso	套索
++	Length:	長度：
++	Measure	測量
++	Mesh	網格
++	Mobile	行動裝置
++	Monochrome	單色
++	Muted	低彩度
++	No Dither	無遞色
++	Orange	橙色
++	Oval	橢圓
++	PRs	PR
++	Pen	畫筆
++	Pink	粉色
++	Public Domain	公有領域
++	Purple	紫色
++	RGB	RGB
++	Relative Colorimetric	相對色度
++	Rotate View	旋轉檢視
++	Selective	選擇性
++	Slash	斜線
++	Subset	子集
++	Symbol	符號
++	Tag	標籤
++	Tool	工具
++	Triangle	三角形
++	Unknown	未知
++	Use Default	使用預設值
++	Vivid	鮮豔

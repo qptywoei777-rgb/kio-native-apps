@@ -1,0 +1,69 @@
+{
+  "schema": "kio.localization-development-patch.v1",
+  "programId": "photo",
+  "status": "incomplete-not-release-approved",
+  "basePreparedTreeSha256": "8269234e10fabbd02128ca1139b12ec3998abdf1598fa2ce5371a463daea90b7",
+  "patch": {
+    "path": "patches/localization-candidates/photo.patch",
+    "sha256": "ebc896b1baf7d378a6a0f654ff7ab5ec57115b423c774653e32d4e300da991ff",
+    "bytes": 25601
+  },
+  "files": [
+    {
+      "path": "crates/ui-egui/src/i18n/ja.tsv",
+      "before": {
+        "sha256": "97200d3b9ba8b821e5e65bfbcdc5262bbddbbeb139bdbe2f97a1239160b5865f",
+        "bytes": 165650
+      },
+      "after": {
+        "sha256": "ad856336cc10278c914ca38d179039324fb569e2e578cc80f297cbc48b53e1ce",
+        "bytes": 168425
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/ko.tsv",
+      "before": {
+        "sha256": "cf8d4eaf4f1b4d97c705ac3b90dce192ab94afb1827d95710df4d981a38fe86d",
+        "bytes": 131062
+      },
+      "after": {
+        "sha256": "5b01ad5f89ae14dc706486b7b60f2f066ea46f04306839f2afe044b7c8776722",
+        "bytes": 134402
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/vi.tsv",
+      "before": {
+        "sha256": "02c41105a05c72f558196eda8cfe9c467c93b5913c9dfa35ae0806abb0f89616",
+        "bytes": 144420
+      },
+      "after": {
+        "sha256": "78ad7bddc6550c61c01748ba4dccefe96f08e41c494e0681a971cea96618367d",
+        "bytes": 146512
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/zh-hans.tsv",
+      "before": {
+        "sha256": "6d895cb42a0e51612fbd27d3f4a91fec3d800d54796566e23c32eb59c81fce9b",
+        "bytes": 102600
+      },
+      "after": {
+        "sha256": "7063bcaed02ae9c1ed0f2120425358ad6a90b70868dd137bde967723a2d025e8",
+        "bytes": 110642
+      }
+    },
+    {
+      "path": "crates/ui-egui/src/i18n/zh-hant.tsv",
+      "before": {
+        "sha256": "2516e26be500b5cf9e12fb1843d63d39ed0f8055e38fa1c0d2497a9ac2d3d56d",
+        "bytes": 102955
+      },
+      "after": {
+        "sha256": "d72237cd6c4a2a493f88e67700708b0af701936541222ef03a1b388e69d057dc",
+        "bytes": 109867
+      }
+    }
+  ],
+  "releaseGate": "Do not publish binaries or mark complete until six-language/UI/security/native test gates pass."
+}
