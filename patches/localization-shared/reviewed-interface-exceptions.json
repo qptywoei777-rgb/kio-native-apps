@@ -2195,6 +2195,19 @@
       "context": "",
       "source": "video",
       "reason": "Vietnamese loanword; no exception for the other four target languages."
+    },
+    {
+      "app": "deck",
+      "languages": [
+        "vi",
+        "ko",
+        "ja",
+        "zh-TW",
+        "zh-CN"
+      ],
+      "context": "",
+      "source": "PowerPoint",
+      "reason": "Official product/file-format name in the native file picker."
     }
   ]
 }

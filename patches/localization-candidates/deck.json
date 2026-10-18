@@ -5,8 +5,8 @@
   "basePreparedTreeSha256": "f75f76714c6bfecd468cd4cdd8a03d2a693dcef438762bd8fa987839336d001c",
   "patch": {
     "path": "patches/localization-candidates/deck.patch",
-    "sha256": "977f0aa0300d56f2d3afb1fec5e94df9fe480124b4621084d1de739ab463f542",
-    "bytes": 440289
+    "sha256": "c60f628c9999cc5aa38f8a579946e1dafebbca7924c75520213096e738d2595f",
+    "bytes": 440551
   },
   "files": [
     {
@@ -101,24 +101,24 @@
       "path": "crates/ui-egui/src/i18n/en.tsv",
       "before": null,
       "after": {
-        "sha256": "8e67fd57f074b5eb82a58ba79aadede842feacf6859c7fa06bdb76c73aec85e8",
-        "bytes": 33606
+        "sha256": "6844634e0d9d4b9fd43b8f178516f970a3053a80eae5be65150ccc15ecd62457",
+        "bytes": 33646
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/ja.tsv",
       "before": null,
       "after": {
-        "sha256": "58a805a3d98d324ea3871bda11ffc61a8216a7ef4044e48a1917164da2805efe",
-        "bytes": 42451
+        "sha256": "3cf0f1b45c281394cb8883311514e1121087e23bd10070aa6a5dd46a46a77d8d",
+        "bytes": 42502
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/ko.tsv",
       "before": null,
       "after": {
-        "sha256": "ce297153a05829b89713aa6b38d65295626b632036c2ddb68d2b98f238ad6f5d",
-        "bytes": 38772
+        "sha256": "efb05178d36a1ff636a18296c8b90abfebf06083b41f4683beffcd25a7191f61",
+        "bytes": 38811
       }
     },
     {
@@ -141,24 +141,24 @@
       "path": "crates/ui-egui/src/i18n/vi.tsv",
       "before": null,
       "after": {
-        "sha256": "208cda06bd06ff05a8e9fc2cd461903959c532ab058e0f74a79cead235f418df",
-        "bytes": 41014
+        "sha256": "f4b06e675f92ba4cbdbf212cff4f22d6db7c00611bef993b5ad56bf23e04c1d5",
+        "bytes": 41056
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/zh-CN.tsv",
       "before": null,
       "after": {
-        "sha256": "9bb94da5fb206d16ef78c3c9c28fd30a8cd7649c6ab709e75d5d7bdb4a62cc64",
-        "bytes": 34290
+        "sha256": "5f45a2996872c11bcc0fa729588496aee54a33129b5ba0617bc482a95bc60872",
+        "bytes": 34329
       }
     },
     {
       "path": "crates/ui-egui/src/i18n/zh-TW.tsv",
       "before": null,
       "after": {
-        "sha256": "23f30bfb3f7fb8e977877a2dfee8f4bed773392dc75cf58c65f1cf47c592f465",
-        "bytes": 34446
+        "sha256": "5b02616a07e25523d10a9c9ace9ff98086ab205f9444cf6c7068f0d44b0a39fd",
+        "bytes": 34485
       }
     },
     {

@@ -20,6 +20,12 @@ class LocalizationFailures(unittest.TestCase):
             self.assertFalse(result['complete'])
             self.assertEqual({r['text'] for r in result['directUiReview']},{'Light','Help','Delete {} files'})
 
+    def test_localized_link_caption_does_not_treat_destination_as_ui_text(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='ui.hyperlink_to(t("Help"), "https://example.test/help");')
+            self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
+
     def test_formatted_user_data_and_unit_symbols_are_not_prose(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
@@ -31,6 +37,21 @@ class LocalizationFailures(unittest.TestCase):
             root=Path(tmp)
             self.fixture(root,ui='let params = json!({"shape": fade.shape.label(), "curvature": 0.5});')
             self.assertEqual(audit.audit_app('fixture',root)['directUiReview'],[])
+
+    def test_native_shell_filter_and_menu_keys_are_audited_too(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.fixture(root)
+            native=root/'apps/fixture/src';native.mkdir(parents=True)
+            (native/'main.rs').write_text('dialog.add_filter(i18n::t("Session file"), &["session"]);',encoding='utf-8')
+            self.assertIn(['','Session file'],audit.audit_app('fixture',root)['languages']['vi']['missingKeys'])
+
+    def test_links_emphasis_and_custom_checkbox_captions_cannot_bypass_audit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            self.fixture(root,ui='ui.hyperlink_to("Help", url); ui.strong("Bus"); crate::widgets::checkbox(ui, &mut on, "Normalize");')
+            result=audit.audit_app('fixture',root)
+            self.assertEqual({r['text'] for r in result['directUiReview']},{'Help','Bus','Normalize'})
+            self.assertFalse(result['complete'])
 
     def test_format_message_storage_context_does_not_create_a_duplicate_key(self):
         with tempfile.TemporaryDirectory() as tmp:

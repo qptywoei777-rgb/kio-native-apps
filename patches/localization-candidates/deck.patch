@@ -1311,7 +1311,7 @@
              let r = ui.add(egui::Slider::new(&mut tr, 0.0..=100.0).suffix("%"));
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/en.tsv
-@@ -0,0 +1,1048 @@
+@@ -0,0 +1,1050 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  Fixed date (empty = update automatically):
 +	  Footer text:	  Footer text:
@@ -1915,6 +1915,7 @@
 +	Origami	Origami
 +	Out	Out
 +	Outer	Outer
++	Outline	Outline
 +	Outline\nView	Outline\nView
 +	Outline (*.txt)	Outline (*.txt)
 +	Outline (.txt)	Outline (.txt)
@@ -1975,6 +1976,7 @@
 +	Position	Position
 +	Position Objects	Position Objects
 +	Post	Post
++	PowerPoint	PowerPoint
 +	PowerPoint Presentation (*.pptx)	PowerPoint Presentation (*.pptx)
 +	PowerPoint Presentation (.pptx)	PowerPoint Presentation (.pptx)
 +	Preferences	Preferences
@@ -2362,7 +2364,7 @@
 +	✏ on	✏ on
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ja.tsv
-@@ -0,0 +1,1048 @@
+@@ -0,0 +1,1050 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  固定の日付（空欄で自動更新）:
 +	  Footer text:	  フッターの文字列:
@@ -2966,6 +2968,7 @@
 +	Origami	折り紙
 +	Out	外側へ
 +	Outer	外側
++	Outline	アウトライン
 +	Outline\nView	アウトライン\n表示
 +	Outline (*.txt)	アウトライン (*.txt)
 +	Outline (.txt)	アウトライン (.txt)
@@ -3026,6 +3029,7 @@
 +	Position	位置
 +	Position Objects	オブジェクトの位置
 +	Post	投稿
++	PowerPoint	PowerPoint
 +	PowerPoint Presentation (*.pptx)	PowerPoint プレゼンテーション (*.pptx)
 +	PowerPoint Presentation (.pptx)	PowerPoint プレゼンテーション (.pptx)
 +	Preferences	環境設定
@@ -3413,7 +3417,7 @@
 +	✏ on	✏ オン
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ko.tsv
-@@ -0,0 +1,1048 @@
+@@ -0,0 +1,1050 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  고정 날짜 (비워 두면 자동 업데이트):
 +	  Footer text:	  바닥글 텍스트:
@@ -4017,6 +4021,7 @@
 +	Origami	종이접기
 +	Out	바깥으로
 +	Outer	바깥쪽
++	Outline	개요
 +	Outline\nView	개요\n보기
 +	Outline (*.txt)	개요 (*.txt)
 +	Outline (.txt)	개요 (.txt)
@@ -4077,6 +4082,7 @@
 +	Position	위치
 +	Position Objects	개체 위치
 +	Post	게시
++	PowerPoint	PowerPoint
 +	PowerPoint Presentation (*.pptx)	PowerPoint 프레젠테이션 (*.pptx)
 +	PowerPoint Presentation (.pptx)	PowerPoint 프레젠테이션 (.pptx)
 +	Preferences	환경 설정
@@ -4869,7 +4875,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/vi.tsv
-@@ -0,0 +1,1048 @@
+@@ -0,0 +1,1050 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  Ngày cố định (để trống để tự động cập nhật):
 +	  Footer text:	  Nội dung chân trang:
@@ -5473,6 +5479,7 @@
 +	Origami	Gấp giấy
 +	Out	Ra
 +	Outer	Bên ngoài
++	Outline	Dàn bài
 +	Outline\nView	Dạng xem\ndàn ý
 +	Outline (*.txt)	Dàn ý (*.txt)
 +	Outline (.txt)	Dàn ý (.txt)
@@ -5533,6 +5540,7 @@
 +	Position	Vị trí
 +	Position Objects	Định vị đối tượng
 +	Post	Đăng
++	PowerPoint	PowerPoint
 +	PowerPoint Presentation (*.pptx)	Bản trình chiếu PowerPoint (*.pptx)
 +	PowerPoint Presentation (.pptx)	Bản trình chiếu PowerPoint (.pptx)
 +	Preferences	Tùy chọn
@@ -5920,7 +5928,7 @@
 +	✏ on	✏ bật
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-CN.tsv
-@@ -0,0 +1,1048 @@
+@@ -0,0 +1,1050 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  固定日期（留空则自动更新）：
 +	  Footer text:	  页脚文字：
@@ -6524,6 +6532,7 @@
 +	Origami	折纸
 +	Out	向外
 +	Outer	外部
++	Outline	大纲
 +	Outline\nView	大纲\n视图
 +	Outline (*.txt)	大纲 (*.txt)
 +	Outline (.txt)	大纲 (.txt)
@@ -6584,6 +6593,7 @@
 +	Position	位置
 +	Position Objects	定位对象
 +	Post	发布
++	PowerPoint	PowerPoint
 +	PowerPoint Presentation (*.pptx)	PowerPoint 演示文稿 (*.pptx)
 +	PowerPoint Presentation (.pptx)	PowerPoint 演示文稿 (.pptx)
 +	Preferences	首选项
@@ -6971,7 +6981,7 @@
 +	✏ on	✏ 开启
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-TW.tsv
-@@ -0,0 +1,1048 @@
+@@ -0,0 +1,1050 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +	  Fixed date (empty = update automatically):	  固定日期（留空則自動更新）：
 +	  Footer text:	  頁尾文字：
@@ -7575,6 +7585,7 @@
 +	Origami	摺紙
 +	Out	向外
 +	Outer	外部
++	Outline	大綱
 +	Outline\nView	大綱\n檢視
 +	Outline (*.txt)	大綱 (*.txt)
 +	Outline (.txt)	大綱 (.txt)
@@ -7635,6 +7646,7 @@
 +	Position	位置
 +	Position Objects	定位物件
 +	Post	張貼
++	PowerPoint	PowerPoint
 +	PowerPoint Presentation (*.pptx)	PowerPoint 簡報 (*.pptx)
 +	PowerPoint Presentation (.pptx)	PowerPoint 簡報 (.pptx)
 +	Preferences	偏好設定

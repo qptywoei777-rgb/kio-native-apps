@@ -20,8 +20,10 @@ APPS = ('photo', 'vector', 'film', 'light', 'pdf', 'effect', 'design', 'ui', 'wo
 ALIASES = {'zh': 'zh-CN', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW'}
 RSTRING = r'"(?:[^"\\]|\\.)*"'
 PLACEHOLDER = re.compile(r'(?<!\{)\{([A-Za-z_][\w]*(?::[^{}]*)?)\}(?!\})')
-DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|menu_button|link|radio|on_hover_text|hint_text|selected_text|selectable_label|checkbox)\s*\(\s*(?!\))(?:[^,\n]+,\s*)?(' + RSTRING + ')')
-DIRECT_FORMAT_UI = re.compile(r'\.(?:label|button|small_button|heading|on_hover_text|hint_text|selected_text)\s*\(\s*(?:(?:egui::)?RichText::new\s*\(\s*)?format!\s*\(\s*(' + RSTRING + ')')
+DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|strong|weak|small|menu_button|link|radio|on_hover_text|on_disabled_hover_text|hint_text|selected_text|selectable_label|checkbox)\s*\(\s*(?!\))(?:[^,\n]+,\s*)?(' + RSTRING + ')')
+DIRECT_LINK_UI = re.compile(r'\.hyperlink_to\s*\(\s*(' + RSTRING + ')')
+CUSTOM_CHECKBOX_UI = re.compile(r'\b(?:crate::)?widgets::checkbox\s*\(\s*ui\s*,\s*[^,\n]+,\s*(' + RSTRING + ')')
+DIRECT_FORMAT_UI = re.compile(r'\.(?:label|button|small_button|heading|strong|weak|small|hyperlink_to|on_hover_text|hint_text|selected_text)\s*\(\s*(?:(?:egui::)?RichText::new\s*\(\s*)?format!\s*\(\s*(' + RSTRING + ')')
 LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn|msg)\s*\()\s*(?:&\s*)?\(*\s*(' + RSTRING + ')')
 OFFICIAL_NAMES = {'launcher': {('', value) for value in ('Launcher', 'KIO App Suite', 'Discord', 'GitHub', 'KIO Launcher {version}', 'KIO Launcher', 'ArtCraft', '{name} {version}')}}
 
@@ -136,7 +138,8 @@ def collect_catalogs(source):
 def source_literals(source):
     keys, review = set(), []
     root = source / 'crates/ui-egui/src'
-    for f in sorted(root.rglob('*.rs')):
+    roots = [root, *(path / 'src' for path in (source / 'apps').glob('*') if path.is_dir())]
+    for f in sorted({path for folder in roots for path in folder.rglob('*.rs')}):
         if 'i18n' in f.parts or f.name.startswith('i18n') or f.name.endswith('_tests.rs'):
             continue
         text = f.read_text(encoding='utf-8').split('#[cfg(test)]')[0]
@@ -145,7 +148,7 @@ def source_literals(source):
             # Empty text and punctuation-only icons have no linguistic content.
             if any(c.isalpha() for c in value):
                 keys.add(('', value))
-        for m in DIRECT_UI.finditer(text):
+        for m in (*DIRECT_UI.finditer(text), *DIRECT_LINK_UI.finditer(text), *CUSTOM_CHECKBOX_UI.finditer(text)):
             value = literal(m[1])
             if re.search('[A-Za-z]{2}', value):
                 review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})

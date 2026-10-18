@@ -225,6 +225,34 @@ Transport Online	Đồng bộ điều khiển phát	트랜스포트 온라인	�
 Transpose	Chuyển giọng	조옮김	トランスポーズ	移調	移调
 Velocity	Lực nhấn	벨로시티	ベロシティ	力度	力度
 Waveforms	Dạng sóng	파형	波形	波形	波形
+KIO Sound Session	Phiên KIO Sound	KIO Sound 세션	KIO Sound セッション	KIO Sound 工作階段	KIO Sound 会话
+Hide KIO Sound	Ẩn KIO Sound	KIO Sound 가리기	KIO Sound を隠す	隱藏 KIO Sound	隐藏 KIO Sound
+Hide Others	Ẩn ứng dụng khác	기타 가리기	ほかを隠す	隱藏其他應用程式	隐藏其他应用
+Quit KIO Sound	Thoát KIO Sound	KIO Sound 종료	KIO Sound を終了	結束 KIO Sound	退出 KIO Sound
+Services	Dịch vụ	서비스	サービス	服務	服务
+Show All	Hiện tất cả	모두 표시	すべてを表示	顯示全部	显示全部
+times	lần	회	回	次	次
+semitones	nửa cung	반음	半音	半音	半音
+plugin	trình cắm	플러그인	プラグイン	外掛	插件
+Session name	Tên phiên	세션 이름	セッション名	工作階段名稱	会话名称
+Timecode format	Định dạng mã thời gian	타임코드 형식	タイムコード形式	時間碼格式	时间码格式
+Audio tracks	Rãnh âm thanh	오디오 트랙	オーディオトラック	音訊軌	音轨
+Files in session	Tệp trong phiên	세션의 파일	セッション内のファイル	工作階段中的檔案	会话中的文件
+Filename	Tên tệp	파일 이름	ファイル名	檔名	文件名
+Track listing	Danh sách rãnh	트랙 목록	トラック一覧	軌道清單	轨道列表
+Track name	Tên rãnh	트랙 이름	トラック名	軌道名稱	轨道名称
+Clip name	Tên đoạn	클립 이름	クリップ名	片段名稱	片段名称
+Start time	Thời gian bắt đầu	시작 시간	開始時間	開始時間	开始时间
+End time	Thời gian kết thúc	종료 시간	終了時間	結束時間	结束时间
+State	Trạng thái	상태	状態	狀態	状态
+Inactive	Không hoạt động	비활성	無効	非作用中	非活动
+Muted	Đã tắt tiếng	음소거됨	ミュート中	已靜音	已静音
+Unmuted	Đang bật tiếng	음소거 해제됨	ミュート解除	已取消靜音	已取消静音
+Markers listing	Danh sách dấu mốc	마커 목록	マーカー一覧	標記清單	标记列表
+Channel	Kênh	채널	チャンネル	聲道	声道
+{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels} kênh · {buffer}	{name} · {rate} Hz · {channels}채널 · {buffer}	{name} · {rate} Hz · {channels} チャンネル · {buffer}	{name} · {rate} Hz · {channels} 聲道 · {buffer}	{name} · {rate} Hz · {channels} 声道 · {buffer}
+{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels} kênh	{name} · {rate} Hz · {channels}채널	{name} · {rate} Hz · {channels} チャンネル	{name} · {rate} Hz · {channels} 聲道	{name} · {rate} Hz · {channels} 声道
+{name} — {format} from channel {channel}	{name} — {format} từ kênh {channel}	{name} — {format}(채널 {channel}부터)	{name} — {format}（チャンネル {channel} から）	{name} — {format}（從聲道 {channel} 起）	{name} — {format}（从声道 {channel} 起）
 auto {mode}	tự động: {mode}	자동 {mode}	自動 {mode}	自動{mode}	自动{mode}
 nogrp	không nhóm	그룹 없음	グループなし	無群組	无编组
 t/l	chạm/giữ	터치/래치	タッチ／ラッチ	觸控／鎖存	触控／锁存

@@ -7,10 +7,10 @@ the exact original full_native.py preparation recorded in each JSON manifest.
 Photo, Vector, Film, PDF, Word and CAD receive 1,491 additive catalog entries from
 unanimous exact-context/source donors. Existing translations remain unchanged.
 Deck and Sound receive six-language UI plumbing, device-local preferences,
-OS detection, native font fallback and stable window identity. Deck now has 1,047
+OS detection, native font fallback and stable window identity. Deck now has 1,049
 catalog keys in all six languages, including presentation-specific editorial
 translations and repaired dynamic menus, accessible labels and font notices.
-Sound now has 1,532 keys in each of the six languages, including the actual
+Sound now has 1,560 keys in each of the six languages, including the actual
 model/DSP presentation metadata, recovery and device-failure messages. Keyed
 compound messages preserve filenames and nested arguments; language changes
 retain the session. **Neither candidate is release-approved.**
@@ -31,7 +31,7 @@ reject the candidate tree. The separate native verification workflow has read-on
 repository permission and never packages or publishes a release.
 
 Local checks on macOS arm64: both GUI crates compile; Deck UI tests 53/53 and
-Sound UI tests 119/119 pass. Deck's current candidate passed 53/53 and the strict
+Sound UI tests 120/120 pass. Deck's current candidate passed 53/53 and the strict
 catalog gate on both macOS and Windows in run 39142452059. Sound's revised
 candidate requires its own Windows run. The earlier Sound run failed correctly
 for its then-missing catalog entries; it is not evidence against or for this

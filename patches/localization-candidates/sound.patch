@@ -116,7 +116,7 @@
      entries: Vec<Entry>,
      events: Receiver<MenuEvent>,
      /// When `sync` last walked the entries; see `SYNC_EVERY`.
-@@ -30,7 +31,7 @@
+@@ -30,18 +31,18 @@
      pub fn new(app: &SoundApp, ctx: &egui::Context) -> muda::Result<Self> {
          let menu = Menu::new();
          let (tx, events) = channel();
@@ -125,17 +125,21 @@
          let app_menu = Submenu::new("KIO Sound", true);
          native.add_item(app, &app_menu, "About KIO Sound", "", Some("window.about".into()))?;
          native.add_item(app, &app_menu, "Session Info", "", Some("window.session_info".into()))?;
-@@ -39,8 +40,8 @@
-         app_menu.append(&PredefinedMenuItem::services(None))?;
+         native.add_item(app, &app_menu, "Session Audio Health", "", Some("window.audio_health".into()))?;
+         app_menu.append(&PredefinedMenuItem::separator())?;
+-        app_menu.append(&PredefinedMenuItem::services(None))?;
++        app_menu.append(&PredefinedMenuItem::services(Some(&i18n::t("Services"))))?;
          app_menu.append(&PredefinedMenuItem::separator())?;
          // muda's own Hide items take ⌘H and ⌥⌘H, which are Heal Separation and Copy to Send.
 -        app_menu.append(&MenuItem::with_id("hide", "Hide KIO Sound", true, None))?;
 -        app_menu.append(&MenuItem::with_id("hide_others", "Hide Others", true, None))?;
+-        app_menu.append(&PredefinedMenuItem::show_all(None))?;
 +        app_menu.append(&MenuItem::with_id("hide", i18n::t("Hide KIO Sound"), true, None))?;
 +        app_menu.append(&MenuItem::with_id("hide_others", i18n::t("Hide Others"), true, None))?;
-         app_menu.append(&PredefinedMenuItem::show_all(None))?;
++        app_menu.append(&PredefinedMenuItem::show_all(Some(&i18n::t("Show All"))))?;
          app_menu.append(&PredefinedMenuItem::separator())?;
          native.add_item(app, &app_menu, "Quit KIO Sound", "", Some("app.quit".into()))?;
+         native.menu.append(&app_menu)?;
 @@ -61,7 +62,7 @@
      }
  
@@ -423,7 +427,7 @@
                      });
                      if buttons(ui, "Create", enter) {
                          action =
-@@ -337,14 +353,16 @@
+@@ -337,15 +353,17 @@
                  }
                  Dialog::NewSession { name, sample_rate, demo } => {
                      ui.horizontal(|ui| {
@@ -436,6 +440,7 @@
 -                            ui.selectable_value(sample_rate, r, format!("{r} Hz"));
 -                        }
 -                    });
+-                    crate::widgets::checkbox(ui, demo, "Start from the demo session");
 +                    egui::ComboBox::from_label(crate::i18n::t(&("Sample Rate")))
 +                        .selected_text(crate::i18n::t(&(format!("{sample_rate} Hz"))))
 +                        .show_ui(ui, |ui| {
@@ -443,9 +448,10 @@
 +                                ui.selectable_value(sample_rate, r, crate::i18n::t(&(format!("{r} Hz"))));
 +                            }
 +                        });
-                     crate::widgets::checkbox(ui, demo, "Start from the demo session");
++                    crate::widgets::checkbox(ui, demo, crate::i18n::t("Start from the demo session"));
                      if buttons(ui, "Create", enter) {
                          action = Some((
+                             "session.new".into(),
 @@ -355,10 +373,10 @@
                  }
                  Dialog::Bounce { path, format, bit_depth, normalize } => {
@@ -459,7 +465,7 @@
                              && let Some(p) = pick("file.bounce_mix", path)
                          {
                              *path = p;
-@@ -371,20 +389,22 @@
+@@ -371,20 +389,23 @@
                          }
                      });
                      ui.horizontal(|ui| {
@@ -474,22 +480,25 @@
 -                                ui.selectable_value(bit_depth, b.to_string(), format!("{b}-bit"));
 -                            }
 -                        });
-+                        egui::ComboBox::from_label(crate::i18n::t(&("Bit Depth")))
-+                            .selected_text(crate::i18n::t(&(format!("{bit_depth}-bit"))))
-+                            .show_ui(ui, |ui| {
+-                    });
+-                    crate::widgets::checkbox(ui, normalize, "Normalize to -0.1 dBFS");
++                        egui::ComboBox::from_label(crate::i18n::t(&("Bit Depth"))).selected_text(crate::i18n::bit_depth_label(bit_depth)).show_ui(
++                            ui,
++                            |ui| {
 +                                for b in ["16", "24", "32f"] {
-+                                    ui.selectable_value(bit_depth, b.to_string(), crate::i18n::t(&(format!("{b}-bit"))));
++                                    ui.selectable_value(bit_depth, b.to_string(), crate::i18n::bit_depth_label(b));
 +                                }
-+                            });
-                     });
-                     crate::widgets::checkbox(ui, normalize, "Normalize to -0.1 dBFS");
++                            },
++                        );
++                    });
++                    crate::widgets::checkbox(ui, normalize, crate::i18n::t("Normalize to -0.1 dBFS"));
                      ui.label(
 -                        egui::RichText::new("Bounces the edit selection, or the whole session when nothing is selected.")
 +                        egui::RichText::new(crate::i18n::t(&("Bounces the edit selection, or the whole session when nothing is selected.")))
                              .small()
                              .color(Tokens::current().text_dim),
                      );
-@@ -417,7 +437,9 @@
+@@ -417,7 +438,9 @@
                  }
                  Dialog::ClearClips { clips, sources, message } => {
                      ui.set_max_width(340.0);
@@ -500,7 +509,7 @@
                      if buttons(ui, "Remove", enter) {
                          action = Some(("clip.clear".into(), json!({"clips": clips, "sources": sources, "with_clips": true})));
                      }
-@@ -428,21 +450,21 @@
+@@ -428,21 +451,21 @@
                          && cmd != "session.save_as"
                          && cmd != "session.save_copy"
                          && key != "dir"
@@ -525,7 +534,7 @@
                          && let Some(p) = pick(cmd, path)
                      {
                          *path = p;
-@@ -450,7 +472,9 @@
+@@ -450,7 +473,9 @@
                      let file = soundcraft_engine::io::session_file(path);
                      let replaces = soundcraft_engine::io::replaces(&app.engine, cmd, &file);
                      if replaces {
@@ -536,7 +545,7 @@
                      }
                      if buttons(ui, if replaces { "Replace" } else { "OK" }, enter && !replaces) {
                          let mut v = json!({});
-@@ -464,7 +488,7 @@
+@@ -464,7 +489,7 @@
                  Dialog::Number { cmd, key, value, suffix, .. } => {
                      ui.horizontal(|ui| {
                          ui.add(egui::DragValue::new(value).speed(0.1));
@@ -545,7 +554,7 @@
                      });
                      if buttons(ui, "OK", enter) {
                          let v = if key == "by_seconds" { json!({"by": {"seconds": value}}) } else { json!({key.as_str(): value}) };
-@@ -475,7 +499,7 @@
+@@ -475,7 +500,7 @@
                      ui.horizontal(|ui| {
                          // Same limits the engine enforces (time crate `valid_bpm`).
                          ui.add(egui::DragValue::new(bpm).speed(0.1).range(5.0..=1000.0));
@@ -554,7 +563,7 @@
                      });
                      if buttons(ui, "OK", enter) {
                          action = Some(tempo_change_action(*at, *bpm));
-@@ -490,17 +514,17 @@
+@@ -490,17 +515,17 @@
                  }
                  Dialog::Fades { shape } => {
                      for s in soundcraft_model::FadeShape::ALL {
@@ -577,7 +586,7 @@
                      if buttons(ui, "Strip", enter) {
                          action = Some((
                              "edit.strip_silence".into(),
-@@ -510,14 +534,14 @@
+@@ -510,14 +535,14 @@
                  }
                  Dialog::Group { name, edit, mix, members } => {
                      ui.horizontal(|ui| {
@@ -586,15 +595,18 @@
                          ui.text_edit_singleline(name);
                      });
                      ui.horizontal(|ui| {
-                         crate::widgets::checkbox(ui, edit, "Edit group");
-                         crate::widgets::checkbox(ui, mix, "Mix group");
-                     });
+-                        crate::widgets::checkbox(ui, edit, "Edit group");
+-                        crate::widgets::checkbox(ui, mix, "Mix group");
+-                    });
 -                    ui.label("Tracks");
++                        crate::widgets::checkbox(ui, edit, crate::i18n::t("Edit group"));
++                        crate::widgets::checkbox(ui, mix, crate::i18n::t("Mix group"));
++                    });
 +                    ui.label(crate::i18n::t(&("Tracks")));
                      egui::ScrollArea::vertical().max_height(180.0).show(ui, |ui| {
                          for (_, n, on) in members.iter_mut() {
                              crate::widgets::checkbox(ui, on, n.as_str());
-@@ -529,12 +553,15 @@
+@@ -529,33 +554,39 @@
                      }
                  }
                  Dialog::Session { frame_rate, bit_depth } => {
@@ -604,6 +616,10 @@
 -                        }
 -                    });
 -                    egui::ComboBox::from_label("Bit Depth").selected_text(bit_depth.as_str()).show_ui(ui, |ui| {
+-                        for b in ["16", "24", "32f"] {
+-                            ui.selectable_value(bit_depth, b.to_string(), b);
+-                        }
+-                    });
 +                    egui::ComboBox::from_label(crate::i18n::t(&("Timecode Rate"))).selected_text(crate::i18n::t(frame_rate.as_str())).show_ui(
 +                        ui,
 +                        |ui| {
@@ -612,11 +628,17 @@
 +                            }
 +                        },
 +                    );
-+                    egui::ComboBox::from_label(crate::i18n::t(&("Bit Depth"))).selected_text(bit_depth.as_str()).show_ui(ui, |ui| {
-                         for b in ["16", "24", "32f"] {
-                             ui.selectable_value(bit_depth, b.to_string(), b);
-                         }
-@@ -545,13 +572,13 @@
++                    egui::ComboBox::from_label(crate::i18n::t(&("Bit Depth"))).selected_text(crate::i18n::bit_depth_label(bit_depth)).show_ui(
++                        ui,
++                        |ui| {
++                            for b in ["16", "24", "32f"] {
++                                ui.selectable_value(bit_depth, b.to_string(), crate::i18n::bit_depth_label(b));
++                            }
++                        },
++                    );
+                     if buttons(ui, "OK", enter) {
+                         action = Some(("setup.session".into(), json!({"frame_rate": frame_rate, "bit_depth": bit_depth})));
+                     }
                  }
                  Dialog::ScoreSetup { title, composer, bars_per_system, show_track_names } => {
                      egui::Grid::new("score_setup").num_columns(2).spacing(vec2(10.0, 8.0)).show(ui, |ui| {
@@ -633,7 +655,12 @@
                          ui.add(egui::DragValue::new(bars_per_system).range(1..=16));
                          ui.end_row();
                      });
-@@ -572,15 +599,15 @@
+-                    crate::widgets::checkbox(ui, show_track_names, "Show track names");
++                    crate::widgets::checkbox(ui, show_track_names, crate::i18n::t("Show track names"));
+                     if buttons(ui, "OK", enter) {
+                         action = Some((
+                             "file.score_setup".into(),
+@@ -572,15 +603,15 @@
                          } else {
                              (format!("Close “{name}” without saving?"), "Don't Save")
                          };
@@ -652,7 +679,7 @@
                                  action = Some(then.clone());
                              }
                              if buttons(ui, "Save", enter) {
-@@ -638,10 +665,10 @@
+@@ -638,10 +669,10 @@
      let mut pressed = enter;
      ui.separator();
      ui.horizontal(|ui| {
@@ -665,7 +692,7 @@
              pressed = true;
          }
      });
-@@ -668,49 +695,53 @@
+@@ -668,49 +699,53 @@
      let Some(process) = app.ui.audiosuite.clone() else { return };
      let mut open = true;
      let title = soundcraft_dsp::plugin_info(&process).map_or_else(|| process.replace('_', " "), |p| p.name.to_string());
@@ -762,7 +789,7 @@
      if !open {
          app.ui.audiosuite = None;
      }
-@@ -794,4 +825,23 @@
+@@ -794,4 +829,23 @@
              "Remove 2 files from the session? They are used by 4 clips on the timeline, which are removed too. The files stay on disk."
          );
      }
@@ -1543,7 +1570,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/en.tsv
-@@ -0,0 +1,1533 @@
+@@ -0,0 +1,1561 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 "{name}" is used by {users}
 +	 (alternate playlist)	 (alternate playlist)
@@ -1679,6 +1706,7 @@
 +@msg	Audio input: {what}. {then}	Audio input: {what}. {then}
 +@msg	Audio output: {cause}. {then}	Audio output: {cause}. {then}
 +	Audio system	Audio system
++	Audio tracks	Audio tracks
 +	Audio...	Audio...
 +@msg	Audio: {}	Audio: {}
 +	AudioSuite	AudioSuite
@@ -1772,6 +1800,7 @@
 +	Change Track Width	Change Track Width
 +	Change Velocity	Change Velocity
 +	Change Velocity...	Change Velocity...
++	Channel	Channel
 +	Channel Name	Channel Name
 +	Channel Strip	Channel Strip
 +	Check the disk, then record again.	Check the disk, then record again.
@@ -1802,6 +1831,7 @@
 +	Clip List	Clip List
 +	Clip effects gain (dB)	Clip effects gain (dB)
 +	Clip end pad ms	Clip end pad ms
++	Clip name	Clip name
 +	Clip start pad ms	Clip start pad ms
 +	Clips	Clips
 +	Clips and MIDI panels belong to the Edit window	Clips and MIDI panels belong to the Edit window
@@ -1973,6 +2003,7 @@
 +	Enable	Enable
 +	Enabled parameters	Enabled parameters
 +	End	End
++	End time	End time
 +	End to Fill Selection	End to Fill Selection
 +	End to Insertion	End to Insertion
 +	Enter	Enter
@@ -2007,6 +2038,8 @@
 +	Feet+Frames	Feet+Frames
 +	File	File
 +	File > Open	File > Open
++	Filename	Filename
++	Files in session	Files in session
 +	Fill window with session (Alt+A)	Fill window with session (Alt+A)
 +	Fills the selection on the selected tracks with a new clip.	Fills the selection on the selected tracks with a new clip.
 +	Filter Attack	Filter Attack
@@ -2070,6 +2103,8 @@
 +	Heal Separation	Heal Separation
 +	Hide	Hide
 +	Hide All Floating Windows	Hide All Floating Windows
++	Hide KIO Sound	Hide KIO Sound
++	Hide Others	Hide Others
 +	Hide automation	Hide automation
 +	High Freq	High Freq
 +	High Gain	High Gain
@@ -2098,6 +2133,7 @@
 +	Import MIDI	Import MIDI
 +	In 1	In 1
 +@msg	In {i}	In {i}
++	Inactive	Inactive
 +	Includes alternate takes and muted clips. Refresh after editing.	Includes alternate takes and muted clips. Refresh after editing.
 +	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.
 +	Input	Input
@@ -2117,6 +2153,7 @@
 +	Interface scale	Interface scale
 +	Invert	Invert
 +	KIO Sound	KIO Sound
++	KIO Sound Session	KIO Sound Session
 +	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.
 +	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.
 +	Key	Key
@@ -2238,6 +2275,7 @@
 +	Markers 4	Markers 4
 +	Markers 5	Markers 5
 +	Markers Follow Edit	Markers Follow Edit
++	Markers listing	Markers listing
 +	Master Fader	Master Fader
 +	Max	Max
 +	Maxim	Maxim
@@ -2288,6 +2326,7 @@
 +	Mute Sends	Mute Sends
 +	Mute send	Mute send
 +	Mute/Unmute	Mute/Unmute
++	Muted	Muted
 +	Name	Name
 +	Name (A–Z)	Name (A–Z)
 +	Name:	Name:
@@ -2438,6 +2477,7 @@
 +	Quantize...	Quantize...
 +	QuickPunch	QuickPunch
 +	Quit	Quit
++	Quit KIO Sound	Quit KIO Sound
 +	R	R
 +	REL GRID	REL GRID
 +	Range	Range
@@ -2610,6 +2650,7 @@
 +	Sensitivity	Sensitivity
 +	Separate	Separate
 +	Separate clips at detected beats	Separate clips at detected beats
++	Services	Services
 +	Session	Session
 +	Session Audio Health	Session Audio Health
 +	Session Data...	Session Data...
@@ -2619,6 +2660,7 @@
 +	Session comments	Session comments
 +@msg	Session file: {p}	Session file: {p}
 +@msg	Session media: {} files, {:.1} MB in memory (32-bit float)	Session media: {} files, {:.1} MB in memory (32-bit float)
++	Session name	Session name
 +	Session rate	Session rate
 +	Session...	Session...
 +	Set Record Tracks to Input Only	Set Record Tracks to Input Only
@@ -2638,6 +2680,7 @@
 +	Shift...	Shift...
 +	Show	Show
 +	Show / Hide...	Show / Hide...
++	Show All	Show All
 +	Show Edit and Mix at once, e.g. one per monitor	Show Edit and Mix at once, e.g. one per monitor
 +	Show Target Playlist	Show Target Playlist
 +	Show grid lines	Show grid lines
@@ -2681,8 +2724,10 @@
 +	Start (ticks)	Start (ticks)
 +	Start Collaboration...	Start Collaboration...
 +	Start from the demo session	Start from the demo session
++	Start time	Start time
 +	Start to Fill Selection	Start to Fill Selection
 +	Start to Insertion	Start to Insertion
++	State	State
 +	Step Input...	Step Input...
 +	Stereo	Stereo
 +	Stop (Space)	Stop (Space)
@@ -2745,6 +2790,7 @@
 +	Timecode 2	Timecode 2
 +	Timecode Rate	Timecode Rate
 +	Timecode burn-in	Timecode burn-in
++	Timecode format	Timecode format
 +	Timecode rate	Timecode rate
 +	Title	Title
 +	To Current Automation Type	To Current Automation Type
@@ -2768,6 +2814,8 @@
 +	Track Number	Track Number
 +	Track Presets	Track Presets
 +	Track Transcription Lane	Track Transcription Lane
++	Track listing	Track listing
++	Track name	Track name
 +	Track options	Track options
 +	Track tint in the Edit window	Track tint in the Edit window
 +	TrackPunch	TrackPunch
@@ -2801,6 +2849,7 @@
 +@msg	Unknown panel: {id}	Unknown panel: {id}
 +	Unknown vendor	Unknown vendor
 +	Unloop...	Unloop...
++	Unmuted	Unmuted
 +	Unsaved Changes	Unsaved Changes
 +	Unsupported interface language	Unsupported interface language
 +	Untitled	Untitled
@@ -2985,6 +3034,7 @@
 +	path is required	path is required
 +	playlist	playlist
 +	playlists	playlists
++	plugin	plugin
 +	read	read
 +	recently	recently
 +	rect must be [x,y,width,height]	rect must be [x,y,width,height]
@@ -2993,6 +3043,7 @@
 +	restore performance	restore performance
 +	s	s
 +	saved	saved
++	semitones	semitones
 +	send level	send level
 +	send mute	send mute
 +	send pan	send pan
@@ -3009,6 +3060,7 @@
 +@msg	the clip "{name}"	the clip "{name}"
 +@msg	the file "{name}"	the file "{name}"
 +	ticks	ticks
++	times	times
 +	touch	touch
 +	touch/latch	touch/latch
 +	track	track
@@ -3039,7 +3091,10 @@
 +@msg	{f} frame{}	{f} frame{}
 +@msg	{name} loaded into the sampler	{name} loaded into the sampler
 +@msg	{name} · Send {}	{name} · Send {}
++@msg	{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels} ch
++@msg	{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels} ch · {buffer}
 +@msg	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}
++@msg	{name} — {format} from channel {channel}	{name} — {format} from channel {channel}
 +@msg	{name}: click to open · {cmd}click to bypass · right-click to change	{name}: click to open · {cmd}click to bypass · right-click to change
 +@msg	{note} dotted	{note} dotted
 +@msg	{note} triplet	{note} triplet
@@ -3079,7 +3134,7 @@
 +	🔍 Find clips	🔍 Find clips
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ja.tsv
-@@ -0,0 +1,1533 @@
+@@ -0,0 +1,1561 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 「{name}」は {users} で使用中です
 +	 (alternate playlist)	（別プレイリスト）
@@ -3215,6 +3270,7 @@
 +@msg	Audio input: {what}. {then}	オーディオ入力：{what}。{then}
 +@msg	Audio output: {cause}. {then}	オーディオ出力：{cause}。{then}
 +	Audio system	オーディオシステム
++	Audio tracks	オーディオトラック
 +	Audio...	オーディオ...
 +@msg	Audio: {}	オーディオ: {}
 +	AudioSuite	AudioSuite
@@ -3308,6 +3364,7 @@
 +	Change Track Width	トラック幅を変更
 +	Change Velocity	ベロシティを変更
 +	Change Velocity...	ベロシティを変更...
++	Channel	チャンネル
 +	Channel Name	チャンネル名
 +	Channel Strip	チャンネルストリップ
 +	Check the disk, then record again.	ディスクを確認してから録音し直してください。
@@ -3338,6 +3395,7 @@
 +	Clip List	クリップリスト
 +	Clip effects gain (dB)	クリップエフェクトのゲイン（dB）
 +	Clip end pad ms	クリップ末尾の余白（ms）
++	Clip name	クリップ名
 +	Clip start pad ms	クリップ先頭の余白（ms）
 +	Clips	クリップ
 +	Clips and MIDI panels belong to the Edit window	クリップと MIDI パネルは編集ウィンドウに属します
@@ -3509,6 +3567,7 @@
 +	Enable	有効化
 +	Enabled parameters	有効なパラメーター
 +	End	終了
++	End time	終了時間
 +	End to Fill Selection	終端まで選択範囲を埋める
 +	End to Insertion	終端から挿入位置まで
 +	Enter	Enter
@@ -3543,6 +3602,8 @@
 +	Feet+Frames	フィート＋フレーム
 +	File	ファイル
 +	File > Open	ファイル > 開く
++	Filename	ファイル名
++	Files in session	セッション内のファイル
 +	Fill window with session (Alt+A)	セッション全体をウィンドウに合わせる（Alt+A）
 +	Fills the selection on the selected tracks with a new clip.	選択したトラックの選択範囲を新しいクリップで埋めます。
 +	Filter Attack	フィルターアタック
@@ -3606,6 +3667,8 @@
 +	Heal Separation	分割を修復
 +	Hide	非表示
 +	Hide All Floating Windows	すべてのフローティングウィンドウを非表示
++	Hide KIO Sound	KIO Sound を隠す
++	Hide Others	ほかを隠す
 +	Hide automation	オートメーションを非表示
 +	High Freq	高域周波数
 +	High Gain	高域ゲイン
@@ -3634,6 +3697,7 @@
 +	Import MIDI	MIDI を読み込む
 +	In 1	入力 1
 +@msg	In {i}	入力 {i}
++	Inactive	無効
 +	Includes alternate takes and muted clips. Refresh after editing.	別テイクとミュートしたクリップも含みます。編集後に更新してください。
 +	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	ArtCraft チームの SoundCraft v0.7.0 を基にした独立した KIO 派生版です。元プロジェクトによる推奨を意味しません。
 +	Input	入力
@@ -3653,6 +3717,7 @@
 +	Interface scale	インターフェースの倍率
 +	Invert	極性を反転
 +	KIO Sound	KIO Sound
++	KIO Sound Session	KIO Sound セッション
 +	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound で内部エラーが発生しました（ログを参照）。安全のため KIO Sound を再起動してください。
 +	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound で内部エラーが発生しました（ログを参照）。変更内容は自動保存されています。保存してから KIO Sound を再起動してください。
 +	Key	調
@@ -3774,6 +3839,7 @@
 +	Markers 4	マーカー 4
 +	Markers 5	マーカー 5
 +	Markers Follow Edit	マーカーを編集に追従
++	Markers listing	マーカー一覧
 +	Master Fader	マスターフェーダー
 +	Max	最大
 +	Maxim	Maxim
@@ -3824,6 +3890,7 @@
 +	Mute Sends	センドをミュート
 +	Mute send	センドをミュート
 +	Mute/Unmute	ミュート／解除
++	Muted	ミュート中
 +	Name	名前
 +	Name (A–Z)	名前（A–Z）
 +	Name:	名前:
@@ -3974,6 +4041,7 @@
 +	Quantize...	クオンタイズ...
 +	QuickPunch	QuickPunch
 +	Quit	終了
++	Quit KIO Sound	KIO Sound を終了
 +	R	R
 +	REL GRID	相対グリッド
 +	Range	範囲
@@ -4146,6 +4214,7 @@
 +	Sensitivity	感度
 +	Separate	分割
 +	Separate clips at detected beats	検出したビートでクリップを分割
++	Services	サービス
 +	Session	セッション
 +	Session Audio Health	セッションのオーディオ状態
 +	Session Data...	セッションデータ...
@@ -4155,6 +4224,7 @@
 +	Session comments	セッションコメント
 +@msg	Session file: {p}	セッションファイル：{p}
 +@msg	Session media: {} files, {:.1} MB in memory (32-bit float)	セッションメディア：{} ファイル、メモリー使用量 {:.1} MB（32 ビット浮動小数点）
++	Session name	セッション名
 +	Session rate	セッションのサンプルレート
 +	Session...	セッション...
 +	Set Record Tracks to Input Only	録音トラックを入力のみへ設定
@@ -4174,6 +4244,7 @@
 +	Shift...	シフト...
 +	Show	表示
 +	Show / Hide...	表示／非表示...
++	Show All	すべてを表示
 +	Show Edit and Mix at once, e.g. one per monitor	編集とミックスを同時に表示します（例：各モニターに 1 つずつ）
 +	Show Target Playlist	ターゲットプレイリストを表示
 +	Show grid lines	グリッド線を表示
@@ -4217,8 +4288,10 @@
 +	Start (ticks)	開始（ティック）
 +	Start Collaboration...	共同作業を開始...
 +	Start from the demo session	デモセッションから開始
++	Start time	開始時間
 +	Start to Fill Selection	先頭から選択範囲を埋める
 +	Start to Insertion	先頭から挿入位置まで
++	State	状態
 +	Step Input...	ステップ入力...
 +	Stereo	ステレオ
 +	Stop (Space)	停止（Space）
@@ -4281,6 +4354,7 @@
 +	Timecode 2	タイムコード 2
 +	Timecode Rate	タイムコードレート
 +	Timecode burn-in	タイムコード焼き込み
++	Timecode format	タイムコード形式
 +	Timecode rate	タイムコードレート
 +	Title	タイトル
 +	To Current Automation Type	現在のオートメーションタイプへ
@@ -4304,6 +4378,8 @@
 +	Track Number	トラック番号
 +	Track Presets	トラックプリセット
 +	Track Transcription Lane	トラックの文字起こしレーン
++	Track listing	トラック一覧
++	Track name	トラック名
 +	Track options	トラックのオプション
 +	Track tint in the Edit window	編集ウィンドウ内のトラックの色合い
 +	TrackPunch	TrackPunch
@@ -4337,6 +4413,7 @@
 +@msg	Unknown panel: {id}	不明なパネル：{id}
 +	Unknown vendor	不明なベンダー
 +	Unloop...	ループ解除...
++	Unmuted	ミュート解除
 +	Unsaved Changes	未保存の変更
 +	Unsupported interface language	未対応のインターフェース言語
 +	Untitled	名称未設定
@@ -4521,6 +4598,7 @@
 +	path is required	path が必要です
 +	playlist	プレイリスト
 +	playlists	プレイリスト
++	plugin	プラグイン
 +	read	リード
 +	recently	最近
 +	rect must be [x,y,width,height]	rect は [x,y,width,height] で指定してください
@@ -4529,6 +4607,7 @@
 +	restore performance	演奏を復元
 +	s	s
 +	saved	保存済み
++	semitones	半音
 +	send level	センドレベル
 +	send mute	センドミュート
 +	send pan	センドパン
@@ -4545,6 +4624,7 @@
 +@msg	the clip "{name}"	クリップ「{name}」
 +@msg	the file "{name}"	ファイル「{name}」
 +	ticks	ティック
++	times	回
 +	touch	タッチ
 +	touch/latch	タッチ／ラッチ
 +	track	トラック
@@ -4575,7 +4655,10 @@
 +@msg	{f} frame{}	{f} フレーム{}
 +@msg	{name} loaded into the sampler	{name} をサンプラーに読み込みました
 +@msg	{name} · Send {}	{name} · センド {}
++@msg	{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels} チャンネル
++@msg	{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels} チャンネル · {buffer}
 +@msg	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · {tracks} トラック · {status}
++@msg	{name} — {format} from channel {channel}	{name} — {format}（チャンネル {channel} から）
 +@msg	{name}: click to open · {cmd}click to bypass · right-click to change	{name}：クリックで開く · {cmd}クリックでバイパス · 右クリックで変更
 +@msg	{note} dotted	付点{note}
 +@msg	{note} triplet	3 連{note}
@@ -4615,7 +4698,7 @@
 +	🔍 Find clips	🔍 クリップを検索
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ko.tsv
-@@ -0,0 +1,1533 @@
+@@ -0,0 +1,1561 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 "{name}"을(를) {users}에서 사용 중입니다
 +	 (alternate playlist)	 (대체 재생 목록)
@@ -4751,6 +4834,7 @@
 +@msg	Audio input: {what}. {then}	오디오 입력: {what}. {then}
 +@msg	Audio output: {cause}. {then}	오디오 출력: {cause}. {then}
 +	Audio system	오디오 시스템
++	Audio tracks	오디오 트랙
 +	Audio...	오디오...
 +@msg	Audio: {}	오디오: {}
 +	AudioSuite	AudioSuite
@@ -4844,6 +4928,7 @@
 +	Change Track Width	트랙 폭 변경
 +	Change Velocity	벨로시티 변경
 +	Change Velocity...	벨로시티 변경...
++	Channel	채널
 +	Channel Name	채널 이름
 +	Channel Strip	채널 스트립
 +	Check the disk, then record again.	디스크를 확인한 뒤 다시 녹음하세요.
@@ -4874,6 +4959,7 @@
 +	Clip List	클립 목록
 +	Clip effects gain (dB)	클립 효과 게인(dB)
 +	Clip end pad ms	클립 끝 여유(ms)
++	Clip name	클립 이름
 +	Clip start pad ms	클립 시작 여유(ms)
 +	Clips	클립
 +	Clips and MIDI panels belong to the Edit window	클립 및 MIDI 패널은 편집 창에 속합니다
@@ -5045,6 +5131,7 @@
 +	Enable	활성화
 +	Enabled parameters	활성화된 매개변수
 +	End	끝
++	End time	종료 시간
 +	End to Fill Selection	끝까지 선택 영역 채우기
 +	End to Insertion	끝에서 삽입 지점까지
 +	Enter	Enter
@@ -5079,6 +5166,8 @@
 +	Feet+Frames	피트+프레임
 +	File	파일
 +	File > Open	파일 > 열기
++	Filename	파일 이름
++	Files in session	세션의 파일
 +	Fill window with session (Alt+A)	세션을 창에 맞추기(Alt+A)
 +	Fills the selection on the selected tracks with a new clip.	선택한 트랙의 선택 영역을 새 클립으로 채웁니다.
 +	Filter Attack	필터 어택
@@ -5142,6 +5231,8 @@
 +	Heal Separation	분할 복구
 +	Hide	숨기기
 +	Hide All Floating Windows	모든 플로팅 창 숨기기
++	Hide KIO Sound	KIO Sound 가리기
++	Hide Others	기타 가리기
 +	Hide automation	오토메이션 숨기기
 +	High Freq	고역 주파수
 +	High Gain	고역 게인
@@ -5170,6 +5261,7 @@
 +	Import MIDI	MIDI 가져오기
 +	In 1	입력 1
 +@msg	In {i}	입력 {i}
++	Inactive	비활성
 +	Includes alternate takes and muted clips. Refresh after editing.	대체 테이크와 음소거된 클립도 포함합니다. 편집 후 새로 고치세요.
 +	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	ArtCraft 팀의 SoundCraft v0.7.0을 기반으로 한 독립 KIO 파생판입니다. 원 프로젝트의 보증을 의미하지 않습니다.
 +	Input	입력
@@ -5189,6 +5281,7 @@
 +	Interface scale	인터페이스 배율
 +	Invert	극성 반전
 +	KIO Sound	KIO Sound
++	KIO Sound Session	KIO Sound 세션
 +	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound에 내부 오류가 발생했습니다(로그 참조). 안전을 위해 KIO Sound를 다시 시작하세요.
 +	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound에 내부 오류가 발생했습니다(로그 참조). 변경 사항은 자동 저장되었습니다. 직접 저장한 뒤 KIO Sound를 다시 시작하세요.
 +	Key	조성
@@ -5310,6 +5403,7 @@
 +	Markers 4	마커 4
 +	Markers 5	마커 5
 +	Markers Follow Edit	편집 시 마커 함께 이동
++	Markers listing	마커 목록
 +	Master Fader	마스터 페이더
 +	Max	최대
 +	Maxim	Maxim
@@ -5360,6 +5454,7 @@
 +	Mute Sends	센드 음소거
 +	Mute send	센드 음소거
 +	Mute/Unmute	음소거/해제
++	Muted	음소거됨
 +	Name	이름
 +	Name (A–Z)	이름(A–Z)
 +	Name:	이름:
@@ -5510,6 +5605,7 @@
 +	Quantize...	퀀타이즈...
 +	QuickPunch	QuickPunch
 +	Quit	종료
++	Quit KIO Sound	KIO Sound 종료
 +	R	R
 +	REL GRID	상대 그리드
 +	Range	범위
@@ -5682,6 +5778,7 @@
 +	Sensitivity	감도
 +	Separate	분할
 +	Separate clips at detected beats	감지된 비트에서 클립 분할
++	Services	서비스
 +	Session	세션
 +	Session Audio Health	세션 오디오 상태
 +	Session Data...	세션 데이터...
@@ -5691,6 +5788,7 @@
 +	Session comments	세션 주석
 +@msg	Session file: {p}	세션 파일: {p}
 +@msg	Session media: {} files, {:.1} MB in memory (32-bit float)	세션 미디어: 파일 {}개, 메모리 {:.1} MB(32비트 부동소수점)
++	Session name	세션 이름
 +	Session rate	세션 샘플 레이트
 +	Session...	세션...
 +	Set Record Tracks to Input Only	녹음 트랙을 입력 전용으로 설정
@@ -5710,6 +5808,7 @@
 +	Shift...	이동...
 +	Show	표시
 +	Show / Hide...	표시/숨기기...
++	Show All	모두 표시
 +	Show Edit and Mix at once, e.g. one per monitor	편집과 믹스를 동시에 표시합니다. 예: 모니터마다 하나씩
 +	Show Target Playlist	대상 재생 목록 표시
 +	Show grid lines	그리드 선 표시
@@ -5753,8 +5852,10 @@
 +	Start (ticks)	시작(틱)
 +	Start Collaboration...	공동 작업 시작...
 +	Start from the demo session	데모 세션으로 시작
++	Start time	시작 시간
 +	Start to Fill Selection	시작부터 선택 영역 채우기
 +	Start to Insertion	시작에서 삽입 지점까지
++	State	상태
 +	Step Input...	스텝 입력...
 +	Stereo	스테레오
 +	Stop (Space)	정지(Space)
@@ -5817,6 +5918,7 @@
 +	Timecode 2	타임코드 2
 +	Timecode Rate	타임코드 레이트
 +	Timecode burn-in	타임코드 번인
++	Timecode format	타임코드 형식
 +	Timecode rate	타임코드 레이트
 +	Title	제목
 +	To Current Automation Type	현재 오토메이션 유형으로
@@ -5840,6 +5942,8 @@
 +	Track Number	트랙 번호
 +	Track Presets	트랙 프리셋
 +	Track Transcription Lane	트랙 전사 레인
++	Track listing	트랙 목록
++	Track name	트랙 이름
 +	Track options	트랙 옵션
 +	Track tint in the Edit window	편집 창의 트랙 색조
 +	TrackPunch	TrackPunch
@@ -5873,6 +5977,7 @@
 +@msg	Unknown panel: {id}	알 수 없는 패널: {id}
 +	Unknown vendor	알 수 없는 공급업체
 +	Unloop...	루프 해제...
++	Unmuted	음소거 해제됨
 +	Unsaved Changes	저장되지 않은 변경 사항
 +	Unsupported interface language	지원하지 않는 인터페이스 언어
 +	Untitled	제목 없음
@@ -6057,6 +6162,7 @@
 +	path is required	path가 필요합니다
 +	playlist	재생 목록
 +	playlists	재생 목록
++	plugin	플러그인
 +	read	읽기
 +	recently	최근
 +	rect must be [x,y,width,height]	rect는 [x,y,width,height] 형식이어야 합니다
@@ -6065,6 +6171,7 @@
 +	restore performance	연주 복원
 +	s	s
 +	saved	저장됨
++	semitones	반음
 +	send level	센드 레벨
 +	send mute	센드 음소거
 +	send pan	센드 팬
@@ -6081,6 +6188,7 @@
 +@msg	the clip "{name}"	클립 "{name}"
 +@msg	the file "{name}"	파일 "{name}"
 +	ticks	틱
++	times	회
 +	touch	터치
 +	touch/latch	터치/래치
 +	track	트랙
@@ -6111,7 +6219,10 @@
 +@msg	{f} frame{}	{f}프레임{}
 +@msg	{name} loaded into the sampler	{name}을(를) 샘플러에 로드했습니다
 +@msg	{name} · Send {}	{name} · 센드 {}
++@msg	{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels}채널
++@msg	{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels}채널 · {buffer}
 +@msg	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · 트랙 {tracks}개 · {status}
++@msg	{name} — {format} from channel {channel}	{name} — {format}(채널 {channel}부터)
 +@msg	{name}: click to open · {cmd}click to bypass · right-click to change	{name}: 클릭: 열기 · {cmd}클릭: 바이패스 · 오른쪽 클릭: 변경
 +@msg	{note} dotted	점{note}
 +@msg	{note} triplet	셋잇단 {note}
@@ -6151,7 +6262,7 @@
 +	🔍 Find clips	🔍 클립 찾기
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/mod.rs
-@@ -0,0 +1,608 @@
+@@ -0,0 +1,626 @@
 +//! KIO Sound's presentation-only catalogs. Session text and command wire values are unchanged.
 +//! No network access or translation service is used at runtime.
 +use std::cell::Cell;
@@ -6408,6 +6519,15 @@
 +        "channel_strip" => "Channel Strip",
 +        "maximizer" => "Maximizer",
 +        _ => info.short_name,
++    })
++}
++
++pub fn bit_depth_label(code: &str) -> String {
++    t(match code {
++        "16" | "Int16" => "16-bit",
++        "24" | "Int24" => "24-bit",
++        "32f" | "Float32" => "32-bit float",
++        _ => code,
 +    })
 +}
 +pub fn translate(language: Language, text: &str) -> String {
@@ -6677,6 +6797,15 @@
 +        }
 +        labels.extend(soundcraft_model::AutomationMode::ALL.iter().map(|mode| mode.label()));
 +        labels.extend(soundcraft_time::NoteValue::ALL.iter().map(|value| value.label()));
++        let menu = crate::menus::tree();
++        fn menu_labels<'a>(nodes: &'a [crate::menus::MenuNode], labels: &mut Vec<&'a str>) {
++            for node in nodes {
++                labels.push(&node.label);
++                menu_labels(&node.children, labels);
++            }
++        }
++        menu_labels(&menu, &mut labels);
++        labels.extend(["KIO Sound Session", "Hide KIO Sound", "Hide Others", "Quit KIO Sound", "Services", "Show All"]);
 +        let missing: Vec<_> = Language::ALL
 +            .into_iter()
 +            .flat_map(|language| {
@@ -6762,7 +6891,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/vi.tsv
-@@ -0,0 +1,1533 @@
+@@ -0,0 +1,1561 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 "{name}" đang được {users} sử dụng
 +	 (alternate playlist)	 (danh sách phát thay thế)
@@ -6898,6 +7027,7 @@
 +@msg	Audio input: {what}. {then}	Đầu vào âm thanh: {what}. {then}
 +@msg	Audio output: {cause}. {then}	Đầu ra âm thanh: {cause}. {then}
 +	Audio system	Hệ thống âm thanh
++	Audio tracks	Rãnh âm thanh
 +	Audio...	Âm thanh...
 +@msg	Audio: {}	Âm thanh: {}
 +	AudioSuite	AudioSuite
@@ -6991,6 +7121,7 @@
 +	Change Track Width	Đổi độ rộng rãnh
 +	Change Velocity	Đổi lực nhấn
 +	Change Velocity...	Đổi lực nhấn...
++	Channel	Kênh
 +	Channel Name	Tên kênh
 +	Channel Strip	Dải kênh
 +	Check the disk, then record again.	Kiểm tra ổ đĩa rồi thu lại.
@@ -7021,6 +7152,7 @@
 +	Clip List	Danh sách đoạn
 +	Clip effects gain (dB)	Độ khuếch đại hiệu ứng đoạn (dB)
 +	Clip end pad ms	Khoảng đệm cuối đoạn (ms)
++	Clip name	Tên đoạn
 +	Clip start pad ms	Khoảng đệm đầu đoạn (ms)
 +	Clips	Các đoạn âm thanh
 +	Clips and MIDI panels belong to the Edit window	Bảng đoạn và MIDI thuộc cửa sổ chỉnh sửa
@@ -7192,6 +7324,7 @@
 +	Enable	Kích hoạt
 +	Enabled parameters	Tham số đang bật
 +	End	Kết thúc
++	End time	Thời gian kết thúc
 +	End to Fill Selection	Lấp vùng chọn đến cuối
 +	End to Insertion	Từ cuối đến điểm chèn
 +	Enter	Enter
@@ -7226,6 +7359,8 @@
 +	Feet+Frames	Feet+khung hình
 +	File	Tệp
 +	File > Open	Tệp > Mở
++	Filename	Tên tệp
++	Files in session	Tệp trong phiên
 +	Fill window with session (Alt+A)	Vừa toàn bộ phiên vào cửa sổ (Alt+A)
 +	Fills the selection on the selected tracks with a new clip.	Lấp vùng chọn trên các rãnh đã chọn bằng một đoạn mới.
 +	Filter Attack	Thời gian tăng bộ lọc
@@ -7289,6 +7424,8 @@
 +	Heal Separation	Nối lại phần đã tách
 +	Hide	Ẩn
 +	Hide All Floating Windows	Ẩn mọi cửa sổ nổi
++	Hide KIO Sound	Ẩn KIO Sound
++	Hide Others	Ẩn ứng dụng khác
 +	Hide automation	Ẩn tự động hóa
 +	High Freq	Tần số cao
 +	High Gain	Khuếch đại tần số cao
@@ -7317,6 +7454,7 @@
 +	Import MIDI	Nhập MIDI
 +	In 1	Vào 1
 +@msg	In {i}	Vào {i}
++	Inactive	Không hoạt động
 +	Includes alternate takes and muted clips. Refresh after editing.	Bao gồm các lần thu thay thế và đoạn đã tắt tiếng. Hãy làm mới sau khi chỉnh sửa.
 +	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	Bản phát triển KIO độc lập dựa trên SoundCraft v0.7.0 của nhóm ArtCraft. Không được dự án gốc bảo chứng.
 +	Input	Đầu vào
@@ -7336,6 +7474,7 @@
 +	Interface scale	Tỷ lệ giao diện
 +	Invert	Đảo cực
 +	KIO Sound	KIO Sound
++	KIO Sound Session	Phiên KIO Sound
 +	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound gặp lỗi nội bộ (xem nhật ký). Hãy khởi động lại KIO Sound để đảm bảo an toàn.
 +	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound gặp lỗi nội bộ (xem nhật ký). Thay đổi đã được tự động lưu: hãy lưu lại rồi khởi động lại KIO Sound.
 +	Key	Giọng
@@ -7457,6 +7596,7 @@
 +	Markers 4	Dấu mốc 4
 +	Markers 5	Dấu mốc 5
 +	Markers Follow Edit	Dấu mốc theo chỉnh sửa
++	Markers listing	Danh sách dấu mốc
 +	Master Fader	Cần gạt tổng
 +	Max	Tối đa
 +	Maxim	Maxim
@@ -7507,6 +7647,7 @@
 +	Mute Sends	Tắt tiếng các đường gửi
 +	Mute send	Tắt tiếng đường gửi
 +	Mute/Unmute	Tắt/Bật tiếng
++	Muted	Đã tắt tiếng
 +	Name	Tên
 +	Name (A–Z)	Tên (A–Z)
 +	Name:	Tên:
@@ -7657,6 +7798,7 @@
 +	Quantize...	Lượng tử hóa...
 +	QuickPunch	QuickPunch
 +	Quit	Thoát
++	Quit KIO Sound	Thoát KIO Sound
 +	R	R
 +	REL GRID	LƯỚI TƯƠNG ĐỐI
 +	Range	Phạm vi
@@ -7829,6 +7971,7 @@
 +	Sensitivity	Độ nhạy
 +	Separate	Tách
 +	Separate clips at detected beats	Tách đoạn tại các phách được phát hiện
++	Services	Dịch vụ
 +	Session	Phiên
 +	Session Audio Health	Tình trạng âm thanh của phiên
 +	Session Data...	Dữ liệu phiên...
@@ -7838,6 +7981,7 @@
 +	Session comments	Ghi chú phiên
 +@msg	Session file: {p}	Tệp phiên: {p}
 +@msg	Session media: {} files, {:.1} MB in memory (32-bit float)	Phương tiện của phiên: {} tệp, {:.1} MB trong bộ nhớ (số thực 32 bit)
++	Session name	Tên phiên
 +	Session rate	Tần số lấy mẫu của phiên
 +	Session...	Phiên...
 +	Set Record Tracks to Input Only	Chỉ giám sát đầu vào trên rãnh thu
@@ -7857,6 +8001,7 @@
 +	Shift...	Dịch...
 +	Show	Hiện
 +	Show / Hide...	Hiện / Ẩn...
++	Show All	Hiện tất cả
 +	Show Edit and Mix at once, e.g. one per monitor	Hiện đồng thời chỉnh sửa và phối âm, ví dụ mỗi cửa sổ trên một màn hình
 +	Show Target Playlist	Hiện danh sách phát đích
 +	Show grid lines	Hiện đường lưới
@@ -7900,8 +8045,10 @@
 +	Start (ticks)	Bắt đầu (tick)
 +	Start Collaboration...	Bắt đầu cộng tác...
 +	Start from the demo session	Bắt đầu từ phiên minh họa
++	Start time	Thời gian bắt đầu
 +	Start to Fill Selection	Lấp vùng chọn từ đầu
 +	Start to Insertion	Từ đầu đến điểm chèn
++	State	Trạng thái
 +	Step Input...	Nhập từng bước...
 +	Stereo	Âm thanh nổi
 +	Stop (Space)	Dừng (Space)
@@ -7964,6 +8111,7 @@
 +	Timecode 2	Mã thời gian 2
 +	Timecode Rate	Tốc độ mã thời gian
 +	Timecode burn-in	Ghi mã thời gian lên hình
++	Timecode format	Định dạng mã thời gian
 +	Timecode rate	Tốc độ mã thời gian
 +	Title	Tiêu đề
 +	To Current Automation Type	Đến loại tự động hóa hiện tại
@@ -7987,6 +8135,8 @@
 +	Track Number	Số rãnh
 +	Track Presets	Thiết lập rãnh có sẵn
 +	Track Transcription Lane	Làn bản chép lời
++	Track listing	Danh sách rãnh
++	Track name	Tên rãnh
 +	Track options	Tùy chọn rãnh
 +	Track tint in the Edit window	Màu rãnh trong cửa sổ chỉnh sửa
 +	TrackPunch	TrackPunch
@@ -8020,6 +8170,7 @@
 +@msg	Unknown panel: {id}	Bảng không xác định: {id}
 +	Unknown vendor	Nhà cung cấp không xác định
 +	Unloop...	Bỏ lặp...
++	Unmuted	Đang bật tiếng
 +	Unsaved Changes	Thay đổi chưa lưu
 +	Unsupported interface language	Ngôn ngữ giao diện không được hỗ trợ
 +	Untitled	Chưa có tên
@@ -8204,6 +8355,7 @@
 +	path is required	cần có path
 +	playlist	danh sách phát
 +	playlists	danh sách phát
++	plugin	trình cắm
 +	read	đọc
 +	recently	gần đây
 +	rect must be [x,y,width,height]	rect phải có dạng [x,y,width,height]
@@ -8212,6 +8364,7 @@
 +	restore performance	khôi phục phần trình diễn
 +	s	s
 +	saved	đã lưu
++	semitones	nửa cung
 +	send level	mức đường gửi
 +	send mute	tắt tiếng đường gửi
 +	send pan	vị trí trái/phải của đường gửi
@@ -8228,6 +8381,7 @@
 +@msg	the clip "{name}"	đoạn "{name}"
 +@msg	the file "{name}"	tệp "{name}"
 +	ticks	tick
++	times	lần
 +	touch	chạm
 +	touch/latch	chạm/giữ
 +	track	rãnh
@@ -8258,7 +8412,10 @@
 +@msg	{f} frame{}	{f} khung hình{}
 +@msg	{name} loaded into the sampler	Đã nạp {name} vào bộ phát mẫu
 +@msg	{name} · Send {}	{name} · Đường gửi {}
++@msg	{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels} kênh
++@msg	{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels} kênh · {buffer}
 +@msg	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · {tracks} rãnh · {status}
++@msg	{name} — {format} from channel {channel}	{name} — {format} từ kênh {channel}
 +@msg	{name}: click to open · {cmd}click to bypass · right-click to change	{name}: nhấp để mở · {cmd}nhấp để bỏ qua xử lý · nhấp phải để đổi
 +@msg	{note} dotted	{note} chấm dôi
 +@msg	{note} triplet	{note} liên ba
@@ -8298,7 +8455,7 @@
 +	🔍 Find clips	🔍 Tìm đoạn
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-CN.tsv
-@@ -0,0 +1,1533 @@
+@@ -0,0 +1,1561 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 “{name}”正由 {users} 使用
 +	 (alternate playlist)	（备用播放列表）
@@ -8434,6 +8591,7 @@
 +@msg	Audio input: {what}. {then}	音频输入：{what}。{then}
 +@msg	Audio output: {cause}. {then}	音频输出：{cause}。{then}
 +	Audio system	音频系统
++	Audio tracks	音轨
 +	Audio...	音频...
 +@msg	Audio: {}	音频：{}
 +	AudioSuite	AudioSuite
@@ -8527,6 +8685,7 @@
 +	Change Track Width	更改轨道宽度
 +	Change Velocity	更改力度
 +	Change Velocity...	更改力度...
++	Channel	声道
 +	Channel Name	声道名称
 +	Channel Strip	通道条
 +	Check the disk, then record again.	请检查磁盘，然后重新录音。
@@ -8557,6 +8716,7 @@
 +	Clip List	片段列表
 +	Clip effects gain (dB)	片段效果增益（dB）
 +	Clip end pad ms	片段结尾留白（ms）
++	Clip name	片段名称
 +	Clip start pad ms	片段开头留白（ms）
 +	Clips	片段
 +	Clips and MIDI panels belong to the Edit window	片段和 MIDI 面板属于编辑窗口
@@ -8728,6 +8888,7 @@
 +	Enable	启用
 +	Enabled parameters	已启用的参数
 +	End	结束
++	End time	结束时间
 +	End to Fill Selection	填满选区到结尾
 +	End to Insertion	结尾到插入点
 +	Enter	Enter
@@ -8762,6 +8923,8 @@
 +	Feet+Frames	英尺＋帧
 +	File	文件
 +	File > Open	文件 > 打开
++	Filename	文件名
++	Files in session	会话中的文件
 +	Fill window with session (Alt+A)	将会话调整到窗口大小（Alt+A）
 +	Fills the selection on the selected tracks with a new clip.	用新片段填满所选轨道的选区。
 +	Filter Attack	滤波器起音
@@ -8825,6 +8988,8 @@
 +	Heal Separation	修复分割
 +	Hide	隐藏
 +	Hide All Floating Windows	隐藏所有浮动窗口
++	Hide KIO Sound	隐藏 KIO Sound
++	Hide Others	隐藏其他应用
 +	Hide automation	隐藏自动化
 +	High Freq	高频频率
 +	High Gain	高频增益
@@ -8853,6 +9018,7 @@
 +	Import MIDI	导入 MIDI
 +	In 1	输入 1
 +@msg	In {i}	输入 {i}
++	Inactive	非活动
 +	Includes alternate takes and muted clips. Refresh after editing.	包含备用录音和静音片段。编辑后请刷新。
 +	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	基于 ArtCraft 团队的 SoundCraft v0.7.0 的独立 KIO 衍生版本，并非由原项目背书。
 +	Input	输入
@@ -8872,6 +9038,7 @@
 +	Interface scale	界面缩放
 +	Invert	反转极性
 +	KIO Sound	KIO Sound
++	KIO Sound Session	KIO Sound 会话
 +	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound 发生内部错误（请查看日志）。为确保安全，请重新启动 KIO Sound。
 +	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound 发生内部错误（请查看日志）。更改已自动保存：请保存文件，然后重新启动 KIO Sound。
 +	Key	调性
@@ -8993,6 +9160,7 @@
 +	Markers 4	标记 4
 +	Markers 5	标记 5
 +	Markers Follow Edit	标记随编辑移动
++	Markers listing	标记列表
 +	Master Fader	主推子
 +	Max	最大
 +	Maxim	Maxim
@@ -9043,6 +9211,7 @@
 +	Mute Sends	将发送静音
 +	Mute send	将发送静音
 +	Mute/Unmute	静音／取消静音
++	Muted	已静音
 +	Name	名称
 +	Name (A–Z)	名称（A–Z）
 +	Name:	名称：
@@ -9193,6 +9362,7 @@
 +	Quantize...	量化...
 +	QuickPunch	QuickPunch
 +	Quit	退出
++	Quit KIO Sound	退出 KIO Sound
 +	R	R
 +	REL GRID	相对网格
 +	Range	范围
@@ -9365,6 +9535,7 @@
 +	Sensitivity	灵敏度
 +	Separate	分割
 +	Separate clips at detected beats	在检测到的节拍处分割片段
++	Services	服务
 +	Session	会话
 +	Session Audio Health	会话音频状态
 +	Session Data...	会话数据...
@@ -9374,6 +9545,7 @@
 +	Session comments	会话注释
 +@msg	Session file: {p}	会话文件：{p}
 +@msg	Session media: {} files, {:.1} MB in memory (32-bit float)	会话媒体：{} 个文件，内存使用量 {:.1} MB（32 位浮点数）
++	Session name	会话名称
 +	Session rate	会话采样率
 +	Session...	会话...
 +	Set Record Tracks to Input Only	将录音轨设为仅监听输入
@@ -9393,6 +9565,7 @@
 +	Shift...	位移...
 +	Show	显示
 +	Show / Hide...	显示／隐藏...
++	Show All	显示全部
 +	Show Edit and Mix at once, e.g. one per monitor	同时显示编辑和混音，例如每台显示器各显示一个窗口
 +	Show Target Playlist	显示目标播放列表
 +	Show grid lines	显示网格线
@@ -9436,8 +9609,10 @@
 +	Start (ticks)	开始（刻度）
 +	Start Collaboration...	开始协作...
 +	Start from the demo session	从演示会话开始
++	Start time	开始时间
 +	Start to Fill Selection	从开头填满选区
 +	Start to Insertion	开头到插入点
++	State	状态
 +	Step Input...	步进输入...
 +	Stereo	立体声
 +	Stop (Space)	停止（Space）
@@ -9500,6 +9675,7 @@
 +	Timecode 2	时间码 2
 +	Timecode Rate	时间码速率
 +	Timecode burn-in	嵌入时间码
++	Timecode format	时间码格式
 +	Timecode rate	时间码速率
 +	Title	标题
 +	To Current Automation Type	到当前自动化类型
@@ -9523,6 +9699,8 @@
 +	Track Number	轨道编号
 +	Track Presets	轨道预设
 +	Track Transcription Lane	轨道转录泳道
++	Track listing	轨道列表
++	Track name	轨道名称
 +	Track options	轨道选项
 +	Track tint in the Edit window	编辑窗口中的轨道色调
 +	TrackPunch	TrackPunch
@@ -9556,6 +9734,7 @@
 +@msg	Unknown panel: {id}	未知面板：{id}
 +	Unknown vendor	未知厂商
 +	Unloop...	解除循环...
++	Unmuted	已取消静音
 +	Unsaved Changes	未保存的更改
 +	Unsupported interface language	不支持的界面语言
 +	Untitled	未命名
@@ -9740,6 +9919,7 @@
 +	path is required	必须提供 path
 +	playlist	播放列表
 +	playlists	播放列表
++	plugin	插件
 +	read	读取
 +	recently	最近
 +	rect must be [x,y,width,height]	rect 必须为 [x,y,width,height]
@@ -9748,6 +9928,7 @@
 +	restore performance	恢复演奏
 +	s	s
 +	saved	已保存
++	semitones	半音
 +	send level	发送电平
 +	send mute	发送静音
 +	send pan	发送声像
@@ -9764,6 +9945,7 @@
 +@msg	the clip "{name}"	片段“{name}”
 +@msg	the file "{name}"	文件“{name}”
 +	ticks	刻度
++	times	次
 +	touch	触控
 +	touch/latch	触控／锁存
 +	track	轨道
@@ -9794,7 +9976,10 @@
 +@msg	{f} frame{}	{f} 帧{}
 +@msg	{name} loaded into the sampler	已将 {name} 加载到采样器
 +@msg	{name} · Send {}	{name} · 发送 {}
++@msg	{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels} 声道
++@msg	{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels} 声道 · {buffer}
 +@msg	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · {tracks} 条轨道 · {status}
++@msg	{name} — {format} from channel {channel}	{name} — {format}（从声道 {channel} 起）
 +@msg	{name}: click to open · {cmd}click to bypass · right-click to change	{name}：单击打开 · {cmd}单击旁通 · 右键单击更改
 +@msg	{note} dotted	附点{note}
 +@msg	{note} triplet	三连{note}
@@ -9834,7 +10019,7 @@
 +	🔍 Find clips	🔍 查找片段
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-TW.tsv
-@@ -0,0 +1,1533 @@
+@@ -0,0 +1,1561 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 「{name}」正由 {users} 使用
 +	 (alternate playlist)	（替代播放清單）
@@ -9970,6 +10155,7 @@
 +@msg	Audio input: {what}. {then}	音訊輸入：{what}。{then}
 +@msg	Audio output: {cause}. {then}	音訊輸出：{cause}。{then}
 +	Audio system	音訊系統
++	Audio tracks	音訊軌
 +	Audio...	音訊...
 +@msg	Audio: {}	音訊：{}
 +	AudioSuite	AudioSuite
@@ -10063,6 +10249,7 @@
 +	Change Track Width	變更軌道寬度
 +	Change Velocity	變更力度
 +	Change Velocity...	變更力度...
++	Channel	聲道
 +	Channel Name	聲道名稱
 +	Channel Strip	通道條
 +	Check the disk, then record again.	請檢查磁碟，再重新錄音。
@@ -10093,6 +10280,7 @@
 +	Clip List	片段清單
 +	Clip effects gain (dB)	片段效果增益（dB）
 +	Clip end pad ms	片段結尾留白（ms）
++	Clip name	片段名稱
 +	Clip start pad ms	片段開頭留白（ms）
 +	Clips	片段
 +	Clips and MIDI panels belong to the Edit window	片段與 MIDI 面板屬於編輯視窗
@@ -10264,6 +10452,7 @@
 +	Enable	啟用
 +	Enabled parameters	已啟用的參數
 +	End	結束
++	End time	結束時間
 +	End to Fill Selection	填滿選取範圍至結尾
 +	End to Insertion	結尾至插入點
 +	Enter	Enter
@@ -10298,6 +10487,8 @@
 +	Feet+Frames	英呎＋影格
 +	File	檔案
 +	File > Open	檔案 > 開啟
++	Filename	檔名
++	Files in session	工作階段中的檔案
 +	Fill window with session (Alt+A)	將工作階段調整至視窗大小（Alt+A）
 +	Fills the selection on the selected tracks with a new clip.	以新片段填滿所選軌道的選取範圍。
 +	Filter Attack	濾波器起音
@@ -10361,6 +10552,8 @@
 +	Heal Separation	修復分割
 +	Hide	隱藏
 +	Hide All Floating Windows	隱藏所有浮動視窗
++	Hide KIO Sound	隱藏 KIO Sound
++	Hide Others	隱藏其他應用程式
 +	Hide automation	隱藏自動化
 +	High Freq	高頻頻率
 +	High Gain	高頻增益
@@ -10389,6 +10582,7 @@
 +	Import MIDI	匯入 MIDI
 +	In 1	輸入 1
 +@msg	In {i}	輸入 {i}
++	Inactive	非作用中
 +	Includes alternate takes and muted clips. Refresh after editing.	包含替代錄音與靜音片段。編輯後請重新整理。
 +	Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.	以 ArtCraft 團隊的 SoundCraft v0.7.0 為基礎的獨立 KIO 衍生版本，並非由原專案背書。
 +	Input	輸入
@@ -10408,6 +10602,7 @@
 +	Interface scale	介面縮放
 +	Invert	反轉極性
 +	KIO Sound	KIO Sound
++	KIO Sound Session	KIO Sound 工作階段
 +	KIO Sound hit an internal error (see the log). Restart KIO Sound to be safe.	KIO Sound 發生內部錯誤（請查看記錄）。為確保安全，請重新啟動 KIO Sound。
 +	KIO Sound hit an internal error (see the log). Your changes were autosaved: save them, then restart KIO Sound.	KIO Sound 發生內部錯誤（請查看記錄）。變更已自動儲存：請儲存檔案，再重新啟動 KIO Sound。
 +	Key	調性
@@ -10529,6 +10724,7 @@
 +	Markers 4	標記 4
 +	Markers 5	標記 5
 +	Markers Follow Edit	標記隨編輯移動
++	Markers listing	標記清單
 +	Master Fader	主推桿
 +	Max	最大
 +	Maxim	Maxim
@@ -10579,6 +10775,7 @@
 +	Mute Sends	將傳送靜音
 +	Mute send	將傳送靜音
 +	Mute/Unmute	靜音／取消靜音
++	Muted	已靜音
 +	Name	名稱
 +	Name (A–Z)	名稱（A–Z）
 +	Name:	名稱：
@@ -10729,6 +10926,7 @@
 +	Quantize...	量化...
 +	QuickPunch	QuickPunch
 +	Quit	結束
++	Quit KIO Sound	結束 KIO Sound
 +	R	R
 +	REL GRID	相對格線
 +	Range	範圍
@@ -10901,6 +11099,7 @@
 +	Sensitivity	靈敏度
 +	Separate	分割
 +	Separate clips at detected beats	在偵測到的節拍處分割片段
++	Services	服務
 +	Session	工作階段
 +	Session Audio Health	工作階段音訊狀態
 +	Session Data...	工作階段資料...
@@ -10910,6 +11109,7 @@
 +	Session comments	工作階段註解
 +@msg	Session file: {p}	工作階段檔案：{p}
 +@msg	Session media: {} files, {:.1} MB in memory (32-bit float)	工作階段媒體：{} 個檔案，記憶體使用量 {:.1} MB（32 位元浮點數）
++	Session name	工作階段名稱
 +	Session rate	工作階段取樣率
 +	Session...	工作階段...
 +	Set Record Tracks to Input Only	將錄音軌設為僅監聽輸入
@@ -10929,6 +11129,7 @@
 +	Shift...	位移...
 +	Show	顯示
 +	Show / Hide...	顯示／隱藏...
++	Show All	顯示全部
 +	Show Edit and Mix at once, e.g. one per monitor	同時顯示編輯與混音，例如每部螢幕各顯示一個視窗
 +	Show Target Playlist	顯示目標播放清單
 +	Show grid lines	顯示格線
@@ -10972,8 +11173,10 @@
 +	Start (ticks)	開始（刻度）
 +	Start Collaboration...	開始協作...
 +	Start from the demo session	從示範工作階段開始
++	Start time	開始時間
 +	Start to Fill Selection	從開頭填滿選取範圍
 +	Start to Insertion	開頭至插入點
++	State	狀態
 +	Step Input...	步進輸入...
 +	Stereo	立體聲
 +	Stop (Space)	停止（Space）
@@ -11036,6 +11239,7 @@
 +	Timecode 2	時間碼 2
 +	Timecode Rate	時間碼速率
 +	Timecode burn-in	嵌入時間碼
++	Timecode format	時間碼格式
 +	Timecode rate	時間碼速率
 +	Title	標題
 +	To Current Automation Type	至目前自動化類型
@@ -11059,6 +11263,8 @@
 +	Track Number	軌道編號
 +	Track Presets	軌道預設集
 +	Track Transcription Lane	軌道轉錄泳道
++	Track listing	軌道清單
++	Track name	軌道名稱
 +	Track options	軌道選項
 +	Track tint in the Edit window	編輯視窗中的軌道色調
 +	TrackPunch	TrackPunch
@@ -11092,6 +11298,7 @@
 +@msg	Unknown panel: {id}	未知面板：{id}
 +	Unknown vendor	未知廠商
 +	Unloop...	解除循環...
++	Unmuted	已取消靜音
 +	Unsaved Changes	未儲存的變更
 +	Unsupported interface language	不支援的介面語言
 +	Untitled	未命名
@@ -11276,6 +11483,7 @@
 +	path is required	必須提供 path
 +	playlist	播放清單
 +	playlists	播放清單
++	plugin	外掛
 +	read	讀取
 +	recently	最近
 +	rect must be [x,y,width,height]	rect 必須為 [x,y,width,height]
@@ -11284,6 +11492,7 @@
 +	restore performance	還原演奏
 +	s	s
 +	saved	已儲存
++	semitones	半音
 +	send level	傳送電平
 +	send mute	傳送靜音
 +	send pan	傳送聲像
@@ -11300,6 +11509,7 @@
 +@msg	the clip "{name}"	片段「{name}」
 +@msg	the file "{name}"	檔案「{name}」
 +	ticks	刻度
++	times	次
 +	touch	觸控
 +	touch/latch	觸控／鎖存
 +	track	軌道
@@ -11330,7 +11540,10 @@
 +@msg	{f} frame{}	{f} 影格{}
 +@msg	{name} loaded into the sampler	已將 {name} 載入取樣器
 +@msg	{name} · Send {}	{name} · 傳送 {}
++@msg	{name} · {rate} Hz · {channels} ch	{name} · {rate} Hz · {channels} 聲道
++@msg	{name} · {rate} Hz · {channels} ch · {buffer}	{name} · {rate} Hz · {channels} 聲道 · {buffer}
 +@msg	{name} · {rate} Hz · {depth} · {tracks} tracks · {status}	{name} · {rate} Hz · {depth} · {tracks} 條軌道 · {status}
++@msg	{name} — {format} from channel {channel}	{name} — {format}（從聲道 {channel} 起）
 +@msg	{name}: click to open · {cmd}click to bypass · right-click to change	{name}：按一下開啟 · {cmd}按一下旁通 · 按右鍵變更
 +@msg	{note} dotted	附點{note}
 +@msg	{note} triplet	三連{note}
@@ -11946,7 +12159,13 @@
              level_resp.context_menu(|ui| send_options_menu(app, ui, id, slot, s));
          }
          None => empty_slot(ui.painter(), r, ui.rect_contains_pointer(r), mark),
-@@ -963,10 +980,10 @@
+@@ -958,15 +975,15 @@
+         egui::Popup::menu(&route_resp).close_behavior(egui::PopupCloseBehavior::CloseOnClickOutside).show(|ui| {
+             ui.set_min_width(250.0);
+             ui.horizontal(|ui| {
+-                ui.strong(format!("Send {}", (b'A' + slot as u8) as char));
++                ui.strong(crate::i18n::t(&format!("Send {}", (b'A' + slot as u8) as char)));
+                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                      ui.label(egui::RichText::new(route_name(app, &send.target)).color(Tokens::current().counter_text));
                  });
              });
@@ -11959,6 +12178,15 @@
                  let _ = app.run("mix.send_remove", json!({"track": id.0, "slot": slot}));
                  ui.close();
              }
+@@ -974,7 +991,7 @@
+     } else {
+         egui::Popup::menu(&route_resp).close_behavior(egui::PopupCloseBehavior::CloseOnClickOutside).show(|ui| {
+             ui.set_min_width(250.0);
+-            ui.strong(format!("Send {} · Choose destination", (b'A' + slot as u8) as char));
++            ui.strong(crate::i18n::t(&format!("Send {} · Choose destination", (b'A' + slot as u8) as char)));
+             send_route_menu(app, ui, id, slot, None);
+         });
+     }
 @@ -1003,7 +1020,7 @@
      };
      let t = Tokens::current();
@@ -11968,9 +12196,12 @@
          .id(egui::Id::new("send_window"))
          .open(&mut open)
          .auto_sized()
-@@ -1061,26 +1078,26 @@
+@@ -1059,44 +1076,44 @@
+ /// Secondary controls live behind the amount readout, separate from the bus selector like Logic.
+ fn send_options_menu(app: &mut SoundApp, ui: &mut Ui, id: TrackId, slot: usize, send: &soundcraft_model::SendSlot) {
      ui.set_min_width(230.0);
-     ui.strong(format!("Send {} · {}", (b'A' + slot as u8) as char, route_name(app, &send.target)));
+-    ui.strong(format!("Send {} · {}", (b'A' + slot as u8) as char, route_name(app, &send.target)));
++    ui.strong(crate::i18n::t(&format!("Send {} · {}", (b'A' + slot as u8) as char, route_name(app, &send.target))));
      let mut db = send.level_db.max(-60.0);
 -    if ui.add(egui::Slider::new(&mut db, -60.0..=12.0).text("Level").suffix(" dB")).changed() {
 +    if ui.add(egui::Slider::new(&mut db, -60.0..=12.0).text(crate::i18n::t(&("Level"))).suffix(crate::i18n::t(&(" dB")))).changed() {
@@ -12000,7 +12231,17 @@
          let _ = app.engine.execute_merged("mix.send_level", &json!({"track": id.0, "slot": slot, "pan": pan}), &format!("send-pan:{}:{slot}", id.0));
      }
      ui.horizontal(|ui| {
-@@ -1096,7 +1113,7 @@
+         let mut mute = send.mute;
+-        if crate::widgets::checkbox(ui, &mut mute, "Mute").changed() {
++        if crate::widgets::checkbox(ui, &mut mute, crate::i18n::t("Mute")).changed() {
+             let _ = app.run("mix.send_level", json!({"track": id.0, "slot": slot, "mute": mute}));
+         }
+         let mut pre = send.pre_fader;
+-        if crate::widgets::checkbox(ui, &mut pre, "Pre-fader").changed() {
++        if crate::widgets::checkbox(ui, &mut pre, crate::i18n::t("Pre-fader")).changed() {
+             let _ = app.run("mix.send_level", json!({"track": id.0, "slot": slot, "pre_fader": pre}));
+         }
+     });
      if let Route::Bus(bus) = send.target
          && let Some(aux) =
              app.engine.session().tracks.iter().find(|t| t.kind == TrackKind::Aux && t.mixer.input == Route::Bus(bus)).map(|t| (t.id, t.name.clone()))
@@ -12147,8 +12388,8 @@
 +        |ui| {
 +            ui.label(crate::i18n::t(&("Analyses the edit selection on the selected tracks.")));
 +            ui.add(egui::Slider::new(&mut app.ops.beat_sensitivity, 0.0..=1.0).text(crate::i18n::t(&("Sensitivity"))));
-+            crate::widgets::checkbox(ui, &mut app.ops.beat_separate, "Separate clips at detected beats");
-+            crate::widgets::checkbox(ui, &mut app.ops.beat_set_tempo, "Set the session tempo from the beats");
++            crate::widgets::checkbox(ui, &mut app.ops.beat_separate, crate::i18n::t("Separate clips at detected beats"));
++            crate::widgets::checkbox(ui, &mut app.ops.beat_set_tempo, crate::i18n::t("Set the session tempo from the beats"));
 +            ui.horizontal(|ui| {
 +                if ui.button(crate::i18n::t(&("Analyze"))).clicked() {
 +                    let r = app.run("event.beat_detective", json!({"sensitivity": app.ops.beat_sensitivity, "separate": false, "set_tempo": false}));
@@ -12885,8 +13126,8 @@
 +                    ui.label(crate::i18n::t(&(format!("Version {}", env!("CARGO_PKG_VERSION")))));
 +                    ui.label(crate::i18n::t(&("Independent KIO fork of SoundCraft v0.7.0 by the ArtCraft team. No upstream endorsement.")));
 +                    ui.label(crate::i18n::t(&("Dual-licensed MIT OR Apache-2.0. Made with Rust and egui.")));
-+                    ui.hyperlink_to("Upstream SoundCraft project", "https://getartcraft.com/apps/soundcraft");
-+                    ui.hyperlink_to("Upstream SoundCraft community", "https://discord.gg/artcraft");
++                    ui.hyperlink_to(crate::i18n::t("Upstream SoundCraft project"), "https://getartcraft.com/apps/soundcraft");
++                    ui.hyperlink_to(crate::i18n::t("Upstream SoundCraft community"), "https://discord.gg/artcraft");
                  }
              }
          });
@@ -12908,7 +13149,7 @@
      app.ui.show_about = open;
  }
  
-@@ -626,12 +648,15 @@
+@@ -626,13 +648,73 @@
      if !open {
          return;
      }
@@ -12921,16 +13162,74 @@
 +    egui::Window::new(crate::i18n::t(&("Session Info"))).id(egui::Id::new("Session Info")).open(&mut open).default_size(vec2(480.0, 360.0)).show(
 +        ctx,
 +        |ui| {
-+            let text = soundcraft_engine::inspect::session_text(&app.engine);
-+            egui::ScrollArea::vertical().show(ui, |ui| {
-+                ui.label(egui::RichText::new(crate::i18n::t(&(text))).font(mono(11.0)));
++            let text = localized_session_report(&app.engine);
++            egui::ScrollArea::both().show(ui, |ui| {
++                ui.label(egui::RichText::new(text).font(mono(11.0)));
 +            });
 +        },
 +    );
      app.ui.show_session_info = open;
++}
++
++/// Present the same report fields from structured data. Do not translate or
++/// parse the CLI/export report: filenames and comments may contain any text.
++fn localized_session_report(engine: &soundcraft_engine::Engine) -> String {
++    use std::fmt::Write;
++    fn field(out: &mut String, key: &str, value: impl std::fmt::Display) {
++        let _ = writeln!(out, "{}:\t{value}", crate::i18n::t(key));
++    }
++    fn columns(out: &mut String, keys: &[&str]) {
++        let _ = writeln!(out, "{}", keys.iter().map(|key| crate::i18n::t(key)).collect::<Vec<_>>().join("\t"));
++    }
++    let s = engine.session();
++    let position = |sample| s.format_position(sample, soundcraft_time::TimeFormat::MinSecs);
++    let mut out = String::new();
++    field(&mut out, "Session name", &s.name);
++    field(&mut out, "Sample rate", s.sample_rate.hz());
++    field(&mut out, "Bit depth", crate::i18n::bit_depth_label(&format!("{:?}", s.bit_depth)));
++    field(&mut out, "Timecode format", crate::i18n::t(s.frame_rate.label()));
++    field(&mut out, "Audio tracks", s.tracks.iter().filter(|t| t.kind == soundcraft_model::TrackKind::Audio).count());
++    field(&mut out, "Clips", s.tracks.iter().map(|t| t.clips().len()).sum::<usize>());
++    field(&mut out, "Audio files", s.sources.len());
++    let _ = writeln!(out, "\n{}", crate::i18n::t("Files in session"));
++    columns(&mut out, &["Filename", "Location"]);
++    for source in &s.sources {
++        let _ = writeln!(out, "{}\t{}", source.name, source.path);
++    }
++    let _ = writeln!(out, "\n{}", crate::i18n::t("Track listing"));
++    for track in &s.tracks {
++        field(&mut out, "Track name", &track.name);
++        field(&mut out, "Comments", &track.comments);
++        let state: Vec<_> = [(track.inactive, "Inactive"), (track.mixer.mute, "Muted"), (track.mixer.solo, "Solo")]
++            .into_iter()
++            .filter_map(|(on, key)| on.then(|| crate::i18n::t(key)))
++            .collect();
++        field(&mut out, "State", state.join(" "));
++        columns(&mut out, &["Channel", "Event", "Clip name", "Start time", "End time", "Duration", "State"]);
++        for (index, clip) in track.clips().iter().enumerate() {
++            let _ = writeln!(
++                out,
++                "1\t{}\t{}\t{}\t{}\t{}\t{}",
++                index + 1,
++                clip.name,
++                position(clip.start),
++                position(clip.end()),
++                position(clip.length),
++                crate::i18n::t(if clip.muted { "Muted" } else { "Unmuted" })
++            );
++        }
++        out.push('\n');
++    }
++    let _ = writeln!(out, "{}", crate::i18n::t("Markers listing"));
++    columns(&mut out, &["#", "Location", "Name"]);
++    for marker in &s.markers {
++        let _ = writeln!(out, "{}\t{}\t{}", marker.number, position(marker.start), marker.name);
++    }
++    out
  }
  
-@@ -648,13 +673,13 @@
+ /// Folder for a plugin's user presets.
+@@ -648,13 +730,13 @@
      info: &soundcraft_dsp::PluginInfo,
      ins: &soundcraft_model::Insert,
  ) {
@@ -12946,7 +13245,7 @@
          return;
      };
      let mut names: Vec<String> = std::fs::read_dir(&dir)
-@@ -685,7 +710,7 @@
+@@ -685,7 +767,7 @@
      let mut name: String = ui.ctx().memory(|m| m.data.get_temp(key)).unwrap_or_else(|| format!("{} preset", info.name));
      ui.horizontal(|ui| {
          ui.add(egui::TextEdit::singleline(&mut name).desired_width(140.0));
@@ -12955,6 +13254,38 @@
              let clean = soundcraft_engine::io::sanitize_name(&name);
              let body = json!({"format": "soundcraft-plugin-preset", "plugin": info.id, "params": ins.params});
              let ok = std::fs::create_dir_all(&dir).is_ok() && std::fs::write(dir.join(format!("{clean}.json")), body.to_string()).is_ok();
+@@ -697,3 +779,31 @@
+     });
+     ui.ctx().memory_mut(|m| m.data.insert_temp(key, name));
+ }
++
++#[cfg(test)]
++mod report_localization_tests {
++    #[test]
++    fn localized_report_preserves_data_and_leaves_export_format_unchanged() {
++        let mut engine = soundcraft_engine::demo::demo_engine();
++        let name = "Original {name} 東京\tMute.wav";
++        let path = "/synthetic/한글 {users}.wav";
++        engine.session_mut().sources[0].name = name.into();
++        engine.session_mut().sources[0].path = path.into();
++        let before = serde_json::to_value(engine.session()).unwrap();
++        let exported = soundcraft_engine::inspect::session_text(&engine);
++        for language in crate::i18n::Language::ALL {
++            crate::i18n::activate(language);
++            let report = super::localized_session_report(&engine);
++            assert!(report.contains(name));
++            assert!(report.contains(path));
++            if language != crate::i18n::Language::En {
++                assert!(!report.contains("Files in session"));
++                assert!(!report.contains("Track listing"));
++                assert!(!report.contains("Int24"));
++            }
++            assert_eq!(serde_json::to_value(engine.session()).unwrap(), before);
++            assert_eq!(soundcraft_engine::inspect::session_text(&engine), exported);
++        }
++        crate::i18n::activate(crate::i18n::Language::En);
++    }
++}
 --- a/crates/ui-egui/src/recent.rs
 +++ b/crates/ui-egui/src/recent.rs
 @@ -84,9 +84,9 @@
@@ -13657,7 +13988,7 @@
 +        .resizable(true)
 +        .show(ctx, |ui| {
 +            ui.horizontal(|ui| {
-+                crate::widgets::checkbox(ui, &mut burn, "Timecode burn-in");
++                crate::widgets::checkbox(ui, &mut burn, crate::i18n::t("Timecode burn-in"));
 +                let text = match &pic {
 +                    Some((k, ..)) => match app.video.info(*k) {
 +                        Some(Ok(i)) => format!("{}x{}  {:.3} fps  {}", i.width, i.height, i.frame_rate, i.codec_detail),
@@ -14057,7 +14388,7 @@
          let tracks = app.engine.session().edit.selected_tracks.clone();
          ui.horizontal_wrapped(|ui| {
              for m in [
-@@ -103,14 +107,14 @@
+@@ -103,26 +107,26 @@
                  AutomationMode::Write,
                  AutomationMode::Trim,
              ] {
@@ -14074,7 +14405,9 @@
          for f in ["volume", "pan", "mute", "send level", "send pan", "send mute", "plugin"] {
              let id = format!("automation.enable.{}", f.replace(' ', "_"));
              let mut on = !app.engine.session().edit.flag(&format!("{id}.off"));
-@@ -119,10 +123,10 @@
+-            if crate::widgets::checkbox(ui, &mut on, f).changed() {
++            if crate::widgets::checkbox(ui, &mut on, crate::i18n::t(f)).changed() {
+                 app.engine.session_mut().edit.set_flag(&format!("{id}.off"), !on);
              }
          }
          ui.separator();
@@ -14163,7 +14496,17 @@
          );
      });
      app.ui.show_task_manager = open;
-@@ -215,14 +225,14 @@
+@@ -207,22 +217,22 @@
+         egui::Grid::new("meta").num_columns(2).striped(true).show(ui, |ui| {
+             for (k, v) in [
+                 ("Sample rate", format!("{} Hz", s.sample_rate.hz())),
+-                ("Bit depth", format!("{:?}", s.bit_depth)),
+-                ("Timecode rate", s.frame_rate.label().to_string()),
++                ("Bit depth", crate::i18n::bit_depth_label(&format!("{:?}", s.bit_depth))),
++                ("Timecode rate", crate::i18n::t(s.frame_rate.label())),
+                 ("Tracks", s.tracks.len().to_string()),
+                 ("Clips", s.tracks.iter().map(|t| t.clips().len()).sum::<usize>().to_string()),
+                 ("Audio files", s.sources.len().to_string()),
                  ("Markers", s.markers.len().to_string()),
                  ("Length", s.format_position(s.content_end(), soundcraft_time::TimeFormat::MinSecs)),
              ] {
@@ -14398,7 +14741,7 @@
                  for s in systems.iter() {
                      ui.selectable_value(&mut draft.system, Some(s.name.clone()), &s.name);
                  }
-@@ -488,37 +505,41 @@
+@@ -488,67 +505,97 @@
              });
              ui.end_row();
              let sys = chosen_system(&systems, &draft);
@@ -14444,19 +14787,54 @@
          ui.separator();
          egui::Grid::new("pe-state").num_columns(2).show(ui, |ui| {
 -            ui.label("Output");
+-            ui.label(app.player.as_ref().map_or("none".to_string(), |p| {
+-                if p.silent {
+-                    "no device (silent clock)".to_string()
+-                } else {
+-                    let buf = p.device_buffer.map_or("default buffer".to_string(), |b| format!("{b} samples"));
+-                    format!("{} · {} Hz · {} ch · {buf}", p.device_name, p.device_rate, p.device_channels)
+-                }
+-            }));
 +            ui.label(crate::i18n::t(&("Output")));
-             ui.label(app.player.as_ref().map_or("none".to_string(), |p| {
-                 if p.silent {
-                     "no device (silent clock)".to_string()
-@@ -528,27 +549,31 @@
-                 }
-             }));
++            let output = app.player.as_ref().map_or_else(
++                || crate::i18n::t("none"),
++                |p| {
++                    if p.silent {
++                        crate::i18n::t("no device (silent clock)")
++                    } else {
++                        let buf = p.device_buffer.map_or_else(
++                            || crate::i18n::t("default buffer"),
++                            |b| crate::i18n::message("{count} samples", &[("count", &b.to_string())]),
++                        );
++                        crate::i18n::message(
++                            "{name} · {rate} Hz · {channels} ch · {buffer}",
++                            &[
++                                ("name", &p.device_name),
++                                ("rate", &p.device_rate.to_string()),
++                                ("channels", &p.device_channels.to_string()),
++                                ("buffer", &buf),
++                            ],
++                        )
++                    }
++                },
++            );
++            ui.label(output);
              ui.end_row();
 -            ui.label("Input");
+-            ui.label(app.recorder.as_ref().map_or("opened on first record or monitor".to_string(), |r| {
+-                format!("{} · {} Hz · {} ch", r.device_name, r.sample_rate, r.channels)
+-            }));
 +            ui.label(crate::i18n::t(&("Input")));
-             ui.label(app.recorder.as_ref().map_or("opened on first record or monitor".to_string(), |r| {
-                 format!("{} · {} Hz · {} ch", r.device_name, r.sample_rate, r.channels)
-             }));
++            let input = app.recorder.as_ref().map_or_else(
++                || crate::i18n::t("opened on first record or monitor"),
++                |r| {
++                    crate::i18n::message(
++                        "{name} · {rate} Hz · {channels} ch",
++                        &[("name", &r.device_name), ("rate", &r.sample_rate.to_string()), ("channels", &r.channels.to_string())],
++                    )
++                },
++            );
++            ui.label(input);
              ui.end_row();
 -            ui.label("Session rate");
 +            ui.label(crate::i18n::t(&("Session rate")));
@@ -14477,7 +14855,8 @@
 +                .color(t.text_dim),
 +        );
          let mut dc = app.engine.session().edit.delay_compensation;
-         if crate::widgets::checkbox(ui, &mut dc, "Delay compensation").changed() {
+-        if crate::widgets::checkbox(ui, &mut dc, "Delay compensation").changed() {
++        if crate::widgets::checkbox(ui, &mut dc, crate::i18n::t("Delay compensation")).changed() {
              let _ = app.run("options.delay_compensation", json!({"value": dc}));
          }
 -        if ui.button("Reconnect audio device").clicked() {
@@ -14485,7 +14864,7 @@
              app.reconnect_audio();
          }
      });
-@@ -609,7 +634,7 @@
+@@ -609,7 +656,7 @@
  pub fn io_setup(app: &mut SoundApp, ctx: &egui::Context) {
      let mut open = app.ui.show_io_setup;
      win(ctx, &mut open, "I/O Setup", vec2(420.0, 300.0), |ui| {
@@ -14494,11 +14873,13 @@
          let busses: Vec<(String, String)> = app.engine.session().busses.iter().map(|b| (b.name.clone(), b.format.label().to_string())).collect();
          egui::Grid::new("busses").num_columns(3).striped(true).show(ui, |ui| {
              for (name, fmt) in busses {
-@@ -621,33 +646,33 @@
+@@ -620,34 +667,37 @@
+                 if r.lost_focus() && edit != name {
                      let _ = app.run("setup.io", json!({"action": "rename_bus", "name": name, "new_name": edit}));
                  }
-                 ui.label(fmt);
+-                ui.label(fmt);
 -                if ui.small_button("Delete").clicked() {
++                ui.label(crate::i18n::t(&fmt));
 +                if ui.small_button(crate::i18n::t(&("Delete"))).clicked() {
                      let _ = app.run("setup.io", json!({"action": "delete_bus", "name": name}));
                  }
@@ -14532,11 +14913,14 @@
          });
          for o in app.engine.session().outputs.clone() {
 -            ui.label(format!("{} — {} from channel {}", o.name, o.format.label(), o.first_channel + 1));
-+            ui.label(crate::i18n::t(&(format!("{} — {} from channel {}", o.name, o.format.label(), o.first_channel + 1))));
++            ui.label(crate::i18n::message(
++                "{name} — {format} from channel {channel}",
++                &[("name", &o.name), ("format", &crate::i18n::t(o.format.label())), ("channel", &(o.first_channel + 1).to_string())],
++            ));
          }
      });
      app.ui.show_io_setup = open;
-@@ -665,8 +690,8 @@
+@@ -665,8 +715,8 @@
                  for (shortcut, label, menu) in engine.chain(windows) {
                      let Some(shortcut) = shortcut else { continue };
                      ui.label(egui::RichText::new(crate::shortcuts::shortcut_label(shortcut, mac)).font(mono(11.0)));
@@ -14547,7 +14931,7 @@
                      ui.end_row();
                  }
              });
-@@ -689,20 +714,20 @@
+@@ -689,20 +739,20 @@
                  .map(|c| c.id)
          });
          let Some(cid) = clip else {
@@ -14572,7 +14956,7 @@
                  let _ = app.run("edit.clear_clip_effects", json!({"clips": [cid.0]}));
              }
          });
-@@ -710,13 +735,13 @@
+@@ -710,13 +760,13 @@
          egui::ScrollArea::vertical().show(ui, |ui| {
              ui.columns(2, |cols| {
                  for (col, (title, plugin, prefix)) in cols.iter_mut().zip([("EQ", "eq_7band", "eq."), ("Dynamics", "compressor", "comp.")]) {
@@ -14588,7 +14972,7 @@
                          if (v - before).abs() > f32::EPSILON {
                              let mut m = serde_json::Map::new();
                              m.insert(key.clone(), json!(v));
-@@ -731,7 +756,7 @@
+@@ -731,7 +781,7 @@
              });
              let mut g = get(app, "gain", 0.0);
              let before = g;
