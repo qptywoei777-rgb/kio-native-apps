@@ -12,6 +12,39 @@ spec.loader.exec_module(audit)
 
 
 class LocalizationFailures(unittest.TestCase):
+    def test_empty_catalog_tree_cannot_pass_a_complete_release_gate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            result=audit.audit_app('fixture',Path(tmp))
+            self.assertFalse(result['complete'])
+
+    def test_anonymous_and_formatted_arguments_cannot_disappear(self):
+        self.assertEqual(audit.placeholders('Export {} of {} at {:.1}%'), {'':2,':.1':1})
+        self.assertEqual(audit.placeholders('50% Gray, % of all commits, % dọc'), {})
+        self.assertEqual(audit.placeholders('%s at %0.2f'), {'%s':1,'%0.2f':1})
+        self.assertEqual(audit.placeholders('{{literal}} {name} {name} %% %1'), {'name':2,'%1':1})
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.fixture(root)
+            for p in (root/'crates/ui-egui/src/i18n').glob('*.tsv'):
+                p.write_text('\tCount {}\tSố lượng\n',encoding='utf-8')
+            result=audit.audit_app('fixture',root)
+            self.assertEqual(result['languages']['vi']['placeholderErrors'],1)
+            self.assertFalse(result['complete'])
+
+    def test_design_runtime_japanese_override_has_priority(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)/'design/source';folder=root/'crates/ui-egui/src/i18n';folder.mkdir(parents=True)
+            (folder.parent/'i18n.rs').write_text('const TABLE: &[(&str,[&str;5])]=&[("Save",["Speichern","Enregistrer","Guardar","Save","保存"])];',encoding='utf-8')
+            (folder/'ja.rs').write_text('const TABLE: &[(&str,&str)]=&[("Save","保存"),("Open","開く")];',encoding='utf-8')
+            result=audit.audit_app('design',root)
+            self.assertEqual(result['languages']['ja']['keys'],2)
+            self.assertEqual(result['languages']['ja']['sameAsEnglishReview'],0)
+
+    def test_borrowed_literal_lookup_is_not_silently_omitted(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.fixture(root,ui='i18n::t(&("Missing message"));')
+            result=audit.audit_app('fixture',root)
+            self.assertIn(['','Missing message'],result['languages']['vi']['missingKeys'])
+
     def fixture(self, root, translation='Cài {name}', ui='tr("Install {name}")'):
         folder = root / 'crates/ui-egui/src/i18n'
         folder.mkdir(parents=True)

@@ -24,7 +24,7 @@ TRIPLE = re.compile(r'\(\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*,\s*(' 
 TABLE = re.compile(r'(?:const|static)\s+(\w+)[^=]+?=\s*&\[(.*?)\n\];', re.S)
 LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn|tr_args)\s*\()\s*(' + RSTRING + ')')
 RUST_PLACEHOLDER = re.compile(r'\{((?:[A-Za-z_]\w*|\d*)(?::[^{}]*)?)\}')
-PRINTF_PLACEHOLDER = re.compile(r'%(?:\d+\$)?[-+#0 ]*(?:\d+|\*)?(?:\.(?:\d+|\*))?(?:hh|ll|[hlLjzt])?[diuoxXfFeEgGaAcspn]')
+PRINTF_PLACEHOLDER = re.compile(r'%(?:\d+\$)?[-+#0]*(?:\d+|\*)?(?:\.(?:\d+|\*))?(?:hh|ll|[hlLjzt])?[diuoxXfFeEgGaAcspn](?![A-Za-z])')
 QT_PLACEHOLDER = re.compile(r'%(?:L?\d+|n)\b')
 RUST_LANGUAGES = {'JAPANESE': 'ja', 'SIMPLIFIED_CHINESE': 'zh-CN', 'TRADITIONAL_CHINESE': 'zh-TW', 'KOREAN': 'ko', 'VIETNAMESE': 'vi'}
 

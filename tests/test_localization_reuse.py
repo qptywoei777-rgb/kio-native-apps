@@ -56,6 +56,7 @@ class CatalogReuseSafety(unittest.TestCase):
         self.assertEqual(plan['proposalCount'], 0)
 
     def test_simplified_and_traditional_are_independent(self):
+        self.assertEqual(reuse.placeholders('50% Gray, % of all commits, % dọc'), {})
         self.assertEqual(reuse.language('zh-hant'), 'zh-TW')
         self.assertEqual(reuse.language('zh-cn'), 'zh-CN')
         self.assertNotEqual(reuse.language('zh-hant'), reuse.language('zh-hans'))

@@ -21,7 +21,7 @@ ALIASES = {'zh': 'zh-CN', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh-tw': 'zh-TW'
 RSTRING = r'"(?:[^"\\]|\\.)*"'
 PLACEHOLDER = re.compile(r'(?<!\{)\{([A-Za-z_][\w]*(?::[^{}]*)?)\}(?!\})')
 DIRECT_UI = re.compile(r'\.(?:label|button|small_button|heading|menu_button|on_hover_text|hint_text|selectable_label|checkbox)\s*\(\s*(?:[^,\n]+,\s*)?(' + RSTRING + ')')
-LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn)\s*\()\s*(' + RSTRING + ')')
+LOOKUP = re.compile(r'(?:\btl!\s*\(|\b(?:i18n::)?(?:t|tr|tr_noop|trf|trn|msg)\s*\()\s*(?:&\s*)?\(*\s*(' + RSTRING + ')')
 OFFICIAL_NAMES = {'launcher': {('', value) for value in ('Launcher', 'KIO App Suite', 'Discord', 'GitHub', 'KIO Launcher {version}', 'KIO Launcher', 'ArtCraft', '{name} {version}')}}
 
 
@@ -66,10 +66,10 @@ def collect_catalogs(source):
     def put(code, rows, path):
         lang = canonical_language(code)
         catalogs.setdefault(lang, {}).update(rows)
-        files.append({'path': str(path.relative_to(source)), 'language': lang, 'keys': len(rows), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
+        files.append({'path': path.relative_to(source).as_posix(), 'language': lang, 'keys': len(rows), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
     for f in sorted((root / 'src/i18n').glob('*.tsv')):
         rows, bad = read_tsv(f)
-        errors.extend({'file': str(f.relative_to(source)), **e} for e in bad)
+        errors.extend({'file': f.relative_to(source).as_posix(), **e} for e in bad)
         put(f.stem, rows, f)
     for f in sorted((root / 'locales').glob('*.json')):
         if f.stem.endswith('-formats'):
@@ -91,6 +91,13 @@ def collect_catalogs(source):
             if len(values) == 5:
                 for lang, raw in zip(('de', 'fr', 'es', 'ja', 'zh-CN'), values):
                     catalogs.setdefault(lang, {})[('', literal(m[1]))] = literal(raw)
+        # Design's dedicated Japanese table wins over the legacy shared column.
+        # Ignoring it reports more than a thousand already translated labels as English.
+        ja = root / 'src/i18n/ja.rs'
+        if source.parent.name == 'design' and ja.is_file():
+            body = ja.read_text(encoding='utf-8').split('#[cfg(test)]')[0]
+            rows = {('', literal(m[1])): literal(m[2]) for m in re.finditer(r'\(\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*,?\s*\)', body)}
+            put('ja', rows, ja)
         # Grid's Japanese pairs and its per-language match tables.
         if source.parent.name == 'grid':
             for m in re.finditer(r'\(\s*(' + RSTRING + r')\s*,\s*(' + RSTRING + r')\s*\)', text):
@@ -130,12 +137,30 @@ def source_literals(source):
         for m in DIRECT_UI.finditer(text):
             value = literal(m[1])
             if re.search('[A-Za-z]{2}', value):
-                review.append({'path': str(f.relative_to(source)), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
+                review.append({'path': f.relative_to(source).as_posix(), 'line': text.count('\n', 0, m.start()) + 1, 'text': value})
     return keys, review
 
 
 def placeholders(text):
-    return Counter(PLACEHOLDER.findall(text))
+    # Count anonymous/positional/format-spec arguments too, preserving repeated
+    # variables. Doubled braces and percent signs are literal escape sequences.
+    rust = re.compile(r'\{((?:[A-Za-z_]\w*|\d*)(?::[^{}]*)?)\}')
+    printf = re.compile(r'%(?:\d+\$)?[-+#0]*(?:\d+|\*)?(?:\.(?:\d+|\*))?(?:hh|ll|[hlLjzt])?[diuoxXfFeEgGaAcspn](?![A-Za-z])')
+    qt = re.compile(r'%(?:L?\d+|n)\b')
+    result, index = Counter(), 0
+    while index < len(text):
+        if text[index:index + 2] in ('{{', '}}', '%%'):
+            index += 2
+            continue
+        match = rust.match(text, index)
+        if match:
+            result[match[1]] += 1
+        else:
+            match = printf.match(text, index) or qt.match(text, index)
+            if match:
+                result[match[0]] += 1
+        index = match.end() if match else index + 1
+    return result
 
 
 def audit_app(app, source):
@@ -161,7 +186,7 @@ def audit_app(app, source):
             if lang != 'en' and value == english and key not in OFFICIAL_NAMES.get(app, set()) and re.search('[A-Za-z]{3}', english):
                 unchanged.append(list(key))  # review queue, including legitimate official names
         rows[lang] = {'keys': len(data), 'missing': len(missing), 'empty': len(empty), 'placeholderErrors': len(mismatch), 'sameAsEnglishReview': len(unchanged), 'missingKeys': [list(k) for k in missing], 'emptyKeys': empty, 'placeholderKeys': mismatch, 'unchangedKeys': unchanged}
-    complete = not direct and not parse_errors and all(not (r['missing'] or r['empty'] or r['placeholderErrors'] or r['sameAsEnglishReview']) for r in rows.values())
+    complete = bool(keys) and not direct and not parse_errors and all(not (r['missing'] or r['empty'] or r['placeholderErrors'] or r['sameAsEnglishReview']) for r in rows.values())
     return {'id': app, 'sourceAvailable': True, 'catalogKeyUnion': len(keys), 'catalogFiles': inputs, 'parseErrors': parse_errors, 'languages': rows, 'directUiReview': direct, 'complete': complete, 'guiTested': False, 'officialNameExceptions': [list(k) for k in sorted(OFFICIAL_NAMES.get(app, set()))]}
 
 
