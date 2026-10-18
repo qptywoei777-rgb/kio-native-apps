@@ -225,6 +225,19 @@ Transport Online	Đồng bộ điều khiển phát	트랜스포트 온라인	�
 Transpose	Chuyển giọng	조옮김	トランスポーズ	移調	移调
 Velocity	Lực nhấn	벨로시티	ベロシティ	力度	力度
 Waveforms	Dạng sóng	파형	波形	波形	波形
+auto {mode}	tự động: {mode}	자동 {mode}	自動 {mode}	自動{mode}	自动{mode}
+nogrp	không nhóm	그룹 없음	グループなし	無群組	无编组
+t/l	chạm/giữ	터치/래치	タッチ／ラッチ	觸控／鎖存	触控／锁存
+audio	âm thanh	오디오	オーディオ	音訊	音频
+inst	nhạc cụ	악기	楽器	樂器	乐器
+aux	phụ	보조	補助	輔助	辅助
+master	tổng	마스터	マスター	主控	主控
+folder	thư mục	폴더	フォルダー	資料夾	文件夹
+midi	MIDI	MIDI	MIDI	MIDI	MIDI
+vca	VCA	VCA	VCA	VCA	VCA
+video	video	비디오	ビデオ	影片	视频
+comments	ghi chú	주석	コメント	註解	注释
+INST	NHẠC CỤ	악기	楽器	樂器	乐器
 Half Wave	Nửa sóng	반파	半波	半波	半波
 Full Wave	Toàn sóng	전파	全波	全波	全波
 On	Bật	켜기	オン	開啟	开启
@@ -1262,10 +1275,10 @@ VST3	VST3	VST3	VST3	VST3	VST3
  s	 s	 s	 s	 s	 s
 I/O	I/O	I/O	I/O	I/O	I/O
 I / O	I / O	I / O	I / O	I / O	I / O
-I A-E	I A-E	I A-E	I A-E	I A-E	I A-E
-I F-J	I F-J	I F-J	I F-J	I F-J	I F-J
-S A-E	S A-E	S A-E	S A-E	S A-E	S A-E
-S F-J	S F-J	S F-J	S F-J	S F-J	S F-J
+I A-E	Chèn A-E	삽입 A-E	挿入 A-E	插入 A-E	插入 A-E
+I F-J	Chèn F-J	삽입 F-J	挿入 F-J	插入 F-J	插入 F-J
+S A-E	Gửi A-E	센드 A-E	センド A-E	傳送 A-E	发送 A-E
+S F-J	Gửi F-J	센드 F-J	センド F-J	傳送 F-J	发送 F-J
 {:+.1} dB	{:+.1} dB	{:+.1} dB	{:+.1} dB	{:+.1} dB	{:+.1} dB
 {:.2} s	{:.2} s	{:.2} s	{:.2} s	{:.2} s	{:.2} s
 {r} Hz	{r} Hz	{r} Hz	{r} Hz	{r} Hz	{r} Hz
@@ -1511,3 +1524,14 @@ s	s	s	s	s	s
 12 dB/oct	12 dB/oct	12 dB/oct	12 dB/oct	12 dB/oct	12 dB/oct
 18 dB/oct	18 dB/oct	18 dB/oct	18 dB/oct	18 dB/oct	18 dB/oct
 24 dB/oct	24 dB/oct	24 dB/oct	24 dB/oct	24 dB/oct	24 dB/oct
+Constant	Cố định	일정	一定	固定	固定
+Parabolic	Parabol	포물선	放物線	拋物線	抛物线
+Scale	Tỷ lệ	비율 조정	スケール	縮放	缩放
+Stretch	Co giãn	늘이기	ストレッチ	伸縮	伸缩
+Insert Time	Chèn thời gian	시간 삽입	時間を挿入	插入時間	插入时间
+Cut Time	Cắt khoảng thời gian	시간 잘라내기	時間をカット	剪下時間	剪切时间
+Change Meter	Đổi nhịp	박자 변경	拍子を変更	變更拍號	更改拍号
+Move Song Start	Dời điểm bắt đầu bài	곡 시작 위치 이동	曲の開始位置を移動	移動歌曲起點	移动歌曲起点
+Change Velocity	Đổi lực nhấn	벨로시티 변경	ベロシティを変更	變更力度	更改力度
+Flatten Performance	Ghi cố định phần trình diễn	연주 병합	演奏をフラット化	平面化演奏	拼合演奏
+Restore Performance	Khôi phục phần trình diễn	연주 복원	演奏を復元	還原演奏	恢复演奏

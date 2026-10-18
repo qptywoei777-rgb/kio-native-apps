@@ -1528,58 +1528,6 @@
         "zh-TW",
         "zh-CN"
       ],
-      "context": "",
-      "source": "I A-E",
-      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
-    },
-    {
-      "app": "sound",
-      "languages": [
-        "vi",
-        "ko",
-        "ja",
-        "zh-TW",
-        "zh-CN"
-      ],
-      "context": "",
-      "source": "I F-J",
-      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
-    },
-    {
-      "app": "sound",
-      "languages": [
-        "vi",
-        "ko",
-        "ja",
-        "zh-TW",
-        "zh-CN"
-      ],
-      "context": "",
-      "source": "S A-E",
-      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
-    },
-    {
-      "app": "sound",
-      "languages": [
-        "vi",
-        "ko",
-        "ja",
-        "zh-TW",
-        "zh-CN"
-      ],
-      "context": "",
-      "source": "S F-J",
-      "reason": "Standard audio unit/format notation, with every value preserved verbatim."
-    },
-    {
-      "app": "sound",
-      "languages": [
-        "vi",
-        "ko",
-        "ja",
-        "zh-TW",
-        "zh-CN"
-      ],
       "context": "@msg",
       "source": "{:+.1} dB",
       "reason": "Standard audio unit/format notation, with every value preserved verbatim."
@@ -2238,6 +2186,15 @@
       "context": "",
       "source": "24 dB/oct",
       "reason": "Canonical speaker-position, filter Q or scientific audio-unit notation in model/DSP presentation metadata."
+    },
+    {
+      "app": "sound",
+      "languages": [
+        "vi"
+      ],
+      "context": "",
+      "source": "video",
+      "reason": "Vietnamese loanword; no exception for the other four target languages."
     }
   ]
 }

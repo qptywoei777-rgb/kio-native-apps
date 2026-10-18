@@ -358,7 +358,7 @@
      }
      Some(text)
  }
-@@ -292,7 +305,8 @@
+@@ -292,43 +305,46 @@
      .to_string();
      let enter = ctx.input(|i| i.key_pressed(egui::Key::Enter));
      let esc = ctx.input(|i| i.key_pressed(egui::Key::Escape));
@@ -367,17 +367,21 @@
 +        .id(egui::Id::new(&title))
          .collapsible(false)
          .resizable(false)
++        .default_width(if matches!(d, Dialog::NewTracks { .. }) { 620.0 } else { 360.0 })
          .anchor(Align2::CENTER_CENTER, vec2(0.0, -80.0))
-@@ -301,33 +315,32 @@
+         .show(ctx, |ui| {
+             ui.spacing_mut().item_spacing = vec2(8.0, 8.0);
              match &mut d {
                  Dialog::NewTracks { count, format, kind, timebase, name } => {
-                     ui.horizontal(|ui| {
+-                    ui.horizontal(|ui| {
 -                        ui.label("Create");
++                    ui.horizontal_wrapped(|ui| {
 +                        ui.label(crate::i18n::t(&("Create")));
                          ui.add(egui::DragValue::new(count).range(1..=128));
 -                        ui.label("new");
+-                        egui::ComboBox::from_id_salt("nt_fmt").selected_text(format.as_str()).show_ui(ui, |ui| {
 +                        ui.label(crate::i18n::t(&("new")));
-                         egui::ComboBox::from_id_salt("nt_fmt").selected_text(format.as_str()).show_ui(ui, |ui| {
++                        egui::ComboBox::from_id_salt("nt_fmt").selected_text(crate::i18n::t(format.as_str())).show_ui(ui, |ui| {
                              for f in soundcraft_model::ChannelFormat::ALL {
 -                                ui.selectable_value(format, f.label().to_string(), f.label());
 +                                ui.selectable_value(format, f.label().to_string(), crate::i18n::t(&(f.label())));
@@ -404,6 +408,7 @@
 -                            },
 -                        );
 -                        ui.label("Name:");
+-                        ui.add(egui::TextEdit::singleline(name).desired_width(140.0));
 +                        ui.label(crate::i18n::t(&("in")));
 +                        egui::ComboBox::from_id_salt("nt_tb")
 +                            .selected_text(crate::i18n::t(&(if timebase == "ticks" { "Ticks" } else { "Samples" })))
@@ -411,11 +416,14 @@
 +                                ui.selectable_value(timebase, "samples".to_string(), crate::i18n::t(&("Samples")));
 +                                ui.selectable_value(timebase, "ticks".to_string(), crate::i18n::t(&("Ticks")));
 +                            });
-+                        ui.label(crate::i18n::t(&("Name:")));
-                         ui.add(egui::TextEdit::singleline(name).desired_width(140.0));
++                    });
++                    ui.horizontal(|ui| {
++                        ui.label(crate::i18n::t("Name:"));
++                        ui.add(egui::TextEdit::singleline(name).desired_width(260.0));
                      });
                      if buttons(ui, "Create", enter) {
-@@ -337,14 +350,16 @@
+                         action =
+@@ -337,14 +353,16 @@
                  }
                  Dialog::NewSession { name, sample_rate, demo } => {
                      ui.horizontal(|ui| {
@@ -438,7 +446,7 @@
                      crate::widgets::checkbox(ui, demo, "Start from the demo session");
                      if buttons(ui, "Create", enter) {
                          action = Some((
-@@ -355,10 +370,10 @@
+@@ -355,10 +373,10 @@
                  }
                  Dialog::Bounce { path, format, bit_depth, normalize } => {
                      ui.horizontal(|ui| {
@@ -451,7 +459,7 @@
                              && let Some(p) = pick("file.bounce_mix", path)
                          {
                              *path = p;
-@@ -371,20 +386,22 @@
+@@ -371,20 +389,22 @@
                          }
                      });
                      ui.horizontal(|ui| {
@@ -481,7 +489,7 @@
                              .small()
                              .color(Tokens::current().text_dim),
                      );
-@@ -417,7 +434,9 @@
+@@ -417,7 +437,9 @@
                  }
                  Dialog::ClearClips { clips, sources, message } => {
                      ui.set_max_width(340.0);
@@ -492,7 +500,7 @@
                      if buttons(ui, "Remove", enter) {
                          action = Some(("clip.clear".into(), json!({"clips": clips, "sources": sources, "with_clips": true})));
                      }
-@@ -428,21 +447,21 @@
+@@ -428,21 +450,21 @@
                          && cmd != "session.save_as"
                          && cmd != "session.save_copy"
                          && key != "dir"
@@ -517,7 +525,7 @@
                          && let Some(p) = pick(cmd, path)
                      {
                          *path = p;
-@@ -450,7 +469,9 @@
+@@ -450,7 +472,9 @@
                      let file = soundcraft_engine::io::session_file(path);
                      let replaces = soundcraft_engine::io::replaces(&app.engine, cmd, &file);
                      if replaces {
@@ -528,7 +536,7 @@
                      }
                      if buttons(ui, if replaces { "Replace" } else { "OK" }, enter && !replaces) {
                          let mut v = json!({});
-@@ -464,7 +485,7 @@
+@@ -464,7 +488,7 @@
                  Dialog::Number { cmd, key, value, suffix, .. } => {
                      ui.horizontal(|ui| {
                          ui.add(egui::DragValue::new(value).speed(0.1));
@@ -537,7 +545,7 @@
                      });
                      if buttons(ui, "OK", enter) {
                          let v = if key == "by_seconds" { json!({"by": {"seconds": value}}) } else { json!({key.as_str(): value}) };
-@@ -475,7 +496,7 @@
+@@ -475,7 +499,7 @@
                      ui.horizontal(|ui| {
                          // Same limits the engine enforces (time crate `valid_bpm`).
                          ui.add(egui::DragValue::new(bpm).speed(0.1).range(5.0..=1000.0));
@@ -546,7 +554,7 @@
                      });
                      if buttons(ui, "OK", enter) {
                          action = Some(tempo_change_action(*at, *bpm));
-@@ -490,17 +511,17 @@
+@@ -490,17 +514,17 @@
                  }
                  Dialog::Fades { shape } => {
                      for s in soundcraft_model::FadeShape::ALL {
@@ -569,7 +577,7 @@
                      if buttons(ui, "Strip", enter) {
                          action = Some((
                              "edit.strip_silence".into(),
-@@ -510,14 +531,14 @@
+@@ -510,14 +534,14 @@
                  }
                  Dialog::Group { name, edit, mix, members } => {
                      ui.horizontal(|ui| {
@@ -586,23 +594,29 @@
                      egui::ScrollArea::vertical().max_height(180.0).show(ui, |ui| {
                          for (_, n, on) in members.iter_mut() {
                              crate::widgets::checkbox(ui, on, n.as_str());
-@@ -529,12 +550,12 @@
+@@ -529,12 +553,15 @@
                      }
                  }
                  Dialog::Session { frame_rate, bit_depth } => {
 -                    egui::ComboBox::from_label("Timecode Rate").selected_text(frame_rate.as_str()).show_ui(ui, |ui| {
-+                    egui::ComboBox::from_label(crate::i18n::t(&("Timecode Rate"))).selected_text(frame_rate.as_str()).show_ui(ui, |ui| {
-                         for r in soundcraft_time::FrameRate::ALL {
+-                        for r in soundcraft_time::FrameRate::ALL {
 -                            ui.selectable_value(frame_rate, r.label().to_string(), r.label());
-+                            ui.selectable_value(frame_rate, r.label().to_string(), crate::i18n::t(&(r.label())));
-                         }
-                     });
+-                        }
+-                    });
 -                    egui::ComboBox::from_label("Bit Depth").selected_text(bit_depth.as_str()).show_ui(ui, |ui| {
++                    egui::ComboBox::from_label(crate::i18n::t(&("Timecode Rate"))).selected_text(crate::i18n::t(frame_rate.as_str())).show_ui(
++                        ui,
++                        |ui| {
++                            for r in soundcraft_time::FrameRate::ALL {
++                                ui.selectable_value(frame_rate, r.label().to_string(), crate::i18n::t(&(r.label())));
++                            }
++                        },
++                    );
 +                    egui::ComboBox::from_label(crate::i18n::t(&("Bit Depth"))).selected_text(bit_depth.as_str()).show_ui(ui, |ui| {
                          for b in ["16", "24", "32f"] {
                              ui.selectable_value(bit_depth, b.to_string(), b);
                          }
-@@ -545,13 +566,13 @@
+@@ -545,13 +572,13 @@
                  }
                  Dialog::ScoreSetup { title, composer, bars_per_system, show_track_names } => {
                      egui::Grid::new("score_setup").num_columns(2).spacing(vec2(10.0, 8.0)).show(ui, |ui| {
@@ -619,7 +633,7 @@
                          ui.add(egui::DragValue::new(bars_per_system).range(1..=16));
                          ui.end_row();
                      });
-@@ -572,15 +593,15 @@
+@@ -572,15 +599,15 @@
                          } else {
                              (format!("Close “{name}” without saving?"), "Don't Save")
                          };
@@ -638,7 +652,7 @@
                                  action = Some(then.clone());
                              }
                              if buttons(ui, "Save", enter) {
-@@ -638,10 +659,10 @@
+@@ -638,10 +665,10 @@
      let mut pressed = enter;
      ui.separator();
      ui.horizontal(|ui| {
@@ -651,7 +665,7 @@
              pressed = true;
          }
      });
-@@ -668,49 +689,53 @@
+@@ -668,49 +695,53 @@
      let Some(process) = app.ui.audiosuite.clone() else { return };
      let mut open = true;
      let title = soundcraft_dsp::plugin_info(&process).map_or_else(|| process.replace('_', " "), |p| p.name.to_string());
@@ -748,7 +762,7 @@
      if !open {
          app.ui.audiosuite = None;
      }
-@@ -794,4 +819,23 @@
+@@ -794,4 +825,23 @@
              "Remove 2 files from the session? They are used by 4 clips on the timeline, which are removed too. The files stay on disk."
          );
      }
@@ -1529,7 +1543,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/en.tsv
-@@ -0,0 +1,1509 @@
+@@ -0,0 +1,1533 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 "{name}" is used by {users}
 +	 (alternate playlist)	 (alternate playlist)
@@ -1752,9 +1766,11 @@
 +	Center Playhead	Center Playhead
 +	Change Duration...	Change Duration...
 +	Change Edit to Match Timeline	Change Edit to Match Timeline
++	Change Meter	Change Meter
 +	Change Meter...	Change Meter...
 +	Change Timeline to Match Edit	Change Timeline to Match Edit
 +	Change Track Width	Change Track Width
++	Change Velocity	Change Velocity
 +	Change Velocity...	Change Velocity...
 +	Channel Name	Channel Name
 +	Channel Strip	Channel Strip
@@ -1842,6 +1858,7 @@
 +	Configurations	Configurations
 +	Conform to Tempo	Conform to Tempo
 +	Consolidate	Consolidate
++	Constant	Constant
 +	Constant...	Constant...
 +	Continuous	Continuous
 +	Contributors	Contributors
@@ -1874,6 +1891,7 @@
 +	Curve	Curve
 +	Cut	Cut
 +	Cut Special	Cut Special
++	Cut Time	Cut Time
 +	Cut Time...	Cut Time...
 +	Cutoff	Cutoff
 +	Cymbal Decay	Cymbal Decay
@@ -2003,6 +2021,7 @@
 +	First	First
 +	First commit	First commit
 +	Flanger	Flanger
++	Flatten Performance	Flatten Performance
 +	Flatten Performance...	Flatten Performance...
 +	Folder Lines	Folder Lines
 +	Format	Format
@@ -2069,6 +2088,7 @@
 +	I/O...	I/O...
 +	INSERTS A-E	INSERTS A-E
 +	INSERTS F-J	INSERTS F-J
++	INST	INST
 +	INSTRUMENT	INSTRUMENT
 +	Identify Beat...	Identify Beat...
 +	Identify Beat: selection is	Identify Beat: selection is
@@ -2085,6 +2105,7 @@
 +	Input device	Input device
 +	Input monitoring	Input monitoring
 +	Insert Silence	Insert Silence
++	Insert Time	Insert Time
 +	Insert Time...	Insert Time...
 +@msg	Insert {}	Insert {}
 +	Insertion Follows Playback	Insertion Follows Playback
@@ -2259,6 +2280,7 @@
 +	Move Edit Selection To Marker Lane Above	Move Edit Selection To Marker Lane Above
 +	Move Edit Selection To Marker Lane Below	Move Edit Selection To Marker Lane Below
 +	Move Selection to...	Move Selection to...
++	Move Song Start	Move Song Start
 +	Move Song Start...	Move Song Start...
 +	Move to Folder	Move to Folder
 +	Move to New Folder...	Move to New Folder...
@@ -2353,6 +2375,7 @@
 +@msg	Panel layout could not be restored: {error}	Panel layout could not be restored: {error}
 +@msg	Panel move was not applied: {error}	Panel move was not applied: {error}
 +@msg	Panel windows could not be arranged: {error}	Panel windows could not be arranged: {error}
++	Parabolic	Parabolic
 +	Parabolic...	Parabolic...
 +	Parent folder	Parent folder
 +	Paste	Paste
@@ -2476,6 +2499,7 @@
 +	Reset Panel Layout	Reset Panel Layout
 +	Resonance	Resonance
 +	Restore Last Selection	Restore Last Selection
++	Restore Performance	Restore Performance
 +	Restore Performance...	Restore Performance...
 +	Retrospective Record	Retrospective Record
 +	Return to Zero (Home)	Return to Zero (Home)
@@ -2533,6 +2557,7 @@
 +@msg	Save changes to “{name}” before closing?	Save changes to “{name}” before closing?
 +@msg	Saved preset {clean}	Saved preset {clean}
 +	Saw	Saw
++	Scale	Scale
 +	Scale...	Scale...
 +	Scan CLAP	Scan CLAP
 +	Scan VST3	Scan VST3
@@ -2665,6 +2690,7 @@
 +	Stop recording first	Stop recording first
 +	Store Plugin State	Store Plugin State
 +	Strength %	Strength %
++	Stretch	Stretch
 +	Stretch...	Stretch...
 +	Strip	Strip
 +	Strip Silence	Strip Silence
@@ -2883,8 +2909,11 @@
 +	`section` required	`section` required
 +	a clip on the timeline, which is removed too.	a clip on the timeline, which is removed too.
 +	active	active
++	audio	audio
 +	audio on	audio on
++@msg	auto {mode}	auto {mode}
 +@msg	auto {}	auto {}
++	aux	aux
 +@msg	bad ui state: {e}	bad ui state: {e}
 +	bar(s)	bar(s)
 +	before must be a panel ID or null	before must be a panel ID or null
@@ -2895,6 +2924,7 @@
 +	change velocity	change velocity
 +	clip	clip
 +	clip_gain	clip_gain
++	comments	comments
 +	custom	custom
 +	default buffer	default buffer
 +	dyn	dyn
@@ -2904,21 +2934,25 @@
 +	file	file
 +	fit to window	fit to window
 +	flatten performance	flatten performance
++	folder	folder
 +	front	front
 +	height is required	height is required
 +	height must be finite and bounded	height must be finite and bounded
 +	in	in
 +@msg	insert {} {param}	insert {} {param}
 +	insertion point moved	insertion point moved
++	inst	inst
 +	jumbo	jumbo
 +	large	large
 +	latch	latch
 +	less than a minute ago	less than a minute ago
++	master	master
 +	media offline	media offline
 +@msg	media offline: {e}	media offline: {e}
 +	medium	medium
 +@msg	menu item `{path}` is not implemented yet	menu item `{path}` is not implemented yet
 +	micro	micro
++	midi	midi
 +	mini	mini
 +	missing	missing
 +	modified	modified
@@ -2937,6 +2971,7 @@
 +	no insert	no insert
 +	no instrument	no instrument
 +	no output	no output
++	nogrp	nogrp
 +	none	none
 +	notes	notes
 +	off	off
@@ -2968,6 +3003,7 @@
 +	size is required	size is required
 +	small	small
 +	start bpm 	start bpm 
++	t/l	t/l
 +	target is required	target is required
 +	the audio engine hit an internal error (see the log)	the audio engine hit an internal error (see the log)
 +@msg	the clip "{name}"	the clip "{name}"
@@ -2980,6 +3016,8 @@
 +@msg	unknown theme `{mode}` (system, light or dark)	unknown theme `{mode}` (system, light or dark)
 +	unsaved changes	unsaved changes
 +	unsaved changes and an unfinished recording	unsaved changes and an unfinished recording
++	vca	vca
++	video	video
 +	volume	volume
 +	waveform	waveform
 +	write	write
@@ -3041,7 +3079,7 @@
 +	🔍 Find clips	🔍 Find clips
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ja.tsv
-@@ -0,0 +1,1509 @@
+@@ -0,0 +1,1533 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 「{name}」は {users} で使用中です
 +	 (alternate playlist)	（別プレイリスト）
@@ -3264,9 +3302,11 @@
 +	Center Playhead	再生ヘッドを中央に配置
 +	Change Duration...	長さを変更...
 +	Change Edit to Match Timeline	編集範囲をタイムラインに合わせる
++	Change Meter	拍子を変更
 +	Change Meter...	拍子を変更...
 +	Change Timeline to Match Edit	タイムラインを編集範囲に合わせる
 +	Change Track Width	トラック幅を変更
++	Change Velocity	ベロシティを変更
 +	Change Velocity...	ベロシティを変更...
 +	Channel Name	チャンネル名
 +	Channel Strip	チャンネルストリップ
@@ -3354,6 +3394,7 @@
 +	Configurations	構成
 +	Conform to Tempo	テンポに合わせる
 +	Consolidate	統合
++	Constant	一定
 +	Constant...	一定...
 +	Continuous	連続
 +	Contributors	貢献者
@@ -3386,6 +3427,7 @@
 +	Curve	カーブ
 +	Cut	切り取り
 +	Cut Special	特殊カット
++	Cut Time	時間をカット
 +	Cut Time...	時間をカット...
 +	Cutoff	カットオフ
 +	Cymbal Decay	シンバルの減衰
@@ -3515,6 +3557,7 @@
 +	First	最初
 +	First commit	最初のコミット
 +	Flanger	フランジャー
++	Flatten Performance	演奏をフラット化
 +	Flatten Performance...	演奏をフラット化...
 +	Folder Lines	フォルダーの線
 +	Format	形式
@@ -3574,13 +3617,14 @@
 +	Home	ホーム
 +	Hz	Hz
 +	I / O	I / O
-+	I A-E	I A-E
-+	I F-J	I F-J
++	I A-E	挿入 A-E
++	I F-J	挿入 F-J
 +	I/O	I/O
 +	I/O Setup	入出力設定
 +	I/O...	入出力...
 +	INSERTS A-E	インサート A-E
 +	INSERTS F-J	インサート F-J
++	INST	楽器
 +	INSTRUMENT	インストゥルメント
 +	Identify Beat...	ビートを特定...
 +	Identify Beat: selection is	ビートの特定：選択範囲
@@ -3597,6 +3641,7 @@
 +	Input device	入力デバイス
 +	Input monitoring	入力モニタリング
 +	Insert Silence	無音を挿入
++	Insert Time	時間を挿入
 +	Insert Time...	時間を挿入...
 +@msg	Insert {}	インサート {}
 +	Insertion Follows Playback	挿入位置を再生に追従
@@ -3771,6 +3816,7 @@
 +	Move Edit Selection To Marker Lane Above	編集選択範囲を上のマーカーレーンに移動
 +	Move Edit Selection To Marker Lane Below	編集選択範囲を下のマーカーレーンに移動
 +	Move Selection to...	選択範囲を移動先へ...
++	Move Song Start	曲の開始位置を移動
 +	Move Song Start...	曲の開始位置を移動...
 +	Move to Folder	フォルダーに移動
 +	Move to New Folder...	新規フォルダーに移動...
@@ -3865,6 +3911,7 @@
 +@msg	Panel layout could not be restored: {error}	パネル配置を復元できませんでした：{error}
 +@msg	Panel move was not applied: {error}	パネルの移動を適用できませんでした：{error}
 +@msg	Panel windows could not be arranged: {error}	パネルウィンドウを配置できませんでした：{error}
++	Parabolic	放物線
 +	Parabolic...	放物線...
 +	Parent folder	親フォルダー
 +	Paste	貼り付け
@@ -3988,6 +4035,7 @@
 +	Reset Panel Layout	パネル配置をリセット
 +	Resonance	レゾナンス
 +	Restore Last Selection	前の選択範囲を復元
++	Restore Performance	演奏を復元
 +	Restore Performance...	演奏を復元...
 +	Retrospective Record	レトロスペクティブ録音
 +	Return to Zero (Home)	先頭に戻る（Home）
@@ -4014,8 +4062,8 @@
 +	Ruler Lines	ルーラーの線
 +	Rulers	ルーラー
 +	Rw	Rw
-+	S A-E	S A-E
-+	S F-J	S F-J
++	S A-E	センド A-E
++	S F-J	センド F-J
 +	S-Curve	S 字カーブ
 +	S-Curve...	S 字カーブ...
 +	SC HPF	サイドチェーンハイパス
@@ -4045,6 +4093,7 @@
 +@msg	Save changes to “{name}” before closing?	閉じる前に「{name}」の変更を保存しますか？
 +@msg	Saved preset {clean}	プリセット {clean} を保存しました
 +	Saw	ノコギリ波
++	Scale	スケール
 +	Scale...	スケール...
 +	Scan CLAP	CLAP をスキャン
 +	Scan VST3	VST3 をスキャン
@@ -4177,6 +4226,7 @@
 +	Stop recording first	先に録音を停止してください
 +	Store Plugin State	プラグインの状態を保存
 +	Strength %	強度 %
++	Stretch	ストレッチ
 +	Stretch...	ストレッチ...
 +	Strip	無音を除去
 +	Strip Silence	ストリップサイレンス
@@ -4395,8 +4445,11 @@
 +	`section` required	`section` が必要です
 +	a clip on the timeline, which is removed too.	タイムライン上のクリップも削除されます。
 +	active	有効
++	audio	オーディオ
 +	audio on	オーディオ有効
++@msg	auto {mode}	自動 {mode}
 +@msg	auto {}	自動 {}
++	aux	補助
 +@msg	bad ui state: {e}	無効な UI 状態：{e}
 +	bar(s)	小節
 +	before must be a panel ID or null	before はパネル ID または null で指定してください
@@ -4407,6 +4460,7 @@
 +	change velocity	ベロシティを変更
 +	clip	クリップ
 +	clip_gain	クリップゲイン
++	comments	コメント
 +	custom	カスタム
 +	default buffer	既定のバッファー
 +	dyn	動的
@@ -4416,21 +4470,25 @@
 +	file	ファイル
 +	fit to window	ウィンドウに合わせる
 +	flatten performance	演奏をフラット化
++	folder	フォルダー
 +	front	前方
 +	height is required	高さが必要です
 +	height must be finite and bounded	高さは有限で、許容範囲内である必要があります
 +	in	入力
 +@msg	insert {} {param}	インサート {} {param}
 +	insertion point moved	挿入位置を移動しました
++	inst	楽器
 +	jumbo	非常に大きい
 +	large	大
 +	latch	ラッチ
 +	less than a minute ago	1 分未満前
++	master	マスター
 +	media offline	メディアはオフラインです
 +@msg	media offline: {e}	メディアはオフラインです：{e}
 +	medium	中
 +@msg	menu item `{path}` is not implemented yet	メニュー項目 `{path}` はまだ実装されていません
 +	micro	極小
++	midi	MIDI
 +	mini	非常に小さい
 +	missing	見つかりません
 +	modified	変更あり
@@ -4449,6 +4507,7 @@
 +	no insert	インサートなし
 +	no instrument	インストゥルメントなし
 +	no output	出力なし
++	nogrp	グループなし
 +	none	なし
 +	notes	ノート
 +	off	オフ
@@ -4480,6 +4539,7 @@
 +	size is required	size が必要です
 +	small	小
 +	start bpm 	開始 bpm 
++	t/l	タッチ／ラッチ
 +	target is required	target が必要です
 +	the audio engine hit an internal error (see the log)	オーディオエンジンで内部エラーが発生しました（ログを参照）
 +@msg	the clip "{name}"	クリップ「{name}」
@@ -4492,6 +4552,8 @@
 +@msg	unknown theme `{mode}` (system, light or dark)	不明なテーマ `{mode}`（system、light、dark）
 +	unsaved changes	未保存の変更
 +	unsaved changes and an unfinished recording	未保存の変更と未完了の録音
++	vca	VCA
++	video	ビデオ
 +	volume	ボリューム
 +	waveform	波形
 +	write	ライト
@@ -4553,7 +4615,7 @@
 +	🔍 Find clips	🔍 クリップを検索
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/ko.tsv
-@@ -0,0 +1,1509 @@
+@@ -0,0 +1,1533 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 "{name}"을(를) {users}에서 사용 중입니다
 +	 (alternate playlist)	 (대체 재생 목록)
@@ -4776,9 +4838,11 @@
 +	Center Playhead	재생 헤드 가운데 맞춤
 +	Change Duration...	길이 변경...
 +	Change Edit to Match Timeline	편집 영역을 타임라인에 맞춤
++	Change Meter	박자 변경
 +	Change Meter...	박자 변경...
 +	Change Timeline to Match Edit	타임라인을 편집 영역에 맞춤
 +	Change Track Width	트랙 폭 변경
++	Change Velocity	벨로시티 변경
 +	Change Velocity...	벨로시티 변경...
 +	Channel Name	채널 이름
 +	Channel Strip	채널 스트립
@@ -4866,6 +4930,7 @@
 +	Configurations	구성
 +	Conform to Tempo	템포에 맞춤
 +	Consolidate	통합
++	Constant	일정
 +	Constant...	일정...
 +	Continuous	연속
 +	Contributors	기여자
@@ -4898,6 +4963,7 @@
 +	Curve	곡선
 +	Cut	잘라내기
 +	Cut Special	특수 잘라내기
++	Cut Time	시간 잘라내기
 +	Cut Time...	시간 잘라내기...
 +	Cutoff	컷오프
 +	Cymbal Decay	심벌 디케이
@@ -5027,6 +5093,7 @@
 +	First	처음
 +	First commit	첫 커밋
 +	Flanger	플랜저
++	Flatten Performance	연주 병합
 +	Flatten Performance...	연주 병합...
 +	Folder Lines	폴더 선
 +	Format	형식
@@ -5086,13 +5153,14 @@
 +	Home	홈
 +	Hz	Hz
 +	I / O	I / O
-+	I A-E	I A-E
-+	I F-J	I F-J
++	I A-E	삽입 A-E
++	I F-J	삽입 F-J
 +	I/O	I/O
 +	I/O Setup	입출력 설정
 +	I/O...	입출력...
 +	INSERTS A-E	인서트 A-E
 +	INSERTS F-J	인서트 F-J
++	INST	악기
 +	INSTRUMENT	악기
 +	Identify Beat...	비트 식별...
 +	Identify Beat: selection is	비트 식별: 선택 영역
@@ -5109,6 +5177,7 @@
 +	Input device	입력 장치
 +	Input monitoring	입력 모니터링
 +	Insert Silence	무음 삽입
++	Insert Time	시간 삽입
 +	Insert Time...	시간 삽입...
 +@msg	Insert {}	인서트 {}
 +	Insertion Follows Playback	재생 위치에 삽입 지점 맞춤
@@ -5283,6 +5352,7 @@
 +	Move Edit Selection To Marker Lane Above	편집 선택 영역을 위 마커 레인으로 이동
 +	Move Edit Selection To Marker Lane Below	편집 선택 영역을 아래 마커 레인으로 이동
 +	Move Selection to...	선택 영역 이동 위치...
++	Move Song Start	곡 시작 위치 이동
 +	Move Song Start...	곡 시작 위치 이동...
 +	Move to Folder	폴더로 이동
 +	Move to New Folder...	새 폴더로 이동...
@@ -5377,6 +5447,7 @@
 +@msg	Panel layout could not be restored: {error}	패널 배치를 복원할 수 없습니다: {error}
 +@msg	Panel move was not applied: {error}	패널 이동을 적용하지 못했습니다: {error}
 +@msg	Panel windows could not be arranged: {error}	패널 창을 정렬할 수 없습니다: {error}
++	Parabolic	포물선
 +	Parabolic...	포물선...
 +	Parent folder	상위 폴더
 +	Paste	붙여넣기
@@ -5500,6 +5571,7 @@
 +	Reset Panel Layout	패널 배치 초기화
 +	Resonance	레조넌스
 +	Restore Last Selection	이전 선택 영역 복원
++	Restore Performance	연주 복원
 +	Restore Performance...	연주 복원...
 +	Retrospective Record	소급 녹음
 +	Return to Zero (Home)	처음으로 돌아가기(Home)
@@ -5526,8 +5598,8 @@
 +	Ruler Lines	눈금자 선
 +	Rulers	눈금자
 +	Rw	Rw
-+	S A-E	S A-E
-+	S F-J	S F-J
++	S A-E	센드 A-E
++	S F-J	센드 F-J
 +	S-Curve	S자 곡선
 +	S-Curve...	S자 곡선...
 +	SC HPF	사이드체인 하이패스 필터
@@ -5557,6 +5629,7 @@
 +@msg	Save changes to “{name}” before closing?	닫기 전에 “{name}”의 변경 사항을 저장할까요?
 +@msg	Saved preset {clean}	프리셋 {clean} 저장됨
 +	Saw	톱니파
++	Scale	비율 조정
 +	Scale...	비율 조정...
 +	Scan CLAP	CLAP 검색
 +	Scan VST3	VST3 검색
@@ -5689,6 +5762,7 @@
 +	Stop recording first	먼저 녹음을 중지하세요
 +	Store Plugin State	플러그인 상태 저장
 +	Strength %	강도 %
++	Stretch	늘이기
 +	Stretch...	늘이기...
 +	Strip	무음 잘라내기
 +	Strip Silence	무음 제거
@@ -5907,8 +5981,11 @@
 +	`section` required	`section`이 필요합니다
 +	a clip on the timeline, which is removed too.	타임라인의 클립도 함께 제거됩니다.
 +	active	활성
++	audio	오디오
 +	audio on	오디오 켜짐
++@msg	auto {mode}	자동 {mode}
 +@msg	auto {}	자동 {}
++	aux	보조
 +@msg	bad ui state: {e}	올바르지 않은 UI 상태: {e}
 +	bar(s)	마디
 +	before must be a panel ID or null	before는 패널 ID 또는 null이어야 합니다
@@ -5919,6 +5996,7 @@
 +	change velocity	벨로시티 변경
 +	clip	클립
 +	clip_gain	클립 게인
++	comments	주석
 +	custom	사용자 지정
 +	default buffer	기본 버퍼
 +	dyn	동적
@@ -5928,21 +6006,25 @@
 +	file	파일
 +	fit to window	창에 맞춤
 +	flatten performance	연주 병합
++	folder	폴더
 +	front	전면
 +	height is required	높이가 필요합니다
 +	height must be finite and bounded	높이는 유한하며 허용 범위 안에 있어야 합니다
 +	in	입력
 +@msg	insert {} {param}	인서트 {} {param}
 +	insertion point moved	삽입 지점 이동됨
++	inst	악기
 +	jumbo	특대
 +	large	크게
 +	latch	래치
 +	less than a minute ago	1분 미만 전
++	master	마스터
 +	media offline	미디어 오프라인
 +@msg	media offline: {e}	미디어 오프라인: {e}
 +	medium	보통
 +@msg	menu item `{path}` is not implemented yet	메뉴 항목 `{path}`은(는) 아직 구현되지 않았습니다
 +	micro	매우 작게
++	midi	MIDI
 +	mini	아주 작게
 +	missing	누락됨
 +	modified	수정됨
@@ -5961,6 +6043,7 @@
 +	no insert	인서트 없음
 +	no instrument	악기 없음
 +	no output	출력 없음
++	nogrp	그룹 없음
 +	none	없음
 +	notes	음표
 +	off	끄기
@@ -5992,6 +6075,7 @@
 +	size is required	size가 필요합니다
 +	small	작게
 +	start bpm 	시작 bpm 
++	t/l	터치/래치
 +	target is required	target이 필요합니다
 +	the audio engine hit an internal error (see the log)	오디오 엔진에 내부 오류가 발생했습니다(로그 참조)
 +@msg	the clip "{name}"	클립 "{name}"
@@ -6004,6 +6088,8 @@
 +@msg	unknown theme `{mode}` (system, light or dark)	알 수 없는 테마 `{mode}`(system, light 또는 dark)
 +	unsaved changes	저장되지 않은 변경 사항
 +	unsaved changes and an unfinished recording	저장되지 않은 변경 사항 및 완료되지 않은 녹음
++	vca	VCA
++	video	비디오
 +	volume	볼륨
 +	waveform	파형
 +	write	쓰기
@@ -6065,7 +6151,7 @@
 +	🔍 Find clips	🔍 클립 찾기
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/mod.rs
-@@ -0,0 +1,567 @@
+@@ -0,0 +1,608 @@
 +//! KIO Sound's presentation-only catalogs. Session text and command wire values are unchanged.
 +//! No network access or translation service is used at runtime.
 +use std::cell::Cell;
@@ -6526,6 +6612,47 @@
 +        }
 +    }
 +    #[test]
++    fn actual_new_track_dropdown_localizes_without_resetting_input_or_command_values() {
++        use egui_kittest::kittest::Queryable;
++        let _palette = crate::theme::lock_test_palette();
++        let mut app = crate::SoundApp::new(soundcraft_engine::Engine::default(), None, crate::Services::default());
++        app.dialogs.open = Some(crate::dialogs::Dialog::NewTracks {
++            count: 3,
++            format: "Mono".into(),
++            kind: "audio".into(),
++            timebase: "samples".into(),
++            name: "User {name} 東京".into(),
++        });
++        let before = serde_json::to_value(app.engine.session()).unwrap();
++        let mut harness = egui_kittest::Harness::builder().with_size(egui::vec2(1200.0, 800.0)).build_ui_state(
++            |ui, app: &mut crate::SoundApp| {
++                app.logic(ui.ctx());
++                app.ui(ui);
++            },
++            app,
++        );
++        for language in Language::ALL {
++            harness.state_mut().set_language(language);
++            harness.run_steps(3);
++            assert!(harness.query_by_value(&translate(language, "Mono")).is_some(), "{}", language.code());
++            if language != Language::En {
++                assert!(harness.query_by_value("Mono").is_none());
++            }
++            match harness.state().dialogs.open.as_ref().unwrap() {
++                crate::dialogs::Dialog::NewTracks { count, format, kind, timebase, name } => {
++                    assert_eq!(*count, 3);
++                    assert_eq!(format, "Mono");
++                    assert_eq!(kind, "audio");
++                    assert_eq!(timebase, "samples");
++                    assert_eq!(name, "User {name} 東京");
++                }
++                _ => panic!("language change replaced the dialog"),
++            }
++            assert_eq!(serde_json::to_value(harness.state().engine.session()).unwrap(), before);
++        }
++        activate(Language::En);
++    }
++    #[test]
 +    fn six_catalogs_have_the_same_nonempty_keys() {
 +        let catalogs = catalogs();
 +        let english = &catalogs[Language::En.index()].exact;
@@ -6635,7 +6762,7 @@
 +}
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/vi.tsv
-@@ -0,0 +1,1509 @@
+@@ -0,0 +1,1533 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 "{name}" đang được {users} sử dụng
 +	 (alternate playlist)	 (danh sách phát thay thế)
@@ -6858,9 +6985,11 @@
 +	Center Playhead	Căn giữa đầu phát
 +	Change Duration...	Đổi thời lượng...
 +	Change Edit to Match Timeline	Khớp vùng chỉnh sửa với dòng thời gian
++	Change Meter	Đổi nhịp
 +	Change Meter...	Đổi nhịp...
 +	Change Timeline to Match Edit	Khớp dòng thời gian với vùng chỉnh sửa
 +	Change Track Width	Đổi độ rộng rãnh
++	Change Velocity	Đổi lực nhấn
 +	Change Velocity...	Đổi lực nhấn...
 +	Channel Name	Tên kênh
 +	Channel Strip	Dải kênh
@@ -6948,6 +7077,7 @@
 +	Configurations	Cấu hình
 +	Conform to Tempo	Khớp theo nhịp độ
 +	Consolidate	Hợp nhất
++	Constant	Cố định
 +	Constant...	Cố định...
 +	Continuous	Liên tục
 +	Contributors	Người đóng góp
@@ -6980,6 +7110,7 @@
 +	Curve	Đường cong
 +	Cut	Cắt
 +	Cut Special	Cắt đặc biệt
++	Cut Time	Cắt khoảng thời gian
 +	Cut Time...	Cắt khoảng thời gian...
 +	Cutoff	Tần số cắt
 +	Cymbal Decay	Độ tắt tiếng chũm chọe
@@ -7109,6 +7240,7 @@
 +	First	Đầu tiên
 +	First commit	Lần ghi nhận đầu tiên
 +	Flanger	Hiệu ứng lướt âm
++	Flatten Performance	Ghi cố định phần trình diễn
 +	Flatten Performance...	Ghi cố định phần trình diễn...
 +	Folder Lines	Đường thư mục
 +	Format	Định dạng
@@ -7168,13 +7300,14 @@
 +	Home	Trang chủ
 +	Hz	Hz
 +	I / O	I / O
-+	I A-E	I A-E
-+	I F-J	I F-J
++	I A-E	Chèn A-E
++	I F-J	Chèn F-J
 +	I/O	I/O
 +	I/O Setup	Thiết lập vào/ra
 +	I/O...	Vào/ra...
 +	INSERTS A-E	HIỆU ỨNG CHÈN A-E
 +	INSERTS F-J	HIỆU ỨNG CHÈN F-J
++	INST	NHẠC CỤ
 +	INSTRUMENT	NHẠC CỤ
 +	Identify Beat...	Xác định phách...
 +	Identify Beat: selection is	Xác định phách: vùng chọn là
@@ -7191,6 +7324,7 @@
 +	Input device	Thiết bị đầu vào
 +	Input monitoring	Giám sát đầu vào
 +	Insert Silence	Chèn khoảng lặng
++	Insert Time	Chèn thời gian
 +	Insert Time...	Chèn thời gian...
 +@msg	Insert {}	Hiệu ứng chèn {}
 +	Insertion Follows Playback	Điểm chèn theo vị trí phát
@@ -7365,6 +7499,7 @@
 +	Move Edit Selection To Marker Lane Above	Chuyển vùng chỉnh sửa đến làn dấu mốc phía trên
 +	Move Edit Selection To Marker Lane Below	Chuyển vùng chỉnh sửa đến làn dấu mốc phía dưới
 +	Move Selection to...	Chuyển vùng chọn đến...
++	Move Song Start	Dời điểm bắt đầu bài
 +	Move Song Start...	Dời điểm bắt đầu bài...
 +	Move to Folder	Chuyển vào thư mục
 +	Move to New Folder...	Chuyển vào thư mục mới...
@@ -7459,6 +7594,7 @@
 +@msg	Panel layout could not be restored: {error}	Không thể khôi phục bố cục bảng: {error}
 +@msg	Panel move was not applied: {error}	Không thể di chuyển bảng: {error}
 +@msg	Panel windows could not be arranged: {error}	Không thể sắp xếp cửa sổ bảng: {error}
++	Parabolic	Parabol
 +	Parabolic...	Parabol...
 +	Parent folder	Thư mục cha
 +	Paste	Dán
@@ -7582,6 +7718,7 @@
 +	Reset Panel Layout	Đặt lại bố cục bảng
 +	Resonance	Cộng hưởng
 +	Restore Last Selection	Khôi phục vùng chọn trước
++	Restore Performance	Khôi phục phần trình diễn
 +	Restore Performance...	Khôi phục phần trình diễn...
 +	Retrospective Record	Thu hồi tố
 +	Return to Zero (Home)	Về đầu (Home)
@@ -7608,8 +7745,8 @@
 +	Ruler Lines	Đường thước
 +	Rulers	Thước
 +	Rw	Rw
-+	S A-E	S A-E
-+	S F-J	S F-J
++	S A-E	Gửi A-E
++	S F-J	Gửi F-J
 +	S-Curve	Đường cong chữ S
 +	S-Curve...	Đường cong chữ S...
 +	SC HPF	Lọc thông cao chuỗi bên
@@ -7639,6 +7776,7 @@
 +@msg	Save changes to “{name}” before closing?	Lưu thay đổi của “{name}” trước khi đóng?
 +@msg	Saved preset {clean}	Đã lưu thiết lập {clean}
 +	Saw	Răng cưa
++	Scale	Tỷ lệ
 +	Scale...	Tỷ lệ...
 +	Scan CLAP	Quét CLAP
 +	Scan VST3	Quét VST3
@@ -7771,6 +7909,7 @@
 +	Stop recording first	Hãy dừng thu âm trước
 +	Store Plugin State	Lưu trạng thái trình cắm
 +	Strength %	Cường độ %
++	Stretch	Co giãn
 +	Stretch...	Co giãn...
 +	Strip	Cắt khoảng lặng
 +	Strip Silence	Loại bỏ khoảng lặng
@@ -7989,8 +8128,11 @@
 +	`section` required	Cần có `section`
 +	a clip on the timeline, which is removed too.	một đoạn trên dòng thời gian, đoạn này cũng sẽ bị xóa.
 +	active	đang hoạt động
++	audio	âm thanh
 +	audio on	âm thanh bật
++@msg	auto {mode}	tự động: {mode}
 +@msg	auto {}	tự động {}
++	aux	phụ
 +@msg	bad ui state: {e}	trạng thái giao diện không hợp lệ: {e}
 +	bar(s)	ô nhịp
 +	before must be a panel ID or null	before phải là mã bảng hoặc null
@@ -8001,6 +8143,7 @@
 +	change velocity	đổi lực nhấn
 +	clip	đoạn
 +	clip_gain	độ khuếch đại đoạn
++	comments	ghi chú
 +	custom	tùy chỉnh
 +	default buffer	bộ đệm mặc định
 +	dyn	động
@@ -8010,21 +8153,25 @@
 +	file	tệp
 +	fit to window	vừa cửa sổ
 +	flatten performance	ghi cố định phần trình diễn
++	folder	thư mục
 +	front	phía trước
 +	height is required	cần có chiều cao
 +	height must be finite and bounded	chiều cao phải hữu hạn và trong giới hạn
 +	in	vào
 +@msg	insert {} {param}	hiệu ứng chèn {} {param}
 +	insertion point moved	đã di chuyển điểm chèn
++	inst	nhạc cụ
 +	jumbo	rất lớn
 +	large	lớn
 +	latch	giữ
 +	less than a minute ago	chưa đầy một phút trước
++	master	tổng
 +	media offline	phương tiện ngoại tuyến
 +@msg	media offline: {e}	phương tiện ngoại tuyến: {e}
 +	medium	vừa
 +@msg	menu item `{path}` is not implemented yet	mục menu `{path}` chưa được triển khai
 +	micro	siêu nhỏ
++	midi	MIDI
 +	mini	rất nhỏ
 +	missing	không tìm thấy
 +	modified	đã sửa
@@ -8043,6 +8190,7 @@
 +	no insert	không có hiệu ứng chèn
 +	no instrument	không có nhạc cụ
 +	no output	không có đầu ra
++	nogrp	không nhóm
 +	none	không có
 +	notes	nốt nhạc
 +	off	tắt
@@ -8074,6 +8222,7 @@
 +	size is required	cần có size
 +	small	nhỏ
 +	start bpm 	bpm đầu 
++	t/l	chạm/giữ
 +	target is required	cần có target
 +	the audio engine hit an internal error (see the log)	bộ máy âm thanh gặp lỗi nội bộ (xem nhật ký)
 +@msg	the clip "{name}"	đoạn "{name}"
@@ -8086,6 +8235,8 @@
 +@msg	unknown theme `{mode}` (system, light or dark)	chủ đề `{mode}` không xác định (system, light hoặc dark)
 +	unsaved changes	thay đổi chưa lưu
 +	unsaved changes and an unfinished recording	thay đổi chưa lưu và bản thu chưa hoàn tất
++	vca	VCA
++	video	video
 +	volume	âm lượng
 +	waveform	dạng sóng
 +	write	ghi
@@ -8147,7 +8298,7 @@
 +	🔍 Find clips	🔍 Tìm đoạn
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-CN.tsv
-@@ -0,0 +1,1509 @@
+@@ -0,0 +1,1533 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 “{name}”正由 {users} 使用
 +	 (alternate playlist)	（备用播放列表）
@@ -8370,9 +8521,11 @@
 +	Center Playhead	播放头居中
 +	Change Duration...	更改持续时间...
 +	Change Edit to Match Timeline	将编辑范围设为时间轴范围
++	Change Meter	更改拍号
 +	Change Meter...	更改拍号...
 +	Change Timeline to Match Edit	将时间轴范围设为编辑范围
 +	Change Track Width	更改轨道宽度
++	Change Velocity	更改力度
 +	Change Velocity...	更改力度...
 +	Channel Name	声道名称
 +	Channel Strip	通道条
@@ -8460,6 +8613,7 @@
 +	Configurations	配置
 +	Conform to Tempo	匹配速度
 +	Consolidate	整合
++	Constant	固定
 +	Constant...	固定...
 +	Continuous	连续
 +	Contributors	贡献者
@@ -8492,6 +8646,7 @@
 +	Curve	曲线
 +	Cut	剪切
 +	Cut Special	特殊剪切
++	Cut Time	剪切时间
 +	Cut Time...	剪切时间...
 +	Cutoff	截止频率
 +	Cymbal Decay	钹声衰减
@@ -8621,6 +8776,7 @@
 +	First	第一个
 +	First commit	首次提交
 +	Flanger	镶边效果
++	Flatten Performance	拼合演奏
 +	Flatten Performance...	拼合演奏...
 +	Folder Lines	文件夹线条
 +	Format	格式
@@ -8680,13 +8836,14 @@
 +	Home	主页
 +	Hz	Hz
 +	I / O	I / O
-+	I A-E	I A-E
-+	I F-J	I F-J
++	I A-E	插入 A-E
++	I F-J	插入 F-J
 +	I/O	I/O
 +	I/O Setup	输入／输出设置
 +	I/O...	输入／输出...
 +	INSERTS A-E	插入效果 A-E
 +	INSERTS F-J	插入效果 F-J
++	INST	乐器
 +	INSTRUMENT	乐器
 +	Identify Beat...	识别节拍...
 +	Identify Beat: selection is	识别节拍：选区为
@@ -8703,6 +8860,7 @@
 +	Input device	输入设备
 +	Input monitoring	输入监听
 +	Insert Silence	插入静音
++	Insert Time	插入时间
 +	Insert Time...	插入时间...
 +@msg	Insert {}	插入效果 {}
 +	Insertion Follows Playback	插入点跟随播放
@@ -8877,6 +9035,7 @@
 +	Move Edit Selection To Marker Lane Above	将编辑选区移到上方标记轨
 +	Move Edit Selection To Marker Lane Below	将编辑选区移到下方标记轨
 +	Move Selection to...	移动选区到...
++	Move Song Start	移动歌曲起点
 +	Move Song Start...	移动歌曲起点...
 +	Move to Folder	移到文件夹
 +	Move to New Folder...	移到新文件夹...
@@ -8971,6 +9130,7 @@
 +@msg	Panel layout could not be restored: {error}	无法恢复面板布局：{error}
 +@msg	Panel move was not applied: {error}	无法应用面板移动：{error}
 +@msg	Panel windows could not be arranged: {error}	无法排列面板窗口：{error}
++	Parabolic	抛物线
 +	Parabolic...	抛物线...
 +	Parent folder	上级文件夹
 +	Paste	粘贴
@@ -9094,6 +9254,7 @@
 +	Reset Panel Layout	重置面板布局
 +	Resonance	共振
 +	Restore Last Selection	恢复上次选区
++	Restore Performance	恢复演奏
 +	Restore Performance...	恢复演奏...
 +	Retrospective Record	回溯录音
 +	Return to Zero (Home)	回到起点（Home）
@@ -9120,8 +9281,8 @@
 +	Ruler Lines	标尺线
 +	Rulers	标尺
 +	Rw	Rw
-+	S A-E	S A-E
-+	S F-J	S F-J
++	S A-E	发送 A-E
++	S F-J	发送 F-J
 +	S-Curve	S 形曲线
 +	S-Curve...	S 形曲线...
 +	SC HPF	侧链高通滤波器
@@ -9151,6 +9312,7 @@
 +@msg	Save changes to “{name}” before closing?	关闭前要保存“{name}”的更改吗？
 +@msg	Saved preset {clean}	已保存预设 {clean}
 +	Saw	锯齿波
++	Scale	缩放
 +	Scale...	缩放...
 +	Scan CLAP	扫描 CLAP
 +	Scan VST3	扫描 VST3
@@ -9283,6 +9445,7 @@
 +	Stop recording first	请先停止录音
 +	Store Plugin State	保存插件状态
 +	Strength %	强度 %
++	Stretch	伸缩
 +	Stretch...	伸缩...
 +	Strip	移除静音
 +	Strip Silence	移除静音
@@ -9501,8 +9664,11 @@
 +	`section` required	必须提供 `section`
 +	a clip on the timeline, which is removed too.	时间轴上的片段也会一并移除。
 +	active	活动
++	audio	音频
 +	audio on	音频开启
++@msg	auto {mode}	自动{mode}
 +@msg	auto {}	自动 {}
++	aux	辅助
 +@msg	bad ui state: {e}	无效的界面状态：{e}
 +	bar(s)	小节
 +	before must be a panel ID or null	before 必须为面板 ID 或 null
@@ -9513,6 +9679,7 @@
 +	change velocity	更改力度
 +	clip	片段
 +	clip_gain	片段增益
++	comments	注释
 +	custom	自定义
 +	default buffer	默认缓冲区
 +	dyn	动态
@@ -9522,21 +9689,25 @@
 +	file	文件
 +	fit to window	适合窗口
 +	flatten performance	拼合演奏
++	folder	文件夹
 +	front	前方
 +	height is required	必须提供高度
 +	height must be finite and bounded	高度必须为有限值且在范围内
 +	in	输入
 +@msg	insert {} {param}	插入效果 {} {param}
 +	insertion point moved	已移动插入点
++	inst	乐器
 +	jumbo	超大
 +	large	大
 +	latch	锁存
 +	less than a minute ago	不到一分钟前
++	master	主控
 +	media offline	媒体离线
 +@msg	media offline: {e}	媒体离线：{e}
 +	medium	中
 +@msg	menu item `{path}` is not implemented yet	菜单项 `{path}` 尚未实现
 +	micro	极小
++	midi	MIDI
 +	mini	超小
 +	missing	缺失
 +	modified	已修改
@@ -9555,6 +9726,7 @@
 +	no insert	没有插入效果
 +	no instrument	没有乐器
 +	no output	没有输出
++	nogrp	无编组
 +	none	无
 +	notes	音符
 +	off	关闭
@@ -9586,6 +9758,7 @@
 +	size is required	必须提供 size
 +	small	小
 +	start bpm 	开始 bpm 
++	t/l	触控／锁存
 +	target is required	必须提供 target
 +	the audio engine hit an internal error (see the log)	音频引擎发生内部错误（请查看日志）
 +@msg	the clip "{name}"	片段“{name}”
@@ -9598,6 +9771,8 @@
 +@msg	unknown theme `{mode}` (system, light or dark)	未知主题 `{mode}`（system、light 或 dark）
 +	unsaved changes	未保存的更改
 +	unsaved changes and an unfinished recording	未保存的更改和未完成的录音
++	vca	VCA
++	video	视频
 +	volume	音量
 +	waveform	波形
 +	write	写入
@@ -9659,7 +9834,7 @@
 +	🔍 Find clips	🔍 查找片段
 --- /dev/null
 +++ b/crates/ui-egui/src/i18n/zh-TW.tsv
-@@ -0,0 +1,1509 @@
+@@ -0,0 +1,1533 @@
 +# KIO source-keyed candidate catalog. Missing entries are NOT counted as translated.
 +@msg	 "{name}" is used by {users}	 「{name}」正由 {users} 使用
 +	 (alternate playlist)	（替代播放清單）
@@ -9882,9 +10057,11 @@
 +	Center Playhead	播放頭置中
 +	Change Duration...	變更持續時間...
 +	Change Edit to Match Timeline	將編輯範圍設為時間軸範圍
++	Change Meter	變更拍號
 +	Change Meter...	變更拍號...
 +	Change Timeline to Match Edit	將時間軸範圍設為編輯範圍
 +	Change Track Width	變更軌道寬度
++	Change Velocity	變更力度
 +	Change Velocity...	變更力度...
 +	Channel Name	聲道名稱
 +	Channel Strip	通道條
@@ -9972,6 +10149,7 @@
 +	Configurations	配置
 +	Conform to Tempo	符合速度
 +	Consolidate	整合
++	Constant	固定
 +	Constant...	固定...
 +	Continuous	連續
 +	Contributors	貢獻者
@@ -10004,6 +10182,7 @@
 +	Curve	曲線
 +	Cut	剪下
 +	Cut Special	特殊剪下
++	Cut Time	剪下時間
 +	Cut Time...	剪下時間...
 +	Cutoff	截止頻率
 +	Cymbal Decay	鈸聲衰減
@@ -10133,6 +10312,7 @@
 +	First	第一個
 +	First commit	首次提交
 +	Flanger	鑲邊效果
++	Flatten Performance	平面化演奏
 +	Flatten Performance...	平面化演奏...
 +	Folder Lines	資料夾線條
 +	Format	格式
@@ -10192,13 +10372,14 @@
 +	Home	首頁
 +	Hz	Hz
 +	I / O	I / O
-+	I A-E	I A-E
-+	I F-J	I F-J
++	I A-E	插入 A-E
++	I F-J	插入 F-J
 +	I/O	I/O
 +	I/O Setup	輸入／輸出設定
 +	I/O...	輸入／輸出...
 +	INSERTS A-E	插入效果 A-E
 +	INSERTS F-J	插入效果 F-J
++	INST	樂器
 +	INSTRUMENT	樂器
 +	Identify Beat...	識別節拍...
 +	Identify Beat: selection is	識別節拍：選取範圍為
@@ -10215,6 +10396,7 @@
 +	Input device	輸入裝置
 +	Input monitoring	輸入監聽
 +	Insert Silence	插入靜音
++	Insert Time	插入時間
 +	Insert Time...	插入時間...
 +@msg	Insert {}	插入效果 {}
 +	Insertion Follows Playback	插入點跟隨播放
@@ -10389,6 +10571,7 @@
 +	Move Edit Selection To Marker Lane Above	將編輯選取範圍移至上方標記軌
 +	Move Edit Selection To Marker Lane Below	將編輯選取範圍移至下方標記軌
 +	Move Selection to...	移動選取範圍至...
++	Move Song Start	移動歌曲起點
 +	Move Song Start...	移動歌曲起點...
 +	Move to Folder	移至資料夾
 +	Move to New Folder...	移至新資料夾...
@@ -10483,6 +10666,7 @@
 +@msg	Panel layout could not be restored: {error}	無法還原面板配置：{error}
 +@msg	Panel move was not applied: {error}	無法套用面板移動：{error}
 +@msg	Panel windows could not be arranged: {error}	無法排列面板視窗：{error}
++	Parabolic	拋物線
 +	Parabolic...	拋物線...
 +	Parent folder	上層資料夾
 +	Paste	貼上
@@ -10606,6 +10790,7 @@
 +	Reset Panel Layout	重設面板配置
 +	Resonance	共振
 +	Restore Last Selection	還原上次選取範圍
++	Restore Performance	還原演奏
 +	Restore Performance...	還原演奏...
 +	Retrospective Record	回溯錄音
 +	Return to Zero (Home)	回到起點（Home）
@@ -10632,8 +10817,8 @@
 +	Ruler Lines	尺規線
 +	Rulers	尺規
 +	Rw	Rw
-+	S A-E	S A-E
-+	S F-J	S F-J
++	S A-E	傳送 A-E
++	S F-J	傳送 F-J
 +	S-Curve	S 型曲線
 +	S-Curve...	S 型曲線...
 +	SC HPF	側鏈高通濾波器
@@ -10663,6 +10848,7 @@
 +@msg	Save changes to “{name}” before closing?	關閉前要儲存「{name}」的變更嗎？
 +@msg	Saved preset {clean}	已儲存預設集 {clean}
 +	Saw	鋸齒波
++	Scale	縮放
 +	Scale...	縮放...
 +	Scan CLAP	掃描 CLAP
 +	Scan VST3	掃描 VST3
@@ -10795,6 +10981,7 @@
 +	Stop recording first	請先停止錄音
 +	Store Plugin State	儲存外掛狀態
 +	Strength %	強度 %
++	Stretch	伸縮
 +	Stretch...	伸縮...
 +	Strip	移除靜音
 +	Strip Silence	移除靜音
@@ -11013,8 +11200,11 @@
 +	`section` required	必須提供 `section`
 +	a clip on the timeline, which is removed too.	時間軸上的片段也會一併移除。
 +	active	作用中
++	audio	音訊
 +	audio on	音訊開啟
++@msg	auto {mode}	自動{mode}
 +@msg	auto {}	自動 {}
++	aux	輔助
 +@msg	bad ui state: {e}	無效的介面狀態：{e}
 +	bar(s)	小節
 +	before must be a panel ID or null	before 必須為面板 ID 或 null
@@ -11025,6 +11215,7 @@
 +	change velocity	變更力度
 +	clip	片段
 +	clip_gain	片段增益
++	comments	註解
 +	custom	自訂
 +	default buffer	預設緩衝區
 +	dyn	動態
@@ -11034,21 +11225,25 @@
 +	file	檔案
 +	fit to window	符合視窗
 +	flatten performance	平面化演奏
++	folder	資料夾
 +	front	前方
 +	height is required	必須提供高度
 +	height must be finite and bounded	高度必須為有限值且在範圍內
 +	in	輸入
 +@msg	insert {} {param}	插入效果 {} {param}
 +	insertion point moved	已移動插入點
++	inst	樂器
 +	jumbo	超大
 +	large	大
 +	latch	鎖存
 +	less than a minute ago	不到一分鐘前
++	master	主控
 +	media offline	媒體離線
 +@msg	media offline: {e}	媒體離線：{e}
 +	medium	中
 +@msg	menu item `{path}` is not implemented yet	選單項目 `{path}` 尚未實作
 +	micro	極小
++	midi	MIDI
 +	mini	超小
 +	missing	遺失
 +	modified	已修改
@@ -11067,6 +11262,7 @@
 +	no insert	沒有插入效果
 +	no instrument	沒有樂器
 +	no output	沒有輸出
++	nogrp	無群組
 +	none	無
 +	notes	音符
 +	off	關閉
@@ -11098,6 +11294,7 @@
 +	size is required	必須提供 size
 +	small	小
 +	start bpm 	開始 bpm 
++	t/l	觸控／鎖存
 +	target is required	必須提供 target
 +	the audio engine hit an internal error (see the log)	音訊引擎發生內部錯誤（請查看記錄）
 +@msg	the clip "{name}"	片段「{name}」
@@ -11110,6 +11307,8 @@
 +@msg	unknown theme `{mode}` (system, light or dark)	未知主題 `{mode}`（system、light 或 dark）
 +	unsaved changes	未儲存的變更
 +	unsaved changes and an unfinished recording	未儲存的變更與尚未完成的錄音
++	vca	VCA
++	video	影片
 +	volume	音量
 +	waveform	波形
 +	write	寫入
@@ -11417,6 +11616,36 @@
          let x = x_of(n.start);
 --- a/crates/ui-egui/src/mix_window.rs
 +++ b/crates/ui-egui/src/mix_window.rs
+@@ -123,24 +123,24 @@
+     let p = ui.painter();
+     let color = Tokens::current().section_label;
+     let text = if narrow { short_label(text) } else { text };
+-    let mut galley = p.layout_no_wrap(text.to_owned(), bold(10.0), color);
++    let mut galley = p.layout_no_wrap(crate::i18n::t(text), bold(10.0), color);
+     if galley.size().x > r.width() - 8.0 {
+-        galley = p.layout_no_wrap(short_label(text).to_owned(), bold(10.0), color);
++        galley = p.layout_no_wrap(crate::i18n::t(short_label(text)), bold(10.0), color);
+     }
+     p.galley(Align2::CENTER_CENTER.anchor_size(pos2(r.center().x, r.min.y + 7.0), galley.size()).min, galley, color);
+ }
+ 
+ pub(crate) fn route_name(app: &SoundApp, r: &Route) -> String {
+     match r {
+-        Route::None => "no output".into(),
+-        Route::Main => app.engine.session().outputs.first().map_or_else(|| "Out 1-2".into(), |o| o.name.clone()),
++        Route::None => crate::i18n::t("no output"),
++        Route::Main => app.engine.session().outputs.first().map_or_else(|| crate::i18n::t("Out 1-2"), |o| o.name.clone()),
+         Route::Bus(b) => app.engine.session().bus(*b).map_or_else(|| "bus?".into(), |b| b.name.clone()),
+         Route::Hardware(h) => h.clone(),
+     }
+ }
+ 
+ pub(crate) fn input_name(app: &SoundApp, track: &Track) -> String {
+-    if track.kind.has_playlist() && track.mixer.input == Route::None { "In 1".to_string() } else { route_name(app, &track.mixer.input) }
++    if track.kind.has_playlist() && track.mixer.input == Route::None { crate::i18n::t("In 1") } else { route_name(app, &track.mixer.input) }
+ }
+ 
+ /// The input or output menu under `resp`. It closes only on a click outside, so its bus search
 @@ -179,7 +179,8 @@
              let kr = Rect::from_min_size(pos2(x0 + 6.0, sec.min.y + 15.0), vec2(inner_w - 12.0, 16.0));
              let mut db = track.mixer.trim_db;
@@ -11471,8 +11700,23 @@
          let mut c = ui.new_child(egui::UiBuilder::new().max_rect(am_r));
          let mode = track.mixer.automation_mode;
          let col = if mode == soundcraft_model::AutomationMode::Read {
-@@ -315,7 +322,7 @@
-         let resp = selector_box_with_tooltip(&mut c, am_r.width(), am_r.height(), label, col, &full_label);
+@@ -304,7 +311,8 @@
+         } else {
+             t.auto_write
+         };
+-        let full_label = format!("auto {}", mode.label());
++        let mode_label = crate::i18n::t(mode.label());
++        let full_label = crate::i18n::message("auto {mode}", &[("mode", &mode_label)]);
+         let label = if mode == soundcraft_model::AutomationMode::TouchLatch {
+             if narrow { "t/l" } else { mode.label() }
+         } else if narrow {
+@@ -312,10 +320,11 @@
+         } else {
+             &full_label
+         };
+-        let resp = selector_box_with_tooltip(&mut c, am_r.width(), am_r.height(), label, col, &full_label);
++        let label = crate::i18n::t(label);
++        let resp = selector_box_with_tooltip(&mut c, am_r.width(), am_r.height(), &label, col, &full_label);
          egui::Popup::menu(&resp).show(|ui| {
              for m in soundcraft_model::AutomationMode::ALL {
 -                if ui.selectable_label(m == mode, m.label()).clicked() {
@@ -11480,7 +11724,16 @@
                      let _ = app.run("mix.automation_mode", json!({"track": id.0, "mode": m.label()}));
                  }
              }
-@@ -437,7 +444,13 @@
+@@ -324,7 +333,7 @@
+     }
+     // Group selector.
+     let no_group = if narrow { "nogrp" } else { "no group" };
+-    let gname = app.engine.session().groups.iter().find(|g| g.members.contains(&id)).map_or(no_group.to_string(), |g| g.name.clone());
++    let gname = app.engine.session().groups.iter().find(|g| g.members.contains(&id)).map_or_else(|| crate::i18n::t(no_group), |g| g.name.clone());
+     let gr = Rect::from_min_size(pos2(x0 + 2.0, y), vec2(inner_w - 4.0, 16.0));
+     let mut c = ui.new_child(egui::UiBuilder::new().max_rect(gr));
+     let _ = selector_box(&mut c, gr.width(), gr.height(), &gname, t.text_dim);
+@@ -437,7 +446,13 @@
          meter(ui, mr, md.level[0], md.hold[0], md.clip);
      }
      if md.gr > 0.1 {
@@ -11495,7 +11748,16 @@
      }
      // Volume readout and name.
      let vr = Rect::from_min_size(pos2(x0 + 4.0, r.max.y - bottom_h + 4.0), vec2(inner_w - 8.0, 15.0));
-@@ -499,14 +512,15 @@
+@@ -464,7 +479,7 @@
+         TrackKind::Folder => "folder",
+         TrackKind::Video => "video",
+     };
+-    ui.painter().text(pos2(vr.center().x, vr.max.y + 9.0), Align2::CENTER_CENTER, kind, regular(9.5), t.text_dim);
++    ui.painter().text(pos2(vr.center().x, vr.max.y + 9.0), Align2::CENTER_CENTER, crate::i18n::t(kind), regular(9.5), t.text_dim);
+     let nr = Rect::from_min_size(pos2(x0, r.max.y - 26.0), vec2(inner_w, 18.0));
+     ui.painter().rect(
+         nr,
+@@ -499,14 +514,15 @@
      let resp = ui.interact(r, ui.id().with(("instrument", id.0)), Sense::click());
      resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, "Instrument"));
      match info {
@@ -11513,7 +11775,7 @@
      let popup = if hosted { egui::Popup::context_menu(&menu_resp) } else { egui::Popup::menu(&menu_resp) };
      let popup = popup.close_behavior(egui::PopupCloseBehavior::CloseOnClickOutside);
      popup.show(|ui| instrument_menu(app, ui, id));
-@@ -590,13 +604,13 @@
+@@ -590,13 +606,13 @@
      let resp = ui.interact(r, ui.id().with(("ins", id.0, slot)), Sense::click());
      resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, format!("Insert {}", (b'A' + slot as u8) as char)));
      let info = ins.as_ref().and_then(|i| plugin_info(&i.plugin));
@@ -11529,7 +11791,7 @@
          }
      }
      if resp.clicked() && ins.is_some() {
-@@ -608,7 +622,7 @@
+@@ -608,7 +624,7 @@
      }
      let cmd = if ui.ctx().os().is_mac() { "⌘" } else { "Ctrl+" };
      let tip = format!("{name}: click to open · {cmd}click to bypass · right-click to change");
@@ -11538,7 +11800,7 @@
      let popup = if ins.is_none() { egui::Popup::menu(&menu_resp) } else { egui::Popup::context_menu(&menu_resp) };
      let popup = popup.close_behavior(egui::PopupCloseBehavior::CloseOnClickOutside);
      popup.show(|ui| plugin_menu(app, ui, id, slot, ins.is_some()));
-@@ -625,10 +639,10 @@
+@@ -625,10 +641,10 @@
          return;
      }
      if occupied {
@@ -11551,7 +11813,7 @@
              run_pick(app, ui, "mix.insert_remove", json!({"track": id.0, "slot": slot}));
          }
          ui.separator();
-@@ -640,9 +654,9 @@
+@@ -640,9 +656,9 @@
          }
      }
      for c in cats {
@@ -11563,7 +11825,7 @@
                      run_pick(app, ui, "mix.insert", json!({"track": id.0, "slot": slot, "plugin": p.id}));
                  }
              }
-@@ -667,8 +681,9 @@
+@@ -667,8 +683,9 @@
      }
      let current = app.engine.session().track(id).and_then(|t| t.instrument.clone());
      if let Some(info) = current.as_ref().and_then(|i| plugin_info(&i.plugin)) {
@@ -11575,7 +11837,7 @@
              if !app.ui.plugin_windows.contains(&(id, slot)) {
                  app.ui.plugin_windows.push((id, slot));
              }
-@@ -678,11 +693,11 @@
+@@ -678,11 +695,11 @@
              && p.has_editor(id, slot)
          {
              if p.editor_open(id, slot) {
@@ -11589,7 +11851,7 @@
                  if let Err(e) = p.open_editor(id, slot) {
                      app.ui.status = format!("{}: {e}", info.name);
                  }
-@@ -692,9 +707,9 @@
+@@ -692,9 +709,9 @@
          ui.separator();
      }
      let mut picked = None;
@@ -11601,7 +11863,7 @@
                  picked = Some(p.id.to_string());
              }
          }
-@@ -737,7 +752,7 @@
+@@ -737,7 +754,7 @@
      hosted.sort_by_cached_key(|(p, format)| (p.name.to_lowercase(), *format));
      let n = built_in.len() + hosted.len();
      let picked = search.rows(ui, n, 320.0, |ui, i, highlighted| match built_in.get(i) {
@@ -11610,7 +11872,7 @@
          None => {
              let (p, format) = &hosted[i - built_in.len()];
              let label = if p.vendor.is_empty() { format!("{} ({format})", p.name) } else { format!("{} — {} ({format})", p.name, p.vendor) };
-@@ -745,15 +760,15 @@
+@@ -745,15 +762,15 @@
          }
      });
      if n == 0 {
@@ -11629,7 +11891,7 @@
                  soundcraft_vst3_host::scan();
              }
          });
-@@ -777,7 +792,7 @@
+@@ -777,7 +794,7 @@
          let kept = ui.data(|d| d.get_temp::<(String, usize, u64)>(id)).filter(|s| s.2 + 1 >= pass);
          let opened = kept.is_none();
          let (mut text, mut highlight, _) = kept.unwrap_or_default();
@@ -11638,7 +11900,7 @@
          if opened {
              field.request_focus();
          }
-@@ -845,20 +860,20 @@
+@@ -845,20 +862,20 @@
  /// id picked. Each format is scanned the first time its submenu opens, then cached by its host.
  fn hosted_menus(ui: &mut Ui, instruments: bool) -> Option<String> {
      let mut picked = None;
@@ -11662,7 +11924,7 @@
              let list = soundcraft_au_host::scan().into_iter().filter(|d| d.is_instrument == instruments);
              if let Some(p) = vendor_menus(ui, list.map(|d| MenuPlugin { id: d.id, name: d.name, vendor: d.vendor }).collect(), "No Audio Units found")
              {
-@@ -883,7 +898,7 @@
+@@ -883,7 +900,7 @@
      let mut picked = None;
      egui::ScrollArea::vertical().id_salt("vendors").max_height(max_h).show(ui, |ui| {
          for v in vendors {
@@ -11671,7 +11933,7 @@
                  egui::ScrollArea::vertical().id_salt("plugins").max_height(max_h).show(ui, |ui| {
                      for p in list.iter().filter(|p| p.vendor == v) {
                          if ui.button(&p.name).clicked() {
-@@ -946,10 +961,10 @@
+@@ -946,10 +963,10 @@
                  let _ =
                      app.engine.execute_merged("mix.send_level", &json!({"track": id.0, "slot": slot, "db": db}), &format!("send:{}:{slot}", id.0));
              }
@@ -11684,7 +11946,7 @@
              level_resp.context_menu(|ui| send_options_menu(app, ui, id, slot, s));
          }
          None => empty_slot(ui.painter(), r, ui.rect_contains_pointer(r), mark),
-@@ -963,10 +978,10 @@
+@@ -963,10 +980,10 @@
                      ui.label(egui::RichText::new(route_name(app, &send.target)).color(Tokens::current().counter_text));
                  });
              });
@@ -11697,7 +11959,7 @@
                  let _ = app.run("mix.send_remove", json!({"track": id.0, "slot": slot}));
                  ui.close();
              }
-@@ -1003,7 +1018,7 @@
+@@ -1003,7 +1020,7 @@
      };
      let t = Tokens::current();
      let mut open = true;
@@ -11706,7 +11968,7 @@
          .id(egui::Id::new("send_window"))
          .open(&mut open)
          .auto_sized()
-@@ -1061,26 +1076,26 @@
+@@ -1061,26 +1078,26 @@
      ui.set_min_width(230.0);
      ui.strong(format!("Send {} · {}", (b'A' + slot as u8) as char, route_name(app, &send.target)));
      let mut db = send.level_db.max(-60.0);
@@ -11738,7 +12000,7 @@
          let _ = app.engine.execute_merged("mix.send_level", &json!({"track": id.0, "slot": slot, "pan": pan}), &format!("send-pan:{}:{slot}", id.0));
      }
      ui.horizontal(|ui| {
-@@ -1096,7 +1111,7 @@
+@@ -1096,7 +1113,7 @@
      if let Route::Bus(bus) = send.target
          && let Some(aux) =
              app.engine.session().tracks.iter().find(|t| t.kind == TrackKind::Aux && t.mixer.input == Route::Bus(bus)).map(|t| (t.id, t.name.clone()))
@@ -11747,7 +12009,7 @@
      {
          app.dialogs.open_rename_track(aux.0, &aux.1);
          ui.close();
-@@ -1216,7 +1231,7 @@
+@@ -1216,7 +1233,7 @@
              Align2::CENTER_TOP
          };
          let label = if mark > 0.0 { format!("+{mark:.0}") } else { format!("{mark:.0}") };
@@ -11756,7 +12018,7 @@
      }
      let x = r.min.x + r.width() * soundcraft_model::fader_db_to_pos(db);
      ui.painter().line_segment([pos2(x, r.min.y), pos2(x, line_y + 3.0)], Stroke::new(2.0, t.counter_text));
-@@ -1235,7 +1250,7 @@
+@@ -1235,7 +1252,7 @@
          ui.close();
      }
      ui.separator();
@@ -11765,7 +12027,7 @@
          let mut n = busses.len() + 1;
          while busses.iter().any(|bus| bus.name == format!("Bus {n}")) || app.engine.session().track_by_name(&format!("Bus {n}")).is_some() {
              n += 1;
-@@ -1248,7 +1263,7 @@
+@@ -1248,7 +1265,7 @@
  fn route_menu(app: &mut SoundApp, ui: &mut Ui, id: TrackId, input: bool) {
      let key = if input { "input" } else { "output" };
      let cmd = if input { "track.input" } else { "track.output" };
@@ -11774,7 +12036,7 @@
          let _ = app.run(cmd, json!({"track": id.0, key: "none"}));
          ui.close();
      }
-@@ -1259,7 +1274,7 @@
+@@ -1259,7 +1276,7 @@
      }
      if input {
          for i in 1..=8 {
@@ -11783,7 +12045,7 @@
                  let _ = app.run(cmd, json!({"track": id.0, key: format!("In {i}")}));
                  ui.close();
              }
-@@ -1267,14 +1282,14 @@
+@@ -1267,14 +1284,14 @@
      }
      ui.separator();
      let busses: Vec<String> = app.engine.session().busses.iter().map(|b| b.name.clone()).collect();
@@ -11802,7 +12064,35 @@
              n += 1;
 --- a/crates/ui-egui/src/ops_windows.rs
 +++ b/crates/ui-egui/src/ops_windows.rs
-@@ -66,7 +66,11 @@
+@@ -5,6 +5,27 @@
+ use crate::theme::Tokens;
+ use egui::vec2;
+ use serde_json::{Value, json};
++
++fn operation_label(id: &str) -> String {
++    crate::i18n::t(match id {
++        "constant" => "Constant",
++        "linear" => "Linear",
++        "parabolic" => "Parabolic",
++        "s-curve" => "S-Curve",
++        "scale" => "Scale",
++        "stretch" => "Stretch",
++        "insert" => "Insert Time",
++        "cut" => "Cut Time",
++        "change meter" => "Change Meter",
++        "move song start" => "Move Song Start",
++        "quantize" => "Quantize",
++        "transpose" => "Transpose",
++        "change velocity" => "Change Velocity",
++        "flatten performance" => "Flatten Performance",
++        "restore performance" => "Restore Performance",
++        _ => id,
++    })
++}
+ 
+ #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
+ #[serde(default)]
+@@ -66,7 +87,11 @@
      match r {
          Ok(v) => {
              let s = v.to_string();
@@ -11815,7 +12105,7 @@
          }
          Err(e) => {
              ui.label(egui::RichText::new(e).small().color(Tokens::current().rec));
-@@ -87,39 +91,42 @@
+@@ -87,39 +112,42 @@
      if !open {
          return;
      }
@@ -11891,16 +12181,17 @@
      app.ui.show_beat_detective = open;
  }
  
-@@ -143,21 +150,20 @@
+@@ -143,21 +171,20 @@
      if !open {
          return;
      }
 -    egui::Window::new("Tempo Operations").open(&mut open).default_size(vec2(360.0, 200.0)).show(ctx, |ui| {
 -        egui::ComboBox::from_label("Curve").selected_text(app.ops.tempo_curve.clone()).show_ui(ui, |ui| {
 +    egui::Window::new( crate::i18n::t(&("Tempo Operations"))).id(egui::Id::new("Tempo Operations")).open(&mut open).default_size(vec2(360.0, 200.0)).show(ctx, |ui| {
-+        egui::ComboBox::from_label( crate::i18n::t(&("Curve"))).selected_text(app.ops.tempo_curve.clone()).show_ui(ui, |ui| {
++        egui::ComboBox::from_label( crate::i18n::t(&("Curve"))).selected_text(operation_label(&app.ops.tempo_curve)).show_ui(ui, |ui| {
              for c in ["constant", "linear", "parabolic", "s-curve", "scale", "stretch"] {
-                 ui.selectable_value(&mut app.ops.tempo_curve, c.to_string(), c);
+-                ui.selectable_value(&mut app.ops.tempo_curve, c.to_string(), c);
++                ui.selectable_value(&mut app.ops.tempo_curve, c.to_string(), operation_label(c));
              }
          });
 -        ui.add(egui::DragValue::new(&mut app.ops.tempo_start).range(5.0..=999.0).prefix("start bpm "));
@@ -11919,7 +12210,7 @@
              let (id, p) = tempo_ops_apply(&app.ops.tempo_curve, app.ops.tempo_start, app.ops.tempo_end);
              let r = app.run(id, p);
              result_line(ui, &r);
-@@ -171,88 +177,95 @@
+@@ -171,88 +198,95 @@
      if !open {
          return;
      }
@@ -11932,9 +12223,9 @@
 +        .open(&mut open)
 +        .default_size(vec2(360.0, 200.0))
 +        .show(ctx, |ui| {
-+            egui::ComboBox::from_label(crate::i18n::t(&("Operation"))).selected_text(app.ops.time_op.clone()).show_ui(ui, |ui| {
++            egui::ComboBox::from_label(crate::i18n::t(&("Operation"))).selected_text(operation_label(&app.ops.time_op)).show_ui(ui, |ui| {
 +                for c in ["insert", "cut", "change meter", "move song start"] {
-+                    ui.selectable_value(&mut app.ops.time_op, c.to_string(), c);
++                    ui.selectable_value(&mut app.ops.time_op, c.to_string(), operation_label(c));
 +                }
 +            });
 +            match app.ops.time_op.as_str() {
@@ -11988,9 +12279,9 @@
 +        .open(&mut open)
 +        .default_size(vec2(360.0, 220.0))
 +        .show(ctx, |ui| {
-+            egui::ComboBox::from_label(crate::i18n::t(&("Operation"))).selected_text(app.ops.midi_op.clone()).show_ui(ui, |ui| {
++            egui::ComboBox::from_label(crate::i18n::t(&("Operation"))).selected_text(operation_label(&app.ops.midi_op)).show_ui(ui, |ui| {
 +                for c in ["quantize", "transpose", "change velocity", "flatten performance", "restore performance"] {
-+                    ui.selectable_value(&mut app.ops.midi_op, c.to_string(), c);
++                    ui.selectable_value(&mut app.ops.midi_op, c.to_string(), operation_label(c));
 +                }
 +            });
 +            match app.ops.midi_op.as_str() {
@@ -12091,7 +12382,7 @@
      app.ui.show_midi_ops = open;
  }
  
-@@ -261,22 +274,22 @@
+@@ -261,22 +295,22 @@
      if !open {
          return;
      }
@@ -12532,7 +12823,7 @@
                      return;
                  }
                  if instrument && ins.plugin == crate::sampler_window::SAMPLER {
-@@ -503,7 +520,7 @@
+@@ -503,15 +520,15 @@
                      egui::Grid::new(("pg", tid.0, slot)).num_columns(3).show(ui, |ui| {
                          for p in info.params {
                              let v = ins.params.get(p.id).copied().unwrap_or(p.default);
@@ -12541,6 +12832,16 @@
                              let mut x = v;
                              let resp = if !p.choices.is_empty() {
                                  let mut idx = x.round().max(0.0) as usize;
+                                 let r = egui::ComboBox::from_id_salt(("pc", tid.0, slot, p.id))
+-                                    .selected_text(p.choices.get(idx).copied().unwrap_or("?"))
++                                    .selected_text(crate::i18n::t(p.choices.get(idx).copied().unwrap_or("?")))
+                                     .show_ui(ui, |ui| {
+                                         for (i, c) in p.choices.iter().enumerate() {
+-                                            ui.selectable_value(&mut idx, i, *c);
++                                            ui.selectable_value(&mut idx, i, crate::i18n::t(c));
+                                         }
+                                     });
+                                 x = idx as f32;
 @@ -545,7 +562,7 @@
                              }
                              let _ = resp;
@@ -13113,7 +13414,16 @@
                  let _ = app.run("edit.tool", json!({"tool": "smart"}));
              }
              ui.horizontal(|ui| {
-@@ -226,12 +232,12 @@
+@@ -222,16 +228,20 @@
+         (s.edit.main_counter, s.edit.sub_counter.unwrap_or(TimeFormat::Samples), s.edit.selection)
+     };
+     let pos = app.position();
+-    let (r, _) = ui.allocate_exact_size(vec2(318.0, 64.0), Sense::hover());
++    let st = crate::i18n::t(if app.engine.is_dirty() { "modified" } else { "saved" });
++    let dev = crate::i18n::t(app.player.as_ref().map_or("no audio engine", |p| if p.silent { "silent clock" } else { "audio on" }));
++    let status = format!("{st} · {dev}");
++    let status_width = ui.painter().layout_no_wrap(status.clone(), regular(10.0), t.text_dim).size().x;
++    let (r, _) = ui.allocate_exact_size(vec2(318.0 + (status_width - 146.0).max(0.0), 64.0), Sense::hover());
      ui.painter().rect(r, CornerRadius::same(4), t.counter_bg, Stroke::new(1.0, t.counter_border), StrokeKind::Inside);
      let main_r = Rect::from_min_max(r.min, pos2(r.min.x + 180.0, r.min.y + 44.0));
      let txt = fmt_pos(app, pos, main_fmt);
@@ -13128,7 +13438,7 @@
                  let _ = app.run("view.main_counter", json!({"format": f.id()}));
              }
          }
-@@ -245,16 +251,16 @@
+@@ -245,17 +255,15 @@
      ];
      for (i, (label, val)) in rows.iter().enumerate() {
          let y = r.min.y + 10.0 + i as f32 * 13.0;
@@ -13144,13 +13454,31 @@
      ui.painter().text(pos2(r.min.x + 150.0, y), Align2::RIGHT_CENTER, fmt_pos(app, pos, sub_fmt), mono(11.0), t.counter_text);
 -    let st = if app.engine.is_dirty() { "modified" } else { "saved" };
 -    let dev = app.player.as_ref().map_or("no audio engine", |p| if p.silent { "silent clock" } else { "audio on" });
-+    let st = crate::i18n::t(if app.engine.is_dirty() { "modified" } else { "saved" });
-+    let dev = crate::i18n::t(app.player.as_ref().map_or("no audio engine", |p| if p.silent { "silent clock" } else { "audio on" }));
-     ui.painter().text(pos2(r.max.x - 8.0, y), Align2::RIGHT_CENTER, format!("{st} · {dev}"), regular(10.0), t.text_dim);
+-    ui.painter().text(pos2(r.max.x - 8.0, y), Align2::RIGHT_CENTER, format!("{st} · {dev}"), regular(10.0), t.text_dim);
++    ui.painter().text(pos2(r.max.x - 8.0, y), Align2::RIGHT_CENTER, status, regular(10.0), t.text_dim);
  }
  
-@@ -269,17 +275,23 @@
-     let gl = Rect::from_min_size(pos2(r.min.x + 6.0, r.min.y + 8.0), vec2(48.0, 16.0));
+ fn grid_nudge(app: &mut SoundApp, ui: &mut Ui) {
+@@ -264,22 +272,39 @@
+         let e = &app.engine.session().edit;
+         (e.grid, e.nudge, e.grid_lines)
+     };
+-    let (r, _) = ui.allocate_exact_size(vec2(170.0, 64.0), Sense::hover());
++    let grid_label = crate::i18n::grid_label(grid);
++    let nudge_label = crate::i18n::grid_label(nudge);
++    let caption_width = ["Grid", "Nudge"]
++        .iter()
++        .map(|label| ui.painter().layout_no_wrap(crate::i18n::t(label), regular(11.0), t.text_dim).size().x)
++        .fold(48.0, f32::max);
++    let value_width = [&grid_label, &nudge_label]
++        .iter()
++        .map(|label| ui.painter().layout_no_wrap((*label).clone(), mono(11.0), t.counter_text).size().x)
++        .fold(0.0, f32::max);
++    let width = (caption_width + value_width + 42.0).max(170.0);
++    let (r, _) = ui.allocate_exact_size(vec2(width, 64.0), Sense::hover());
+     ui.painter().rect(r, CornerRadius::same(4), t.counter_bg, Stroke::new(1.0, t.counter_border), StrokeKind::Inside);
+-    let gl = Rect::from_min_size(pos2(r.min.x + 6.0, r.min.y + 8.0), vec2(48.0, 16.0));
++    let gl = Rect::from_min_size(pos2(r.min.x + 6.0, r.min.y + 8.0), vec2(caption_width + 6.0, 16.0));
      let resp = ui.interact(gl, ui.id().with("grid_lines"), Sense::click());
      key(ui.painter(), gl, &resp, if lines { t.mode_on } else { t.counter_off });
 -    ui.painter().text(gl.center(), Align2::CENTER_CENTER, "Grid", bold(11.0), if lines { t.mode_on_text } else { t.mode_off_text });
@@ -13165,20 +13493,22 @@
 +    if resp.on_hover_text(crate::i18n::t(&("Show grid lines"))).clicked() {
          let _ = app.run("view.grid_lines", json!({}));
      }
-     let gr = Rect::from_min_max(pos2(r.min.x + 60.0, r.min.y + 6.0), pos2(r.max.x - 4.0, r.min.y + 26.0));
+-    let gr = Rect::from_min_max(pos2(r.min.x + 60.0, r.min.y + 6.0), pos2(r.max.x - 4.0, r.min.y + 26.0));
 -    ui.painter().text(pos2(gr.max.x - 14.0, gr.center().y), Align2::RIGHT_CENTER, grid.label(), mono(11.0), t.counter_text);
-+    ui.painter().text(pos2(gr.max.x - 14.0, gr.center().y), Align2::RIGHT_CENTER, crate::i18n::grid_label(grid), mono(11.0), t.counter_text);
++    let gr = Rect::from_min_max(pos2(gl.max.x + 6.0, r.min.y + 6.0), pos2(r.max.x - 4.0, r.min.y + 26.0));
++    ui.painter().text(pos2(gr.max.x - 14.0, gr.center().y), Align2::RIGHT_CENTER, grid_label, mono(11.0), t.counter_text);
      let gresp = ui.interact(gr, ui.id().with("grid_value"), Sense::click());
      value_menu(app, &gresp, "view.grid");
 -    ui.painter().text(pos2(r.min.x + 10.0, r.min.y + 44.0), Align2::LEFT_CENTER, "Nudge", regular(11.0), t.counter_label);
-+    ui.painter().text(pos2(r.min.x + 10.0, r.min.y + 44.0), Align2::LEFT_CENTER, crate::i18n::t(&("Nudge")), regular(11.0), t.counter_label);
-     let nr = Rect::from_min_max(pos2(r.min.x + 60.0, r.min.y + 34.0), pos2(r.max.x - 4.0, r.min.y + 54.0));
+-    let nr = Rect::from_min_max(pos2(r.min.x + 60.0, r.min.y + 34.0), pos2(r.max.x - 4.0, r.min.y + 54.0));
 -    ui.painter().text(pos2(nr.max.x - 14.0, nr.center().y), Align2::RIGHT_CENTER, nudge.label(), mono(11.0), t.counter_text);
-+    ui.painter().text(pos2(nr.max.x - 14.0, nr.center().y), Align2::RIGHT_CENTER, crate::i18n::grid_label(nudge), mono(11.0), t.counter_text);
++    ui.painter().text(pos2(r.min.x + 10.0, r.min.y + 44.0), Align2::LEFT_CENTER, crate::i18n::t(&("Nudge")), regular(11.0), t.counter_label);
++    let nr = Rect::from_min_max(pos2(gl.max.x + 6.0, r.min.y + 34.0), pos2(r.max.x - 4.0, r.min.y + 54.0));
++    ui.painter().text(pos2(nr.max.x - 14.0, nr.center().y), Align2::RIGHT_CENTER, nudge_label, mono(11.0), t.counter_text);
      let nresp = ui.interact(nr, ui.id().with("nudge_value"), Sense::click());
      value_menu(app, &nresp, "view.nudge");
      for rr in [gr, nr] {
-@@ -290,7 +302,7 @@
+@@ -290,7 +315,7 @@
  fn value_menu(app: &mut SoundApp, resp: &egui::Response, cmd: &str) {
      egui::Popup::menu(resp).show(|ui| {
          for v in ["1 bar", "1/2", "1/4", "1/8", "1/16", "1/32", "1/64", "1/8t", "1/16t", "1/4."] {
@@ -13187,7 +13517,7 @@
                  let _ = app.run(cmd, json!({"value": v}));
              }
          }
-@@ -303,7 +315,7 @@
+@@ -303,7 +328,7 @@
              ("1 frame", json!({"frames": 1})),
              ("100 samples", json!({"samples": 100})),
          ] {
@@ -13196,7 +13526,7 @@
                  let _ = app.run(cmd, json!({"value": v}));
              }
          }
-@@ -326,23 +338,23 @@
+@@ -326,23 +351,23 @@
                  let (r, resp) = ui.allocate_exact_size(vec2(38.0, 28.0), Sense::click());
                  key(ui.painter(), r, &resp, key_fill(&resp));
                  icons::draw(ui.painter(), r.shrink(5.0), "stop", if playing { t.text } else { t.accent });
@@ -13224,7 +13554,7 @@
                  }
                  if resp.clicked() {
                      let _ = app.run("transport.record", json!({}));
-@@ -378,19 +390,31 @@
+@@ -378,19 +403,31 @@
      let co = Rect::from_min_size(pos2(r.min.x + 6.0, r.min.y + 6.0), vec2(64.0, 15.0));
      let resp = ui.interact(co, ui.id().with("countoff"), Sense::click());
      key(ui.painter(), co, &resp, if countoff { t.mode_on } else { t.counter_off });
@@ -13261,7 +13591,7 @@
          let _ = app.run("options.click", json!({}));
      }
  }
-@@ -422,7 +446,7 @@
+@@ -422,7 +459,7 @@
      if resp.drag_stopped() || resp.lost_focus() {
          app.engine.end_merge();
      }
@@ -14021,9 +14351,12 @@
                      app.ui.configurations.remove(i);
                  }
              });
-@@ -439,20 +456,20 @@
+@@ -437,22 +454,22 @@
+ }
+ 
  fn device_combo(ui: &mut egui::Ui, id: &str, value: &mut Option<String>, devices: &[DeviceInfo]) {
-     let default = devices.iter().find(|d| d.is_default).map_or("none".to_string(), |d| d.name.clone());
+-    let default = devices.iter().find(|d| d.is_default).map_or("none".to_string(), |d| d.name.clone());
++    let default = devices.iter().find(|d| d.is_default).map_or_else(|| crate::i18n::t("none"), |d| d.name.clone());
      let shown = value.clone().unwrap_or_else(|| format!("Default ({default})"));
 -    egui::ComboBox::from_id_salt(id).width(300.0).selected_text(shown).show_ui(ui, |ui| {
 -        ui.selectable_value(value, None, format!("Default ({default})"));
@@ -14053,8 +14386,9 @@
          let t = Tokens::current();
          egui::Grid::new("pe").num_columns(2).spacing(vec2(12.0, 6.0)).show(ui, |ui| {
 -            ui.label("Audio system");
+-            let def = systems.iter().find(|s| s.is_default).map_or("none".to_string(), |s| s.name.clone());
 +            ui.label(crate::i18n::t(&("Audio system")));
-             let def = systems.iter().find(|s| s.is_default).map_or("none".to_string(), |s| s.name.clone());
++            let def = systems.iter().find(|s| s.is_default).map_or_else(|| crate::i18n::t("none"), |s| s.name.clone());
              let shown = draft.system.clone().unwrap_or_else(|| format!("Default ({def})"));
 -            egui::ComboBox::from_id_salt("pe-system").width(300.0).selected_text(shown).show_ui(ui, |ui| {
 +            egui::ComboBox::from_id_salt("pe-system").width(300.0).selected_text(crate::i18n::t(&(shown))).show_ui(ui, |ui| {

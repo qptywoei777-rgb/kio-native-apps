@@ -70,7 +70,7 @@ hide new findings; proposed exceptions require source/context review.
 
 The additive candidates are reproducible, hash-pinned patches in
 `patches/localization-candidates`. They do not modify the published source locks.
-Deck has 1,047 keys and Sound has 1,508 keys in all six required languages. Both
+Deck has 1,047 keys and Sound has 1,532 keys in all six required languages. Both
 pass `--require-complete` for the current static inventory; the other eleven
 editors still have unresolved findings. A runtime metadata test in Sound also
 checks built-in plugin parameters, choice labels, automation modes and note
