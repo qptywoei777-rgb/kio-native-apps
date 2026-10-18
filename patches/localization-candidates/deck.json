@@ -5,8 +5,8 @@
   "basePreparedTreeSha256": "f75f76714c6bfecd468cd4cdd8a03d2a693dcef438762bd8fa987839336d001c",
   "patch": {
     "path": "patches/localization-candidates/deck.patch",
-    "sha256": "5a490268cce23a264baed6474095e39f6eaabf2fbad73581d5848067f1ecc07c",
-    "bytes": 429181
+    "sha256": "977f0aa0300d56f2d3afb1fec5e94df9fe480124b4621084d1de739ab463f542",
+    "bytes": 440289
   },
   "files": [
     {
@@ -38,8 +38,8 @@
         "bytes": 54821
       },
       "after": {
-        "sha256": "f2764bf547be14f690b4cea17c3e70a5f58843a064c67942ee311b7d0993b2d0",
-        "bytes": 56099
+        "sha256": "b33d829e6a3e161238188c322c0fd9588e3925090281ecbb3b10605e22737fab",
+        "bytes": 56242
       }
     },
     {
@@ -71,8 +71,8 @@
         "bytes": 13814
       },
       "after": {
-        "sha256": "fcbfd8c23ea052d92d043774edd297c42c4fb4fd7438f4965848dbc2559cfd09",
-        "bytes": 14025
+        "sha256": "d8bd7a2e1174793cda720835782f337c253f7d9414eb5bde40f45e2eec9ac834",
+        "bytes": 14063
       }
     },
     {
@@ -82,8 +82,8 @@
         "bytes": 39652
       },
       "after": {
-        "sha256": "ea5cfb92090323d6438813f5b08fc568262331b811543d5b48b6928520062a11",
-        "bytes": 40989
+        "sha256": "960e5847280fccd06211197af5cf796790033bf30e75a169843a0166533eb18b",
+        "bytes": 41037
       }
     },
     {
@@ -93,8 +93,8 @@
         "bytes": 14901
       },
       "after": {
-        "sha256": "f2330a7956bb96298a3af54dcb256260c60519b1f309be89410a7f8c6980af13",
-        "bytes": 15077
+        "sha256": "23b81e0a1c338f4e37e083bd3defeb1fc2aa9eb733f9bf67ebe6f6f856d798e8",
+        "bytes": 15109
       }
     },
     {
@@ -187,8 +187,8 @@
         "bytes": 60932
       },
       "after": {
-        "sha256": "6ab956e1369d3b2ab41ffe5690a35c74845f14461c6c08501d73b507d7cf14e8",
-        "bytes": 62006
+        "sha256": "39dd88ec3956048eca6b2628ea4ca833034a3e5e6e61144af79652f8713463aa",
+        "bytes": 63156
       }
     },
     {
@@ -231,8 +231,8 @@
         "bytes": 109359
       },
       "after": {
-        "sha256": "e3b2dacad3928b9938da107eb5cb4ea667023e1010ac4c8d63bdfeaba68322a3",
-        "bytes": 111996
+        "sha256": "c8567a7096345fb142fa37943320b44b42bfa141f07690a1f38325e2ce1fc9d8",
+        "bytes": 112517
       }
     },
     {
@@ -308,8 +308,8 @@
         "bytes": 21160
       },
       "after": {
-        "sha256": "64e431e0a1d2200850579f94b1207fa57a0cb5149c114ba1a176c080eeba9986",
-        "bytes": 21601
+        "sha256": "7e3919227f7a177abcb9e2ff023086e70cf90768d8edd6e981af09444100de2e",
+        "bytes": 21618
       }
     }
   ],

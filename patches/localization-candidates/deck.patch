@@ -275,7 +275,16 @@
              {
                  app.open_url(&format!("file:///{}", dir.replace('\\', "/").trim_start_matches('/')));
              }
-@@ -794,7 +800,7 @@
+@@ -782,7 +788,7 @@
+             let size = v.get("bytes").and_then(Value::as_u64).map(format_bytes);
+             egui::Grid::new("backstage_props").num_columns(2).spacing(vec2(18.0, 7.0)).show(ui, |ui| {
+                 let row = |ui: &mut Ui, k: &str, val: String| {
+-                    ui.label(RichText::new(k).color(t.text_dim));
++                    ui.label(RichText::new(crate::i18n::t(k)).color(t.text_dim));
+                     ui.label(val);
+                     ui.end_row();
+                 };
+@@ -794,13 +800,13 @@
                  for (i, (key, label, hint)) in PROPERTIES.iter().enumerate() {
                      let saved = props.get(*key).and_then(Value::as_str).unwrap_or("").to_string();
                      let Some(draft) = bs.props.get_mut(i) else { continue };
@@ -284,9 +293,28 @@
                      let id = ui.make_persistent_id(("backstage_prop", *key));
                      // Show the presentation's value unless the field is being edited (undo…).
                      if !ui.ctx().memory(|m| m.has_focus(id)) {
-@@ -835,14 +841,14 @@
+                         draft.clone_from(&saved);
+                     }
+-                    let resp = ui.add(egui::TextEdit::singleline(draft).id(id).hint_text(*hint).desired_width(300.0)).labelled_by(l.id);
++                    let resp = ui.add(egui::TextEdit::singleline(draft).id(id).hint_text(crate::i18n::t(hint)).desired_width(300.0)).labelled_by(l.id);
+                     if resp.lost_focus() && *draft != saved {
+                         let mut p = serde_json::Map::new();
+                         p.insert((*key).to_string(), json!(draft.clone()));
+@@ -808,7 +814,7 @@
+                     }
+                     ui.end_row();
+                 }
+-                row(ui, "Location", path.clone().unwrap_or_else(|| "Not saved yet".into()));
++                row(ui, "Location", path.clone().unwrap_or_else(|| crate::i18n::t("Not saved yet").into()));
+             });
+         });
+     });
+@@ -833,17 +839,17 @@
+     ui.add_space(14.0);
+     let current = SAVE_TYPES.iter().find(|s| s.0 == bs.file_type).map_or(SAVE_TYPES[0].1, |s| s.1);
      ui.horizontal(|ui| {
-         egui::ComboBox::from_id_salt("backstage_save_type").width(340.0).selected_text(current).show_ui(ui, |ui| {
+-        egui::ComboBox::from_id_salt("backstage_save_type").width(340.0).selected_text(current).show_ui(ui, |ui| {
++        egui::ComboBox::from_id_salt("backstage_save_type").width(340.0).selected_text(crate::i18n::t(current)).show_ui(ui, |ui| {
              for (id, label, _) in SAVE_TYPES {
 -                if ui.selectable_label(bs.file_type == id, label).clicked() {
 +                if ui.selectable_label(bs.file_type == id, crate::i18n::t(label)).clicked() {
@@ -297,11 +325,18 @@
          let web = app.services.pick_save.is_none();
          let label = if web { "Download" } else { "Save" };
 -        let save = ui.add(egui::Button::new(RichText::new(label).color(t.accent_text)).fill(t.accent).min_size(vec2(84.0, 26.0)));
+-        if save.on_hover_text(if web { "Download the file" } else { "Choose where to save" }).clicked() {
 +        let save = ui.add(egui::Button::new(RichText::new(crate::i18n::t(label)).color(t.accent_text)).fill(t.accent).min_size(vec2(84.0, 26.0)));
-         if save.on_hover_text(if web { "Download the file" } else { "Choose where to save" }).clicked() {
++        if save.on_hover_text(crate::i18n::t(if web { "Download the file" } else { "Choose where to save" })).clicked() {
              let fmt = bs.file_type;
              let done = if matches!(fmt, "pptx" | "deckcraft") {
-@@ -941,7 +947,7 @@
+                 let before = app.session.active().map(|d| (d.path.clone(), d.is_dirty()));
+@@ -937,11 +943,11 @@
+                 PrintScope::Current => "Print Current Slide",
+                 PrintScope::Custom => "Custom Range",
+             };
+-            egui::ComboBox::from_id_salt("backstage_print_scope").width(240.0).selected_text(scope).show_ui(ui, |ui| {
++            egui::ComboBox::from_id_salt("backstage_print_scope").width(240.0).selected_text(crate::i18n::t(scope)).show_ui(ui, |ui| {
                  for (s, label) in
                      [(PrintScope::All, "Print All Slides"), (PrintScope::Current, "Print Current Slide"), (PrintScope::Custom, "Custom Range")]
                  {
@@ -323,9 +358,12 @@
                  if r.changed() {
                      // Typing a range picks Custom Range, as in PowerPoint.
                      bs.print_scope = if bs.print_range.trim().is_empty() { PrintScope::All } else { PrintScope::Custom };
-@@ -961,17 +969,17 @@
+@@ -959,21 +967,21 @@
+             });
+             ui.add_space(4.0);
              let layout = LAYOUTS.iter().find(|l| l.0 == bs.print_layout).map_or("Full Page Slides", |l| l.1);
-             egui::ComboBox::from_id_salt("backstage_print_layout").width(240.0).selected_text(layout).show_ui(ui, |ui| {
+-            egui::ComboBox::from_id_salt("backstage_print_layout").width(240.0).selected_text(layout).show_ui(ui, |ui| {
++            egui::ComboBox::from_id_salt("backstage_print_layout").width(240.0).selected_text(crate::i18n::t(layout)).show_ui(ui, |ui| {
                  for (id, label) in LAYOUTS {
 -                    if ui.selectable_label(bs.print_layout == id, label).clicked() {
 +                    if ui.selectable_label(bs.print_layout == id, crate::i18n::t(label)).clicked() {
@@ -342,8 +380,11 @@
 -            ui.checkbox(&mut bs.print_frame, "Frame Slides");
 +            ui.checkbox(&mut bs.print_frame, crate::i18n::t("Frame Slides"));
              ui.add_space(6.0);
-             if ui.link("Edit Header & Footer").clicked() {
+-            if ui.link("Edit Header & Footer").clicked() {
++            if ui.link(crate::i18n::t("Edit Header & Footer")).clicked() {
                  let _ = app.run("app.dialog", json!({"id": "headerFooter"}));
+             }
+         });
 @@ -1081,7 +1089,7 @@
          if prev {
              bs.preview_page = bs.preview_page.saturating_sub(1);
@@ -441,9 +482,12 @@
          });
      }
      ui.add_space(10.0);
-@@ -1204,7 +1224,7 @@
+@@ -1202,9 +1222,9 @@
+             ui.set_width(340.0);
+             heading(ui, "Appearance");
              let dark = app.ui.brightness == theme::Brightness::Dark;
-             egui::ComboBox::from_id_salt("backstage_appearance").width(260.0).selected_text(if dark { "Dark" } else { "Light" }).show_ui(ui, |ui| {
+-            egui::ComboBox::from_id_salt("backstage_appearance").width(260.0).selected_text(if dark { "Dark" } else { "Light" }).show_ui(ui, |ui| {
++            egui::ComboBox::from_id_salt("backstage_appearance").width(260.0).selected_text(crate::i18n::t(if dark { "Dark" } else { "Light" })).show_ui(ui, |ui| {
                  for (on, label) in [(false, "Light"), (true, "Dark")] {
 -                    if ui.selectable_label(dark == on, label).clicked() {
 +                    if ui.selectable_label(dark == on, crate::i18n::t(label)).clicked() {
@@ -622,6 +666,15 @@
          } else if v.table {
              table(ui, &list, &mut v);
          } else {
+@@ -256,7 +256,7 @@
+                     if i > 0 {
+                         ui.label(RichText::new("·").weak());
+                     }
+-                    ui.hyperlink_to(c.name(v.names), format!("https://github.com/{}", c.login)).on_hover_text(c.summary());
++                    ui.hyperlink_to(c.name(v.names), format!("https://github.com/{}", c.login)).on_hover_text(crate::i18n::msg(&c.summary()));
+                 }
+             });
+         }
 @@ -268,7 +268,7 @@
      egui::Grid::new("credits_table").striped(true).num_columns(SortKey::ALL.len()).show(ui, |ui| {
          for k in SortKey::ALL {
@@ -631,6 +684,15 @@
                  if v.key == k {
                      v.ascending = !v.ascending;
                  } else {
+@@ -279,7 +279,7 @@
+         }
+         ui.end_row();
+         for c in list {
+-            ui.hyperlink_to(c.name(v.names), format!("https://github.com/{}", c.login)).on_hover_text(c.summary());
++            ui.hyperlink_to(c.name(v.names), format!("https://github.com/{}", c.login)).on_hover_text(crate::i18n::msg(&c.summary()));
+             ui.label(group(c.prs));
+             ui.label(group(c.commits));
+             ui.label(group(c.lines_added));
 @@ -297,14 +297,14 @@
  /// About ▸ Models: AI models credited in Co-Authored-By trailers.
  pub fn models_ui(ui: &mut egui::Ui) {
@@ -701,7 +763,8 @@
 -            ui.label("Slides sized for:");
 +            ui.label(crate::i18n::t("Slides sized for:"));
              let preset = d.get("preset", "");
-             egui::ComboBox::from_id_salt("sizes").selected_text(if preset.is_empty() { "Custom" } else { &preset }).show_ui(ui, |ui| {
+-            egui::ComboBox::from_id_salt("sizes").selected_text(if preset.is_empty() { "Custom" } else { &preset }).show_ui(ui, |ui| {
++            egui::ComboBox::from_id_salt("sizes").selected_text(crate::i18n::t(if preset.is_empty() { "Custom" } else { &preset })).show_ui(ui, |ui| {
                  for (label, w, h) in deckcraft_model::defaults::SLIDE_SIZES {
 -                    if ui.selectable_label(preset == *label, *label).clicked() {
 +                    if ui.selectable_label(preset == *label, crate::i18n::t(*label)).clicked() {
@@ -880,15 +943,27 @@
                      d.fields.insert("fmt".into(), f.into());
                  }
              }
-@@ -417,7 +423,7 @@
+@@ -417,9 +423,9 @@
              if fmt == "pdf" {
                  ui.add_space(4.0);
                  ui.horizontal(|ui| {
 -                    ui.label("Print layout:");
 +                    ui.label(crate::i18n::t("Print layout:"));
                      egui::ComboBox::from_id_salt("pdf_layout")
-                         .selected_text(match pdf_layout.as_str() {
+-                        .selected_text(match pdf_layout.as_str() {
++                        .selected_text(crate::i18n::t(match pdf_layout.as_str() {
                              "notes" => "Notes Pages",
+                             "h1" => "Handouts (1 slide per page)",
+                             "h2" => "Handouts (2 slides per page)",
+@@ -428,7 +434,7 @@
+                             "h6" => "Handouts (6 slides per page)",
+                             "h9" => "Handouts (9 slides per page)",
+                             _ => "Full Page Slides",
+-                        })
++                        }))
+                         .show_ui(ui, |ui| {
+                             for (k, l) in [
+                                 ("slides", "Full Page Slides"),
 @@ -440,14 +446,14 @@
                                  ("h6", "Handouts (6 slides per page)"),
                                  ("h9", "Handouts (9 slides per page)"),
@@ -915,6 +990,15 @@
              let groups: [(&str, &str); 6] = [
                  ("Punctuation", "–—‘’“”…•·§¶†‡‰′″‹›«»¡¿"),
                  ("Currency", "$€£¥¢₹₩₽₺₿"),
+@@ -477,7 +483,7 @@
+                 ("Shapes", "■□▪▫▲△▶▷▼▽◀◁◆◇○●◎★☆✓✔✗✘♠♣♥♦"),
+             ];
+             for (g, chars) in groups {
+-                ui.label(egui::RichText::new(g).font(theme::bold(12.0)));
++                ui.label(egui::RichText::new(crate::i18n::t(g)).font(theme::bold(12.0)));
+                 ui.horizontal_wrapped(|ui| {
+                     for c in chars.chars() {
+                         if ui.add(egui::Button::new(egui::RichText::new(c.to_string()).size(16.0)).min_size(vec2(26.0, 26.0))).clicked() {
 @@ -493,7 +499,7 @@
              ok || cancel
          }
@@ -1133,15 +1217,20 @@
      ui.horizontal_wrapped(|ui| {
          let base = g.stops.first().map(|s| s.color.clone()).unwrap_or(ColorRef::scheme(SchemeSlot::Accent1));
          let mut light = base.clone();
-@@ -167,7 +167,7 @@
+@@ -167,10 +167,10 @@
          GradientShape::Path { .. } => "Radial",
      };
      ui.horizontal(|ui| {
 -        ui.add_sized(vec2(70.0, 20.0), egui::Label::new("Type"));
+-        egui::ComboBox::from_id_salt((id, "kind")).selected_text(kind).width(120.0).show_ui(ui, |ui| {
 +        ui.add_sized(vec2(70.0, 20.0), egui::Label::new(crate::i18n::t("Type")));
-         egui::ComboBox::from_id_salt((id, "kind")).selected_text(kind).width(120.0).show_ui(ui, |ui| {
++        egui::ComboBox::from_id_salt((id, "kind")).selected_text(crate::i18n::t(kind)).width(120.0).show_ui(ui, |ui| {
              for k in ["Linear", "Radial", "Rectangular", "Path"] {
-                 if ui.selectable_label(kind == k, k).clicked() && kind != k {
+-                if ui.selectable_label(kind == k, k).clicked() && kind != k {
++                if ui.selectable_label(kind == k, crate::i18n::t(k)).clicked() && kind != k {
+                     let focus = match &g.shape {
+                         GradientShape::Path { focus, .. } => *focus,
+                         _ => [0.5, 0.5, 0.5, 0.5],
 @@ -187,12 +187,12 @@
          });
      });
@@ -8081,6 +8170,34 @@
              self.note_ui_text(ctx);
          }
          self.collect_screenshots(ctx);
+@@ -1135,6 +1154,27 @@
+     #![allow(clippy::unwrap_used, clippy::expect_used)]
+ 
+     use super::*;
++
++    #[test]
++    fn account_dropdown_changes_language_without_replacing_the_document() {
++        use egui_kittest::kittest::Queryable;
++        let mut app = SlideApp::new(Session::with_new(), Services::default());
++        let original = serde_json::to_value(&app.session.active().unwrap().doc).unwrap();
++        app.open_backstage(backstage::Page::Account);
++        let mut harness = egui_kittest::Harness::builder().with_size(egui::vec2(1440.0, 900.0)).build_ui_state(
++            |ui, app: &mut SlideApp| { app.logic(ui.ctx()); app.ui(ui); }, app,
++        );
++        for language in i18n::Language::ALL {
++            harness.state_mut().set_interface_language(language.code());
++            harness.run_steps(2);
++            assert!(harness.query_by_value(i18n::tr(language, "Light")).is_some(), "{}", language.code());
++            if language != i18n::Language::En {
++                assert!(harness.query_by_value("Light").is_none(), "{}", language.code());
++            }
++            assert_eq!(serde_json::to_value(&harness.state().session.active().unwrap().doc).unwrap(), original);
++        }
++        i18n::set_current(i18n::Language::En);
++    }
+ 
+     fn title_text(app: &SlideApp) -> String {
+         let d = app.session.active().unwrap();
 --- a/crates/ui-egui/src/media.rs
 +++ b/crates/ui-egui/src/media.rs
 @@ -414,7 +414,7 @@
@@ -8592,8 +8709,12 @@
                  .fill(t.accent)
                  .corner_radius(CornerRadius::same(13))
                  .min_size(vec2(84.0, 26.0)),
-@@ -151,12 +155,12 @@
-             let w = ui.fonts_mut(|f| f.layout_no_wrap("File".to_string(), theme::font(13.0), t.text).size().x) + 18.0;
+@@ -148,15 +152,15 @@
+         let mut x = rect.min.x + 12.0;
+         let y = rect.min.y + 2.0;
+         {
+-            let w = ui.fonts_mut(|f| f.layout_no_wrap("File".to_string(), theme::font(13.0), t.text).size().x) + 18.0;
++            let w = ui.fonts_mut(|f| f.layout_no_wrap(crate::i18n::t("File").to_string(), theme::font(13.0), t.text).size().x) + 18.0;
              let r = Rect::from_min_size(pos2(x, y), vec2(w, 24.0));
              let resp = ui.interact(r, ui.id().with("tab_file"), Sense::click());
 -            resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, "File"));
@@ -8815,6 +8936,15 @@
              ui.horizontal_wrapped(|ui| {
                  ui.spacing_mut().item_spacing = vec2(1.0, 1.0);
                  for p in deckcraft_geom::preset::CATALOG.iter().filter(|p| p.category == cat) {
+@@ -654,7 +660,7 @@
+                         ui.painter().rect_filled(r, CornerRadius::same(3), t.hover);
+                     }
+                     paint_preset(ui.painter(), r.shrink(4.0), p.name, Color32::TRANSPARENT, t.text);
+-                    if resp.on_hover_text(p.label).clicked() {
++                    if resp.on_hover_text(crate::i18n::t(p.label)).clicked() {
+                         out = Some(p.name);
+                     }
+                 }
 @@ -665,7 +671,7 @@
                              ui.painter().rect_filled(r, CornerRadius::same(3), t.hover);
                          }
@@ -9115,7 +9245,23 @@
                  app.dialog = Some(crate::dialogs::Dialog::new("slideSize"));
              }
          });
-@@ -1360,7 +1358,7 @@
+@@ -1344,12 +1342,13 @@
+     });
+     group(ui, |ui| {
+         let list = deckcraft_model::anim::TRANSITIONS;
+-        let shown: Vec<_> = list.iter().take(12).collect();
++        let capacity = ((ui.ctx().content_rect().width() - 800.0) / 68.0).floor().clamp(2.0, 9.0) as usize;
++        let shown: Vec<_> = list.iter().take(capacity).collect();
+         let sel = shown.iter().position(|x| x.0 == kind);
+         if let Some(i) = widgets::gallery(
+             ui,
+             shown.len(),
+-            vec2(54.0, 56.0),
++            vec2(68.0, 64.0),
+             sel,
+             |p, r, i| paint_transition_tile(p, r, shown.get(i).map(|x| (x.0, x.1)).unwrap_or(("", ""))),
+             |i| shown.get(i).map(|x| x.1.to_string()).unwrap_or_default(),
+@@ -1360,10 +1359,10 @@
          let more = widgets::drop_button(ui, "", vec2(14.0, 52.0), true);
          egui::Popup::menu(&more).width(480.0).show(|ui| {
              for cat in ["Subtle", "Exciting", "Dynamic Content"] {
@@ -9123,8 +9269,21 @@
 +                ui.label(egui::RichText::new(crate::i18n::t(cat)).font(theme::bold(12.0)));
                  ui.horizontal_wrapped(|ui| {
                      for x in list.iter().filter(|x| x.2 == cat) {
-                         let (r, resp) = ui.allocate_exact_size(vec2(56.0, 58.0), Sense::click());
-@@ -1391,7 +1389,7 @@
+-                        let (r, resp) = ui.allocate_exact_size(vec2(56.0, 58.0), Sense::click());
++                        let (r, resp) = ui.allocate_exact_size(vec2(76.0, 66.0), Sense::click());
+                         if resp.hovered() || x.0 == kind {
+                             ui.painter().rect_filled(r, CornerRadius::same(4), Tokens::get(ui.ctx()).hover);
+                         }
+@@ -1382,7 +1381,7 @@
+         let r = big_button(ui, Icon::EffectOptions, "Effect\nOptions", !opts.is_empty());
+         egui::Popup::menu(&r).show(|ui| {
+             for o in opts {
+-                if ui.button(deckcraft_model::anim::transition_option_label(&kind, o)).clicked() {
++                if ui.button(crate::i18n::t(&deckcraft_model::anim::transition_option_label(&kind, o))).clicked() {
+                     run(app, "transition.options", json!({"option": o}));
+                 }
+             }
+@@ -1391,7 +1390,7 @@
      group(ui, |ui| {
          rows(ui, |ui| {
              ui.horizontal(|ui| {
@@ -9133,7 +9292,7 @@
                  let d = cur.as_ref().map(|t| t.duration_ms as f64 / 1000.0).unwrap_or(1.0);
                  if let Some(v) = widgets::spinner(ui, "tdur", d, 0.25, "", 46.0) {
                      run(app, "transition.timing", json!({"duration": (v.max(0.0) * 1000.0).round() as u64}));
-@@ -1399,14 +1397,14 @@
+@@ -1399,14 +1398,14 @@
              });
              ui.horizontal(|ui| {
                  let mut click = cur.as_ref().is_none_or(|t| t.advance_on_click);
@@ -9150,24 +9309,53 @@
                      run(app, "transition.timing", json!({"after": if on { json!(after.unwrap_or(0)) } else { Value::Null }}));
                  }
                  if let Some(v) = widgets::spinner(ui, "tafter", after.unwrap_or(0) as f64 / 1000.0, 1.0, "", 46.0) {
-@@ -1446,6 +1444,7 @@
+@@ -1446,8 +1445,9 @@
  }
  
  pub fn paint_transition_tile(p: &egui::Painter, r: Rect, (id, label): (&str, &str)) {
 +    let label = crate::i18n::t(label);
      let t = Tokens::light();
-     let pic = Rect::from_min_size(r.min + vec2(4.0, 2.0), vec2(r.width() - 8.0, r.height() - 18.0));
+-    let pic = Rect::from_min_size(r.min + vec2(4.0, 2.0), vec2(r.width() - 8.0, r.height() - 18.0));
++    let pic = Rect::from_min_size(r.min + vec2(4.0, 2.0), vec2(r.width() - 8.0, 24.0));
      let blue = Color32::from_rgb(0x2E, 0x6F, 0xD8);
-@@ -1510,7 +1509,7 @@
+     let light = Color32::from_rgb(0xBF, 0xD4, 0xF5);
+     p.rect_filled(pic, CornerRadius::same(2), light);
+@@ -1510,7 +1510,8 @@
          }
      }
      p.rect_stroke(pic, CornerRadius::same(2), Stroke::new(1.0, Color32::from_rgb(0x9B, 0xB4, 0xDB)), egui::StrokeKind::Inside);
 -    p.text(pos2(r.center().x, r.max.y - 7.0), Align2::CENTER_CENTER, label, theme::font(10.0), t.text);
-+    p.text(pos2(r.center().x, r.max.y - 7.0), Align2::CENTER_CENTER, crate::i18n::t(label), theme::font(10.0), t.text);
++    let text = p.layout(crate::i18n::t(label).into(), theme::font(10.0), t.text, r.width());
++    p.galley(pos2(r.center().x - text.size().x / 2.0, r.min.y + 27.0), text, t.text);
  }
  
  // ---------- Animations ----------
-@@ -1575,7 +1574,7 @@
+@@ -1533,6 +1534,9 @@
+         }
+     });
+     group(ui, |ui| {
++        // Reserve room for translated actions and timing fields. Every effect
++        // remains available in the full gallery, including on narrow windows.
++        let capacity = ((ui.ctx().content_rect().width() - 800.0) / 68.0).floor().clamp(2.0, 9.0) as usize;
+         let quick: Vec<_> = deckcraft_model::anim::ANIMATIONS
+             .iter()
+             .filter(|a| {
+@@ -1553,12 +1557,13 @@
+                         | "lines"
+                 )
+             })
++            .take(capacity)
+             .collect();
+         let sel = cur.as_ref().and_then(|c| quick.iter().position(|a| a.0 == c.effect));
+         if let Some(i) = widgets::gallery(
+             ui,
+             quick.len(),
+-            vec2(50.0, 56.0),
++            vec2(68.0, 64.0),
+             sel,
+             |p, r, i| {
+                 if let Some(a) = quick.get(i) {
+@@ -1575,10 +1580,10 @@
              for (cls, label) in
                  [(AnimClass::Entrance, "Entrance"), (AnimClass::Emphasis, "Emphasis"), (AnimClass::Exit, "Exit"), (AnimClass::Path, "Motion Paths")]
              {
@@ -9175,8 +9363,12 @@
 +                ui.label(egui::RichText::new(crate::i18n::msg(&label)).font(theme::bold(12.0)));
                  ui.horizontal_wrapped(|ui| {
                      for a in deckcraft_model::anim::ANIMATIONS.iter().filter(|a| a.2 == cls) {
-                         let (r, resp) = ui.allocate_exact_size(vec2(56.0, 54.0), Sense::click());
-@@ -1595,13 +1594,13 @@
+-                        let (r, resp) = ui.allocate_exact_size(vec2(56.0, 54.0), Sense::click());
++                        let (r, resp) = ui.allocate_exact_size(vec2(76.0, 66.0), Sense::click());
+                         if resp.hovered() {
+                             ui.painter().rect_filled(r, CornerRadius::same(4), Tokens::get(ui.ctx()).hover);
+                         }
+@@ -1595,13 +1600,13 @@
          let r = big_button(ui, Icon::EffectOptions, "Effect\nOptions", !opts.is_empty());
          egui::Popup::menu(&r).show(|ui| {
              for o in opts {
@@ -9192,7 +9384,7 @@
                      run(app, "animation.options", json!({"textBuild": b}));
                  }
              }
-@@ -1614,13 +1613,13 @@
+@@ -1614,13 +1619,13 @@
                  if ui
                      .button(format!(
                          "{} — {}",
@@ -9209,7 +9401,7 @@
                      ))
                      .clicked()
                  {
-@@ -1631,13 +1630,13 @@
+@@ -1631,13 +1636,13 @@
          big(app, ui, Icon::AnimationPane, "Animation\nPane", "view.pane", json!({"pane": "animation"}));
          let r = big_button(ui, Icon::Trigger, "Trigger", cur.is_some());
          egui::Popup::menu(&r).show(|ui| {
@@ -9225,7 +9417,7 @@
                      run(app, "animation.timing", json!({"trigger": id}));
                  }
              }
-@@ -1645,7 +1644,7 @@
+@@ -1645,7 +1650,7 @@
          let on = app.session.anim_painter.is_some();
          let en = enabled(app, "animation.painter");
          let (r, _) = big_button_ex(ui, Icon::AnimationPainter, "Animation\nPainter", en, false, on);
@@ -9234,7 +9426,7 @@
          if r.double_clicked() {
              run(app, "animation.painter", json!({"sticky": true}));
          } else if r.clicked() {
-@@ -1659,7 +1658,7 @@
+@@ -1659,7 +1664,7 @@
      group(ui, |ui| {
          rows(ui, |ui| {
              ui.horizontal(|ui| {
@@ -9243,7 +9435,7 @@
                  let s = cur.as_ref().map(|c| match c.start {
                      deckcraft_model::AnimStart::OnClick => "On Click",
                      deckcraft_model::AnimStart::WithPrevious => "With Previous",
-@@ -1667,7 +1666,7 @@
+@@ -1667,7 +1672,7 @@
                  });
                  dropdown(ui, "astart", s.unwrap_or(""), 112.0, cur.is_some(), |ui| {
                      for (l, v) in [("On Click", "onClick"), ("With Previous", "withPrevious"), ("After Previous", "afterPrevious")] {
@@ -9252,7 +9444,7 @@
                              run(app, "animation.timing", json!({"start": v}));
                              ui.close();
                          }
-@@ -1675,13 +1674,13 @@
+@@ -1675,13 +1680,13 @@
                  });
              });
              ui.horizontal(|ui| {
@@ -9268,7 +9460,7 @@
                  if let Some(v) = widgets::spinner(ui, "adelay", cur.as_ref().map(|c| c.delay_ms as f64 / 1000.0).unwrap_or(0.0), 0.25, "", 46.0) {
                      run(app, "animation.timing", json!({"delay": (v.max(0.0) * 1000.0).round() as u64}));
                  }
-@@ -1691,6 +1690,7 @@
+@@ -1691,6 +1696,7 @@
  }
  
  pub fn paint_anim_tile(p: &egui::Painter, r: Rect, label: &str, class: AnimClass, enabled: bool) {
@@ -9276,22 +9468,20 @@
      let t = Tokens::light();
      let icon = match class {
          AnimClass::Entrance => Icon::AnimEntrance,
-@@ -1699,7 +1699,13 @@
+@@ -1698,8 +1704,10 @@
+         AnimClass::Exit => Icon::AnimExit,
          _ => Icon::AnimPath,
      };
-     icons::paint(p, Rect::from_center_size(pos2(r.center().x, r.min.y + 18.0), vec2(28.0, 28.0)), icon, t.text, !enabled);
+-    icons::paint(p, Rect::from_center_size(pos2(r.center().x, r.min.y + 18.0), vec2(28.0, 28.0)), icon, t.text, !enabled);
 -    p.text(pos2(r.center().x, r.max.y - 8.0), Align2::CENTER_CENTER, label, theme::font(10.0), if enabled { t.text } else { t.text_faint });
-+    p.text(
-+        pos2(r.center().x, r.max.y - 8.0),
-+        Align2::CENTER_CENTER,
-+        crate::i18n::t(label),
-+        theme::font(10.0),
-+        if enabled { t.text } else { t.text_faint },
-+    );
++    icons::paint(p, Rect::from_center_size(pos2(r.center().x, r.min.y + 12.0), vec2(22.0, 22.0)), icon, t.text, !enabled);
++    let color = if enabled { t.text } else { t.text_faint };
++    let text = p.layout(label.into(), theme::font(10.0), color, r.width());
++    p.galley(pos2(r.center().x - text.size().x / 2.0, r.min.y + 25.0), text, color);
  }
  
  // ---------- Slide Show / Record / Review / View ----------
-@@ -1734,20 +1740,20 @@
+@@ -1734,20 +1742,20 @@
              }
          }
          let r = big_button(ui, Icon::Record, "Record", false);
@@ -9316,7 +9506,7 @@
          });
      });
  }
-@@ -1755,7 +1761,7 @@
+@@ -1755,7 +1763,7 @@
  fn record(app: &mut SlideApp, ui: &mut Ui) {
      group(ui, |ui| {
          let r = big_button(ui, Icon::Cameo, "Cameo", false);
@@ -9325,7 +9515,7 @@
          if big_button(ui, Icon::PlayFromStart, "From\nBeginning", true).clicked() {
              app.start_show(0, false);
              if let Some(s) = app.show.as_mut() {
-@@ -1781,14 +1787,14 @@
+@@ -1781,14 +1789,14 @@
      group(ui, |ui| {
          big(app, ui, Icon::Spelling, "Spelling", "app.dialog", json!({"id": "spelling"}));
          let r = big_button(ui, Icon::Thesaurus, "Thesaurus", false);
@@ -9342,7 +9532,7 @@
          big(app, ui, Icon::Language, "Language", "app.dialog", json!({"id": "language"}));
      });
      group(ui, |ui| {
-@@ -1823,22 +1829,22 @@
+@@ -1823,22 +1831,22 @@
              let _ = app.run(if in_master { "view.closeMaster" } else { "view.slideMaster" }, json!({}));
          }
          let r = big_button(ui, Icon::HandoutMaster, "Handout\nMaster", false);
@@ -9370,7 +9560,7 @@
                  app.ui.guides = gd;
              }
          });
-@@ -1887,16 +1893,16 @@
+@@ -1887,16 +1895,16 @@
          big(app, ui, Icon::TextBox, "Text\nBox", "insert.textBox", json!({}));
          let r = big_button(ui, Icon::EditShape, "Edit\nShape", sel);
          egui::Popup::menu(&r).show(|ui| {
@@ -9390,7 +9580,7 @@
                      run(app, "shape.merge", json!({"op": op}));
                      ui.close();
                  }
-@@ -1919,7 +1925,7 @@
+@@ -1919,7 +1927,7 @@
                              None => run(app, "shape.fill", json!({"none": true})),
                          }
                      }
@@ -9399,7 +9589,7 @@
                          let _ = app.run("view.pane", json!({"pane": "format", "tab": "fill"}));
                          ui.close();
                      }
-@@ -1955,7 +1961,7 @@
+@@ -1955,7 +1963,7 @@
              }
              let r = small_button(ui, Icon::TextEffects, "Text Effects", sel, false);
              egui::Popup::menu(&r).show(|ui| {
@@ -9408,7 +9598,7 @@
                      run(app, "format.textShadow", json!({}));
                  }
              });
-@@ -2027,18 +2033,18 @@
+@@ -2027,18 +2035,18 @@
      group(ui, |ui| {
          rows(ui, |ui| {
              let Some(x) = bx else {
@@ -9431,7 +9621,7 @@
                  if let Some(v) = widgets::spinner(ui, "sw", x.w / 72.0, 0.1, "\"", 54.0) {
                      run(app, "shape.resize", json!({"w": v.max(0.0) * 72.0}));
                  }
-@@ -2050,17 +2056,17 @@
+@@ -2050,17 +2058,17 @@
  fn picture_format(app: &mut SlideApp, ui: &mut Ui) {
      group(ui, |ui| {
          let r = big_button(ui, Icon::RemoveBackground, "Remove\nBackground", false);
@@ -9452,7 +9642,7 @@
                      run(app, "picture.adjust", json!({"contrast": c}));
                  }
              }
-@@ -2068,11 +2074,11 @@
+@@ -2068,11 +2076,11 @@
          let r = big_button(ui, Icon::ColorAdjust, "Color", true);
          egui::Popup::menu(&r).show(|ui| {
              for s in [0.0, 0.33, 0.66, 1.0, 1.5, 2.0, 3.0] {
@@ -9466,7 +9656,7 @@
                  run(app, "picture.adjust", json!({"grayscale": true}));
              }
          });
-@@ -2092,24 +2098,24 @@
+@@ -2092,24 +2100,24 @@
      group(ui, |ui| {
          let r = big_button(ui, Icon::QuickStyles, "Picture\nStyles", true);
          egui::Popup::menu(&r).show(|ui| {
@@ -9497,7 +9687,7 @@
                  run(app, "shape.change", json!({"preset": "ellipse"}));
              }
          });
-@@ -2119,13 +2125,13 @@
+@@ -2119,13 +2127,13 @@
      group(ui, |ui| {
          let r = big_button(ui, Icon::Crop, "Crop", true);
          egui::Popup::menu(&r).show(|ui| {
@@ -9513,7 +9703,7 @@
                      run(app, "picture.crop", json!({"left": v, "top": v, "right": v, "bottom": v}));
                  }
              }
-@@ -2144,31 +2150,31 @@
+@@ -2144,31 +2152,31 @@
              let flags = tbl.as_ref().map(|t| (t.first_row, t.last_row, t.band_row, t.first_col, t.last_col, t.band_col)).unwrap_or_default();
              ui.horizontal(|ui| {
                  let mut a = flags.0;
@@ -9551,7 +9741,7 @@
                      run(app, "table.options", json!({"bandedColumns": f}));
                  }
              });
-@@ -2201,7 +2207,7 @@
+@@ -2201,7 +2209,7 @@
                  for (id, label) in &styles {
                      let (r, resp) = ui.allocate_exact_size(vec2(48.0, 36.0), Sense::click());
                      paint_table_style(ui.painter(), r.shrink(2.0), id, &sc);
@@ -9560,7 +9750,7 @@
                          run(app, "table.style", json!({"style": id}));
                          ui.close();
                      }
-@@ -2290,7 +2296,7 @@
+@@ -2290,7 +2298,7 @@
              });
              ui.horizontal(|ui| {
                  for (l, a) in [("Top", "top"), ("Center", "middle"), ("Bottom", "bottom")] {
@@ -9569,7 +9759,7 @@
                          run(app, "format.anchor", json!({"anchor": a}));
                      }
                  }
-@@ -2305,7 +2311,7 @@
+@@ -2305,7 +2313,7 @@
          let r = big_button(ui, Icon::ChangeChartType, "Change\nChart Type", true);
          egui::Popup::menu(&r).show(|ui| {
              for k in deckcraft_model::chart::ChartType::MAIN {
@@ -9578,7 +9768,7 @@
                      // Replace the chart's type keeping its data.
                      if let Some(id) = app.session.active().and_then(|d| d.selection.shapes.first().copied()) {
                          let _ = app.run("chart.type", json!({"id": id.0, "type": format!("{k:?}")}));
-@@ -2333,29 +2339,29 @@
+@@ -2333,29 +2341,29 @@
      group(ui, |ui| {
          rows(ui, |ui| {
              let mut auto = m.as_ref().is_some_and(|x| x.autoplay);
@@ -9614,7 +9804,7 @@
                  run(app, "media.options", json!({"fullScreen": fs}));
              }
          });
-@@ -2364,7 +2370,7 @@
+@@ -2364,7 +2372,7 @@
          let r = big_button(ui, Icon::Volume, "Volume", m.is_some());
          egui::Popup::menu(&r).show(|ui| {
              for (l, v) in [("Low", 0.25), ("Medium", 0.5), ("High", 1.0), ("Mute", 0.0)] {
@@ -9623,7 +9813,7 @@
                      run(app, "media.options", json!({"volume": v}));
                  }
              }
-@@ -2384,7 +2390,7 @@
+@@ -2384,7 +2392,7 @@
              for (l, k) in
                  [("Content", "content"), ("Text", "text"), ("Picture", "picture"), ("Chart", "chart"), ("Table", "table"), ("Media", "media")]
              {
@@ -10149,6 +10339,15 @@
          if r.lost_focus()
              && ui.input(|i| i.key_pressed(egui::Key::Enter))
              && let Some(c) = Rgba::from_hex(&hex)
+@@ -371,7 +381,7 @@
+         if sel {
+             painter.rect_stroke(rect.expand(1.0), CornerRadius::same(4), Stroke::new(1.5, t.accent), egui::StrokeKind::Inside);
+         }
+-        if resp.on_hover_text(tip(i)).clicked() {
++        if resp.on_hover_text(crate::i18n::t(&tip(i))).clicked() {
+             clicked = Some(i);
+         }
+     }
 @@ -425,6 +435,7 @@
  
  /// Section header inside panes.
