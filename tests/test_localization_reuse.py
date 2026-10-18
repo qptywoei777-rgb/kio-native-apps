@@ -1,5 +1,5 @@
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import sys
 import tempfile
 import unittest
@@ -8,6 +8,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import reuse_six_language_catalogs as reuse
 import apply_catalog_reuse as apply
+import check_localization_candidate as candidate
 
 
 def row(app, text='Lưu {name}', context='', key='Save {name}'):
@@ -22,6 +23,14 @@ def app(name, rows=(), keys=(('', 'Save {name}', 'plain'),)):
 
 
 class CatalogReuseSafety(unittest.TestCase):
+    def test_windows_candidate_path_matches_the_published_posix_manifest(self):
+        root=PureWindowsPath('D:/a/kio-native-apps/kio-native-apps')
+        path=root/'patches/localization-candidates/sound.patch'
+        self.assertEqual(candidate.relative_patch_path(path,root),'patches/localization-candidates/sound.patch')
+        self.assertFalse(candidate.allowed('sound','Cargo.lock'))
+        self.assertFalse(candidate.allowed('sound','crates/engine/src/lib.rs'))
+        self.assertTrue(candidate.allowed('sound','crates/ui-egui/src/i18n/mod.rs'))
+
     def test_conflicting_donors_do_not_use_majority_vote(self):
         apps = [app('photo'), app('vector', [row('vector')]),
                 app('film', [row('film')]), app('word', [row('word', 'Ghi {name}')])]

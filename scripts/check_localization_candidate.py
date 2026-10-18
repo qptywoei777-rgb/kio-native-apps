@@ -20,6 +20,10 @@ def checksum(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def relative_patch_path(patch, root):
+    return patch.relative_to(root).as_posix()
+
+
 def allowed(app, path):
     native.common.safe_relative(path)
     if path.startswith('crates/ui-egui/src/i18n/') and path.endswith('.tsv'):
@@ -36,7 +40,7 @@ def apply_candidate(app):
     native.require(meta['schema']=='kio.localization-development-patch.v1' and meta['programId']==app and meta['status']=='incomplete-not-release-approved','Invalid candidate identity')
     native.require(meta['basePreparedTreeSha256']==prepared['sourceTreeSha256'],'Candidate base differs from prepared original')
     patch=ROOT/f'patches/localization-candidates/{app}.patch'
-    native.require(meta['patch']['path']==str(patch.relative_to(ROOT)) and checksum(patch.read_bytes())==meta['patch']['sha256'] and patch.stat().st_size==meta['patch']['bytes'],'Candidate patch bytes changed')
+    native.require(meta['patch']['path']==relative_patch_path(patch, ROOT) and checksum(patch.read_bytes())==meta['patch']['sha256'] and patch.stat().st_size==meta['patch']['bytes'],'Candidate patch bytes changed')
     entries=meta['files'];paths={row['path'] for row in entries}
     native.require(len(paths)==len(entries) and paths and all(allowed(app,p) for p in paths),'Unreviewed candidate file scope')
     before={name:checksum(path.read_bytes()) for name,path in native.source_files(lock,source)}
